@@ -23,7 +23,7 @@ jobs:
       
       - name: Install dependencies
         run: |
-          npm install -g gitbook
+          npm install -g gitbook-cli
 
       - name: Build
         run: |
