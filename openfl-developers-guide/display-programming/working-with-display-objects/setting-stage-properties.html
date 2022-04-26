@@ -1,0 +1,1292 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Setting Stage properties · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="handling-events-for-display-objects.html" />
+    
+    
+    <link rel="prev" href="traversing-the-display-list.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../handling-events/">
+            
+                <a href="../../handling-events/">
+            
+                    
+                    Chapter 1: Handling events
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../handling-events/basics-of-handling-events.html">
+            
+                <a href="../../handling-events/basics-of-handling-events.html">
+            
+                    
+                    Basics of handling events
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../handling-events/the-event-flow.html">
+            
+                <a href="../../handling-events/the-event-flow.html">
+            
+                    
+                    The event flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../handling-events/event-objects.html">
+            
+                <a href="../../handling-events/event-objects.html">
+            
+                    
+                    Event objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../handling-events/event-listeners.html">
+            
+                <a href="../../handling-events/event-listeners.html">
+            
+                    
+                    Event listeners
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Chapter 2: Display programming
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../basics-of-display-programming.html">
+            
+                <a href="../basics-of-display-programming.html">
+            
+                    
+                    Basics of display programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../core-display-classes.html">
+            
+                <a href="../core-display-classes.html">
+            
+                    
+                    Core display classes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../advantages-of-the-display-list-approach.html">
+            
+                <a href="../advantages-of-the-display-list-approach.html">
+            
+                    
+                    Advantages of the display list approach
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Working with display objects
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="properties-and-methods-of-the-displayobject-class.html">
+            
+                <a href="properties-and-methods-of-the-displayobject-class.html">
+            
+                    
+                    Properties and methods of the DisplayObject class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="adding-display-objects-to-the-display-list.html">
+            
+                <a href="adding-display-objects-to-the-display-list.html">
+            
+                    
+                    Adding display objects to the display list
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.3" data-path="working-with-display-object-containers.html">
+            
+                <a href="working-with-display-object-containers.html">
+            
+                    
+                    Working with display object containers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.4" data-path="traversing-the-display-list.html">
+            
+                <a href="traversing-the-display-list.html">
+            
+                    
+                    Traversing the display list
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.4.5" data-path="setting-stage-properties.html">
+            
+                <a href="setting-stage-properties.html">
+            
+                    
+                    Setting Stage properties
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.6" data-path="handling-events-for-display-objects.html">
+            
+                <a href="handling-events-for-display-objects.html">
+            
+                    
+                    Handling events for display objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.7" data-path="choosing-a-displayobject-subclass.html">
+            
+                <a href="choosing-a-displayobject-subclass.html">
+            
+                    
+                    Choosing a DisplayObject subclass
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../manipulating-display-objects/">
+            
+                <a href="../manipulating-display-objects/">
+            
+                    
+                    Manipulating display objects
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1" data-path="../manipulating-display-objects/changing-position.html">
+            
+                <a href="../manipulating-display-objects/changing-position.html">
+            
+                    
+                    Changing position
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.2" data-path="../manipulating-display-objects/panning-and-scrolling-display-objects.html">
+            
+                <a href="../manipulating-display-objects/panning-and-scrolling-display-objects.html">
+            
+                    
+                    Panning and scrolling display objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.3" data-path="../manipulating-display-objects/manipulating-size-and-scaling-objects.html">
+            
+                <a href="../manipulating-display-objects/manipulating-size-and-scaling-objects.html">
+            
+                    
+                    Manipulating size and scaling objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.4" data-path="../manipulating-display-objects/caching-display-objects.html">
+            
+                <a href="../manipulating-display-objects/caching-display-objects.html">
+            
+                    
+                    Caching display objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.5" data-path="../manipulating-display-objects/applying-blending-modes.html">
+            
+                <a href="../manipulating-display-objects/applying-blending-modes.html">
+            
+                    
+                    Applying blending modes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.6" data-path="../manipulating-display-objects/adjusting-displayobject-colors.html">
+            
+                <a href="../manipulating-display-objects/adjusting-displayobject-colors.html">
+            
+                    
+                    Adjusting DisplayObject colors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.7" data-path="../manipulating-display-objects/rotating-objects.html">
+            
+                <a href="../manipulating-display-objects/rotating-objects.html">
+            
+                    
+                    Rotating objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.8" data-path="../manipulating-display-objects/fading-objects.html">
+            
+                <a href="../manipulating-display-objects/fading-objects.html">
+            
+                    
+                    Fading objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.9" data-path="../manipulating-display-objects/masking-display-objects.html">
+            
+                <a href="../manipulating-display-objects/masking-display-objects.html">
+            
+                    
+                    Masking display objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../animating-objects.html">
+            
+                <a href="../animating-objects.html">
+            
+                    
+                    Animating objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../loading-display-content-dynamically/">
+            
+                <a href="../loading-display-content-dynamically/">
+            
+                    
+                    Loading display content dynamically
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.7.1" data-path="../loading-display-content-dynamically/loading-display-objects.html">
+            
+                <a href="../loading-display-content-dynamically/loading-display-objects.html">
+            
+                    
+                    Loading display objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.2" data-path="../loading-display-content-dynamically/monitoring-loading-progress.html">
+            
+                <a href="../loading-display-content-dynamically/monitoring-loading-progress.html">
+            
+                    
+                    Monitoring loading progress
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.3" data-path="../loading-display-content-dynamically/specifying-loading-context.html">
+            
+                <a href="../loading-display-content-dynamically/specifying-loading-context.html">
+            
+                    
+                    Specifying loading context
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../working-with-geometry/">
+            
+                <a href="../../working-with-geometry/">
+            
+                    
+                    Chapter 3: Working with geometry
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../working-with-geometry/basics-of-geometry.html">
+            
+                <a href="../../working-with-geometry/basics-of-geometry.html">
+            
+                    
+                    Basics of geometry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../working-with-geometry/using-point-objects.html">
+            
+                <a href="../../working-with-geometry/using-point-objects.html">
+            
+                    
+                    Using Point objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../working-with-geometry/using-rectangle-objects.html">
+            
+                <a href="../../working-with-geometry/using-rectangle-objects.html">
+            
+                    
+                    Using Rectangle objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../working-with-geometry/using-matrix-objects.html">
+            
+                <a href="../../working-with-geometry/using-matrix-objects.html">
+            
+                    
+                    Using Matrix objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../using-the-drawing-api/">
+            
+                <a href="../../using-the-drawing-api/">
+            
+                    
+                    Chapter 4: Using the drawing API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../using-the-drawing-api/basics-of-the-drawing-api.html">
+            
+                <a href="../../using-the-drawing-api/basics-of-the-drawing-api.html">
+            
+                    
+                    Basics of the drawing API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../using-the-drawing-api/understanding-the-graphics-class.html">
+            
+                <a href="../../using-the-drawing-api/understanding-the-graphics-class.html">
+            
+                    
+                    Understanding the Graphics class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../using-the-drawing-api/drawing-lines-and-curves.html">
+            
+                <a href="../../using-the-drawing-api/drawing-lines-and-curves.html">
+            
+                    
+                    Drawing lines and curves
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../using-the-drawing-api/drawing-shapes-using-built-in-methods.html">
+            
+                <a href="../../using-the-drawing-api/drawing-shapes-using-built-in-methods.html">
+            
+                    
+                    Drawing shapes using built-in methods
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../../using-the-drawing-api/creating-gradient-lines-and-fills.html">
+            
+                <a href="../../using-the-drawing-api/creating-gradient-lines-and-fills.html">
+            
+                    
+                    Creating gradient lines and fills
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../../using-the-drawing-api/using-the-math-class-with-drawing-methods.html">
+            
+                <a href="../../using-the-drawing-api/using-the-math-class-with-drawing-methods.html">
+            
+                    
+                    Using the Math class with drawing methods
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../../using-the-drawing-api/animating-with-the-drawing-api.html">
+            
+                <a href="../../using-the-drawing-api/animating-with-the-drawing-api.html">
+            
+                    
+                    Animating with the drawing API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../../using-the-drawing-api/advanced-use-of-the-drawing-api/">
+            
+                <a href="../../using-the-drawing-api/advanced-use-of-the-drawing-api/">
+            
+                    
+                    Advanced use of the drawing API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.8.1" data-path="../../using-the-drawing-api/advanced-use-of-the-drawing-api/drawing-paths.html">
+            
+                <a href="../../using-the-drawing-api/advanced-use-of-the-drawing-api/drawing-paths.html">
+            
+                    
+                    Drawing paths
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8.2" data-path="../../using-the-drawing-api/advanced-use-of-the-drawing-api/defining-winding-rules.html">
+            
+                <a href="../../using-the-drawing-api/advanced-use-of-the-drawing-api/defining-winding-rules.html">
+            
+                    
+                    Defining winding rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8.3" data-path="../../using-the-drawing-api/advanced-use-of-the-drawing-api/using-graphics-data-classes.html">
+            
+                <a href="../../using-the-drawing-api/advanced-use-of-the-drawing-api/using-graphics-data-classes.html">
+            
+                    
+                    Using graphics data classes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8.4" data-path="../../using-the-drawing-api/advanced-use-of-the-drawing-api/about-using-drawtriangles.html">
+            
+                <a href="../../using-the-drawing-api/advanced-use-of-the-drawing-api/about-using-drawtriangles.html">
+            
+                    
+                    About using drawTriangles()
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../working-with-bitmaps/">
+            
+                <a href="../../working-with-bitmaps/">
+            
+                    
+                    Chapter 5: Working with bitmaps
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../working-with-bitmaps/the-bitmap-and-bitmapdata-classes.html">
+            
+                <a href="../../working-with-bitmaps/the-bitmap-and-bitmapdata-classes.html">
+            
+                    
+                    The Bitmap and BitmapData classes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../working-with-bitmaps/manipulating-pixels.html">
+            
+                <a href="../../working-with-bitmaps/manipulating-pixels.html">
+            
+                    
+                    Manipulating pixels
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../working-with-bitmaps/copying-bitmap-data.html">
+            
+                <a href="../../working-with-bitmaps/copying-bitmap-data.html">
+            
+                    
+                    Copying bitmap data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../working-with-bitmaps/compressing-bitmap-data.html">
+            
+                <a href="../../working-with-bitmaps/compressing-bitmap-data.html">
+            
+                    
+                    Compressing bitmap data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../../working-with-bitmaps/making-textures-with-noise-functions.html">
+            
+                <a href="../../working-with-bitmaps/making-textures-with-noise-functions.html">
+            
+                    
+                    Making textures with noise functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../../working-with-bitmaps/scrolling-bitmaps.html">
+            
+                <a href="../../working-with-bitmaps/scrolling-bitmaps.html">
+            
+                    
+                    Scrolling bitmaps
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../working-with-movie-clips/">
+            
+                <a href="../../working-with-movie-clips/">
+            
+                    
+                    Chapter 6: Working with movie clips
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../working-with-movie-clips/working-with-movieclip-objects.html">
+            
+                <a href="../../working-with-movie-clips/working-with-movieclip-objects.html">
+            
+                    
+                    Working with MovieClip objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../working-with-movie-clips/controlling-movie-clip-playback.html">
+            
+                <a href="../../working-with-movie-clips/controlling-movie-clip-playback.html">
+            
+                    
+                    Controlling movie clip playback
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../working-with-movie-clips/creating-movieclip-objects-with-haxe.html">
+            
+                <a href="../../working-with-movie-clips/creating-movieclip-objects-with-haxe.html">
+            
+                    
+                    Creating MovieClip objects with Haxe
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Setting Stage properties</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="setting-stage-properties">Setting Stage properties </h1>
+<p>The Stage class overrides most properties and methods of the DisplayObject class. If you call one of these overridden properties or methods, OpenFL will ignore the request. For example, the Stage object does not have <code>x</code> or <code>y</code> properties, since its position is fixed as the main container for the application. The <code>x</code> and <code>y</code> properties refer to the position of a display object relative to its container, and since the Stage is not contained in another display object container, these properties do not apply.</p>
+<!--
+**_Note:_ **_Some properties and methods of the Stage class are only available to display objects that are in the same security sandbox as the first project loaded. For details, see_
+
+_“Stage security” on page 1063_
+
+_._
+-->
+<h2 id="controlling-the-playback-frame-rate">Controlling the playback frame rate</h2>
+<p>The <code>frameRate</code> property of the Stage class is used to set the frame rate for all projects loaded into the application. For more information, see the <a href="http://api.openfl.org/openfl/display/Stage.html#frameRate" target="_blank">API Reference</a>.</p>
+<h2 id="controlling-stage-scaling">Controlling Stage scaling</h2>
+<p>When the portion of the screen representing OpenFL is resized, the runtime automatically adjusts the Stage contents to compensate. The Stage class&#x2019;s scaleMode property determines how the Stage contents are adjusted. This property can be set to four different values, defined as constants in the openfl.display.StageScaleMode class:</p>
+<ul>
+<li><code>StageScaleMode.EXACT_FIT</code> scales the project to fill the new stage dimensions without regard for the original content aspect ratio. The scale factors might not be the same for width and height, so the content can appear squeezed or stretched if the aspect ratio of the stage is changed.</li>
+<li><code>StageScaleMode.SHOW_ALL</code> scales the project to fit entirely within the new stage dimensions without changing the content aspect ratio. This scale mode displays all of the content, but can result in &#x201C;letterbox&#x201D; borders, like the black bars that appear when viewing a wide-screen movie on a standard television.</li>
+<li><code>StageScaleMode.NO_BORDER</code> scales the project to entirely fill the new stage dimensions without changing the aspect ratio of the content. This scale mode makes full use of the stage display area, but can result in cropping.</li>
+<li><code>StageScaleMode.NO_SCALE</code> &#x2014; does not scale the project. If the new stage dimensions are smaller, the content is cropped; if larger, the added space is blank.</li>
+</ul>
+<blockquote>
+<p>On Flash Player, OpenFL will respect the above StageScaleMode settings, but on other platforms, OpenFL will behave like <code>StageScaleMode.NO_SCALE</code> by default, or <code>StageScaleMode.SHOW_ALL</code> if you set a window width and height in your project file</p>
+</blockquote>
+<p>In the <code>StageScaleMode.NO_SCALE</code> scale mode only, the <code>stageWidth</code> and <code>stageHeight</code> properties of the Stage class can be used to determine the actual pixel dimensions of the resized stage. (In the other scale modes, the <code>stageWidth</code> and <code>stageHeight</code> properties always reflect the original width and height of the project.) In addition, when <code>scaleMode</code> is set to <code>StageScaleMode.NO_SCALE</code> and the project is resized, the Stage class&#x2019;s resize event is dispatched, allowing you to make adjustments accordingly.</p>
+<p>Consequently, having <code>scaleMode</code> set to <code>StageScaleMode.NO_SCALE</code> allows you to have greater control over how the screen contents adjust to the window resizing if you desire. For example, in a project containing a video and a control bar, you might want to make the control bar stay the same size when the Stage is resized, and only change the size of the video window to accommodate the Stage size change. This is demonstrated in the following example:</p>
+<pre><code class="lang-haxe"><span class="hljs-comment">// mainContent is a display object containing the main content;</span>
+<span class="hljs-comment">// it is positioned at the top-left corner of the Stage, and</span>
+<span class="hljs-comment">// it should resize when the window resizes.</span>
+<span class="hljs-comment">// controlBar is a display object (e.g. a Sprite) containing several</span>
+<span class="hljs-comment">// buttons; it should stay positioned at the bottom-left corner of the</span>
+<span class="hljs-comment">// Stage (below mainContent) and it should not resize when the project</span>
+<span class="hljs-comment">// resizes.</span>
+
+<span class="hljs-keyword">import</span> openfl.display.Stage;
+<span class="hljs-keyword">import</span> openfl.display.StageAlign;
+<span class="hljs-keyword">import</span> openfl.display.StageScaleMode;
+<span class="hljs-keyword">import</span> openfl.events.Event;
+
+...
+
+<span class="hljs-keyword">var</span> stage = mainContent.stage;
+stage.scaleMode = StageScaleMode.NO_SCALE;
+stage.align = StageAlign.TOP_LEFT;
+stage.addEventListener (Event.RESIZE, resizeDisplay);
+
+...
+
+<span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">resizeDisplay</span> <span class="hljs-params">(event:Event)</span>:Void </span>{
+
+    <span class="hljs-keyword">var</span> width = stage.stageWidth;
+    <span class="hljs-keyword">var</span> height = stage.stageHeight;
+
+    <span class="hljs-comment">// Resize the main content area</span>
+    <span class="hljs-keyword">var</span> newContentHeight = height - controlBar.height;
+    mainContent.height = newContentHeight;
+    mainContent.scaleX = mainContent.scaleY;
+
+    <span class="hljs-comment">// Reposition the control bar</span>
+    controlBar.y = newContentHeight;
+
+}
+</code></pre>
+<h2 id="working-with-full-screen-mode">Working with full-screen mode</h2>
+<p>Full-screen mode allows you to set a movie&#x2019;s stage to fill a viewer&#x2019;s entire monitor without any container borders or menus. The Stage class&#x2019;s <code>displayState</code> property is used to toggle full-screen mode on and off for an OpenFL project. The <code>displayState</code> property can be set to one of the values defined by the constants in the <code>openfl.display.StageDisplayState</code> class. To turn on full-screen mode, set the <code>displayState</code> property to <code>StageDisplayState.FULL_SCREEN</code>:</p>
+<pre><code class="lang-haxe">stage.displayState = StageDisplayState.FULL_SCREEN;
+</code></pre>
+<p>To turn on full-screen interactive mode, set the <code>displayState</code> property to <code>StageDisplayState.FULL_SCREEN_INTERACTIVE</code>:</p>
+<pre><code class="lang-haxe">stage.displayState = StageDisplayState.FULL_SCREEN_INTERACTIVE;
+</code></pre>
+<blockquote>
+<p>OpenFL allows interactive access for both <code>StageDisplayState.FULL_SCREEN</code> or <code>StageDisplayState.FULL_SCREEN_INTERACTIVE</code> on platforms other than Flash</p>
+</blockquote>
+<p>In Flash Player, full-screen mode can only be initiated through Haxe in response to a mouse click (including right-click) or keypress. Other platforms content do not require that full-screen mode be entered in response to a user gesture.</p>
+<p>To exit full-screen mode, set the displayState property to <code>StageDisplayState.NORMAL</code>.</p>
+<pre><code class="lang-haxe">stage.displayState = StageDisplayState.NORMAL;
+</code></pre>
+<p>In addition, a user can choose to leave full-screen mode by switching focus to a different window or by using one of several key combinations: the Esc key (all platforms), Control-W (Windows), Command-W (Mac), or Alt-F4 (Windows).</p>
+<h3 id="enabling-full-screen-mode-in-flash-player">Enabling full-screen mode in Flash Player</h3>
+<p>To enable full-screen mode for a SWF embedded in an HTML page, the HTML code to embed the SWF file must include a param tag and embed attribute with the name <code>allowFullScreen</code> and value <code>true</code>, like this:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">object</span>&gt;</span>
+    ...
+    <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;allowFullScreen&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;true&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">embed</span> <span class="hljs-attr">...</span> <span class="hljs-attr">allowFullScreen</span>=<span class="hljs-string">&quot;true&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">object</span>&gt;</span>
+</code></pre>
+<p>In the Flash authoring tool, select File -&gt; Publish Settings and in the Publish Settings dialog box, on the HTML tab, select the Flash Only - Allow Full Screen template.</p>
+<p>If you are using JavaScript in a web page to generate the SWF-embedding tags, you must alter the JavaScript to add the allowFullScreen param tag and attribute. For example, if your HTML page uses the <code>AC_FL_RunContent()</code> function (which is used in HTML pages generated by Flash Professional and Flash Builder), you should add the <code>allowFullScreen</code> parameter to that function call as follows:</p>
+<pre><code class="lang-js">AC_FL_RunContent(
+    ...
+    <span class="hljs-string">&apos;allowFullScreen&apos;</span>,<span class="hljs-string">&apos;true&apos;</span>,
+    ...
+); <span class="hljs-comment">//end AC code</span>
+</code></pre>
+<p>This does not apply to projects running in the stand-alone Flash Player.</p>
+<p><strong><em>Note:</em> </strong><em>If you set the Window Mode (wmode in the HTML) to Opaque Windowless (opaque) or Transparent Windowless (transparent), the full-screen window is always opaque</em></p>
+<!--
+There are also security-related restrictions for using full-screen mode with Flash Player in a browser. These restrictions are described in
+
+“Security” on page 1042
+
+.
+-->
+<h3 id="enabling-full-screen-interactive-mode-in-flash-player-113-and-higher">Enabling full-screen interactive mode in Flash Player 11.3 and higher</h3>
+<p>Flash Player 11.3 and higher support full-screen interactive mode, which enables full support for all keyboard keys (except for <strong>Esc</strong>, which exits full-screen interactive mode). Full-screen interactive mode is useful for gaming (for example, to enable chat in a multi-player game or WASD keyboard controls in a first-person shooter game.)</p>
+<p>To enable full-screen interactive mode for a project embedded in an HTML page, the HTML code to embed the SWF file must include a <code>param</code> tag and <code>embed</code> attribute with the name <code>allowFullScreenInteractive</code> and value <code>true</code>, like this:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">object</span>&gt;</span>
+    ...
+    <span class="hljs-tag">&lt;<span class="hljs-name">param</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;allowFullScreenInteractive&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;true&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">embed</span> <span class="hljs-attr">...</span> <span class="hljs-attr">allowFullScreenInteractive</span>=<span class="hljs-string">&quot;true&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">object</span>&gt;</span>
+</code></pre>
+<p>In the Flash authoring tool, select File -&gt; Publish Settings and in the Publish Settings dialog box, on the HTML tab, select the Flash Only - Allow Full Screen Interactive template.</p>
+<p>If you are using JavaScript in a web page to generate the SWF-embedding tags, you must alter the JavaScript to add the <code>allowFullScreenInteractive</code> param tag and attribute. For example, if your HTML page uses the <code>AC_FL_RunContent()</code> function (which is used in HTML pages generated by Flash Professional and Flash Builder), you should add the <code>allowFullScreenInteractive</code> parameter to that function call as follows:</p>
+<pre><code class="lang-js">AC_FL_RunContent(
+    ...
+    <span class="hljs-string">&apos;allowFullScreenInteractive&apos;</span>,<span class="hljs-string">&apos;true&apos;</span>,
+    ...
+); <span class="hljs-comment">//end AC code</span>
+</code></pre>
+<p>This does not apply to projects running in the stand-alone Flash Player.</p>
+<h3 id="full-screen-stage-size-and-scaling">Full screen stage size and scaling</h3>
+<p>The <code>Stage.fullScreenHeight</code> and <code>Stage.fullScreenWidth</code> properties return the height and the width of the monitor that&#x2019;s used when going to full-screen size, if that state is entered immediately. These values can be incorrect if the user has the opportunity to move the browser from one monitor to another after you retrieve these values but before entering full-screen mode. If you retrieve these values in the same event handler where you set the <code>Stage.displayState</code> property to <code>StageDisplayState.FULL_SCREEN</code>, the values are correct. For users with multiple monitors, the content expands to fill only one monitor. OpenFL uses a metric to determine which monitor contains the greatest portion of the application window, and uses that monitor for full-screen mode. The <code>fullScreenHeight</code> and <code>fullScreenWidth</code> properties only reflect the size of the monitor that is used for full-screen mode. For more information, see <a href="http://api.openfl.org/openfl/display/Stage.html#fullScreenHeight" target="_blank">Stage.fullScreenHeight</a> and <a href="http://api.openfl.org/flash/display/Stage.html#fullScreenWidth" target="_blank">Stage.fullScreenWidth</a> in the <a href="http://api.openfl.org/openfl/display/Stage.html" target="_blank">API Reference</a>.</p>
+<p>Stage scaling behavior for full-screen mode is the same as under normal mode; the scaling is controlled by the Stage class&#x2019;s <code>scaleMode</code> property. If the <code>scaleMode</code> property is set to <code>StageScaleMode.NO_SCALE</code>, the Stage&#x2019;s <code>stageWidth</code> and <code>stageHeight</code> properties change to reflect the size of the screen area occupied by the content (the entire screen, in this case); if viewed in the browser the HTML parameter for this controls the setting.</p>
+<p>You can use the Stage class&#x2019;s <code>fullScreen</code> event to detect and respond when full-screen mode is turned on or off. For example, you might want to reposition, add, or remove items from the screen when entering or leaving full-screen mode, as in this example:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">import</span> openfl.events.FullScreenEvent;
+
+...
+
+<span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fullScreenRedraw</span> <span class="hljs-params">(event:FullScreenEvent)</span>:Void </span>{
+
+    <span class="hljs-keyword">if</span> (event.fullScreen) {
+
+        <span class="hljs-comment">// Remove input text fields.</span>
+        <span class="hljs-comment">// Add a button that closes full-screen mode.</span>
+
+    } <span class="hljs-keyword">else</span> {
+
+        <span class="hljs-comment">// Re-add input text fields.</span>
+        <span class="hljs-comment">// Remove the button that closes full-screen mode.</span>
+
+    }
+
+}
+
+...
+
+mySprite.stage.addEventListener (FullScreenEvent.FULL_SCREEN, fullScreenRedraw);
+</code></pre>
+<p>As this code shows, the event object for the <code>fullScreen</code> event is an instance of the openfl.events.FullScreenEvent class, which includes a <code>fullScreen</code> property indicating whether full-screen mode is enabled (<code>true</code>) or not (<code>false</code>).</p>
+<h3 id="keyboard-support-in-full-screen-mode">Keyboard support in full-screen mode</h3>
+<p>When Flash Player runs in a browser, all keyboard-related code, such as keyboard events and text entry in TextField instances, is disabled in full-screen mode. The exceptions (the keys that are enabled) are:</p>
+<ul>
+<li>Selected non-printing keys, specifically the arrow keys, space bar, and tab key</li>
+<li>Keyboard shortcuts that terminate full-screen mode: Esc (Windows and Mac), Control-W (Windows), Command- W (Mac), and Alt-F4</li>
+</ul>
+<p>These restrictions are not present for Flash content running in the stand-alone Flash Player.</p>
+<!--
+### Mouse support in full-screen mode
+
+By default, mouse events in full-screen mode work the same way as when not in full-screen mode. However, in full-screen mode, you can optionally set the `Stage.mouseLock` property to enable mouse locking. Mouse locking disables the cursor and enables unbounded mouse movement.
+
+**_Note:_ **_You can only enable mouse locking in full-screen mode for desktop applications. Setting it on applications not in full-screen mode, or for applications on mobile devices, throws an exception._
+
+Mouse locking is disabled automatically and the mouse cursor is made visible again when:
+
+*   The user exits full-screen mode by using the Escape key (all platforms), Control-W (Windows), Command-W (Mac), or Alt-F4 (Windows).
+*   The application window loses focus.
+*   Any settings UI is visible, including all privacy dialog boxes.
+*   A native dialog box is shown, such as a file upload dialog box.
+
+Events associated with mouse movement, such as the mouseMove event, use the MouseEvent class to represent the event object. When mouse locking is disabled, use the MouseEvent.localX and MouseEvent.localY properties to determine the location of the mouse.When mouse locking is enabled, use the MouseEvent.movementX and MouseEvent.movementY properties to determine the location of the mouse. The movementX and movementY properties contain changes in the position of the mouse since the last event, instead of absolute coordinates of the mouse location.
+
+### Hardware scaling in full-screen mode
+
+You can use the Stage class’s fullScreenSourceRect property to set OpenFL to scale a specific region of the stage to full-screen mode. OpenFL scale in hardware, if available, using the graphics and video card on a user&#039;s computer, and generally display content more quickly than software scaling.
+
+To take advantage of hardware scaling, you set the whole stage or part of the stage to full-screen mode. The following Haxe code sets the whole stage to full-screen mode:
+
+import flash.geom.*;
+
+{
+
+stage.fullScreenSourceRect = new Rectangle(0,0,320,240); stage.displayState = StageDisplayState.FULL_SCREEN;
+
+}
+
+When this property is set to a valid rectangle and the displayState property is set to full-screen mode, OpenFL scale the specified area. The actual Stage size in pixels within Haxe does not change. OpenFL enforce a minimum limit for the size of the rectangle to accommodate the standard “Press Esc to exit full-screen mode” message. This limit is usually around 260 by 30 pixels but can vary depending on platform and OpenFL version.
+
+_The fullScreenSourceRect property can only be set when OpenFL is not in full-screen mode. To use this property correctly, set this property first, then set the displayState property to full-screen mode._
+
+To enable scaling, set the fullScreenSourceRect property to a rectangle object.
+
+stage.fullScreenSourceRect = new Rectangle(0,0,320,240); To disable scaling, set the fullScreenSourceRect property to null. stage.fullScreenSourceRect = null;
+
+To take advantage of all hardware acceleration features with OpenFL, enable it through the OpenFL Settings dialog box. To load the dialog box, right-click (Windows) or Control-click (Mac) inside OpenFL content in your browser. Select the Display tab, which is the first tab, and click the checkbox: Enable hardware acceleration.
+
+### Direct and GPU-compositing window modes
+
+OpenFL 10 introduces two window modes, direct and GPU compositing, which you can enable through the publish settings in the Flash authoring tool. These modes are not supported in AIR. To take advantage of these modes, you must enable hardware acceleration for OpenFL.
+
+Direct mode uses the fastest, most direct path to push graphics to the screen, which is advantageous for video playback.
+
+GPU Compositing uses the graphics processing unit on the video card to accelerate compositing. Video compositing is the process of layering multiple images to create a single video image. When compositing is accelerated with the GPU it can improve the performance of YUV conversion, color correction, rotation or scaling, and blending. YUV conversion refers to the color conversion of composite analog signals, which are used for transmission, to the RGB (red, green, blue) color model that video cameras and displays use. Using the GPU to accelerate compositing reduces the memory and computational demands that are otherwise placed on the CPU. It also results in smoother playback for standard-definition video.
+
+Be cautious in implementing these window modes. Using GPU compositing can be expensive for memory and CPU resources. If some operations (such as blend modes, filtering, clipping or masking) cannot be carried out in the GPU, they are done by the software. Adobe recommends limiting yourself to one project per HTML page when using these modes and you should not enable these modes for banners. The Flash Test Movie facility does not use hardware acceleration but you can use it through the Publish Preview option.
+
+Setting a frame rate in your project that is higher than 60, the maximum screen refresh rate, is useless. Setting the frame rate from 50 through 55 allows for dropped frames, which can occur for various reasons from time to time.
+
+Using direct mode requires Microsoft DirectX 9 with VRAM 128 MB on Windows and OpenGL for Apple Macintosh, Mac OS X v10.2 or higher. GPU compositing requires Microsoft DirectX 9 and Pixel Shader 2.0 support on Windows with 128 MB of VRAM. On Mac OS X and Linux, GPU compositing requires OpenGL 1.5 and several OpenGL extensions (framebuffer object, multitexture, shader objects, shading language, fragment shader).
+
+You can activate direct and gpu acceleration modes on a per-SWF basis through the Flash Publish Settings dialog box, using the Hardware Acceleration menu on the Flash tab. If you choose None, the window mode reverts to default, transparent, or opaque, as specified by the Window Mode setting on the HTML tab.
+-->
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="traversing-the-display-list.html" class="navigation navigation-prev " aria-label="Previous page: Traversing the display list">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="handling-events-for-display-objects.html" class="navigation navigation-next " aria-label="Next page: Handling events for display objects">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Setting Stage properties","level":"1.3.4.5","depth":3,"next":{"title":"Handling events for display objects","level":"1.3.4.6","depth":3,"path":"display-programming/working-with-display-objects/handling-events-for-display-objects.md","ref":"display-programming/working-with-display-objects/handling-events-for-display-objects.md","articles":[]},"previous":{"title":"Traversing the display list","level":"1.3.4.4","depth":3,"path":"display-programming/working-with-display-objects/traversing-the-display-list.md","ref":"display-programming/working-with-display-objects/traversing-the-display-list.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"display-programming/working-with-display-objects/setting-stage-properties.md","mtime":"2022-04-26T18:11:24.924Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-26T18:11:53.494Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

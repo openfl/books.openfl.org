@@ -1,0 +1,1181 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Event objects · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="event-listeners.html" />
+    
+    
+    <link rel="prev" href="the-event-flow.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Chapter 1: Handling events
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="basics-of-handling-events.html">
+            
+                <a href="basics-of-handling-events.html">
+            
+                    
+                    Basics of handling events
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="the-event-flow.html">
+            
+                <a href="the-event-flow.html">
+            
+                    
+                    The event flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.3" data-path="event-objects.html">
+            
+                <a href="event-objects.html">
+            
+                    
+                    Event objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="event-listeners.html">
+            
+                <a href="event-listeners.html">
+            
+                    
+                    Event listeners
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../display-programming/">
+            
+                <a href="../display-programming/">
+            
+                    
+                    Chapter 2: Display programming
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../display-programming/basics-of-display-programming.html">
+            
+                <a href="../display-programming/basics-of-display-programming.html">
+            
+                    
+                    Basics of display programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../display-programming/core-display-classes.html">
+            
+                <a href="../display-programming/core-display-classes.html">
+            
+                    
+                    Core display classes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../display-programming/advantages-of-the-display-list-approach.html">
+            
+                <a href="../display-programming/advantages-of-the-display-list-approach.html">
+            
+                    
+                    Advantages of the display list approach
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../display-programming/working-with-display-objects/">
+            
+                <a href="../display-programming/working-with-display-objects/">
+            
+                    
+                    Working with display objects
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../display-programming/working-with-display-objects/properties-and-methods-of-the-displayobject-class.html">
+            
+                <a href="../display-programming/working-with-display-objects/properties-and-methods-of-the-displayobject-class.html">
+            
+                    
+                    Properties and methods of the DisplayObject class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="../display-programming/working-with-display-objects/adding-display-objects-to-the-display-list.html">
+            
+                <a href="../display-programming/working-with-display-objects/adding-display-objects-to-the-display-list.html">
+            
+                    
+                    Adding display objects to the display list
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.3" data-path="../display-programming/working-with-display-objects/working-with-display-object-containers.html">
+            
+                <a href="../display-programming/working-with-display-objects/working-with-display-object-containers.html">
+            
+                    
+                    Working with display object containers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.4" data-path="../display-programming/working-with-display-objects/traversing-the-display-list.html">
+            
+                <a href="../display-programming/working-with-display-objects/traversing-the-display-list.html">
+            
+                    
+                    Traversing the display list
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.5" data-path="../display-programming/working-with-display-objects/setting-stage-properties.html">
+            
+                <a href="../display-programming/working-with-display-objects/setting-stage-properties.html">
+            
+                    
+                    Setting Stage properties
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.6" data-path="../display-programming/working-with-display-objects/handling-events-for-display-objects.html">
+            
+                <a href="../display-programming/working-with-display-objects/handling-events-for-display-objects.html">
+            
+                    
+                    Handling events for display objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.7" data-path="../display-programming/working-with-display-objects/choosing-a-displayobject-subclass.html">
+            
+                <a href="../display-programming/working-with-display-objects/choosing-a-displayobject-subclass.html">
+            
+                    
+                    Choosing a DisplayObject subclass
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../display-programming/manipulating-display-objects/">
+            
+                <a href="../display-programming/manipulating-display-objects/">
+            
+                    
+                    Manipulating display objects
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1" data-path="../display-programming/manipulating-display-objects/changing-position.html">
+            
+                <a href="../display-programming/manipulating-display-objects/changing-position.html">
+            
+                    
+                    Changing position
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.2" data-path="../display-programming/manipulating-display-objects/panning-and-scrolling-display-objects.html">
+            
+                <a href="../display-programming/manipulating-display-objects/panning-and-scrolling-display-objects.html">
+            
+                    
+                    Panning and scrolling display objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.3" data-path="../display-programming/manipulating-display-objects/manipulating-size-and-scaling-objects.html">
+            
+                <a href="../display-programming/manipulating-display-objects/manipulating-size-and-scaling-objects.html">
+            
+                    
+                    Manipulating size and scaling objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.4" data-path="../display-programming/manipulating-display-objects/caching-display-objects.html">
+            
+                <a href="../display-programming/manipulating-display-objects/caching-display-objects.html">
+            
+                    
+                    Caching display objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.5" data-path="../display-programming/manipulating-display-objects/applying-blending-modes.html">
+            
+                <a href="../display-programming/manipulating-display-objects/applying-blending-modes.html">
+            
+                    
+                    Applying blending modes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.6" data-path="../display-programming/manipulating-display-objects/adjusting-displayobject-colors.html">
+            
+                <a href="../display-programming/manipulating-display-objects/adjusting-displayobject-colors.html">
+            
+                    
+                    Adjusting DisplayObject colors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.7" data-path="../display-programming/manipulating-display-objects/rotating-objects.html">
+            
+                <a href="../display-programming/manipulating-display-objects/rotating-objects.html">
+            
+                    
+                    Rotating objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.8" data-path="../display-programming/manipulating-display-objects/fading-objects.html">
+            
+                <a href="../display-programming/manipulating-display-objects/fading-objects.html">
+            
+                    
+                    Fading objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.9" data-path="../display-programming/manipulating-display-objects/masking-display-objects.html">
+            
+                <a href="../display-programming/manipulating-display-objects/masking-display-objects.html">
+            
+                    
+                    Masking display objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../display-programming/animating-objects.html">
+            
+                <a href="../display-programming/animating-objects.html">
+            
+                    
+                    Animating objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../display-programming/loading-display-content-dynamically/">
+            
+                <a href="../display-programming/loading-display-content-dynamically/">
+            
+                    
+                    Loading display content dynamically
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.7.1" data-path="../display-programming/loading-display-content-dynamically/loading-display-objects.html">
+            
+                <a href="../display-programming/loading-display-content-dynamically/loading-display-objects.html">
+            
+                    
+                    Loading display objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.2" data-path="../display-programming/loading-display-content-dynamically/monitoring-loading-progress.html">
+            
+                <a href="../display-programming/loading-display-content-dynamically/monitoring-loading-progress.html">
+            
+                    
+                    Monitoring loading progress
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.3" data-path="../display-programming/loading-display-content-dynamically/specifying-loading-context.html">
+            
+                <a href="../display-programming/loading-display-content-dynamically/specifying-loading-context.html">
+            
+                    
+                    Specifying loading context
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../working-with-geometry/">
+            
+                <a href="../working-with-geometry/">
+            
+                    
+                    Chapter 3: Working with geometry
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../working-with-geometry/basics-of-geometry.html">
+            
+                <a href="../working-with-geometry/basics-of-geometry.html">
+            
+                    
+                    Basics of geometry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../working-with-geometry/using-point-objects.html">
+            
+                <a href="../working-with-geometry/using-point-objects.html">
+            
+                    
+                    Using Point objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../working-with-geometry/using-rectangle-objects.html">
+            
+                <a href="../working-with-geometry/using-rectangle-objects.html">
+            
+                    
+                    Using Rectangle objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../working-with-geometry/using-matrix-objects.html">
+            
+                <a href="../working-with-geometry/using-matrix-objects.html">
+            
+                    
+                    Using Matrix objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../using-the-drawing-api/">
+            
+                <a href="../using-the-drawing-api/">
+            
+                    
+                    Chapter 4: Using the drawing API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../using-the-drawing-api/basics-of-the-drawing-api.html">
+            
+                <a href="../using-the-drawing-api/basics-of-the-drawing-api.html">
+            
+                    
+                    Basics of the drawing API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../using-the-drawing-api/understanding-the-graphics-class.html">
+            
+                <a href="../using-the-drawing-api/understanding-the-graphics-class.html">
+            
+                    
+                    Understanding the Graphics class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../using-the-drawing-api/drawing-lines-and-curves.html">
+            
+                <a href="../using-the-drawing-api/drawing-lines-and-curves.html">
+            
+                    
+                    Drawing lines and curves
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../using-the-drawing-api/drawing-shapes-using-built-in-methods.html">
+            
+                <a href="../using-the-drawing-api/drawing-shapes-using-built-in-methods.html">
+            
+                    
+                    Drawing shapes using built-in methods
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../using-the-drawing-api/creating-gradient-lines-and-fills.html">
+            
+                <a href="../using-the-drawing-api/creating-gradient-lines-and-fills.html">
+            
+                    
+                    Creating gradient lines and fills
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../using-the-drawing-api/using-the-math-class-with-drawing-methods.html">
+            
+                <a href="../using-the-drawing-api/using-the-math-class-with-drawing-methods.html">
+            
+                    
+                    Using the Math class with drawing methods
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../using-the-drawing-api/animating-with-the-drawing-api.html">
+            
+                <a href="../using-the-drawing-api/animating-with-the-drawing-api.html">
+            
+                    
+                    Animating with the drawing API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../using-the-drawing-api/advanced-use-of-the-drawing-api/">
+            
+                <a href="../using-the-drawing-api/advanced-use-of-the-drawing-api/">
+            
+                    
+                    Advanced use of the drawing API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.8.1" data-path="../using-the-drawing-api/advanced-use-of-the-drawing-api/drawing-paths.html">
+            
+                <a href="../using-the-drawing-api/advanced-use-of-the-drawing-api/drawing-paths.html">
+            
+                    
+                    Drawing paths
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8.2" data-path="../using-the-drawing-api/advanced-use-of-the-drawing-api/defining-winding-rules.html">
+            
+                <a href="../using-the-drawing-api/advanced-use-of-the-drawing-api/defining-winding-rules.html">
+            
+                    
+                    Defining winding rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8.3" data-path="../using-the-drawing-api/advanced-use-of-the-drawing-api/using-graphics-data-classes.html">
+            
+                <a href="../using-the-drawing-api/advanced-use-of-the-drawing-api/using-graphics-data-classes.html">
+            
+                    
+                    Using graphics data classes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8.4" data-path="../using-the-drawing-api/advanced-use-of-the-drawing-api/about-using-drawtriangles.html">
+            
+                <a href="../using-the-drawing-api/advanced-use-of-the-drawing-api/about-using-drawtriangles.html">
+            
+                    
+                    About using drawTriangles()
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../working-with-bitmaps/">
+            
+                <a href="../working-with-bitmaps/">
+            
+                    
+                    Chapter 5: Working with bitmaps
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../working-with-bitmaps/the-bitmap-and-bitmapdata-classes.html">
+            
+                <a href="../working-with-bitmaps/the-bitmap-and-bitmapdata-classes.html">
+            
+                    
+                    The Bitmap and BitmapData classes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../working-with-bitmaps/manipulating-pixels.html">
+            
+                <a href="../working-with-bitmaps/manipulating-pixels.html">
+            
+                    
+                    Manipulating pixels
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../working-with-bitmaps/copying-bitmap-data.html">
+            
+                <a href="../working-with-bitmaps/copying-bitmap-data.html">
+            
+                    
+                    Copying bitmap data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../working-with-bitmaps/compressing-bitmap-data.html">
+            
+                <a href="../working-with-bitmaps/compressing-bitmap-data.html">
+            
+                    
+                    Compressing bitmap data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../working-with-bitmaps/making-textures-with-noise-functions.html">
+            
+                <a href="../working-with-bitmaps/making-textures-with-noise-functions.html">
+            
+                    
+                    Making textures with noise functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../working-with-bitmaps/scrolling-bitmaps.html">
+            
+                <a href="../working-with-bitmaps/scrolling-bitmaps.html">
+            
+                    
+                    Scrolling bitmaps
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../working-with-movie-clips/">
+            
+                <a href="../working-with-movie-clips/">
+            
+                    
+                    Chapter 6: Working with movie clips
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../working-with-movie-clips/working-with-movieclip-objects.html">
+            
+                <a href="../working-with-movie-clips/working-with-movieclip-objects.html">
+            
+                    
+                    Working with MovieClip objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../working-with-movie-clips/controlling-movie-clip-playback.html">
+            
+                <a href="../working-with-movie-clips/controlling-movie-clip-playback.html">
+            
+                    
+                    Controlling movie clip playback
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../working-with-movie-clips/creating-movieclip-objects-with-haxe.html">
+            
+                <a href="../working-with-movie-clips/creating-movieclip-objects-with-haxe.html">
+            
+                    
+                    Creating MovieClip objects with Haxe
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Event objects</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="event-objects">Event objects </h1>
+<p>Event objects serve two main purposes in the new event-handling system. First, event objects represent actual events by storing information about specific events in a set of properties. Second, event objects contain a set of methods that allow you to manipulate event objects and affect the behavior of the event-handling system.</p>
+<p>To facilitate access to these properties and methods, the OpenFL API defines an Event class that serves as the base class for all event objects. The Event class defines a fundamental set of properties and methods that are common to all event objects.</p>
+<p>This section begins with a discussion of the Event class properties, continues with a description of the Event class methods, and concludes with an explanation of why subclasses of the Event class exist.</p>
+<h2 id="understanding-event-class-properties">Understanding Event class properties</h2>
+<p>The Event class defines a number of read-only properties and constants that provide important information about an event object.The following are especially important:</p>
+<ul>
+<li>Event object types are represented by constants and stored in the <code>Event.type</code> property.</li>
+<li><p>Whether an event&#x2019;s default behavior can be prevented is represented by a Boolean value and stored in the <code>Event.cancelable</code> property.</p>
+</li>
+<li><p>Event flow information is contained in the remaining properties.</p>
+</li>
+</ul>
+<h3 id="event-object-types">Event object types</h3>
+<p>Every event object has an associated event type. Event types are stored in the <code>Event.type</code> property as string values. It is useful to know the type of an event object so that your code can distinguish objects of different types from one another. For example, the following code specifies that the <code>clickHandler()</code> listener function should respond to any mouse click event objects that are passed to <code>myDisplayObject</code>:</p>
+<pre><code class="lang-haxe">myDisplayObject.addEventListener (MouseEvent.CLICK, clickHandler);
+</code></pre>
+<p>Some two dozen event types are associated with the Event class itself and are represented by Event class constants, some of which are shown in the following excerpt from the Event class definition:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">package</span> openfl.events;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Event</span> </span>{
+
+    <span class="hljs-comment">// class constants</span>
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">inline</span> <span class="hljs-keyword">var</span> ACTIVATE = <span class="hljs-string">&quot;activate&quot;</span>;
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">inline</span> <span class="hljs-keyword">var</span> ADDED = <span class="hljs-string">&quot;added&quot;</span>;
+
+    <span class="hljs-comment">// remaining constants omitted for brevity</span>
+
+}
+</code></pre>
+<p>These constants provide an easy way to refer to specific event types. You should use these constants instead of the strings they represent. If you misspell a constant name in your code, the compiler will catch the mistake, but if you instead use strings, a typographical error may not manifest at compile time and could lead to unexpected behavior that could be difficult to debug. For example, when adding an event listener, use the following code:</p>
+<pre><code class="lang-haxe">myDisplayObject.addEventListener (MouseEvent.CLICK, clickHandler);
+</code></pre>
+<p>rather than:</p>
+<pre><code class="lang-haxe">myDisplayObject.addEventListener (<span class="hljs-string">&quot;click&quot;</span>, clickHandler);
+</code></pre>
+<h3 id="default-behavior-information">Default behavior information</h3>
+<p>Your code can check whether the default behavior for any given event object can be prevented by accessing the <code>cancelable</code> property. The <code>cancelable</code> property holds a Boolean value that indicates whether or not a default behavior can be prevented. You can prevent, or cancel, the default behavior associated with a small number of events using the <code>preventDefault()</code> method. For more information, see Canceling default event behavior under <a href="#understanding-event-class-methods">Understanding Event class methods</a>.</p>
+<h3 id="event-flow-information">Event flow information</h3>
+<p>The remaining Event class properties contain important information about an event object and its relationship to the event flow, as described in the following list:</p>
+<ul>
+<li>The <code>bubbles</code> property contains information about the parts of the event flow in which the event object participates.</li>
+<li>The <code>eventPhase</code> property indicates the current phase in the event flow.</li>
+<li>The <code>target</code> property stores a reference to the event target.</li>
+<li>The <code>currentTarget</code> property stores a reference to the display list object that is currently processing the event object.</li>
+</ul>
+<h3 id="the-bubbles-property">The bubbles property</h3>
+<p>An event is said to bubble if its event object participates in the bubbling phase of the event flow, which means that the event object is passed from the target node back through its ancestors until it reaches the Stage. The <code>Event.bubbles</code> property stores a Boolean value that indicates whether the event object participates in the bubbling phase. Because all events that bubble also participate in the capture and target phases, any event that bubbles participates in all three of the event flow phases. If the value is <code>true</code>, the event object participates in all three phases. If the value is <code>false</code>, the event object does not participate in the bubbling phase.</p>
+<h3 id="the-eventphase-property">The eventPhase property</h3>
+<p>You can determine the event phase for any event object by investigating its eventPhase property. The <code>eventPhase</code> property contains an unsigned integer value that represents one of the three phases of the event flow. The OpenFL API defines a separate EventPhase class that contains three constants that correspond to the three unsigned integer values, as shown in the following code excerpt:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">package</span> openfl.events;
+
+@:<span class="hljs-keyword">enum</span> abstract EventPhase(Int) from Int to Int from UInt to UInt {
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">var</span> AT_TARGET = <span class="hljs-number">2</span>;
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">var</span> BUBBLING_PHASE = <span class="hljs-number">3</span>;
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">var</span> CAPTURING_PHASE = <span class="hljs-number">1</span>;
+
+}
+</code></pre>
+<p>These constants correspond to the three valid values of the <code>eventPhase</code> property. You can use these constants to make your code more readable. For example, if you want to ensure that a function named <code>myFunc()</code> is called only if the event target is in the target stage, you can use the following code to test for this condition:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">if</span> (event.eventPhase == EventPhase.AT_TARGET) {
+
+    myFunc ();
+
+}
+</code></pre>
+<h3 id="the-target-property">The target property</h3>
+<p>The <code>target</code> property holds a reference to the object that is the target of the event. In some cases, this is straightforward, such as when a microphone becomes active, the target of the event object is the Microphone object. If the target is on the display list, however, the display list hierarchy must be taken into account. For example, if a user inputs a mouse click on a point that includes overlapping display list objects, OpenFL always choose the object that is farthest away from the Stage as the event target.</p>
+<p>For complex projects, especially those in which buttons are routinely decorated with smaller child objects, the <code>target</code> property may not be used frequently because it will often point to a button&#x2019;s child object instead of the button. In these situations, the common practice is to add event listeners to the button and use the currentTarget property because it points to the button, whereas the target property may point to a child of the button.</p>
+<h3 id="the-currenttarget-property">The currentTarget property</h3>
+<p>The <code>currentTarget</code> property contains a reference to the object that is currently processing the event object. Although it may seem odd not to know which node is currently processing the event object that you are examining, keep in mind that you can add a listener function to any display object in that event object&apos;s event flow, and the listener function can be placed in any location. Moreover, the same listener function can be added to different display objects. As a project increases in size and complexity, the currentTarget property becomes more and more useful.</p>
+<h2 id="understanding-event-class-methods">Understanding Event class methods </h2>
+<p>There are three categories of Event class methods:</p>
+<ul>
+<li>Utility methods, which can create copies of an event object or convert it to a string</li>
+<li>Event flow methods, which remove event objects from the event flow</li>
+<li>Default behavior methods, which prevent default behavior or check whether it has been prevented</li>
+</ul>
+<h3 id="event-class-utility-methods">Event class utility methods</h3>
+<p>There are two utility methods in the Event class. The <code>clone()</code> method allows you to create copies of an event object. The <code>toString()</code> method allows you to generate a string representation of the properties of an event object along with their values. Both of these methods are used internally by the event model system, but are exposed to developers for general use.</p>
+<p>For advanced developers creating subclasses of the Event class, you must override and implement versions of both utility methods to ensure that the event subclass will work properly.</p>
+<h3 id="stopping-event-flow">Stopping event flow</h3>
+<p>You can call either the <code>Event.stopPropagation()</code> method or the <code>Event.stopImmediatePropagation()</code> method to prevent an event object from continuing on its way through the event flow. The two methods are nearly identical and differ only in whether the current node&#x2019;s other event listeners are allowed to execute:</p>
+<ul>
+<li>The <code>Event.stopPropagation()</code> method prevents the event object from moving on to the next node, but only after any other event listeners on the current node are allowed to execute.</li>
+<li>The <code>Event.stopImmediatePropagation()</code> method also prevents the event object from moving on to the next node, but does not allow any other event listeners on the current node to execute.</li>
+</ul>
+<p>Calling either of these methods has no effect on whether the default behavior associated with an event occurs. Use the default behavior methods of the Event class to prevent default behavior.</p>
+<h3 id="canceling-default-event-behavior">Canceling default event behavior</h3>
+<p>The two methods that pertain to canceling default behavior are the <code>preventDefault()</code> method and the <code>isDefaultPrevented()</code> method. Call the <code>preventDefault()</code> method to cancel the default behavior associated with an event. To check whether <code>preventDefault()</code> has already been called on an event object, call the <code>isDefaultPrevented()</code> method, which returns a value of <code>true</code> if the method has already been called and <code>false</code> otherwise.</p>
+<p>The <code>preventDefault()</code> method will work only if the event&#x2019;s default behavior can be cancelled. You can check whether this is the case by referring to the API documentation for that event type, or by using Haxe to examine the <code>cancelable</code> property of the event object.</p>
+<p>Canceling the default behavior has no effect on the progress of an event object through the event flow. Use the event flow methods of the Event class to remove an event object from the event flow.</p>
+<h2 id="subclasses-of-the-event-class">Subclasses of the Event class </h2>
+<p>For many events, the common set of properties defined in the Event class is sufficient. Other events, however, have unique characteristics that cannot be captured by the properties available in the Event class. For these events, OpenFL defines several subclasses of the Event class.</p>
+<p>Each subclass provides additional properties and event types that are unique to that category of events. For example, events related to mouse input have several unique characteristics that cannot be captured by the properties defined in the Event class. The MouseEvent class extends the Event class by adding ten properties that contain information such as the location of the mouse event and whether specific keys were pressed during the mouse event.</p>
+<p>An Event subclass also contains constants that represent the event types that are associated with the subclass. For example, the MouseEvent class defines constants for several mouse event types, include the <code>click</code>, <code>doubleClick</code>, <code>mouseDown</code>, and <code>mouseUp</code> event types.</p>
+<p>As described in the section on Event class utility methods under <a href="#event-objects">Event objects</a>, when creating an Event subclass you must override the <code>clone()</code> and <code>toString()</code> methods to provide functionality specific to the subclass.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="the-event-flow.html" class="navigation navigation-prev " aria-label="Previous page: The event flow">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="event-listeners.html" class="navigation navigation-next " aria-label="Next page: Event listeners">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Event objects","level":"1.2.3","depth":2,"next":{"title":"Event listeners","level":"1.2.4","depth":2,"path":"handling-events/event-listeners.md","ref":"handling-events/event-listeners.md","articles":[]},"previous":{"title":"The event flow","level":"1.2.2","depth":2,"path":"handling-events/the-event-flow.md","ref":"handling-events/the-event-flow.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"handling-events/event-objects.md","mtime":"2022-04-26T18:11:24.924Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-26T18:11:53.494Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
