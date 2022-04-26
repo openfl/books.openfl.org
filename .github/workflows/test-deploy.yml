@@ -1,0 +1,31 @@
+name: Test deployment
+on: [pull_request]
+
+jobs:
+  test-deploy:
+
+    runs-on: ubuntu-latest
+    steps:
+
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+      
+      - uses: actions/checkout@v2
+        with:
+          repository: openfl/OpenFLDevelopersGuide
+          path: OpenFLDevelopersGuide
+      
+      - uses: actions/checkout@v2
+        with:
+          repository: openfl/AS3ConversionGuide
+          path: AS3ConversionGuide
+      
+      - name: Install dependencies
+        run: |
+          npm install -g gitbook
+
+      - name: Build
+        run: |
+          gitbook build OpenFLDevelopersGuide
+          gitbook build AS3ConversionGuide
