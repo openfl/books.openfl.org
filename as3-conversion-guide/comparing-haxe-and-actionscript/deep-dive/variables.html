@@ -1,0 +1,556 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Variables · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="data-types.html" />
+    
+    
+    <link rel="prev" href="syntax.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../history.html">
+            
+                <a href="../../history.html">
+            
+                    
+                    A Short History
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Comparing Haxe and ActionScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../overview.html">
+            
+                <a href="../overview.html">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Deep Dive
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="syntax.html">
+            
+                <a href="syntax.html">
+            
+                    
+                    Syntax
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.2.2" data-path="variables.html">
+            
+                <a href="variables.html">
+            
+                    
+                    Variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="data-types.html">
+            
+                <a href="data-types.html">
+            
+                    
+                    Data Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="operators.html">
+            
+                <a href="operators.html">
+            
+                    
+                    Operators
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../automatic-conversion/">
+            
+                <a href="../../automatic-conversion/">
+            
+                    
+                    Automatic Conversion
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../automatic-conversion/as3hx/">
+            
+                <a href="../../automatic-conversion/as3hx/">
+            
+                    
+                    AS3HX
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../glossary/">
+            
+                <a href="../../glossary/">
+            
+                    
+                    Glossary
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../glossary/error-messages.html">
+            
+                <a href="../../glossary/error-messages.html">
+            
+                    
+                    Error Messages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../glossary/cheat-sheet.html">
+            
+                <a href="../../glossary/cheat-sheet.html">
+            
+                    
+                    Cheat Sheet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../ui-components-fl-packages.html">
+            
+                <a href="../../ui-components-fl-packages.html">
+            
+                    
+                    UI Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Variables</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="variables">Variables</h1>
+<p>ActionScript and Haxe both use the <code>var</code> keyword to define a new variable. This can store a reference to an object, or it can store a value, such as an integer or string.</p>
+<h2 id="naming-limitations">Naming Limitations</h2>
+<p>A class level variable, or <em>property</em>, must have a unique name.</p>
+<pre><code class="lang-haxe"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> </span>{
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">var</span> hello:String;
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">var</span> hello:Int; <span class="hljs-comment">// error, cannot reuse name</span>
+
+    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span> <span class="hljs-params">()</span> </span>{
+
+    }
+
+}
+</code></pre>
+<p>In ActionScript 3.0, you cannot use a name more than once in a local variable either, but in Haxe, you <em>are</em> allowed to redefine a local variable.</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">hello</span> <span class="hljs-params">()</span>:String </span>{
+
+    <span class="hljs-keyword">var</span> value = <span class="hljs-string">&quot;Hello&quot;</span>;
+    <span class="hljs-keyword">trace</span> (value);
+
+    <span class="hljs-keyword">var</span> value = <span class="hljs-number">100</span>; <span class="hljs-comment">// not allowed in ActionScript</span>
+    <span class="hljs-keyword">trace</span> (value);
+
+}
+</code></pre>
+<p>Variable names cannot be a reserved keyword, and cannot use special characters (except for &quot;_&quot;). ActionScript 3.0 allows use of the dollar sign (&quot;$&quot;) character in variable names, but their use is not allowed in Haxe.</p>
+<h2 id="naming-conventions">Naming Conventions</h2>
+<p>ActionScript and Haxe commonly use &quot;camel case&quot; when naming variables. This means that the name starts in lowercase, but uses uppercase at the start of each new word (such as <code>itemCount</code> or <code>applesAndBananas</code>).</p>
+<p>Both languages also commonly use an underscore (&quot;_&quot;) at the beginning of a private variable name (such as <code>_secretValue</code>).</p>
+<p>It is also recommended to try and use variable names that are descriptive. This can be difficult to do, but will always make it easier to understand code without additional comments. <code>FORCE_OF_GRAVITY</code>, for example, will probably be easier to understand than <code>_g</code> in most cases.</p>
+<p>It is also common convention to use all capital letters for a constant value, such as <code>SPEED_OF_LIGHT</code>.</p>
+<h2 id="access-control">Access Control</h2>
+<p>ActionScript 3.0 supports four built-in levels of access for class properties:</p>
+<ul>
+<li><p><code>public</code></p>
+<p> The variable will be accessible to other classes</p>
+</li>
+<li><p><code>private</code></p>
+<p> The variable will be accessible only within the current class</p>
+</li>
+<li><p><code>protected</code></p>
+<p> The variable will be accessible within the current class, or by classes that extend the current class</p>
+</li>
+<li><p><code>internal</code></p>
+<p> The variable will be accessible within the current class, and other classes in the same package</p>
+</li>
+</ul>
+<p>Haxe simplifies these controls to two levels of access. <code>public</code> behaves similarly to the ActionScript <code>public</code> level of access, and <code>private</code> behaves similarly to the Actionscript <code>protected</code> level of access.</p>
+<p>You can use <code>@:access</code>, <code>@:allow</code> or <code>@:privateAccess</code> meta-data in Haxe to access or allow private access between classes, supporting other use cases.</p>
+<p>Haxe also adds support for controlling read and write access to a variable, using the following syntax:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">public</span> <span class="hljs-keyword">var</span> hello (read, write):String;
+</code></pre>
+<p>For example,</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">public</span> <span class="hljs-keyword">var</span> hello (<span class="hljs-keyword">default</span>, <span class="hljs-literal">null</span>):String;
+</code></pre>
+<p>The following kinds of read and write access are supported:</p>
+<ul>
+<li><p><code>default</code></p>
+<p> Access will perform as it would normally</p>
+</li>
+<li><p><code>get</code></p>
+<p> Read access will use a getter function, named <code>get_hello</code> (or whatever the property name is), when reading the value</p>
+</li>
+<li><p><code>set</code></p>
+<p> Write access will use a setter function, named <code>set_hello</code> (or whatever the property name is), when writing the value</p>
+</li>
+<li><p><code>null</code></p>
+<p> Read or write access will be allowed inside of the current class, or children of the current class, but will not be allowed externally</p>
+</li>
+<li><p><code>never</code></p>
+<p> Read or write access will never be allowed, even inside the current class</p>
+</li>
+</ul>
+<h2 id="getters-and-setters">Getters and Setters</h2>
+<p>ActionScript 3.0 allows support for simulating read-only variables, or variables with a custom setter, by using a <code>get</code> or a <code>set</code> function, and an additional private variable.</p>
+<pre><code class="lang-ActionScript"><span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> _readOnly:String;
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">get</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">readOnly</span> <span class="hljs-params">()</span>:String </span>{
+
+    <span class="hljs-keyword">return</span> _readOnly;
+
+}
+</code></pre>
+<p>Haxe supports more powerful access control per-variable, so this is not required. However, both languages support get and set functions when more powerful control is required:</p>
+<p><em>ActionScript 3.0</em></p>
+<pre><code class="lang-ActionScript"><span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> _custom:String;
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">get</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">custom</span> <span class="hljs-params">()</span>:String </span>{
+
+    <span class="hljs-keyword">return</span> _custom;
+
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">set</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">custom</span> <span class="hljs-params">(value:String)</span>:void </span>{
+
+    _custom = value;
+
+}
+</code></pre>
+<p><em>Haxe</em></p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">public</span> <span class="hljs-keyword">var</span> custom (get, set):String;
+
+<span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> _custom:String;
+
+<span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">get_custom</span> <span class="hljs-params">()</span>:String </span>{
+
+    <span class="hljs-keyword">return</span> _custom;
+
+}
+
+<span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">set_custom</span> <span class="hljs-params">(value:String)</span>:String </span>{
+
+    <span class="hljs-keyword">return</span> _custom = value;
+
+}
+</code></pre>
+<h2 id="constants">Constants</h2>
+<p>Constants are properties that have a fixed value, and do not ever change. ActionScript 3.0 defines a <code>const</code> keyword when declaring a constant property, while Haxe uses the <code>inline</code> keyword instead.</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">inline</span> <span class="hljs-keyword">var</span> FORCE_OF_GRAVITY = <span class="hljs-number">9.8</span>;
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="syntax.html" class="navigation navigation-prev " aria-label="Previous page: Syntax">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="data-types.html" class="navigation navigation-next " aria-label="Next page: Data Types">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Variables","level":"1.3.2.2","depth":3,"next":{"title":"Data Types","level":"1.3.2.3","depth":3,"path":"comparing-haxe-and-actionscript/deep-dive/data-types.md","ref":"comparing-haxe-and-actionscript/deep-dive/data-types.md","articles":[]},"previous":{"title":"Syntax","level":"1.3.2.1","depth":3,"path":"comparing-haxe-and-actionscript/deep-dive/syntax.md","ref":"comparing-haxe-and-actionscript/deep-dive/syntax.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"comparing-haxe-and-actionscript/deep-dive/variables.md","mtime":"2022-09-16T16:06:45.436Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-09-16T16:07:20.976Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
