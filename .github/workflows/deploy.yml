@@ -36,7 +36,7 @@ jobs:
           mkdir deploy/openfl-developers-guide
           mkdir deploy/as3-conversion-guide
           cp -r OpenFLDevelopersGuide/_book/* deploy/openfl-developers-guide
-          cp -r OpenFLDevelopersGuide/_book/* deploy/as3-conversion-guide
+          cp -r AS3ConversionGuide/_book/* deploy/as3-conversion-guide
           cp index.html deploy/index.html
           cp CNAME deploy/CNAME
 
