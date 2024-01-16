@@ -6,7 +6,10 @@ Adobe® AIR® provides more complete access to the file system of the host compu
 
 **More Help topics**
 
-[flash.net.FileReference](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/FileReference.html) [flash.net.FileReferenceList](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/FileReferenceList.html) [flash.filesystem.File](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/filesystem/File.html) [flash.filesystem.FileStream](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/filesystem/File.html)
+[openfl.net.FileReference](https://api.openfl.org/openfl/net/FileReference.html)
+[openfl.net.FileReferenceList](https://api.openfl.org/openfl/net/FileReferenceList.html)
+[openfl.filesystem.File](https://api.openfl.org/openfl/filesystem/File.html)
+[openfl.filesystem.FileStream](https://api.openfl.org/openfl/filesystem/File.html)
 
 **Using the FileReference class**
 
@@ -14,21 +17,21 @@ A FileReference object represents a data file on a client or server machine. The
 
 The FileReference class offers two different approaches to loading, transferring, and saving data files. Since its introduction, the FileReference class has includedthe browse() method, the upload() method, and the download() method. Use the browse() method to let the user select a file. Use the upload() method to transfer the file data to a remote server. Use the download() method to retrieve that data from the server and save it in a local file. Starting with OpenFL 10 and Adobe AIR 1.5, the FileReference class includes the load() and save() methods. The load() and save() methods allow you to access and save local files directly as well. The use of those methods is similar to the equivalent-named methods in the URLLoader and Loader classes.
 
-**_Note:_ **_The File class, which extends the FileReference class, and the FileStream class provide additional functions for working with files and the local file system. The File and FileStream classes are only supported in AIR and not in the OpenFL._
+**_Note:_** _The File class, which extends the FileReference class, and the FileStream class provide additional functions for working with files and the local file system. The File and FileStream classes are only supported in AIR and not in the OpenFL._
 
 **FileReference class**
 
 Each FileReference object represents a single data file on the local machine. The properties of the FileReference class contain information about the file’s size, type, name, filename extension, creator, creation date, and modification date.
 
-**_Note:_ **_The creator property is supported on Mac OS only. All other platforms return null._
+**_Note:_** _The creator property is supported on Mac OS only. All other platforms return null._
 
-**_Note:_ **_The extension property is only supported in Adobe AIR._
+**_Note:_** _The extension property is only supported in Adobe AIR._
 
 You can create an instance of the FileReference class one of two ways:
 
 • Use the new operator, as shown in the following code:
 
-import flash.net.FileReference;
+import openfl.net.FileReference;
 
 var fileRef:FileReference = new FileReference();
 
@@ -44,7 +47,7 @@ Once you have created a FileReference object, you can do the following:
 
 • Call the FileReference.save() method. This method opens a dialog box and prompts the user to choose a single file location on the local file system. It then saves data to the specified location.
 
-**_Note:_ **_You can only perform one browse(), download(), or save() action at a time, because only one dialog box can be open at any point._
+**_Note:_** _You can only perform one browse(), download(), or save() action at a time, because only one dialog box can be open at any point._
 
 The FileReference object properties such as name, size, or modificationDate are not defined until one of the following happens:
 
@@ -52,19 +55,19 @@ The FileReference object properties such as name, size, or modificationDate are 
 
 • The FileReference.download() method has been called, and the user has specified a new file location using the dialog box.
 
-**_Note:_ **_When performing a download, only the FileReference.name property is populated before the download is complete. After the file has been downloaded, all properties are available._
+**_Note:_** _When performing a download, only the FileReference.name property is populated before the download is complete. After the file has been downloaded, all properties are available._
 
 While calls to the FileReference.browse(), FileReferenceList.browse(), FileReference.download(), FileReference.load(), or FileReference.save() methods are executing, most players continue project playback including dispatching events and executing code.
 
 For uploading and downloading operations, a project can access files only within its own domain, including any domains specified by a policy file. You need to put a policy file on the server containing the file if that server is not in the same domain as the project initiating the upload or download.
 
-See [FileReference](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/FileReference.html).
+See [FileReference](https://api.openfl.org/openfl/net/FileReference.html).
 
 ## Loading data from files {#loading-data-from-files}
 
 The FileReference.load() method lets you load data from a local file into memory.
 
-**_Note:_ **_Your code must first call the FileReference.browse() method to let the user select a file to load. This restriction does not apply to content running in Adobe AIR in the application security sandbox_
+**_Note:_** _Your code must first call the FileReference.browse() method to let the user select a file to load. This restriction does not apply to content running in Adobe AIR in the application security sandbox_
 
 The FileReference.load() method returns immediately after being called, but the data being loaded isn’t available immediately. The FileReference object dispatches events to invoke listener methods at each step of the loading process.
 
@@ -86,23 +89,32 @@ package
 
 {
 
-import flash.display.Sprite; import flash.events.*; import flash.net.FileFilter;
+import openfl.display.Sprite;
+import openfl.events.*;
+import openfl.net.FileFilter;
 
-import flash.net.FileReference; import flash.net.URLRequest; import flash.utils.ByteArray;
+import openfl.net.FileReference;
+import openfl.net.URLRequest;
+import openfl.utils.ByteArray;
 
 public class FileReferenceExample1 extends Sprite
 
 {
 
-private var fileRef:FileReference; public function FileReferenceExample1()
+private var fileRef:FileReference;
+public function FileReferenceExample1()
 
 {
 
-fileRef = new FileReference(); fileRef.addEventListener(Event.SELECT, onFileSelected); fileRef.addEventListener(Event.CANCEL, onCancel); fileRef.addEventListener(IOErrorEvent.IO_ERROR, onIOError); fileRef.addEventListener(SecurityErrorEvent.SECURITY_ERROR,
+fileRef = new FileReference();
+fileRef.addEventListener(Event.SELECT, onFileSelected);
+fileRef.addEventListener(Event.CANCEL, onCancel);
+fileRef.addEventListener(IOErrorEvent.IO_ERROR, onIOError);
+fileRef.addEventListener(SecurityErrorEvent.SECURITY_ERROR,
 
 onSecurityError);
 
-var textTypeFilter:FileFilter = new FileFilter(&quot;Text Files (*.txt, *.rtf)&quot;, &quot;*.txt;*.rtf&quot;);
+var textTypeFilter:FileFilter = new FileFilter("Text Files (*.txt, *.rtf)", "*.txt;*.rtf");
 
 fileRef.browse([textTypeFilter]);
 
@@ -120,7 +132,7 @@ public function onProgress(evt:ProgressEvent):void
 
 {
 
-trace(&quot;Loaded &quot; + evt.bytesLoaded + &quot; of &quot; + evt.bytesTotal + &quot; bytes.&quot;);
+trace("Loaded " + evt.bytesLoaded + " of " + evt.bytesTotal + " bytes.");
 
 }
 
@@ -128,7 +140,7 @@ public function onComplete(evt:Event):void
 
 {
 
-trace(&quot;File was successfully loaded.&quot;); trace(fileRef.data);
+trace("File was successfully loaded."); trace(fileRef.data);
 
 }
 
@@ -136,7 +148,7 @@ public function onCancel(evt:Event):void
 
 {
 
-trace(&quot;The browse request was canceled by the user.&quot;);
+trace("The browse request was canceled by the user.");
 
 }
 
@@ -144,7 +156,7 @@ public function onIOError(evt:IOErrorEvent):void
 
 {
 
-trace(&quot;There was an IO Error.&quot;);
+trace("There was an IO Error.");
 
 }
 
@@ -152,7 +164,7 @@ public function onSecurityError(evt:Event):void
 
 {
 
-trace(&quot;There was a security error.&quot;);
+trace("There was a security error.");
 
 }
 
@@ -164,9 +176,9 @@ The example code first creates the FileReference object named fileRef and then c
 
 In Adobe AIR, the FileStream class provides additional functionality for reading data from a local file. See
 
-“Reading
+"Reading
 
-and writing files” on page 689
+and writing files" on page 689
 
 .
 
@@ -174,7 +186,7 @@ and writing files” on page 689
 
 The FileReference.save() method lets you save data to a local file. It starts by opening a dialog box to let the user enter a new filename and location to which to save a file. After the user selects the filename and location, the data is written to the new file. When the file is saved successfully, the properties of the FileReference object are populated with the properties of the local file.
 
-**_Note:_ **_Your code can only call the FileReference.save() method in response to a user-initiated event such as a mouse click or a keypress event. Otherwise an error is thrown. This restriction does not apply to content running in Adobe AIR in the application security sandbox._
+**_Note:_** _Your code can only call the FileReference.save() method in response to a user-initiated event such as a mouse click or a keypress event. Otherwise an error is thrown. This restriction does not apply to content running in Adobe AIR in the application security sandbox._
 
 The FileReference.save() method returns immediately after being called. The FileReference object then dispatches events to call listener methods at each step of the file saving process.
 
@@ -210,23 +222,30 @@ package
 
 {
 
-import flash.display.Sprite; import flash.events.*; import flash.net.FileFilter;
+import openfl.display.Sprite;
+import openfl.events.*;
+import openfl.net.FileFilter;
 
-import flash.net.FileReference; import flash.net.URLRequest; import flash.utils.ByteArray;
+import openfl.net.FileReference;
+import openfl.net.URLRequest;
+import openfl.utils.ByteArray;
 
 public class FileReferenceExample2 extends Sprite
 
 {
 
-private var fileRef:FileReference; public function FileReferenceExample2()
+private var fileRef:FileReference;
+public function FileReferenceExample2()
 
 {
 
-fileRef = new FileReference(); fileRef.addEventListener(Event.SELECT, onFileSelected); fileRef.addEventListener(Event.CANCEL, onCancel); fileRef.addEventListener(IOErrorEvent.IO_ERROR, onIOError); fileRef.addEventListener(SecurityErrorEvent.SECURITY_ERROR,
+fileRef = new FileReference();
+fileRef.addEventListener(Event.SELECT, onFileSelected);
+fileRef.addEventListener(Event.CANCEL, onCancel);
+fileRef.addEventListener(IOErrorEvent.IO_ERROR, onIOError);
+fileRef.addEventListener(SecurityErrorEvent.SECURITY_ERROR, onSecurityError);
 
-onSecurityError);
-
-var textTypeFilter:FileFilter = new FileFilter(&quot;Text Files (*.txt, *.rtf)&quot;, &quot;*.txt;*.rtf&quot;);
+var textTypeFilter:FileFilter = new FileFilter("Text Files (*.txt, *.rtf)", "*.txt;*.rtf");
 
 fileRef.browse([textTypeFilter]);
 
@@ -236,7 +255,9 @@ public function onFileSelected(evt:Event):void
 
 {
 
-fileRef.addEventListener(ProgressEvent.PROGRESS, onProgress); fileRef.addEventListener(Event.COMPLETE, onComplete); fileRef.load();
+fileRef.addEventListener(ProgressEvent.PROGRESS, onProgress);
+fileRef.addEventListener(Event.COMPLETE, onComplete);
+fileRef.load();
 
 }
 
@@ -244,7 +265,7 @@ public function onProgress(evt:ProgressEvent):void
 
 {
 
-trace(&quot;Loaded &quot; + evt.bytesLoaded + &quot; of &quot; + evt.bytesTotal + &quot; bytes.&quot;);
+trace("Loaded " + evt.bytesLoaded + " of " + evt.bytesTotal + " bytes.");
 
 }
 
@@ -252,7 +273,7 @@ public function onCancel(evt:Event):void
 
 {
 
-trace(&quot;The browse request was canceled by the user.&quot;);
+trace("The browse request was canceled by the user.");
 
 }
 
@@ -260,7 +281,11 @@ public function onComplete(evt:Event):void
 
 {
 
-trace(&quot;File was successfully loaded.&quot;); fileRef.removeEventListener(Event.SELECT, onFileSelected); fileRef.removeEventListener(ProgressEvent.PROGRESS, onProgress); fileRef.removeEventListener(Event.COMPLETE, onComplete); fileRef.removeEventListener(Event.CANCEL, onCancel);
+trace("File was successfully loaded.");
+fileRef.removeEventListener(Event.SELECT, onFileSelected);
+fileRef.removeEventListener(ProgressEvent.PROGRESS, onProgress);
+fileRef.removeEventListener(Event.COMPLETE, onComplete);
+fileRef.removeEventListener(Event.CANCEL, onCancel);
 
 saveFile();
 
@@ -270,7 +295,7 @@ public function saveFile():void
 
 {
 
-fileRef.addEventListener(Event.SELECT, onSaveFileSelected); fileRef.save(fileRef.data,&quot;NewFileName.txt&quot;);
+fileRef.addEventListener(Event.SELECT, onSaveFileSelected); fileRef.save(fileRef.data,"NewFileName.txt");
 
 }
 
@@ -286,7 +311,7 @@ public function onSaveProgress(evt:ProgressEvent):void
 
 {
 
-trace(&quot;Saved &quot; + evt.bytesLoaded + &quot; of &quot; + evt.bytesTotal + &quot; bytes.&quot;);
+trace("Saved " + evt.bytesLoaded + " of " + evt.bytesTotal + " bytes.");
 
 }
 
@@ -294,7 +319,7 @@ public function onSaveComplete(evt:Event):void
 
 {
 
-trace(&quot;File saved.&quot;); fileRef.removeEventListener(Event.SELECT, onSaveFileSelected);
+trace("File saved."); fileRef.removeEventListener(Event.SELECT, onSaveFileSelected);
 
 fileRef.removeEventListener(ProgressEvent.PROGRESS, onSaveProgress); fileRef.removeEventListener(Event.COMPLETE, onSaveComplete); fileRef.removeEventListener(Event.CANCEL, onSaveCancel);
 
@@ -304,7 +329,7 @@ public function onSaveCancel(evt:Event):void
 
 {
 
-trace(&quot;The save request was canceled by the user.&quot;);
+trace("The save request was canceled by the user.");
 
 }
 
@@ -312,7 +337,7 @@ public function onIOError(evt:IOErrorEvent):void
 
 {
 
-trace(&quot;There was an IO Error.&quot;);
+trace("There was an IO Error.");
 
 }
 
@@ -320,7 +345,7 @@ public function onSecurityError(evt:Event):void
 
 {
 
-trace(&quot;There was a security error.&quot;);
+trace("There was a security error.");
 
 }
 
@@ -332,9 +357,9 @@ When all of the data loads from the file, the code calls the onComplete() method
 
 In Adobe AIR, the FileStream class provides additional functionality for writing data to a local file. See
 
-“Reading and
+"Reading and
 
-writing files” on page 689
+writing files" on page 689
 
 .
 
@@ -342,21 +367,26 @@ writing files” on page 689
 
 To upload files to a server, first call the browse() method to allow a user to select one or more files. Next, when the FileReference.upload() method is called, the selected file is transferred to the server. If the user selects multiple files using the FileReferenceList.browse() method, OpenFL creates an array of selected files called FileReferenceList.fileList. You can then use the FileReference.upload() method to upload each file individually.
 
-**_Note:_ **_Using the FileReference.browse() method allows you to upload single files only. To allow a user to upload multiple files, use the FileReferenceList.browse() method._
+**_Note:_** _Using the FileReference.browse() method allows you to upload single files only. To allow a user to upload multiple files, use the FileReferenceList.browse() method._
 
 By default, the system file picker dialog box allows users to pick any file type from the local computer. Developers can specify one or more custom file type filters by using the FileFilter class and passing an array of file filter instances to the browse() method:
 
-var imageTypes:FileFilter = new FileFilter(&quot;Images (*.jpg, *.jpeg, *.gif, *.png)&quot;, &quot;*.jpg;
+var imageTypes:FileFilter = new FileFilter("Images (*.jpg, *.jpeg, *.gif, *.png)", "*.jpg;
 
-*.jpeg; *.gif; *.png&quot;);
+*.jpeg; *.gif; *.png");
 
-var textTypes:FileFilter = new FileFilter(&quot;Text Files (*.txt, *.rtf)&quot;, &quot;*.txt; *.rtf&quot;); var allTypes:Array = new Array(imageTypes, textTypes);
+var textTypes:FileFilter = new FileFilter("Text Files (*.txt, *.rtf)", "*.txt; *.rtf"); var allTypes:Array = new Array(imageTypes, textTypes);
 
-var fileRef:FileReference = new FileReference(); fileRef.browse(allTypes);
+var fileRef:FileReference = new FileReference();
+fileRef.browse(allTypes);
 
 When the user has selected the files and clicked the Open button in the system file picker, the Event.SELECT event is dispatched. If the FileReference.browse() method is used to select a file to upload, the following code sends the file to a web server:
 
-var fileRef:FileReference = new FileReference(); fileRef.addEventListener(Event.SELECT, selectHandler); fileRef.addEventListener(Event.COMPLETE, completeHandler); try
+var fileRef:FileReference = new FileReference();
+fileRef.addEventListener(Event.SELECT, selectHandler);
+fileRef.addEventListener(Event.COMPLETE, completeHandler);
+
+try
 
 {
 
@@ -368,7 +398,7 @@ catch (error:Error)
 
 {
 
-trace(&quot;Unable to browse for files.&quot;);
+trace("Unable to browse for files.");
 
 }
 
@@ -376,7 +406,8 @@ function selectHandler(event:Event):void
 
 {
 
-var request:URLRequest = new [URLRequest(&quot;http://www.[yourdomain].com/fileUploadScript.cfm&quot;)](http://www/) try
+var request:URLRequest = new URLRequest("http://www.[yourdomain].com/fileUploadScript.cfm");
+try
 
 {
 
@@ -388,7 +419,7 @@ catch (error:Error)
 
 {
 
-trace(&quot;Unable to upload file.&quot;);
+trace("Unable to upload file.");
 
 }
 
@@ -398,7 +429,7 @@ function completeHandler(event:Event):void
 
 {
 
-trace(&quot;uploaded&quot;);
+trace("uploaded");
 
 }
 
@@ -436,7 +467,7 @@ _enter a user name and password for authentication, and then only for downloads.
 
 To create a server script in ColdFusion to accept a file upload from OpenFL, you can use code similar to the following:
 
-&lt;cffile action=&quot;upload&quot; filefield=&quot;Filedata&quot; destination=&quot;#ExpandPath(&#039;./&#039;)#&quot; nameconflict=&quot;OVERWRITE&quot; /&gt;
+&lt;cffile action="upload" filefield="Filedata" destination="#ExpandPath('./')#" nameconflict="OVERWRITE" /&gt;
 
 This ColdFusion code uploads the file sent by OpenFL and saves it to the same directory as the ColdFusion template, overwriting any file with the same name. The previous code shows the bare minimum amount of code necessary to accept a file upload; this script should not be used in a production environment. Ideally, add data validation to ensure that users upload only accepted file types, such as an image instead of a potentially dangerous server-side script.
 
@@ -446,19 +477,19 @@ The following code demonstrates file uploads using PHP, and it includes data val
 
 $MAXIMUM_FILESIZE = 1024 * 200; // 200KB
 
-$MAXIMUM_FILE_COUNT = 10; // keep maximum 10 files on server echo exif_imagetype($_FILES[&#039;Filedata&#039;]);
+$MAXIMUM_FILE_COUNT = 10; // keep maximum 10 files on server echo exif_imagetype($_FILES['Filedata']);
 
-if ($_FILES[&#039;Filedata&#039;][&#039;size&#039;] &lt;= $MAXIMUM_FILESIZE)
-
-{
-
-move_uploaded_file($_FILES[&#039;Filedata&#039;][&#039;tmp_name&#039;], &quot;./temporary/&quot;.$_FILES[&#039;Filedata&#039;][&#039;name&#039;]);
-
-$type = exif_imagetype(&quot;./temporary/&quot;.$_FILES[&#039;Filedata&#039;][&#039;name&#039;]); if ($type == 1 || $type == 2 || $type == 3)
+if ($_FILES['Filedata']['size'] &lt;= $MAXIMUM_FILESIZE)
 
 {
 
-rename(&quot;./temporary/&quot;.$_FILES[&#039;Filedata&#039;][&#039;name&#039;], &quot;./images/&quot;.$_FILES[&#039;Filedata&#039;][&#039;name&#039;]);
+move_uploaded_file($_FILES['Filedata']['tmp_name'], "./temporary/".$_FILES['Filedata']['name']);
+
+$type = exif_imagetype("./temporary/".$_FILES['Filedata']['name']); if ($type == 1 || $type == 2 || $type == 3)
+
+{
+
+rename("./temporary/".$_FILES['Filedata']['name'], "./images/".$_FILES['Filedata']['name']);
 
 }
 
@@ -466,13 +497,13 @@ else
 
 {
 
-unlink(&quot;./temporary/&quot;.$_FILES[&#039;Filedata&#039;][&#039;name&#039;]);
+unlink("./temporary/".$_FILES['Filedata']['name']);
 
 }
 
 }
 
-$directory = opendir(&#039;./images/&#039;);
+$directory = opendir('./images/');
 
 $files = array();
 
@@ -480,7 +511,7 @@ while ($file = readdir($directory))
 
 {
 
-array_push($files, array(&#039;./images/&#039;.$file, filectime(&#039;./images/&#039;.$file)));
+array_push($files, array('./images/'.$file, filectime('./images/'.$file)));
 
 }
 
@@ -532,19 +563,24 @@ You can pass additional variables to the upload script using either the POST or 
 
 POST variables to your upload script, you can use the following code:
 
-var fileRef:FileReference = new FileReference(); fileRef.addEventListener(Event.SELECT, selectHandler); fileRef.addEventListener(Event.COMPLETE, completeHandler); fileRef.browse();
+var fileRef:FileReference = new FileReference();
+fileRef.addEventListener(Event.SELECT, selectHandler);
+fileRef.addEventListener(Event.COMPLETE, completeHandler);
+fileRef.browse();
 
 function selectHandler(event:Event):void
 
 {
 
-var params:URLVariables = new URLVariables(); params.date = new Date();
+var params:URLVariables = new URLVariables();
+params.date = new Date();
 
-params.ssid = &quot;94103-1394-2345&quot;; var request:URLRequest = new
+params.ssid = "94103-1394-2345";
+var request:URLRequest = new URLRequest("http://www.yourdomain.com/FileReferenceUpload/fileupload.cfm");
+request.method = URLRequestMethod.POST;
 
-[URLRequest(&quot;http://www.yourdomain.com/FileReferenceUpload/fileupload.cfm&quot;);](http://www.yourdomain.com/FileReferenceUpload/fileupload.cfm) request.method = URLRequestMethod.POST;
-
-request.data = params; fileRef.upload(request, &quot;Custom1&quot;);
+request.data = params;
+fileRef.upload(request, "Custom1");
 
 }
 
@@ -552,7 +588,7 @@ function completeHandler(event:Event):void
 
 {
 
-trace(&quot;uploaded&quot;);
+trace("uploaded");
 
 }
 
@@ -562,13 +598,13 @@ Haxe also lets you override the default Filedata upload file field name by provi
 
 By default, OpenFL does not attempt to send a test upload, although you can override this default by passing a value of true as the third parameter to the upload() method. The purpose of the test upload is to check whether the actual file upload will be successful and that server authentication, if required, will succeed.
 
-**_Note:_ **_A test upload occurs only on Windows-based OpenFLs at this time._
+**_Note:_** _A test upload occurs only on Windows-based OpenFLs at this time._
 
 The server script that handles the file upload should expect an HTTP POST request with the following elements:
 
 • Content-Type with a value of multipart/form-data.
 
-• Content-Disposition with a name attribute set to “Filedata” and a filename attribute set to the name of the original file. You can specify a custom name attribute by passing a value for the uploadDataFieldName parameter in the FileReference.upload() method.
+• Content-Disposition with a name attribute set to "Filedata" and a filename attribute set to the name of the original file. You can specify a custom name attribute by passing a value for the uploadDataFieldName parameter in the FileReference.upload() method.
 
 • The binary contents of the file. Here is a sample HTTP POST request:
 
@@ -582,19 +618,19 @@ Host: [www.mydomain.com](http://www.mydomain.com/) Content-Length: 421 Connectio
 
 ------------Ij5ae0ae0KM7GI3KM7ei4cH2ei4gL6
 
-Content-Disposition: form-data; name=&quot;Filename&quot;
+Content-Disposition: form-data; name="Filename"
 
 sushi.jpg
 
 ------------Ij5ae0ae0KM7GI3KM7ei4cH2ei4gL6
 
-Content-Disposition: form-data; name=&quot;Filedata&quot;; filename=&quot;sushi.jpg&quot; Content-Type: application/octet-stream
+Content-Disposition: form-data; name="Filedata"; filename="sushi.jpg" Content-Type: application/octet-stream
 
 Test File
 
 ------------Ij5ae0ae0KM7GI3KM7ei4cH2ei4gL6
 
-Content-Disposition: form-data; name=&quot;Upload&quot;
+Content-Disposition: form-data; name="Upload"
 
 Submit Query
 
@@ -602,7 +638,7 @@ Submit Query
 
 (actual file data,,,)
 
-The following sample HTTP POST request sends three POST variables: api_sig, api_key, and auth_token, and uses a custom upload data field name value of &quot;photo&quot;:
+The following sample HTTP POST request sends three POST variables: api_sig, api_key, and auth_token, and uses a custom upload data field name value of "photo":
 
 POST /handler.asp HTTP/1.1 Accept: text/*
 
@@ -614,31 +650,31 @@ Host: [www.mydomain.com](http://www.mydomain.com/) Content-Length: 421 Connectio
 
 ------------Ij5GI3GI3ei4GI3ei4KM7GI3KM7KM7
 
-Content-Disposition: form-data; name=&quot;Filename&quot;
+Content-Disposition: form-data; name="Filename"
 
 sushi.jpg
 
 ------------Ij5GI3GI3ei4GI3ei4KM7GI3KM7KM7
 
-Content-Disposition: form-data; name=&quot;api_sig&quot;
+Content-Disposition: form-data; name="api_sig"
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 ------------Ij5GI3GI3ei4GI3ei4KM7GI3KM7KM7
 
-Content-Disposition: form-data; name=&quot;api_key&quot;
+Content-Disposition: form-data; name="api_key"
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 ------------Ij5GI3GI3ei4GI3ei4KM7GI3KM7KM7
 
-Content-Disposition: form-data; name=&quot;auth_token&quot;
+Content-Disposition: form-data; name="auth_token"
 
 XXXXXXXXXXXXXXXXXXXXXXX
 
 ------------Ij5GI3GI3ei4GI3ei4KM7GI3KM7KM7
 
-Content-Disposition: form-data; name=&quot;photo&quot;; filename=&quot;sushi.jpg&quot;
+Content-Disposition: form-data; name="photo"; filename="sushi.jpg"
 
 Content-Type: application/octet-stream
 
@@ -646,7 +682,7 @@ Content-Type: application/octet-stream
 
 ------------Ij5GI3GI3ei4GI3ei4KM7GI3KM7KM7
 
-Content-Disposition: form-data; name=&quot;Upload&quot;
+Content-Disposition: form-data; name="Upload"
 
 Submit Query
 
@@ -658,11 +694,11 @@ You can let users download files from a server using the FileReference.download(
 
 The following code downloads a file named index.xml from the same directory as the project:
 
-var request:URLRequest = new URLRequest(&quot;index.xml&quot;); var fileRef:FileReference = new FileReference(); fileRef.download(request);
+var request:URLRequest = new URLRequest("index.xml"); var fileRef:FileReference = new FileReference(); fileRef.download(request);
 
 To set the default name to currentnews.xml instead of index.xml, specify the defaultFileName parameter, as the following snippet shows:
 
-var request:URLRequest = new URLRequest(&quot;index.xml&quot;); var fileToDownload:FileReference = new FileReference(); fileToDownload.download(request, &quot;currentnews.xml&quot;);
+var request:URLRequest = new URLRequest("index.xml"); var fileToDownload:FileReference = new FileReference(); fileToDownload.download(request, "currentnews.xml");
 
 Renaming a file can be useful if the server filename was not intuitive or was server-generated. It’s also good to explicitly specify the defaultFileName parameter when you download a file using a server-side script, instead of downloading the file directly. For example, you need to specify the defaultFileName parameter if you have a server-side script that downloads specific files based on URL variables passed to it. Otherwise, the default name of the downloaded file is the name of your server-side script.
 
@@ -672,25 +708,33 @@ package
 
 {
 
-import flash.display.Sprite; import flash.net.FileReference; import flash.net.URLRequest; import flash.net.URLRequestMethod; import flash.net.URLVariables;
+import openfl.display.Sprite;
+import openfl.net.FileReference;
+import openfl.net.URLRequest;
+import openfl.net.URLRequestMethod;
+import openfl.net.URLVariables;
 
 public class DownloadFileExample extends Sprite
 
 {
 
-private var fileToDownload:FileReference; public function DownloadFileExample()
+private var fileToDownload:FileReference;
+public function DownloadFileExample()
 
 {
 
 var request:URLRequest = new URLRequest();
 
-request.url = [&quot;http://www.[yourdomain].com/downloadfile.cfm&quot;;](http://www/) request.method = URLRequestMethod.GET;
+request.url = "http://www.[yourdomain].com/downloadfile.cfm";
+request.method = URLRequestMethod.GET;
 
-request.data = new URLVariables(&quot;id=2&quot;); fileToDownload = new FileReference(); try
+request.data = new URLVariables("id=2");
+fileToDownload = new FileReference();
+try
 
 {
 
-fileToDownload.download(request, &quot;file2.txt&quot;);
+fileToDownload.download(request, "file2.txt");
 
 }
 
@@ -698,7 +742,7 @@ catch (error:Error)
 
 {
 
-trace(&quot;Unable to download file.&quot;);
+trace("Unable to download file.");
 
 }
 
@@ -710,19 +754,19 @@ trace(&quot;Unable to download file.&quot;);
 
 The following code demonstrates the ColdFusion script, download.cfm, that downloads one of two files from the server, depending on the value of a URL variable:
 
-&lt;cfparam name=&quot;URL.id&quot; default=&quot;1&quot; /&gt;
+&lt;cfparam name="URL.id" default="1" /&gt;
 
-&lt;cfswitch expression=&quot;#URL.id#&quot;&gt;
+&lt;cfswitch expression="#URL.id#"&gt;
 
-&lt;cfcase value=&quot;2&quot;&gt;
+&lt;cfcase value="2"&gt;
 
-&lt;cfcontent type=&quot;text/plain&quot; file=&quot;#ExpandPath(&#039;two.txt&#039;)#&quot; deletefile=&quot;No&quot; /&gt;
+&lt;cfcontent type="text/plain" file="#ExpandPath('two.txt')#" deletefile="No" /&gt;
 
 &lt;/cfcase&gt;
 
 &lt;cfdefaultcase&gt;
 
-&lt;cfcontent type=&quot;text/plain&quot; file=&quot;#ExpandPath(&#039;one.txt&#039;)#&quot; deletefile=&quot;No&quot; /&gt;
+&lt;cfcontent type="text/plain" file="#ExpandPath('one.txt')#" deletefile="No" /&gt;
 
 &lt;/cfdefaultcase&gt;
 
@@ -734,9 +778,9 @@ The FileReferenceList class lets the user select one or more files to upload to 
 
 The following code creates two FileFilter objects (imageFilter and textFilter) and passes them in an array to the FileReferenceList.browse() method. This causes the operating system file dialog box to display two possible filters for file types.
 
-var imageFilter:FileFilter = new FileFilter(&quot;Image Files (*.jpg, *.jpeg, *.gif, *.png)&quot;, &quot;*.jpg; *.jpeg; *.gif; *.png&quot;);
+var imageFilter:FileFilter = new FileFilter("Image Files (*.jpg, *.jpeg, *.gif, *.png)", "*.jpg; *.jpeg; *.gif; *.png");
 
-var textFilter:FileFilter = new FileFilter(&quot;Text Files (*.txt, *.rtf)&quot;, &quot;*.txt; *.rtf&quot;); var fileRefList:FileReferenceList = new FileReferenceList();
+var textFilter:FileFilter = new FileFilter("Text Files (*.txt, *.rtf)", "*.txt; *.rtf"); var fileRefList:FileReferenceList = new FileReferenceList();
 
 try
 
@@ -750,21 +794,25 @@ catch (error:Error)
 
 {
 
-trace(&quot;Unable to browse for files.&quot;);
+trace("Unable to browse for files.");
 
 }
 
 Allowing the user to select and upload one or more files by using the FileReferenceList class is the same as using FileReference.browse() to select files, although the FileReferenceList allows you to select more than one file. Uploading multiple files requires you to upload each of the selected files by using FileReference.upload(), as the following code shows:
 
-var fileRefList:FileReferenceList = new FileReferenceList(); fileRefList.addEventListener(Event.SELECT, selectHandler); fileRefList.browse();
+var fileRefList:FileReferenceList = new FileReferenceList();
+fileRefList.addEventListener(Event.SELECT, selectHandler);
+fileRefList.browse();
 
 function selectHandler(event:Event):void
 
 {
 
-var request:URLRequest = new [URLRequest(&quot;http://www.[yourdomain].com/fileUploadScript.cfm&quot;);](http://www/) var file:FileReference;
+var request:URLRequest = new URLRequest("http://www.[yourdomain].com/fileUploadScript.cfm");
+var file:FileReference;
 
-var files:FileReferenceList = FileReferenceList(event.target); var selectedFileArray:Array = files.fileList;
+var files:FileReferenceList = FileReferenceList(event.target);
+var selectedFileArray:Array = files.fileList;
 
 for (var i:uint = 0; i &lt; selectedFileArray.length; i++)
 
@@ -782,7 +830,7 @@ catch (error:Error)
 
 {
 
-trace(&quot;Unable to upload files.&quot;);
+trace("Unable to upload files.");
 
 }
 
@@ -794,7 +842,7 @@ function completeHandler(event:Event):void
 
 {
 
-trace(&quot;uploaded&quot;);
+trace("uploaded");
 
 }
 

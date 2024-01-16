@@ -1,6 +1,6 @@
 # Advanced text rendering {#advanced-text-rendering}
 
-Haxe provides a variety of classes in the flash.text package to control the properties of displayed text, including embedded fonts, anti-aliasing settings, alpha channel control, and other specific settings. The Haxe
+Haxe provides a variety of classes in the openfl.text package to control the properties of displayed text, including embedded fonts, anti-aliasing settings, alpha channel control, and other specific settings. The Haxe
 
 3.0 Reference provides detailed descriptions of these classes and properties, including the CSMSettings, Font, and TextRenderer classes.
 
@@ -35,7 +35,7 @@ You can embed fonts in an application in many ways, including:
 *   Creating and referencing a font symbol
 *   Creating and using a run-time shared library containing embedded font symbols
 
-For more details about how to embed fonts in applications, see “Embedded fonts for dynamic or input text fields” in
+For more details about how to embed fonts in applications, see "Embedded fonts for dynamic or input text fields" in
 
 _Using Flash_.
 
@@ -47,7 +47,7 @@ You can embed fonts in a Flex application in many ways, including:
 *   Using the @font-face style declaration
 *   Establish a class for the font and use the [Embed] tag to embed it.
 
-You can only embed TrueType fonts directly in a Flex application. Fonts in other formats, such as Type 1 Postscript fonts, can first be embedded in a project using Flash Professional and then that project can be used in your Flex application. For more details about using embedded fonts from projects in Flex, see “Embedding fonts from projects” in _Using Flex 4_.
+You can only embed TrueType fonts directly in a Flex application. Fonts in other formats, such as Type 1 Postscript fonts, can first be embedded in a project using Flash Professional and then that project can be used in your Flex application. For more details about using embedded fonts from projects in Flex, see "Embedding fonts from projects" in _Using Flex 4_.
 
 **More Help topics**
 
@@ -57,25 +57,25 @@ You can only embed TrueType fonts directly in a Flex application. Fonts in other
 
 ## Controlling sharpness, thickness, and anti-aliasing {#controlling-sharpness-thickness-and-anti-aliasing}
 
-By default, OpenFL determines the settings for text display controls like sharpness, thickness, and anti- aliasing as text resizes, changes color, or is displayed on various backgrounds. In some cases, like when you have very small or very large text, or text on a variety of unique backgrounds, you might want to maintain control over these settings. You can override OpenFL settings using the flash.text.TextRenderer class and its associated classes, like the CSMSettings class. These classes give you precise control over the rendering quality of embedded text. For more information about embedded fonts, see
+By default, OpenFL determines the settings for text display controls like sharpness, thickness, and anti- aliasing as text resizes, changes color, or is displayed on various backgrounds. In some cases, like when you have very small or very large text, or text on a variety of unique backgrounds, you might want to maintain control over these settings. You can override OpenFL settings using the openfl.text.TextRenderer class and its associated classes, like the CSMSettings class. These classes give you precise control over the rendering quality of embedded text. For more information about embedded fonts, see
 
-“Using embedded fonts” on page 384
+"Using embedded fonts" on page 384
 
 .
 
-**_Note:_ **_The flash.text.TextField.antiAliasType property must have the value AntiAliasType.ADVANCED in order for you to set the sharpness, thickness, or the gridFitType property, or to use the TextRenderer.setAdvancedAntiAliasingTable() method._
+**_Note:_** _The openfl.text.TextField.antiAliasType property must have the value AntiAliasType.ADVANCED in order for you to set the sharpness, thickness, or the gridFitType property, or to use the TextRenderer.setAdvancedAntiAliasingTable() method._
 
 The following example applies custom continuous stroke modulation (CSM) properties and formatting to displayed text using an embedded font called myFont. When the user clicks the displayed text, OpenFL applies the custom settings:
 
 var format:TextFormat = new TextFormat(); format.color = 0x336699;
 
-format.size = 48; format.font = &quot;myFont&quot;;
+format.size = 48; format.font = "myFont";
 
 var myText:TextField = new TextField(); myText.embedFonts = true;
 
 myText.autoSize = TextFieldAutoSize.LEFT; myText.antiAliasType = AntiAliasType.ADVANCED; myText.defaultTextFormat = format; myText.selectable = false;
 
-myText.mouseEnabled = true; myText.text = &quot;Hello World&quot;; addChild(myText);
+myText.mouseEnabled = true; myText.text = "Hello World"; addChild(myText);
 
 myText.addEventListener(MouseEvent.CLICK, clickHandler);
 
@@ -85,6 +85,6 @@ function clickHandler(event:Event):void
 
 var myAntiAliasSettings = new CSMSettings(48, 0.8, -0.8); var myAliasTable:Array = new Array(myAntiAliasSettings);
 
-TextRenderer.setAdvancedAntiAliasingTable(&quot;myFont&quot;, FontStyle.ITALIC, TextColorType.DARK_COLOR, myAliasTable);
+TextRenderer.setAdvancedAntiAliasingTable("myFont", FontStyle.ITALIC, TextColorType.DARK_COLOR, myAliasTable);
 
 }

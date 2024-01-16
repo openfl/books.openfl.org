@@ -67,20 +67,26 @@ public class SoundFacade extends EventDispatcher
 
 public var s:Sound;
 
-public var sc:SoundChannel; public var url:String;
+public var sc:SoundChannel;
+public var url:String;
 
 public var bufferTime:int = 1000;
 
-public var isLoaded:Boolean = false; public var isReadyToPlay:Boolean = false; public var isPlaying:Boolean = false; public var isStreaming:Boolean = true; public var autoLoad:Boolean = true; public var autoPlay:Boolean = true;
+public var isLoaded:Boolean = false;
+public var isReadyToPlay:Boolean = false;
+public var isPlaying:Boolean = false;
+public var isStreaming:Boolean = true;
+public var autoLoad:Boolean = true;
+public var autoPlay:Boolean = true;
 
 public var pausePosition:int = 0;
 
-public static const PLAY_PROGRESS:String = &quot;playProgress&quot;; public var progressInterval:int = 1000;
+public static const PLAY_PROGRESS:String = "playProgress";
+public var progressInterval:int = 1000;
 
 public var playTimer:Timer;
 
 public function SoundFacade(soundUrl:String, autoLoad:Boolean = true,
-
 autoPlay:Boolean = true, streaming:Boolean = true, bufferTime:int = -1):void
 
 {
@@ -249,9 +255,9 @@ new ProgressEvent(PLAY_PROGRESS, false, false, this.sc.position, estimatedLength
 
 The onPlayTimer() method implements the size estimation technique described in the section
 
-“Monitoring
+"Monitoring
 
-playback” on page 451
+playback" on page 451
 
 . Then it creates a new ProgressEvent instance with an event type of SoundFacade.PLAY_PROGRESS, with the bytesLoaded property set to the current position of the SoundChannel object and the bytesTotal property set to the estimated length of the sound data.
 

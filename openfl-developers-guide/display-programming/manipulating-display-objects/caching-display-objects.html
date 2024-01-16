@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Caching display objects · GitBook</title>
+        <title>Caching display objects · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="generator" content="HonKit 5.1.4">
         
         
         
@@ -17,7 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
                 
             
                 
@@ -66,7 +65,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -955,14 +954,124 @@
             
         </li>
     
+        <li class="chapter " data-level="1.8" data-path="../../working-with-sound/">
+            
+                <a href="../../working-with-sound/">
+            
+                    
+                    Chapter 24: Working with sound
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../working-with-sound/basics-of-working-with-sound.html">
+            
+                <a href="../../working-with-sound/basics-of-working-with-sound.html">
+            
+                    
+                    Basics of working with sound
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../working-with-sound/understanding-the-sound-architecture.html">
+            
+                <a href="../../working-with-sound/understanding-the-sound-architecture.html">
+            
+                    
+                    Understanding the sound architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../../working-with-sound/loading-external-sound-files.html">
+            
+                <a href="../../working-with-sound/loading-external-sound-files.html">
+            
+                    
+                    Loading external sound files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../../working-with-sound/working-with-sound-assets.html">
+            
+                <a href="../../working-with-sound/working-with-sound-assets.html">
+            
+                    
+                    Working with sound assets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../../working-with-sound/working-with-dynamically-generated-audio.html">
+            
+                <a href="../../working-with-sound/working-with-dynamically-generated-audio.html">
+            
+                    
+                    Working with dynamically generated audio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../../working-with-sound/playing-sounds.html">
+            
+                <a href="../../working-with-sound/playing-sounds.html">
+            
+                    
+                    Playing sounds
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../../working-with-sound/controlling-sound-volume-and-panning.html">
+            
+                <a href="../../working-with-sound/controlling-sound-volume-and-panning.html">
+            
+                    
+                    Controlling sound volume and panning
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
     
 
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -1002,10 +1111,10 @@
                                 
                                 <h1 id="caching-display-objects">Caching display objects </h1>
 <p>As your designs in OpenFL grow in size, whether you are creating an application or complex scripted animations, you need to consider performance and optimization. When you have content that remains static (such as a rectangle Shape instance), OpenFL does not optimize the content. Therefore, when you change the position of the rectangle, OpenFL redraws the entire Shape instance.</p>
-<p>You can cache specified display objects to improve the performance of your project. The display object is a <em>surface</em>, essentially a bitmap version of the instance&#x2019;s vector data, which is data that you do not intend to change much over the course of your project. Therefore, instances with caching turned on are not continually redrawn as the project plays, letting the project render quickly.</p>
-<p><strong><em>Note:</em> </strong><em>You can update the vector data, at which time the surface is recreated. Therefore, the vector data cached in the surface does not need to remain the same for the entire project.</em></p>
-<p>Setting a display object&#x2019;s <code>cacheAsBitmap</code> property to <code>true</code> makes the display object cache a bitmap representation of itself. OpenFL creates a surface object for the instance, which is a cached bitmap instead of vector data. If you change the bounds of the display object, the surface is recreated instead of resized. Surfaces can nest within other surfaces. The child surface copies its bitmap onto its parent surface. For more information, see <a href="#enabling-bitmap-caching">Enabling bitmap caching</a>.</p>
-<p>The DisplayObject class&#x2019;s <code>opaqueBackground</code> property and <code>scrollRect</code> property are related to bitmap caching using the <code>cacheAsBitmap</code> property. Although these three properties are independent of each other, the <code>opaqueBackground</code> and <code>scrollRect</code> properties work best when an object is cached as a bitmap&#x2014;you see performance benefits for the <code>opaqueBackground</code> and <code>scrollRect</code> properties only when you set <code>cacheAsBitmap</code> to <code>true</code>. For more information about scrolling display object content, see <a href="panning-and-scrolling-display-objects.html">Panning and scrolling display objects</a>. For more information about setting an opaque background, see <a href="setting-an-opaque-background.md">Setting an opaque background color</a>.</p>
+<p>You can cache specified display objects to improve the performance of your project. The display object is a <em>surface</em>, essentially a bitmap version of the instance’s vector data, which is data that you do not intend to change much over the course of your project. Therefore, instances with caching turned on are not continually redrawn as the project plays, letting the project render quickly.</p>
+<p><strong><em>Note:</em></strong> <em>You can update the vector data, at which time the surface is recreated. Therefore, the vector data cached in the surface does not need to remain the same for the entire project.</em></p>
+<p>Setting a display object’s <code>cacheAsBitmap</code> property to <code>true</code> makes the display object cache a bitmap representation of itself. OpenFL creates a surface object for the instance, which is a cached bitmap instead of vector data. If you change the bounds of the display object, the surface is recreated instead of resized. Surfaces can nest within other surfaces. The child surface copies its bitmap onto its parent surface. For more information, see <a href="#enabling-bitmap-caching">Enabling bitmap caching</a>.</p>
+<p>The DisplayObject class’s <code>opaqueBackground</code> property and <code>scrollRect</code> property are related to bitmap caching using the <code>cacheAsBitmap</code> property. Although these three properties are independent of each other, the <code>opaqueBackground</code> and <code>scrollRect</code> properties work best when an object is cached as a bitmap—you see performance benefits for the <code>opaqueBackground</code> and <code>scrollRect</code> properties only when you set <code>cacheAsBitmap</code> to <code>true</code>. For more information about scrolling display object content, see <a href="panning-and-scrolling-display-objects.html">Panning and scrolling display objects</a>. For more information about setting an opaque background, see <a href="setting-an-opaque-background.md">Setting an opaque background color</a>.</p>
 <p>For information on alpha channel masking, which requires you to set the <code>cacheAsBitmap</code> property to <code>true</code>, see <a href="masking-display-objects.html">Masking display objects</a>.</p>
 <h2 id="when-to-enable-caching">When to enable caching </h2>
 <p>Enabling caching for a display object creates a surface, which has several advantages, such as helping complex vector animations to render fast. There are several scenarios in which you will want to enable caching. It might seem as though you would always want to enable caching to improve the performance of your projects; however, there are situations in which enabling caching does not improve performance, or can even decrease it. This section describes scenarios in which caching should be used, and when to use regular display objects.</p>
@@ -1013,9 +1122,9 @@
 <h3 id="when-to-use-bitmap-caching">When to use bitmap caching</h3>
 <p>The following are typical scenarios in which you might see significant benefits when you enable bitmap caching.</p>
 <ul>
-<li>Complex background image: An application that contains a detailed and complex background image of vector data (perhaps an image where you applied the trace bitmap command, or artwork that you created in Adobe Illustrator&#xAE;). You might animate characters over the background, which slows the animation because the background needs to continuously regenerate the vector data. To improve performance, you can set the <code>opaqueBackground</code> property of the background display object to <code>true</code>. The background is rendered as a bitmap and can be redrawn quickly, so that your animation plays much faster.</li>
+<li>Complex background image: An application that contains a detailed and complex background image of vector data (perhaps an image where you applied the trace bitmap command, or artwork that you created in Adobe Illustrator®). You might animate characters over the background, which slows the animation because the background needs to continuously regenerate the vector data. To improve performance, you can set the <code>opaqueBackground</code> property of the background display object to <code>true</code>. The background is rendered as a bitmap and can be redrawn quickly, so that your animation plays much faster.</li>
 <li>Scrolling text field: An application that displays a large amount of text in a scrolling text field. You can place the text field in a display object that you set as scrollable with scrolling bounds (the <code>scrollRect</code> property). This enables fast pixel scrolling for the specified instance. When a user scrolls the display object instance, OpenFL shifts the scrolled pixels up and generates the newly exposed region instead of regenerating the entire text field.</li>
-<li>Windowing system: An application with a complex system of overlapping windows. Each window can be open or closed (for example, web browser windows). If you mark each window as a surface (by setting the <code>cacheAsBitmap</code> property to <code>true</code>), each window is isolated and cached. Users can drag the windows so that they overlap each other, and each window doesn&#x2019;t need to regenerate the vector content.</li>
+<li>Windowing system: An application with a complex system of overlapping windows. Each window can be open or closed (for example, web browser windows). If you mark each window as a surface (by setting the <code>cacheAsBitmap</code> property to <code>true</code>), each window is isolated and cached. Users can drag the windows so that they overlap each other, and each window doesn’t need to regenerate the vector content.</li>
 <li>Alpha channel masking: When you are using alpha channel masking, you must set the <code>cacheAsBitmap</code> property to <code>true</code>. For more information, see <a href="masking-display-objects.html">Masking display objects</a>.</li>
 </ul>
 <p>Enabling bitmap caching in all of these scenarios improves the responsiveness and interactivity of the application by optimizing the vector graphics.</p>
@@ -1025,12 +1134,12 @@
 <ul>
 <li>Do not overuse surfaces (display objects with caching enabled). Each surface uses more memory than a regular display object, which means that you should only enable surfaces when you need to improve rendering performance.</li>
 </ul>
-<p>A cached bitmap can use significantly more memory than a regular display object. For example, if a Sprite instance on the Stage is 250 pixels by 250 pixels in size, when cached it might use 250 KB instead of 1 KB when it&#x2019;s a regular (un-cached) Sprite instance.</p>
+<p>A cached bitmap can use significantly more memory than a regular display object. For example, if a Sprite instance on the Stage is 250 pixels by 250 pixels in size, when cached it might use 250 KB instead of 1 KB when it’s a regular (un-cached) Sprite instance.</p>
 <ul>
 <li>Avoid zooming into cached surfaces. If you overuse bitmap caching, a large amount of memory is consumed (see previous bullet), especially if you zoom in on the content.</li>
 <li>Use surfaces for display object instances that are largely static (non-animating). You can drag or move the instance, but the contents of the instance should not animate or change a lot. (Animation or changing content are more likely with a MovieClip instance containing animation or a Video instance.) For example, if you rotate or transform an instance, the instance changes between the surface and vector data, which is difficult to process and negatively affects your project.</li>
-<li>If you mix surfaces with vector data, it increases the amount of processing that OpenFL (and sometimes the computer) need to do. Group surfaces together as much as possible&#x2014;for example, when you create windowing applications.</li>
-<li>Do not cache objects whose graphics change frequently. Every time you scale, skew, rotate the display object, change the alpha or color transform, move child display objects, or draw using the graphics property, the bitmap cache is redrawn. If this happens every frame, the runtime must draw the object into a bitmap and then copy that bitmap onto the stage&#x2014;which results in extra work compared to just drawing the uncached object to the stage. The performance tradeoff of caching versus update frequency depends on the complexity and size of the display object and can only be determined by testing the specific content.</li>
+<li>If you mix surfaces with vector data, it increases the amount of processing that OpenFL (and sometimes the computer) need to do. Group surfaces together as much as possible—for example, when you create windowing applications.</li>
+<li>Do not cache objects whose graphics change frequently. Every time you scale, skew, rotate the display object, change the alpha or color transform, move child display objects, or draw using the graphics property, the bitmap cache is redrawn. If this happens every frame, the runtime must draw the object into a bitmap and then copy that bitmap onto the stage—which results in extra work compared to just drawing the uncached object to the stage. The performance tradeoff of caching versus update frequency depends on the complexity and size of the display object and can only be determined by testing the specific content.</li>
 </ul>
 <h2 id="enabling-bitmap-caching">Enabling bitmap caching </h2>
 <p>To enable bitmap caching for a display object, you set its <code>cacheAsBitmap</code> property to <code>true</code>: <code>mySprite.cacheAsBitmap = true;</code></p>
@@ -1069,8 +1178,8 @@ These transformations are applied directly to the cached bitmap.
 <pre><code class="lang-haxe">myShape.cacheAsBitmap = <span class="hljs-literal">true</span>;
 myShape.opaqueBackground = <span class="hljs-number">0xFF0000</span>;
 </code></pre>
-<p>In this case, the background color of the Shape named <code>myShape</code> is set to red (<code>0xFF0000</code>). Assuming the Shape instance contains a drawing of a green triangle, on a Stage with a white background, this would show up as a green triangle with red in the empty space in the Shape instance&#x2019;s bounding box (the rectangle that completely encloses the Shape).</p>
-<p><img src="../../assets/dp_opaqueBackground_example.png" alt=""></p>
+<p>In this case, the background color of the Shape named <code>myShape</code> is set to red (<code>0xFF0000</code>). Assuming the Shape instance contains a drawing of a green triangle, on a Stage with a white background, this would show up as a green triangle with red in the empty space in the Shape instance’s bounding box (the rectangle that completely encloses the Shape).</p>
+<p><img src="../../assets/dp_opaqueBackground_example.png" alt></p>
 <p>Of course, this code would make more sense if it were used with a Stage with a solid red background. On another colored background, that color would be specified instead. For example, in a project with a white background, the <code>opaqueBackground</code> property would most likely be set to <code>0xFFFFFF</code>, or pure white.</p>
 
                                 
@@ -1115,12 +1224,56 @@ myShape.opaqueBackground = <span class="hljs-number">0xFF0000</span>;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Caching display objects","level":"1.3.5.4","depth":3,"next":{"title":"Applying blending modes","level":"1.3.5.5","depth":3,"path":"display-programming/manipulating-display-objects/applying-blending-modes.md","ref":"display-programming/manipulating-display-objects/applying-blending-modes.md","articles":[]},"previous":{"title":"Manipulating size and scaling objects","level":"1.3.5.3","depth":3,"path":"display-programming/manipulating-display-objects/manipulating-size-and-scaling-objects.md","ref":"display-programming/manipulating-display-objects/manipulating-size-and-scaling-objects.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"display-programming/manipulating-display-objects/caching-display-objects.md","mtime":"2023-01-31T16:17:42.712Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-01-31T16:18:16.478Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Caching display objects","level":"1.3.5.4","depth":3,"next":{"title":"Applying blending modes","level":"1.3.5.5","depth":3,"path":"display-programming/manipulating-display-objects/applying-blending-modes.md","ref":"display-programming/manipulating-display-objects/applying-blending-modes.md","articles":[]},"previous":{"title":"Manipulating size and scaling objects","level":"1.3.5.3","depth":3,"path":"display-programming/manipulating-display-objects/manipulating-size-and-scaling-objects.md","ref":"display-programming/manipulating-display-objects/manipulating-size-and-scaling-objects.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"display-programming/manipulating-display-objects/caching-display-objects.md","mtime":"2024-01-16T06:43:11.678Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-01-16T06:43:31.976Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     
@@ -1138,10 +1291,6 @@ myShape.opaqueBackground = <span class="hljs-number">0xFF0000</span>;
     
         
         <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

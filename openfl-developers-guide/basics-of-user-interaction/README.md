@@ -2,9 +2,9 @@
 
 Your application can create interactivity by using Haxe to respond to user activity. Note that this section assumes that you are already familiar with the Haxe event model. For more information, see
 
-“Handling
+"Handling
 
-events” on page 125
+events" on page 125
 
 .
 
@@ -18,7 +18,7 @@ Important concepts and terms
 
 It’s important to familiarize yourself with the following key user interaction terms before proceeding:
 
-**Character code** A numeric code representing a character in the current character set (associated with a key being pressed on the keyboard). For example, “D” and “d” have different character codes even though they’re created by the same key on a U.S. English keyboard.
+**Character code** A numeric code representing a character in the current character set (associated with a key being pressed on the keyboard). For example, "D" and "d" have different character codes even though they’re created by the same key on a U.S. English keyboard.
 
 **Context menu** The menu that appears when a user right-clicks or uses a particular keyboard-mouse combination. Context menu commands typically apply directly to what has been clicked. For example, a context menu for an image may contain a command to show the image in a separate window and a command to download it.
 
@@ -28,6 +28,6 @@ It’s important to familiarize yourself with the following key user interaction
 
 **More Help topics**
 
-[InteractiveObject](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/display/InteractiveObject.html) [Keyboard](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/ui/Keyboard.html)
+[InteractiveObject](https://api.openfl.org/openfl/display/InteractiveObject.html) [Keyboard](https://api.openfl.org/openfl/ui/Keyboard.html)
 
-[Mouse](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/ui/Mouse.html) [ContextMenu](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/ui/ContextMenu.html)
+[Mouse](https://api.openfl.org/openfl/ui/Mouse.html) [ContextMenu](https://api.openfl.org/openfl/ui/ContextMenu.html)

@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Creating MovieClip objects with Haxe · GitBook</title>
+        <title>Creating MovieClip objects with Haxe · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="generator" content="HonKit 5.1.4">
         
         
         
@@ -17,7 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
                 
             
                 
@@ -57,6 +56,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="../working-with-sound/" />
+    
     
     <link rel="prev" href="controlling-movie-clip-playback.html" />
     
@@ -64,7 +65,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -953,14 +954,124 @@
             
         </li>
     
+        <li class="chapter " data-level="1.8" data-path="../working-with-sound/">
+            
+                <a href="../working-with-sound/">
+            
+                    
+                    Chapter 24: Working with sound
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../working-with-sound/basics-of-working-with-sound.html">
+            
+                <a href="../working-with-sound/basics-of-working-with-sound.html">
+            
+                    
+                    Basics of working with sound
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../working-with-sound/understanding-the-sound-architecture.html">
+            
+                <a href="../working-with-sound/understanding-the-sound-architecture.html">
+            
+                    
+                    Understanding the sound architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../working-with-sound/loading-external-sound-files.html">
+            
+                <a href="../working-with-sound/loading-external-sound-files.html">
+            
+                    
+                    Loading external sound files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../working-with-sound/working-with-sound-assets.html">
+            
+                <a href="../working-with-sound/working-with-sound-assets.html">
+            
+                    
+                    Working with sound assets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../working-with-sound/working-with-dynamically-generated-audio.html">
+            
+                <a href="../working-with-sound/working-with-dynamically-generated-audio.html">
+            
+                    
+                    Working with dynamically generated audio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../working-with-sound/playing-sounds.html">
+            
+                <a href="../working-with-sound/playing-sounds.html">
+            
+                    
+                    Playing sounds
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../working-with-sound/controlling-sound-volume-and-panning.html">
+            
+                <a href="../working-with-sound/controlling-sound-volume-and-panning.html">
+            
+                    
+                    Controlling sound volume and panning
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
     
 
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -1003,19 +1114,19 @@
 <p>The display list API of OpenFL streamlines the process of dynamically creating MovieClip objects. The ability to instantiate a MovieClip instance directly, separate from the process of adding it to the display list, provides flexibility and simplicity without sacrificing control.</p>
 <p>In Haxe, when you create a movie clip (or any other display object) instance programatically, it is not visible on the screen until it is added to the display list by calling the <code>addChild()</code> or the <code>addChildAt()</code> method on a display object container. This allows you to create a movie clip, set its properties, and even call methods before it is rendered to the screen. For more information on working with the display list, see <a href="../display-programming/working-with-display-objects/working-with-display-object-containers.html">Working with display object containers</a>.</p>
 <h2 id="exporting-library-symbols-for-haxe">Exporting library symbols for Haxe</h2>
-<p>By default, instances of movie clip symbols in a Flash document&#x2019;s library cannot be dynamically created (that is, created using only Haxe code). This is because each symbol that is exported for use in Haxe adds to the size of your project, and it&#x2019;s recognized that some symbols might not be intended for use on the stage. For this reason, in order to make a symbol available in Haxe, you must specify that the symbol should be exported for Haxe.</p>
+<p>By default, instances of movie clip symbols in a Flash document’s library cannot be dynamically created (that is, created using only Haxe code). This is because each symbol that is exported for use in Haxe adds to the size of your project, and it’s recognized that some symbols might not be intended for use on the stage. For this reason, in order to make a symbol available in Haxe, you must specify that the symbol should be exported for Haxe.</p>
 <p>To export a symbol for Haxe code:</p>
 <ol>
 <li>Select the symbol in the Library panel and open its Symbol Properties dialog box.</li>
 <li>If necessary, activate the Advanced settings.</li>
 <li>In the Linkage section, activate the &quot;Export for ActionScript&quot; checkbox. This will activate the Class and Base Class fields, and will also make it available to Haxe when building with OpenFL.</li>
 </ol>
-<p>By default, the Class field is populated with the symbol name, with spaces removed (for example, a symbol named &#x201C;Tree House&#x201D; would become &#x201C;TreeHouse&#x201D;). To specify that the symbol should use a custom class for its behavior, enter the full name of the class including its package in this field. If you want to be able to create instances of the symbol in Haxe code, but don&#x2019;t need to add any additional behavior, you can leave the class name as-is.</p>
-<p>The Base Class field&#x2019;s value defaults to flash.display.MovieClip (which will become openfl.display.MovieClip when including the SWF asset in OpenFL). If you want your symbol to extend the functionality of another customer class, you can specify that class&#x2019;s name instead, as long as that class extends the Sprite (or MovieClip) class.</p>
+<p>By default, the Class field is populated with the symbol name, with spaces removed (for example, a symbol named &quot;Tree House&quot; would become &quot;TreeHouse&quot;). To specify that the symbol should use a custom class for its behavior, enter the full name of the class including its package in this field. If you want to be able to create instances of the symbol in Haxe code, but don’t need to add any additional behavior, you can leave the class name as-is.</p>
+<p>The Base Class field’s value defaults to openfl.display.MovieClip (which will become openfl.display.MovieClip when including the SWF asset in OpenFL). If you want your symbol to extend the functionality of another customer class, you can specify that class’s name instead, as long as that class extends the Sprite (or MovieClip) class.</p>
 <ol>
 <li>Press the OK button to save the changes.</li>
 </ol>
-<p>At this point, if Flash can&#x2019;t find a linked SWC file or an external ActionScript file with a definition for the specified class (for instance, if you didn&#x2019;t need to add additional behavior for the symbol), a warning is displayed:</p>
+<p>At this point, if Flash can’t find a linked SWC file or an external ActionScript file with a definition for the specified class (for instance, if you didn’t need to add additional behavior for the symbol), a warning is displayed:</p>
 <p><em>A definition for this class could not be found in the classpath, so one will be automatically generated in the project upon export</em>.</p>
 <p>You can disregard this warning if your library symbol does not require unique functionality beyond the functionality of the MovieClip class.</p>
 <p>If you do not provide a class for your symbol, Flash will create a class for your symbol equivalent to this one:</p>
@@ -1037,22 +1148,22 @@ class ExampleMovieClip extends MovieClip {
 
 <span class="hljs-keyword">import</span> openfl.display.MovieClip;
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">MovieClip</span> </span>{
+<span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span> <span class="hljs-type">MovieClip</span></span> </span>{
 
-    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span> <span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span> </span>() {
 
         <span class="hljs-keyword">super</span> ();
 
     }
 
-    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getArea</span> <span class="hljs-params">()</span>:Float </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">getArea</span> </span>():<span class="hljs-type">Float </span>{
 
         <span class="hljs-comment">// The formula is Pi times the radius squared.</span>
         <span class="hljs-keyword">return</span> Math.PI * Math.pow ((width / <span class="hljs-number">2</span>), <span class="hljs-number">2</span>);
 
     }
 
-    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getCircumference</span> <span class="hljs-params">()</span>:Float </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">getCircumference</span> </span>():<span class="hljs-type">Float </span>{
 
         <span class="hljs-comment">// The formula is Pi times the diameter.</span>
         <span class="hljs-keyword">return</span> Math.PI * width;
@@ -1062,16 +1173,16 @@ class ExampleMovieClip extends MovieClip {
 }
 </code></pre>
 <p>The following code, placed on a keyframe on Frame 1 of the Flash document, will create an instance of the symbol and display it on the screen:</p>
-<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> c = <span class="hljs-keyword">new</span> Circle ();
+<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> c = <span class="hljs-keyword">new</span> <span class="hljs-type">Circle</span> ();
 addChild (c);
 
-<span class="hljs-keyword">trace</span> (c.width);
-<span class="hljs-keyword">trace</span> (c.height);
-<span class="hljs-keyword">trace</span> (c.getArea ());
-<span class="hljs-keyword">trace</span> (c.getCircumference ());
+<span class="hljs-built_in">trace</span> (c.width);
+<span class="hljs-built_in">trace</span> (c.height);
+<span class="hljs-built_in">trace</span> (c.getArea ());
+<span class="hljs-built_in">trace</span> (c.getCircumference ());
 </code></pre>
-<p>This code demonstrates Haxe-based instantiation as an alternative to dragging individual assets onto the Stage. It creates a circle that has all of the properties of a movie clip and also has the custom methods defined in the <code>Circle</code> class. This is a very basic example&#x2014;your library symbol can specify any number of properties and methods in its class.</p>
-<p>Haxe-based instantiation is powerful, because it allows you to dynamically create large quantities of instances that would be tedious to arrange manually. It is also flexible, because you can customize each instance&#x2019;s properties as it is created. You can get a sense of both of these benefits by using a loop to dynamically create several <code>Circle</code> instances. With the <code>Circle</code> symbol and class described previously in your Flash document&#x2019;s library, place the following code on a keyframe on Frame 1:</p>
+<p>This code demonstrates Haxe-based instantiation as an alternative to dragging individual assets onto the Stage. It creates a circle that has all of the properties of a movie clip and also has the custom methods defined in the <code>Circle</code> class. This is a very basic example—your library symbol can specify any number of properties and methods in its class.</p>
+<p>Haxe-based instantiation is powerful, because it allows you to dynamically create large quantities of instances that would be tedious to arrange manually. It is also flexible, because you can customize each instance’s properties as it is created. You can get a sense of both of these benefits by using a loop to dynamically create several <code>Circle</code> instances. With the <code>Circle</code> symbol and class described previously in your Flash document’s library, place the following code on a keyframe on Frame 1:</p>
 <pre><code class="lang-haxe"><span class="hljs-keyword">import</span> openfl.geom.ColorTransform;
 
 ...
@@ -1081,7 +1192,7 @@ addChild (c);
 <span class="hljs-keyword">for</span> (i <span class="hljs-keyword">in</span> <span class="hljs-number">0.</span>..totalCircles) {
 
     <span class="hljs-comment">// Create a new Circle instance.</span>
-    <span class="hljs-keyword">var</span> c = <span class="hljs-keyword">new</span> Circle ();
+    <span class="hljs-keyword">var</span> c = <span class="hljs-keyword">new</span> <span class="hljs-type">Circle</span> ();
 
     <span class="hljs-comment">// Place the new Circle at an x coordinate that will space the circles</span>
     <span class="hljs-comment">// evenly across the Stage.</span>
@@ -1100,7 +1211,7 @@ addChild (c);
 
 ...
 
-<span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getRandomColor</span> <span class="hljs-params">()</span>:ColorTransform </span>{
+<span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">getRandomColor</span> </span>():<span class="hljs-type">ColorTransform </span>{
 
     <span class="hljs-comment">// Generate random values for the red, green, and blue color channels.</span>
     <span class="hljs-keyword">var</span> red = (Math.random () * <span class="hljs-number">512</span>) - <span class="hljs-number">255</span>;
@@ -1108,7 +1219,7 @@ addChild (c);
     <span class="hljs-keyword">var</span> blue = (Math.random() * <span class="hljs-number">512</span>) - <span class="hljs-number">255</span>;
 
     <span class="hljs-comment">// Create and return a ColorTransform object with the random colors.</span>
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> ColorTransform (<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, red, green, blue, <span class="hljs-number">0</span>);
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-type">ColorTransform</span> (<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, red, green, blue, <span class="hljs-number">0</span>);
 
 }
 </code></pre>
@@ -1140,10 +1251,14 @@ addChild (c);
 
             
                 
-                <a href="controlling-movie-clip-playback.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Controlling movie clip playback">
+                <a href="controlling-movie-clip-playback.html" class="navigation navigation-prev " aria-label="Previous page: Controlling movie clip playback">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="../working-with-sound/" class="navigation navigation-next " aria-label="Next page: Chapter 24: Working with sound">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -1152,12 +1267,56 @@ addChild (c);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Creating MovieClip objects with Haxe","level":"1.7.3","depth":2,"previous":{"title":"Controlling movie clip playback","level":"1.7.2","depth":2,"path":"working-with-movie-clips/controlling-movie-clip-playback.md","ref":"working-with-movie-clips/controlling-movie-clip-playback.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"working-with-movie-clips/creating-movieclip-objects-with-haxe.md","mtime":"2023-01-31T16:17:42.720Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-01-31T16:18:16.478Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Creating MovieClip objects with Haxe","level":"1.7.3","depth":2,"next":{"title":"Chapter 24: Working with sound","level":"1.8","depth":1,"path":"working-with-sound/README.md","ref":"working-with-sound/README.md","articles":[{"title":"Basics of working with sound","level":"1.8.1","depth":2,"path":"working-with-sound/basics-of-working-with-sound.md","ref":"working-with-sound/basics-of-working-with-sound.md","articles":[]},{"title":"Understanding the sound architecture","level":"1.8.2","depth":2,"path":"working-with-sound/understanding-the-sound-architecture.md","ref":"working-with-sound/understanding-the-sound-architecture.md","articles":[]},{"title":"Loading external sound files","level":"1.8.3","depth":2,"path":"working-with-sound/loading-external-sound-files.md","ref":"working-with-sound/loading-external-sound-files.md","articles":[]},{"title":"Working with sound assets","level":"1.8.4","depth":2,"path":"working-with-sound/working-with-sound-assets.md","ref":"working-with-sound/working-with-sound-assets.md","articles":[]},{"title":"Working with dynamically generated audio","level":"1.8.5","depth":2,"path":"working-with-sound/working-with-dynamically-generated-audio.md","ref":"working-with-sound/working-with-dynamically-generated-audio.md","articles":[]},{"title":"Playing sounds","level":"1.8.6","depth":2,"path":"working-with-sound/playing-sounds.md","ref":"working-with-sound/playing-sounds.md","articles":[]},{"title":"Controlling sound volume and panning","level":"1.8.7","depth":2,"path":"working-with-sound/controlling-sound-volume-and-panning.md","ref":"working-with-sound/controlling-sound-volume-and-panning.md","articles":[]}]},"previous":{"title":"Controlling movie clip playback","level":"1.7.2","depth":2,"path":"working-with-movie-clips/controlling-movie-clip-playback.md","ref":"working-with-movie-clips/controlling-movie-clip-playback.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"working-with-movie-clips/creating-movieclip-objects-with-haxe.md","mtime":"2024-01-16T06:43:11.682Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-01-16T06:43:31.976Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
     
@@ -1175,10 +1334,6 @@ addChild (c);
     
         
         <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

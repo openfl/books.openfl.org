@@ -8,15 +8,16 @@ The sample Adobe® AIR® application described here reads a .zip file as an exam
 
 **More Help topics**
 
-[flash.utils.ByteArray](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/utils/ByteArray.html) [flash.utils.IExternalizable](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/utils/IExternalizable.html)
+[openfl.utils.ByteArray](https://api.openfl.org/openfl/utils/ByteArray.html)
+[openfl.utils.IExternalizable](https://api.openfl.org/openfl/utils/IExternalizable.html)
 
 [Action Message Format specification](http://opensource.adobe.com/wiki/download/attachments/1114283/amf3_spec_05_05_08.pdf)
 
 **Reading and writing a ByteArray**
 
-The ByteArray class is part of the flash.utils package. To create a ByteArray object in Haxe, import the ByteArray class and invoke the constructor, as shown in the following example:
+The ByteArray class is part of the openfl.utils package. To create a ByteArray object in Haxe, import the ByteArray class and invoke the constructor, as shown in the following example:
 
-import flash.utils.ByteArray;
+import openfl.utils.ByteArray;
 
 var stream:ByteArray = new ByteArray();
 
@@ -30,11 +31,11 @@ For example, the following code reads a simple array of strings and floating-poi
 
 // The following example reads a simple Array (groceries), made up of strings
 
-// and floating-point numbers, and writes it to a ByteArray. import flash.utils.ByteArray;
+// and floating-point numbers, and writes it to a ByteArray. import openfl.utils.ByteArray;
 
 // define the grocery list Array
 
-var groceries:Array = [&quot;milk&quot;, 4.50, &quot;soup&quot;, 1.79, &quot;eggs&quot;, 3.19, &quot;bread&quot; , 2.35]
+var groceries:Array = ["milk", 4.50, "soup", 1.79, "eggs", 3.19, "bread" , 2.35]
 
 // define the ByteArray
 
@@ -46,11 +47,11 @@ for (var i:int = 0; i &lt; groceries.length; i++) {
 
 bytes.writeUTFBytes(groceries[i++]); //write the string and position to the next item bytes.writeFloat(groceries[i]);// write the float
 
-trace(&quot;bytes.position is: &quot; + bytes.position);//display the position in ByteArray
+trace("bytes.position is: " + bytes.position);//display the position in ByteArray
 
 }
 
-trace(&quot;bytes length is: &quot; + bytes.length);// display the length
+trace("bytes length is: " + bytes.length);// display the length
 
 ## The position property {#the-position-property}
 
@@ -58,39 +59,39 @@ The position property stores the current position of the pointer that indexes th
 
 var bytes:ByteArray = new ByteArray();
 
-trace(&quot;bytes.position is initially: &quot; + bytes.position); // 0
+trace("bytes.position is initially: " + bytes.position); // 0
 
 When you read from or write to a ByteArray, the method that you use updates the position property to point to the location immediately following the last byte that was read or written. For example, the following code writes a string to a ByteArray and afterward the position property points to the byte immediately following the string in the ByteArray:
 
 var bytes:ByteArray = new ByteArray();
 
-trace(&quot;bytes.position is initially: &quot; + bytes.position); // 0 bytes.writeUTFBytes(&quot;Hello World!&quot;);
+trace("bytes.position is initially: " + bytes.position); // 0 bytes.writeUTFBytes("Hello World!");
 
-trace(&quot;bytes.position is now: &quot; + bytes.position);// 12
+trace("bytes.position is now: " + bytes.position);// 12
 
 Likewise, a read operation increments the position property by the number of bytes read.
 
 var bytes:ByteArray = new ByteArray();
 
-trace(&quot;bytes.position is initially: &quot; + bytes.position); // 0 bytes.writeUTFBytes(&quot;Hello World!&quot;);
+trace("bytes.position is initially: " + bytes.position); // 0 bytes.writeUTFBytes("Hello World!");
 
-trace(&quot;bytes.position is now: &quot; + bytes.position);// 12 bytes.position = 0;
+trace("bytes.position is now: " + bytes.position);// 12 bytes.position = 0;
 
-trace(&quot;The first 6 bytes are: &quot; + (bytes.readUTFBytes(6)));//Hello trace(&quot;And the next 6 bytes are: &quot; + (bytes.readUTFBytes(6)));// World!
+trace("The first 6 bytes are: " + (bytes.readUTFBytes(6)));//Hello trace("And the next 6 bytes are: " + (bytes.readUTFBytes(6)));// World!
 
 Notice that you can set the position property to a specific location in the ByteArray to read or write at that offset.
 
 ## The bytesAvailable and length properties {#the-bytesavailable-and-length-properties}
 
-The length and bytesAvailable properties tell you how long a ByteArray is and how many bytes remain in it from the current position to the end. The following example illustrates how you can use these properties. The example writes a String of text to the ByteArray and then reads the ByteArray one byte at a time until it encounters either the character “a” or the end (bytesAvailable &lt;= 0).
+The length and bytesAvailable properties tell you how long a ByteArray is and how many bytes remain in it from the current position to the end. The following example illustrates how you can use these properties. The example writes a String of text to the ByteArray and then reads the ByteArray one byte at a time until it encounters either the character "a" or the end (bytesAvailable &lt;= 0).
 
 var bytes:ByteArray = new ByteArray();
 
-var text:String = &quot;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vivamus etc.&quot;;
+var text:String = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vivamus etc.";
 
-bytes.writeUTFBytes(text); // write the text to the ByteArray trace(&quot;The length of the ByteArray is: &quot; + bytes.length);// 70 bytes.position = 0; // reset position
+bytes.writeUTFBytes(text); // write the text to the ByteArray trace("The length of the ByteArray is: " + bytes.length);// 70 bytes.position = 0; // reset position
 
-while (bytes.bytesAvailable &gt; 0 &amp;&amp; (bytes.readUTFBytes(1) != &#039;a&#039;)) {
+while (bytes.bytesAvailable &gt; 0 &amp;&amp; (bytes.readUTFBytes(1) != 'a')) {
 
 //read to letter a or end of bytes
 
@@ -98,7 +99,7 @@ while (bytes.bytesAvailable &gt; 0 &amp;&amp; (bytes.readUTFBytes(1) != &#039;a&
 
 if (bytes.position &lt; bytes.bytesAvailable) {
 
-trace(&quot;Found the letter a; position is: &quot; + bytes.position); // 23 trace(&quot;and the number of bytes available is: &quot; + bytes.bytesAvailable);// 47
+trace("Found the letter a; position is: " + bytes.position); // 23 trace("and the number of bytes available is: " + bytes.bytesAvailable);// 47
 
 }
 
@@ -116,7 +117,7 @@ Computers can differ in how they store multibyte numbers, that is, numbers that 
 | a0 | a1 | a2 | a3 |
 | 34 | 33 | 32 | 31 |
 
-The endian property of the ByteArray class allows you to denote this byte order for multibyte numbers that you are processing. The acceptable values for this property are either &quot;bigEndian&quot; or &quot;littleEndian&quot; and the Endian class defines the constants BIG_ENDIAN and LITTLE_ENDIAN for setting the endian property with these strings.
+The endian property of the ByteArray class allows you to denote this byte order for multibyte numbers that you are processing. The acceptable values for this property are either "bigEndian" or "littleEndian" and the Endian class defines the constants BIG_ENDIAN and LITTLE_ENDIAN for setting the endian property with these strings.
 
 ## The compress() and uncompress() methods {#the-compress-and-uncompress-methods}
 
@@ -146,11 +147,14 @@ xml-type | byte-array-type
 
 The encoded data follows the type marker unless the marker represents a single possible value, such as null or true or false, in which case nothing else is encoded.
 
-There are two versions of AMF: AMF0 and AMF3\. AMF 0 supports sending complex objects by reference and allows endpoints to restore object relationships. AMF 3 improves AMF 0 by sending object traits and strings by reference, in addition to object references, and by supporting new data types that were introduced in Haxe\. The ByteArray.objectEcoding property specifies the version of AMF that is used to encode the object data. The flash.net.ObjectEncoding class defines constants for specifying the AMF version: ObjectEncoding.AMF0 and ObjectEncoding.AMF3.
+There are two versions of AMF: AMF0 and AMF3\. AMF 0 supports sending complex objects by reference and allows endpoints to restore object relationships. AMF 3 improves AMF 0 by sending object traits and strings by reference, in addition to object references, and by supporting new data types that were introduced in Haxe\. The ByteArray.objectEcoding property specifies the version of AMF that is used to encode the object data. The openfl.net.ObjectEncoding class defines constants for specifying the AMF version: ObjectEncoding.AMF0 and ObjectEncoding.AMF3.
 
-The following example calls writeObject() to write an XML object to a ByteArray, which it then compresses using the Deflate algorithm and writes to the order file on the desktop. The example uses a label to display the message “Wrote order file to desktop!” in the AIR window when it is finished.
+The following example calls writeObject() to write an XML object to a ByteArray, which it then compresses using the Deflate algorithm and writes to the order file on the desktop. The example uses a label to display the message "Wrote order file to desktop!" in the AIR window when it is finished.
 
-import flash.filesystem.*; import flash.display.Sprite; import flash.display.TextField; import flash.utils.ByteArray;
+import openfl.filesystem.*;
+import openfl.display.Sprite;
+import openfl.display.TextField;
+import openfl.utils.ByteArray;
 
 public class WriteObjectExample extends Sprite
 
@@ -160,17 +164,20 @@ public function WriteObjectExample()
 
 {
 
-var bytes:ByteArray = new ByteArray(); var myLabel:TextField = new TextField(); myLabel.x = 150;
+var bytes:ByteArray = new ByteArray();
+var myLabel:TextField = new TextField();
+myLabel.x = 150;
 
 myLabel.y = 150;
 
-myLabel.width = 200; addChild(myLabel);
+myLabel.width = 200;
+addChild(myLabel);
 
 var myXML:XML =
 
 &lt;order&gt;
 
-&lt;item id=&#039;1&#039;&gt;
+&lt;item id='1'&gt;
 
 &lt;menuName&gt;burger&lt;/menuName&gt;
 
@@ -178,7 +185,7 @@ var myXML:XML =
 
 &lt;/item&gt;
 
-&lt;item id=&#039;2&#039;&gt;
+&lt;item id='2'&gt;
 
 &lt;menuName&gt;fries&lt;/menuName&gt;
 
@@ -192,9 +199,11 @@ var myXML:XML =
 
 bytes.writeObject(myXML);
 
-bytes.position = 0;//reset position to beginning bytes.compress(CompressionAlgorithm.DEFLATE);// compress ByteArray writeBytesToFile(&quot;order.xml&quot;, bytes);
+bytes.position = 0;//reset position to beginning
+bytes.compress(CompressionAlgorithm.DEFLATE);// compress ByteArray
+writeBytesToFile("order.xml", bytes);
 
-myLabel.text = &quot;Wrote order file to desktop!&quot;;
+myLabel.text = "Wrote order file to desktop!";
 
 }
 
@@ -202,13 +211,18 @@ private function writeBytesToFile(fileName:String, data:ByteArray):void
 
 {
 
-var outFile:File = File.desktopDirectory; // dest folder is desktop outFile = outFile.resolvePath(fileName); // name of file to write var outStream:FileStream = new FileStream();
+var outFile:File = File.desktopDirectory; // dest folder is desktop
+outFile = outFile.resolvePath(fileName); // name of file to write
+var outStream:FileStream = new FileStream();
 
-// open output file stream in WRITE mode outStream.open(outFile, FileMode.WRITE);
+// open output file stream in WRITE mode
+outStream.open(outFile, FileMode.WRITE);
 
-// write out the file outStream.writeBytes(data, 0, data.length);
+// write out the file
+outStream.writeBytes(data, 0, data.length);
 
-// close it outStream.close();
+// close it
+outStream.close();
 
 }
 
@@ -216,7 +230,10 @@ var outFile:File = File.desktopDirectory; // dest folder is desktop outFile = ou
 
 The readObject() method reads an object in serialized AMF from a ByteArray and stores it in an object of the specified type. The following example reads the order file from the desktop into a ByteArray (inBytes), uncompresses it, and calls readObject() to store it in the XML object orderXML. The example uses a for each() loop construct to add each node to a text area for display. The example also displays the value of the objectEncoding property along with a header for the contents of the order file.
 
-import flash.filesystem.*; import flash.display.Sprite; import flash.display.TextField; import flash.utils.ByteArray;
+import openfl.filesystem.*;
+import openfl.display.Sprite;
+import openfl.display.TextField;
+import openfl.utils.ByteArray;
 
 public class ReadObjectExample extends Sprite
 
@@ -228,15 +245,19 @@ public function ReadObjectExample()
 
 var inBytes:ByteArray = new ByteArray();
 
-// define text area for displaying XML content var myTxt:TextField = new TextField(); myTxt.width = 550;
+// define text area for displaying XML content
+var myTxt:TextField = new TextField();
+myTxt.width = 550;
 
 myTxt.height = 400; addChild(myTxt);
 
 //display objectEncoding and file heading
 
-myTxt.text = &quot;Object encoding is: &quot; + inBytes.objectEncoding + &quot;\n\n&quot; + &quot;order file: \n\n&quot;; readFileIntoByteArray(&quot;order&quot;, inBytes);
+myTxt.text = "Object encoding is: " + inBytes.objectEncoding + "\n\n" + "order file: \n\n"; readFileIntoByteArray("order", inBytes);
 
-inBytes.position = 0; // reset position to beginning inBytes.uncompress(CompressionAlgorithm.DEFLATE); inBytes.position = 0;//reset position to beginning
+inBytes.position = 0; // reset position to beginning
+inBytes.uncompress(CompressionAlgorithm.DEFLATE);
+inBytes.position = 0;//reset position to beginning
 
 // read XML Object
 
@@ -248,7 +269,8 @@ for each (var child:XML in orderXML)
 
 {
 
-// append child node to text area myTxt.text += child + &quot;\n&quot;;
+// append child node to text area
+myTxt.text += child + "\n";
 
 }
 
@@ -260,9 +282,12 @@ private function readFileIntoByteArray(fileName:String, data:ByteArray):void
 
 {
 
-var inFile:File = File.desktopDirectory; // source folder is desktop inFile = inFile.resolvePath(fileName); // name of file to read
+var inFile:File = File.desktopDirectory; // source folder is desktop
+inFile = inFile.resolvePath(fileName); // name of file to read
 
-var inStream:FileStream = new FileStream(); inStream.open(inFile, FileMode.READ); inStream.readBytes(data);
+var inStream:FileStream = new FileStream();
+inStream.open(inFile, FileMode.READ);
+inStream.readBytes(data);
 
 inStream.close();
 

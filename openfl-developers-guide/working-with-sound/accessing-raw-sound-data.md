@@ -23,13 +23,13 @@ The SoundMixer.computeSpectrum() method has some limitations:
 *   Because sound data from a microphone or from RTMP streams do not pass through the global SoundMixer object, the SoundMixer.computeSpectrum() method will not return data from those sources.
 *   If one or more of the sounds being played come from sources outside the current content sandbox, security restrictions will cause the SoundMixer.computeSpectrum() method to throw an error. For more detail about the security limitations of the SoundMixer.computeSpectrum() method please see
 
-    “Security considerations when
+    "Security considerations when
 
-    loading and playing sounds” on page 454
+    loading and playing sounds" on page 454
 
     and
 
-    “Accessing loaded media as data” on page 1065
+    "Accessing loaded media as data" on page 1065
 
     .
 
@@ -39,29 +39,41 @@ However, in an AIR application, content in the application security sandbox (con
 
 The following example uses the SoundMixer.computeSpectrum() method to show a chart of the sound waveform that animates with each frame:
 
-import flash.display.Graphics; import flash.events.Event; import flash.media.Sound;
+import openfl.display.Graphics;
+import openfl.events.Event;
+import openfl.media.Sound;
 
-import flash.media.SoundChannel; import flash.media.SoundMixer; import flash.net.URLRequest;
+import openfl.media.SoundChannel;
+import openfl.media.SoundMixer;
+import openfl.net.URLRequest;
 
-const PLOT_HEIGHT:int = 200; const CHANNEL_LENGTH:int = 256;
+const PLOT_HEIGHT:int = 200;
+const CHANNEL_LENGTH:int = 256;
 
 var snd:Sound = new Sound();
 
-var req:URLRequest = new URLRequest(&quot;bigSound.mp3&quot;); snd.load(req);
+var req:URLRequest = new URLRequest("bigSound.mp3");
+snd.load(req);
 
-var channel:SoundChannel; channel = snd.play();
+var channel:SoundChannel;
+channel = snd.play();
 
-addEventListener(Event.ENTER_FRAME, onEnterFrame); snd.addEventListener(Event.SOUND_COMPLETE, onPlaybackComplete);
+addEventListener(Event.ENTER_FRAME, onEnterFrame);
+snd.addEventListener(Event.SOUND_COMPLETE, onPlaybackComplete);
 
-var bytes:ByteArray = new ByteArray(); function onEnterFrame(event:Event):void
+var bytes:ByteArray = new ByteArray();
+function onEnterFrame(event:Event):void
 
 {
 
-SoundMixer.computeSpectrum(bytes, false, 0); var g:Graphics = this.graphics;
+SoundMixer.computeSpectrum(bytes, false, 0);
+var g:Graphics = this.graphics;
 
 g.clear();
 
-g.lineStyle(0, 0x6600CC); g.beginFill(0x6600CC); g.moveTo(0, PLOT_HEIGHT);
+g.lineStyle(0, 0x6600CC);
+g.beginFill(0x6600CC);
+g.moveTo(0, PLOT_HEIGHT);
 
 var n:Number = 0;
 

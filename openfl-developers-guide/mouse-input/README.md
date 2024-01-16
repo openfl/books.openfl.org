@@ -2,7 +2,7 @@
 
 Your application can create interactivity by capturing and responding to mouse input. Note that this section assumes that you are already familiar with the Haxe event model. For more information, see
 
-“Handling events” on
+"Handling events" on
 
 page 125
 
@@ -10,15 +10,16 @@ page 125
 
 For information on discovering what kind of mouse support is available (such as persistent cursor, stylus or touch input) during runtime, see
 
-“Discovering input types” on page 558
+"Discovering input types" on page 558
 
 .
 
 **More Help topics**
 
-[flash.ui.Mouse](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/ui/Mouse.html) [flash.events.MouseEvent](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/events/MouseEvent.html)
+[openfl.ui.Mouse](https://api.openfl.org/openfl/ui/Mouse.html)
+[openfl.events.MouseEvent](https://api.openfl.org/openfl/events/MouseEvent.html)
 
-“Touch, multitouch and gesture input” on page 581
+"Touch, multitouch and gesture input" on page 581
 
 **Capturing mouse input**
 
@@ -34,7 +35,7 @@ stage.addEventListener(MouseEvent.CLICK, reportClick); function reportClick(even
 
 {
 
-trace(event.currentTarget.toString() + &quot; dispatches MouseEvent. Local coords [&quot; + event.localX + &quot;,&quot; + event.localY + &quot;] Stage coords [&quot; + event.stageX + &quot;,&quot; + event.stageY + &quot;]&quot;);
+trace(event.currentTarget.toString() + " dispatches MouseEvent. Local coords [" + event.localX + "," + event.localY + "] Stage coords [" + event.stageX + "," + event.stageY + "]");
 
 }
 
@@ -42,9 +43,9 @@ In the previous example, notice that the mouse event contains positional informa
 
 Alternatively, the stageX and stageY properties refer to the global coordinates of the click on the Stage. The same click reports [50,50] for these coordinates, because square was moved to these coordinates. Both of these coordinate pairs can be useful depending on how you want to respond to user interaction.
 
-**_Note:_ **_In full-screen mode, you can configure the application to use mouse locking. Mouse locking disables the cursor and enables unbounded mouse movement. For more information, see_
+**_Note:_** _In full-screen mode, you can configure the application to use mouse locking. Mouse locking disables the cursor and enables unbounded mouse movement. For more information, see_
 
-_“Working with full-screen mode” on page 167_
+_"Working with full-screen mode" on page 167_
 
 _._
 
@@ -54,17 +55,29 @@ The MouseEvent object also contains altKey, ctrlKey, and shiftKey Boolean proper
 
 You can allow users to drag a Sprite object around the stage using the startDrag() method of the Sprite class. The following code shows an example of this:
 
-import flash.display.Sprite; import flash.events.MouseEvent;
+import openfl.display.Sprite;
+import openfl.events.MouseEvent;
 
-var circle:Sprite = new Sprite(); circle.graphics.beginFill(0xFFCC00); circle.graphics.drawCircle(0, 0, 40);
+var circle:Sprite = new Sprite();
+circle.graphics.beginFill(0xFFCC00);
+circle.graphics.drawCircle(0, 0, 40);
 
-var target1:Sprite = new Sprite(); target1.graphics.beginFill(0xCCFF00); target1.graphics.drawRect(0, 0, 100, 100); target1.name = &quot;target1&quot;;
+var target1:Sprite = new Sprite();
+target1.graphics.beginFill(0xCCFF00);
+target1.graphics.drawRect(0, 0, 100, 100);
+target1.name = "target1";
 
-var target2:Sprite = new Sprite(); target2.graphics.beginFill(0xCCFF00); target2.graphics.drawRect(0, 200, 100, 100); target2.name = &quot;target2&quot;;
+var target2:Sprite = new Sprite();
+target2.graphics.beginFill(0xCCFF00);
+target2.graphics.drawRect(0, 200, 100, 100);
+target2.name = "target2";
 
-addChild(target1); addChild(target2); addChild(circle);
+addChild(target1);
+addChild(target2);
+addChild(circle);
 
-circle.addEventListener(MouseEvent.MOUSE_DOWN, mouseDown) function mouseDown(event:MouseEvent):void
+circle.addEventListener(MouseEvent.MOUSE_DOWN, mouseDown);
+function mouseDown(event:MouseEvent):void
 
 {
 
@@ -84,7 +97,7 @@ circle.stopDrag(); trace(circle.dropTarget.name);
 
 For more details, see the section on creating mouse drag interaction in
 
-“Changing position” on page 173
+"Changing position" on page 173
 
 .
 
@@ -92,7 +105,7 @@ Drag-and-drop in AIR
 
 In Adobe AIR, you can enable drag-and-drop support to allow users to drag data into and out of your application. For more details, see
 
-“Drag and drop in AIR” on page 608
+"Drag and drop in AIR" on page 608
 
 .
 

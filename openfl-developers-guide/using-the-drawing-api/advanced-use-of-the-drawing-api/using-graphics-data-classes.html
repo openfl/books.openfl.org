@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Using graphics data classes · GitBook</title>
+        <title>Using graphics data classes · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="generator" content="HonKit 5.1.4">
         
         
         
@@ -17,7 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
                 
             
                 
@@ -66,7 +65,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -955,14 +954,124 @@
             
         </li>
     
+        <li class="chapter " data-level="1.8" data-path="../../working-with-sound/">
+            
+                <a href="../../working-with-sound/">
+            
+                    
+                    Chapter 24: Working with sound
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../working-with-sound/basics-of-working-with-sound.html">
+            
+                <a href="../../working-with-sound/basics-of-working-with-sound.html">
+            
+                    
+                    Basics of working with sound
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../working-with-sound/understanding-the-sound-architecture.html">
+            
+                <a href="../../working-with-sound/understanding-the-sound-architecture.html">
+            
+                    
+                    Understanding the sound architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../../working-with-sound/loading-external-sound-files.html">
+            
+                <a href="../../working-with-sound/loading-external-sound-files.html">
+            
+                    
+                    Loading external sound files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../../working-with-sound/working-with-sound-assets.html">
+            
+                <a href="../../working-with-sound/working-with-sound-assets.html">
+            
+                    
+                    Working with sound assets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../../working-with-sound/working-with-dynamically-generated-audio.html">
+            
+                <a href="../../working-with-sound/working-with-dynamically-generated-audio.html">
+            
+                    
+                    Working with dynamically generated audio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../../working-with-sound/playing-sounds.html">
+            
+                <a href="../../working-with-sound/playing-sounds.html">
+            
+                    
+                    Playing sounds
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../../working-with-sound/controlling-sound-volume-and-panning.html">
+            
+                <a href="../../working-with-sound/controlling-sound-volume-and-panning.html">
+            
+                    
+                    Controlling sound volume and panning
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
     
 
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -1067,25 +1176,25 @@
 </table>
 <p>In addition, the <a href="http://api.openfl.org/openfl/display/GraphicsPath.html" target="_blank">GraphicsPath class</a> has its own <code>GraphicsPath.moveTo()</code>, <code>GraphicsPath.lineTo()</code>, <code>GraphicsPath.curveTo()</code>, <code>GraphicsPath.wideLineTo()</code>, and <code>GraphicsPath.wideMoveTo()</code> utility methods to easily define those commands for a GraphicsPath instance. These utility methods simplify the task of defining or updating the commands and data values directly.</p>
 <h2 id="drawing-with-vector-graphics-data">Drawing with vector graphics data</h2>
-<p>Once you have a collection of IGraphicsData instances, use the Graphics class&#x2019;s <code>drawGraphicsData()</code> method to render the graphics. The <code>drawGraphicsData()</code> method carries out a set of drawing instructions from a vector of IGraphicsData instances in sequential order:</p>
+<p>Once you have a collection of IGraphicsData instances, use the Graphics class’s <code>drawGraphicsData()</code> method to render the graphics. The <code>drawGraphicsData()</code> method carries out a set of drawing instructions from a vector of IGraphicsData instances in sequential order:</p>
 <pre><code class="lang-haxe"><span class="hljs-comment">// stroke object</span>
-<span class="hljs-keyword">var</span> stroke = <span class="hljs-keyword">new</span> GraphicsStroke (<span class="hljs-number">3</span>);
+<span class="hljs-keyword">var</span> stroke = <span class="hljs-keyword">new</span> <span class="hljs-type">GraphicsStroke</span> (<span class="hljs-number">3</span>);
 stroke.joints = JointStyle.MITER;
-stroke.fill = <span class="hljs-keyword">new</span> GraphicsSolidFill (<span class="hljs-number">0x102020</span>); <span class="hljs-comment">// solid stroke</span>
+stroke.fill = <span class="hljs-keyword">new</span> <span class="hljs-type">GraphicsSolidFill</span> (<span class="hljs-number">0x102020</span>); <span class="hljs-comment">// solid stroke</span>
 
 <span class="hljs-comment">// fill object</span>
-<span class="hljs-keyword">var</span> fill = <span class="hljs-keyword">new</span> GraphicsGradientFill ();
+<span class="hljs-keyword">var</span> fill = <span class="hljs-keyword">new</span> <span class="hljs-type">GraphicsGradientFill</span> ();
 fill.colors = [<span class="hljs-number">0x0000FF</span>, <span class="hljs-number">0xEEFFEE</span>];
-fill.matrix = <span class="hljs-keyword">new</span> Matrix ();
+fill.matrix = <span class="hljs-keyword">new</span> <span class="hljs-type">Matrix</span> ();
 fill.matrix.createGradientBox (<span class="hljs-number">70</span>, <span class="hljs-number">70</span>, Math.PI/<span class="hljs-number">2</span>);
 
 <span class="hljs-comment">// path object</span>
-<span class="hljs-keyword">var</span> path = <span class="hljs-keyword">new</span> GraphicsPath (<span class="hljs-keyword">new</span> Vector&lt;Int&gt; (), <span class="hljs-keyword">new</span> Vector&lt;Float&gt; ());
+<span class="hljs-keyword">var</span> path = <span class="hljs-keyword">new</span> <span class="hljs-type">GraphicsPath</span> (<span class="hljs-keyword">new</span> <span class="hljs-type">Vector</span>&lt;<span class="hljs-keyword">Int</span>&gt; (), <span class="hljs-keyword">new</span> <span class="hljs-type">Vector</span>&lt;<span class="hljs-keyword">Float</span>&gt; ());
 path.commands.push (GraphicsPathCommand.MOVE_TO, GraphicsPathCommand.LINE_TO, GraphicsPathCommand.LINE_TO);
 path.data.push (<span class="hljs-number">125</span>, <span class="hljs-number">0</span>, <span class="hljs-number">50</span>, <span class="hljs-number">100</span>, <span class="hljs-number">175</span>, <span class="hljs-number">0</span>);
 
 <span class="hljs-comment">// combine objects for complete drawing</span>
-<span class="hljs-keyword">var</span> drawing = <span class="hljs-keyword">new</span> Vector&lt;IGraphicsData&gt; ();
+<span class="hljs-keyword">var</span> drawing = <span class="hljs-keyword">new</span> <span class="hljs-type">Vector</span>&lt;IGraphicsData&gt; ();
 drawing.push (stroke, fill, path);
 
 <span class="hljs-comment">// draw the drawing graphics.drawGraphicsData (drawing);</span>
@@ -1104,10 +1213,10 @@ path.data[<span class="hljs-number">2</span>] -= <span class="hljs-number">50</s
 graphicsS.drawGraphicsData (drawing);
 </code></pre>
 <p>Though IGraphicsData objects can define fill and stroke styles, the fill and stroke styles are not a requirement. In other words, Graphics class methods can be used to set styles while IGraphicsData objects can be used to draw a saved collection of paths, or vice-versa.</p>
-<p><strong><em>Note:</em> </strong><em>Use the <code>Graphics.clear()</code> method to clear out a previous drawing before starting a new one; unless you&apos;re adding on to the original drawing, as seen in the example above. As you change a single portion of a path or collection of IGraphicsData objects, redraw the entire drawing to see the changes.</em></p>
+<p><strong><em>Note:</em></strong> <em>Use the <code>Graphics.clear()</code> method to clear out a previous drawing before starting a new one; unless you&apos;re adding on to the original drawing, as seen in the example above. As you change a single portion of a path or collection of IGraphicsData objects, redraw the entire drawing to see the changes.</em></p>
 <p>When using graphics data classes, the fill is rendered whenever three or more points are drawn, because the shape is inherently closed at that point. Even though the fill closes, the stroke does not, and this behavior is different than when using multiple <code>Graphics.lineTo()</code> or <code>Graphics.moveTo()</code> commands.</p>
 <h2 id="reading-vector-graphics-data">Reading vector graphics data</h2>
-<p>In addition to drawing vector content to a display object, you can use the Graphics class&#x2019;s <code>readGraphicsData()</code> method to obtain a data representation of the vector graphics content of a display object. This can be used to create a snapshot of a graphic to save, copy, create a spritesheet at run time, and more.</p>
+<p>In addition to drawing vector content to a display object, you can use the Graphics class’s <code>readGraphicsData()</code> method to obtain a data representation of the vector graphics content of a display object. This can be used to create a snapshot of a graphic to save, copy, create a spritesheet at run time, and more.</p>
 <p>Calling the <code>readGraphicsData()</code> method returns a Vector instance containing IGraphicsData objects. These are the same objects used to draw vector graphics with the <code>drawGraphicsData()</code> method.</p>
 <p>There are several limitations to reading vector graphics with the <code>readGraphicsData()</code> method. For more information, see the <a href="http://api.openfl.org/openfl/display/Graphics.html#readGraphicsData" target="_blank">readGraphicsData() entry in the API Reference</a>.</p>
 
@@ -1153,12 +1262,56 @@ graphicsS.drawGraphicsData (drawing);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Using graphics data classes","level":"1.5.8.3","depth":3,"next":{"title":"About using drawTriangles()","level":"1.5.8.4","depth":3,"path":"using-the-drawing-api/advanced-use-of-the-drawing-api/about-using-drawtriangles.md","ref":"using-the-drawing-api/advanced-use-of-the-drawing-api/about-using-drawtriangles.md","articles":[]},"previous":{"title":"Defining winding rules","level":"1.5.8.2","depth":3,"path":"using-the-drawing-api/advanced-use-of-the-drawing-api/defining-winding-rules.md","ref":"using-the-drawing-api/advanced-use-of-the-drawing-api/defining-winding-rules.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"using-the-drawing-api/advanced-use-of-the-drawing-api/using-graphics-data-classes.md","mtime":"2023-01-31T16:17:42.716Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-01-31T16:18:16.478Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Using graphics data classes","level":"1.5.8.3","depth":3,"next":{"title":"About using drawTriangles()","level":"1.5.8.4","depth":3,"path":"using-the-drawing-api/advanced-use-of-the-drawing-api/about-using-drawtriangles.md","ref":"using-the-drawing-api/advanced-use-of-the-drawing-api/about-using-drawtriangles.md","articles":[]},"previous":{"title":"Defining winding rules","level":"1.5.8.2","depth":3,"path":"using-the-drawing-api/advanced-use-of-the-drawing-api/defining-winding-rules.md","ref":"using-the-drawing-api/advanced-use-of-the-drawing-api/defining-winding-rules.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"using-the-drawing-api/advanced-use-of-the-drawing-api/using-graphics-data-classes.md","mtime":"2024-01-16T06:43:11.682Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-01-16T06:43:31.976Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     
@@ -1176,10 +1329,6 @@ graphicsS.drawGraphicsData (drawing);
     
         
         <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

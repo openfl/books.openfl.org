@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Event listeners · GitBook</title>
+        <title>Event listeners · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="generator" content="HonKit 5.1.4">
         
         
         
@@ -17,7 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
                 
             
                 
@@ -66,7 +65,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -955,14 +954,124 @@
             
         </li>
     
+        <li class="chapter " data-level="1.8" data-path="../working-with-sound/">
+            
+                <a href="../working-with-sound/">
+            
+                    
+                    Chapter 24: Working with sound
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../working-with-sound/basics-of-working-with-sound.html">
+            
+                <a href="../working-with-sound/basics-of-working-with-sound.html">
+            
+                    
+                    Basics of working with sound
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../working-with-sound/understanding-the-sound-architecture.html">
+            
+                <a href="../working-with-sound/understanding-the-sound-architecture.html">
+            
+                    
+                    Understanding the sound architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../working-with-sound/loading-external-sound-files.html">
+            
+                <a href="../working-with-sound/loading-external-sound-files.html">
+            
+                    
+                    Loading external sound files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../working-with-sound/working-with-sound-assets.html">
+            
+                <a href="../working-with-sound/working-with-sound-assets.html">
+            
+                    
+                    Working with sound assets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../working-with-sound/working-with-dynamically-generated-audio.html">
+            
+                <a href="../working-with-sound/working-with-dynamically-generated-audio.html">
+            
+                    
+                    Working with dynamically generated audio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../working-with-sound/playing-sounds.html">
+            
+                <a href="../working-with-sound/playing-sounds.html">
+            
+                    
+                    Playing sounds
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../working-with-sound/controlling-sound-volume-and-panning.html">
+            
+                <a href="../working-with-sound/controlling-sound-volume-and-panning.html">
+            
+                    
+                    Controlling sound volume and panning
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
     
 
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -1004,7 +1113,7 @@
 <p>Event listeners, which are also called event handlers, are functions that OpenFL executes in response to specific events. Adding an event listener is a two-step process. First, you create a function or class method for OpenFL to execute in response to the event. This is sometimes called the listener function or the event handler function. Second, you use the <code>addEventListener()</code> method to register your listener function with the target of the event or any display list object that lies along the appropriate event flow.</p>
 <h2 id="creating-a-listener-function">Creating a listener function</h2>
 <p>The creation of listener functions is one area where the OpenFL event model deviates from the DOM event model. In the DOM event model, there is a clear distinction between an event listener and a listener function: an event listener is an instance of a class that implements the EventListener interface, whereas a listener function is a method of that class named <code>handleEvent()</code>. In the DOM event model, you register the class instance that contains the listener function rather than the actual listener function.</p>
-<p>In the OpenFL event model, there is no distinction between an event listener and a listener function. OpenFL does not have an EventListener interface, and listener functions can be defined outside a class or as part of a class. Moreover, listener functions do not have to be named <code>handleEvent()</code>&#x2014;they can be named with any valid identifier. In OpenFL, you register the name of the actual listener function.</p>
+<p>In the OpenFL event model, there is no distinction between an event listener and a listener function. OpenFL does not have an EventListener interface, and listener functions can be defined outside a class or as part of a class. Moreover, listener functions do not have to be named <code>handleEvent()</code>—they can be named with any valid identifier. In OpenFL, you register the name of the actual listener function.</p>
 <h3 id="listener-function-defined-as-a-local-function">Listener function defined as a local function</h3>
 <p>The following code creates a simple project that displays a red square shape. A listener function named <code>clickHandler()</code>, which is not part of a class, listens for mouse click events on the red square.</p>
 <pre><code class="lang-haxe"><span class="hljs-keyword">package</span>;
@@ -1012,29 +1121,29 @@
 <span class="hljs-keyword">import</span> openfl.display.Sprite;
 <span class="hljs-keyword">import</span> openfl.events.MouseEvent;
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ClickExample</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Sprite</span> </span>{
+<span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">ClickExample</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span> <span class="hljs-type">Sprite</span></span> </span>{
 
-    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span> <span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span> </span>() {
 
-        <span class="hljs-keyword">var</span> child = <span class="hljs-keyword">new</span> ChildSprite ();
+        <span class="hljs-keyword">var</span> child = <span class="hljs-keyword">new</span> <span class="hljs-type">ChildSprite</span> ();
         addChild (child);
 
     }
 
 }
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ChildSprite</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Sprite</span> </span>{
+<span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">ChildSprite</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span> <span class="hljs-type">Sprite</span></span> </span>{
 
-    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span> <span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span> </span>() {
 
         graphics.beginFill (<span class="hljs-number">0xFF0000</span>);
         graphics.drawRect (<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>);
         graphics.endFill ();
 
-        <span class="hljs-keyword">var</span> clickHandler = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(event:MouseEvent)</span> </span>{
+        <span class="hljs-keyword">var</span> clickHandler = <span class="hljs-title function_"><span class="hljs-keyword">function</span> </span>(event:<span class="hljs-type">MouseEvent</span>) {
 
-            <span class="hljs-keyword">trace</span> (<span class="hljs-string">&quot;clickHandler detected an event of type: &quot;</span> + event.type);
-            <span class="hljs-keyword">trace</span> (<span class="hljs-string">&quot;the this keyword refers to: &quot;</span> + <span class="hljs-keyword">this</span>);
+            <span class="hljs-built_in">trace</span> (<span class="hljs-string">&quot;clickHandler detected an event of type: &quot;</span> + event.type);
+            <span class="hljs-built_in">trace</span> (<span class="hljs-string">&quot;the this keyword refers to: &quot;</span> + <span class="hljs-built_in">this</span>);
 
         }
 
@@ -1056,20 +1165,20 @@ the this keyword refers to: [object ChildSprite]
 <span class="hljs-keyword">import</span> openfl.display.Sprite;
 <span class="hljs-keyword">import</span> openfl.events.MouseEvent;
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ClickExample</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Sprite</span> </span>{
+<span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">ClickExample</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span> <span class="hljs-type">Sprite</span></span> </span>{
 
-    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span> <span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span> </span>() {
 
-        <span class="hljs-keyword">var</span> child = <span class="hljs-keyword">new</span> ChildSprite ();
+        <span class="hljs-keyword">var</span> child = <span class="hljs-keyword">new</span> <span class="hljs-type">ChildSprite</span> ();
         addChild (child);
 
     }
 
 }
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ChildSprite</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Sprite</span> </span>{
+<span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">ChildSprite</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span> <span class="hljs-type">Sprite</span></span> </span>{
 
-    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span> <span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span> </span>() {
 
         graphics.beginFill (<span class="hljs-number">0xFF0000</span>);
         graphics.drawRect (<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>);
@@ -1079,10 +1188,10 @@ the this keyword refers to: [object ChildSprite]
 
     }
 
-    <span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">clickHandler</span> <span class="hljs-params">(event:MouseEvent)</span>:Void </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">clickHandler</span> </span>(event:<span class="hljs-type">MouseEvent</span>):<span class="hljs-type">Void </span>{
 
-        <span class="hljs-keyword">trace</span> (<span class="hljs-string">&quot;clickHandler detected an event of type: &quot;</span> + event.type);
-        <span class="hljs-keyword">trace</span> (<span class="hljs-string">&quot;the this keyword refers to: &quot;</span> + <span class="hljs-keyword">this</span>);
+        <span class="hljs-built_in">trace</span> (<span class="hljs-string">&quot;clickHandler detected an event of type: &quot;</span> + event.type);
+        <span class="hljs-built_in">trace</span> (<span class="hljs-string">&quot;the this keyword refers to: &quot;</span> + <span class="hljs-built_in">this</span>);
 
     }
 
@@ -1095,13 +1204,13 @@ the this keyword refers to: [object ChildSprite]
 <p>You can manage your listener functions using the methods of the IEventDispatcher interface. The IEventDispatcher interface is the OpenFL version of the EventTarget interface of the DOM event model. Although the name IEventDispatcher may seem to imply that its main purpose is to send (or dispatch) event objects, the methods of this class are actually used much more frequently to register event listeners, check for event listeners, and remove event listeners. The IEventDispatcher interface defines five methods, as shown in the following code:</p>
 <pre><code class="lang-haxe"><span class="hljs-keyword">package</span> openfl.events;
 
-<span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">IEventDispatcher</span> </span>{
+<span class="hljs-title class_"><span class="hljs-keyword">interface</span> <span class="hljs-title">IEventDispatcher</span> </span>{
 
-    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">addEventListener</span> <span class="hljs-params">(type:String, listener:Dynamic-&gt;Void, useCapture:Bool = false, priority:Int = 0, useWeakReference:Bool = false)</span>:Void</span>;
-    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">dispatchEvent</span> <span class="hljs-params">(event:Event)</span>:Bool</span>;
-    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">hasEventListener</span> <span class="hljs-params">(type:String)</span>:Bool</span>;
-    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">removeEventListener</span> <span class="hljs-params">(type:String, listener:Dynamic-&gt;Void, useCapture:Bool = false)</span>:Void</span>;
-    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">willTrigger</span> <span class="hljs-params">(type:String)</span>:Bool</span>;
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">addEventListener</span> </span>(type:<span class="hljs-type">String</span>, listener:<span class="hljs-type">Dynamic-&gt;Void</span>, useCapture:<span class="hljs-type">Bool </span>= <span class="hljs-literal">false</span>, priority:<span class="hljs-type">Int </span>= <span class="hljs-number">0</span>, useWeakReference:<span class="hljs-type">Bool </span>= <span class="hljs-literal">false</span>):<span class="hljs-type">Void</span>;
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">dispatchEvent</span> </span>(event:<span class="hljs-type">Event</span>):<span class="hljs-type">Bool</span>;
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">hasEventListener</span> </span>(type:<span class="hljs-type">String</span>):<span class="hljs-type">Bool</span>;
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">removeEventListener</span> </span>(type:<span class="hljs-type">String</span>, listener:<span class="hljs-type">Dynamic-&gt;Void</span>, useCapture:<span class="hljs-type">Bool </span>= <span class="hljs-literal">false</span>):<span class="hljs-type">Void</span>;
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">willTrigger</span> </span>(type:<span class="hljs-type">String</span>):<span class="hljs-type">Bool</span>;
 
 }
 </code></pre>
@@ -1115,17 +1224,17 @@ the this keyword refers to: [object ChildSprite]
 <p>The priority parameter of the <code>addEventListener()</code> method is not an official part of the DOM Level 3 event model. It is included in OpenFL to provide you with more flexibility in organizing your event listeners. When you call <code>addEventListener()</code>, you can set the priority for that event listener by passing an integer value as the <code>priority</code> parameter. The default value is 0, but you can set it to negative or positive integer values. The higher the number, the sooner that event listener will be executed. Event listeners with the same priority are executed in the order that they were added, so the earlier a listener is added, the sooner it will be executed.</p>
 <p>The <code>useWeakReference</code> parameter allows you to specify whether the reference to the listener function is weak or normal. Setting this parameter to <code>true</code> allows you to avoid situations in which listener functions persist in memory even though they are no longer needed. OpenFL use a technique called <em>garbage collection</em> to clear objects from memory that are no longer in use. An object is considered no longer in use if no references to it exist. The garbage collector disregards weak references, which means that a listener function that has only a weak reference pointing to it is eligible for garbage collection.</p>
 <blockquote>
-<p>The <code>useWeakReference</code> parameter is currently disregarded, as JavaScript (and other OpenFL target platforms) do not support weak memory references. Do not rely upon this parameter&#x2014;instead you should remove event listeners to allow garbage collection.</p>
+<p>The <code>useWeakReference</code> parameter is currently disregarded, as JavaScript (and other OpenFL target platforms) do not support weak memory references. Do not rely upon this parameter—instead you should remove event listeners to allow garbage collection.</p>
 </blockquote>
 <h3 id="removing-event-listeners">Removing event listeners</h3>
 <p>You can use the <code>removeEventListener()</code> method to remove an event listener that you no longer need. It is a good idea to remove any listeners that will no longer be used. Required parameters include the <code>eventName</code> and <code>listener</code> parameters, which are the same as the required parameters for the <code>addEventListener()</code> method. Recall that you can listen for events during all event phases by calling <code>addEventListener()</code> twice, once with <code>useCapture</code> set to <code>true</code>, and then again with it set to <code>false</code>. To remove both event listeners, you would need to call <code>removeEventListener()</code> twice, once with <code>useCapture</code> set to <code>true</code>, and then again with it set to <code>false</code>.</p>
 <h3 id="dispatching-events">Dispatching events</h3>
 <p>The <code>dispatchEvent()</code> method can be used by advanced programmers to dispatch a custom event object into the event flow. The only parameter accepted by this method is a reference to an event object, which must be an instance of the Event class or a subclass of the Event class. Once dispatched, the <code>target</code> property of the event object is set to the object on which <code>dispatchEvent()</code> was called.</p>
 <h3 id="checking-for-existing-event-listeners">Checking for existing event listeners</h3>
-<p>The final two methods of the IEventDispatcher interface provide useful information about the existence of event listeners. The <code>hasEventListener()</code> method returns <code>true</code> if an event listener is found for a specific event type on a particular display list object. The <code>willTrigger()</code> method also returns <code>true</code> if a listener is found for a particular display list object, but <code>willTrigger()</code> checks for listeners not only on that display object, but also on all of that display list object&#x2019;s ancestors for all phases of the event flow.</p>
+<p>The final two methods of the IEventDispatcher interface provide useful information about the existence of event listeners. The <code>hasEventListener()</code> method returns <code>true</code> if an event listener is found for a specific event type on a particular display list object. The <code>willTrigger()</code> method also returns <code>true</code> if a listener is found for a particular display list object, but <code>willTrigger()</code> checks for listeners not only on that display object, but also on all of that display list object’s ancestors for all phases of the event flow.</p>
 <h2 id="error-events-without-listeners">Error events without listeners </h2>
 <p>Exceptions, rather than events, are the primary mechanism for error handling in Haxe, but exception handling does not work for asynchronous operations such as loading files. If an error occurs during such an asynchronous operation, OpenFL dispatches an error event object. If you do not create a listener for the error event, the debugger versions of Flash Player will bring up a dialog box with information about the error, or messages will be displayed in console output on other platforms. For example, the debugger version of Flash Player produces the following dialog box describing the error when the application attempts to load a file from an invalid URL:</p>
-<p><img src="../assets/eh_error_event_dialog.png" alt=""></p>
+<p><img src="../assets/eh_error_event_dialog.png" alt></p>
 <p>Most error events are based on the ErrorEvent class, and as such will have a property named <code>text</code> that is used to store the error message that OpenFL displays. The two exceptions are the StatusEvent and NetStatusEvent classes. Both of these classes have a <code>level</code> property (<code>StatusEvent.level</code> and <code>NetStatusEvent.info.level</code>).</p>
 <p>When the value of the level property is &quot;error&quot;, these event types are considered to be error events.</p>
 <p>An error event will not cause dynamic platforms (such as HTML5 or Flash Player) to stop running, but will stop execution on all other platforms. It will manifest as a dialog box on the debugger versions of Flash Player, and will not manifest in release versions of Flash Player.</p>
@@ -1172,12 +1281,56 @@ the this keyword refers to: [object ChildSprite]
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Event listeners","level":"1.2.4","depth":2,"next":{"title":"Chapter 2: Display programming","level":"1.3","depth":1,"path":"display-programming/README.md","ref":"display-programming/README.md","articles":[{"title":"Basics of display programming","level":"1.3.1","depth":2,"path":"display-programming/basics-of-display-programming.md","ref":"display-programming/basics-of-display-programming.md","articles":[]},{"title":"Core display classes","level":"1.3.2","depth":2,"path":"display-programming/core-display-classes.md","ref":"display-programming/core-display-classes.md","articles":[]},{"title":"Advantages of the display list approach","level":"1.3.3","depth":2,"path":"display-programming/advantages-of-the-display-list-approach.md","ref":"display-programming/advantages-of-the-display-list-approach.md","articles":[]},{"title":"Working with display objects","level":"1.3.4","depth":2,"path":"display-programming/working-with-display-objects/README.md","ref":"display-programming/working-with-display-objects/README.md","articles":[{"title":"Properties and methods of the DisplayObject class","level":"1.3.4.1","depth":3,"path":"display-programming/working-with-display-objects/properties-and-methods-of-the-displayobject-class.md","ref":"display-programming/working-with-display-objects/properties-and-methods-of-the-displayobject-class.md","articles":[]},{"title":"Adding display objects to the display list","level":"1.3.4.2","depth":3,"path":"display-programming/working-with-display-objects/adding-display-objects-to-the-display-list.md","ref":"display-programming/working-with-display-objects/adding-display-objects-to-the-display-list.md","articles":[]},{"title":"Working with display object containers","level":"1.3.4.3","depth":3,"path":"display-programming/working-with-display-objects/working-with-display-object-containers.md","ref":"display-programming/working-with-display-objects/working-with-display-object-containers.md","articles":[]},{"title":"Traversing the display list","level":"1.3.4.4","depth":3,"path":"display-programming/working-with-display-objects/traversing-the-display-list.md","ref":"display-programming/working-with-display-objects/traversing-the-display-list.md","articles":[]},{"title":"Setting Stage properties","level":"1.3.4.5","depth":3,"path":"display-programming/working-with-display-objects/setting-stage-properties.md","ref":"display-programming/working-with-display-objects/setting-stage-properties.md","articles":[]},{"title":"Handling events for display objects","level":"1.3.4.6","depth":3,"path":"display-programming/working-with-display-objects/handling-events-for-display-objects.md","ref":"display-programming/working-with-display-objects/handling-events-for-display-objects.md","articles":[]},{"title":"Choosing a DisplayObject subclass","level":"1.3.4.7","depth":3,"path":"display-programming/working-with-display-objects/choosing-a-displayobject-subclass.md","ref":"display-programming/working-with-display-objects/choosing-a-displayobject-subclass.md","articles":[]}]},{"title":"Manipulating display objects","level":"1.3.5","depth":2,"path":"display-programming/manipulating-display-objects/README.md","ref":"display-programming/manipulating-display-objects/README.md","articles":[{"title":"Changing position","level":"1.3.5.1","depth":3,"path":"display-programming/manipulating-display-objects/changing-position.md","ref":"display-programming/manipulating-display-objects/changing-position.md","articles":[]},{"title":"Panning and scrolling display objects","level":"1.3.5.2","depth":3,"path":"display-programming/manipulating-display-objects/panning-and-scrolling-display-objects.md","ref":"display-programming/manipulating-display-objects/panning-and-scrolling-display-objects.md","articles":[]},{"title":"Manipulating size and scaling objects","level":"1.3.5.3","depth":3,"path":"display-programming/manipulating-display-objects/manipulating-size-and-scaling-objects.md","ref":"display-programming/manipulating-display-objects/manipulating-size-and-scaling-objects.md","articles":[]},{"title":"Caching display objects","level":"1.3.5.4","depth":3,"path":"display-programming/manipulating-display-objects/caching-display-objects.md","ref":"display-programming/manipulating-display-objects/caching-display-objects.md","articles":[]},{"title":"Applying blending modes","level":"1.3.5.5","depth":3,"path":"display-programming/manipulating-display-objects/applying-blending-modes.md","ref":"display-programming/manipulating-display-objects/applying-blending-modes.md","articles":[]},{"title":"Adjusting DisplayObject colors","level":"1.3.5.6","depth":3,"path":"display-programming/manipulating-display-objects/adjusting-displayobject-colors.md","ref":"display-programming/manipulating-display-objects/adjusting-displayobject-colors.md","articles":[]},{"title":"Rotating objects","level":"1.3.5.7","depth":3,"path":"display-programming/manipulating-display-objects/rotating-objects.md","ref":"display-programming/manipulating-display-objects/rotating-objects.md","articles":[]},{"title":"Fading objects","level":"1.3.5.8","depth":3,"path":"display-programming/manipulating-display-objects/fading-objects.md","ref":"display-programming/manipulating-display-objects/fading-objects.md","articles":[]},{"title":"Masking display objects","level":"1.3.5.9","depth":3,"path":"display-programming/manipulating-display-objects/masking-display-objects.md","ref":"display-programming/manipulating-display-objects/masking-display-objects.md","articles":[]}]},{"title":"Animating objects","level":"1.3.6","depth":2,"path":"display-programming/animating-objects.md","ref":"display-programming/animating-objects.md","articles":[]},{"title":"Loading display content dynamically","level":"1.3.7","depth":2,"path":"display-programming/loading-display-content-dynamically/README.md","ref":"display-programming/loading-display-content-dynamically/README.md","articles":[{"title":"Loading display objects","level":"1.3.7.1","depth":3,"path":"display-programming/loading-display-content-dynamically/loading-display-objects.md","ref":"display-programming/loading-display-content-dynamically/loading-display-objects.md","articles":[]},{"title":"Monitoring loading progress","level":"1.3.7.2","depth":3,"path":"display-programming/loading-display-content-dynamically/monitoring-loading-progress.md","ref":"display-programming/loading-display-content-dynamically/monitoring-loading-progress.md","articles":[]},{"title":"Specifying loading context","level":"1.3.7.3","depth":3,"path":"display-programming/loading-display-content-dynamically/specifying-loading-context.md","ref":"display-programming/loading-display-content-dynamically/specifying-loading-context.md","articles":[]}]}]},"previous":{"title":"Event objects","level":"1.2.3","depth":2,"path":"handling-events/event-objects.md","ref":"handling-events/event-objects.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"handling-events/event-listeners.md","mtime":"2023-01-31T16:17:42.716Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-01-31T16:18:16.478Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Event listeners","level":"1.2.4","depth":2,"next":{"title":"Chapter 2: Display programming","level":"1.3","depth":1,"path":"display-programming/README.md","ref":"display-programming/README.md","articles":[{"title":"Basics of display programming","level":"1.3.1","depth":2,"path":"display-programming/basics-of-display-programming.md","ref":"display-programming/basics-of-display-programming.md","articles":[]},{"title":"Core display classes","level":"1.3.2","depth":2,"path":"display-programming/core-display-classes.md","ref":"display-programming/core-display-classes.md","articles":[]},{"title":"Advantages of the display list approach","level":"1.3.3","depth":2,"path":"display-programming/advantages-of-the-display-list-approach.md","ref":"display-programming/advantages-of-the-display-list-approach.md","articles":[]},{"title":"Working with display objects","level":"1.3.4","depth":2,"path":"display-programming/working-with-display-objects/README.md","ref":"display-programming/working-with-display-objects/README.md","articles":[{"title":"Properties and methods of the DisplayObject class","level":"1.3.4.1","depth":3,"path":"display-programming/working-with-display-objects/properties-and-methods-of-the-displayobject-class.md","ref":"display-programming/working-with-display-objects/properties-and-methods-of-the-displayobject-class.md","articles":[]},{"title":"Adding display objects to the display list","level":"1.3.4.2","depth":3,"path":"display-programming/working-with-display-objects/adding-display-objects-to-the-display-list.md","ref":"display-programming/working-with-display-objects/adding-display-objects-to-the-display-list.md","articles":[]},{"title":"Working with display object containers","level":"1.3.4.3","depth":3,"path":"display-programming/working-with-display-objects/working-with-display-object-containers.md","ref":"display-programming/working-with-display-objects/working-with-display-object-containers.md","articles":[]},{"title":"Traversing the display list","level":"1.3.4.4","depth":3,"path":"display-programming/working-with-display-objects/traversing-the-display-list.md","ref":"display-programming/working-with-display-objects/traversing-the-display-list.md","articles":[]},{"title":"Setting Stage properties","level":"1.3.4.5","depth":3,"path":"display-programming/working-with-display-objects/setting-stage-properties.md","ref":"display-programming/working-with-display-objects/setting-stage-properties.md","articles":[]},{"title":"Handling events for display objects","level":"1.3.4.6","depth":3,"path":"display-programming/working-with-display-objects/handling-events-for-display-objects.md","ref":"display-programming/working-with-display-objects/handling-events-for-display-objects.md","articles":[]},{"title":"Choosing a DisplayObject subclass","level":"1.3.4.7","depth":3,"path":"display-programming/working-with-display-objects/choosing-a-displayobject-subclass.md","ref":"display-programming/working-with-display-objects/choosing-a-displayobject-subclass.md","articles":[]}]},{"title":"Manipulating display objects","level":"1.3.5","depth":2,"path":"display-programming/manipulating-display-objects/README.md","ref":"display-programming/manipulating-display-objects/README.md","articles":[{"title":"Changing position","level":"1.3.5.1","depth":3,"path":"display-programming/manipulating-display-objects/changing-position.md","ref":"display-programming/manipulating-display-objects/changing-position.md","articles":[]},{"title":"Panning and scrolling display objects","level":"1.3.5.2","depth":3,"path":"display-programming/manipulating-display-objects/panning-and-scrolling-display-objects.md","ref":"display-programming/manipulating-display-objects/panning-and-scrolling-display-objects.md","articles":[]},{"title":"Manipulating size and scaling objects","level":"1.3.5.3","depth":3,"path":"display-programming/manipulating-display-objects/manipulating-size-and-scaling-objects.md","ref":"display-programming/manipulating-display-objects/manipulating-size-and-scaling-objects.md","articles":[]},{"title":"Caching display objects","level":"1.3.5.4","depth":3,"path":"display-programming/manipulating-display-objects/caching-display-objects.md","ref":"display-programming/manipulating-display-objects/caching-display-objects.md","articles":[]},{"title":"Applying blending modes","level":"1.3.5.5","depth":3,"path":"display-programming/manipulating-display-objects/applying-blending-modes.md","ref":"display-programming/manipulating-display-objects/applying-blending-modes.md","articles":[]},{"title":"Adjusting DisplayObject colors","level":"1.3.5.6","depth":3,"path":"display-programming/manipulating-display-objects/adjusting-displayobject-colors.md","ref":"display-programming/manipulating-display-objects/adjusting-displayobject-colors.md","articles":[]},{"title":"Rotating objects","level":"1.3.5.7","depth":3,"path":"display-programming/manipulating-display-objects/rotating-objects.md","ref":"display-programming/manipulating-display-objects/rotating-objects.md","articles":[]},{"title":"Fading objects","level":"1.3.5.8","depth":3,"path":"display-programming/manipulating-display-objects/fading-objects.md","ref":"display-programming/manipulating-display-objects/fading-objects.md","articles":[]},{"title":"Masking display objects","level":"1.3.5.9","depth":3,"path":"display-programming/manipulating-display-objects/masking-display-objects.md","ref":"display-programming/manipulating-display-objects/masking-display-objects.md","articles":[]}]},{"title":"Animating objects","level":"1.3.6","depth":2,"path":"display-programming/animating-objects.md","ref":"display-programming/animating-objects.md","articles":[]},{"title":"Loading display content dynamically","level":"1.3.7","depth":2,"path":"display-programming/loading-display-content-dynamically/README.md","ref":"display-programming/loading-display-content-dynamically/README.md","articles":[{"title":"Loading display objects","level":"1.3.7.1","depth":3,"path":"display-programming/loading-display-content-dynamically/loading-display-objects.md","ref":"display-programming/loading-display-content-dynamically/loading-display-objects.md","articles":[]},{"title":"Monitoring loading progress","level":"1.3.7.2","depth":3,"path":"display-programming/loading-display-content-dynamically/monitoring-loading-progress.md","ref":"display-programming/loading-display-content-dynamically/monitoring-loading-progress.md","articles":[]},{"title":"Specifying loading context","level":"1.3.7.3","depth":3,"path":"display-programming/loading-display-content-dynamically/specifying-loading-context.md","ref":"display-programming/loading-display-content-dynamically/specifying-loading-context.md","articles":[]}]}]},"previous":{"title":"Event objects","level":"1.2.3","depth":2,"path":"handling-events/event-objects.md","ref":"handling-events/event-objects.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"handling-events/event-listeners.md","mtime":"2024-01-16T06:43:11.678Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-01-16T06:43:31.976Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
     
@@ -1195,10 +1348,6 @@ the this keyword refers to: [object ChildSprite]
     
         
         <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

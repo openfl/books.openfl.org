@@ -17,7 +17,7 @@ The first six filters are simple filters that can be used to create one specific
 
 The final four filters are available in Haxe only. Those filters, the color matrix filter, convolution filter, displacement map filter, and shader filter, are much more flexible in the types of effects that they can be used to create. Rather than being optimized for a single effect, they provide power and flexibility. For example, by selecting different values for its matrix, the convolution filter can be used to create effects such as blurring, embossing, sharpening, finding color edges, transformations, and more.
 
-Each of the filters, whether simple or complex, can be customized using their properties. Generally, you have two choices for setting filter properties. All the filters let you set the properties by passing parameter values to the filter object’s constructor. Alternatively, whether or not you set the filter properties by passing parameters, you can adjust the filters later by setting values for the filter object’s properties. Most of the example code listings set the properties directlyto make the example easier to follow. Nevertheless, you could usually achieve the same result in fewer lines of code by passing the values as parameters in the filter object’s constructor. For more details on the specifics of each filter, its properties and its constructor parameters, see the listings for the flash.filters package in the [Haxe](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/filters/package-detail.html) [Reference for the Adobe Flash Platform](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/filters/package-detail.html).
+Each of the filters, whether simple or complex, can be customized using their properties. Generally, you have two choices for setting filter properties. All the filters let you set the properties by passing parameter values to the filter object’s constructor. Alternatively, whether or not you set the filter properties by passing parameters, you can adjust the filters later by setting values for the filter object’s properties. Most of the example code listings set the properties directlyto make the example easier to follow. Nevertheless, you could usually achieve the same result in fewer lines of code by passing the values as parameters in the filter object’s constructor. For more details on the specifics of each filter, its properties and its constructor parameters, see the listings for the [openfl.filters package in the OpenFL API Reference](https://api.openfl.org/openfl/filters/index.html)
 
 **Bevel filter**
 
@@ -27,19 +27,23 @@ The BevelFilter class properties allow you to customize the appearance of the be
 
 The following example loads an external image and applies a bevel filter to it.
 
-import flash.display.*;
+import openfl.display.*;
 
-import flash.filters.BevelFilter;
+import openfl.filters.BevelFilter;
 
-import flash.filters.BitmapFilterQuality; import flash.filters.BitmapFilterType; import flash.net.URLRequest;
+import openfl.filters.BitmapFilterQuality;
+import openfl.filters.BitmapFilterType;
+import openfl.net.URLRequest;
 
 // Load an image onto the Stage.
 
 var imageLoader:Loader = new Loader();
 
-var url:String = [&quot;http://www.helpexamples.com/flash/images/image3.jpg&quot;;](http://www.helpexamples.com/flash/images/image3.jpg) var urlReq:URLRequest = new URLRequest(url);
+var url:String = "http://www.helpexamples.com/flash/images/image3.jpg";
+var urlReq:URLRequest = new URLRequest(url);
 
-imageLoader.load(urlReq); addChild(imageLoader);
+imageLoader.load(urlReq);
+addChild(imageLoader);
 
 // Create the bevel filter and set filter properties. var bevel:BevelFilter = new BevelFilter();
 
@@ -63,21 +67,30 @@ The BlurFilter class smears, or blurs, a display object and its contents. Blur e
 
 The following example creates a circle object using the drawCircle() method of the Graphics class and applies a blur filter to it:
 
-import flash.display.Sprite;
+import openfl.display.Sprite;
 
-import flash.filters.BitmapFilterQuality; import flash.filters.BlurFilter;
+import openfl.filters.BitmapFilterQuality;
+import openfl.filters.BlurFilter;
 
 // Draw a circle.
 
-var redDotCutout:Sprite = new Sprite(); redDotCutout.graphics.lineStyle(); redDotCutout.graphics.beginFill(0xFF0000); redDotCutout.graphics.drawCircle(145, 90, 25); redDotCutout.graphics.endFill();
+var redDotCutout:Sprite = new Sprite();
+redDotCutout.graphics.lineStyle();
+redDotCutout.graphics.beginFill(0xFF0000);
+redDotCutout.graphics.drawCircle(145, 90, 25);
+redDotCutout.graphics.endFill();
 
-// Add the circle to the display list. addChild(redDotCutout);
+// Add the circle to the display list.
+addChild(redDotCutout);
 
-// Apply the blur filter to the rectangle. var blur:BlurFilter = new BlurFilter(); blur.blurX = 10;
+// Apply the blur filter to the rectangle.
+var blur:BlurFilter = new BlurFilter();
+blur.blurX = 10;
 
 blur.blurY = 10;
 
-blur.quality = BitmapFilterQuality.MEDIUM; redDotCutout.filters = [blur];
+blur.quality = BitmapFilterQuality.MEDIUM;
+redDotCutout.filters = [blur];
 
 ## Drop shadow filter {#drop-shadow-filter}
 
@@ -89,17 +102,23 @@ The drop shadow filter also allows you to apply custom transformation options on
 
 The following code creates a square box sprite and applies a drop shadow filter to it:
 
-import flash.display.Sprite;
+import openfl.display.Sprite;
 
-import flash.filters.DropShadowFilter;
+import openfl.filters.DropShadowFilter;
 
 // Draw a box.
 
-var boxShadow:Sprite = new Sprite(); boxShadow.graphics.lineStyle(1); boxShadow.graphics.beginFill(0xFF3300); boxShadow.graphics.drawRect(0, 0, 100, 100); boxShadow.graphics.endFill(); addChild(boxShadow);
+var boxShadow:Sprite = new Sprite();
+boxShadow.graphics.lineStyle(1);
+boxShadow.graphics.beginFill(0xFF3300);
+boxShadow.graphics.drawRect(0, 0, 100, 100);
+boxShadow.graphics.endFill();
+addChild(boxShadow);
 
 // Apply the drop shadow filter to the box.
 
-var shadow:DropShadowFilter = new DropShadowFilter(); shadow.distance = 10;
+var shadow:DropShadowFilter = new DropShadowFilter();
+shadow.distance = 10;
 
 shadow.angle = 25;
 
@@ -117,17 +136,24 @@ Similar to the drop shadow filter, the glow filter includes properties to modify
 
 The following code creates a cross using the Sprite class and applies a glow filter to it:
 
-import flash.display.Sprite;
+import openfl.display.Sprite;
 
-import flash.filters.BitmapFilterQuality; import flash.filters.GlowFilter;
+import openfl.filters.BitmapFilterQuality;
+import openfl.filters.GlowFilter;
 
 // Create a cross graphic.
 
-var crossGraphic:Sprite = new Sprite(); crossGraphic.graphics.lineStyle(); crossGraphic.graphics.beginFill(0xCCCC00); crossGraphic.graphics.drawRect(60, 90, 100, 20);
+var crossGraphic:Sprite = new Sprite();
+crossGraphic.graphics.lineStyle();
+crossGraphic.graphics.beginFill(0xCCCC00);
+crossGraphic.graphics.drawRect(60, 90, 100, 20);
 
-crossGraphic.graphics.drawRect(100, 50, 20, 100); crossGraphic.graphics.endFill(); addChild(crossGraphic);
+crossGraphic.graphics.drawRect(100, 50, 20, 100);
+crossGraphic.graphics.endFill(); addChild(crossGraphic);
 
-// Apply the glow filter to the cross shape. var glow:GlowFilter = new GlowFilter(); glow.color = 0x009922;
+// Apply the glow filter to the cross shape.
+var glow:GlowFilter = new GlowFilter();
+glow.color = 0x009922;
 
 glow.alpha = 1;
 
@@ -135,7 +161,8 @@ glow.blurX = 25;
 
 glow.blurY = 25;
 
-glow.quality = BitmapFilterQuality.MEDIUM; crossGraphic.filters = [glow];
+glow.quality = BitmapFilterQuality.MEDIUM;
+crossGraphic.filters = [glow];
 
 ## Gradient bevel filter {#gradient-bevel-filter}
 
@@ -143,13 +170,18 @@ The GradientBevelFilter class lets you apply an enhanced bevel effect to display
 
 The following code creates a rectangle object using the drawRect() method of the Shape class and applies a gradient bevel filter to it.
 
-import flash.display.Shape;
+import openfl.display.Shape;
 
-import flash.filters.BitmapFilterQuality; import flash.filters.GradientBevelFilter;
+import openfl.filters.BitmapFilterQuality;
+import openfl.filters.GradientBevelFilter;
 
 // Draw a rectangle.
 
-var box:Shape = new Shape(); box.graphics.lineStyle(); box.graphics.beginFill(0xFEFE78); box.graphics.drawRect(100, 50, 90, 200); box.graphics.endFill();
+var box:Shape = new Shape();
+box.graphics.lineStyle();
+box.graphics.beginFill(0xFEFE78);
+box.graphics.drawRect(100, 50, 90, 200);
+box.graphics.endFill();
 
 // Apply a gradient bevel to the rectangle.
 
@@ -157,7 +189,9 @@ var gradientBevel:GradientBevelFilter = new GradientBevelFilter();
 
 gradientBevel.distance = 8;
 
-gradientBevel.angle = 225; // opposite of 45 degrees gradientBevel.colors = [0xFFFFCC, 0xFEFE78, 0x8F8E01]; gradientBevel.alphas = [1, 0, 1];
+gradientBevel.angle = 225; // opposite of 45 degrees
+gradientBevel.colors = [0xFFFFCC, 0xFEFE78, 0x8F8E01];
+gradientBevel.alphas = [1, 0, 1];
 
 gradientBevel.ratios = [0, 128, 255];
 
@@ -169,9 +203,11 @@ gradientBevel.quality = BitmapFilterQuality.HIGH;
 
 // Other properties let you set the filter strength and set options
 
-// for inner bevel and knockout effects. box.filters = [gradientBevel];
+// for inner bevel and knockout effects.
+box.filters = [gradientBevel];
 
-// Add the graphic to the display list. addChild(box);
+// Add the graphic to the display list.
+addChild(box);
 
 ## Gradient glow filter {#gradient-glow-filter}
 
@@ -179,13 +215,17 @@ The GradientGlowFilter class lets you apply an enhanced glow effect to display o
 
 The following example draws a circle on the Stage, and applies a gradient glow filter to it. As you move the mouse further to the right and down, the amount of blur increases in the horizontal and vertical directions respectively. In addition, any time you click on the Stage, the strength of the blur increases.
 
-import flash.events.MouseEvent;
+import openfl.events.MouseEvent;
 
-import flash.filters.BitmapFilterQuality; import flash.filters.BitmapFilterType; import flash.filters.GradientGlowFilter;
+import openfl.filters.BitmapFilterQuality;
+import openfl.filters.BitmapFilterType;
+import openfl.filters.GradientGlowFilter;
 
-// Create a new Shape instance. var shape:Shape = new Shape();
+// Create a new Shape instance.
+var shape:Shape = new Shape();
 
-// Draw the shape. shape.graphics.beginFill(0xFF0000, 100);
+// Draw the shape.
+shape.graphics.beginFill(0xFF0000, 100);
 
 shape.graphics.moveTo(0, 0);
 
@@ -195,9 +235,11 @@ shape.graphics.lineTo(100, 100);
 
 shape.graphics.lineTo(0, 100);
 
-shape.graphics.lineTo(0, 0); shape.graphics.endFill();
+shape.graphics.lineTo(0, 0);
+shape.graphics.endFill();
 
-// Position the shape on the Stage. addChild(shape);
+// Position the shape on the Stage.
+addChild(shape);
 
 shape.x = 100;
 
@@ -205,9 +247,12 @@ shape.y = 100;
 
 // Define a gradient glow.
 
-var gradientGlow:GradientGlowFilter = new GradientGlowFilter(); gradientGlow.distance = 0;
+var gradientGlow:GradientGlowFilter = new GradientGlowFilter();
+gradientGlow.distance = 0;
 
-gradientGlow.angle = 45; gradientGlow.colors = [0x000000, 0xFF0000]; gradientGlow.alphas = [0, 1];
+gradientGlow.angle = 45;
+gradientGlow.colors = [0x000000, 0xFF0000];
+gradientGlow.alphas = [0, 1];
 
 gradientGlow.ratios = [0, 255];
 
@@ -217,13 +262,16 @@ gradientGlow.blurY = 10;
 
 gradientGlow.strength = 2;
 
-gradientGlow.quality = BitmapFilterQuality.HIGH; gradientGlow.type = BitmapFilterType.OUTER;
+gradientGlow.quality = BitmapFilterQuality.HIGH;
+gradientGlow.type = BitmapFilterType.OUTER;
 
-// Define functions to listen for two events. function onClick(event:MouseEvent):void
+// Define functions to listen for two events.
+function onClick(event:MouseEvent):void
 
 {
 
-gradientGlow.strength++; shape.filters = [gradientGlow];
+gradientGlow.strength++;
+shape.filters = [gradientGlow];
 
 }
 
@@ -231,49 +279,82 @@ function onMouseMove(event:MouseEvent):void
 
 {
 
-gradientGlow.blurX = (stage.mouseX / stage.stageWidth) * 255; gradientGlow.blurY = (stage.mouseY / stage.stageHeight) * 255; shape.filters = [gradientGlow];
+gradientGlow.blurX = (stage.mouseX / stage.stageWidth) * 255;
+gradientGlow.blurY = (stage.mouseY / stage.stageHeight) * 255;
+shape.filters = [gradientGlow];
 
 }
 
-stage.addEventListener(MouseEvent.CLICK, onClick); stage.addEventListener(MouseEvent.MOUSE_MOVE, onMouseMove);
+stage.addEventListener(MouseEvent.CLICK, onClick);
+stage.addEventListener(MouseEvent.MOUSE_MOVE, onMouseMove);
 
 ## Example: Combining basic filters {#example-combining-basic-filters}
 
 The following code example uses several basic filters, combined with a Timer for creating repeating actions, to create an animated traffic light simulation.
 
-import flash.display.Shape; import flash.events.TimerEvent;
+import openfl.display.Shape;
+import openfl.events.TimerEvent;
 
-import flash.filters.BitmapFilterQuality; import flash.filters.BitmapFilterType; import flash.filters.DropShadowFilter; import flash.filters.GlowFilter;
+import openfl.filters.BitmapFilterQuality;
+import openfl.filters.BitmapFilterType;
+import openfl.filters.DropShadowFilter;
+import openfl.filters.GlowFilter;
 
-import flash.filters.GradientBevelFilter; import flash.utils.Timer;
+import openfl.filters.GradientBevelFilter;
+import openfl.utils.Timer;
 
-var count:Number = 1; var distance:Number = 8;
+var count:Number = 1;
+var distance:Number = 8;
 
-var angleInDegrees:Number = 225; // opposite of 45 degrees var colors:Array = [0xFFFFCC, 0xFEFE78, 0x8F8E01];
+var angleInDegrees:Number = 225; // opposite of 45 degrees
+var colors:Array = [0xFFFFCC, 0xFEFE78, 0x8F8E01];
 
 var alphas:Array = [1, 0, 1];
 
-var ratios:Array = [0, 128, 255]; var blurX:Number = 8;
+var ratios:Array = [0, 128, 255];
+var blurX:Number = 8;
 
-var blurY:Number = 8; var strength:Number = 1;
+var blurY:Number = 8;
+var strength:Number = 1;
 
-var quality:Number = BitmapFilterQuality.HIGH; var type:String = BitmapFilterType.INNER;
+var quality:Number = BitmapFilterQuality.HIGH;
+var type:String = BitmapFilterType.INNER;
 
 var knockout:Boolean = false;
 
-// Draw the rectangle background for the traffic light. var box:Shape = new Shape();
+// Draw the rectangle background for the traffic light.
+var box:Shape = new Shape();
 
-box.graphics.lineStyle(); box.graphics.beginFill(0xFEFE78); box.graphics.drawRect(100, 50, 90, 200); box.graphics.endFill();
+box.graphics.lineStyle();
+box.graphics.beginFill(0xFEFE78);
+box.graphics.drawRect(100, 50, 90, 200);
+box.graphics.endFill();
 
-// Draw the 3 circles for the three lights. var stopLight:Shape = new Shape(); stopLight.graphics.lineStyle(); stopLight.graphics.beginFill(0xFF0000); stopLight.graphics.drawCircle(145,90,25); stopLight.graphics.endFill();
+// Draw the 3 circles for the three lights.
+var stopLight:Shape = new Shape();
+stopLight.graphics.lineStyle();
+stopLight.graphics.beginFill(0xFF0000);
+stopLight.graphics.drawCircle(145,90,25);
+stopLight.graphics.endFill();
 
-var cautionLight:Shape = new Shape(); cautionLight.graphics.lineStyle(); cautionLight.graphics.beginFill(0xFF9900); cautionLight.graphics.drawCircle(145,150,25); cautionLight.graphics.endFill();
+var cautionLight:Shape = new Shape();
+cautionLight.graphics.lineStyle();
+cautionLight.graphics.beginFill(0xFF9900);
+cautionLight.graphics.drawCircle(145,150,25);
+cautionLight.graphics.endFill();
 
-var goLight:Shape = new Shape(); goLight.graphics.lineStyle(); goLight.graphics.beginFill(0x00CC00); goLight.graphics.drawCircle(145,210,25); goLight.graphics.endFill();
+var goLight:Shape = new Shape();
+goLight.graphics.lineStyle();
+goLight.graphics.beginFill(0x00CC00);
+goLight.graphics.drawCircle(145,210,25);
+goLight.graphics.endFill();
 
-// Add the graphics to the display list. addChild(box);
+// Add the graphics to the display list.
+addChild(box);
 
-addChild(stopLight); addChild(cautionLight); addChild(goLight);
+addChild(stopLight);
+addChild(cautionLight);
+addChild(goLight);
 
 // Apply a gradient bevel to the traffic light rectangle.
 
@@ -295,9 +376,11 @@ var greenGlow:GlowFilter = new GlowFilter(0x00CC00, 1, 30, 30, 1, 1, false, fals
 
 // Set the starting state of the lights (green on, red/yellow off). stopLight.filters = [innerShadow];
 
-cautionLight.filters = [innerShadow]; goLight.filters = [greenGlow];
+cautionLight.filters = [innerShadow];
+goLight.filters = [greenGlow];
 
-// Swap the filters based on the count value. function trafficControl(event:TimerEvent):void
+// Swap the filters based on the count value.
+function trafficControl(event:TimerEvent):void
 
 {
 
@@ -315,15 +398,23 @@ switch (count)
 
 case 1:
 
-stopLight.filters = [innerShadow]; cautionLight.filters = [yellowGlow]; goLight.filters = [innerShadow]; break;
+stopLight.filters = [innerShadow];
+cautionLight.filters = [yellowGlow];
+goLight.filters = [innerShadow];
+break;
 
 case 2:
 
-stopLight.filters = [redGlow]; cautionLight.filters = [innerShadow]; goLight.filters = [innerShadow]; break;
+stopLight.filters = [redGlow];
+cautionLight.filters = [innerShadow];
+goLight.filters = [innerShadow];
+break;
 
 case 3:
 
-stopLight.filters = [innerShadow]; cautionLight.filters = [innerShadow]; goLight.filters = [greenGlow];
+stopLight.filters = [innerShadow];
+cautionLight.filters = [innerShadow];
+goLight.filters = [greenGlow];
 
 break;
 
@@ -333,13 +424,16 @@ count++;
 
 }
 
-// Create a timer to swap the filters at a 3 second interval. var timer:Timer = new Timer(3000, 9); timer.addEventListener(TimerEvent.TIMER, trafficControl); timer.start();
+// Create a timer to swap the filters at a 3 second interval.
+var timer:Timer = new Timer(3000, 9);
+timer.addEventListener(TimerEvent.TIMER, trafficControl);
+timer.start();
 
 ## Color matrix filter {#color-matrix-filter}
 
 The ColorMatrixFilter class is used to manipulate the color and alpha values of the filtered object. This allows you to create saturation changes, hue rotation (shifting a palette from one range of colors to another), luminance-to-alpha changes, and other color manipulation effects using values from one color channel and potentially applying them to other channels.
 
-Conceptually, the filter goes through the pixels in the source image one by one and separates each pixel into its red, green, blue, and alpha components. It then multiplies values provided in the color matrix by each of these values, adding the results together to determine the resulting color value that will be displayed on the screen for that pixel. The matrix property of the filter is an array of 20 numbers that are used in calculating the final color. For details of the specific algorithm used to calculate the color values, see the entry describing the ColorMatrixFilter class’s matrix property in the [Haxe Reference for the Adobe Flash Platform](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/filters/ColorMatrixFilter.html).
+Conceptually, the filter goes through the pixels in the source image one by one and separates each pixel into its red, green, blue, and alpha components. It then multiplies values provided in the color matrix by each of these values, adding the results together to determine the resulting color value that will be displayed on the screen for that pixel. The matrix property of the filter is an array of 20 numbers that are used in calculating the final color. For details of the specific algorithm used to calculate the color values, see the entry describing the ColorMatrixFilter class’s matrix property in the [OpenFL API Reference](https://api.openfl.org/openfl/filters/ColorMatrixFilter.html).
 
 ## Convolution filter {#convolution-filter}
 
@@ -354,7 +448,7 @@ Consider the most commonly used type of matrix, which is a three by three matrix
 | N | P | N |
 | N | N | N |
 
-When the convolution filter is applied to a certain pixel, it will look at the color value of the pixel itself (“P” in the example), as well as the values of the surrounding pixels (labeled “N” in the example). However, by setting values in the matrix, you specify how much priority certain pixels have in affecting the resulting image.
+When the convolution filter is applied to a certain pixel, it will look at the color value of the pixel itself ("P" in the example), as well as the values of the surrounding pixels (labeled "N" in the example). However, by setting values in the matrix, you specify how much priority certain pixels have in affecting the resulting image.
 
 For example, the following matrix, applied using a convolution filter, will leave an image exactly as it was:
 
@@ -378,7 +472,8 @@ In Haxe, you create the matrix as a combination of an Array instance containing 
 
 // Load an image onto the Stage. var loader:Loader = new Loader();
 
-var url:URLRequest = new [URLRequest(&quot;http://www.helpexamples.com/flash/images/image1.jpg&quot;);](http://www.helpexamples.com/flash/images/image1.jpg) loader.load(url);
+var url:URLRequest = new URLRequest("http://www.helpexamples.com/flash/images/image1.jpg");
+loader.load(url);
 
 this.addChild(loader);
 
@@ -457,15 +552,20 @@ The location and amount of displacement applied to a given pixel is determined b
 
 To understand how the displacement map filter works, consider a basic example. In the following code, an image is loaded, and when it finishes loading it is centered on the Stage and a displacement map filter is applied to it, causing the pixels in the entire image to shift horizontally to the left.
 
-import flash.display.BitmapData; import flash.display.Loader; import flash.events.MouseEvent;
+import openfl.display.BitmapData;
+import openfl.display.Loader;
+import openfl.events.MouseEvent;
 
-import flash.filters.DisplacementMapFilter; import flash.geom.Point;
+import openfl.filters.DisplacementMapFilter;
+import openfl.geom.Point;
 
-import flash.net.URLRequest;
+import openfl.net.URLRequest;
 
-// Load an image onto the Stage. var loader:Loader = new Loader();
+// Load an image onto the Stage.
+var loader:Loader = new Loader();
 
-var url:URLRequest = new [URLRequest(&quot;http://www.helpexamples.com/flash/images/image3.jpg&quot;);](http://www.helpexamples.com/flash/images/image3.jpg) loader.load(url);
+var url:URLRequest = new URLRequest("http://www.helpexamples.com/flash/images/image3.jpg");
+loader.load(url);
 
 this.addChild(loader);
 
@@ -506,7 +606,7 @@ These settings cause the filtered image’s pixels to shift 250 pixels to the le
 
 1.  It finds the corresponding pixel in the map image. For example, when the filter calculates the displacement amount for the pixel in the upper-left corner of the filtered image, it looks at the pixel in the upper-left corner of the map image.
 2.  It determines the value of the specified color channel in the map pixel. In this case, the x component color channel is the red channel, so the filter looks to see what the value of the red channel of the map image is at the pixel in question. Since the map image is solid red, the pixel’s red channel is 0xFF, or 255\. This is used as the displacement value.
-3.  It compares the displacement value to the “middle” value (127, which is halfway between 0 and 255). If the displacement value is lower than the middle value, the pixel shifts in a positive direction (to the right for x displacement; down for y displacement). On the other hand, if the displacement value is higher than the middle value (as in this example), the pixel shifts in a negative direction (to the left for x displacement; up for y displacement). To be more precise, the filter subtracts the displacement value from 127, and the result (positive or negative) is the relative amount of displacement that is applied.
+3.  It compares the displacement value to the "middle" value (127, which is halfway between 0 and 255). If the displacement value is lower than the middle value, the pixel shifts in a positive direction (to the right for x displacement; down for y displacement). On the other hand, if the displacement value is higher than the middle value (as in this example), the pixel shifts in a negative direction (to the left for x displacement; up for y displacement). To be more precise, the filter subtracts the displacement value from 127, and the result (positive or negative) is the relative amount of displacement that is applied.
 4.  Finally, it determines the actual amount of displacement by determining what percentage of full displacement the relative displacement value represents. In this case, full red means 100% displacement. That percentage is then multiplied by the x scale or y scale value to determine the number of pixels of displacement that will be applied. In this example, 100% times a multiplier of 250 determines the amount of displacement—roughly 125 pixels to the left.
 
 Because no values are specified for y component and y scale, the defaults (which cause no displacement) are used— that’s why the image doesn’t shift at all in the vertical direction.
@@ -517,15 +617,22 @@ displacementMap.mode = DisplacementMapFilterMode.CLAMP;
 
 For a more complex example, the following listing uses a displacement map filter to create a magnifying glass effect on an image:
 
-import flash.display.Bitmap; import flash.display.BitmapData;
+import openfl.display.Bitmap;
+import openfl.display.BitmapData;
 
-import flash.display.BitmapDataChannel; import flash.display.GradientType; import flash.display.Loader;
+import openfl.display.BitmapDataChannel;
+import openfl.display.GradientType;
+import openfl.display.Loader;
 
-import flash.display.Shape; import flash.events.MouseEvent;
+import openfl.display.Shape;
+import openfl.events.MouseEvent;
 
-import flash.filters.DisplacementMapFilter; import flash.filters.DisplacementMapFilterMode; import flash.geom.Matrix;
+import openfl.filters.DisplacementMapFilter;
+import openfl.filters.DisplacementMapFilterMode;
+import openfl.geom.Matrix;
 
-import flash.geom.Point; import flash.net.URLRequest;
+import openfl.geom.Point;
+import openfl.net.URLRequest;
 
 // Create the gradient circles that will together form the
 
@@ -533,31 +640,43 @@ import flash.geom.Point; import flash.net.URLRequest;
 
 var type:String = GradientType.LINEAR;
 
-var redColors:Array = [0xFF0000, 0x000000]; var blueColors:Array = [0x0000FF, 0x000000]; var alphas:Array = [1, 1];
+var redColors:Array = [0xFF0000, 0x000000];
+var blueColors:Array = [0x0000FF, 0x000000];
+var alphas:Array = [1, 1];
 
 var ratios:Array = [0, 255];
 
-var xMatrix:Matrix = new Matrix(); xMatrix.createGradientBox(radius * 2, radius * 2); var yMatrix:Matrix = new Matrix();
+var xMatrix:Matrix = new Matrix();
+xMatrix.createGradientBox(radius * 2, radius * 2);
+var yMatrix:Matrix = new Matrix();
 
 yMatrix.createGradientBox(radius * 2, radius * 2, Math.PI / 2);
 
-var xCircle:Shape = new Shape(); xCircle.graphics.lineStyle(0, 0, 0);
+var xCircle:Shape = new Shape();
+xCircle.graphics.lineStyle(0, 0, 0);
 
 xCircle.graphics.beginGradientFill(type, redColors, alphas, ratios, xMatrix); xCircle.graphics.drawCircle(radius, radius, radius);
 
-var yCircle:Shape = new Shape(); yCircle.graphics.lineStyle(0, 0, 0);
+var yCircle:Shape = new Shape();
+yCircle.graphics.lineStyle(0, 0, 0);
 
-yCircle.graphics.beginGradientFill(type, blueColors, alphas, ratios, yMatrix); yCircle.graphics.drawCircle(radius, radius, radius);
+yCircle.graphics.beginGradientFill(type, blueColors, alphas, ratios, yMatrix);
+yCircle.graphics.drawCircle(radius, radius, radius);
 
-// Position the circles at the bottom of the screen, for reference. this.addChild(xCircle);
+// Position the circles at the bottom of the screen, for reference.
+this.addChild(xCircle);
 
-xCircle.y = stage.stageHeight - xCircle.height; this.addChild(yCircle);
+xCircle.y = stage.stageHeight - xCircle.height;
+this.addChild(yCircle);
 
-yCircle.y = stage.stageHeight - yCircle.height; yCircle.x = 200;
+yCircle.y = stage.stageHeight - yCircle.height;
+yCircle.x = 200;
 
-// Load an image onto the Stage. var loader:Loader = new Loader();
+// Load an image onto the Stage.
+var loader:Loader = new Loader();
 
-var url:URLRequest = new [URLRequest(&quot;http://www.helpexamples.com/flash/images/image1.jpg&quot;);](http://www.helpexamples.com/flash/images/image1.jpg) loader.load(url);
+var url:URLRequest = new URLRequest("http://www.helpexamples.com/flash/images/image1.jpg");
+loader.load(url);
 
 this.addChild(loader);
 
@@ -629,11 +748,11 @@ OpenFL 10 and later, Adobe AIR 1.5 and later
 
 The ShaderFilter class lets you use a custom filter effect defined as a Pixel Bender shader. Because the filter effect is written as a Pixel Bender shader, the effect can be completely customized. The filtered content is passed in to the shader as an image input, and the result of the shader operation becomes the filter result.
 
-**_Note:_ **_The Shader filter is available in Haxe starting with OpenFL 10 and Adobe AIR 1.5._
+**_Note:_** _The Shader filter is available in Haxe starting with OpenFL 10 and Adobe AIR 1.5._
 
 To apply a shader filter to an object, you first create a Shader instance representing the Pixel Bender shader that you are using. For details on the procedure for creating a Shader instance and on how to specify input image and parameter values, see
 
-“Working with Pixel Bender shaders” on page 300
+"Working with Pixel Bender shaders" on page 300
 
 .
 
@@ -649,6 +768,6 @@ var myFilter:ShaderFilter = new ShaderFilter(myShader);
 
 For a complete example of using a shader filter, see
 
-“Using a shader as a filter” on page 318
+"Using a shader as a filter" on page 318
 
 .

@@ -18,7 +18,7 @@ The following example uses a simple for..in loop to iterate over each of the pro
 
 var nc:NetConnection = new NetConnection(); nc.connect(null);
 
-var ns:NetStream = new NetStream(nc); ns.client = this; ns.play(&quot;video.flv&quot;);
+var ns:NetStream = new NetStream(nc); ns.client = this; ns.play("video.flv");
 
 var vid:Video = new Video(); vid.attachNetStream(ns); addChild(vid);
 
@@ -32,7 +32,7 @@ for (key in infoObject)
 
 {
 
-trace(key + &quot;: &quot; + infoObject[key]);
+trace(key + ": " + infoObject[key]);
 
 }
 
@@ -44,7 +44,7 @@ parameters: name: point1 time: 0.418 type: navigation
 
 This code uses one of several techniques to set the object on which the callback method runs. You can use other techniques; for more information, see
 
-“Writing callback methods for metadata and cue points” on page 487
+"Writing callback methods for metadata and cue points" on page 487
 
 .
 
@@ -58,7 +58,7 @@ Metadata includes information about your video file, such as duration, width, he
 
 var nc:NetConnection = new NetConnection(); nc.connect(null);
 
-var ns:NetStream = new NetStream(nc); ns.client = this; ns.play(&quot;video.flv&quot;);
+var ns:NetStream = new NetStream(nc); ns.client = this; ns.play("video.flv");
 
 var vid:Video = new Video(); vid.attachNetStream(ns); addChild(vid);
 
@@ -72,7 +72,7 @@ for (key in infoObject)
 
 {
 
-trace(key + &quot;: &quot; + infoObject[key]);
+trace(key + ": " + infoObject[key]);
 
 }
 
@@ -104,7 +104,7 @@ function traceObject(obj:Object, indent:uint = 0):void
 
 {
 
-var indentString:String = &quot;&quot;; var i:uint;
+var indentString:String = ""; var i:uint;
 
 var prop:String; var val:*;
 
@@ -112,7 +112,7 @@ for (i = 0; i &lt; indent; i++)
 
 {
 
-indentString += &quot;\t&quot;;
+indentString += "\t";
 
 }
 
@@ -122,11 +122,11 @@ for (prop in obj)
 
 val = obj[prop];
 
-if (typeof(val) == &quot;object&quot;)
+if (typeof(val) == "object")
 
 {
 
-trace(indentString + &quot; &quot; + prop + &quot;: [Object]&quot;); traceObject(val, indent + 1);
+trace(indentString + " " + prop + ": [Object]"); traceObject(val, indent + 1);
 
 }
 
@@ -134,7 +134,7 @@ else
 
 {
 
-trace(indentString + &quot; &quot; + prop + &quot;: &quot; + val);
+trace(indentString + " " + prop + ": " + val);
 
 }
 
@@ -186,13 +186,17 @@ package
 
 {
 
-import flash.net.NetConnection; import flash.net.NetStream;
+import openfl.net.NetConnection;
+import openfl.net.NetStream;
 
-import flash.events.NetStatusEvent; import flash.media.Video;
+import openfl.events.NetStatusEvent;
+import openfl.media.Video;
 
-import flash.display.StageDisplayState; import flash.display.Loader;
+import openfl.display.StageDisplayState;
+import openfl.display.Loader;
 
-import flash.display.Sprite; import flash.events.MouseEvent;
+import openfl.display.Sprite;
+import openfl.events.MouseEvent;
 
 public class onMetaDataExample extends Sprite
 
@@ -204,13 +208,18 @@ public function onMetaDataExample():void
 
 {
 
-var videoConnection:NetConnection = new NetConnection(); videoConnection.connect(null);
+var videoConnection:NetConnection = new NetConnection();
+videoConnection.connect(null);
 
-var videoStream:NetStream = new NetStream(videoConnection); videoStream.client = this;
+var videoStream:NetStream = new NetStream(videoConnection); 
+ideoStream.client = this;
 
-addChild(video); video.x = 185;
+addChild(video);
+video.x = 185;
 
-video.y = 5; video.attachNetStream(videoStream); videoStream.play(&quot;video.mp4&quot;);
+video.y = 5;
+video.attachNetStream(videoStream);
+videoStream.play("video.mp4");
 
 videoStream.addEventListener(NetStatusEvent.NET_STATUS, netStatusHandler);
 
@@ -224,7 +233,7 @@ for(var propName:String in infoObject)
 
 {
 
-metaDataOut.appendText(propName + &quot;=&quot; + infoObject[propName] + &quot;\n&quot;);
+metaDataOut.appendText(propName + "=" + infoObject[propName] + "\n");
 
 }
 
@@ -234,7 +243,7 @@ private function netStatusHandler(event:NetStatusEvent):void
 
 {
 
-if(event.info.code == &quot;NetStream.Play.Stop&quot;) stage.displayState = StageDisplayState.NORMAL;
+if(event.info.code == "NetStream.Play.Stop") stage.displayState = StageDisplayState.NORMAL;
 
 }
 
@@ -257,18 +266,18 @@ The following table shows the possible values for video metadata that are passed
 | aacaot | AAC audio object type; 0, 1, or 2 are supported. |
 | avclevel | AVC IDC level number such as 10, 11, 20, 21, and so on. |
 | avcprofile | AVC profile number such as 55, 77, 100, and so on. |
-| audiocodecid | A string that indicates the audio codec (code/decode technique) that was used - for example “.Mp3” or “mp4a” |
+| audiocodecid | A string that indicates the audio codec (code/decode technique) that was used - for example ".Mp3" or "mp4a" |
 | audiodatarate | A number that indicates the rate at which audio was encoded, in kilobytes per second. |
-| audiodelay | A number that indicates what time in the FLV file &quot;time 0&quot; of the original FLV file exists. The video content needs to be delayed by a small amount to properly synchronize the audio. |
+| audiodelay | A number that indicates what time in the FLV file "time 0" of the original FLV file exists. The video content needs to be delayed by a small amount to properly synchronize the audio. |
 | canSeekToEnd | A Boolean value that is true if the FLV file is encoded with a keyframe on the last frame, which allows seeking to the end of a progressive -download video file. It is false if the FLV file is not encoded with a keyframe on the last frame. |
 | cuePoints | An array of objects, one for each cue point embedded in the FLV file. Value is undefined if the FLV file does not contain any cue points. Each object has the following properties: |
 | duration | A number that specifies the duration of the video file, in seconds. |
 | framerate | A number that is the frame rate of the FLV file. |
 | height | A number that is the height of the FLV file, in pixels. |
 | seekpoints | An array that lists the available keyframes as timestamps in milliseconds. Optional. |
-| tags | An array of key-value pairs that represent the information in the “ilst” atom, which is the equivalent of ID3 tags for MP4 files. iTunes uses these tags. Can be used to display artwork, if available. |
+| tags | An array of key-value pairs that represent the information in the "ilst" atom, which is the equivalent of ID3 tags for MP4 files. iTunes uses these tags. Can be used to display artwork, if available. |
 | trackinfo | Object that provides information on all the tracks in the MP4 file, including their sample description ID. |
-| videocodecid | A string that is the codec version that was used to encode the video. - for example, “avc1” or “VP6F” |
+| videocodecid | A string that is the codec version that was used to encode the video. - for example, "avc1" or "VP6F" |
 
 | **Parameter** | **Description** |
 | --- | --- |
@@ -310,9 +319,11 @@ package
 
 {
 
-import flash.display.*; import flash.net.*;
+import openfl.display.*;
+import openfl.net.*;
 
-import flash.events.NetStatusEvent; import flash.media.Video;
+import openfl.events.NetStatusEvent;
+import openfl.media.Video;
 
 public class onXMPDataExample extends Sprite
 
@@ -322,17 +333,22 @@ public function onXMPDataExample():void
 
 {
 
-var videoConnection:NetConnection = new NetConnection(); videoConnection.connect(null);
+var videoConnection:NetConnection = new NetConnection();
+videoConnection.connect(null);
 
-var videoStream:NetStream = new NetStream(videoConnection); videoStream.client = this;
+var videoStream:NetStream = new NetStream(videoConnection);
+videoStream.client = this;
 
-var video:Video = new Video(); addChild(video); video.attachNetStream(videoStream);
+var video:Video = new Video();
+addChild(video);
+video.attachNetStream(videoStream);
 
-videoStream.play(&quot;video.f4v&quot;);
+videoStream.play("video.f4v");
 
 }
 
-public function onMetaData(info:Object):void { trace(&quot;onMetaData fired&quot;);
+public function onMetaData(info:Object):void {
+	trace("onMetaData fired");
 
 }
 
@@ -340,9 +356,9 @@ public function onXMPData(infoObject:Object):void
 
 {
 
-trace(&quot;onXMPData Fired\n&quot;);
+trace("onXMPData Fired\n");
 
-//trace(&quot;raw XMP =\n&quot;);
+//trace("raw XMP =\n");
 
 //trace(infoObject.data);
 
@@ -350,13 +366,15 @@ var cuePoints:Array = new Array(); var cuePoint:Object;
 
 var strFrameRate:String;
 
-var nTracksFrameRate:Number; var strTracks:String = &quot;&quot;;
+var nTracksFrameRate:Number; var strTracks:String = "";
 
 var onXMPXML = new XML(infoObject.data);
 
 // Set up namespaces to make referencing easier
 
-var xmpDM:Namespace = new [Namespace(&quot;http://ns.adobe.com/xmp/1.0/DynamicMedia/&quot;);](http://ns.adobe.com/xmp/1.0/DynamicMedia/) var rdf:Namespace = new [Namespace(&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot;);](http://www.w3.org/1999/02/22-rdf-syntax-ns) for each (var it:XML in onXMPXML..xmpDM::Tracks)
+var xmpDM:Namespace = new Namespace("http://ns.adobe.com/xmp/1.0/DynamicMedia/");
+var rdf:Namespace = new Namespace("http://www.w3.org/1999/02/22-rdf-syntax-ns#");
+for each (var it:XML in onXMPXML..xmpDM::Tracks)
 
 {
 
@@ -370,7 +388,7 @@ strTracks += it;
 
 }
 
-var onXMPTracksXML:XML = new XML(strTracks); var strCuepoints:String = &quot;&quot;;
+var onXMPTracksXML:XML = new XML(strTracks); var strCuepoints:String = "";
 
 for each (var item:XML in onXMPTracksXML..xmpDM::markers)
 
@@ -392,21 +410,21 @@ For a short video file called startrekintro.f4v, this example produces the follo
 
 onMetaData fired onXMPData Fired
 
-&lt;xmpDM:markers [xmlns:xmp=&quot;http://ns.adobe.com/xap/1.0/&quot;](http://ns.adobe.com/xap/1.0/) [xmlns:xmpDM=&quot;http://ns.adobe.com/xmp/1.0/DynamicMedia/&quot;](http://ns.adobe.com/xmp/1.0/DynamicMedia/) [xmlns:stDim=&quot;http://ns.adobe.com/xap/1.0/sType/Dimensions#&quot;](http://ns.adobe.com/xap/1.0/sType/Dimensions) [xmlns:xmpMM=&quot;http://ns.adobe.com/xap/1.0/mm/&quot;](http://ns.adobe.com/xap/1.0/mm/) [xmlns:stEvt=&quot;http://ns.adobe.com/xap/1.0/sType/ResourceEvent#&quot;](http://ns.adobe.com/xap/1.0/sType/ResourceEvent) [xmlns:dc=&quot;http://purl.org/dc/elements/1.1/&quot;](http://purl.org/dc/elements/1.1/) [xmlns:rdf=&quot;http://www.w3.org/1999/02/22-rdf-](http://www.w3.org/1999/02/22-rdf-) syntax-ns#&quot; xmlns:x=&quot;adobe:ns:meta/&quot;&gt;
+&lt;xmpDM:markers [xmlns:xmp="http://ns.adobe.com/xap/1.0/"](http://ns.adobe.com/xap/1.0/) [xmlns:xmpDM="http://ns.adobe.com/xmp/1.0/DynamicMedia/"](http://ns.adobe.com/xmp/1.0/DynamicMedia/) [xmlns:stDim="http://ns.adobe.com/xap/1.0/sType/Dimensions#"](http://ns.adobe.com/xap/1.0/sType/Dimensions) [xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"](http://ns.adobe.com/xap/1.0/mm/) [xmlns:stEvt="http://ns.adobe.com/xap/1.0/sType/ResourceEvent#"](http://ns.adobe.com/xap/1.0/sType/ResourceEvent) [xmlns:dc="http://purl.org/dc/elements/1.1/"](http://purl.org/dc/elements/1.1/) [xmlns:rdf="http://www.w3.org/1999/02/22-rdf-](http://www.w3.org/1999/02/22-rdf-) syntax-ns#" xmlns:x="adobe:ns:meta/"&gt;
 
 &lt;rdf:Seq&gt;
 
 &lt;rdf:li&gt;
 
-&lt;rdf:Description xmpDM:startTime=&quot;7695905817600&quot; xmpDM:name=&quot;Title1&quot; xmpDM:type=&quot;FLVCuePoint&quot; xmpDM:cuePointType=&quot;Navigation&quot;&gt;
+&lt;rdf:Description xmpDM:startTime="7695905817600" xmpDM:name="Title1" xmpDM:type="FLVCuePoint" xmpDM:cuePointType="Navigation"&gt;
 
 &lt;xmpDM:cuePointParams&gt;
 
 &lt;rdf:Seq&gt;
 
-&lt;rdf:li xmpDM:key=&quot;Title&quot; xmpDM:value=&quot;Star Trek&quot;/&gt;
+&lt;rdf:li xmpDM:key="Title" xmpDM:value="Star Trek"/&gt;
 
-&lt;rdf:li xmpDM:key=&quot;Color&quot; xmpDM:value=&quot;Blue&quot;/&gt;
+&lt;rdf:li xmpDM:key="Color" xmpDM:value="Blue"/&gt;
 
 &lt;/rdf:Seq&gt;
 
@@ -418,15 +436,15 @@ onMetaData fired onXMPData Fired
 
 &lt;rdf:li&gt;
 
-&lt;rdf:Description xmpDM:startTime=&quot;10289459980800&quot; xmpDM:name=&quot;Title2&quot; xmpDM:type=&quot;FLVCuePoint&quot; xmpDM:cuePointType=&quot;Event&quot;&gt;
+&lt;rdf:Description xmpDM:startTime="10289459980800" xmpDM:name="Title2" xmpDM:type="FLVCuePoint" xmpDM:cuePointType="Event"&gt;
 
 &lt;xmpDM:cuePointParams&gt;
 
 &lt;rdf:Seq&gt;
 
-&lt;rdf:li xmpDM:key=&quot;William Shatner&quot; xmpDM:value=&quot;First Star&quot;/&gt;
+&lt;rdf:li xmpDM:key="William Shatner" xmpDM:value="First Star"/&gt;
 
-&lt;rdf:li xmpDM:key=&quot;Color&quot; xmpDM:value=&quot;Light Blue&quot;/&gt;
+&lt;rdf:li xmpDM:key="Color" xmpDM:value="Light Blue"/&gt;
 
 &lt;/rdf:Seq&gt;
 
@@ -440,7 +458,7 @@ onMetaData fired onXMPData Fired
 
 &lt;/xmpDM:markers&gt; onMetaData fired
 
-**_Note:_ **_In XMP data, time is stored as DVA Ticks rather than seconds. To compute the cue point time, divide the start time by the framerate. For example, the start time of 7695905817600 divided by a framerate of 254016000000 equals 30:30._
+**_Note:_** _In XMP data, time is stored as DVA Ticks rather than seconds. To compute the cue point time, divide the start time by the framerate. For example, the start time of 7695905817600 divided by a framerate of 254016000000 equals 30:30._
 
 To see the complete raw XMP metadata, which includes the framerate, remove the comment identifiers (//’s) preceding the second and third trace() statements at the beginning of the onXMPData() function.
 

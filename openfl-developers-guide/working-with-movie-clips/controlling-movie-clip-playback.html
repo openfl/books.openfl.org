@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Controlling movie clip playback · GitBook</title>
+        <title>Controlling movie clip playback · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="generator" content="HonKit 5.1.4">
         
         
         
@@ -17,7 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
                 
             
                 
@@ -66,7 +65,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -955,14 +954,124 @@
             
         </li>
     
+        <li class="chapter " data-level="1.8" data-path="../working-with-sound/">
+            
+                <a href="../working-with-sound/">
+            
+                    
+                    Chapter 24: Working with sound
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../working-with-sound/basics-of-working-with-sound.html">
+            
+                <a href="../working-with-sound/basics-of-working-with-sound.html">
+            
+                    
+                    Basics of working with sound
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../working-with-sound/understanding-the-sound-architecture.html">
+            
+                <a href="../working-with-sound/understanding-the-sound-architecture.html">
+            
+                    
+                    Understanding the sound architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../working-with-sound/loading-external-sound-files.html">
+            
+                <a href="../working-with-sound/loading-external-sound-files.html">
+            
+                    
+                    Loading external sound files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../working-with-sound/working-with-sound-assets.html">
+            
+                <a href="../working-with-sound/working-with-sound-assets.html">
+            
+                    
+                    Working with sound assets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../working-with-sound/working-with-dynamically-generated-audio.html">
+            
+                <a href="../working-with-sound/working-with-dynamically-generated-audio.html">
+            
+                    
+                    Working with dynamically generated audio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../working-with-sound/playing-sounds.html">
+            
+                <a href="../working-with-sound/playing-sounds.html">
+            
+                    
+                    Playing sounds
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../working-with-sound/controlling-sound-volume-and-panning.html">
+            
+                <a href="../working-with-sound/controlling-sound-volume-and-panning.html">
+            
+                    
+                    Controlling sound volume and panning
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
     
 
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -1007,10 +1116,10 @@
 <p>The <code>play()</code> and <code>stop()</code> methods allow basic control of a movie clip across its timeline. For example, suppose you have a movie clip symbol on the Stage which contains an animation of a bicycle moving across the screen, with its instance name set to bicycle. If the following code is attached to a keyframe on the main timeline,</p>
 <pre><code class="lang-haxe">bicycle.stop ();
 </code></pre>
-<p>the bicycle will not move (its animation will not play). The bicycle&#x2019;s movement could start through some other user interaction. For example, if you had a button named <code>startButton</code>, the following code on a keyframe on the main timeline would make it so that clicking the button causes the animation to play:</p>
+<p>the bicycle will not move (its animation will not play). The bicycle’s movement could start through some other user interaction. For example, if you had a button named <code>startButton</code>, the following code on a keyframe on the main timeline would make it so that clicking the button causes the animation to play:</p>
 <pre><code class="lang-haxe"><span class="hljs-comment">// This function will be called when the button is clicked. It causes the</span>
 <span class="hljs-comment">// bicycle animation to play.</span>
-<span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">playAnimation</span> <span class="hljs-params">(event:MouseEvent)</span>:Void </span>{
+<span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">playAnimation</span> </span>(event:<span class="hljs-type">MouseEvent</span>):<span class="hljs-type">Void </span>{
 
     bicycle.play ();
 
@@ -1023,10 +1132,10 @@ startButton.addEventListener (MouseEvent.CLICK, playAnimation);
 </code></pre>
 <h2 id="fast-forwarding-and-rewinding">Fast-forwarding and rewinding </h2>
 <p>The <code>play()</code> and <code>stop()</code> methods are not the only way of controlling playback in a movie clip. You can also move the playhead forward or backward along the timeline manually by using the <code>nextFrame()</code> and <code>prevFrame()</code> methods. Calling either of these methods stops playback and moves the playhead one frame forward or backward, respectively.</p>
-<p>Using the <code>play()</code> method is analogous to calling <code>nextFrame()</code> every time the movie clip object&#x2019;s <code>enterFrame</code> event is triggered. Along these lines, you could make the bicycle movie clip play backwards by creating an event listener for the <code>enterFrame</code> event and telling bicycle to go to its previous frame in the listener function, as follows:</p>
+<p>Using the <code>play()</code> method is analogous to calling <code>nextFrame()</code> every time the movie clip object’s <code>enterFrame</code> event is triggered. Along these lines, you could make the bicycle movie clip play backwards by creating an event listener for the <code>enterFrame</code> event and telling bicycle to go to its previous frame in the listener function, as follows:</p>
 <pre><code class="lang-haxe"><span class="hljs-comment">// This function is called when the enterFrame event is triggered, meaning</span>
 <span class="hljs-comment">// it&apos;s called once per frame.</span>
-<span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">everyFrame</span> <span class="hljs-params">(event:Event)</span>:Void </span>{
+<span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">everyFrame</span> </span>(event:<span class="hljs-type">Event</span>):<span class="hljs-type">Void </span>{
 
     <span class="hljs-keyword">if</span> (bicycle.currentFrame == <span class="hljs-number">1</span>) {
 
@@ -1044,10 +1153,10 @@ startButton.addEventListener (MouseEvent.CLICK, playAnimation);
 
 bicycle.addEventListener (Event.ENTER_FRAME, everyFrame);
 </code></pre>
-<p>In normal playback, if a movie clip contains more than a single frame, it will loop indefinitely when playing; that is, it will return to Frame 1 if it progresses past its final frame. When you use <code>prevFrame()</code> or <code>nextFrame()</code>, this behavior does not happen automatically (calling <code>prevFrame()</code> when the playhead is on Frame 1 doesn&#x2019;t move the playhead to the last frame). The <code>if</code> condition in the example above checks to see if the playhead has progressed backwards to the first frame, and sets the playhead ahead to its final frame, effectively creating a continuous loop of the movie clip playing backwards.</p>
+<p>In normal playback, if a movie clip contains more than a single frame, it will loop indefinitely when playing; that is, it will return to Frame 1 if it progresses past its final frame. When you use <code>prevFrame()</code> or <code>nextFrame()</code>, this behavior does not happen automatically (calling <code>prevFrame()</code> when the playhead is on Frame 1 doesn’t move the playhead to the last frame). The <code>if</code> condition in the example above checks to see if the playhead has progressed backwards to the first frame, and sets the playhead ahead to its final frame, effectively creating a continuous loop of the movie clip playing backwards.</p>
 <h2 id="jumping-to-a-different-frame-and-using-frame-labels">Jumping to a different frame and using frame labels </h2>
 <p>Sending a movie clip to a new frame is a simple affair. Calling either <code>gotoAndPlay()</code> or <code>gotoAndStop()</code> will jump the movie clip to the frame number specified as a parameter. Alternatively, you can pass a string that matches the name of a frame label. Any frame on the timeline can be assigned a label. To do this, select a frame on the timeline and then enter a name in the Frame Label field on the Property inspector.</p>
-<p>The advantages of using frame labels instead of numbers are particularly evident when creating a complex movie clip. When the number of frames, layers, and tweens in an animation becomes large, consider labeling important frames with explanatory descriptions that represent shifts in the behavior of the movie clip (for example, &#x201C;off,&#x201D; &#x201C;walking,&#x201D; or &#x201C;running&#x201D;). This improves code readability and also provides flexibility, since function calls that go to a labeled frame are pointers to a single reference&#x2014;the label&#x2014;rather than a specific frame number. If later on you decide to move a particular segment of the animation to a different frame, you will not need to change your Haxe code as long as you keep the same label for the frames in the new location.</p>
+<p>The advantages of using frame labels instead of numbers are particularly evident when creating a complex movie clip. When the number of frames, layers, and tweens in an animation becomes large, consider labeling important frames with explanatory descriptions that represent shifts in the behavior of the movie clip (for example, &quot;off,&quot; &quot;walking,&quot; or &quot;running&quot;). This improves code readability and also provides flexibility, since function calls that go to a labeled frame are pointers to a single reference—the label—rather than a specific frame number. If later on you decide to move a particular segment of the animation to a different frame, you will not need to change your Haxe code as long as you keep the same label for the frames in the new location.</p>
 <p>To represent frame labels in code, OpenFL includes the FrameLabel class. Each instance of this class represents a single frame label, and has a <code>name</code> property representing the name of the frame label as specified in the Property inspector, and a <code>frame</code> property representing the frame number of the frame where the label is placed on the timeline.</p>
 <p>In order to get access to the FrameLabel instances associated with a movie clip instance, the MovieClip class includes two properties that directly return FrameLabel objects. The <code>currentLabels</code> property returns an array that consists of all FrameLabel objects across the entire timeline of a movie clip. The <code>currentLabel</code> property returns a string containing the name of the frame label encountered most recently along the timeline.</p>
 <p>Suppose you were creating a movie clip named <code>robot</code> and had labeled the various states of its animation. You could set up a condition that checks the <code>currentLabel</code> property to access the current state of <code>robot</code>, as in the following code:</p>
@@ -1064,7 +1173,7 @@ myFrameLabel.addEventListener (Event.FRAME_LABEL, onFrameLabel);
 
 ...
 
-<span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onFrameLabel</span> <span class="hljs-params">(e:Event)</span>:Void </span>{
+<span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">onFrameLabel</span> </span>(e:<span class="hljs-type">Event</span>):<span class="hljs-type">Void </span>{
 
     <span class="hljs-comment">//do something</span>
 
@@ -1123,12 +1232,56 @@ The Scene class has several properties that give information about a scene. The 
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Controlling movie clip playback","level":"1.7.2","depth":2,"next":{"title":"Creating MovieClip objects with Haxe","level":"1.7.3","depth":2,"path":"working-with-movie-clips/creating-movieclip-objects-with-haxe.md","ref":"working-with-movie-clips/creating-movieclip-objects-with-haxe.md","articles":[]},"previous":{"title":"Working with MovieClip objects","level":"1.7.1","depth":2,"path":"working-with-movie-clips/working-with-movieclip-objects.md","ref":"working-with-movie-clips/working-with-movieclip-objects.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"working-with-movie-clips/controlling-movie-clip-playback.md","mtime":"2023-01-31T16:17:42.720Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-01-31T16:18:16.478Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Controlling movie clip playback","level":"1.7.2","depth":2,"next":{"title":"Creating MovieClip objects with Haxe","level":"1.7.3","depth":2,"path":"working-with-movie-clips/creating-movieclip-objects-with-haxe.md","ref":"working-with-movie-clips/creating-movieclip-objects-with-haxe.md","articles":[]},"previous":{"title":"Working with MovieClip objects","level":"1.7.1","depth":2,"path":"working-with-movie-clips/working-with-movieclip-objects.md","ref":"working-with-movie-clips/working-with-movieclip-objects.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"working-with-movie-clips/controlling-movie-clip-playback.md","mtime":"2024-01-16T06:43:11.682Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-01-16T06:43:31.976Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
     
@@ -1146,10 +1299,6 @@ The Scene class has several properties that give information about a scene. The 
     
         
         <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

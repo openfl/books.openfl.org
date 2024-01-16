@@ -16,7 +16,7 @@ When deciding which of these data-sharing techniques is appropriate for a partic
 
 The most basic way to share data between workers is to use a shared property. Each worker maintains an internal dictionary of shared property values. The properties are stored with String key names to distinguish between the properties. To store an object on a worker as a shared property, call the Worker object’s setSharedProperty() method with two arguments, the key name and the value to store:
 
-// code running in the parent worker bgWorker.setSharedProperty(&quot;sharedPropertyName&quot;, someObject);
+// code running in the parent worker bgWorker.setSharedProperty("sharedPropertyName", someObject);
 
 Once the shared property has been set, the value can be read by calling the Worker object’s getSharedProperty()
 
@@ -24,13 +24,13 @@ method, passing in the key name:
 
 // code running in the background worker
 
-receivedProperty = Worker.current.getSharedProperty(&quot;sharedPropertyName&quot;);
+receivedProperty = Worker.current.getSharedProperty("sharedPropertyName");
 
 There is no restriction on which worker reads or sets the property value. For example, code in a background worker can call its setSharedProperty() method to store a value. Code running in the parent worker can then use getSharedProperty() to receive the data.
 
 The value that’s passed to the setSharedProperty() method can be almost any type of object. When you call the getSharedProperty() method, the object that’s returned is a copy of the object passed in to setSharedProperty() and not a reference to the same object, except in a few special cases. The specifics of how data is shared are explained in
 
-“Shared references and copied values” on page 1040
+"Shared references and copied values" on page 1040
 
 .
 
@@ -48,7 +48,7 @@ sendChannel = Worker.current.createMessageChannel(receivingWorker);
 
 Both workers need to have access to the MessageChannel object. The simplest way to do this is to pass the MessageChannel object using the setSharedProperty() method:
 
-receivingWorker.setSharedProperty(&quot;incomingChannel&quot;, sendChannel);
+receivingWorker.setSharedProperty("incomingChannel", sendChannel);
 
 In the receiving worker, register a listener for the MessageChannel object’s channelMessage event. This event is dispatched when the sending worker sends data through the message channel.
 
@@ -56,11 +56,11 @@ In the receiving worker, register a listener for the MessageChannel object’s c
 
 var incomingChannel:MessageChannel;
 
-incomingChannel = Worker.current.getSharedProperty(&quot;incomingChannel&quot;); incomingChannel.addEventListener(Event.CHANNEL_MESSAGE, handleIncomingMessage);
+incomingChannel = Worker.current.getSharedProperty("incomingChannel"); incomingChannel.addEventListener(Event.CHANNEL_MESSAGE, handleIncomingMessage);
 
 To actually send data, in the sending worker call the MessageChannel object’s send() method:
 
-// In the sending worker swf sendChannel.send(&quot;This is a message&quot;);
+// In the sending worker swf sendChannel.send("This is a message");
 
 In the receiving worker, the MessageChannel calls the channelMessage event handler. The receiving worker can then get the data by calling the MessageChannel object’s receive() method.
 
@@ -74,7 +74,7 @@ var message:String = incomingChannel.receive() as String;
 
 The object returned by the receive method has the same data type as the object that was passed in to the send() method. The received object is a copy of the object passed in by the sender and not a reference to the object in the sending worker, unless it is one of a few data types, as described in
 
-“Shared references and copied values” on page 1040
+"Shared references and copied values" on page 1040
 
 .
 
@@ -82,9 +82,9 @@ The object returned by the receive method has the same data type as the object t
 
 When an object is passed between two workers, the receiving worker gets a new object that’s a copy of the original one. The two objects are stored in different locations in the system’s memory. Consequently, each copy of the object that’s received increases the total memory used by the runtime. In addition, any changes that you make to an object in one worker do not affect the copy in the other worker. For more details about how data is copied, see
 
-“Shared references
+"Shared references
 
-and copied values” on page 1040
+and copied values" on page 1040
 
 .
 
@@ -96,15 +96,15 @@ Because workers execute their code simultaneously, it’s possible for two worke
 
 The ByteArray class has methods that allow you to validate and change the byte array’s contents in a single operation:
 
-• [atomicCompareAndSwapIntAt() method](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/utils/ByteArray.html#atomicCompareAndSwapIntAt())
+• [atomicCompareAndSwapIntAt() method](https://api.openfl.org/openfl/utils/ByteArray.html#atomicCompareAndSwapIntAt)
 
-• [atomicCompareAndSwapLength() method](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/utils/ByteArray.html#atomicCompareAndSwapLength())
+• [atomicCompareAndSwapLength() method](https://api.openfl.org/openfl/utils/ByteArray.html#atomicCompareAndSwapLength)
 
-In addition, the flash.concurrent package includes classes that provide access control for working with shared resources:
+In addition, the openfl.concurrent package includes classes that provide access control for working with shared resources:
 
-• [Mutex class](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/concurrent/Mutex.html)
+• [Mutex class](https://api.openfl.org/openfl/concurrent/Mutex.html)
 
-• [Condition class](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/concurrent/Condition.html)
+• [Condition class](https://api.openfl.org/openfl/concurrent/Condition.html)
 
 ## Shared references and copied values {#shared-references-and-copied-values}
 
@@ -116,7 +116,7 @@ In the normal case, when you call Worker.setSharedProperty() or MessageChannel.s
 
 Worker.setSharedProperty() or MessageChannel.send().
 
-• In order for a custom class to be deserialized properly, the class definition must be registered using the flash.net.registerClassAlias() function or [RemoteClass] metadata. The same alias must be used for both worker&#039;s versions of the class.
+• In order for a custom class to be deserialized properly, the class definition must be registered using the openfl.net.registerClassAlias() function or [RemoteClass] metadata. The same alias must be used for both worker's versions of the class.
 
 There are five special cases of objects that are truly shared rather than copied between workers:
 
@@ -130,7 +130,7 @@ There are five special cases of objects that are truly shared rather than copied
 
 • Condition objects
 
-When you pass an instance of one of these objects using the Worker.setSharedProperty() method or MessageChannel.send() method, each worker has a reference to the same underlying object. Changes made to an instance in one worker are immediately available in other workers. In addition, if you pass the same instance of one of these objects to a worker more than once, the runtime doesn&#039;t create a new copy of the object in the receiving worker. Instead, the same reference is re-used.
+When you pass an instance of one of these objects using the Worker.setSharedProperty() method or MessageChannel.send() method, each worker has a reference to the same underlying object. Changes made to an instance in one worker are immediately available in other workers. In addition, if you pass the same instance of one of these objects to a worker more than once, the runtime doesn't create a new copy of the object in the receiving worker. Instead, the same reference is re-used.
 
 ## Additional data-sharing techniques {#additional-data-sharing-techniques}
 
@@ -144,7 +144,7 @@ In addition to the worker-specific mechanisms for passing data, workers can also
 
 When you share a resource between two or more workers, you generally need to avoid having multiple workers accessing the resource at the same time. For example, having multiple workers access a file on the local file system could cause data loss or corruption and may not be supported by the operating system.
 
-To guard against concurrent access problems, use the Mutex and Condition classes in the flash.concurrent package to provide access control for working with shared resources.
+To guard against concurrent access problems, use the Mutex and Condition classes in the openfl.concurrent package to provide access control for working with shared resources.
 
 Unlike other data-sharing mechanisms, the SQLite database engine is designed for concurrent access and has its own transaction support built in. Multiple workers can access a SQLite database without risk of corrupting the data.
 
@@ -152,6 +152,6 @@ Because the workers use different SQLConnection instances, each worker accesses 
 
 See also
 
-“Working with local SQL databases in AIR” on page 714
+"Working with local SQL databases in AIR" on page 714
 
-[flash.concurrent package](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/concurrent/package-detail.html)
+[openfl.concurrent package](https://api.openfl.org/openfl/concurrent/index.html)

@@ -12,11 +12,16 @@ The touch event handling features of the Flash Platform include input from a sin
 
 Both touch and gesture input can be multitouch input depending on the user’s device. Haxe provides API for handling touch events, gesture events, and individually tracked touch events for multitouch input.
 
-**_Note:_ **_Listening for touch and gesture events can consume a significant amount of processing resources (equivalent to rendering several frames per second), depending on the computing device and operating system. It is often better to use mouse events when you do not actually need the extra functionality provided by touch or gestures. When you do use touch or gesture events, consider reducing the amount of graphical changes that can occur, especially when such events can be dispatched rapidly, as during a pan, rotate, or zoom operation. For example, you could stop animation within a component while the user resizes it using a zoom gesture._
+**_Note:_** _Listening for touch and gesture events can consume a significant amount of processing resources (equivalent to rendering several frames per second), depending on the computing device and operating system. It is often better to use mouse events when you do not actually need the extra functionality provided by touch or gestures. When you do use touch or gesture events, consider reducing the amount of graphical changes that can occur, especially when such events can be dispatched rapidly, as during a pan, rotate, or zoom operation. For example, you could stop animation within a component while the user resizes it using a zoom gesture._
 
 **More Help topics**
 
-[flash.ui.Multitouch](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/ui/Multitouch.html) [flash.events.TouchEvent](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/events/TouchEvent.html) [flash.events.GestureEvent](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/events/GestureEvent.html) [flash.events.TransformGestureEvent](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/events/TransformGestureEvent.html) [flash.events.GesturePhase](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/events/GesturePhase.html) [flash.events.PressAndTapGestureEvent](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/events/PressAndTapGestureEvent.html)
+[openfl.ui.Multitouch](https://api.openfl.org/openfl/ui/Multitouch.html)
+[openfl.events.TouchEvent](https://api.openfl.org/openfl/events/TouchEvent.html)
+[openfl.events.GestureEvent](https://api.openfl.org/openfl/events/GestureEvent.html)
+[openfl.events.TransformGestureEvent](https://api.openfl.org/openfl/events/TransformGestureEvent.html)
+[openfl.events.GesturePhase](https://api.openfl.org/openfl/events/GesturePhase.html)
+[openfl.events.PressAndTapGestureEvent](https://api.openfl.org/openfl/events/PressAndTapGestureEvent.html)
 
 [Paul Trani: Touch Events and Gestures on Mobile](http://www.paultrani.com/blog/index.php/2011/02/touch-events-and-gestures-on-mobile/) [Mike Jones: Virtual Game Controllers](http://blog.flashgen.com/2011/03/21/virtual-game-controllers/)
 
@@ -26,13 +31,13 @@ OpenFL 10.1 and later, Adobe AIR 2 and later
 
 When the Flash Platform is running in an environment that supports touch input, InteractiveObject instances can listen for touch events and call handlers. Generally, you handle touch, multitouch, and gesture events as you would other events in Haxe (see
 
-“Handling events” on page 125
+"Handling events" on page 125
 
 for basic information about event handling with Haxe).
 
 However, for the Flash runtime to interpret a touch or gesture, the runtime must be running in a hardware and software environment that supports touch or multitouch input. See
 
-“Discovering input types” on page 558
+"Discovering input types" on page 558
 
 for a chart comparing different touch screen types. Additionally, if the runtime is running within a container application (such as a browser), then that container passes the input to the runtime. In some cases, the current hardware and operating system environment support multitouch, but the browser containing the Flash runtime interprets the input and does not pass it on to the runtime. Or, it can simply ignore the input altogether.
 
@@ -40,7 +45,7 @@ The following diagram shows the flow of input from user to runtime:
 
 _Flow of input from user to the Flash Platform runtime_
 
-Fortunately, the Haxe API for developing touch applications includes classes, methods, and properties to determine the support for touch or multitouch input in the runtime environment. The API you use to determine support for touch input are the “discovery API” for touch event handling.
+Fortunately, the Haxe API for developing touch applications includes classes, methods, and properties to determine the support for touch or multitouch input in the runtime environment. The API you use to determine support for touch input are the "discovery API" for touch event handling.
 
 Important concepts and terms
 
@@ -72,7 +77,7 @@ Discovery
 
 The discovery API provides the ability to test the hardware and software environment at runtime. The values populated by the runtime determine the touch input available to the Flash runtime in its current context. Also, use the collection of discovery properties and methods to set your application to react to mouse events (instead of touch events in case some touch input is not supported by the environment). For more information, see
 
-“Touch support discovery”
+"Touch support discovery"
 
 on page 584
 
@@ -90,11 +95,11 @@ Haxe manages touch input events with event listeners and event handlers as it do
 
 Typically, use the discovery API to conditionally handle the events your application handles, and how they are handled. Once the application knows the runtime environment, it can call the appropriate handler or establish the correct event object when the user interacts with the application. Or, the application can indicate that specific input cannot be handled in the current environment and provide the user with an alternative or information. For more information, see
 
-“Touch event handling” on page 585
+"Touch event handling" on page 585
 
 and
 
-“Gesture event handling” on page 589
+"Gesture event handling" on page 589
 
 .
 

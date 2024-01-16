@@ -8,7 +8,7 @@ Runtimes that support the StageVideo API include:
 
 • OpenFL 10.2 and later
 
-**_Note:_ **_In OpenFL 11.4/AIR 3.4 and higher, you can use camera input with StageVideo._
+**_Note:_** _In OpenFL 11.4/AIR 3.4 and higher, you can use camera input with StageVideo._
 
 Downloadable source code and additional details for the stage video feature are available at [Getting Started with](http://www.adobe.com/go/learn_as3_usingstagevideo_en) [Stage Video](http://www.adobe.com/go/learn_as3_usingstagevideo_en).
 
@@ -16,7 +16,7 @@ For a StageVideo quick start tutorial, see [Working with Stage Video](http://www
 
 **About hardware acceleration using StageVideo**
 
-Hardware accelerated presentation—which includes video scaling, color conversion, and blitting—enhances the performance benefits of hardware accelerated decoding. On devices that offer GPU (hardware) acceleration, you can use a flash.media.StageVideo object to process video directly on the device hardware. Direct processing frees the CPU to perform other tasks while the GPU handles video. The legacy Video class, on the other hand, typically uses software presentation. Software presentation occurs in the CPU and can consume a significant share of system resources.
+Hardware accelerated presentation—which includes video scaling, color conversion, and blitting—enhances the performance benefits of hardware accelerated decoding. On devices that offer GPU (hardware) acceleration, you can use a openfl.media.StageVideo object to process video directly on the device hardware. Direct processing frees the CPU to perform other tasks while the GPU handles video. The legacy Video class, on the other hand, typically uses software presentation. Software presentation occurs in the CPU and can consume a significant share of system resources.
 
 Currently, few devices provide full GPU acceleration. However, stage video lets applications take maximum advantage of whatever hardware acceleration is available.
 
@@ -24,7 +24,7 @@ The StageVideo class does not make the Video class obsolete. Working together, t
 
 The StageVideo class imposes certain restrictions on video usage. Before implementing StageVideo, review the guidelines and make sure your application can accept them. If you accept the restrictions, use the StageVideo class whenever OpenFL detects that hardware accelerated presentation is available. See
 
-“Guidelines and limitations” on
+"Guidelines and limitations" on
 
 page 514
 
@@ -55,11 +55,11 @@ Stage video eliminates GPU-to-CPU read-back. In other words, the GPU no longer s
 
 More Help topics
 
-“Understanding video formats” on page 475
+"Understanding video formats" on page 475
 
 Guidelines and limitations
 
-When video is running in full screen mode, stage video is always available if the device supports hardware acceleration. OpenFL, however, also runs within a browser. In the browser context, the wmode setting affects stage video availability. Try to use wmode=&quot;direct&quot; at all times if you want to use stage video. Stage video is not compatible with other wmode settings when not in full screen mode. This restriction means that, at run time, stage video can vacillate unpredictably between being available and unavailable. For example, if the user exits full screen mode while stage video is running, the video context reverts to the browser. If the browser wmode parameter is not set to &quot;direct&quot;, stage video can suddenly become unavailable. OpenFL communicates playback context changes to applications through a set of events. If you implement the StageVideo API, maintain a Video object as a backup when stage video becomes unavailable.
+When video is running in full screen mode, stage video is always available if the device supports hardware acceleration. OpenFL, however, also runs within a browser. In the browser context, the wmode setting affects stage video availability. Try to use wmode="direct" at all times if you want to use stage video. Stage video is not compatible with other wmode settings when not in full screen mode. This restriction means that, at run time, stage video can vacillate unpredictably between being available and unavailable. For example, if the user exits full screen mode while stage video is running, the video context reverts to the browser. If the browser wmode parameter is not set to "direct", stage video can suddenly become unavailable. OpenFL communicates playback context changes to applications through a set of events. If you implement the StageVideo API, maintain a Video object as a backup when stage video becomes unavailable.
 
 Because of its direct relationship to hardware, stage video restricts some video features. Stage video enforces the following constraints:
 
@@ -83,7 +83,7 @@ Because of its direct relationship to hardware, stage video restricts some video
 
 • You can place the video only on full pixel boundaries.
 
-• Though GPU rendering is the best available for the given device hardware, it is not 100% “pixel identical” across devices. Slight variations occur due to driver and platform differences.
+• Though GPU rendering is the best available for the given device hardware, it is not 100% "pixel identical" across devices. Slight variations occur due to driver and platform differences.
 
 • A few devices do not support all required color spaces. For example, some devices do not support BT.709, the H.264 standard. In such cases, you can use BT.601 for fast display.
 
@@ -93,7 +93,7 @@ In most cases, these limitations do not affect video player applications. If you
 
 More Help topics
 
-“Working with full-screen mode” on page 167
+"Working with full-screen mode" on page 167
 
 ## Using the StageVideo APIs {#using-the-stagevideo-apis}
 
@@ -103,7 +103,7 @@ To use stage video, you implement a framework of event handlers that detect when
 
 On OpenFL, when you receive notification that stage video is no longer available, switch your video stream back to a Video object.
 
-**_Note:_ **_You cannot create StageVideo objects._
+**_Note:_** _You cannot create StageVideo objects._
 
 Stage.stageVideos property
 
@@ -129,9 +129,9 @@ Follow these top-level steps to implement the StageVideo feature:
 
 1.  Listen for the StageVideoAvailabilityEvent.STAGE_VIDEO_AVAILABILITY event to find out when the Stage.stageVideos vector has changed. See
 
-    “Using the
+    "Using the
 
-    StageVideoAvailabilityEvent.STAGE_VIDEO_AVAILABILITY event” on page 517
+    StageVideoAvailabilityEvent.STAGE_VIDEO_AVAILABILITY event" on page 517
 
     .
 2.  If the StageVideoAvailabilityEvent.STAGE_VIDEO_AVAILABILITY event reports that stage video is available, use the Stage.stageVideos Vector object within the event handler to access a StageVideo object.
@@ -142,14 +142,14 @@ StageVideo.attachCamera().
 1.  Play the video using NetStream.play().
 2.  Listen for the StageVideoEvent.RENDER_STATE event on the StageVideo object to determine the status of playing the video. Receipt of this event also indicates that the width and height properties of the video have been initialized or changed. See
 
-    “Using the StageVideoEvent.RENDER_STATE and VideoEvent.RENDER_STATE events” on
+    "Using the StageVideoEvent.RENDER_STATE and VideoEvent.RENDER_STATE events" on
 
     page 519
 
     .
 3.  Listen for the VideoEvent.RENDER_STATE event on the Video object. This event provides the same statuses as StageVideoEvent.RENDER_STATE, so you can also use it to determine whether GPU acceleration is available. Receipt of this event also indicates that the width and height properties of the video have been initialized or changed. See
 
-    “Using the StageVideoEvent.RENDER_STATE and VideoEvent.RENDER_STATE events” on
+    "Using the StageVideoEvent.RENDER_STATE and VideoEvent.RENDER_STATE events" on
 
     page 519
 
@@ -157,7 +157,7 @@ StageVideo.attachCamera().
 
 Initializing StageVideo event listeners
 
-Set up your StageVideoAvailabilityEvent and VideoEvent listeners during application initialization. For example, you can initialize these listeners in the flash.events.Event.ADDED_TO_STAGE event handler. This event guarantees that your application is visible on the stage:
+Set up your StageVideoAvailabilityEvent and VideoEvent listeners during application initialization. For example, you can initialize these listeners in the openfl.events.Event.ADDED_TO_STAGE event handler. This event guarantees that your application is visible on the stage:
 
 public class SimpleStageVideo extends Sprite private var nc:NetConnection;
 
@@ -213,7 +213,8 @@ If the StageVideoAvailabilityEvent.availability property is set to StageVideoAva
 
 The following code shows how to handle the StageVideoAvailabilityEvent.STAGE_VIDEO_AVAILABILITY event:
 
-private var sv:StageVideo; private var video:Video;
+private var sv:StageVideo;
+private var video:Video;
 
 private function onStageVideoState(event:StageVideoAvailabilityEvent):void
 
@@ -289,7 +290,7 @@ Reported render states include:
 
 • RENDER_STATUS_ACCELERATED
 
-Render states indicate when hardware accelerated decoding is in use, regardless of which class is currently playing video. Check the StageVideoEvent.status property to learn whether the necessary decoding is available. If this property is set to “unavailable”, the StageVideo object cannot play the video. This status requires that you immediately reattach the NetStream object to a Video object. Other statuses inform your application of the current rendering conditions.
+Render states indicate when hardware accelerated decoding is in use, regardless of which class is currently playing video. Check the StageVideoEvent.status property to learn whether the necessary decoding is available. If this property is set to "unavailable", the StageVideo object cannot play the video. This status requires that you immediately reattach the NetStream object to a Video object. Other statuses inform your application of the current rendering conditions.
 
 The following table describes the implications of all render status values for StageVideoEvent and VideoEvent objects in OpenFL:
 
@@ -324,6 +325,6 @@ currColorSpace = (event as StageVideoEvent).colorSpace;
 
 }
 
-If OpenFL cannot find a substitute for an unsupported color space, stage video uses the default color space BT.601\. For example, video streams with H.264 encoding typically use the BT.709 color space. If the device hardware does not support BT.709, the colorSpace property returns &quot;BT601&quot;. A StageVideoEvent.colorSpace value of &quot;unknown&quot; indicates that the hardware does not provide a means of querying the color space.
+If OpenFL cannot find a substitute for an unsupported color space, stage video uses the default color space BT.601\. For example, video streams with H.264 encoding typically use the BT.709 color space. If the device hardware does not support BT.709, the colorSpace property returns "BT601". A StageVideoEvent.colorSpace value of "unknown" indicates that the hardware does not provide a means of querying the color space.
 
 If your application deems the current color space unacceptable, you can choose to switch from a StageVideo object to a Video object. The Video class supports all color spaces through software compositing.

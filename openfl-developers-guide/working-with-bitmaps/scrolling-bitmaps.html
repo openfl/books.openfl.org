@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Scrolling bitmaps · GitBook</title>
+        <title>Scrolling bitmaps · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="generator" content="HonKit 5.1.4">
         
         
         
@@ -17,7 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
                 
             
                 
@@ -66,7 +65,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -955,14 +954,124 @@
             
         </li>
     
+        <li class="chapter " data-level="1.8" data-path="../working-with-sound/">
+            
+                <a href="../working-with-sound/">
+            
+                    
+                    Chapter 24: Working with sound
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../working-with-sound/basics-of-working-with-sound.html">
+            
+                <a href="../working-with-sound/basics-of-working-with-sound.html">
+            
+                    
+                    Basics of working with sound
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../working-with-sound/understanding-the-sound-architecture.html">
+            
+                <a href="../working-with-sound/understanding-the-sound-architecture.html">
+            
+                    
+                    Understanding the sound architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../working-with-sound/loading-external-sound-files.html">
+            
+                <a href="../working-with-sound/loading-external-sound-files.html">
+            
+                    
+                    Loading external sound files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../working-with-sound/working-with-sound-assets.html">
+            
+                <a href="../working-with-sound/working-with-sound-assets.html">
+            
+                    
+                    Working with sound assets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../working-with-sound/working-with-dynamically-generated-audio.html">
+            
+                <a href="../working-with-sound/working-with-dynamically-generated-audio.html">
+            
+                    
+                    Working with dynamically generated audio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../working-with-sound/playing-sounds.html">
+            
+                <a href="../working-with-sound/playing-sounds.html">
+            
+                    
+                    Playing sounds
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../working-with-sound/controlling-sound-volume-and-panning.html">
+            
+                <a href="../working-with-sound/controlling-sound-volume-and-panning.html">
+            
+                    
+                    Controlling sound volume and panning
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
     
 
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -1003,21 +1112,21 @@
                                 <h1 id="scrolling-bitmaps">Scrolling bitmaps </h1>
 <p>Imagine you have created a street mapping application where each time the user moves the map you are required to update the view (even if the map has been moved by just a few pixels).</p>
 <p>One way to create this functionality would be to re-render a new image containing the updated map view each time the user moves the map. Alternatively, you could create a large single image and use the <code>scroll()</code> method.</p>
-<p>The <code>scroll()</code> method copies an on-screen bitmap and then pastes it to a new offset location&#x2014;specified by (x, y) parameters. If a portion of the bitmap happens to reside off-stage, this gives the effect that the image has shifted. When combined with a timer function (or an <code>enterFrame</code> event), you can make the image appear to be animating or scrolling.</p>
+<p>The <code>scroll()</code> method copies an on-screen bitmap and then pastes it to a new offset location—specified by (x, y) parameters. If a portion of the bitmap happens to reside off-stage, this gives the effect that the image has shifted. When combined with a timer function (or an <code>enterFrame</code> event), you can make the image appear to be animating or scrolling.</p>
 <p>The following example takes the previous perlin noise example and generates a larger bitmap image (three-fourths of which is rendered off-stage). The <code>scroll()</code> method is then applied, along with an <code>enterFrame</code> event listener that offsets the image by one pixel in a diagonally downward direction. This method is called each time the frame is entered and as a result, the off screen portions of the image are rendered to the Stage as the image scrolls down.</p>
 <pre><code class="lang-haxe"><span class="hljs-keyword">import</span> openfl.display.Bitmap;
 <span class="hljs-keyword">import</span> openfl.display.BitmapData;
 
 ...
 
-<span class="hljs-keyword">var</span> myBitmapDataObject = <span class="hljs-keyword">new</span> BitmapData (<span class="hljs-number">1000</span>, <span class="hljs-number">1000</span>, <span class="hljs-literal">false</span>, <span class="hljs-number">0x00FF0000</span>);
+<span class="hljs-keyword">var</span> myBitmapDataObject = <span class="hljs-keyword">new</span> <span class="hljs-type">BitmapData</span> (<span class="hljs-number">1000</span>, <span class="hljs-number">1000</span>, <span class="hljs-literal">false</span>, <span class="hljs-number">0x00FF0000</span>);
 
 <span class="hljs-keyword">var</span> seed = Math.floor (Math.random () * <span class="hljs-number">100</span>);
 <span class="hljs-keyword">var</span> channels = BitmapDataChannel.GREEN | BitmapDataChannel.BLUE;
 
 myBitmapDataObject.perlinNoise (<span class="hljs-number">100</span>, <span class="hljs-number">80</span>, <span class="hljs-number">6</span>, seed, <span class="hljs-literal">false</span>, <span class="hljs-literal">true</span>, channels, <span class="hljs-literal">false</span>, <span class="hljs-literal">null</span>);
 
-<span class="hljs-keyword">var</span> myBitmap = <span class="hljs-keyword">new</span> Bitmap (myBitmapDataObject);
+<span class="hljs-keyword">var</span> myBitmap = <span class="hljs-keyword">new</span> <span class="hljs-type">Bitmap</span> (myBitmapDataObject);
 myBitmap.x = <span class="hljs-number">-750</span>;
 myBitmap.y = <span class="hljs-number">-750</span>;
 addChild (myBitmap);
@@ -1026,7 +1135,7 @@ addEventListener (Event.ENTER_FRAME, scrollBitmap);
 
 ...
 
-<span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">scrollBitmap</span> <span class="hljs-params">(event:Event)</span>:Void </span>{
+<span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">scrollBitmap</span> </span>(event:<span class="hljs-type">Event</span>):<span class="hljs-type">Void </span>{
 
     myBitmapDataObject.scroll (<span class="hljs-number">1</span>, <span class="hljs-number">1</span>);
 
@@ -1075,12 +1184,56 @@ addEventListener (Event.ENTER_FRAME, scrollBitmap);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Scrolling bitmaps","level":"1.6.6","depth":2,"next":{"title":"Chapter 6: Working with movie clips","level":"1.7","depth":1,"path":"working-with-movie-clips/README.md","ref":"working-with-movie-clips/README.md","articles":[{"title":"Working with MovieClip objects","level":"1.7.1","depth":2,"path":"working-with-movie-clips/working-with-movieclip-objects.md","ref":"working-with-movie-clips/working-with-movieclip-objects.md","articles":[]},{"title":"Controlling movie clip playback","level":"1.7.2","depth":2,"path":"working-with-movie-clips/controlling-movie-clip-playback.md","ref":"working-with-movie-clips/controlling-movie-clip-playback.md","articles":[]},{"title":"Creating MovieClip objects with Haxe","level":"1.7.3","depth":2,"path":"working-with-movie-clips/creating-movieclip-objects-with-haxe.md","ref":"working-with-movie-clips/creating-movieclip-objects-with-haxe.md","articles":[]}]},"previous":{"title":"Making textures with noise functions","level":"1.6.5","depth":2,"path":"working-with-bitmaps/making-textures-with-noise-functions.md","ref":"working-with-bitmaps/making-textures-with-noise-functions.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"working-with-bitmaps/scrolling-bitmaps.md","mtime":"2023-01-31T16:17:42.720Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-01-31T16:18:16.478Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Scrolling bitmaps","level":"1.6.6","depth":2,"next":{"title":"Chapter 6: Working with movie clips","level":"1.7","depth":1,"path":"working-with-movie-clips/README.md","ref":"working-with-movie-clips/README.md","articles":[{"title":"Working with MovieClip objects","level":"1.7.1","depth":2,"path":"working-with-movie-clips/working-with-movieclip-objects.md","ref":"working-with-movie-clips/working-with-movieclip-objects.md","articles":[]},{"title":"Controlling movie clip playback","level":"1.7.2","depth":2,"path":"working-with-movie-clips/controlling-movie-clip-playback.md","ref":"working-with-movie-clips/controlling-movie-clip-playback.md","articles":[]},{"title":"Creating MovieClip objects with Haxe","level":"1.7.3","depth":2,"path":"working-with-movie-clips/creating-movieclip-objects-with-haxe.md","ref":"working-with-movie-clips/creating-movieclip-objects-with-haxe.md","articles":[]}]},"previous":{"title":"Making textures with noise functions","level":"1.6.5","depth":2,"path":"working-with-bitmaps/making-textures-with-noise-functions.md","ref":"working-with-bitmaps/making-textures-with-noise-functions.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"working-with-bitmaps/scrolling-bitmaps.md","mtime":"2024-01-16T06:43:11.682Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-01-16T06:43:31.976Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
     
@@ -1098,10 +1251,6 @@ addEventListener (Event.ENTER_FRAME, scrollBitmap);
     
         
         <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

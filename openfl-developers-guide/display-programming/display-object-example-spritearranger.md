@@ -28,11 +28,11 @@ To get the application files for this sample, see [www.adobe.com/go/learn_progra
 | com/example/programmingas3/geometricshapes/Circle.as | A type of geometric shape that defines a circle. |
 | com/example/programmingas3/geometricshapes/EquilateralTriangle.as | A subclass of RegularPolygon that defines a triangle with all sides the same length. |
 | com/example/programmingas3/geometricshapes/Square.as | A subclass of RegularPolygon defining a rectangle with all four sides the same length. |
-| com/example/programmingas3/geometricshapes/GeometricShapeFactory.as | A class containing a “factory method” for creating shapes given a shape type and size. |
+| com/example/programmingas3/geometricshapes/GeometricShapeFactory.as | A class containing a "factory method" for creating shapes given a shape type and size. |
 
 **Defining the SpriteArranger classes**
 
-The SpriteArranger application lets the user add a variety of display objects to the on-screen “canvas.”
+The SpriteArranger application lets the user add a variety of display objects to the on-screen "canvas."
 
 The DrawingCanvas class defines a drawing area, a type of display object container, to which the user can add on- screen shapes. These on-screen shapes are instances of one of the subclasses of the GeometricSprite class.
 
@@ -78,19 +78,19 @@ The following additional methods of the DrawingCanvas class are invoked based on
 
 *   The addShape() and describeChildren() methods, which are described in
 
-    “Adding display objects to the
+    "Adding display objects to the
 
-    canvas” on page 206
+    canvas" on page 206
 
 *   The moveToBack(), moveDown(), moveToFront(), and moveUp() methods, which are described in
 
-    “Rearranging
+    "Rearranging
 
-    display object layering” on page 208
+    display object layering" on page 208
 
 *   The onMouseUp() method, which is described in
 
-    “Clicking and dragging display objects” on page 207
+    "Clicking and dragging display objects" on page 207
 
 The GeometricSprite class and its subclasses
 
@@ -100,7 +100,7 @@ Each display object the user can add to the canvas is an instance of one of the 
 *   SquareSprite
 *   TriangleSprite
 
-The GeometricSprite class extends the flash.display.Sprite class:
+The GeometricSprite class extends the openfl.display.Sprite class:
 
 public class GeometricSprite extends Sprite
 
@@ -110,21 +110,21 @@ this.size = size; this.lineColor = lColor; this.fillColor = fColor;
 
 The geometricShape property of the GeometricSprite class defines an IGeometricShape interface, which defines the mathematical properties, but not the visual properties, of the shape. The classes that implement the IGeometricShape interface are defined in the GeometricShapes sample application described in _Learning Haxe_.
 
-The GeometricSprite class defines the drawShape() method, which is further refined in the override definitions in each subclass of GeometricSprite. For more information, see the “Adding display objects to the canvas” section, which follows.
+The GeometricSprite class defines the drawShape() method, which is further refined in the override definitions in each subclass of GeometricSprite. For more information, see the "Adding display objects to the canvas" section, which follows.
 
 The GeometricSprite class also provides the following methods:
 
 *   The onMouseDown() and onMouseUp() methods, which are described in
 
-    “Clicking and dragging display objects”
+    "Clicking and dragging display objects"
 
     on page 207
 
 *   The showSelected() and hideSelected() methods, which are described in
 
-    “Clicking and dragging display
+    "Clicking and dragging display
 
-    objects” on page 207
+    objects" on page 207
 
 ## Adding display objects to the canvas {#adding-display-objects-to-the-canvas}
 
@@ -138,15 +138,15 @@ var newShape:GeometricSprite; switch (shapeName)
 
 {
 
-case &quot;Triangle&quot;:
+case "Triangle":
 
 newShape = new TriangleSprite(len); break;
 
-case &quot;Square&quot;:
+case "Square":
 
 newShape = new SquareSprite(len); break;
 
-case &quot;Circle&quot;:
+case "Circle":
 
 newShape = new CircleSprite(len); break;
 
@@ -174,7 +174,7 @@ public override function toString():String
 
 {
 
-return this.shapeType + &quot; of size &quot; + this.size + &quot; at &quot; + this.x + &quot;, &quot; + this.y;
+return this.shapeType + " of size " + this.size + " at " + this.x + ", " + this.y;
 
 }
 
@@ -184,7 +184,7 @@ Circle of size 50 at 0, 0
 
 The describeChildren() method of the DrawingCanvas class loops through the canvas’s child list, using the numChildren property (inherited from the DisplayObjectContainer class) to set the limit of the for loop. It generates a string listing each child, as follows:
 
-var desc:String = &quot;&quot;; var child:DisplayObject;
+var desc:String = ""; var child:DisplayObject;
 
 for (var i:int=0; i &lt; this.numChildren; i++)
 
@@ -192,7 +192,7 @@ for (var i:int=0; i &lt; this.numChildren; i++)
 
 child = this.getChildAt(i);
 
-desc += i + &quot;: &quot; + child + &#039;\n&#039;;
+desc += i + ": " + child + '\n';
 
 }
 

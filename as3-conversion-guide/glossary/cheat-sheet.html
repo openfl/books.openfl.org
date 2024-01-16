@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Cheat Sheet · GitBook</title>
+        <title>Cheat Sheet · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="generator" content="HonKit 5.1.4">
         
         
         
@@ -17,7 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
                 
             
                 
@@ -66,7 +65,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -314,8 +313,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -365,17 +364,17 @@ Array
 Vector.&lt;String&gt;
 </code></pre>
 <h3 id="haxe">Haxe</h3>
-<pre><code class="lang-haxe">Bool
-Int
-Float
-Dynamic
-Void
-Array&lt;Dynamic&gt;
-Array&lt;String&gt;
+<pre><code class="lang-haxe"><span class="hljs-keyword">Bool</span>
+<span class="hljs-keyword">Int</span>
+<span class="hljs-keyword">Float</span>
+<span class="hljs-keyword">Dynamic</span>
+<span class="hljs-keyword">Void</span>
+<span class="hljs-keyword">Array</span>&lt;<span class="hljs-keyword">Dynamic</span>&gt;
+<span class="hljs-keyword">Array</span>&lt;<span class="hljs-keyword">String</span>&gt;
 </code></pre>
 <h2 id="package-declarations">Package Declarations</h2>
 <h3 id="actionscript-3">ActionScript 3</h3>
-<pre><code class="lang-ActionScript"><span class="hljs-class"><span class="hljs-keyword">package</span> <span class="hljs-title">com</span>.<span class="hljs-title">example</span>.<span class="hljs-title">myapplication</span> {</span>
+<pre><code class="lang-ActionScript"><span class="hljs-keyword">package</span> <span class="hljs-title class_">com.example.myapplication</span> {
 
 }
 </code></pre>
@@ -384,9 +383,9 @@ Array&lt;String&gt;
 </code></pre>
 <h2 id="defining-a-class">Defining a Class</h2>
 <h3 id="actionscript-3">ActionScript 3</h3>
-<pre><code class="lang-ActionScript"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyClass</span> </span>{
+<pre><code class="lang-ActionScript"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyClass</span> {
 
-   <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">MyClass</span> <span class="hljs-params">()</span> </span>{
+   <span class="hljs-keyword">public</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">MyClass</span> <span class="hljs-params">()</span> {
 
 
    }
@@ -394,9 +393,9 @@ Array&lt;String&gt;
 }
 </code></pre>
 <h3 id="haxe">Haxe</h3>
-<pre><code class="lang-haxe"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyClass</span> </span>{
+<pre><code class="lang-haxe"><span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">MyClass</span> </span>{
 
-   <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span> <span class="hljs-params">()</span> </span>{
+   <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span> </span>() {
 
 
    }
@@ -448,11 +447,11 @@ Array&lt;String&gt;
 <h3 id="haxe">Haxe</h3>
 <pre><code class="lang-haxe"><span class="hljs-keyword">switch</span> (value) {
 
-   <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:
-      <span class="hljs-keyword">trace</span> (<span class="hljs-string">&quot;Equal to 1&quot;</span>);
+   <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:<span class="hljs-type"></span>
+      <span class="hljs-built_in">trace</span> (<span class="hljs-string">&quot;Equal to 1&quot;</span>);
 
-   <span class="hljs-keyword">default</span>:
-      <span class="hljs-keyword">trace</span> (<span class="hljs-string">&quot;Not equal to 1&quot;</span>);
+   <span class="hljs-keyword">default</span>:<span class="hljs-type"></span>
+      <span class="hljs-built_in">trace</span> (<span class="hljs-string">&quot;Not equal to 1&quot;</span>);
 
 }
 </code></pre>
@@ -478,7 +477,7 @@ Array&lt;String&gt;
 <span class="hljs-keyword">var</span> toInteger:int = int (<span class="hljs-number">10.1</span>);
 </code></pre>
 <h3 id="haxe">Haxe</h3>
-<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> car:Car = <span class="hljs-keyword">cast</span> vehicle;
+<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> car:<span class="hljs-type">Car </span>= <span class="hljs-keyword">cast</span> vehicle;
 
 <span class="hljs-comment">// or for a safe cast:</span>
 
@@ -494,14 +493,14 @@ Array&lt;String&gt;
 
 }
 
-<span class="hljs-meta"><span class="hljs-meta-keyword">import</span> flash.utils.getDefinitionByName;</span>
-<span class="hljs-meta"><span class="hljs-meta-keyword">import</span> flash.utils.getQualifiedClassName;</span>
+<span class="hljs-meta"><span class="hljs-keyword">import</span> flash.utils.getDefinitionByName;</span>
+<span class="hljs-meta"><span class="hljs-keyword">import</span> flash.utils.getQualifiedClassName;</span>
 
 name = getQualifiedClassName (vehicle);
 type = Class (getDefinitionByName (name);
 </code></pre>
 <h3 id="haxe">Haxe</h3>
-<pre><code class="lang-haxe"><span class="hljs-keyword">if</span> (Std.is (vehicle, Car)) {
+<pre><code class="lang-haxe"><span class="hljs-keyword">if</span> (Std.<span class="hljs-keyword">is</span> (vehicle, Car)) {
 
 }
 
@@ -539,14 +538,14 @@ trace (table.hasOwnProperty (<span class="hljs-string">&quot;key&quot;</span>));
 <span class="hljs-keyword">delete</span> table[<span class="hljs-string">&quot;key&quot;</span>];
 </code></pre>
 <h3 id="haxe">Haxe</h3>
-<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> table = <span class="hljs-keyword">new</span> Map&lt;String,Int&gt; ();
-table.set (<span class="hljs-string">&quot;key&quot;</span>, <span class="hljs-number">100</span>);
+<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> table = <span class="hljs-keyword">new</span> <span class="hljs-type">Map</span>&lt;<span class="hljs-keyword">String</span>,<span class="hljs-keyword">Int</span>&gt; ();
+table.<span class="hljs-keyword">set</span> (<span class="hljs-string">&quot;key&quot;</span>, <span class="hljs-number">100</span>);
 
-<span class="hljs-keyword">trace</span> (table.exists (<span class="hljs-string">&quot;key&quot;</span>));
+<span class="hljs-built_in">trace</span> (table.exists (<span class="hljs-string">&quot;key&quot;</span>));
 
 <span class="hljs-keyword">for</span> (key <span class="hljs-keyword">in</span> table.keys ()) {
 
-   <span class="hljs-keyword">trace</span> (key + <span class="hljs-string">&quot; = &quot;</span> + table.get (key));
+   <span class="hljs-built_in">trace</span> (key + <span class="hljs-string">&quot; = &quot;</span> + table.<span class="hljs-keyword">get</span> (key));
 
 }
 
@@ -554,14 +553,14 @@ table.remove (<span class="hljs-string">&quot;key&quot;</span>);
 </code></pre>
 <h2 id="rest-parameters">Rest Parameters</h2>
 <h3 id="actionscript-3">ActionScript 3</h3>
-<pre><code class="lang-ActionScript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">test</span> <span class="hljs-params">(<span class="hljs-rest_arg">...params</span>)</span>:void </span>{
+<pre><code class="lang-ActionScript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">test</span> <span class="hljs-params">(<span class="hljs-rest_arg">...params</span>)</span>:void {
 
 }
 
 test (<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>);
 </code></pre>
 <h3 id="haxe">Haxe</h3>
-<pre><code class="lang-haxe"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">test</span> <span class="hljs-params">(params:Array&lt;Dynamic&gt;)</span> </span>{
+<pre><code class="lang-haxe"><span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">test</span> </span>(params:<span class="hljs-type">Array</span>&lt;<span class="hljs-keyword">Dynamic</span>&gt;) {
 
 }
 
@@ -576,7 +575,7 @@ bar.apply (<span class="hljs-keyword">this</span>, [ <span class="hljs-string">&
 <h3 id="haxe">Haxe</h3>
 <pre><code class="lang-haxe"><span class="hljs-keyword">var</span> foo = Reflect.field (object, <span class="hljs-string">&quot;foo&quot;</span>);
 
-Reflect.callMethod (<span class="hljs-keyword">this</span>, bar, [ <span class="hljs-string">&quot;hi&quot;</span> ]);
+Reflect.callMethod (<span class="hljs-built_in">this</span>, bar, [ <span class="hljs-string">&quot;hi&quot;</span> ]);
 </code></pre>
 <h2 id="constants">Constants</h2>
 <h3 id="actionscript-3">ActionScript 3</h3>
@@ -587,45 +586,45 @@ Reflect.callMethod (<span class="hljs-keyword">this</span>, bar, [ <span class="
 </code></pre>
 <h2 id="function-types">Function Types</h2>
 <h3 id="actionscript-3">ActionScript 3</h3>
-<pre><code class="lang-ActionScript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">hello</span> <span class="hljs-params">(msg:String)</span>:void </span>{
+<pre><code class="lang-ActionScript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">hello</span> <span class="hljs-params">(msg:String)</span>:void {
 
 }
 
 <span class="hljs-keyword">var</span> type:Function = hello;
 </code></pre>
 <h3 id="haxe">Haxe</h3>
-<pre><code class="lang-haxe"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">hello</span> <span class="hljs-params">(msg:String)</span>:Void </span>{
+<pre><code class="lang-haxe"><span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">hello</span> </span>(msg:<span class="hljs-type">String</span>):<span class="hljs-type">Void </span>{
 
 }
 
-<span class="hljs-keyword">var</span> type:String-&gt;Void = hello;
+<span class="hljs-keyword">var</span> type:<span class="hljs-type">String-&gt;Void </span>= hello;
 
 <span class="hljs-comment">// can also use Dynamic</span>
 </code></pre>
 <h2 id="getters-and-setters">Getters and Setters</h2>
 <h3 id="actionscript-3">ActionScript 3</h3>
-<pre><code class="lang-ActionScript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">get</span> <span class="hljs-title">x</span> <span class="hljs-params">()</span>:Number </span>{
+<pre><code class="lang-ActionScript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">get</span> <span class="hljs-title function_">x</span> <span class="hljs-params">()</span>:Number {
 
    <span class="hljs-keyword">return</span> _x;
 
 }
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">set</span> <span class="hljs-title">x</span> <span class="hljs-params">(value:Number)</span>:void </span>{
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">set</span> <span class="hljs-title function_">x</span> <span class="hljs-params">(value:Number)</span>:void {
 
    _x = value;
 
 }
 </code></pre>
 <h3 id="haxe">Haxe</h3>
-<pre><code class="lang-haxe"><span class="hljs-keyword">public</span> <span class="hljs-keyword">var</span> x (get, set):Float;
+<pre><code class="lang-haxe"><span class="hljs-keyword">public</span> <span class="hljs-keyword">var</span> x (<span class="hljs-keyword">get</span>, <span class="hljs-keyword">set</span>):<span class="hljs-type">Float</span>;
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">get_x</span> <span class="hljs-params">()</span>:Float </span>{
+<span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">get_x</span> </span>():<span class="hljs-type">Float </span>{
 
    <span class="hljs-keyword">return</span> _x;
 
 }
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">set_x</span> <span class="hljs-params">(value:Float)</span>:Float </span>{
+<span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">set_x</span> </span>(value:<span class="hljs-type">Float</span>):<span class="hljs-type">Float </span>{
 
    <span class="hljs-keyword">return</span> _x = value;
 
@@ -633,14 +632,14 @@ Reflect.callMethod (<span class="hljs-keyword">this</span>, bar, [ <span class="
 </code></pre>
 <h2 id="read-only-properties">Read-Only Properties</h2>
 <h3 id="actionscript-3">ActionScript 3</h3>
-<pre><code class="lang-ActionScript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">get</span> <span class="hljs-title">x</span> <span class="hljs-params">()</span>:Float </span>{
+<pre><code class="lang-ActionScript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">get</span> <span class="hljs-title function_">x</span> <span class="hljs-params">()</span>:Float {
 
    <span class="hljs-keyword">return</span> _x;
 
 }
 </code></pre>
 <h3 id="haxe">Haxe</h3>
-<pre><code class="lang-haxe"><span class="hljs-keyword">public</span> <span class="hljs-keyword">var</span> x (<span class="hljs-keyword">default</span>, <span class="hljs-literal">null</span>):Float;
+<pre><code class="lang-haxe"><span class="hljs-keyword">public</span> <span class="hljs-keyword">var</span> x (<span class="hljs-keyword">default</span>, <span class="hljs-literal">null</span>):<span class="hljs-type">Float</span>;
 
 <span class="hljs-comment">// null allows private access</span>
 <span class="hljs-comment">// `never` would restrict all access</span>
@@ -692,12 +691,56 @@ Reflect.callMethod (<span class="hljs-keyword">this</span>, bar, [ <span class="
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Cheat Sheet","level":"1.5.2","depth":2,"next":{"title":"UI Components","level":"1.6","depth":1,"path":"ui-components-fl-packages.md","ref":"ui-components-fl-packages.md","articles":[]},"previous":{"title":"Error Messages","level":"1.5.1","depth":2,"path":"glossary/error-messages.md","ref":"glossary/error-messages.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"glossary/cheat-sheet.md","mtime":"2023-01-31T16:17:43.816Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-01-31T16:18:24.232Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Cheat Sheet","level":"1.5.2","depth":2,"next":{"title":"UI Components","level":"1.6","depth":1,"path":"ui-components-fl-packages.md","ref":"ui-components-fl-packages.md","articles":[]},"previous":{"title":"Error Messages","level":"1.5.1","depth":2,"path":"glossary/error-messages.md","ref":"glossary/error-messages.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"glossary/cheat-sheet.md","mtime":"2024-01-16T06:43:12.774Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-01-16T06:43:41.353Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
     
@@ -715,10 +758,6 @@ Reflect.callMethod (<span class="hljs-keyword">this</span>, bar, [ <span class="
     
         
         <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

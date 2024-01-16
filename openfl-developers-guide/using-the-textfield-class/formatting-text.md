@@ -8,11 +8,11 @@ You can use the TextFormat class to set a number of different text display prope
 
 The following example applies one TextFormat object to an entire TextField object and applies a second TextFormat object to a range of text within that TextField object:
 
-var tf:TextField = new TextField(); tf.text = &quot;Hello Hello&quot;;
+var tf:TextField = new TextField(); tf.text = "Hello Hello";
 
 var format1:TextFormat = new TextFormat(); format1.color = 0xFF0000;
 
-var format2:TextFormat = new TextFormat(); format2.font = &quot;Courier&quot;;
+var format2:TextFormat = new TextFormat(); format2.font = "Courier";
 
 tf.setTextFormat(format1); var startRange:uint = 6;
 
@@ -28,21 +28,21 @@ Text fields can contain either plain text or HTML-formatted text. Plain text is 
 
 You can use CSS style declarations to define text styles that you can apply to many different text fields. CSS style declarations can be created in your application code or loaded in at run time from an external CSS file.
 
-The flash.text.StyleSheet class handles CSS styles. The StyleSheet class recognizes a limited set of CSS properties. For a detailed list of the style properties that the StyleSheet class supports, see the flash.textStylesheet entry in the Haxe Reference.
+The openfl.text.StyleSheet class handles CSS styles. The StyleSheet class recognizes a limited set of CSS properties. For a detailed list of the style properties that the StyleSheet class supports, see the [openfl.text.StyleSheet entry in the OpenFL API Reference](https://api.openfl.org/openfl/text/StyleSheet.html).
 
 As the following example shows, you can create CSS in your code and apply those styles to HTML text by using a StyleSheet object:
 
 var style:StyleSheet = new StyleSheet();
 
-var styleObj:Object = new Object(); styleObj.fontSize = &quot;bold&quot;; styleObj.color = &quot;#FF0000&quot;; style.setStyle(&quot;.darkRed&quot;, styleObj);
+var styleObj:Object = new Object(); styleObj.fontSize = "bold"; styleObj.color = "#FF0000"; style.setStyle(".darkRed", styleObj);
 
 var tf:TextField = new TextField(); tf.styleSheet = style;
 
-tf.htmlText = &quot;&lt;span class = &#039;darkRed&#039;&gt;Red&lt;/span&gt; apple&quot;;
+tf.htmlText = "&lt;span class = 'darkRed'&gt;Red&lt;/span&gt; apple";
 
 addChild(tf);
 
-After creating a StyleSheet object, the example code creates a simple object to hold a set of style declaration properties. Then it calls the StyleSheet.setStyle() method, which adds the new style to the style sheet with the name “.darkred”. Next, it applies the style sheet formatting by assigning the StyleSheet object to the TextField styleSheet property.
+After creating a StyleSheet object, the example code creates a simple object to hold a set of style declaration properties. Then it calls the StyleSheet.setStyle() method, which adds the new style to the style sheet with the name ".darkred". Next, it applies the style sheet formatting by assigning the StyleSheet object to the TextField styleSheet property.
 
 For CSS styles to take effect, the style sheet should be applied to the TextField object before the htmlText property is set.
 
@@ -89,9 +89,14 @@ package
 
 {
 
-import flash.display.Sprite; import flash.events.Event; import flash.net.URLLoader; import flash.net.URLRequest; import flash.text.StyleSheet; import flash.text.TextField;
+import openfl.display.Sprite;
+import openfl.events.Event;
+import openfl.net.URLLoader;
+import openfl.net.URLRequest;
+import openfl.text.StyleSheet;
+import openfl.text.TextField;
 
-import flash.text.TextFieldAutoSize;
+import openfl.text.TextFieldAutoSize;
 
 public class CSSFormattingExample extends Sprite
 
@@ -99,7 +104,7 @@ public class CSSFormattingExample extends Sprite
 
 var loader:URLLoader; var field:TextField;
 
-var exampleText:String = &quot;&lt;h1&gt;This is a headline&lt;/h1&gt;&quot; + &quot;&lt;p&gt;This is a line of text. &lt;span class=&#039;bluetext&#039;&gt;&quot; + &quot;This line of text is colored blue.&lt;/span&gt;&lt;/p&gt;&quot;;
+var exampleText:String = "&lt;h1&gt;This is a headline&lt;/h1&gt;" + "&lt;p&gt;This is a line of text. &lt;span class='bluetext'&gt;" + "This line of text is colored blue.&lt;/span&gt;&lt;/p&gt;";
 
 public function CSSFormattingExample():void
 
@@ -111,7 +116,7 @@ field.autoSize = TextFieldAutoSize.LEFT; field.wordWrap = true;
 
 addChild(field);
 
-var req:URLRequest = new URLRequest(&quot;example.css&quot;);
+var req:URLRequest = new URLRequest("example.css");
 
 loader = new URLLoader(); loader.addEventListener(Event.COMPLETE, onCSSFileLoaded); loader.load(req);
 
@@ -137,13 +142,13 @@ method to transfer the style declarations to the StyleSheet object.
 
 ## Formatting ranges of text within a text field {#formatting-ranges-of-text-within-a-text-field}
 
-A useful method of the flash.text.TextField class is the setTextFormat() method. Using setTextFormat(), you can assign specific properties to the contents of a part of a text field to respond to user input, such as forms that need to remind users that certain entries are required or to change the emphasis of a subsection of a passage of text within a text field as a user selects parts of the text.
+A useful method of the openfl.text.TextField class is the setTextFormat() method. Using setTextFormat(), you can assign specific properties to the contents of a part of a text field to respond to user input, such as forms that need to remind users that certain entries are required or to change the emphasis of a subsection of a passage of text within a text field as a user selects parts of the text.
 
 The following example uses TextField.setTextFormat() on a range of characters to change the appearance of part of the content of myTextField when the user clicks the text field:
 
 var myTextField:TextField = new TextField();
 
-myTextField.text = &quot;No matter where you click on this text field the TEXT IN ALL CAPS changes format.&quot;;
+myTextField.text = "No matter where you click on this text field the TEXT IN ALL CAPS changes format.";
 
 myTextField.autoSize = TextFieldAutoSize.LEFT; addChild(myTextField); addEventListener(MouseEvent.CLICK, changeText);
 

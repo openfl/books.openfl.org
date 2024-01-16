@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Drawing lines and curves · GitBook</title>
+        <title>Drawing lines and curves · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="generator" content="HonKit 5.1.4">
         
         
         
@@ -17,7 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
                 
             
                 
@@ -66,7 +65,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -955,14 +954,124 @@
             
         </li>
     
+        <li class="chapter " data-level="1.8" data-path="../working-with-sound/">
+            
+                <a href="../working-with-sound/">
+            
+                    
+                    Chapter 24: Working with sound
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../working-with-sound/basics-of-working-with-sound.html">
+            
+                <a href="../working-with-sound/basics-of-working-with-sound.html">
+            
+                    
+                    Basics of working with sound
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../working-with-sound/understanding-the-sound-architecture.html">
+            
+                <a href="../working-with-sound/understanding-the-sound-architecture.html">
+            
+                    
+                    Understanding the sound architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../working-with-sound/loading-external-sound-files.html">
+            
+                <a href="../working-with-sound/loading-external-sound-files.html">
+            
+                    
+                    Loading external sound files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../working-with-sound/working-with-sound-assets.html">
+            
+                <a href="../working-with-sound/working-with-sound-assets.html">
+            
+                    
+                    Working with sound assets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../working-with-sound/working-with-dynamically-generated-audio.html">
+            
+                <a href="../working-with-sound/working-with-dynamically-generated-audio.html">
+            
+                    
+                    Working with dynamically generated audio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../working-with-sound/playing-sounds.html">
+            
+                <a href="../working-with-sound/playing-sounds.html">
+            
+                    
+                    Playing sounds
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../working-with-sound/controlling-sound-volume-and-panning.html">
+            
+                <a href="../working-with-sound/controlling-sound-volume-and-panning.html">
+            
+                    
+                    Controlling sound volume and panning
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
     
 
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -1009,16 +1118,16 @@
 <li>If necessary, finish creating a fill</li>
 </ul>
 <h2 id="defining-line-and-fill-styles">Defining line and fill styles</h2>
-<p>To draw with the <code>graphics</code> property of a Shape, Sprite, or MovieClip instance, you must first define the style (line size and color, fill color) to use when drawing. Just like when you use the drawing tools in Adobe&#xAE; Flash&#xAE; Professional or another drawing application, when you&#x2019;re using Haxe code to draw you can draw with or without a stroke, and with or without a fill color. You specify the appearance of the stroke using the <code>lineStyle()</code> or <code>lineGradientStyle()</code> method. To create a solid line, use the <code>lineStyle()</code> method. When calling this method, the most common values you&#x2019;ll specify are the first three parameters: <code>lineThickness</code>, <code>color</code>, and <code>alpha</code>. For example, this line of code tells the Shape named <code>myShape</code> to draw lines that are 2 pixels thick, red (0x990000), and 75% opaque:</p>
+<p>To draw with the <code>graphics</code> property of a Shape, Sprite, or MovieClip instance, you must first define the style (line size and color, fill color) to use when drawing. Just like when you use the drawing tools in Adobe® Flash® Professional or another drawing application, when you’re using Haxe code to draw you can draw with or without a stroke, and with or without a fill color. You specify the appearance of the stroke using the <code>lineStyle()</code> or <code>lineGradientStyle()</code> method. To create a solid line, use the <code>lineStyle()</code> method. When calling this method, the most common values you’ll specify are the first three parameters: <code>lineThickness</code>, <code>color</code>, and <code>alpha</code>. For example, this line of code tells the Shape named <code>myShape</code> to draw lines that are 2 pixels thick, red (0x990000), and 75% opaque:</p>
 <pre><code class="lang-haxe">myShape.graphics.lineStyle (<span class="hljs-number">2</span>, <span class="hljs-number">0x990000</span>, <span class="hljs-number">.75</span>);
 </code></pre>
-<p>The default value for the <code>alpha</code> parameter is 1.0 (100%), so you can leave that parameter off if you want a completely opaque line. The <code>lineStyle()</code> method also accepts two additional parameters for pixel hinting and scale mode; for more information about using those parameters see the description of the <code>Graphics.lineStyle()</code> method in the <a href="http://api.openfl.org/openfl/display/Graphics.html#lineStyle(" target="_blank">API Reference</a>).</p>
+<p>The default value for the <code>alpha</code> parameter is 1.0 (100%), so you can leave that parameter off if you want a completely opaque line. The <code>lineStyle()</code> method also accepts two additional parameters for pixel hinting and scale mode; for more information about using those parameters see the description of the <code>Graphics.lineStyle()</code> method in the <a href="http://api.openfl.org/openfl/display/Graphics.html#lineStyle" target="_blank">API Reference</a>.</p>
 <p>To create a gradient line, use the <code>lineGradientStyle()</code> method. This method is described in <a href="creating-gradient-lines-and-fills.html">Creating gradient lines and fills</a>.</p>
-<p>If you want to create a filled shape, you call the <code>beginFill()</code>, <code>beginGradientFill()</code>, <code>beginBitmapFill()</code>, or <code>beginShaderFill()</code> methods before starting the drawing. The most basic of these, the <code>beginFill()</code> method, accepts two parameters: the fill color, and (optionally) an alpha value for the fill color. For example, if you want to draw a shape with a solid green fill, you would use the following code (assuming you&#x2019;re drawing on an object named <code>myShape</code>):</p>
+<p>If you want to create a filled shape, you call the <code>beginFill()</code>, <code>beginGradientFill()</code>, <code>beginBitmapFill()</code>, or <code>beginShaderFill()</code> methods before starting the drawing. The most basic of these, the <code>beginFill()</code> method, accepts two parameters: the fill color, and (optionally) an alpha value for the fill color. For example, if you want to draw a shape with a solid green fill, you would use the following code (assuming you’re drawing on an object named <code>myShape</code>):</p>
 <pre><code class="lang-haxe">myShape.graphics.beginFill (<span class="hljs-number">0x00FF00</span>);
 </code></pre>
 <p>Calling any fill method implicitly ends any previous fill before starting a new one. Calling any method that specifies a stroke style replaces the previous stroke, but does not alter a previously specified fill, and vice versa.</p>
-<p>Once you have specified the line style and fill properties, the next step is to indicate the starting point for your drawing. The Graphics instance has a drawing point, like the tip of a pen on a piece of paper. Wherever the drawing point is located, that is where the next drawing action will begin. Initially a Graphics object begins with its drawing point at the point 0, 0 in the coordinate space of the object on which it&#x2019;s drawing. To start the drawing at a different point, you can first call the <code>moveTo()</code> method before calling one of the drawing methods. This is analogous to lifting the pen tip off of the paper and moving it to a new position.</p>
+<p>Once you have specified the line style and fill properties, the next step is to indicate the starting point for your drawing. The Graphics instance has a drawing point, like the tip of a pen on a piece of paper. Wherever the drawing point is located, that is where the next drawing action will begin. Initially a Graphics object begins with its drawing point at the point 0, 0 in the coordinate space of the object on which it’s drawing. To start the drawing at a different point, you can first call the <code>moveTo()</code> method before calling one of the drawing methods. This is analogous to lifting the pen tip off of the paper and moving it to a new position.</p>
 <p>With the drawing point in place you draw using a series of calls to the drawing methods <code>lineTo()</code> (for drawing straight lines) and <code>curveTo()</code> (for drawing curved lines).</p>
 <p><em>While you are drawing, you can call the <code>moveTo()</code> method at any time to move the drawing point to a new position without drawing.</em></p>
 <p>While drawing, if you have specified a fill color, you can close off the fill by calling the <code>endFill()</code> method. If you have not drawn a closed shape (in other words, if at the time you call <code>endFill()</code> the drawing point is not at the starting point of the shape), when you call the <code>endFill()</code> method OpenFL automatically closes the shape by drawing a straight line from the current drawing point to the location specified in the most recent <code>moveTo()</code> call. If you have started a fill and not called <code>endFill()</code>, calling <code>beginFill()</code> (or one of the other fill methods) closes the current fill and starts the new one.</p>
@@ -1029,7 +1138,7 @@ myShape.graphics.lineTo (<span class="hljs-number">200</span>, <span class="hljs
 </code></pre>
 <p>The following example draws red and green triangles with a height of 100 pixels:</p>
 <pre><code class="lang-haxe"><span class="hljs-keyword">var</span> triangleHeight = <span class="hljs-number">100</span>;
-<span class="hljs-keyword">var</span> triangle = <span class="hljs-keyword">new</span> Shape ();
+<span class="hljs-keyword">var</span> triangle = <span class="hljs-keyword">new</span> <span class="hljs-type">Shape</span> ();
 
 <span class="hljs-comment">// red triangle, starting at point 0, 0</span>
 triangle.graphics.beginFill (<span class="hljs-number">0xFF0000</span>);
@@ -1044,16 +1153,16 @@ triangle.graphics.moveTo (<span class="hljs-number">200</span> + triangleHeight 
 triangle.graphics.lineTo (<span class="hljs-number">200</span> + triangleHeight, triangleHeight);
 triangle.graphics.lineTo (<span class="hljs-number">200</span>, triangleHeight);
 triangle.graphics.lineTo (<span class="hljs-number">200</span> + triangleHeight / <span class="hljs-number">2</span>, <span class="hljs-number">0</span>);
-<span class="hljs-keyword">this</span>.addChild (triangle);
+<span class="hljs-built_in">this</span>.addChild (triangle);
 </code></pre>
 <h2 id="drawing-curves">Drawing curves </h2>
-<p>The <code>curveTo()</code> method draws a quadratic B&#xE9;zier curve. This draws an arc that connects two points (called anchor points) while bending toward a third point (called the control point). The Graphics object uses the current drawing position as the first anchor point. When you call the <code>curveTo()</code> method, you pass four parameters: the x and y coordinates of the control point, followed by the x and y coordinates of the second anchor point. For example, the following code draws a curve starting at point 100, 100 and ending at point 200, 200. Because the control point is at point 175, 125, this creates a curve that moves to the right and then downward:</p>
+<p>The <code>curveTo()</code> method draws a quadratic Bézier curve. This draws an arc that connects two points (called anchor points) while bending toward a third point (called the control point). The Graphics object uses the current drawing position as the first anchor point. When you call the <code>curveTo()</code> method, you pass four parameters: the x and y coordinates of the control point, followed by the x and y coordinates of the second anchor point. For example, the following code draws a curve starting at point 100, 100 and ending at point 200, 200. Because the control point is at point 175, 125, this creates a curve that moves to the right and then downward:</p>
 <pre><code class="lang-haxe">myShape.graphics.moveTo (<span class="hljs-number">100</span>, <span class="hljs-number">100</span>);
 myShape.graphics.curveTo (<span class="hljs-number">175</span>, <span class="hljs-number">125</span>, <span class="hljs-number">200</span>, <span class="hljs-number">200</span>);
 </code></pre>
-<p>The following example draws red and green circular objects with a width and height of 100 pixels. Note that due to the nature of the quadratic B&#xE9;zier equation, these are not perfect circles:</p>
+<p>The following example draws red and green circular objects with a width and height of 100 pixels. Note that due to the nature of the quadratic Bézier equation, these are not perfect circles:</p>
 <pre><code class="lang-haxe"><span class="hljs-keyword">var</span> size = <span class="hljs-number">100</span>;
-<span class="hljs-keyword">var</span> roundObject = <span class="hljs-keyword">new</span> Shape ();
+<span class="hljs-keyword">var</span> roundObject = <span class="hljs-keyword">new</span> <span class="hljs-type">Shape</span> ();
 
 <span class="hljs-comment">// red circular shape</span>
 roundObject.graphics.beginFill (<span class="hljs-number">0xFF0000</span>);
@@ -1068,7 +1177,7 @@ roundObject.graphics.beginFill (<span class="hljs-number">0x00FF00</span>);
 roundObject.graphics.moveTo (<span class="hljs-number">200</span> + size / <span class="hljs-number">2</span>, <span class="hljs-number">0</span>);
 roundObject.graphics.curveTo (<span class="hljs-number">200</span> + size, <span class="hljs-number">0</span>, <span class="hljs-number">200</span> + size, size / <span class="hljs-number">2</span>); roundObject.graphics.curveTo (<span class="hljs-number">200</span> + size, size, <span class="hljs-number">200</span> + size / <span class="hljs-number">2</span>, size); roundObject.graphics.curveTo (<span class="hljs-number">200</span>, size, <span class="hljs-number">200</span>, size / <span class="hljs-number">2</span>);
 roundObject.graphics.curveTo (<span class="hljs-number">200</span>, <span class="hljs-number">0</span>, <span class="hljs-number">200</span> + size / <span class="hljs-number">2</span>, <span class="hljs-number">0</span>); 
-<span class="hljs-keyword">this</span>.addChild (roundObject);
+<span class="hljs-built_in">this</span>.addChild (roundObject);
 </code></pre>
 
                                 
@@ -1113,12 +1222,56 @@ roundObject.graphics.curveTo (<span class="hljs-number">200</span>, <span class=
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Drawing lines and curves","level":"1.5.3","depth":2,"next":{"title":"Drawing shapes using built-in methods","level":"1.5.4","depth":2,"path":"using-the-drawing-api/drawing-shapes-using-built-in-methods.md","ref":"using-the-drawing-api/drawing-shapes-using-built-in-methods.md","articles":[]},"previous":{"title":"Understanding the Graphics class","level":"1.5.2","depth":2,"path":"using-the-drawing-api/understanding-the-graphics-class.md","ref":"using-the-drawing-api/understanding-the-graphics-class.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"using-the-drawing-api/drawing-lines-and-curves.md","mtime":"2023-01-31T16:17:42.716Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-01-31T16:18:16.478Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Drawing lines and curves","level":"1.5.3","depth":2,"next":{"title":"Drawing shapes using built-in methods","level":"1.5.4","depth":2,"path":"using-the-drawing-api/drawing-shapes-using-built-in-methods.md","ref":"using-the-drawing-api/drawing-shapes-using-built-in-methods.md","articles":[]},"previous":{"title":"Understanding the Graphics class","level":"1.5.2","depth":2,"path":"using-the-drawing-api/understanding-the-graphics-class.md","ref":"using-the-drawing-api/understanding-the-graphics-class.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"using-the-drawing-api/drawing-lines-and-curves.md","mtime":"2024-01-16T06:43:11.682Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-01-16T06:43:31.976Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
     
@@ -1136,10 +1289,6 @@ roundObject.graphics.curveTo (<span class="hljs-number">200</span>, <span class=
     
         
         <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

@@ -2,11 +2,11 @@
 
 OpenFL 10.1 and later, Adobe AIR 2 and later
 
-Handle gesture events in the same way as basic touch events. You can listen for a series of gesture events defined by the event type constants in the [TransformGestureEvent](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/events/TransformGestureEvent.html) class, the [GestureEvent](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/events/GestureEvent.html) class and the [PressAndTapGestureEvent](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/events/PressAndTapGestureEvent.html) class.
+Handle gesture events in the same way as basic touch events. You can listen for a series of gesture events defined by the event type constants in the [TransformGestureEvent](https://api.openfl.org/openfl/events/TransformGestureEvent.html) class, the [GestureEvent](https://api.openfl.org/openfl/events/GestureEvent.html) class and the [PressAndTapGestureEvent](https://api.openfl.org/openfl/events/PressAndTapGestureEvent.html) class.
 
 To handle a gesture touch event:
 
-1.  Set your application to handle gesture input by setting the flash.ui.Multitouch.inputMode property to
+1.  Set your application to handle gesture input by setting the openfl.ui.Multitouch.inputMode property to
 
 MultitouchInputMode.GESTURE.
 
@@ -24,7 +24,7 @@ mySprite.graphics.beginFill(0x336699); mySprite.graphics.drawRect(0,0,40,40); ad
 
 mySprite.addEventListener(TransformGestureEvent.GESTURE_SWIPE, swipehandler); function swipehandler(evt:TransformGestureEvent): void {
 
-myTextField.text = &quot;I&#039;ve been swiped&quot;; myTextField.y = 50; addChild(myTextField);
+myTextField.text = "I've been swiped"; myTextField.y = 50; addChild(myTextField);
 
 }
 
@@ -40,7 +40,7 @@ mySprite.graphics.beginFill(0x336699); mySprite.graphics.drawRect(0,0,40,40); ad
 
 mySprite.addEventListener(GestureEvent.GESTURE_TWO_FINGER_TAP, taphandler); function taphandler(evt:GestureEvent): void {
 
-myTextField.text = &quot;I&#039;ve been two-finger tapped&quot;; myTextField.y = 50;
+myTextField.text = "I've been two-finger tapped"; myTextField.y = 50;
 
 addChild(myTextField);
 
@@ -58,15 +58,15 @@ mySprite.graphics.beginFill(0x336699); mySprite.graphics.drawRect(0,0,40,40); ad
 
 mySprite.addEventListener(PressAndTapGestureEvent.GESTURE_PRESS_AND_TAP, taphandler); function taphandler(evt:PressAndTapGestureEvent): void {
 
-myTextField.text = &quot;I&#039;ve been press-and-tapped&quot;; myTextField.y = 50;
+myTextField.text = "I've been press-and-tapped"; myTextField.y = 50;
 
 addChild(myTextField);
 
 }
 
-**_Note:_ **_Not all GestureEvent, TransformGestureEvent, and PressAndTapGestureEvent event types are supported in all runtime environments. For example, not all touch-enabled devices are capable or detecting a multi-finger swipe. So, the InteractiveObject gestureSwipe events are not supported on those devices. Try testing for specific event support to ensure your application works, and see_
+**_Note:_** _Not all GestureEvent, TransformGestureEvent, and PressAndTapGestureEvent event types are supported in all runtime environments. For example, not all touch-enabled devices are capable or detecting a multi-finger swipe. So, the InteractiveObject gestureSwipe events are not supported on those devices. Try testing for specific event support to ensure your application works, and see_
 
-_“Troubleshooting” on page 593_
+_"Troubleshooting" on page 593_
 
 _for more information._
 
@@ -96,9 +96,9 @@ function rothandler(evt:TransformGestureEvent): void { evt.target.parent.rotatio
 
 }
 
-**_Note:_ **_Not all TransformGestureEvent properties are supported in all runtime environments. For example, not all touch- enabled devices are capable or detecting the rotation of a gesture on the screen. So, the TransformGestureEvent.rotation property is not supported on those devices. Try testing for specific property support to ensure your application works, and see_
+**_Note:_** _Not all TransformGestureEvent properties are supported in all runtime environments. For example, not all touch- enabled devices are capable or detecting the rotation of a gesture on the screen. So, the TransformGestureEvent.rotation property is not supported on those devices. Try testing for specific property support to ensure your application works, and see_
 
-_“Troubleshooting” on page 593_
+_"Troubleshooting" on page 593_
 
 _for more information._
 
@@ -116,17 +116,17 @@ addChild(mySprite); addChild(myTextField);
 
 function onPan(evt:TransformGestureEvent):void { evt.target.localX++;
 
-if (evt.phase==GesturePhase.BEGIN) { myTextField.text = &quot;Begin&quot;; evt.target.scaleX *= 1.5;
+if (evt.phase==GesturePhase.BEGIN) { myTextField.text = "Begin"; evt.target.scaleX *= 1.5;
 
 evt.target.scaleY *= 1.5;
 
 }
 
-if (evt.phase==GesturePhase.UPDATE) { myTextField.text = &quot;Update&quot;; evt.target.alpha = 0.5;
+if (evt.phase==GesturePhase.UPDATE) { myTextField.text = "Update"; evt.target.alpha = 0.5;
 
 }
 
-if (evt.phase==GesturePhase.END) { myTextField.text = &quot;End&quot;; evt.target.width = 40;
+if (evt.phase==GesturePhase.END) { myTextField.text = "End"; evt.target.width = 40;
 
 evt.target.height = 40;
 
@@ -136,9 +136,9 @@ evt.target.alpha = 1;
 
 }
 
-**_Note:_ **_The frequency of the update phase depends on the runtime’s environment. Some operating system and hardware combinations do not relay updates at all._
+**_Note:_** _The frequency of the update phase depends on the runtime’s environment. Some operating system and hardware combinations do not relay updates at all._
 
-Gesture phase is “all” for simple gesture events
+Gesture phase is "all" for simple gesture events
 
 Some gesture event objects do not track individual phases of the gesture event, and instead populate the event object’s phase property with the value all. The simple gestures swipe and two-finger tap do not track the event by multiple phases. The phase property of the event object for an InteractiveObject listening for the gestureSwipe or gestureTwoFingerTap events is always all once the event is dispatched:
 
@@ -150,10 +150,10 @@ mySprite.graphics.drawRect(0, 0, 40, 40); var myTextField = new TextField(); myT
 
 addChild(mySprite); addChild(myTextField);
 
-function onSwipe(swipeEvt:TransformGestureEvent):void { myTextField.text = swipeEvt.phase // Output is &quot;all&quot;
+function onSwipe(swipeEvt:TransformGestureEvent):void { myTextField.text = swipeEvt.phase // Output is "all"
 
 }
 
-function onTwoTap(tapEvt:GestureEvent):void { myTextField.text = tapEvt.phase // Output is &quot;all&quot;
+function onTwoTap(tapEvt:GestureEvent):void { myTextField.text = tapEvt.phase // Output is "all"
 
 }

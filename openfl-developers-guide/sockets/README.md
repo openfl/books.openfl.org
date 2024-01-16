@@ -1,6 +1,6 @@
 # Chapter 43: Sockets {#chapter-43-sockets}
 
-A socket is a type of network connection established between two computer processes. Typically, the processes are running on two different computers attached to the same Internet Protocol (IP) network. However, the connected processes can be running on the same computer using the special “local host” IP address.
+A socket is a type of network connection established between two computer processes. Typically, the processes are running on two different computers attached to the same Internet Protocol (IP) network. However, the connected processes can be running on the same computer using the special "local host" IP address.
 
 Adobe OpenFL supports client-side Transport Control Protocol (TCP) sockets. A OpenFL application can connect to another process acting as a socket server, but cannot accept incoming connection requests from other processes. In other words, a OpenFL application can connect to a TCP server, but cannot serve as one.
 
@@ -10,13 +10,13 @@ Adobe AIR adds several additional classes for socket-based network programming. 
 
 **More Help topics**
 
-[flash.net package](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/package-detail.html)
+[openfl.net package](https://api.openfl.org/openfl/net/index.html)
 
-“Connecting to sockets” on page 1068
+"Connecting to sockets" on page 1068
 
 **TCP sockets**
 
-The Transmission Control Protocol (TCP) provides a way to exchange messages over a persistent network connection. TCP guarantees that any messages sent arrive in the correct order (barring major network problems). TCP connections require a “client” and a “server.” OpenFL can create client sockets. Adobe AIR can, additionally, create server sockets.
+The Transmission Control Protocol (TCP) provides a way to exchange messages over a persistent network connection. TCP guarantees that any messages sent arrive in the correct order (barring major network problems). TCP connections require a "client" and a "server." OpenFL can create client sockets. Adobe AIR can, additionally, create server sockets.
 
 The following Haxe APIs provide TCP connections:
 
@@ -33,9 +33,9 @@ A binary socket connection is similar to an XML socket except that the client an
 
 The Socket class enables you to make socket connections and to read and write raw binary data. The Socket class is useful for interoperating with servers that use binary protocols. By using binary socket connections, you can write code that interacts with several different Internet protocols, such as POP3, SMTP, IMAP, and NNTP. This interaction, in turn, enables your applications to connect to mail and news servers.
 
-OpenFL can interface with a server by using the binary protocol of that server directly. Some servers use the big- endian byte order, and some use the little-endian byte order. Most servers on the Internet use the big-endian byte order because “network byte order” is big-endian. The little-endian byte order is popular because the Intel® x86 architecture uses it. You should use the endian byte order that matches the byte order of the server that is sending or receiving data. All operations that are performed by the IDataInput and IDataOutput interfaces, and the classes that implement those interfaces (ByteArray, Socket, and URLStream), are encoded by default in big-endian format; that is, with the most significant byte first. This default byte order was chosen to match Java and the official network byte order. To change whether big-endian or little-endian byte order is used, you can set the endian property to Endian.BIG_ENDIAN or Endian.LITTLE_ENDIAN.
+OpenFL can interface with a server by using the binary protocol of that server directly. Some servers use the big- endian byte order, and some use the little-endian byte order. Most servers on the Internet use the big-endian byte order because "network byte order" is big-endian. The little-endian byte order is popular because the Intel® x86 architecture uses it. You should use the endian byte order that matches the byte order of the server that is sending or receiving data. All operations that are performed by the IDataInput and IDataOutput interfaces, and the classes that implement those interfaces (ByteArray, Socket, and URLStream), are encoded by default in big-endian format; that is, with the most significant byte first. This default byte order was chosen to match Java and the official network byte order. To change whether big-endian or little-endian byte order is used, you can set the endian property to Endian.BIG_ENDIAN or Endian.LITTLE_ENDIAN.
 
-_The Socket class inherits all the methods defined by the IDataInput and IDataOutput interfaces (located in the flash.utils package). Those methods must be used to write to and read from the Socket._
+_The Socket class inherits all the methods defined by the IDataInput and IDataOutput interfaces (located in the openfl.utils package). Those methods must be used to write to and read from the Socket._
 
 For more information, see:
 
@@ -63,7 +63,7 @@ The CertificateStatus class defines string constants that represent the possible
 *   Revoked—the issuing certificate authority has revoked the certificate.
 *   Trusted—the certificate is valid and trusted. A SecureSocket object can only connect to a server that uses a valid, trusted certificate.
 *   Unknown—the SecureSocket object has not validated the certificate yet. The serverCertificateStatus property has this status value before you call connect() and before either a connect or an ioError event is dispatched.
-*   Untrusted signers—the certificate does not “chain” to a trusted root certificate in the trust store of the client computer.
+*   Untrusted signers—the certificate does not "chain" to a trusted root certificate in the trust store of the client computer.
 
 Communicating with a SecureSocket object requires a server that uses a secure protocol and has a valid, trusted certificate. In other respects, using a SecureSocket object is the same as using a Socket object.
 
@@ -105,11 +105,12 @@ The following code lists the Haxe in the main application file:
 
 import com.example.programmingas3.socket.Telnet;
 
-private var telnetClient:Telnet; private function connect():void
+private var telnetClient:Telnet;
+private function connect():void
 
 {
 
-telnetClient = new Telnet(serverName.text, int(portNumber.text), output); console.title = &quot;Connecting to &quot; + serverName.text + &quot;:&quot; + portNumber.text; console.enabled = true;
+telnetClient = new Telnet(serverName.text, int(portNumber.text), output); console.title = "Connecting to " + serverName.text + ":" + portNumber.text; console.enabled = true;
 
 }
 
@@ -117,11 +118,11 @@ private function sendCommand():void
 
 {
 
-var ba:ByteArray = new ByteArray(); ba.writeMultiByte(command.text + &quot;\n&quot;, &quot;UTF-8&quot;); telnetClient.writeBytesToSocket(ba); command.text = &quot;&quot;;
+var ba:ByteArray = new ByteArray(); ba.writeMultiByte(command.text + "\n", "UTF-8"); telnetClient.writeBytesToSocket(ba); command.text = "";
 
 }
 
-The first line of code imports the Telnet class from the custom com.example.programmingas.socket package. The second line of code declares an instance of the Telnet class, telnetClient, that is initialized later by the connect() method. Next, the connect() method is declared and initializes the telnetClient variable declared earlier. This method passes the user-specified telnet server name, telnet server port, and a reference to a TextArea component on the display list, which is used to display the text responses from the socket server. The final two lines of the connect() method set the title property for the Panel and enable the Panel component, which allows the user to send data to the remote server. The final method in the main application file, sendCommand(), is used to send the user&#039;s commands to the remote server as a ByteArray object.
+The first line of code imports the Telnet class from the custom com.example.programmingas.socket package. The second line of code declares an instance of the Telnet class, telnetClient, that is initialized later by the connect() method. Next, the connect() method is declared and initializes the telnetClient variable declared earlier. This method passes the user-specified telnet server name, telnet server port, and a reference to a TextArea component on the display list, which is used to display the text responses from the socket server. The final two lines of the connect() method set the title property for the Panel and enable the Panel component, which allows the user to send data to the remote server. The final method in the main application file, sendCommand(), is used to send the user's commands to the remote server as a ByteArray object.
 
 Telnet class overview
 
@@ -129,7 +130,11 @@ Telnet class overview
 
 The Telnet class is responsible for connecting to the remote Telnet server and sending/receiving data. The Telnet class declares the following private variables:
 
-private var serverURL:String; private var portNumber:int; private var socket:Socket; private var ta:TextArea; private var state:int = 0;
+private var serverURL:String;
+private var portNumber:int;
+private var socket:Socket;
+private var ta:TextArea;
+private var state:int = 0;
 
 The first variable, serverURL, contains the user-specified server address to connect to.
 
@@ -143,7 +148,7 @@ The fourth variable, ta, is a reference to a TextArea component instance on the 
 
 The final variable, state, is a numeric value that is used to determine which options your Telnet client supports.
 
-As you saw before, the Telnet class&#039;s constructor function is called by the connect() method in the main application file.
+As you saw before, the Telnet class's constructor function is called by the connect() method in the main application file.
 
 The Telnet constructor takes three parameters: server, port, and output. The server and port parameters specify the server name and port number where the Telnet server is running. The final parameter, output, is a reference to a TextArea component instance on the Stage where server output is displayed to users.
 
@@ -155,11 +160,11 @@ serverURL = server; portNumber = port; ta = output;
 
 socket = new Socket(); socket.addEventListener(Event.CONNECT, connectHandler); socket.addEventListener(Event.CLOSE, closeHandler); socket.addEventListener(ErrorEvent.ERROR, errorHandler);
 
-socket.addEventListener(IOErrorEvent.IO_ERROR, ioErrorHandler); socket.addEventListener(ProgressEvent.SOCKET_DATA, dataHandler); Security.loadPolicyFile(&quot;http://&quot; + serverURL + &quot;/crossdomain.xml&quot;); try
+socket.addEventListener(IOErrorEvent.IO_ERROR, ioErrorHandler); socket.addEventListener(ProgressEvent.SOCKET_DATA, dataHandler); Security.loadPolicyFile("http://" + serverURL + "/crossdomain.xml"); try
 
 {
 
-msg(&quot;Trying to connect to &quot; + serverURL + &quot;:&quot; + portNumber + &quot;\n&quot;); socket.connect(serverURL, portNumber);
+msg("Trying to connect to " + serverURL + ":" + portNumber + "\n"); socket.connect(serverURL, portNumber);
 
 }
 
@@ -167,7 +172,7 @@ catch (error:Error)
 
 {
 
-msg(error.message + &quot;\n&quot;); socket.close();
+msg(error.message + "\n"); socket.close();
 
 }
 
@@ -227,13 +232,13 @@ An XML socket lets you create a connection to a remote server that remains open 
 
 In OpenFL, and in Adobe AIR content outside the application sandbox, XML socket connections require the presence of a socket policy file on the target server. For more information, see
 
-“Website controls (policy files)” on
+"Website controls (policy files)" on
 
 page 1051
 
 and
 
-“Connecting to sockets” on page 1068
+"Connecting to sockets" on page 1068
 
 .
 
@@ -244,11 +249,11 @@ The following restrictions apply to how and where content in OpenFL or in an AIR
 *   For content outside of the application security sandbox, the XMLSocket.connect() method can connect only to TCP port numbers greater than or equal to 1024\. One consequence of this restriction is that the server daemons that communicate with the XMLSocket object must also be assigned to port numbers greater than or equal to 1024\. Port numbers below 1024 are often used by system services such as FTP (21), Telnet (23), SMTP (25), HTTP (80), and POP3 (110), so XMLSocket objects are barred from these ports for security reasons. The port number restriction limits the possibility that these resources will be inappropriately accessed and abused.
 *   For content outside of the application security sandbox, the XMLSocket.connect() method can connect only to computers in the same domain where the content resides. (This restriction is identical to the security rules for URLLoader.load().) To connect to a server daemon running in a domain other than the one where the content resides, you can create a cross-domain policy file on the server that allows access from specific domains. For details on cross-domain policy files, see
 
-    “AIR security” on page 1076
+    "AIR security" on page 1076
 
     .
 
-**_Note:_ **_Setting up a server to communicate with the XMLSocket object can be challenging. If your application does not require real-time interactivity, use the URLLoader class instead of the XMLSocket class._
+**_Note:_** _Setting up a server to communicate with the XMLSocket object can be challenging. If your application does not require real-time interactivity, use the URLLoader class instead of the XMLSocket class._
 
 You can use the XMLSocket.connect() and XMLSocket.send() methods of the XMLSocket class to transfer XML to and from a server over a socket connection. The XMLSocket.connect() method establishes a socket connection with a web server port. The XMLSocket.send() method passes an XML object to the server specified in the socket connection.
 
@@ -315,7 +320,7 @@ private SimpleServer(int port)
 
 {
 
-System.out.println(&quot;&gt;&gt; Starting SimpleServer&quot;); try
+System.out.println("&gt;&gt; Starting SimpleServer"); try
 
 {
 
@@ -323,7 +328,7 @@ socket = new ServerSocket(port); incoming = socket.accept();
 
 readerIn = new BufferedReader(new InputStreamReader(incoming.getInputStream())); printOut = new PrintStream(incoming.getOutputStream());
 
-printOut.println(&quot;Enter EXIT to exit.\r&quot;); out(&quot;Enter EXIT to exit.\r&quot;);
+printOut.println("Enter EXIT to exit.\r"); out("Enter EXIT to exit.\r");
 
 boolean done = false; while (!done)
 
@@ -341,9 +346,9 @@ else
 
 {
 
-out(&quot;Echo: &quot; + str + &quot;\r&quot;);
+out("Echo: " + str + "\r");
 
-if(str.trim().equals(&quot;EXIT&quot;))
+if(str.trim().equals("EXIT"))
 
 {
 
@@ -387,15 +392,16 @@ _If you’re unable to start the server because the files are not located within
 
 To connect to the XMLSocket from your application, you need to create a new instance of the XMLSocket class, and call the XMLSocket.connect() method while passing a host name and port number, as follows:
 
-var xmlsock:XMLSocket = new XMLSocket(); xmlsock.connect(&quot;127.0.0.1&quot;, 8080);
+var xmlsock:XMLSocket = new XMLSocket(); xmlsock.connect("127.0.0.1", 8080);
 
-Whenever you receive data from the server, the data event (flash.events.DataEvent.DATA) is dispatched:
+Whenever you receive data from the server, the data event (openfl.events.DataEvent.DATA) is dispatched:
 
-xmlsock.addEventListener(DataEvent.DATA, onData); private function onData(event:DataEvent):void
+xmlsock.addEventListener(DataEvent.DATA, onData);
+private function onData(event:DataEvent):void
 
 {
 
-trace(&quot;[&quot; + event.type + &quot;] &quot; + event.data);
+trace("[" + event.type + "] " + event.data);
 
 }
 
@@ -422,19 +428,22 @@ To listen for incoming socket connections:
 3.  Call the listen() method
 4.  Respond to the connect event, which provides a Socket object for each incoming connection The ServerSocket object continues to listen for new connections until you call the close() method.
 
-The following code example illustrates how to create a socket server application. The example listens for incoming connections on port 8087\. When a connection is received, the example sends a message (the string “Connected.”) to the client socket. Thereafter, the server echoes any messages received back to the client.
+The following code example illustrates how to create a socket server application. The example listens for incoming connections on port 8087\. When a connection is received, the example sends a message (the string "Connected.") to the client socket. Thereafter, the server echoes any messages received back to the client.
 
 package
 
 {
 
-import flash.display.Sprite; import flash.events.Event;
+import openfl.display.Sprite;
+import openfl.events.Event;
 
-import flash.events.IOErrorEvent; import flash.events.ProgressEvent;
+import openfl.events.IOErrorEvent;
+import openfl.events.ProgressEvent;
 
-import flash.events.ServerSocketConnectEvent; import flash.net.ServerSocket;
+import openfl.events.ServerSocketConnectEvent;
+import openfl.net.ServerSocket;
 
-import flash.net.Socket;
+import openfl.net.Socket;
 
 public class ServerSocketExample extends Sprite
 
@@ -456,13 +465,15 @@ try
 
 // Add the event listener
 
-serverSocket.addEventListener( Event.CONNECT, connectHandler ); serverSocket.addEventListener( Event.CLOSE, onClose );
+serverSocket.addEventListener( Event.CONNECT, connectHandler );
+serverSocket.addEventListener( Event.CLOSE, onClose );
 
-// Bind to local port 8087 serverSocket.bind( 8087, &quot;127.0.0.1&quot; );
+// Bind to local port 8087
+serverSocket.bind( 8087, "127.0.0.1" );
 
 // Listen for connections serverSocket.listen();
 
-trace( &quot;Listening on &quot; + serverSocket.localPort );
+trace( "Listening on " + serverSocket.localPort );
 
 }
 
@@ -480,13 +491,19 @@ public function connectHandler(event:ServerSocketConnectEvent):void
 
 {
 
-//The socket is provided by the event object var socket:Socket = event.socket as Socket; clientSockets.push( socket );
+//The socket is provided by the event object
+var socket:Socket = event.socket as Socket;
+clientSockets.push( socket );
 
-socket.addEventListener( ProgressEvent.SOCKET_DATA, socketDataHandler); socket.addEventListener( Event.CLOSE, onClientClose ); socket.addEventListener( IOErrorEvent.IO_ERROR, onIOError );
+socket.addEventListener( ProgressEvent.SOCKET_DATA, socketDataHandler);
+socket.addEventListener( Event.CLOSE, onClientClose );
+socket.addEventListener( IOErrorEvent.IO_ERROR, onIOError );
 
-//Send a connect message socket.writeUTFBytes(&quot;Connected.&quot;); socket.flush();
+//Send a connect message
+socket.writeUTFBytes("Connected.");
+socket.flush();
 
-trace( &quot;Sending connect message&quot; );
+trace( "Sending connect message" );
 
 }
 
@@ -498,11 +515,15 @@ var socket:Socket = event.target as Socket
 
 //Read the message from the socket
 
-var message:String = socket.readUTFBytes( socket.bytesAvailable ); trace( &quot;Received: &quot; + message);
+var message:String = socket.readUTFBytes( socket.bytesAvailable );
+trace( "Received: " + message);
 
-// Echo the received message back to the sender message = &quot;Echo -- &quot; + message; socket.writeUTFBytes( message ); socket.flush();
+// Echo the received message back to the sender
+message = "Echo -- " + message;
+socket.writeUTFBytes( message );
+socket.flush();
 
-trace( &quot;Sending: &quot; + message );
+trace( "Sending: " + message );
 
 }
 
@@ -510,7 +531,7 @@ private function onClientClose( event:Event ):void
 
 {
 
-trace( &quot;Connection to client closed.&quot; );
+trace( "Connection to client closed." );
 
 //Should also remove from clientSockets array...
 
@@ -520,7 +541,7 @@ private function onIOError( errorEvent:IOErrorEvent ):void
 
 {
 
-trace( &quot;IOError: &quot; + errorEvent.text );
+trace( "IOError: " + errorEvent.text );
 
 }
 
@@ -528,7 +549,7 @@ private function onClose( event:Event ):void
 
 {
 
-trace( &quot;Server socket closed by OS.&quot; );
+trace( "Server socket closed by OS." );
 
 }
 

@@ -1,6 +1,6 @@
 # Chapter 47: Using the external API {#chapter-47-using-the-external-api}
 
-The Haxe external API ([flash.external.ExternalInterface](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/external/ExternalInterface.html)) enables straightforward communication between Haxe and the container application within which Adobe OpenFL is running. Use the ExternalInterface API to create interaction between a SWF document and JavaScript in an HTML page.
+The Haxe external API ([openfl.external.ExternalInterface](https://api.openfl.org/openfl/external/ExternalInterface.html)) enables straightforward communication between Haxe and the container application within which Adobe OpenFL is running. Use the ExternalInterface API to create interaction between a SWF document and JavaScript in an HTML page.
 
 You can use the external API to interact with a container application, pass data between Haxe and JavaScript in an HTML page.
 
@@ -11,7 +11,7 @@ Some common external API tasks are:
 *   Calling Haxe code from a web page
 *   Creating a proxy to simplify calling Haxe code from a web page
 
-**_Note:_ **_This discussion of the external interface only covers communication between Haxe in a project and the container application that includes a reference to the OpenFL or instance in which the project is loaded. Any other use of OpenFL within an application is outside the scope of this documentation. OpenFL is designed to be used as a browser plug-in or as a projector (standalone application). Other usage scenarios may have limited support._
+**_Note:_** _This discussion of the external interface only covers communication between Haxe in a project and the container application that includes a reference to the OpenFL or instance in which the project is loaded. Any other use of OpenFL within an application is outside the scope of this documentation. OpenFL is designed to be used as a browser plug-in or as a projector (standalone application). Other usage scenarios may have limited support._
 
 Using the external API in AIR
 
@@ -35,7 +35,7 @@ The following reference list contains important terms relevant to this feature:
 
 **Projector** An executable file that includes SWF content and an embedded version of OpenFL. You can create a projector file using Flash Professional or the standalone OpenFL. Projectors are commonly used to distribute projects by CD-ROM or in similar situations where download size is not an issue and the SWF author wants to be certain the user will be able to run the project, regardless of whether OpenFL is installed on the user’s computer.
 
-**Proxy** A go-between application or code that calls code in one application (the “external application”) on behalf of another application (the “calling application”), and returns values to the calling application. A proxy can be used for various reasons, including:
+**Proxy** A go-between application or code that calls code in one application (the "external application") on behalf of another application (the "calling application"), and returns values to the calling application. A proxy can be used for various reasons, including:
 
 *   To simplify the process of making external function calls by converting native function calls in the calling application into the format understood by the external application.
 *   To work around security or other restrictions that prevent the caller from communicating directly with the external application.
@@ -81,6 +81,6 @@ To test an example of Haxe-to-ActiveX container communication:
 
 For full examples of using the external API to communicate with an HTML page, see the following topic:
 
-*   “External API example: Communicating between Haxe and JavaScript in a web browser” on page 849
+*   "External API example: Communicating between Haxe and JavaScript in a web browser" on page 849
 
-Those examples include the full code, including Haxe and container error-checking code, which you should use when writing code using the external API. For another full example using the external API, see the class example for the ExternalInterface class in the Haxe Reference.
+Those examples include the full code, including Haxe and container error-checking code, which you should use when writing code using the external API. For another full example using the external API, see the class example for the [ExternalInterface class in the OpenFL API Reference](https://api.openfl.org/openfl/external/ExternalInterface.html).

@@ -16,7 +16,7 @@ if (ExternalInterface.available)
 
 }
 
-**_Note:_ **_The ExternalInterface.available property reports whether the current container is a type that supports ExternalInterface connectivity. It doesn’t tell you if JavaScript is enabled in the current browser._
+**_Note:_** _The ExternalInterface.available property reports whether the current container is a type that supports ExternalInterface connectivity. It doesn’t tell you if JavaScript is enabled in the current browser._
 
 The ExternalInterface.objectID property allows you to determine the unique identifier of the OpenFL instance (specifically, the id attribute of the object tag in Internet Explorer or the name attribute of the embed tag in browsers using the NPRuntime interface). This unique ID represents the current SWF document in the browser, and can be used to make reference to the SWF document—for example, when calling a JavaScript function in a container HTML page. When the OpenFL container is not a web browser, this property is null.
 
@@ -24,19 +24,19 @@ The ExternalInterface.objectID property allows you to determine the unique ident
 
 The ExternalInterface.call() method executes code in the container application. It requires at least one parameter, a string containing the name of the function to be called in the container application. Any additional parameters passed to the ExternalInterface.call() method are passed along to the container as parameters of the function call.
 
-// calls the external function &quot;addNumbers&quot;
+// calls the external function "addNumbers"
 
-// passing two parameters, and assigning that function&#039;s result
+// passing two parameters, and assigning that function's result
 
-// to the variable &quot;result&quot; var param1:uint = 3;
+// to the variable "result" var param1:uint = 3;
 
 var param2:uint = 7;
 
-var result:uint = ExternalInterface.call(&quot;addNumbers&quot;, param1, param2);
+var result:uint = ExternalInterface.call("addNumbers", param1, param2);
 
 If the container is an HTML page, this method invokes the JavaScript function with the specified name, which must be defined in a script element in the containing HTML page. The return value of the JavaScript function is passed back to Haxe.
 
-&lt;script language=&quot;JavaScript&quot;&gt;
+&lt;script language="JavaScript"&gt;
 
 // adds two numbers, and sends the result back to Haxe function addNumbers(num1, num2)
 
@@ -50,7 +50,7 @@ return (num1 + num2);
 
 If the container is some other ActiveX container, this method causes the OpenFL ActiveX control to dispatch its FlashCall event. The specified function name and any parameters are serialized into an XML string by OpenFL. The container can access that information in the request property of the event object and use it to determine how to execute its own code. To return a value to Haxe, the container code calls the ActiveX object’s SetReturnValue() method, passing the result (serialized into an XML string) as a parameter of that method. For more information about the XML format used for this communication, see
 
-“The external API’s XML format” on
+"The external API’s XML format" on
 
 page 848
 
@@ -68,37 +68,37 @@ function callMe(name:String):String
 
 {
 
-return &quot;busy signal&quot;;
+return "busy signal";
 
 }
 
-ExternalInterface.addCallback(&quot;myFunction&quot;, callMe);
+ExternalInterface.addCallback("myFunction", callMe);
 
 The addCallback() method takes two parameters. The first, a function name as a String, is the name by which the function will be known to the container. The second parameter is the actual Haxe function that will be executed when the container calls the defined function name. Because these names are distinct, you can specify a function name that will be used by the container, even if the actual Haxe function has a different name. This is especially useful if the function name is not known—for example, if an anonymous function is specified, or if the function to be called is determined at run time.
 
 Once an Haxe function has been registered with the ExternalInterface class, the container can actually call the function. How this is done varies according to the type of container. For example, in JavaScript code in a web browser, the Haxe function is called using the registered function name as though it’s a method of the OpenFL browser object (that is, a method of the JavaScript object representing the object or embed tag). In other words, parameters are passed and a result is returned as though a local function is being called.
 
-&lt;script language=&quot;JavaScript&quot;&gt;
+&lt;script language="JavaScript"&gt;
 
-// callResult gets the value &quot;busy signal&quot;
+// callResult gets the value "busy signal"
 
-var callResult = flashObject.myFunction(&quot;my name&quot;);
+var callResult = flashObject.myFunction("my name");
 
 &lt;/script&gt;
 
 ...
 
-&lt;object id=&quot;flashObject&quot;...&gt;
+&lt;object id="flashObject"...&gt;
 
 ...
 
-&lt;embed name=&quot;flashObject&quot;.../&gt;
+&lt;embed name="flashObject".../&gt;
 
 &lt;/object&gt;
 
 Alternatively, when calling an Haxe function in a project running in a desktop application, the registered function name and any parameters must be serialized into an XML-formatted string. Then the call is actually performed by calling the CallFunction() method of the ActiveX control with the XML string as a parameter. For more information about the XML format used for this communication, see
 
-“The external API’s XML format” on
+"The external API’s XML format" on
 
 page 848
 
@@ -110,7 +110,7 @@ In either case, the return value of the Haxe function is passed back to the cont
 
 Communication between Haxe and an application hosting the Shockwave Flash ActiveX control uses a specific XML format to encode function calls and values. There are two parts to the XML format used by the external API. One format is used to represent function calls. Another format is used to represent individual values; this format is used for parameters in functions as well as function return values. The XML format for function calls is used for calls to and from Haxe. For a function call from Haxe, OpenFL passes the XML to the container; for a call from the container, OpenFL expects the container application to pass it an XML string in this format. The following XML fragment shows an example XML-formatted function call:
 
-&lt;invoke name=&quot;functionName&quot; returntype=&quot;xml&quot;&gt;
+&lt;invoke name="functionName" returntype="xml"&gt;
 
 &lt;arguments&gt;
 
@@ -138,6 +138,6 @@ Individual values, including function parameters and function return values, use
 | Object | A dictionary with string keys and object values, such as a HashTable with string keys | &lt;object&gt; | The property node defines individual properties, and the id attribute is the property name (a string). |
 | Other built-in or custom classes |  | &lt;null/&gt; or | Haxe encodes other objects as null or as an empty object. In either case any property values are lost. |
 
-**_Note:_ **_By way of example, this table shows equivalent C# classes in addition to Haxe classes; however, the external API can be used to communicate with any programming language or run time that supports ActiveX controls, and is not limited to C# applications._
+**_Note:_** _By way of example, this table shows equivalent C# classes in addition to Haxe classes; however, the external API can be used to communicate with any programming language or run time that supports ActiveX controls, and is not limited to C# applications._
 
 When you are building your own applications using the external API with an ActiveX container application, you’ll probably find it convenient to write a proxy that will perform the task of converting native function calls to the serialized XML format. For an example of a proxy class written in C#, see Inside the ExternalInterfaceProxy class.

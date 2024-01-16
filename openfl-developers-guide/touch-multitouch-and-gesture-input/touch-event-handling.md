@@ -2,13 +2,13 @@
 
 OpenFL 10.1 and later, Adobe AIR 2 and later
 
-Basic touch events are handled the same way you handle other events, like mouse events, in Haxe. You can listen for a series of touch events defined by the event type constants in the [TouchEvent class](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/ui/Multitouch.html).
+Basic touch events are handled the same way you handle other events, like mouse events, in Haxe. You can listen for a series of touch events defined by the event type constants in the [TouchEvent class](https://api.openfl.org/openfl/ui/Multitouch.html).
 
-**_Note:_ **_For multiple touch point input (such as touching a device with more than one finger), the first point of contact dispatches a mouse event and a touch event._
+**_Note:_** _For multiple touch point input (such as touching a device with more than one finger), the first point of contact dispatches a mouse event and a touch event._
 
 To handle a basic touch event:
 
-1.  Set your application to handle touch events by setting the flash.ui.Multitouch.inputMode property to
+1.  Set your application to handle touch events by setting the openfl.ui.Multitouch.inputMode property to
 
 MultitouchInputMode.TOUCH_POINT.
 
@@ -28,7 +28,7 @@ mySprite.graphics.beginFill(0x336699); mySprite.graphics.drawRect(0,0,40,40); ad
 
 mySprite.addEventListener(TouchEvent.TOUCH_TAP, taphandler); function taphandler(evt:TouchEvent): void {
 
-myTextField.text = &quot;I&#039;ve been tapped&quot;; myTextField.y = 50; addChild(myTextField);
+myTextField.text = "I've been tapped"; myTextField.y = 50; addChild(myTextField);
 
 }
 
@@ -50,11 +50,11 @@ myTextField.text = evt.stageX.toString; myTextField.y = 50; addChild(myTextField
 
 }
 
-See the [TouchEvent](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/events/TouchEvent.html) class for the properties available through the event object.
+See the [TouchEvent](https://api.openfl.org/openfl/events/TouchEvent.html) class for the properties available through the event object.
 
-**_Note:_ **_Not all TouchEvent properties are supported in all runtime environments. For example, not all touch-enabled devices are capable or detecting the amount of pressure the user is applying to the touch screen. So, the TouchEvent.pressure property is not supported on those devices. Try testing for specific property support to ensure your application works, and see_
+**_Note:_** _Not all TouchEvent properties are supported in all runtime environments. For example, not all touch-enabled devices are capable or detecting the amount of pressure the user is applying to the touch screen. So, the TouchEvent.pressure property is not supported on those devices. Try testing for specific property support to ensure your application works, and see_
 
-_“Troubleshooting” on page 593_
+_"Troubleshooting" on page 593_
 
 _for more information._
 
@@ -72,19 +72,19 @@ myTextField.height = 20; addChild(myTextField);
 
 mySprite.addEventListener(TouchEvent.TOUCH_BEGIN, onTouchBegin); stage.addEventListener(TouchEvent.TOUCH_MOVE, onTouchMove); stage.addEventListener(TouchEvent.TOUCH_END, onTouchEnd); function onTouchBegin(event:TouchEvent) {
 
-myTextField.text = &quot;touch begin&quot; + event.touchPointID;
+myTextField.text = "touch begin" + event.touchPointID;
 
 }
 
-function onTouchMove(event:TouchEvent) { myTextField.text = &quot;touch move&quot; + event.touchPointID;
+function onTouchMove(event:TouchEvent) { myTextField.text = "touch move" + event.touchPointID;
 
 }
 
-function onTouchEnd(event:TouchEvent) { myTextField.text = &quot;touch end&quot; + event.touchPointID;
+function onTouchEnd(event:TouchEvent) { myTextField.text = "touch end" + event.touchPointID;
 
 }
 
-**_Note:_ **_The initial touch listener is attached to mySprite, but the listeners for moving and ending the touch event are not. If the users’s finger or pointing devices moves ahead of the display object, the Stage continues to listen for the touch event._
+**_Note:_** _The initial touch listener is attached to mySprite, but the listeners for moving and ending the touch event are not. If the users’s finger or pointing devices moves ahead of the display object, the Stage continues to listen for the touch event._
 
 Touch Point ID
 
@@ -106,34 +106,34 @@ mySprite.addEventListener(TouchEvent.TOUCH_BEGIN, onTouchBegin); function onTouc
 
 if(touchMoveID != 0) {
 
-myTextField.text = &quot;already moving. ignoring new touch&quot;; return;
+myTextField.text = "already moving. ignoring new touch"; return;
 
 }
 
 touchMoveID = event.touchPointID;
 
-myTextField.text = &quot;touch begin&quot; + event.touchPointID; stage.addEventListener(TouchEvent.TOUCH_MOVE, onTouchMove); stage.addEventListener(TouchEvent.TOUCH_END, onTouchEnd);
+myTextField.text = "touch begin" + event.touchPointID; stage.addEventListener(TouchEvent.TOUCH_MOVE, onTouchMove); stage.addEventListener(TouchEvent.TOUCH_END, onTouchEnd);
 
 }
 
 function onTouchMove(event:TouchEvent) { if(event.touchPointID != touchMoveID) {
 
-myTextField.text = &quot;ignoring unrelated touch&quot;; return;
+myTextField.text = "ignoring unrelated touch"; return;
 
 }
 
 mySprite.x = event.stageX; mySprite.y = event.stageY;
 
-myTextField.text = &quot;touch move&quot; + event.touchPointID;
+myTextField.text = "touch move" + event.touchPointID;
 
 }
 
 function onTouchEnd(event:TouchEvent) { if(event.touchPointID != touchMoveID) {
 
-myTextField.text = &quot;ignoring unrelated touch end&quot;; return;
+myTextField.text = "ignoring unrelated touch end"; return;
 
 }
 
-touchMoveID = 0; stage.removeEventListener(TouchEvent.TOUCH_MOVE, onTouchMove); stage.removeEventListener(TouchEvent.TOUCH_END, onTouchEnd); myTextField.text = &quot;touch end&quot; + event.touchPointID;
+touchMoveID = 0; stage.removeEventListener(TouchEvent.TOUCH_MOVE, onTouchMove); stage.removeEventListener(TouchEvent.TOUCH_END, onTouchEnd); myTextField.text = "touch end" + event.touchPointID;
 
 }

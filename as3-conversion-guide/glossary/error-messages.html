@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Error Messages · GitBook</title>
+        <title>Error Messages · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="generator" content="HonKit 5.1.4">
         
         
         
@@ -17,7 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
                 
             
                 
@@ -66,7 +65,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -314,8 +313,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -391,7 +390,7 @@
 <h2 id="unexpected-foo-or-other-variable-name">Unexpected $foo (or other variable name)</h2>
 <p>Haxe does not allow the dollar sign in variable or method names.</p>
 <h2 id="unexpected-">Unexpected =</h2>
-<p>This might indicate that there is a bad type before the equal sign, like &#x201C;uint&#x201D;, or this may be caused by some kinds of compact syntax that are not compatible with Haxe.</p>
+<p>This might indicate that there is a bad type before the equal sign, like “uint”, or this may be caused by some kinds of compact syntax that are not compatible with Haxe.</p>
 <p>For example, if the original code had <code>foo ||= bar</code>, you can replace it with <code>if (foo == null) foo = bar;</code></p>
 <h2 id="unexpected-public">Unexpected public</h2>
 <p>You may need to replace <code>public class</code> with <code>class</code></p>
@@ -402,14 +401,14 @@
 <p>This may occur when there is a regular expression that needs to be replaced.</p>
 <h2 id="unexpected-var">Unexpected var</h2>
 <p>This can occur if a <code>for</code> loop is not formatted for Haxe.</p>
-<p>In other languages, a loop like <code>for (var i:uint = 0; i &lt; 100; i++)</code> is fairly common. Written for Haxe, the same loop would be <code>for (i in 0&#x2026;100)</code></p>
+<p>In other languages, a loop like <code>for (var i:uint = 0; i &lt; 100; i++)</code> is fairly common. Written for Haxe, the same loop would be <code>for (i in 0…100)</code></p>
 <p>Similarly, a loop like <code>for each (var i:String in myArray)</code> in ActionScript would be <code>for (i in myArray)</code> when written for Haxe.</p>
 <h2 id="unexpected-internal">Unexpected internal</h2>
 <p>Haxe does not have an <code>internal</code> namespace. You should change it to <code>private</code>, then use the <code>@:access</code>, <code>@:allow</code> or (for a single-line call) <code>@:privateAccess</code> meta-data to access or allow private members.</p>
 <h2 id="unexpected-">Unexpected ...</h2>
 <p>Haxe does not support &quot;rest&quot; parameters like ActionScript 3.</p>
 <p>There are ways to recreate the same functionality using <code>Reflect.makeVarArgs</code>, but it probably is best to refactor so that the number of parameters is known.</p>
-<h2 id="unexpected-">Unexpected <end of="" file=""></end></h2>
+<h2 id="unexpected-">Unexpected <end of file></end></h2>
 <p>This might occur if you are missing a closing curly bracket in your code.</p>
 <h2 id="unexpected-dynamic">Unexpected dynamic</h2>
 <p>In ActionScript, the <code>dynamic</code> keyword means that a class can have new variables or methods assigned to it as a dynamic object. This is possible in Haxe by implementing <code>Dynamic</code> as an interface.</p>
@@ -473,12 +472,56 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Error Messages","level":"1.5.1","depth":2,"next":{"title":"Cheat Sheet","level":"1.5.2","depth":2,"path":"glossary/cheat-sheet.md","ref":"glossary/cheat-sheet.md","articles":[]},"previous":{"title":"Glossary","level":"1.5","depth":1,"path":"glossary/README.md","ref":"glossary/README.md","articles":[{"title":"Error Messages","level":"1.5.1","depth":2,"path":"glossary/error-messages.md","ref":"glossary/error-messages.md","articles":[]},{"title":"Cheat Sheet","level":"1.5.2","depth":2,"path":"glossary/cheat-sheet.md","ref":"glossary/cheat-sheet.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"glossary/error-messages.md","mtime":"2023-01-31T16:17:43.816Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-01-31T16:18:24.232Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Error Messages","level":"1.5.1","depth":2,"next":{"title":"Cheat Sheet","level":"1.5.2","depth":2,"path":"glossary/cheat-sheet.md","ref":"glossary/cheat-sheet.md","articles":[]},"previous":{"title":"Glossary","level":"1.5","depth":1,"path":"glossary/README.md","ref":"glossary/README.md","articles":[{"title":"Error Messages","level":"1.5.1","depth":2,"path":"glossary/error-messages.md","ref":"glossary/error-messages.md","articles":[]},{"title":"Cheat Sheet","level":"1.5.2","depth":2,"path":"glossary/cheat-sheet.md","ref":"glossary/cheat-sheet.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"glossary/error-messages.md","mtime":"2024-01-16T06:43:12.774Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-01-16T06:43:41.353Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
     
@@ -496,10 +539,6 @@
     
         
         <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

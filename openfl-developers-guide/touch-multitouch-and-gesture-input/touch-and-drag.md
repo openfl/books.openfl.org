@@ -2,11 +2,11 @@
 
 OpenFL 10.1 and later, Adobe AIR 2 and later
 
-Two methods were added to [the Sprite class](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/display/Sprite.html) to provide additional support for touch-enabled applications supporting touch-point input: Sprite.startTouchDrag() and Sprite.stopTouchDrag(). These methods behave the same as Sprite.startDrag() and Sprite.stopDrag() do for mouse events. However, notice the Sprite.startTouchDrag() and Sprite.stopTouchDrag() methods both take touchPointID values as parameters.
+Two methods were added to [the Sprite class](https://api.openfl.org/openfl/display/Sprite.html) to provide additional support for touch-enabled applications supporting touch-point input: Sprite.startTouchDrag() and Sprite.stopTouchDrag(). These methods behave the same as Sprite.startDrag() and Sprite.stopDrag() do for mouse events. However, notice the Sprite.startTouchDrag() and Sprite.stopTouchDrag() methods both take touchPointID values as parameters.
 
 The runtime assigns the touchPointID value to the event object for a touch event. Use this value to respond to a specific touch point in the case the environment supports multiple, simultaneous, touch points (even if it does not handle gestures). For more information about the touchPointID property, see
 
-“Touch Point ID” on page 587
+"Touch Point ID" on page 587
 
 .
 
@@ -14,11 +14,11 @@ The following code shows a simple start drag event handler and a stop drag event
 
 mySprite.addEventListener(TouchEvent.TOUCH_BEGIN, onTouchBegin); mySprite.addEventListener(TouchEvent.TOUCH_END, onTouchEnd);
 
-function onTouchBegin(e:TouchEvent) { e.target.startTouchDrag(e.touchPointID, false, bg.getRect(this)); trace(&quot;touch begin&quot;);
+function onTouchBegin(e:TouchEvent) { e.target.startTouchDrag(e.touchPointID, false, bg.getRect(this)); trace("touch begin");
 
 }
 
-function onTouchEnd(e:TouchEvent) { e.target.stopTouchDrag(e.touchPointID); trace(&quot;touch end&quot;);
+function onTouchEnd(e:TouchEvent) { e.target.stopTouchDrag(e.touchPointID); trace("touch end");
 
 }
 

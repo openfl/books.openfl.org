@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Overview · GitBook</title>
+        <title>Overview · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="generator" content="HonKit 5.1.4">
         
         
         
@@ -17,7 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
                 
             
                 
@@ -66,7 +65,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -314,8 +313,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -360,20 +359,20 @@
 <h3 id="actionscript-20">ActionScript 2.0</h3>
 <pre><code class="lang-haxe"><span class="hljs-keyword">package</span>;
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> </span>{
+<span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> </span>{
 
-    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Test</span> <span class="hljs-params">()</span> </span>{
+    <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">Test</span> </span>() {
 
     }
 
 }
 </code></pre>
 <h3 id="actionscript-30">ActionScript 3.0</h3>
-<pre><code class="lang-ActionScript"><span class="hljs-class"><span class="hljs-keyword">package</span> {</span>
+<pre><code class="lang-ActionScript"><span class="hljs-keyword">package</span> {
 
-    <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test</span> {
 
-        <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Test</span> <span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">public</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">Test</span> <span class="hljs-params">()</span> {
 
         }
 
@@ -384,9 +383,9 @@
 <h3 id="haxe">Haxe</h3>
 <pre><code class="lang-haxe"><span class="hljs-keyword">package</span>;
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> </span>{
+<span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> </span>{
 
-    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span> <span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span> </span>() {
 
     }
 
@@ -396,11 +395,11 @@
 <p>In ActionScript 2.0 the core data types are capitalized. Haxe follows this pattern, and goes further to specify that <em>all package names must be lowercase, and all types must start with an uppercase letter</em> (such as &quot;com.example.ClassName&quot;).</p>
 <p>Haxe uses <code>Float</code> and <code>Int</code> as core types, which are similar to <code>Number</code> and <code>int</code> in ActionScript. Haxe uses <code>Dynamic</code> to describe a wildcard type, similar to the ActionScript <code>*</code> type, and close to the ActionScript <code>Object</code> type.</p>
 <h3 id="actionscript-20">ActionScript 2.0</h3>
-<pre><code class="lang-haxe">String
+<pre><code class="lang-haxe"><span class="hljs-keyword">String</span>
 Number
 Boolean
 Object
-Void
+<span class="hljs-keyword">Void</span>
 </code></pre>
 <h3 id="actionscript-30">ActionScript 3.0</h3>
 <pre><code class="lang-ActionScript">String
@@ -412,12 +411,12 @@ Object
 <span class="hljs-keyword">void</span>
 </code></pre>
 <h3 id="haxe">Haxe</h3>
-<pre><code class="lang-haxe">String
-Float
-Int
-Bool
-Dynamic
-Void
+<pre><code class="lang-haxe"><span class="hljs-keyword">String</span>
+<span class="hljs-keyword">Float</span>
+<span class="hljs-keyword">Int</span>
+<span class="hljs-keyword">Bool</span>
+<span class="hljs-keyword">Dynamic</span>
+<span class="hljs-keyword">Void</span>
 </code></pre>
 <h2 id="property-access">Property Access</h2>
 <p>Haxe expands upon the <code>get</code>/<code>set</code> functionality of ActionScript to provide nuanced property access support. For example, a read-only variable can be declared without a getter and an extra variable.</p>
@@ -426,31 +425,31 @@ Void
 <pre><code class="lang-ActionScript"><span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> _customSetter:String;
 <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> _readOnly:Number;
 
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">get</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">customSetter</span> <span class="hljs-params">()</span>:String </span>{
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">get</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">customSetter</span> <span class="hljs-params">()</span>:String {
 
     <span class="hljs-keyword">return</span> _customSetter;
 
 }
 
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">set</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">customSetter</span> <span class="hljs-params">(value:String)</span>:void </span>{
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">set</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">customSetter</span> <span class="hljs-params">(value:String)</span>:void {
 
     _customSetter = value + <span class="hljs-string">&quot;!&quot;</span>;
 
 }
 
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">get</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">readOnly</span> <span class="hljs-params">()</span>:Number </span>{
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">get</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">readOnly</span> <span class="hljs-params">()</span>:Number {
 
     <span class="hljs-keyword">return</span> _readOnly;
 
 }
 </code></pre>
 <h3 id="haxe">Haxe</h3>
-<pre><code class="lang-haxe"><span class="hljs-keyword">public</span> <span class="hljs-keyword">var</span> customSetter (<span class="hljs-keyword">default</span>, set):String;
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">var</span> readOnly (<span class="hljs-keyword">default</span>, <span class="hljs-literal">null</span>):Float;
+<pre><code class="lang-haxe"><span class="hljs-keyword">public</span> <span class="hljs-keyword">var</span> customSetter (<span class="hljs-keyword">default</span>, <span class="hljs-keyword">set</span>):<span class="hljs-type">String</span>;
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">var</span> readOnly (<span class="hljs-keyword">default</span>, <span class="hljs-literal">null</span>):<span class="hljs-type">Float</span>;
 
-<span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">set_customSetter</span> <span class="hljs-params">(value:String)</span>:String </span>{
+<span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">set_customSetter</span> </span>(value:<span class="hljs-type">String</span>):<span class="hljs-type">String </span>{
 
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.customSetter = value + <span class="hljs-string">&quot;!&quot;</span>;
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.customSetter = value + <span class="hljs-string">&quot;!&quot;</span>;
 
 }
 </code></pre>
@@ -458,9 +457,9 @@ Void
 <p>ActionScript 3.0 supports namespaces, both <code>public</code> and <code>private</code> (similar to ActionScript 2.0) in addition to <code>internal</code>, <code>protected</code> or custom namespaces. Haxe supports only <code>public</code> and <code>private</code> (with <code>private</code> behaving similar to ActionScript&apos;s <code>protected</code> namespace) and does not support custom namespaces.</p>
 <p>However, Haxe does support access control using meta-data tags such as <code>@:allow</code> and <code>@:access</code> for <code>private</code> access. </p>
 <h3 id="actionscript-30">ActionScript 3.0</h3>
-<pre><code class="lang-ActionScript"><span class="hljs-class"><span class="hljs-keyword">package</span> {</span>
+<pre><code class="lang-ActionScript"><span class="hljs-keyword">package</span> {
 
-    <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test</span> {
 
         <span class="hljs-keyword">internal</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">var</span> hello:String = <span class="hljs-string">&quot;Hello&quot;</span>;
 
@@ -468,11 +467,11 @@ Void
 
 }
 </code></pre>
-<pre><code class="lang-ActionScript"><span class="hljs-class"><span class="hljs-keyword">package</span> {</span>
+<pre><code class="lang-ActionScript"><span class="hljs-keyword">package</span> {
 
-    <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test2</span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test2</span> {
 
-        <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Test2</span> <span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">public</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">Test2</span> <span class="hljs-params">()</span> {
 
             <span class="hljs-keyword">var</span> msg:String = Test.hello;
 
@@ -483,16 +482,16 @@ Void
 }
 </code></pre>
 <h3 id="haxe">Haxe</h3>
-<pre><code class="lang-haxe"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> </span>{
+<pre><code class="lang-haxe"><span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> </span>{
 
-    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">var</span> hello:String = <span class="hljs-string">&quot;Hello&quot;</span>;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">var</span> hello:<span class="hljs-type">String </span>= <span class="hljs-string">&quot;Hello&quot;</span>;
 
 }
 </code></pre>
-<pre><code class="lang-haxe">@:access(Test)
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test2</span> </span>{
+<pre><code class="lang-haxe"><span class="hljs-meta">@:access</span>(Test)
+<span class="hljs-keyword">public</span> <span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">Test2</span> </span>{
 
-    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span> <span class="hljs-params">()</span> </span>{
+    <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span> </span>() {
 
         <span class="hljs-keyword">var</span> msg = Test.hello;
 
@@ -508,8 +507,8 @@ Void
 <span class="hljs-keyword">var</span> fruit:Array = [ <span class="hljs-string">&quot;apple&quot;</span>, <span class="hljs-string">&quot;orange&quot;</span> ];
 </code></pre>
 <h3 id="haxe">Haxe</h3>
-<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> hello:String = <span class="hljs-string">&quot;World&quot;</span>;
-<span class="hljs-keyword">var</span> fruit:Array&lt;String&gt; = [ <span class="hljs-string">&quot;apple&quot;</span>, <span class="hljs-string">&quot;orange&quot;</span> ];
+<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> hello:<span class="hljs-type">String </span>= <span class="hljs-string">&quot;World&quot;</span>;
+<span class="hljs-keyword">var</span> fruit:<span class="hljs-type">Array</span>&lt;<span class="hljs-keyword">String</span>&gt; = [ <span class="hljs-string">&quot;apple&quot;</span>, <span class="hljs-string">&quot;orange&quot;</span> ];
 </code></pre>
 <p><em>or</em></p>
 <pre><code class="lang-haxe"><span class="hljs-keyword">var</span> hello = <span class="hljs-string">&quot;World&quot;</span>;
@@ -535,7 +534,7 @@ Void
 <h3 id="haxe">Haxe</h3>
 <pre><code class="lang-haxe"><span class="hljs-keyword">for</span> (i <span class="hljs-keyword">in</span> <span class="hljs-number">0.</span>.<span class="hljs-number">.10</span>) {
 
-    <span class="hljs-keyword">trace</span> (i);
+    <span class="hljs-built_in">trace</span> (i);
 
 }
 
@@ -543,7 +542,7 @@ Void
 
 <span class="hljs-keyword">for</span> (value <span class="hljs-keyword">in</span> array) {
 
-    <span class="hljs-keyword">trace</span> (value);
+    <span class="hljs-built_in">trace</span> (value);
 
 }
 </code></pre>
@@ -590,12 +589,56 @@ Void
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Overview","level":"1.3.1","depth":2,"next":{"title":"Deep Dive","level":"1.3.2","depth":2,"path":"comparing-haxe-and-actionscript/deep-dive/README.md","ref":"comparing-haxe-and-actionscript/deep-dive/README.md","articles":[{"title":"Syntax","level":"1.3.2.1","depth":3,"path":"comparing-haxe-and-actionscript/deep-dive/syntax.md","ref":"comparing-haxe-and-actionscript/deep-dive/syntax.md","articles":[]},{"title":"Variables","level":"1.3.2.2","depth":3,"path":"comparing-haxe-and-actionscript/deep-dive/variables.md","ref":"comparing-haxe-and-actionscript/deep-dive/variables.md","articles":[]},{"title":"Data Types","level":"1.3.2.3","depth":3,"path":"comparing-haxe-and-actionscript/deep-dive/data-types.md","ref":"comparing-haxe-and-actionscript/deep-dive/data-types.md","articles":[]},{"title":"Operators","level":"1.3.2.4","depth":3,"path":"comparing-haxe-and-actionscript/deep-dive/operators.md","ref":"comparing-haxe-and-actionscript/deep-dive/operators.md","articles":[]}]},"previous":{"title":"Comparing Haxe and ActionScript","level":"1.3","depth":1,"path":"comparing-haxe-and-actionscript/README.md","ref":"comparing-haxe-and-actionscript/README.md","articles":[{"title":"Overview","level":"1.3.1","depth":2,"path":"comparing-haxe-and-actionscript/overview.md","ref":"comparing-haxe-and-actionscript/overview.md","articles":[]},{"title":"Deep Dive","level":"1.3.2","depth":2,"path":"comparing-haxe-and-actionscript/deep-dive/README.md","ref":"comparing-haxe-and-actionscript/deep-dive/README.md","articles":[{"title":"Syntax","level":"1.3.2.1","depth":3,"path":"comparing-haxe-and-actionscript/deep-dive/syntax.md","ref":"comparing-haxe-and-actionscript/deep-dive/syntax.md","articles":[]},{"title":"Variables","level":"1.3.2.2","depth":3,"path":"comparing-haxe-and-actionscript/deep-dive/variables.md","ref":"comparing-haxe-and-actionscript/deep-dive/variables.md","articles":[]},{"title":"Data Types","level":"1.3.2.3","depth":3,"path":"comparing-haxe-and-actionscript/deep-dive/data-types.md","ref":"comparing-haxe-and-actionscript/deep-dive/data-types.md","articles":[]},{"title":"Operators","level":"1.3.2.4","depth":3,"path":"comparing-haxe-and-actionscript/deep-dive/operators.md","ref":"comparing-haxe-and-actionscript/deep-dive/operators.md","articles":[]}]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"comparing-haxe-and-actionscript/overview.md","mtime":"2023-01-31T16:17:43.816Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-01-31T16:18:24.232Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Overview","level":"1.3.1","depth":2,"next":{"title":"Deep Dive","level":"1.3.2","depth":2,"path":"comparing-haxe-and-actionscript/deep-dive/README.md","ref":"comparing-haxe-and-actionscript/deep-dive/README.md","articles":[{"title":"Syntax","level":"1.3.2.1","depth":3,"path":"comparing-haxe-and-actionscript/deep-dive/syntax.md","ref":"comparing-haxe-and-actionscript/deep-dive/syntax.md","articles":[]},{"title":"Variables","level":"1.3.2.2","depth":3,"path":"comparing-haxe-and-actionscript/deep-dive/variables.md","ref":"comparing-haxe-and-actionscript/deep-dive/variables.md","articles":[]},{"title":"Data Types","level":"1.3.2.3","depth":3,"path":"comparing-haxe-and-actionscript/deep-dive/data-types.md","ref":"comparing-haxe-and-actionscript/deep-dive/data-types.md","articles":[]},{"title":"Operators","level":"1.3.2.4","depth":3,"path":"comparing-haxe-and-actionscript/deep-dive/operators.md","ref":"comparing-haxe-and-actionscript/deep-dive/operators.md","articles":[]}]},"previous":{"title":"Comparing Haxe and ActionScript","level":"1.3","depth":1,"path":"comparing-haxe-and-actionscript/README.md","ref":"comparing-haxe-and-actionscript/README.md","articles":[{"title":"Overview","level":"1.3.1","depth":2,"path":"comparing-haxe-and-actionscript/overview.md","ref":"comparing-haxe-and-actionscript/overview.md","articles":[]},{"title":"Deep Dive","level":"1.3.2","depth":2,"path":"comparing-haxe-and-actionscript/deep-dive/README.md","ref":"comparing-haxe-and-actionscript/deep-dive/README.md","articles":[{"title":"Syntax","level":"1.3.2.1","depth":3,"path":"comparing-haxe-and-actionscript/deep-dive/syntax.md","ref":"comparing-haxe-and-actionscript/deep-dive/syntax.md","articles":[]},{"title":"Variables","level":"1.3.2.2","depth":3,"path":"comparing-haxe-and-actionscript/deep-dive/variables.md","ref":"comparing-haxe-and-actionscript/deep-dive/variables.md","articles":[]},{"title":"Data Types","level":"1.3.2.3","depth":3,"path":"comparing-haxe-and-actionscript/deep-dive/data-types.md","ref":"comparing-haxe-and-actionscript/deep-dive/data-types.md","articles":[]},{"title":"Operators","level":"1.3.2.4","depth":3,"path":"comparing-haxe-and-actionscript/deep-dive/operators.md","ref":"comparing-haxe-and-actionscript/deep-dive/operators.md","articles":[]}]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"comparing-haxe-and-actionscript/overview.md","mtime":"2024-01-16T06:43:12.774Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-01-16T06:43:41.353Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
     
@@ -613,10 +656,6 @@ Void
     
         
         <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

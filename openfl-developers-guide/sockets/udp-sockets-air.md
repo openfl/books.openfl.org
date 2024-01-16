@@ -16,17 +16,19 @@ Your AIR application can send and receive UDP messages with the DatagramSocket a
 4.  Send messages by calling the send() method, passing in the IP address and port of the target computer
 5.  Receive messages by responding to the data event. The DatagramSocketDataEvent object dispatched for this event contains a ByteArray object containing the message data.
 
-The following code example illustrates how an application can send and receive UDP messages. The example sends a single message containing the string, “Hello.”, to the target computer. It also traces the contents of any messages received.
+The following code example illustrates how an application can send and receive UDP messages. The example sends a single message containing the string, "Hello.", to the target computer. It also traces the contents of any messages received.
 
 package
 
 {
 
-import flash.display.Sprite;
+import openfl.display.Sprite;
 
-import flash.events.DatagramSocketDataEvent; import flash.events.Event;
+import openfl.events.DatagramSocketDataEvent;
+import openfl.events.Event;
 
-import flash.net.DatagramSocket; import flash.utils.ByteArray;
+import openfl.net.DatagramSocket;
+import openfl.utils.ByteArray;
 
 public class DatagramSocketExample extends Sprite
 
@@ -36,9 +38,12 @@ private var datagramSocket:DatagramSocket;
 
 //The IP and port for this computer
 
-private var localIP:String = &quot;192.168.0.1&quot;; private var localPort:int = 55555;
+private var localIP:String = "192.168.0.1";
+private var localPort:int = 55555;
 
-//The IP and port for the target computer private var targetIP:String = &quot;192.168.0.2&quot;; private var targetPort:int = 55555;
+//The IP and port for the target computer
+private var targetIP:String = "192.168.0.2";
+private var targetPort:int = 55555;
 
 public function DatagramSocketExample()
 
@@ -56,7 +61,7 @@ datagramSocket.addEventListener( DatagramSocketDataEvent.DATA, dataReceived );
 
 //Create a message in a ByteArray
 
-var data:ByteArray = new ByteArray(); data.writeUTFBytes(&quot;Hello.&quot;);
+var data:ByteArray = new ByteArray(); data.writeUTFBytes("Hello.");
 
 //Send the datagram message
 
@@ -70,7 +75,7 @@ private function dataReceived( event:DatagramSocketDataEvent ):void
 
 //Read the data from the datagram
 
-trace(&quot;Received from &quot; + event.srcAddress + &quot;:&quot; + event.srcPort + &quot;&gt; &quot; + event.data.readUTFBytes( event.data.bytesAvailable ) );
+trace("Received from " + event.srcAddress + ":" + event.srcPort + "&gt; " + event.data.readUTFBytes( event.data.bytesAvailable ) );
 
 }
 

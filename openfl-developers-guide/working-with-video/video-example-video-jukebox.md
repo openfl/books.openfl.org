@@ -40,11 +40,11 @@ The playlist XML object contains the raw XML from the external file, whereas the
 
 &lt;videos&gt;
 
-&lt;video url=&quot;video/caption_video.flv&quot; /&gt;
+&lt;video url="video/caption_video.flv" /&gt;
 
-&lt;video url=&quot;video/cuepoints.flv&quot; /&gt;
+&lt;video url="video/cuepoints.flv" /&gt;
 
-&lt;video url=&quot;video/water.flv&quot; /&gt;
+&lt;video url="video/water.flv" /&gt;
 
 &lt;/videos&gt;
 
@@ -144,11 +144,11 @@ switch (event.info.code)
 
 {
 
-case &quot;NetStream.Play.Start&quot;: t.start();
+case "NetStream.Play.Start": t.start();
 
 break;
 
-case &quot;NetStream.Play.StreamNotFound&quot;: case &quot;NetStream.Play.Stop&quot;:
+case "NetStream.Play.StreamNotFound": case "NetStream.Play.Stop":
 
 t.stop(); playNextVideo(); break;
 
@@ -166,7 +166,7 @@ catch (error:TypeError)
 
 }
 
-The previous code evaluates the code property of the info object and filters whether the code is “NetStream.Play.Start”, “NetStream.Play.StreamNotFound”, or “NetStream.Play.Stop”. All other codes will be ignored. If the net stream is starting the code starts the Timer instance which updates the playhead. If the net stream cannot be found or is stopped, the Timer instance is stopped and the application attempts to play the next video in the playlist.
+The previous code evaluates the code property of the info object and filters whether the code is "NetStream.Play.Start", "NetStream.Play.StreamNotFound", or "NetStream.Play.Stop". All other codes will be ignored. If the net stream is starting the code starts the Timer instance which updates the playhead. If the net stream cannot be found or is stopped, the Timer instance is stopped and the application attempts to play the next video in the playlist.
 
 Every time the Timer executes, the positionBar progress bar instance updates its current position by calling the setProgress() method of the ProgressBar class and the positionLabel Label instance is updated with the time elapsed and total time of the current video.
 
@@ -182,7 +182,7 @@ try
 
 positionBar.setProgress(ns.time, meta.duration);
 
-positionLabel.text = ns.time.toFixed(1) + &quot; of &quot; meta.duration.toFixed(1) + &quot; seconds&quot;;
+positionLabel.text = ns.time.toFixed(1) + " of " meta.duration.toFixed(1) + " seconds";
 
 catch (error:Error)
 

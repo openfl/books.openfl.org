@@ -1,6 +1,6 @@
 # Movie clip example: RuntimeAssetsExplorer {#movie-clip-example-runtimeassetsexplorer}
 
-The Export for Haxe functionality can be especially advantageous for libraries that may be useful across more than one project. If OpenFL executes a project, symbols that have been exported to Haxe are available to any project within the same security sandbox as the SWF that loads it. In this way, a single Flash document can generate a project that is designated for the sole purpose of holding graphical assets. This technique is particularly useful for larger projects where designers working on visual assets can work in parallel with developers who create a “wrapper” project that then loads the graphical assets project at run time. You can use this method to maintain a series of versioned files where graphical assets are not dependent upon the progress of programming development.
+The Export for Haxe functionality can be especially advantageous for libraries that may be useful across more than one project. If OpenFL executes a project, symbols that have been exported to Haxe are available to any project within the same security sandbox as the SWF that loads it. In this way, a single Flash document can generate a project that is designated for the sole purpose of holding graphical assets. This technique is particularly useful for larger projects where designers working on visual assets can work in parallel with developers who create a "wrapper" project that then loads the graphical assets project at run time. You can use this method to maintain a series of versioned files where graphical assets are not dependent upon the progress of programming development.
 
 The RuntimeAssetsExplorer application loads any project that is a subclass of RuntimeAsset and allows you to browse the available assets of that project. The example illustrates the following:
 
@@ -10,7 +10,7 @@ The RuntimeAssetsExplorer application loads any project that is a subclass of Ru
 
 Before beginning, note that each of the projects to run in OpenFL must be located in the same security sandbox. For more information, see
 
-“Security sandboxes” on page 1044
+"Security sandboxes" on page 1044
 
 .
 
@@ -63,7 +63,7 @@ package
 
 {
 
-import flash.display.Sprite;
+import openfl.display.Sprite;
 
 import com.example.programmingas3.runtimeassetexplorer.RuntimeLibrary;
 
@@ -77,7 +77,7 @@ public function GeometricAssets() {
 
 public function getAssets():Array {
 
-return [ &quot;com.example.programmingas3.runtimeassetexplorer.AnimatingBox&quot;, &quot;com.example.programmingas3.runtimeassetexplorer.AnimatingStar&quot; ];
+return [ "com.example.programmingas3.runtimeassetexplorer.AnimatingBox", "com.example.programmingas3.runtimeassetexplorer.AnimatingStar" ];
 
 }
 
@@ -95,7 +95,7 @@ package com.example.programmingas3.runtimeassetexplorer
 
 {
 
-import flash.display.MovieClip;
+import openfl.display.MovieClip;
 
 public class AnimatingStar extends MovieClip
 
@@ -111,7 +111,7 @@ public function AnimatingStar() {
 
 Publishing the library
 
-We’ll now connect the MovieClip-based assets to the new class by creating a new FLA and entering GeometricAssets into the Document Class field of the Property inspector. For the purposes of this example, we’ll create two very basic shapes that use a timeline tween to make one clockwise rotation over 360 frames. Both the animatingBox and animatingStar symbols are set to Export for Haxe and have the Class field set to the respective classpaths specified in the getAssets() implementation. The default base class of flash.display.MovieClip remains, as we want to subclass the standard MovieClip methods.
+We’ll now connect the MovieClip-based assets to the new class by creating a new FLA and entering GeometricAssets into the Document Class field of the Property inspector. For the purposes of this example, we’ll create two very basic shapes that use a timeline tween to make one clockwise rotation over 360 frames. Both the animatingBox and animatingStar symbols are set to Export for Haxe and have the Class field set to the respective classpaths specified in the getAssets() implementation. The default base class of openfl.display.MovieClip remains, as we want to subclass the standard MovieClip methods.
 
 After setting up your symbol’s export settings, publish the FLA. You now have your first run-time library. This project could be loaded into another AVM2 project and the AnimatingBox and AnimatingStar symbols would be available to the new project.
 
@@ -145,4 +145,4 @@ var AssetClass:Class = getDefinitionByName(className) as Class; var mc:MovieClip
 
 }
 
-which gets the classpath of whichever asset is currently selected in the ComboBox (assetNameCbo.selectedItem.data), and uses the getDefinitionByName() function (from the flash.utils package) to obtain an actual reference to the asset’s class in order to create a new instance of that asset.
+which gets the classpath of whichever asset is currently selected in the ComboBox (assetNameCbo.selectedItem.data), and uses the getDefinitionByName() function (from the openfl.utils package) to obtain an actual reference to the asset’s class in order to create a new instance of that asset.

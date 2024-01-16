@@ -6,7 +6,7 @@ Mobile devices typically re-orient the user interface to keep the display uprigh
 
 AIR applications run on a number of different mobile devices and operating systems. The underlying orientation behavior can vary across operating systems, and even across different devices on the same operating system. A simple design strategy, that works well across all devices and operating systems, is to enable auto-orientation and to listen for Stage resize events to determine when you need to refresh the application layout.
 
-Alternately, if your application only supports the portrait aspect ratio or only supports the landscape aspect ratio, you can turn off auto-orientation and set the supported aspect ratio in the AIR application descriptor. This design strategy provides consistent behavior and selects the “best” orientation for the selected aspect ratio. For example, if you specify the landscape aspect ratio, the orientation chosen is appropriate for devices with landscape-mode, slide-out keyboards.
+Alternately, if your application only supports the portrait aspect ratio or only supports the landscape aspect ratio, you can turn off auto-orientation and set the supported aspect ratio in the AIR application descriptor. This design strategy provides consistent behavior and selects the "best" orientation for the selected aspect ratio. For example, if you specify the landscape aspect ratio, the orientation chosen is appropriate for devices with landscape-mode, slide-out keyboards.
 
 **Getting the current Stage orientation and aspect ratio**
 
@@ -16,7 +16,7 @@ The Stage class defines two properties that report orientation:
 
 *   Stage.deviceOrientation — Reports the physical orientation of the device relative to the default position.
 
-**_Note:_ **_The deviceOrientation is not always available when your application first starts up or when the device is lying flat. In these cases, the device orientation is reported as unknown._
+**_Note:_** _The deviceOrientation is not always available when your application first starts up or when the device is lying flat. In these cases, the device orientation is reported as unknown._
 
 *   Stage.orientation — Reports the orientation of the Stage relative to the default position. When auto-orientation is enabled, the stage rotates in the opposite direction as the device to remain upright. Thus, the right and left positions reported by the orientation property are the opposite of those reported by the deviceOrientation property. For example, when deviceRotation reports _rotated right_, orientation reports _rotated left_.
 
@@ -52,7 +52,7 @@ The _resize_ event is the best event to use when you are relying on auto-orienta
 
 The orientationChange event can also be used to detect orientation changes. The orientationChange event is only dispatched when auto-orientation is enabled.
 
-**_Note:_ **_On some mobile platforms, the stage dispatches a cancelable orientationChanging event before dispatching the resize or orientationChange events. Since the event is not supported on all platforms, avoid relying on it._
+**_Note:_** _On some mobile platforms, the stage dispatches a cancelable orientationChanging event before dispatching the resize or orientationChange events. Since the event is not supported on all platforms, avoid relying on it._
 
 ## Manual orientation {#manual-orientation}
 

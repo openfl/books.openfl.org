@@ -1,10 +1,10 @@
 # Encrypted local storage {#encrypted-local-storage}
 
-The [EncryptedLocalStore](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/data/EncryptedLocalStore.html) class (ELS) provides an encrypted local storage mechanism that you can be use as a small cache for an application&#039;s private data. ELS data cannot be shared between applications. The intent of ELS is to allow an application to store easily recreated items such as login credentials and other private information. ELS data should not be considered as permanent, as outlined in &quot;Limitations of the encrypted local store&quot; and &quot;Best practices,&quot; below.
+The [EncryptedLocalStore](https://api.openfl.org/openfl/data/EncryptedLocalStore.html) class (ELS) provides an encrypted local storage mechanism that you can be use as a small cache for an application's private data. ELS data cannot be shared between applications. The intent of ELS is to allow an application to store easily recreated items such as login credentials and other private information. ELS data should not be considered as permanent, as outlined in "Limitations of the encrypted local store" and "Best practices," below.
 
-**_Note:_ **_In addition to the encrypted local store, AIR also provides encryption for content stored in SQL databases. For details, see_
+**_Note:_** _In addition to the encrypted local store, AIR also provides encryption for content stored in SQL databases. For details, see_
 
-_“Using encryption with SQL databases” on page 758_
+_"Using encryption with SQL databases" on page 758_
 
 _._
 
@@ -12,7 +12,7 @@ You may want to use the encrypted local store to cache information that must be 
 
 On desktop platforms, AIR uses DPAPI on Windows, KeyChain on Mac OS and iOS, and KeyRing or KWallet on Linux to associate the encrypted local store to each application and user. The encrypted local store uses AES-CBC 128- bit encryption.
 
-On Android, the data stored by the EncryptedLocalStorage class are not encrypted. Instead the data is protected by the user-level security provided by the operating system. The Android operating system assigns every application a separate user ID. Applications can only access their own files and files created in public locations (such as the removable storage card). Note that on “rooted” Android devices, applications running with root privileges CAN access the files of other applications. Thus on a rooted device, the encrypted local store does not provide as high a level of data protection as it does on on a non-rooted device.
+On Android, the data stored by the EncryptedLocalStorage class are not encrypted. Instead the data is protected by the user-level security provided by the operating system. The Android operating system assigns every application a separate user ID. Applications can only access their own files and files created in public locations (such as the removable storage card). Note that on "rooted" Android devices, applications running with root privileges CAN access the files of other applications. Thus on a rooted device, the encrypted local store does not provide as high a level of data protection as it does on on a non-rooted device.
 
 Information in the encrypted local store is only available to AIR application content in the application security sandbox.
 
@@ -48,7 +48,7 @@ The best practices for using the ELS include:
 
 **More Help topics**
 
-[flash.data.EncryptedLocalStore](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/data/EncryptedLocalStore.html)
+[openfl.data.EncryptedLocalStore](https://api.openfl.org/openfl/data/EncryptedLocalStore.html)
 
 **Adding data to the encrypted local store**
 
@@ -56,21 +56,21 @@ Use the setItem() static method of the EncryptedLocalStore class to store data i
 
 For example, the following code stores a string in the encrypted local store:
 
-var str:String = &quot;Bob&quot;;
+var str:String = "Bob";
 
-var bytes:ByteArray = new ByteArray(); bytes.writeUTFBytes(str); EncryptedLocalStore.setItem(&quot;firstName&quot;, bytes);
+var bytes:ByteArray = new ByteArray(); bytes.writeUTFBytes(str); EncryptedLocalStore.setItem("firstName", bytes);
 
 The third parameter of the setItem() method, the stronglyBound parameter, is optional. When this parameter is set to true, the encrypted local store binds the stored item to the storing AIR application’s digital signature and bits:
 
-var str:String = &quot;Bob&quot;;
+var str:String = "Bob";
 
-var bytes:ByteArray = new ByteArray(); bytes.writeUTFBytes(str); EncryptedLocalStore.setItem(&quot;firstName&quot;, bytes, false);
+var bytes:ByteArray = new ByteArray(); bytes.writeUTFBytes(str); EncryptedLocalStore.setItem("firstName", bytes, false);
 
 For an item that is stored with stronglyBound set to true, subsequent calls to getItem() only succeed if the calling AIR application is identical to the storing application (if no data in files in the application directory have changed). If the calling AIR application is different from the storing application, the application throws an Error exception when you call getItem() for a strongly bound item. If you update your application, it will not be able to read strongly bound data previously written to the encrypted local store. Setting stronglyBound to true on mobile devices is ignored; the parameter is always treated as false.
 
 If the stronglyBound parameter is set to false (the default), only the publisher ID needs to stay the same for the application to read the data. The bits of the application may change (and they need to be signed by the same publisher), but they do not need to be the exact same bits as were in application that stored the data. Updated applications with the same publisher ID as the original can continue to access the data.
 
-**_Note:_ **_In practice, setting stronglyBound to true does not add any additional data protection. A “malicious” user could still alter an application to gain access to items stored in the ELS. Furthermore, data is protected from external, non-user threats just as strongly whether stronglyBound is set to true or false. For these reasons, setting stronglyBound to true is discouraged._
+**_Note:_** _In practice, setting stronglyBound to true does not add any additional data protection. A "malicious" user could still alter an application to gain access to items stored in the ELS. Furthermore, data is protected from external, non-user threats just as strongly whether stronglyBound is set to true or false. For these reasons, setting stronglyBound to true is discouraged._
 
 ## Accessing data in the encrypted local store {#accessing-data-in-the-encrypted-local-store}
 
@@ -78,7 +78,7 @@ Adobe AIR 1.0 and later
 
 You can retrieve a value from the encrypted local store by using the EncryptedLocalStore.getItem() method, as in the following example:
 
-var storedValue:ByteArray = EncryptedLocalStore.getItem(&quot;firstName&quot;); trace(storedValue.readUTFBytes(storedValue.length)); // &quot;Bob&quot;
+var storedValue:ByteArray = EncryptedLocalStore.getItem("firstName"); trace(storedValue.readUTFBytes(storedValue.length)); // "Bob"
 
 ## Removing data from the encrypted local store {#removing-data-from-the-encrypted-local-store}
 
@@ -86,7 +86,7 @@ Adobe AIR 1.0 and later
 
 You can delete a value from the encrypted local store by using the EncryptedLocalStore.removeItem() method, as in the following example:
 
-EncryptedLocalStore.removeItem(&quot;firstName&quot;);
+EncryptedLocalStore.removeItem("firstName");
 
 You can clear all data from the encrypted local store by calling the EncryptedLocalStore.reset() method, as in the following example:
 

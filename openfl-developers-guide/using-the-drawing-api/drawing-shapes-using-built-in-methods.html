@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Drawing shapes using built-in methods · GitBook</title>
+        <title>Drawing shapes using built-in methods · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="generator" content="HonKit 5.1.4">
         
         
         
@@ -17,7 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
                 
             
                 
@@ -66,7 +65,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -955,14 +954,124 @@
             
         </li>
     
+        <li class="chapter " data-level="1.8" data-path="../working-with-sound/">
+            
+                <a href="../working-with-sound/">
+            
+                    
+                    Chapter 24: Working with sound
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../working-with-sound/basics-of-working-with-sound.html">
+            
+                <a href="../working-with-sound/basics-of-working-with-sound.html">
+            
+                    
+                    Basics of working with sound
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../working-with-sound/understanding-the-sound-architecture.html">
+            
+                <a href="../working-with-sound/understanding-the-sound-architecture.html">
+            
+                    
+                    Understanding the sound architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../working-with-sound/loading-external-sound-files.html">
+            
+                <a href="../working-with-sound/loading-external-sound-files.html">
+            
+                    
+                    Loading external sound files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../working-with-sound/working-with-sound-assets.html">
+            
+                <a href="../working-with-sound/working-with-sound-assets.html">
+            
+                    
+                    Working with sound assets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../working-with-sound/working-with-dynamically-generated-audio.html">
+            
+                <a href="../working-with-sound/working-with-dynamically-generated-audio.html">
+            
+                    
+                    Working with dynamically generated audio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../working-with-sound/playing-sounds.html">
+            
+                <a href="../working-with-sound/playing-sounds.html">
+            
+                    
+                    Playing sounds
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../working-with-sound/controlling-sound-volume-and-panning.html">
+            
+                <a href="../working-with-sound/controlling-sound-volume-and-panning.html">
+            
+                    
+                    Controlling sound volume and panning
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
     
 
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -1004,7 +1113,7 @@
 <p>For convenience when drawing common shapes such as circles, ellipses, rectangles, and rectangles with rounded corners, OpenFL has methods that draw these common shapes for you. These are the <code>drawCircle()</code>, <code>drawEllipse()</code>, <code>drawRect()</code>, and <code>drawRoundRect()</code> methods of the Graphics class. These methods may be used in place of the <code>lineTo()</code> and <code>curveTo()</code> methods. Note, however, that you must still specify line and fill styles before calling these methods.</p>
 <p>The following example recreates the example of drawing red, green, and blue squares with width and height of 100 pixels. This code uses the <code>drawRect()</code> method, and additionally specifies that the fill color has an alpha of 50% (0.5):</p>
 <pre><code class="lang-haxe"><span class="hljs-keyword">var</span> squareSize = <span class="hljs-number">100</span>;
-<span class="hljs-keyword">var</span> square = <span class="hljs-keyword">new</span> Shape ();
+<span class="hljs-keyword">var</span> square = <span class="hljs-keyword">new</span> <span class="hljs-type">Shape</span> ();
 square.graphics.beginFill (<span class="hljs-number">0xFF0000</span>, <span class="hljs-number">0.5</span>);
 square.graphics.drawRect (<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, squareSize, squareSize);
 square.graphics.beginFill (<span class="hljs-number">0x00FF00</span>, <span class="hljs-number">0.5</span>);
@@ -1012,19 +1121,19 @@ square.graphics.drawRect (<span class="hljs-number">200</span>, <span class="hlj
 square.graphics.beginFill (<span class="hljs-number">0x0000FF</span>, <span class="hljs-number">0.5</span>);
 square.graphics.drawRect (<span class="hljs-number">400</span>, <span class="hljs-number">0</span>, squareSize, squareSize);
 square.graphics.endFill ();
-<span class="hljs-keyword">this</span>.addChild (square);
+<span class="hljs-built_in">this</span>.addChild (square);
 </code></pre>
-<p>In a Sprite or MovieClip object, the drawing content created with the <code>graphics</code> property always appears behind all child display objects that are contained by the object. Also, the <code>graphics</code> property content is not a separate display object so it does not appear in the list of a Sprite or MovieClip object&#x2019;s children. For example, the following Sprite object has a circle drawn with its <code>graphics</code> property, and it has a TextField object in its list of child display objects:</p>
-<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> mySprite = <span class="hljs-keyword">new</span> Sprite ();
+<p>In a Sprite or MovieClip object, the drawing content created with the <code>graphics</code> property always appears behind all child display objects that are contained by the object. Also, the <code>graphics</code> property content is not a separate display object so it does not appear in the list of a Sprite or MovieClip object’s children. For example, the following Sprite object has a circle drawn with its <code>graphics</code> property, and it has a TextField object in its list of child display objects:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> mySprite = <span class="hljs-keyword">new</span> <span class="hljs-type">Sprite</span> ();
 mySprite.graphics.beginFill (<span class="hljs-number">0xFFCC00</span>);
 mySprite.graphics.drawCircle (<span class="hljs-number">30</span>, <span class="hljs-number">30</span>, <span class="hljs-number">30</span>);
-<span class="hljs-keyword">var</span> label = <span class="hljs-keyword">new</span> TextField ();
+<span class="hljs-keyword">var</span> label = <span class="hljs-keyword">new</span> <span class="hljs-type">TextField</span> ();
 label.width = <span class="hljs-number">200</span>;
 label.text = <span class="hljs-string">&quot;They call me mellow yellow...&quot;</span>;
 label.x = <span class="hljs-number">20</span>;
 label.y = <span class="hljs-number">20</span>;
 mySprite.addChild (label);
-<span class="hljs-keyword">this</span>.addChild (mySprite);
+<span class="hljs-built_in">this</span>.addChild (mySprite);
 </code></pre>
 <p>Note that the TextField appears on top of the circle drawn with the graphics object.</p>
 
@@ -1070,12 +1179,56 @@ mySprite.addChild (label);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Drawing shapes using built-in methods","level":"1.5.4","depth":2,"next":{"title":"Creating gradient lines and fills","level":"1.5.5","depth":2,"path":"using-the-drawing-api/creating-gradient-lines-and-fills.md","ref":"using-the-drawing-api/creating-gradient-lines-and-fills.md","articles":[]},"previous":{"title":"Drawing lines and curves","level":"1.5.3","depth":2,"path":"using-the-drawing-api/drawing-lines-and-curves.md","ref":"using-the-drawing-api/drawing-lines-and-curves.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"using-the-drawing-api/drawing-shapes-using-built-in-methods.md","mtime":"2023-01-31T16:17:42.716Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-01-31T16:18:16.478Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Drawing shapes using built-in methods","level":"1.5.4","depth":2,"next":{"title":"Creating gradient lines and fills","level":"1.5.5","depth":2,"path":"using-the-drawing-api/creating-gradient-lines-and-fills.md","ref":"using-the-drawing-api/creating-gradient-lines-and-fills.md","articles":[]},"previous":{"title":"Drawing lines and curves","level":"1.5.3","depth":2,"path":"using-the-drawing-api/drawing-lines-and-curves.md","ref":"using-the-drawing-api/drawing-lines-and-curves.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"using-the-drawing-api/drawing-shapes-using-built-in-methods.md","mtime":"2024-01-16T06:43:11.682Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-01-16T06:43:31.976Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
     
@@ -1093,10 +1246,6 @@ mySprite.addChild (label);
     
         
         <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

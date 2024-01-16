@@ -6,9 +6,9 @@ The following classes can be used to send and receive data across a network:
 
 | **Class** | **Supported data formats** | **Protocols** | **Description** |
 | --- | --- | --- | --- |
-| [Loader](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/display/Loader.html) | SWF, PNG, JPEG, GIF | HTTP, HTTPS | Loads supported data types and converts the data into a display object. |
+| [Loader](https://api.openfl.org/openfl/display/Loader.html) | SWF, PNG, JPEG, GIF | HTTP, HTTPS | Loads supported data types and converts the data into a display object. |
 | URLLoader | Any (text, XML, binary, etc.) | HTTP, HTTPS | Loads arbitrary formats of data. Your application is responsible for interpreting the data. |
-| [FileReference](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/FileReference.html) | Any | HTTP | Upload and download files. |
+| [FileReference](https://api.openfl.org/openfl/net/FileReference.html) | Any | HTTP | Upload and download files. |
 | NetConnection | Video, audio, Haxe Message Format (AMF) | HTTP, HTTPS, RTMP, RTMFP | Connects to video, audio and remote object streams. |
 | Sound | Audio | HTTP | Loads and plays supported audio formats. |
 | XMLSocket | XML | TCP | Exchanges XML messages with an XMLSocket server. |
@@ -19,19 +19,19 @@ The following classes can be used to send and receive data across a network:
 
 Often, when creating a web application it is helpful to store persistent information about the user’s application state. HTML pages and applications typically use cookies for this purpose. In OpenFL, you can use the SharedObject class for the same purpose. See
 
-“Shared objects” on page 701
+"Shared objects" on page 701
 
 . (The SharedObject class can be used in AIR applications, but there are fewer restrictions when just saving the data to a regular file.)
 
 When your OpenFL application needs to communicate with another OpenFL application on the same computer, you can use the LocalConnection class. For example, two (or more) SWFs on the same web page can communicate with each other. Likewise, a SWF running on a web page can communicate with an AIR application. See
 
-“Communicating with other OpenFL instances” on page 830
+"Communicating with other OpenFL instances" on page 830
 
 .
 
 When you need to communicate with other, non-SWF processes on the local computer, you can use the NativeProcess class added in AIR 2\. The NativeProcess class allows your AIR application to launch and communicate with other applications. See
 
-“Communicating with native processes in AIR” on page 837
+"Communicating with native processes in AIR" on page 837
 
 .
 
@@ -39,29 +39,29 @@ When you need information about the network environment of the computer on which
 
 *   NetworkInfo—Provides information about the available network interfaces, such as the computer’s IP address. See
 
-    “Network interfaces” on page 791
+    "Network interfaces" on page 791
 
     .
 *   DNSResolver—Allows you to look up DNS records. See
 
-    “Domain Name System (DNS) records” on page 794
+    "Domain Name System (DNS) records" on page 794
 
     .
 *   ServiceMonitor—Allows you to monitor the availability of a server. See
 
-    “Service monitoring” on page 792
+    "Service monitoring" on page 792
 
     .
 *   URLMonitor—Allows you to monitor the availability of a resource at a particular URL. See
 
-    “HTTP monitoring”
+    "HTTP monitoring"
 
     on page 793
 
     .
 *   SocketMonitor and SecureSocketMonitor—Allows you to monitor the availability of a resource at a socket. See
 
-    “Socket monitoring” on page 794
+    "Socket monitoring" on page 794
 
     .
 
@@ -97,7 +97,10 @@ The following code example traces the NetworkInterface properties of each interf
 
 package {
 
-import flash.display.Sprite; import flash.net.InterfaceAddress; import flash.net.NetworkInfo; import flash.net.NetworkInterface;
+import openfl.display.Sprite;
+import openfl.net.InterfaceAddress;
+import openfl.net.NetworkInfo;
+import openfl.net.NetworkInterface;
 
 public class NetworkInformationExample extends Sprite
 
@@ -115,39 +118,39 @@ if( interfaces != null )
 
 {
 
-trace( &quot;Interface count: &quot; + interfaces.length );
+trace( "Interface count: " + interfaces.length );
 
 for each ( var interfaceObj:NetworkInterface in interfaces )
 
 {
 
-trace( &quot;\nname: &quot; + interfaceObj.name );
+trace( "\nname: " + interfaceObj.name );
 
-trace( &quot;display name: &quot; + interfaceObj.displayName ); trace( &quot;mtu: &quot; + interfaceObj.mtu );
+trace( "display name: " + interfaceObj.displayName ); trace( "mtu: " + interfaceObj.mtu );
 
-trace( &quot;active?: &quot; + interfaceObj.active );
+trace( "active?: " + interfaceObj.active );
 
-trace( &quot;parent interface: &quot; + interfaceObj.parent );
+trace( "parent interface: " + interfaceObj.parent );
 
-trace( &quot;hardware address: &quot; + interfaceObj.hardwareAddress ); if( interfaceObj.subInterfaces != null )
+trace( "hardware address: " + interfaceObj.hardwareAddress ); if( interfaceObj.subInterfaces != null )
 
 {
 
-trace( &quot;# subinterfaces: &quot; + interfaceObj.subInterfaces.length );
+trace( "# subinterfaces: " + interfaceObj.subInterfaces.length );
 
 }
 
-trace(&quot;# addresses: &quot; + interfaceObj.addresses.length );
+trace("# addresses: " + interfaceObj.addresses.length );
 
 for each ( var address:InterfaceAddress in interfaceObj.addresses )
 
 {
 
-trace( &quot; type: &quot; + address.ipVersion ); trace( &quot; address: &quot; + address.address );
+trace( " type: " + address.ipVersion ); trace( " address: " + address.address );
 
-trace( &quot; broadcast: &quot; + address.broadcast );
+trace( " broadcast: " + address.broadcast );
 
-trace( &quot; prefix length: &quot; + address.prefixLength );
+trace( " prefix length: " + address.prefixLength );
 
 }
 

@@ -14,23 +14,27 @@ To look up a record, you pass a query string and the class object representing t
 
 | **Record class** | **Query string** | **Example query string** |
 | --- | --- | --- |
-| ARecord | host name | “example.com” |
-| AAAARecord | host name | “example.com” |
-| MXRecord | host name | “example.com” |
-| PTRRecord | IP address | “208.77.188.166” |
-| SRVRecord | Service identifier: _service._protocol.host | “_sip._tcp.example.com” |
+| ARecord | host name | "example.com" |
+| AAAARecord | host name | "example.com" |
+| MXRecord | host name | "example.com" |
+| PTRRecord | IP address | "208.77.188.166" |
+| SRVRecord | Service identifier: _service._protocol.host | "_sip._tcp.example.com" |
 
-The following code example looks up the IP address of the host “example.com”.
+The following code example looks up the IP address of the host "example.com".
 
 package
 
 {
 
-import flash.display.Sprite;
+import openfl.display.Sprite;
 
-import flash.events.DNSResolverEvent; import flash.events.ErrorEvent; import flash.net.dns.ARecord;
+import openfl.events.DNSResolverEvent;
 
-import flash.net.dns.DNSResolver;
+import openfl.events.ErrorEvent;
+
+import openfl.net.dns.ARecord;
+
+import openfl.net.dns.DNSResolver;
 
 public class DNSResolverExample extends Sprite
 
@@ -42,7 +46,7 @@ public function DNSResolverExample()
 
 var resolver:DNSResolver = new DNSResolver(); resolver.addEventListener( DNSResolverEvent.LOOKUP, lookupComplete ); resolver.addEventListener( ErrorEvent.ERROR, lookupError );
 
-resolver.lookup( &quot;example.com.&quot;, ARecord );
+resolver.lookup( "example.com.", ARecord );
 
 }
 
@@ -50,9 +54,9 @@ private function lookupComplete( event:DNSResolverEvent ):void
 
 {
 
-trace( &quot;Query string: &quot; + event.host );
+trace( "Query string: " + event.host );
 
-trace( &quot;Record count: &quot; + event.resourceRecords.length ); for each( var record:* in event.resourceRecords )
+trace( "Record count: " + event.resourceRecords.length ); for each( var record:* in event.resourceRecords )
 
 {
 
@@ -66,7 +70,7 @@ private function lookupError( error:ErrorEvent ):void
 
 {
 
-trace(&quot;Error: &quot; + error.text );
+trace("Error: " + error.text );
 
 }
 

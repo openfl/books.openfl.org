@@ -25,12 +25,12 @@ When copying and pasting data in response to a copy, cut, or paste event in HTML
 
 | **MIME type** | **Description** |
 | --- | --- |
-| Text | &quot;text/plain&quot; |
-| URL | &quot;text/uri-list&quot; |
-| Bitmap | &quot;image/x-vnd.adobe.air.bitmap&quot; |
-| File list | &quot;application/x-vnd.adobe.air.file-list&quot; |
+| Text | "text/plain" |
+| URL | "text/uri-list" |
+| Bitmap | "image/x-vnd.adobe.air.bitmap" |
+| File list | "application/x-vnd.adobe.air.file-list" |
 
-**_Note:_ **_Rich text format data is not available from the clipboardData property of the event object dispatched as a result of a paste event within HTML content._
+**_Note:_** _Rich text format data is not available from the clipboardData property of the event object dispatched as a result of a paste event within HTML content._
 
 ## Custom data formats {#custom-data-formats}
 
@@ -59,19 +59,19 @@ OpenFL 10 and later, Adobe AIR 1.0 and later
 
 When writing an object to the clipboard, you can use any string that does not begin with the reserved prefixes air: or flash: for the _format_ parameter. Use the same string as the format to read the object. The following examples illustrate how to read and write objects to the clipboard:
 
-public function createClipboardObject(object:Object):Clipboard{ var transfer:Clipboard = Clipboard.generalClipboard; transfer.setData(&quot;object&quot;, object, true);
+public function createClipboardObject(object:Object):Clipboard{ var transfer:Clipboard = Clipboard.generalClipboard; transfer.setData("object", object, true);
 
 }
 
 To extract a serialized object from the clipboard object (after a drop or paste operation), use the same format name and the CLONE_ONLY or CLONE_PREFFERED transfer modes.
 
-var transfer:Object = clipboard.getData(&quot;object&quot;, ClipboardTransferMode.CLONE_ONLY);
+var transfer:Object = clipboard.getData("object", ClipboardTransferMode.CLONE_ONLY);
 
 A reference is always added to the Clipboard object. To extract the reference from the clipboard object (after a drop or paste operation), instead of the serialized copy, use the ORIGINAL_ONLY or ORIGINAL_PREFFERED transfer modes:
 
 var transferredObject:Object =
 
-clipboard.getData(&quot;object&quot;, ClipboardTransferMode.ORIGINAL_ONLY);
+clipboard.getData("object", ClipboardTransferMode.ORIGINAL_ONLY);
 
 References are valid only if the Clipboard object originates from the current application. Use the ORIGINAL_PREFFERED transfer mode to access the reference when it is available, and the serialized clone when the reference is not available.
 
@@ -85,7 +85,7 @@ The rendering function is added to a Clipboard object using the setDataHandler()
 
 If a data format of the same type is added to a Clipboard object with the setData() method, that data takes precedence over the deferred version (the rendering function is never called). The rendering function may or may not be called again if the same clipboard data is accessed a second time.
 
-**_Note:_ **_On Mac OS X, deferred rendering works only with custom data formats. With standard data formats, the rendering function is called immediately._
+**_Note:_** _On Mac OS X, deferred rendering works only with custom data formats. With standard data formats, the rendering function is called immediately._
 
 **Pasting text using a deferred rendering function**
 
@@ -103,27 +103,37 @@ Flash example
 
 package {
 
-import flash.desktop.Clipboard;
+import openfl.desktop.Clipboard;
 
-import flash.desktop.ClipboardFormats; import flash.desktop.ClipboardTransferMode; import flash.display.Sprite;
+import openfl.desktop.ClipboardFormats;
+import openfl.desktop.ClipboardTransferMode;
+import openfl.display.Sprite;
 
-import flash.text.TextField; import flash.text.TextFormat; import flash.text.TextFieldType; import flash.events.MouseEvent; import flash.events.Event;
+import openfl.text.TextField;
+import openfl.text.TextFormat;
+import openfl.text.TextFieldType;
+import openfl.events.MouseEvent;
+import openfl.events.Event;
 
 public class DeferredRenderingExample extends Sprite
 
 {
 
-private var sourceTextField:TextField; private var destination:TextField; private var copyText:TextField;
+private var sourceTextField:TextField;
+private var destination:TextField;
+private var copyText:TextField;
 
 public function DeferredRenderingExample():void
 
 {
 
-sourceTextField = createTextField(10, 10, 380, 90); sourceTextField.text = &quot;Neque porro quisquam est qui dolorem &quot;
+sourceTextField = createTextField(10, 10, 380, 90);
+sourceTextField.text = "Neque porro quisquam est qui dolorem "
 
-+ &quot;ipsum quia dolor sit amet, consectetur, adipisci velit.&quot;;
++ "ipsum quia dolor sit amet, consectetur, adipisci velit.";
 
-copyText = createTextField(10, 110, 35, 20); copyText.htmlText = &quot;&lt;a href=&#039;#&#039;&gt;Copy&lt;/a&gt;&quot;; copyText.addEventListener(MouseEvent.CLICK, onCopy);
+copyText = createTextField(10, 110, 35, 20);
+copyText.htmlText = "&lt;a href='#'&gt;Copy&lt;/a&gt;"; copyText.addEventListener(MouseEvent.CLICK, onCopy);
 
 destination = createTextField(10, 145, 380, 90); destination.addEventListener(Event.PASTE, onPaste);
 
@@ -137,7 +147,11 @@ var newTxt:TextField = new TextField(); newTxt.x = x;
 
 newTxt.y = y; newTxt.height = height;
 
-newTxt.width = width; newTxt.border = true; newTxt.multiline = true; newTxt.wordWrap = true; newTxt.type = TextFieldType.INPUT; addChild(newTxt);
+newTxt.width = width; newTxt.border = true;
+newTxt.multiline = true;
+newTxt.wordWrap = true;
+newTxt.type = TextFieldType.INPUT;
+addChild(newTxt);
 
 return newTxt;
 
@@ -165,7 +179,7 @@ public function renderData():String
 
 {
 
-trace(&quot;Rendering data&quot;);
+trace("Rendering data");
 
 var sourceStr:String = sourceTextField.text; if (sourceTextField.selectionEndIndex &gt;
 
@@ -195,21 +209,21 @@ return sourceStr;
 
 Flex example
 
-&lt;mx:Application [xmlns:mx=&quot;http://www.adobe.com/2006/mxml&quot;](http://www.adobe.com/2006/mxml) layout=&quot;absolute&quot; width=&quot;326&quot; height=&quot;330&quot; applicationComplete=&quot;init()&quot;&gt;
+&lt;mx:Application [xmlns:mx="http://www.adobe.com/2006/mxml"](http://www.adobe.com/2006/mxml) layout="absolute" width="326" height="330" applicationComplete="init()"&gt;
 
 &lt;mx:Script&gt;
 
 &lt;![CDATA[
 
-import flash.desktop.Clipboard;
+import openfl.desktop.Clipboard;
 
-import flash.desktop.ClipboardFormats;
+import openfl.desktop.ClipboardFormats;
 
 public function init():void
 
 {
 
-destination.addEventListener(&quot;paste&quot;, doPaste);
+destination.addEventListener("paste", doPaste);
 
 }
 
@@ -229,7 +243,7 @@ destination.text = Clipboard.generalClipboard.getData(ClipboardFormats.TEXT_FORM
 
 }
 
-public function renderData():String{ trace(&quot;Rendering data&quot;);
+public function renderData():String{ trace("Rendering data");
 
 return source.text;
 
@@ -239,18 +253,18 @@ return source.text;
 
 &lt;/mx:Script&gt;
 
-&lt;mx:Label x=&quot;10&quot; y=&quot;10&quot; text=&quot;Source&quot;/&gt;
+&lt;mx:Label x="10" y="10" text="Source"/&gt;
 
-&lt;mx:TextArea id=&quot;source&quot; x=&quot;10&quot; y=&quot;36&quot; width=&quot;300&quot; height=&quot;100&quot;&gt;
+&lt;mx:TextArea id="source" x="10" y="36" width="300" height="100"&gt;
 
 &lt;mx:text&gt;Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.&lt;/mx:text&gt;
 
 &lt;/mx:TextArea&gt;
 
-&lt;mx:Label x=&quot;10&quot; y=&quot;181&quot; text=&quot;Destination&quot;/&gt;
+&lt;mx:Label x="10" y="181" text="Destination"/&gt;
 
-&lt;mx:TextArea id=&quot;destination&quot; x=&quot;12&quot; y=&quot;207&quot; width=&quot;300&quot; height=&quot;100&quot;/&gt;
+&lt;mx:TextArea id="destination" x="12" y="207" width="300" height="100"/&gt;
 
-&lt;mx:Button click=&quot;doCopy();&quot; x=&quot;91&quot; y=&quot;156&quot; label=&quot;Copy&quot;/&gt;
+&lt;mx:Button click="doCopy();" x="91" y="156" label="Copy"/&gt;
 
 &lt;/mx:Application&gt;

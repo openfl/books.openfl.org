@@ -6,15 +6,17 @@ The SoundMixer.bufferTime property represents the number of milliseconds of soun
 
 Your application can override the global SoundMixer.bufferTime value for an individual sound by explicitly specifying a new bufferTime value when loading the sound. To override the default buffer time, first create a new instance of the SoundLoaderContext class, set its bufferTime property, and then pass it as a parameter to the Sound.load() method, as shown below:
 
-import flash.media.Sound;
+import openfl.media.Sound;
 
-import flash.media.SoundLoaderContext; import flash.net.URLRequest;
+import openfl.media.SoundLoaderContext;
+import openfl.net.URLRequest;
 
 var s:Sound = new Sound();
 
-var req:URLRequest = new URLRequest(&quot;bigSound.mp3&quot;);
+var req:URLRequest = new URLRequest("bigSound.mp3");
 
-var context:SoundLoaderContext = new SoundLoaderContext(8000, true); s.load(req, context);
+var context:SoundLoaderContext = new SoundLoaderContext(8000, true);
+s.load(req, context);
 
 s.play();
 

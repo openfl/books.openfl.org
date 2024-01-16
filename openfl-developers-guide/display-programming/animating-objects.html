@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Animating objects · GitBook</title>
+        <title>Animating objects · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="generator" content="HonKit 5.1.4">
         
         
         
@@ -17,7 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
                 
             
                 
@@ -66,7 +65,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -955,14 +954,124 @@
             
         </li>
     
+        <li class="chapter " data-level="1.8" data-path="../working-with-sound/">
+            
+                <a href="../working-with-sound/">
+            
+                    
+                    Chapter 24: Working with sound
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../working-with-sound/basics-of-working-with-sound.html">
+            
+                <a href="../working-with-sound/basics-of-working-with-sound.html">
+            
+                    
+                    Basics of working with sound
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../working-with-sound/understanding-the-sound-architecture.html">
+            
+                <a href="../working-with-sound/understanding-the-sound-architecture.html">
+            
+                    
+                    Understanding the sound architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../working-with-sound/loading-external-sound-files.html">
+            
+                <a href="../working-with-sound/loading-external-sound-files.html">
+            
+                    
+                    Loading external sound files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../working-with-sound/working-with-sound-assets.html">
+            
+                <a href="../working-with-sound/working-with-sound-assets.html">
+            
+                    
+                    Working with sound assets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../working-with-sound/working-with-dynamically-generated-audio.html">
+            
+                <a href="../working-with-sound/working-with-dynamically-generated-audio.html">
+            
+                    
+                    Working with dynamically generated audio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../working-with-sound/playing-sounds.html">
+            
+                <a href="../working-with-sound/playing-sounds.html">
+            
+                    
+                    Playing sounds
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../working-with-sound/controlling-sound-volume-and-panning.html">
+            
+                <a href="../working-with-sound/controlling-sound-volume-and-panning.html">
+            
+                    
+                    Controlling sound volume and panning
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
     
 
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -1002,19 +1111,26 @@
                                 
                                 <h1 id="animating-objects">Animating objects </h1>
 <p>Animation is the process of making something move, or alternatively, of making something change over time. Scripted animation is a fundamental part of video games, and is often used to add polish and useful interaction clues to other applications.</p>
-<p>The fundamental idea behind scripted animation is that a change needs to take place, and that change needs to be divided into increments over time. It&#x2019;s easy to make something repeat in Haxe, using a common looping statement. However, a loop will run through all its iterations before updating the display. To create scripted animation, you need to write Haxe that performs some action repeatedly over time and also updates the screen each time it runs.</p>
-<p>For example, imagine you want to create a simple animation, such as making a ball travel across the screen. Haxe includes a simple mechanism that allows you to track the passage of time and update the screen accordingly&#x2014;meaning you could write code that moves the ball a small amount each time, until it reaches its destination. After each move the screen would update, making the cross-Stage motion visible to the viewer.</p>
-<p>From a practical standpoint, it makes sense to synchronize scripted animation with the project&#x2019;s frame rate (in other words, make one animation change each time a new frame displays or would display), since that defines how frequently OpenFL updates the screen. Each display object has an enterFrame event that is dispatched according to the frame rate of the project&#x2014;one event per frame. Most developers who create scripted animation use the enterFrame event as a way to create actions that repeat over time. You could write code that listens to the enterFrame event, moving the animated ball a certain amount each frame, and as the screen is updated (each frame), the ball would be redrawn in its new location, creating motion.</p>
-<p><strong><em>Note:</em> </strong><em>Another way to perform an action repeatedly over time is to use the Timer class. A Timer instance triggers an event notification each time a specified amount of time has past. You could write code that performs animation by handling the Timer class&#x2019;s timer event, setting the time interval to a small one (some fraction of a second). For more information about using the Timer class, see</em></p>
-<p><em>&#x201C;Controlling time intervals&#x201D; on page 4</em></p>
+<p>The fundamental idea behind scripted animation is that a change needs to take place, and that change needs to be divided into increments over time. It’s easy to make something repeat in Haxe, using a common looping statement. However, a loop will run through all its iterations before updating the display. To create scripted animation, you need to write Haxe that performs some action repeatedly over time and also updates the screen each time it runs.</p>
+<p>For example, imagine you want to create a simple animation, such as making a ball travel across the screen. Haxe includes a simple mechanism that allows you to track the passage of time and update the screen accordingly—meaning you could write code that moves the ball a small amount each time, until it reaches its destination. After each move the screen would update, making the cross-Stage motion visible to the viewer.</p>
+<p>From a practical standpoint, it makes sense to synchronize scripted animation with the project’s frame rate (in other words, make one animation change each time a new frame displays or would display), since that defines how frequently OpenFL updates the screen. Each display object has an enterFrame event that is dispatched according to the frame rate of the project—one event per frame. Most developers who create scripted animation use the enterFrame event as a way to create actions that repeat over time. You could write code that listens to the enterFrame event, moving the animated ball a certain amount each frame, and as the screen is updated (each frame), the ball would be redrawn in its new location, creating motion.</p>
+<p><strong><em>Note:</em></strong> <em>Another way to perform an action repeatedly over time is to use the Timer class. A Timer instance triggers an event notification each time a specified amount of time has past. You could write code that performs animation by handling the Timer class’s timer event, setting the time interval to a small one (some fraction of a second). For more information about using the Timer class, see</em></p>
+<p><em>&quot;Controlling time intervals&quot; on page 4</em></p>
 <p><em>.</em></p>
 <p>In the following example, a circle Sprite instance, named circle, is created on the Stage. When the user clicks the circle, a scripted animation sequence begins, causing circle to fade (its alpha property is decreased) until it is completely transparent:</p>
-<p>import flash.display.Sprite; import flash.events.Event; import flash.events.MouseEvent;</p>
-<p>// draw a circle and add it to the display list var circle:Sprite = new Sprite(); circle.graphics.beginFill(0x990000); circle.graphics.drawCircle(50, 50, 50); circle.graphics.endFill();</p>
+<p>import openfl.display.Sprite;
+import openfl.events.Event;
+import openfl.events.MouseEvent;</p>
+<p>// draw a circle and add it to the display list
+var circle:Sprite = new Sprite();
+circle.graphics.beginFill(0x990000);
+circle.graphics.drawCircle(50, 50, 50);
+circle.graphics.endFill();</p>
 <p>addChild(circle);</p>
 <p>// When this animation starts, this function is called every frame.</p>
 <p>// The change made by this function (updated to the screen every</p>
-<p>// frame) is what causes the animation to occur. function fadeCircle(event:Event):void</p>
+<p>// frame) is what causes the animation to occur.</p>
+<p>function fadeCircle(event:Event):void</p>
 <p>{</p>
 <p>circle.alpha -= .05;</p>
 <p>if (circle.alpha &lt;= 0)</p>
@@ -1027,7 +1143,7 @@
 <p>circle.addEventListener(Event.ENTER_FRAME, fadeCircle);</p>
 <p>}</p>
 <p>circle.addEventListener(MouseEvent.CLICK, startAnimation);</p>
-<p>When the user clicks the circle, the function fadeCircle() is subscribed as a listener of the enterFrame event, meaning it begins to be called once per frame. That function fades circle by changing its alpha property, so once per frame the circle&#x2019;s alpha decreases by .05 (5 percent) and the screen is updated. Eventually, when the alpha value is 0 (circle is completely transparent), the fadeCircle() function is removed as an event listener, ending the animation.</p>
+<p>When the user clicks the circle, the function fadeCircle() is subscribed as a listener of the enterFrame event, meaning it begins to be called once per frame. That function fades circle by changing its alpha property, so once per frame the circle’s alpha decreases by .05 (5 percent) and the screen is updated. Eventually, when the alpha value is 0 (circle is completely transparent), the fadeCircle() function is removed as an event listener, ending the animation.</p>
 <p>The same code could be used, for example, to create animated motion instead of fading. By substituting a different property for alpha in the function that is an enterFrame event listener, that property will be animated instead. For example, changing this line</p>
 <p>circle.alpha -= .05;</p>
 <p>to this code</p>
@@ -1076,12 +1192,56 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Animating objects","level":"1.3.6","depth":2,"next":{"title":"Loading display content dynamically","level":"1.3.7","depth":2,"path":"display-programming/loading-display-content-dynamically/README.md","ref":"display-programming/loading-display-content-dynamically/README.md","articles":[{"title":"Loading display objects","level":"1.3.7.1","depth":3,"path":"display-programming/loading-display-content-dynamically/loading-display-objects.md","ref":"display-programming/loading-display-content-dynamically/loading-display-objects.md","articles":[]},{"title":"Monitoring loading progress","level":"1.3.7.2","depth":3,"path":"display-programming/loading-display-content-dynamically/monitoring-loading-progress.md","ref":"display-programming/loading-display-content-dynamically/monitoring-loading-progress.md","articles":[]},{"title":"Specifying loading context","level":"1.3.7.3","depth":3,"path":"display-programming/loading-display-content-dynamically/specifying-loading-context.md","ref":"display-programming/loading-display-content-dynamically/specifying-loading-context.md","articles":[]}]},"previous":{"title":"Masking display objects","level":"1.3.5.9","depth":3,"path":"display-programming/manipulating-display-objects/masking-display-objects.md","ref":"display-programming/manipulating-display-objects/masking-display-objects.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"display-programming/animating-objects.md","mtime":"2023-01-31T16:17:42.712Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-01-31T16:18:16.478Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Animating objects","level":"1.3.6","depth":2,"next":{"title":"Loading display content dynamically","level":"1.3.7","depth":2,"path":"display-programming/loading-display-content-dynamically/README.md","ref":"display-programming/loading-display-content-dynamically/README.md","articles":[{"title":"Loading display objects","level":"1.3.7.1","depth":3,"path":"display-programming/loading-display-content-dynamically/loading-display-objects.md","ref":"display-programming/loading-display-content-dynamically/loading-display-objects.md","articles":[]},{"title":"Monitoring loading progress","level":"1.3.7.2","depth":3,"path":"display-programming/loading-display-content-dynamically/monitoring-loading-progress.md","ref":"display-programming/loading-display-content-dynamically/monitoring-loading-progress.md","articles":[]},{"title":"Specifying loading context","level":"1.3.7.3","depth":3,"path":"display-programming/loading-display-content-dynamically/specifying-loading-context.md","ref":"display-programming/loading-display-content-dynamically/specifying-loading-context.md","articles":[]}]},"previous":{"title":"Masking display objects","level":"1.3.5.9","depth":3,"path":"display-programming/manipulating-display-objects/masking-display-objects.md","ref":"display-programming/manipulating-display-objects/masking-display-objects.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"display-programming/animating-objects.md","mtime":"2024-01-16T06:43:11.678Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-01-16T06:43:31.976Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
     
@@ -1099,10 +1259,6 @@
     
         
         <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>The Bitmap and BitmapData classes · GitBook</title>
+        <title>The Bitmap and BitmapData classes · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="generator" content="HonKit 5.1.4">
         
         
         
@@ -17,7 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
                 
             
                 
@@ -66,7 +65,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -955,14 +954,124 @@
             
         </li>
     
+        <li class="chapter " data-level="1.8" data-path="../working-with-sound/">
+            
+                <a href="../working-with-sound/">
+            
+                    
+                    Chapter 24: Working with sound
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../working-with-sound/basics-of-working-with-sound.html">
+            
+                <a href="../working-with-sound/basics-of-working-with-sound.html">
+            
+                    
+                    Basics of working with sound
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../working-with-sound/understanding-the-sound-architecture.html">
+            
+                <a href="../working-with-sound/understanding-the-sound-architecture.html">
+            
+                    
+                    Understanding the sound architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../working-with-sound/loading-external-sound-files.html">
+            
+                <a href="../working-with-sound/loading-external-sound-files.html">
+            
+                    
+                    Loading external sound files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../working-with-sound/working-with-sound-assets.html">
+            
+                <a href="../working-with-sound/working-with-sound-assets.html">
+            
+                    
+                    Working with sound assets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../working-with-sound/working-with-dynamically-generated-audio.html">
+            
+                <a href="../working-with-sound/working-with-dynamically-generated-audio.html">
+            
+                    
+                    Working with dynamically generated audio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../working-with-sound/playing-sounds.html">
+            
+                <a href="../working-with-sound/playing-sounds.html">
+            
+                    
+                    Playing sounds
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../working-with-sound/controlling-sound-volume-and-panning.html">
+            
+                <a href="../working-with-sound/controlling-sound-volume-and-panning.html">
+            
+                    
+                    Controlling sound volume and panning
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
     
 
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -1019,7 +1128,7 @@
 <h2 id="understanding-the-bitmapdata-class">Understanding the BitmapData class </h2>
 <p>The BitmapData class, which is in the openfl.display package, can be likened to a photographic snapshot of the pixels contained within a loaded or dynamically created bitmap image. This snapshot is represented by an array of pixel data within the object. The BitmapData class also contains a series of built-in methods that are useful for creation and manipulation of pixel data.</p>
 <p>To instantiate a BitmapData object, use the following code:</p>
-<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> myBitmap = <span class="hljs-keyword">new</span> BitmapData (width:Int, height:Int, transparent:Bool, fillColor:Int);
+<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> myBitmap = <span class="hljs-keyword">new</span> <span class="hljs-type">BitmapData</span> (width:<span class="hljs-type">Int</span>, height:<span class="hljs-type">Int</span>, transparent:<span class="hljs-type">Bool</span>, fillColor:<span class="hljs-type">Int</span>);
 </code></pre>
 <p>The <code>width</code> and <code>height</code> parameters specify the size of the bitmap. The maximum size of a bitmap is dependent on the operating system.</p>
 <!--
@@ -1027,10 +1136,10 @@ In AIR 1.5 and OpenFL 10, the maximum size for a BitmapData object is 8,191 pixe
 -->
 <p>The <code>transparent</code> parameter specifies whether the bitmap data includes an alpha channel (<code>true</code>) or not (<code>false</code>). The <code>fillColor</code> parameter is a 32-bit color value that specifies the background color, as well as the transparency value (if it has been set to <code>true</code>). The following example creates a BitmapData object with an orange background that is 50 percent transparent:</p>
 <pre><code>var myBitmap = new BitmapData (150, 150, true, 0x80FF3300);
-</code></pre><p>To render a newly created BitmapData object to the screen, assign it to or wrap it in a Bitmap instance. To do this, you can either pass the BitmapData object as a parameter of the Bitmap object&#x2019;s constructor, or you can assign it to the <code>bitmapData</code> property of an existing Bitmap instance. You must also add the Bitmap instance to the display list by calling the <code>addChild()</code> or <code>addChildAt()</code> methods of the display object container that will contain the Bitmap instance. For more information on working with the display list, see <a href="../display-programming/working-with-display-objects/adding-display-objects-to-the-display-list.html">Adding display objects to the display list</a>.</p>
+</code></pre><p>To render a newly created BitmapData object to the screen, assign it to or wrap it in a Bitmap instance. To do this, you can either pass the BitmapData object as a parameter of the Bitmap object’s constructor, or you can assign it to the <code>bitmapData</code> property of an existing Bitmap instance. You must also add the Bitmap instance to the display list by calling the <code>addChild()</code> or <code>addChildAt()</code> methods of the display object container that will contain the Bitmap instance. For more information on working with the display list, see <a href="../display-programming/working-with-display-objects/adding-display-objects-to-the-display-list.html">Adding display objects to the display list</a>.</p>
 <p>The following example creates a BitmapData object with a red fill, and displays it in a Bitmap instance:</p>
-<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> myBitmapDataObject = <span class="hljs-keyword">new</span> BitmapData (<span class="hljs-number">150</span>, <span class="hljs-number">150</span>, <span class="hljs-literal">false</span>, <span class="hljs-number">0xFF0000</span>);
-<span class="hljs-keyword">var</span> myImage = <span class="hljs-keyword">new</span> Bitmap (myBitmapDataObject);
+<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> myBitmapDataObject = <span class="hljs-keyword">new</span> <span class="hljs-type">BitmapData</span> (<span class="hljs-number">150</span>, <span class="hljs-number">150</span>, <span class="hljs-literal">false</span>, <span class="hljs-number">0xFF0000</span>);
+<span class="hljs-keyword">var</span> myImage = <span class="hljs-keyword">new</span> <span class="hljs-type">Bitmap</span> (myBitmapDataObject);
 addChild (myImage);
 </code></pre>
 
@@ -1076,12 +1185,56 @@ addChild (myImage);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"The Bitmap and BitmapData classes","level":"1.6.1","depth":2,"next":{"title":"Manipulating pixels","level":"1.6.2","depth":2,"path":"working-with-bitmaps/manipulating-pixels.md","ref":"working-with-bitmaps/manipulating-pixels.md","articles":[]},"previous":{"title":"Chapter 5: Working with bitmaps","level":"1.6","depth":1,"path":"working-with-bitmaps/README.md","ref":"working-with-bitmaps/README.md","articles":[{"title":"The Bitmap and BitmapData classes","level":"1.6.1","depth":2,"path":"working-with-bitmaps/the-bitmap-and-bitmapdata-classes.md","ref":"working-with-bitmaps/the-bitmap-and-bitmapdata-classes.md","articles":[]},{"title":"Manipulating pixels","level":"1.6.2","depth":2,"path":"working-with-bitmaps/manipulating-pixels.md","ref":"working-with-bitmaps/manipulating-pixels.md","articles":[]},{"title":"Copying bitmap data","level":"1.6.3","depth":2,"path":"working-with-bitmaps/copying-bitmap-data.md","ref":"working-with-bitmaps/copying-bitmap-data.md","articles":[]},{"title":"Compressing bitmap data","level":"1.6.4","depth":2,"path":"working-with-bitmaps/compressing-bitmap-data.md","ref":"working-with-bitmaps/compressing-bitmap-data.md","articles":[]},{"title":"Making textures with noise functions","level":"1.6.5","depth":2,"path":"working-with-bitmaps/making-textures-with-noise-functions.md","ref":"working-with-bitmaps/making-textures-with-noise-functions.md","articles":[]},{"title":"Scrolling bitmaps","level":"1.6.6","depth":2,"path":"working-with-bitmaps/scrolling-bitmaps.md","ref":"working-with-bitmaps/scrolling-bitmaps.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"working-with-bitmaps/the-bitmap-and-bitmapdata-classes.md","mtime":"2023-01-31T16:17:42.720Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-01-31T16:18:16.478Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"The Bitmap and BitmapData classes","level":"1.6.1","depth":2,"next":{"title":"Manipulating pixels","level":"1.6.2","depth":2,"path":"working-with-bitmaps/manipulating-pixels.md","ref":"working-with-bitmaps/manipulating-pixels.md","articles":[]},"previous":{"title":"Chapter 5: Working with bitmaps","level":"1.6","depth":1,"path":"working-with-bitmaps/README.md","ref":"working-with-bitmaps/README.md","articles":[{"title":"The Bitmap and BitmapData classes","level":"1.6.1","depth":2,"path":"working-with-bitmaps/the-bitmap-and-bitmapdata-classes.md","ref":"working-with-bitmaps/the-bitmap-and-bitmapdata-classes.md","articles":[]},{"title":"Manipulating pixels","level":"1.6.2","depth":2,"path":"working-with-bitmaps/manipulating-pixels.md","ref":"working-with-bitmaps/manipulating-pixels.md","articles":[]},{"title":"Copying bitmap data","level":"1.6.3","depth":2,"path":"working-with-bitmaps/copying-bitmap-data.md","ref":"working-with-bitmaps/copying-bitmap-data.md","articles":[]},{"title":"Compressing bitmap data","level":"1.6.4","depth":2,"path":"working-with-bitmaps/compressing-bitmap-data.md","ref":"working-with-bitmaps/compressing-bitmap-data.md","articles":[]},{"title":"Making textures with noise functions","level":"1.6.5","depth":2,"path":"working-with-bitmaps/making-textures-with-noise-functions.md","ref":"working-with-bitmaps/making-textures-with-noise-functions.md","articles":[]},{"title":"Scrolling bitmaps","level":"1.6.6","depth":2,"path":"working-with-bitmaps/scrolling-bitmaps.md","ref":"working-with-bitmaps/scrolling-bitmaps.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"working-with-bitmaps/the-bitmap-and-bitmapdata-classes.md","mtime":"2024-01-16T06:43:11.682Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-01-16T06:43:31.976Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
     
@@ -1099,10 +1252,6 @@ addChild (myImage);
     
         
         <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

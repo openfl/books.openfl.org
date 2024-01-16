@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Using Matrix objects · GitBook</title>
+        <title>Using Matrix objects · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="generator" content="HonKit 5.1.4">
         
         
         
@@ -17,7 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
                 
             
                 
@@ -66,7 +65,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -955,14 +954,124 @@
             
         </li>
     
+        <li class="chapter " data-level="1.8" data-path="../working-with-sound/">
+            
+                <a href="../working-with-sound/">
+            
+                    
+                    Chapter 24: Working with sound
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../working-with-sound/basics-of-working-with-sound.html">
+            
+                <a href="../working-with-sound/basics-of-working-with-sound.html">
+            
+                    
+                    Basics of working with sound
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../working-with-sound/understanding-the-sound-architecture.html">
+            
+                <a href="../working-with-sound/understanding-the-sound-architecture.html">
+            
+                    
+                    Understanding the sound architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../working-with-sound/loading-external-sound-files.html">
+            
+                <a href="../working-with-sound/loading-external-sound-files.html">
+            
+                    
+                    Loading external sound files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../working-with-sound/working-with-sound-assets.html">
+            
+                <a href="../working-with-sound/working-with-sound-assets.html">
+            
+                    
+                    Working with sound assets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../working-with-sound/working-with-dynamically-generated-audio.html">
+            
+                <a href="../working-with-sound/working-with-dynamically-generated-audio.html">
+            
+                    
+                    Working with dynamically generated audio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../working-with-sound/playing-sounds.html">
+            
+                <a href="../working-with-sound/playing-sounds.html">
+            
+                    
+                    Playing sounds
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../working-with-sound/controlling-sound-volume-and-panning.html">
+            
+                <a href="../working-with-sound/controlling-sound-volume-and-panning.html">
+            
+                    
+                    Controlling sound volume and panning
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
     
 
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -1002,8 +1111,8 @@
                                 
                                 <h1 id="using-matrix-objects">Using Matrix objects </h1>
 <p>The <a href="http://api.openfl.org/openfl/geom/Matrix.html" target="_blank">Matrix</a> class represents a transformation matrix that determines how to map points from one coordinate space to another. You can perform various graphical transformations on a display object by setting the properties of a Matrix object, applying that Matrix object to the <code>matrix</code> property of a Transform object, and then applying that Transform object as the <code>transform</code> property of the display object. These transformation functions include translation (<em>x</em> and <em>y</em> repositioning), rotation, scaling, and skewing.</p>
-<p>Although you could define a matrix by directly adjusting the properties (a, b, c, d, tx, ty) of a Matrix object, it is easier to use the <code>createBox()</code> method. This method includes parameters that let you directly define the scaling, rotation, and translation effects of the resulting matrix. For example, the following code creates a Matrix object that scales an object horizontally by 2.0, scales it vertically by 3.0, rotates it by 45&#xB0;, moving (translating) it 10 pixels to the right, and moving it 20 pixels down:</p>
-<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> matrix = <span class="hljs-keyword">new</span> Matrix ();
+<p>Although you could define a matrix by directly adjusting the properties (a, b, c, d, tx, ty) of a Matrix object, it is easier to use the <code>createBox()</code> method. This method includes parameters that let you directly define the scaling, rotation, and translation effects of the resulting matrix. For example, the following code creates a Matrix object that scales an object horizontally by 2.0, scales it vertically by 3.0, rotates it by 45°, moving (translating) it 10 pixels to the right, and moving it 20 pixels down:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> matrix = <span class="hljs-keyword">new</span> <span class="hljs-type">Matrix</span> ();
 <span class="hljs-keyword">var</span> scaleX = <span class="hljs-number">2.0</span>;
 <span class="hljs-keyword">var</span> scaleY = <span class="hljs-number">3.0</span>;
 <span class="hljs-keyword">var</span> rotation = <span class="hljs-number">2</span> * Math.PI * (<span class="hljs-number">45</span> / <span class="hljs-number">360</span>);
@@ -1011,9 +1120,9 @@
 <span class="hljs-keyword">var</span> ty = <span class="hljs-number">20</span>;
 matrix.createBox (scaleX, scaleY, rotation, tx, ty);
 </code></pre>
-<p>You can also adjust the scaling, rotation, and translation effects of a Matrix object by using the <code>scale()</code>, <code>rotate()</code>, and <code>translate()</code> methods. Note that these methods combine with the values of the existing Matrix object. For example, the following code sets a Matrix object that scales an object by a factor of 4 and rotates it 60&#xB0;, since the <code>scale()</code> and <code>rotate()</code> methods are called twice:</p>
-<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> matrix = <span class="hljs-keyword">new</span> Matrix ();
-<span class="hljs-keyword">var</span> rotation = <span class="hljs-number">2</span> * Math.PI * (<span class="hljs-number">30</span> / <span class="hljs-number">360</span>); <span class="hljs-comment">// 30&#xB0;</span>
+<p>You can also adjust the scaling, rotation, and translation effects of a Matrix object by using the <code>scale()</code>, <code>rotate()</code>, and <code>translate()</code> methods. Note that these methods combine with the values of the existing Matrix object. For example, the following code sets a Matrix object that scales an object by a factor of 4 and rotates it 60°, since the <code>scale()</code> and <code>rotate()</code> methods are called twice:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> matrix = <span class="hljs-keyword">new</span> <span class="hljs-type">Matrix</span> ();
+<span class="hljs-keyword">var</span> rotation = <span class="hljs-number">2</span> * Math.PI * (<span class="hljs-number">30</span> / <span class="hljs-number">360</span>); <span class="hljs-comment">// 30°</span>
 <span class="hljs-keyword">var</span> scaleFactor = <span class="hljs-number">2</span>;
 matrix.scale (scaleFactor, scaleFactor);
 matrix.rotate (rotation);
@@ -1023,21 +1132,21 @@ matrix.rotate (rotation);
 myDisplayObject.transform.matrix = matrix;
 </code></pre>
 <p>To apply a skew transformation to a Matrix object, adjust its <code>b</code> or <code>c</code> property. Adjusting the <code>b</code> property skews the matrix vertically, and adjusting the <code>c</code> property skews the matrix horizontally. The following code skews the <code>myMatrix</code> Matrix object vertically by a factor of 2:</p>
-<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> skewMatrix = <span class="hljs-keyword">new</span> Matrix ();
+<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> skewMatrix = <span class="hljs-keyword">new</span> <span class="hljs-type">Matrix</span> ();
 skewMatrix.b = Math.tan (<span class="hljs-number">2</span>);
 myMatrix.concat (skewMatrix);
 </code></pre>
 <p>You can apply a Matrix transformation to the <code>transform</code> property of a display object. For example, the following code applies a matrix transformation to a display object named <code>myDisplayObject</code>:</p>
 <pre><code class="lang-haxe"><span class="hljs-keyword">var</span> matrix = myDisplayObject.transform.matrix;
 <span class="hljs-keyword">var</span> scaleFactor = <span class="hljs-number">2</span>;
-<span class="hljs-keyword">var</span> rotation = <span class="hljs-number">2</span> * Math.PI * (<span class="hljs-number">60</span> / <span class="hljs-number">360</span>); <span class="hljs-comment">// 60&#xB0;</span>
+<span class="hljs-keyword">var</span> rotation = <span class="hljs-number">2</span> * Math.PI * (<span class="hljs-number">60</span> / <span class="hljs-number">360</span>); <span class="hljs-comment">// 60°</span>
 matrix.scale (scaleFactor, scaleFactor);
 matrix.rotate (rotation);
 
 myDisplayObject.transform.matrix = matrix;
 </code></pre>
-<p>The first line sets a Matrix object to the existing transformation matrix used by the <code>myDisplayObject</code> display object (the <code>matrix</code> property of the transformation property of the <code>myDisplayObject</code> display object). This way, the Matrix class methods that you call have a cumulative effect on the display object&#x2019;s existing position, scale, and rotation.</p>
-<p><strong><em>Note:</em> </strong><em>The ColorTransform class is also included in the openfl.geom package. This class is used to set the <code>colorTransform</code> property of a Transform object. Since it does not apply any geometrical transformation, it is not discussed, in detail, here. For more information, see the</em> <a href="http://api.openfl.org/openfl/geom/ColorTransform.html" target="_blank"><em>ColorTransform</em></a> <em>class in the</em> <a href="http://api.openfl.org/openfl/geom/ColorTransform.html" target="_blank"><em>API Reference</em></a><em>.</em></p>
+<p>The first line sets a Matrix object to the existing transformation matrix used by the <code>myDisplayObject</code> display object (the <code>matrix</code> property of the transformation property of the <code>myDisplayObject</code> display object). This way, the Matrix class methods that you call have a cumulative effect on the display object’s existing position, scale, and rotation.</p>
+<p><strong><em>Note:</em></strong> <em>The ColorTransform class is also included in the openfl.geom package. This class is used to set the <code>colorTransform</code> property of a Transform object. Since it does not apply any geometrical transformation, it is not discussed, in detail, here. For more information, see the</em> <a href="http://api.openfl.org/openfl/geom/ColorTransform.html" target="_blank"><em>ColorTransform</em></a> <em>class in the</em> <a href="http://api.openfl.org/openfl/geom/ColorTransform.html" target="_blank"><em>API Reference</em></a><em>.</em></p>
 
                                 
                                 </section>
@@ -1081,12 +1190,56 @@ myDisplayObject.transform.matrix = matrix;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Using Matrix objects","level":"1.4.4","depth":2,"next":{"title":"Chapter 4: Using the drawing API","level":"1.5","depth":1,"path":"using-the-drawing-api/README.md","ref":"using-the-drawing-api/README.md","articles":[{"title":"Basics of the drawing API","level":"1.5.1","depth":2,"path":"using-the-drawing-api/basics-of-the-drawing-api.md","ref":"using-the-drawing-api/basics-of-the-drawing-api.md","articles":[]},{"title":"Understanding the Graphics class","level":"1.5.2","depth":2,"path":"using-the-drawing-api/understanding-the-graphics-class.md","ref":"using-the-drawing-api/understanding-the-graphics-class.md","articles":[]},{"title":"Drawing lines and curves","level":"1.5.3","depth":2,"path":"using-the-drawing-api/drawing-lines-and-curves.md","ref":"using-the-drawing-api/drawing-lines-and-curves.md","articles":[]},{"title":"Drawing shapes using built-in methods","level":"1.5.4","depth":2,"path":"using-the-drawing-api/drawing-shapes-using-built-in-methods.md","ref":"using-the-drawing-api/drawing-shapes-using-built-in-methods.md","articles":[]},{"title":"Creating gradient lines and fills","level":"1.5.5","depth":2,"path":"using-the-drawing-api/creating-gradient-lines-and-fills.md","ref":"using-the-drawing-api/creating-gradient-lines-and-fills.md","articles":[]},{"title":"Using the Math class with drawing methods","level":"1.5.6","depth":2,"path":"using-the-drawing-api/using-the-math-class-with-drawing-methods.md","ref":"using-the-drawing-api/using-the-math-class-with-drawing-methods.md","articles":[]},{"title":"Animating with the drawing API","level":"1.5.7","depth":2,"path":"using-the-drawing-api/animating-with-the-drawing-api.md","ref":"using-the-drawing-api/animating-with-the-drawing-api.md","articles":[]},{"title":"Advanced use of the drawing API","level":"1.5.8","depth":2,"path":"using-the-drawing-api/advanced-use-of-the-drawing-api/README.md","ref":"using-the-drawing-api/advanced-use-of-the-drawing-api/README.md","articles":[{"title":"Drawing paths","level":"1.5.8.1","depth":3,"path":"using-the-drawing-api/advanced-use-of-the-drawing-api/drawing-paths.md","ref":"using-the-drawing-api/advanced-use-of-the-drawing-api/drawing-paths.md","articles":[]},{"title":"Defining winding rules","level":"1.5.8.2","depth":3,"path":"using-the-drawing-api/advanced-use-of-the-drawing-api/defining-winding-rules.md","ref":"using-the-drawing-api/advanced-use-of-the-drawing-api/defining-winding-rules.md","articles":[]},{"title":"Using graphics data classes","level":"1.5.8.3","depth":3,"path":"using-the-drawing-api/advanced-use-of-the-drawing-api/using-graphics-data-classes.md","ref":"using-the-drawing-api/advanced-use-of-the-drawing-api/using-graphics-data-classes.md","articles":[]},{"title":"About using drawTriangles()","level":"1.5.8.4","depth":3,"path":"using-the-drawing-api/advanced-use-of-the-drawing-api/about-using-drawtriangles.md","ref":"using-the-drawing-api/advanced-use-of-the-drawing-api/about-using-drawtriangles.md","articles":[]}]}]},"previous":{"title":"Using Rectangle objects","level":"1.4.3","depth":2,"path":"working-with-geometry/using-rectangle-objects.md","ref":"working-with-geometry/using-rectangle-objects.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"working-with-geometry/using-matrix-objects.md","mtime":"2023-01-31T16:17:42.720Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-01-31T16:18:16.478Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Using Matrix objects","level":"1.4.4","depth":2,"next":{"title":"Chapter 4: Using the drawing API","level":"1.5","depth":1,"path":"using-the-drawing-api/README.md","ref":"using-the-drawing-api/README.md","articles":[{"title":"Basics of the drawing API","level":"1.5.1","depth":2,"path":"using-the-drawing-api/basics-of-the-drawing-api.md","ref":"using-the-drawing-api/basics-of-the-drawing-api.md","articles":[]},{"title":"Understanding the Graphics class","level":"1.5.2","depth":2,"path":"using-the-drawing-api/understanding-the-graphics-class.md","ref":"using-the-drawing-api/understanding-the-graphics-class.md","articles":[]},{"title":"Drawing lines and curves","level":"1.5.3","depth":2,"path":"using-the-drawing-api/drawing-lines-and-curves.md","ref":"using-the-drawing-api/drawing-lines-and-curves.md","articles":[]},{"title":"Drawing shapes using built-in methods","level":"1.5.4","depth":2,"path":"using-the-drawing-api/drawing-shapes-using-built-in-methods.md","ref":"using-the-drawing-api/drawing-shapes-using-built-in-methods.md","articles":[]},{"title":"Creating gradient lines and fills","level":"1.5.5","depth":2,"path":"using-the-drawing-api/creating-gradient-lines-and-fills.md","ref":"using-the-drawing-api/creating-gradient-lines-and-fills.md","articles":[]},{"title":"Using the Math class with drawing methods","level":"1.5.6","depth":2,"path":"using-the-drawing-api/using-the-math-class-with-drawing-methods.md","ref":"using-the-drawing-api/using-the-math-class-with-drawing-methods.md","articles":[]},{"title":"Animating with the drawing API","level":"1.5.7","depth":2,"path":"using-the-drawing-api/animating-with-the-drawing-api.md","ref":"using-the-drawing-api/animating-with-the-drawing-api.md","articles":[]},{"title":"Advanced use of the drawing API","level":"1.5.8","depth":2,"path":"using-the-drawing-api/advanced-use-of-the-drawing-api/README.md","ref":"using-the-drawing-api/advanced-use-of-the-drawing-api/README.md","articles":[{"title":"Drawing paths","level":"1.5.8.1","depth":3,"path":"using-the-drawing-api/advanced-use-of-the-drawing-api/drawing-paths.md","ref":"using-the-drawing-api/advanced-use-of-the-drawing-api/drawing-paths.md","articles":[]},{"title":"Defining winding rules","level":"1.5.8.2","depth":3,"path":"using-the-drawing-api/advanced-use-of-the-drawing-api/defining-winding-rules.md","ref":"using-the-drawing-api/advanced-use-of-the-drawing-api/defining-winding-rules.md","articles":[]},{"title":"Using graphics data classes","level":"1.5.8.3","depth":3,"path":"using-the-drawing-api/advanced-use-of-the-drawing-api/using-graphics-data-classes.md","ref":"using-the-drawing-api/advanced-use-of-the-drawing-api/using-graphics-data-classes.md","articles":[]},{"title":"About using drawTriangles()","level":"1.5.8.4","depth":3,"path":"using-the-drawing-api/advanced-use-of-the-drawing-api/about-using-drawtriangles.md","ref":"using-the-drawing-api/advanced-use-of-the-drawing-api/about-using-drawtriangles.md","articles":[]}]}]},"previous":{"title":"Using Rectangle objects","level":"1.4.3","depth":2,"path":"working-with-geometry/using-rectangle-objects.md","ref":"working-with-geometry/using-rectangle-objects.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"working-with-geometry/using-matrix-objects.md","mtime":"2024-01-16T06:43:11.682Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-01-16T06:43:31.976Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
     
@@ -1104,10 +1257,6 @@ myDisplayObject.transform.matrix = matrix;
     
         
         <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

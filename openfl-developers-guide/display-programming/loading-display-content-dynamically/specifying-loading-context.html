@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Specifying loading context · GitBook</title>
+        <title>Specifying loading context · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="generator" content="HonKit 5.1.4">
         
         
         
@@ -17,7 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
                 
             
                 
@@ -66,7 +65,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -955,14 +954,124 @@
             
         </li>
     
+        <li class="chapter " data-level="1.8" data-path="../../working-with-sound/">
+            
+                <a href="../../working-with-sound/">
+            
+                    
+                    Chapter 24: Working with sound
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../working-with-sound/basics-of-working-with-sound.html">
+            
+                <a href="../../working-with-sound/basics-of-working-with-sound.html">
+            
+                    
+                    Basics of working with sound
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../working-with-sound/understanding-the-sound-architecture.html">
+            
+                <a href="../../working-with-sound/understanding-the-sound-architecture.html">
+            
+                    
+                    Understanding the sound architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../../working-with-sound/loading-external-sound-files.html">
+            
+                <a href="../../working-with-sound/loading-external-sound-files.html">
+            
+                    
+                    Loading external sound files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../../working-with-sound/working-with-sound-assets.html">
+            
+                <a href="../../working-with-sound/working-with-sound-assets.html">
+            
+                    
+                    Working with sound assets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../../working-with-sound/working-with-dynamically-generated-audio.html">
+            
+                <a href="../../working-with-sound/working-with-dynamically-generated-audio.html">
+            
+                    
+                    Working with dynamically generated audio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../../working-with-sound/playing-sounds.html">
+            
+                <a href="../../working-with-sound/playing-sounds.html">
+            
+                    
+                    Playing sounds
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../../working-with-sound/controlling-sound-volume-and-panning.html">
+            
+                <a href="../../working-with-sound/controlling-sound-volume-and-panning.html">
+            
+                    
+                    Controlling sound volume and panning
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
     
 
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -1011,19 +1120,19 @@
 <li><code>securityDomain</code>: Use this property only when loading a project (not an image). Specify this for a project from a domain other than that of the file containing the Loader object. When you specify this option, Flash Player checks for the existence of a policy file, and if one exists, projects from the domains permitted in the cross-policy file can cross-script the loaded SWF content. You can specify openfl.system.SecurityDomain.currentDomain as this parameter.</li>
 <li><code>applicationDomain</code>: Use this property only when loading a SWF file written in Haxe or ActionScript 3.0 (not an image or a SWF file written in ActionScript 1.0 or 2.0). When loading the file, you can specify that the file be included in the same application domain as that of the Loader object, by setting the <code>applicationDomain</code> parameter to <code>openfl.system.ApplicationDomain.currentDomain</code>. By putting the loaded project in the same application domain, you can access its classes directly. This can be useful if you are loading a project that contains embedded media, which you can access via their associated class names. For more information, see <a href="../../working-with-application-domains/README.md">Working with application domains</a>.</li>
 </ul>
-<p>Here&#x2019;s an example of checking for a policy file when loading a bitmap from another domain:</p>
-<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> context = <span class="hljs-keyword">new</span> LoaderContext ();
+<p>Here’s an example of checking for a policy file when loading a bitmap from another domain:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> context = <span class="hljs-keyword">new</span> <span class="hljs-type">LoaderContext</span> ();
 context.checkPolicyFile = <span class="hljs-literal">true</span>;
-<span class="hljs-keyword">var</span> urlReq = <span class="hljs-keyword">new</span> URLRequest (<span class="hljs-string">&quot;http://www.[your_domain_here].com/photo11.jpg&quot;</span>);
-<span class="hljs-keyword">var</span> ldr = <span class="hljs-keyword">new</span> Loader ();
+<span class="hljs-keyword">var</span> urlReq = <span class="hljs-keyword">new</span> <span class="hljs-type">URLRequest</span> (<span class="hljs-string">&quot;http://www.[your_domain_here].com/photo11.jpg&quot;</span>);
+<span class="hljs-keyword">var</span> ldr = <span class="hljs-keyword">new</span> <span class="hljs-type">Loader</span> ();
 ldr.load (urlReq, context);
 </code></pre>
-<p>Here&#x2019;s an example of checking for a policy file when loading a SWF from another domain, in order to place the file in the same security sandbox as the Loader object. Additionally, the code adds the classes in the loaded project to the same application domain as that of the Loader object:</p>
-<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> context = <span class="hljs-keyword">new</span> LoaderContext ();
+<p>Here’s an example of checking for a policy file when loading a SWF from another domain, in order to place the file in the same security sandbox as the Loader object. Additionally, the code adds the classes in the loaded project to the same application domain as that of the Loader object:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> context = <span class="hljs-keyword">new</span> <span class="hljs-type">LoaderContext</span> ();
 context.securityDomain = SecurityDomain.currentDomain;
 context.applicationDomain = ApplicationDomain.currentDomain;
-<span class="hljs-keyword">var</span> urlReq = <span class="hljs-keyword">new</span> URLRequest (<span class="hljs-string">&quot;http://www.[your_domain_here].com/library.swf&quot;</span>);
-<span class="hljs-keyword">var</span> ldr = <span class="hljs-keyword">new</span> Loader ();
+<span class="hljs-keyword">var</span> urlReq = <span class="hljs-keyword">new</span> <span class="hljs-type">URLRequest</span> (<span class="hljs-string">&quot;http://www.[your_domain_here].com/library.swf&quot;</span>);
+<span class="hljs-keyword">var</span> ldr = <span class="hljs-keyword">new</span> <span class="hljs-type">Loader</span> ();
 ldr.load (urlReq, context);
 </code></pre>
 <p>For more information, see the <a href="http://api.openfl.org/openfl/system/LoaderContext.html" target="_blank">LoaderContext</a> class in the <a href="http://api.openfl.org/openfl/system/LoaderContext.html" target="_blank">API Reference</a>.</p>
@@ -1043,7 +1152,7 @@ The following example shows the code to use to load a SWF from the application p
 
 var loader:Loader = new Loader();
 
-var url:URLRequest = new URLRequest(&quot;swfs/SecondarySwf.swf&quot;);
+var url:URLRequest = new URLRequest("swfs/SecondarySwf.swf");
 
 var loaderContext:LoaderContext = new LoaderContext(false, ApplicationDomain.currentDomain, null);
 
@@ -1051,7 +1160,7 @@ loader.load(url, loaderContext);
 
 A project containing only assets and no code can be loaded from the application package or over a network. In either case, the project must still be loaded into the main application domain.
 
-For AIR versions prior to AIR 3.6, all code is stripped from SWFs other than the main application SWF during the compilation process. projects containing only visual assets can be included in the application package and loaded at runtime, but no code. If you attempt to load a SWF that contains Haxe code, an error occurs. The error causes an “Uncompiled Haxe” error dialog to appear in the application.
+For AIR versions prior to AIR 3.6, all code is stripped from SWFs other than the main application SWF during the compilation process. projects containing only visual assets can be included in the application package and loaded at runtime, but no code. If you attempt to load a SWF that contains Haxe code, an error occurs. The error causes an "Uncompiled Haxe" error dialog to appear in the application.
 
 See also
 
@@ -1061,13 +1170,13 @@ See also
 
 OpenFL 9 and later, Adobe AIR 1.0 and later, and requires Flash Professional CS5.5
 
-To help with remote shared library (RSL) preloading, Flash Professional CS5.5 introduces the fl.display.ProLoader and fl.display.ProLoaderInfo classes. These classes mirror the flash.display.Loader and flash.display.LoaderInfo classes but provide a more consistent loading experience.
+To help with remote shared library (RSL) preloading, Flash Professional CS5.5 introduces the fl.display.ProLoader and fl.display.ProLoaderInfo classes. These classes mirror the openfl.display.Loader and openfl.display.LoaderInfo classes but provide a more consistent loading experience.
 
 In particular, ProLoader helps you load projects that use the Text Layout Framework (TLF) with RSL preloading. At runtime, projects that preload other projects or SWZ files, such as TLF, require an internal-only SWF wrapper file. The extra layer of complexity imposed by the SWF wrapper file can result in unwanted behavior. ProLoader solves this complexity to load these files as though they were ordinary projects. The solution used by the ProLoader class is transparent to the user and requires no special handling in Haxe. In addition, ProLoader loads ordinary SWF content correctly.
 
 In Flash Professional CS5.5 and later, you can safely replace all usages of the Loader class with the ProLoader class. Then, export your application to OpenFL 10.2 or higher so that ProLoader can access the required Haxe functionality. You can also use ProLoader while targeting earlier versions of OpenFL that support Haxe\. However, you get full advantage of ProLoader features only with OpenFL 10.2 or higher. Always use ProLoader when you use TLF in Flash Professional CS5.5 or later. ProLoader is not needed in environments other than Flash Professional.
 
-**_Important:_ **_For projects published in Flash Professional CS5.5 and later, you can always use the fl.display.ProLoader and fl.display.ProLoaderInfo classes instead of flash.display.Loader and flash.display.LoaderInfo._
+**_Important:_ **_For projects published in Flash Professional CS5.5 and later, you can always use the fl.display.ProLoader and fl.display.ProLoaderInfo classes instead of openfl.display.Loader and openfl.display.LoaderInfo._
 
 Issues addressed by the ProLoader class
 
@@ -1082,27 +1191,30 @@ Updating code to use ProLoader instead of Loader
 
 Because ProLoader mirrors the Loader class, you can easily switch the two classes in your code. The following example shows how to update existing code to use the new class:
 
-import flash.display.Loader; import flash.events.Event; var l:Loader = new Loader();
+import openfl.display.Loader;
+import openfl.events.Event;
+var l:Loader = new Loader();
 
 addChild(l);
 
-l.contentLoaderInfo.addEventListener(Event.COMPLETE, loadComplete); l.load(&quot;my.swf&quot;);
+l.contentLoaderInfo.addEventListener(Event.COMPLETE, loadComplete); l.load("my.swf");
 
-function loadComplete(e:Event) { trace(&#039;load complete!&#039;);
+function loadComplete(e:Event) {
+    trace('load complete!');
 
 }
 
 This code can be updated to use ProLoader as follows:
 
-import **fl.display.ProLoader**; import flash.events.Event;
+import **fl.display.ProLoader**; import openfl.events.Event;
 
 var l:**ProLoader** = new **ProLoader**();
 
 addChild(l);
 
-l.contentLoaderInfo.addEventListener(Event.COMPLETE, loadComplete); l.load(&quot;my.swf&quot;);
+l.contentLoaderInfo.addEventListener(Event.COMPLETE, loadComplete); l.load("my.swf");
 
-function loadComplete(e:Event) { trace(&#039;load complete!&#039;);
+function loadComplete(e:Event) { trace('load complete!');
 
 }
 -->
@@ -1148,12 +1260,56 @@ function loadComplete(e:Event) { trace(&#039;load complete!&#039;);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Specifying loading context","level":"1.3.7.3","depth":3,"next":{"title":"Chapter 3: Working with geometry","level":"1.4","depth":1,"path":"working-with-geometry/README.md","ref":"working-with-geometry/README.md","articles":[{"title":"Basics of geometry","level":"1.4.1","depth":2,"path":"working-with-geometry/basics-of-geometry.md","ref":"working-with-geometry/basics-of-geometry.md","articles":[]},{"title":"Using Point objects","level":"1.4.2","depth":2,"path":"working-with-geometry/using-point-objects.md","ref":"working-with-geometry/using-point-objects.md","articles":[]},{"title":"Using Rectangle objects","level":"1.4.3","depth":2,"path":"working-with-geometry/using-rectangle-objects.md","ref":"working-with-geometry/using-rectangle-objects.md","articles":[]},{"title":"Using Matrix objects","level":"1.4.4","depth":2,"path":"working-with-geometry/using-matrix-objects.md","ref":"working-with-geometry/using-matrix-objects.md","articles":[]}]},"previous":{"title":"Monitoring loading progress","level":"1.3.7.2","depth":3,"path":"display-programming/loading-display-content-dynamically/monitoring-loading-progress.md","ref":"display-programming/loading-display-content-dynamically/monitoring-loading-progress.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"display-programming/loading-display-content-dynamically/specifying-loading-context.md","mtime":"2023-01-31T16:17:42.712Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-01-31T16:18:16.478Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Specifying loading context","level":"1.3.7.3","depth":3,"next":{"title":"Chapter 3: Working with geometry","level":"1.4","depth":1,"path":"working-with-geometry/README.md","ref":"working-with-geometry/README.md","articles":[{"title":"Basics of geometry","level":"1.4.1","depth":2,"path":"working-with-geometry/basics-of-geometry.md","ref":"working-with-geometry/basics-of-geometry.md","articles":[]},{"title":"Using Point objects","level":"1.4.2","depth":2,"path":"working-with-geometry/using-point-objects.md","ref":"working-with-geometry/using-point-objects.md","articles":[]},{"title":"Using Rectangle objects","level":"1.4.3","depth":2,"path":"working-with-geometry/using-rectangle-objects.md","ref":"working-with-geometry/using-rectangle-objects.md","articles":[]},{"title":"Using Matrix objects","level":"1.4.4","depth":2,"path":"working-with-geometry/using-matrix-objects.md","ref":"working-with-geometry/using-matrix-objects.md","articles":[]}]},"previous":{"title":"Monitoring loading progress","level":"1.3.7.2","depth":3,"path":"display-programming/loading-display-content-dynamically/monitoring-loading-progress.md","ref":"display-programming/loading-display-content-dynamically/monitoring-loading-progress.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"display-programming/loading-display-content-dynamically/specifying-loading-context.md","mtime":"2024-01-16T06:43:11.678Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-01-16T06:43:31.976Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     
@@ -1171,10 +1327,6 @@ function loadComplete(e:Event) { trace(&#039;load complete!&#039;);
     
         
         <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         
