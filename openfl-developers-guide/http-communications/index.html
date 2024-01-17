@@ -3,7 +3,7 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <title>Basics of geometry · OpenFL Developer's Guide</title>
+        <title>Chapter 44: HTTP communications · OpenFL Developer's Guide</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 5.1.4">
@@ -56,10 +56,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="using-point-objects.html" />
+    <link rel="next" href="loading-external-data.html" />
     
     
-    <link rel="prev" href="./" />
+    <link rel="prev" href="../working-with-byte-arrays/reading-and-writing-a-byte-array.html" />
     
 
     </head>
@@ -547,9 +547,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="./">
+        <li class="chapter " data-level="1.4" data-path="../working-with-geometry/">
             
-                <a href="./">
+                <a href="../working-with-geometry/">
             
                     
                     Chapter 3: Working with geometry
@@ -561,9 +561,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.4.1" data-path="basics-of-geometry.html">
+        <li class="chapter " data-level="1.4.1" data-path="../working-with-geometry/basics-of-geometry.html">
             
-                <a href="basics-of-geometry.html">
+                <a href="../working-with-geometry/basics-of-geometry.html">
             
                     
                     Basics of geometry
@@ -574,9 +574,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="using-point-objects.html">
+        <li class="chapter " data-level="1.4.2" data-path="../working-with-geometry/using-point-objects.html">
             
-                <a href="using-point-objects.html">
+                <a href="../working-with-geometry/using-point-objects.html">
             
                     
                     Using Point objects
@@ -587,9 +587,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="using-rectangle-objects.html">
+        <li class="chapter " data-level="1.4.3" data-path="../working-with-geometry/using-rectangle-objects.html">
             
-                <a href="using-rectangle-objects.html">
+                <a href="../working-with-geometry/using-rectangle-objects.html">
             
                     
                     Using Rectangle objects
@@ -600,9 +600,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" data-path="using-matrix-objects.html">
+        <li class="chapter " data-level="1.4.4" data-path="../working-with-geometry/using-matrix-objects.html">
             
-                <a href="using-matrix-objects.html">
+                <a href="../working-with-geometry/using-matrix-objects.html">
             
                     
                     Using Matrix objects
@@ -1328,9 +1328,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.14" data-path="../http-communications/">
+        <li class="chapter active" data-level="1.14" data-path="./">
             
-                <a href="../http-communications/">
+                <a href="./">
             
                     
                     Chapter 44: HTTP communications
@@ -1342,9 +1342,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.14.1" data-path="../http-communications/loading-external-data.html">
+        <li class="chapter " data-level="1.14.1" data-path="loading-external-data.html">
             
-                <a href="../http-communications/loading-external-data.html">
+                <a href="loading-external-data.html">
             
                     
                     Loading external data
@@ -1390,7 +1390,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Basics of geometry</a>
+        <a href=".." >Chapter 44: HTTP communications</a>
     </h1>
 </div>
 
@@ -1405,25 +1405,22 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="basics-of-geometry">Basics of geometry </h1>
-<p>The openfl.geom package contains classes that define geometric objects such as points, rectangles, and transformation matrixes. These classes don’t necessarily provide functionality by themselves; however, they are used to define the properties of objects that are used in other classes.</p>
-<p>All the geometry classes are based around the notion that locations on the screen are represented as a two-dimensional plane. The screen is treated like a flat graph with a horizontal (x) axis and a vertical (y) axis. Any location (or <em>point</em>) on the screen can be represented as a pair of x and y values—the <em>coordinates</em> of that location.</p>
-<p>Every display object, including the Stage, has its own <em>coordinate space</em>. The coordinate space is an object’s own graph for plotting the locations of child display objects, drawings, and so on. The <em>origin</em> is at coordinate location 0, 0 (where the x and y-axes meet), and is placed at the upper-left corner of the display object. While this origin location is always true for the Stage, it is not necessarily true for other display objects. Values on the x-axis get bigger going toward the right, and smaller going toward the left. For locations to the left of the origin, the x coordinate is negative. However, contrary to traditional coordinate systems, OpenFL coordinate values on the y-axis get bigger going down the screen and smaller going up the screen. Values above the origin have a negative y coordinate value). Since the upper-left corner of the Stage is the origin of its coordinate space, most objects on the Stage have an x coordinate greater than 0 and smaller than the Stage width. And the same object has a y coordinate larger than 0 and smaller than the Stage height.</p>
-<p>You can use Point class instances to represent individual points in a coordinate space. You can create a Rectangle instance to represent a rectangular region in a coordinate space. For advanced users, you can use a Matrix instance to apply multiple or complex transformations to a display object. Many simple transformations, such as rotation, position, and scale changes, can be applied directly to a display object using that object’s properties. For more information on applying transformations using display object properties, see <a href="../manipulating-display-objects/README.md">Manipulating display objects</a>.</p>
-<h3 id="important-concepts-and-terms">Important concepts and terms</h3>
-<p>The following reference list contains important geometry terms:</p>
-<p><strong>Cartesian coordinates</strong> Coordinates are commonly written as a pair of number (like 5, 12 or 17, -23). The two numbers are the x coordinate and the y coordinate, respectively.</p>
-<p><strong>Coordinate space</strong> The graph of coordinates contained in a display object, on which its child elements are positioned.</p>
-<p><strong>Origin</strong> The point in a coordinate space where the x-axis meets the y-axis. This point has the coordinate 0, 0.</p>
-<p><strong>Point</strong> A single location in a coordinate space. In the 2-d coordinate system used in OpenFL, the location along the x-axis and the y-axis (the point’s coordinates) define the point.</p>
-<p><strong>Registration point</strong> In a display object, the origin (0, 0 coordinate) of its coordinate space.</p>
-<p><strong>Scale</strong> The size of an object relative to its original size. When used as a verb, to scale an object means to change its size by stretching or shrinking the object.</p>
-<p><strong>Translate</strong> To change a point’s coordinates from one coordinate space to another.</p>
-<p><strong>Transformation</strong> An adjustment to a visual characteristic of a graphic, such as rotating the object, altering its scale, skewing or distorting its shape, or altering its color.</p>
-<ol>
-<li><strong>axis</strong> The horizontal axis in the 2-d coordinate system used in OpenFL.</li>
-<li><strong>axis</strong> The vertical axis in the 2-d coordinate system used in OpenFL.</li>
-</ol>
+                                <h1 id="chapter-44-http-communications">Chapter 44: HTTP communications </h1>
+<p>OpenFL applications can communicate with
+HTTP-based servers to load data, images, video and to exchange messages.</p>
+<!-- TODO: uncomment when these documents are adapted for OpenFL
+- [Web service requests](./web-service-requests.md)
+- [Opening a URL in another application](./opening-a-url-in-another-application.md)-->
+<h2 id="more-help-topics">More Help topics</h2>
+<ul>
+<li><a href="https:/api.openfl.org/openfl/net/URLLoader.html" target="_blank">openfl.net.URLLoader</a></li>
+<li><a href="https:/api.openfl.org/openfl/net/URLStream.html" target="_blank">openfl.net.URLStream</a></li>
+<li><a href="https:/api.openfl.org/openfl/net/URLRequest.html" target="_blank">openfl.net.URLRequest</a></li>
+<li><a href="https:/api.openfl.org/openfl/net/URLRequestDefaults.html" target="_blank">openfl.net.URLRequestDefaults</a></li>
+<li><a href="https:/api.openfl.org/openfl/net/URLRequestHeader.html" target="_blank">openfl.net.URLRequestHeader</a></li>
+<li><a href="https:/api.openfl.org/openfl/net/URLRequestMethod.html" target="_blank">openfl.net.URLRequestMethod</a></li>
+<li><a href="https:/api.openfl.org/openfl/net/URLVariables.html" target="_blank">openfl.net.URLVariables</a></li>
+</ul>
 
                                 
                                 </section>
@@ -1451,12 +1448,12 @@
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Chapter 3: Working with geometry">
+                <a href="../working-with-byte-arrays/reading-and-writing-a-byte-array.html" class="navigation navigation-prev " aria-label="Previous page: Reading a writing a byte array">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="using-point-objects.html" class="navigation navigation-next " aria-label="Next page: Using Point objects">
+                <a href="loading-external-data.html" class="navigation navigation-next " aria-label="Next page: Loading external data">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1467,7 +1464,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Basics of geometry","level":"1.4.1","depth":2,"next":{"title":"Using Point objects","level":"1.4.2","depth":2,"path":"working-with-geometry/using-point-objects.md","ref":"working-with-geometry/using-point-objects.md","articles":[]},"previous":{"title":"Chapter 3: Working with geometry","level":"1.4","depth":1,"path":"working-with-geometry/README.md","ref":"working-with-geometry/README.md","articles":[{"title":"Basics of geometry","level":"1.4.1","depth":2,"path":"working-with-geometry/basics-of-geometry.md","ref":"working-with-geometry/basics-of-geometry.md","articles":[]},{"title":"Using Point objects","level":"1.4.2","depth":2,"path":"working-with-geometry/using-point-objects.md","ref":"working-with-geometry/using-point-objects.md","articles":[]},{"title":"Using Rectangle objects","level":"1.4.3","depth":2,"path":"working-with-geometry/using-rectangle-objects.md","ref":"working-with-geometry/using-rectangle-objects.md","articles":[]},{"title":"Using Matrix objects","level":"1.4.4","depth":2,"path":"working-with-geometry/using-matrix-objects.md","ref":"working-with-geometry/using-matrix-objects.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"OpenFL Developer's Guide","gitbook":"*"},"file":{"path":"working-with-geometry/basics-of-geometry.md","mtime":"2024-01-17T08:58:06.171Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-01-17T08:58:23.927Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Chapter 44: HTTP communications","level":"1.14","depth":1,"next":{"title":"Loading external data","level":"1.14.1","depth":2,"path":"http-communications/loading-external-data.md","ref":"http-communications/loading-external-data.md","articles":[]},"previous":{"title":"Reading a writing a byte array","level":"1.13.1","depth":2,"path":"working-with-byte-arrays/reading-and-writing-a-byte-array.md","ref":"working-with-byte-arrays/reading-and-writing-a-byte-array.md","articles":[]},"articles":[{"title":"Loading external data","level":"1.14.1","depth":2,"path":"http-communications/loading-external-data.md","ref":"http-communications/loading-external-data.md","articles":[]}],"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"OpenFL Developer's Guide","gitbook":"*"},"file":{"path":"http-communications/README.md","mtime":"2024-01-17T08:58:06.167Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-01-17T08:58:23.927Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

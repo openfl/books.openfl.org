@@ -3,7 +3,7 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <title>Basics of geometry · OpenFL Developer's Guide</title>
+        <title>Loading external data · OpenFL Developer's Guide</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 5.1.4">
@@ -55,8 +55,6 @@
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
-    
-    <link rel="next" href="using-point-objects.html" />
     
     
     <link rel="prev" href="./" />
@@ -547,9 +545,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="./">
+        <li class="chapter " data-level="1.4" data-path="../working-with-geometry/">
             
-                <a href="./">
+                <a href="../working-with-geometry/">
             
                     
                     Chapter 3: Working with geometry
@@ -561,9 +559,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.4.1" data-path="basics-of-geometry.html">
+        <li class="chapter " data-level="1.4.1" data-path="../working-with-geometry/basics-of-geometry.html">
             
-                <a href="basics-of-geometry.html">
+                <a href="../working-with-geometry/basics-of-geometry.html">
             
                     
                     Basics of geometry
@@ -574,9 +572,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="using-point-objects.html">
+        <li class="chapter " data-level="1.4.2" data-path="../working-with-geometry/using-point-objects.html">
             
-                <a href="using-point-objects.html">
+                <a href="../working-with-geometry/using-point-objects.html">
             
                     
                     Using Point objects
@@ -587,9 +585,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="using-rectangle-objects.html">
+        <li class="chapter " data-level="1.4.3" data-path="../working-with-geometry/using-rectangle-objects.html">
             
-                <a href="using-rectangle-objects.html">
+                <a href="../working-with-geometry/using-rectangle-objects.html">
             
                     
                     Using Rectangle objects
@@ -600,9 +598,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" data-path="using-matrix-objects.html">
+        <li class="chapter " data-level="1.4.4" data-path="../working-with-geometry/using-matrix-objects.html">
             
-                <a href="using-matrix-objects.html">
+                <a href="../working-with-geometry/using-matrix-objects.html">
             
                     
                     Using Matrix objects
@@ -1328,9 +1326,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.14" data-path="../http-communications/">
+        <li class="chapter " data-level="1.14" data-path="./">
             
-                <a href="../http-communications/">
+                <a href="./">
             
                     
                     Chapter 44: HTTP communications
@@ -1342,9 +1340,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.14.1" data-path="../http-communications/loading-external-data.html">
+        <li class="chapter active" data-level="1.14.1" data-path="loading-external-data.html">
             
-                <a href="../http-communications/loading-external-data.html">
+                <a href="loading-external-data.html">
             
                     
                     Loading external data
@@ -1390,7 +1388,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Basics of geometry</a>
+        <a href=".." >Loading external data</a>
     </h1>
 </div>
 
@@ -1405,25 +1403,497 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="basics-of-geometry">Basics of geometry </h1>
-<p>The openfl.geom package contains classes that define geometric objects such as points, rectangles, and transformation matrixes. These classes don’t necessarily provide functionality by themselves; however, they are used to define the properties of objects that are used in other classes.</p>
-<p>All the geometry classes are based around the notion that locations on the screen are represented as a two-dimensional plane. The screen is treated like a flat graph with a horizontal (x) axis and a vertical (y) axis. Any location (or <em>point</em>) on the screen can be represented as a pair of x and y values—the <em>coordinates</em> of that location.</p>
-<p>Every display object, including the Stage, has its own <em>coordinate space</em>. The coordinate space is an object’s own graph for plotting the locations of child display objects, drawings, and so on. The <em>origin</em> is at coordinate location 0, 0 (where the x and y-axes meet), and is placed at the upper-left corner of the display object. While this origin location is always true for the Stage, it is not necessarily true for other display objects. Values on the x-axis get bigger going toward the right, and smaller going toward the left. For locations to the left of the origin, the x coordinate is negative. However, contrary to traditional coordinate systems, OpenFL coordinate values on the y-axis get bigger going down the screen and smaller going up the screen. Values above the origin have a negative y coordinate value). Since the upper-left corner of the Stage is the origin of its coordinate space, most objects on the Stage have an x coordinate greater than 0 and smaller than the Stage width. And the same object has a y coordinate larger than 0 and smaller than the Stage height.</p>
-<p>You can use Point class instances to represent individual points in a coordinate space. You can create a Rectangle instance to represent a rectangular region in a coordinate space. For advanced users, you can use a Matrix instance to apply multiple or complex transformations to a display object. Many simple transformations, such as rotation, position, and scale changes, can be applied directly to a display object using that object’s properties. For more information on applying transformations using display object properties, see <a href="../manipulating-display-objects/README.md">Manipulating display objects</a>.</p>
-<h3 id="important-concepts-and-terms">Important concepts and terms</h3>
-<p>The following reference list contains important geometry terms:</p>
-<p><strong>Cartesian coordinates</strong> Coordinates are commonly written as a pair of number (like 5, 12 or 17, -23). The two numbers are the x coordinate and the y coordinate, respectively.</p>
-<p><strong>Coordinate space</strong> The graph of coordinates contained in a display object, on which its child elements are positioned.</p>
-<p><strong>Origin</strong> The point in a coordinate space where the x-axis meets the y-axis. This point has the coordinate 0, 0.</p>
-<p><strong>Point</strong> A single location in a coordinate space. In the 2-d coordinate system used in OpenFL, the location along the x-axis and the y-axis (the point’s coordinates) define the point.</p>
-<p><strong>Registration point</strong> In a display object, the origin (0, 0 coordinate) of its coordinate space.</p>
-<p><strong>Scale</strong> The size of an object relative to its original size. When used as a verb, to scale an object means to change its size by stretching or shrinking the object.</p>
-<p><strong>Translate</strong> To change a point’s coordinates from one coordinate space to another.</p>
-<p><strong>Transformation</strong> An adjustment to a visual characteristic of a graphic, such as rotating the object, altering its scale, skewing or distorting its shape, or altering its color.</p>
-<ol>
-<li><strong>axis</strong> The horizontal axis in the 2-d coordinate system used in OpenFL.</li>
-<li><strong>axis</strong> The vertical axis in the 2-d coordinate system used in OpenFL.</li>
-</ol>
+                                <h1 id="loading-external-data">Loading external data</h1>
+<p>OpenFL includes mechanisms for loading data from external sources. Those sources
+can provide static content such as text files, or dynamic content generated by a
+web server backend script. The data can be formatted in various ways, and OpenFL
+provides functionality for decoding and accessing the data. You can also send
+data to the external server as part of the process of retrieving data.</p>
+<h2 id="using-the-urlrequest-class">Using the URLRequest class</h2>
+<p>Many APIs that load external data use the URLRequest class to define the
+properties of necessary network request.</p>
+<h3 id="urlrequest-properties">URLRequest properties</h3>
+<p>You can set the following properties of a URLRequest object in any security
+sandbox:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>contentType</td>
+<td>The MIME content type of any data sent with the URL request. If no contentType is set, values are sent as <code>application/x-www-form-urlencoded</code>.</td>
+</tr>
+<tr>
+<td>data</td>
+<td>An object containing data to be transmitted with the URL request.</td>
+</tr>
+<tr>
+<td>method</td>
+<td>The HTTP request method, such as a GET or POST.</td>
+</tr>
+<tr>
+<td>requestHeaders</td>
+<td>The array of HTTP request headers to be appended to the HTTP request. Note that permission to set some headers is restricted on some targets.</td>
+</tr>
+<tr>
+<td>url</td>
+<td>Specifies the URL to be requested.</td>
+</tr>
+</tbody>
+</table>
+<p>On OpenFL native targets, you can set additional properties of the URLRequest
+class.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>followRedirects</td>
+<td>Specifies whether redirects are to be followed (<code>true</code>, the default value) or not (<code>false</code>).</td>
+</tr>
+<tr>
+<td>manageCookies</td>
+<td>Specifies whether the HTTP protocol stack should manage cookies (<code>true</code>, the default value) or not (<code>false</code>) for this request.</td>
+</tr>
+<tr>
+<td>authenticate</td>
+<td>Specifies whether authentication requests should be handled (<code>true</code>) for this request. The default is to authenticate requests—which may cause an authentication dialog box to be displayed if the server requires credentials. You can also set the user name and password using the URLRequestDefaults class—see <a href="#setting-urlrequest-defaults">Setting URLRequest defaults</a>.</td>
+</tr>
+<tr>
+<td>cacheResponse</td>
+<td>Specifies whether response data should be cached for this request. The default is to cache the response (<code>true</code>).</td>
+</tr>
+<tr>
+<td>useCache</td>
+<td>Specifies whether the local cache should be consulted before this URLRequest fetches data. The default (<code>true</code>) is to use the local cached version, if available.</td>
+</tr>
+<tr>
+<td>userAgent</td>
+<td>Specifies the user-agent string to be used in the HTTP request.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="setting-urlrequest-defaults">Setting URLRequest defaults</h3>
+<p>The URLRequestDefaults class lets you define application-specific default
+settings for URLRequest objects. For example, the following code sets the
+default values for the <code>manageCookies</code> and <code>useCache</code> properties. All new
+URLRequest objects will use the specified values for these properties instead of
+the normal defaults:</p>
+<pre><code class="lang-haxe">URLRequestDefaults.manageCookies = <span class="hljs-literal">false</span>;
+URLRequestDefaults.useCache = <span class="hljs-literal">false</span>;
+</code></pre>
+<!-- TODO: uncomment if setLoginCredentialsForHost() is implemented
+The URLRequestDefaults class includes a `setLoginCredentialsForHost()` method
+that lets you specify a default user name and password to use for a specific
+host. The host, which is defined in the hostname parameter of the method, can be
+a domain, such as `"www.example.com"`, or a domain and a port number, such as
+`"www.example.com:80"`. Note that `"example.com"`, `"www.example.com"`, and
+`"sales.example.com"` are each considered unique hosts.
+
+These credentials are only used if the server requires them. If the user has
+already authenticated (for example, by using the authentication dialog box),
+then calling the `setLoginCredentialsForHost()` method does not change the
+authenticated user.
+
+The following code sets the default user name and password to use for requests
+sent to www.example.com:
+
+```haxe
+URLRequestDefaults.setLoginCredentialsForHost("www.example.com", "Ada", "love1816$X");
+```
+
+The URLRequestDefaults settings only apply to the current application domain,
+with one exception. The credentials passed to the `setLoginCredentialsForHost()`
+method are used for requests made in any application domain within the AIR
+application.-->
+<p>For more information, see the
+<a href="https://api.openfl.org/openfl/net/URLRequestDefaults.html" target="_blank">URLRequestDefaults</a>
+class listing in the <a href="https://api.openfl.org" target="_blank">OpenFL API Reference</a>.</p>
+<h3 id="uri-schemes">URI schemes</h3>
+<p>The standard URI schemes, such as the following, can be used in requests made
+from any security sandbox:</p>
+<h4 id="http-and-https">http: and https:</h4>
+<p>Use these for standard Internet URLs (in the same way that they are used in a
+web browser).</p>
+<h4 id="file">file:</h4>
+<p>Use <code>file:</code> to specify the URL of a file located on the local file system. For
+example:</p>
+<pre><code>file:///c:/AIR Test/test.txt
+</code></pre><p>In AIR, you can also use the following schemes when defining a URL for content
+running in the application security sandbox:</p>
+<h4 id="app">app:</h4>
+<p>Use <code>app:</code> to specify a path relative to the root directory of the installed
+application. For example, the following path points to a resources subdirectory
+of the directory of the installed application:</p>
+<pre><code>app:/resources
+</code></pre><p>The URL (and <code>url</code> property) for a File object created with
+<code>File.applicationDirectory</code> may use the <code>app</code> URI scheme, as in the following:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> dir:<span class="hljs-type">File </span>= File.applicationDirectory;
+dir = dir.resolvePath(<span class="hljs-string">&quot;assets&quot;</span>);
+<span class="hljs-built_in">trace</span>(dir.url); <span class="hljs-comment">// app:/assets</span>
+</code></pre>
+<h4 id="app-storage">app-storage:</h4>
+<p>Use <code>app-storage:</code> to specify a path relative to the data storage directory of
+the application. For each installed application (and user), AIR creates a unique
+application storage directory, which is a useful place to store data specific to
+that application. For example, the following path points to a prefs.xml file in
+a settings subdirectory of the application store directory:</p>
+<pre><code>app-storage:/settings/prefs.xml
+</code></pre><p>The URL (and <code>url</code> property) for a File object created with
+<code>File.applicationStorageDirectory</code> may use the <code>app-storage</code> URI scheme, as in
+the following:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> prefsFile:<span class="hljs-type">File </span>= File.applicationStorageDirectory;
+prefsFile = prefsFile.resolvePath(<span class="hljs-string">&quot;prefs.xml&quot;</span>);
+<span class="hljs-built_in">trace</span>(dir.prefsFile); <span class="hljs-comment">// app-storage:/prefs.xml</span>
+</code></pre>
+<!-- TODO: test if mailto: works in OpenFL
+#### mailto:
+
+You can use the mailto scheme in URLRequest objects passed to the
+`navigateToURL()` function. See
+[Opening a URL in another application](./opening-a-url-in-another-application.md).-->
+<p>You can use a URLRequest object that uses any of these URI schemes to define the
+URL request for a number of different objects, such as a FileStream or a Sound
+object.</p>
+<h3 id="setting-url-variables">Setting URL variables</h3>
+<p>While you can add variables to the URL string directly, it can be easier to use
+the URLVariables class to define any variables needed for a request.</p>
+<p>There are three ways in which you can add parameters to a URLVariables object:</p>
+<ul>
+<li><p>Within the URLVariables constructor</p>
+</li>
+<li><p>With the <code>URLVariables.decode()</code> method</p>
+</li>
+<li><p>As dynamic properties of the URLVariables object itself</p>
+</li>
+</ul>
+<p>The following example illustrates all three methods and also how to assign the
+variables to a URLRequest object:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">import</span> openfl.display.Sprite;
+<span class="hljs-keyword">import</span> openfl.net.URLRequest;
+<span class="hljs-keyword">import</span> openfl.net.URLVariables;
+<span class="hljs-keyword">import</span> openfl.Lib;
+
+<span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">URLVariablesExample</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span> <span class="hljs-type">Sprite</span></span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span></span>() {
+        <span class="hljs-keyword">super</span>();
+
+        <span class="hljs-keyword">var</span> urlVar:<span class="hljs-type">URLVariables </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">URLVariables</span>(<span class="hljs-string">&quot;one=1&amp;two=2&quot;</span>);
+        urlVar.decode(<span class="hljs-string">&quot;amp=&quot;</span> + Lib.encodeURIComponent(<span class="hljs-string">&quot;&amp;&quot;</span>) );
+        urlVar.three = <span class="hljs-number">3</span>;
+        urlVar.amp2 = <span class="hljs-string">&quot;&amp;&amp;&quot;</span>;
+        <span class="hljs-built_in">trace</span>(Std.string(urlVar)); <span class="hljs-comment">//amp=%26&amp;amp2=%26%26&amp;one=1&amp;two=2&amp;three=3</span>
+
+        <span class="hljs-keyword">var</span> urlRequest:<span class="hljs-type">URLRequest </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">URLRequest</span>(<span class="hljs-string">&quot;http://www.example.com/test/&quot;</span>);
+        urlRequest.data = urlVar;
+    }
+}
+</code></pre>
+<p>When you define variables within the URLVariables constructor or within the
+<code>URLVariables.decode()</code> method, make sure that you URL-encode the characters
+that have a special meaning in a URI string. For example, when you use an
+ampersand in a parameter name or value, you must encode the ampersand by
+changing it from <code>&amp;</code> to <code>%26</code> because the ampersand acts as a delimiter for
+parameters. The top-level <code>encodeURIComponent()</code> function can be used for this
+purpose.</p>
+<h2 id="using-the-urlloader-class">Using the URLLoader class</h2>
+<p>The URLLoader class let you send a request to a server and access the
+information returned. You can also use the URLLoader class to access files on
+the local file system in contexts where local file access is permitted. The
+URLLoader class downloads data from a URL as text, binary data, or URL-encoded
+variables. The URLLoader class dispatches events such as <code>complete</code>,
+<code>httpStatus</code>, <code>ioError</code>, <code>open</code>, <code>progress</code>, and <code>securityError</code>.</p>
+<p>For more information on handling events in OpenFL, see
+<a href="../handling-events/">Handling events</a></p>
+<p>Downloaded data is not available until the download has completed. You can
+monitor the progress of the download (bytes loaded and bytes total) by listening
+for the <code>progress</code> event to be dispatched. However, if a file loads quickly
+enough a <code>progress</code> event might not be dispatched. When a file has successfully
+downloaded, the <code>complete</code> event is dispatched. By setting the URLLoader
+<code>dataFormat</code> property, you can receive the data as text, raw binary data, or as
+a URLVariables object.</p>
+<p>The <code>URLLoader.load()</code> method (and optionally the URLLoader class&apos;s constructor)
+takes a single parameter, <code>request</code>, which is a URLRequest object. A URLRequest
+object contains all of the information for a single HTTP request, such as the
+target URL, request method (<code>GET</code> or <code>POST</code>), additional header information, and
+the MIME type.</p>
+<p>For example, to upload an XML packet to a server-side script, you could use the
+following code:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">import</span> openfl.display.Sprite;
+<span class="hljs-keyword">import</span> openfl.net.URLLoader;
+<span class="hljs-keyword">import</span> openfl.net.URLRequest;
+<span class="hljs-keyword">import</span> openfl.net.URLRequestMethod;
+
+<span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">URLLoaderPostExample</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span> <span class="hljs-type">Sprite</span></span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span></span>() {
+        <span class="hljs-keyword">super</span>();
+
+        <span class="hljs-keyword">var</span> secondsUTC:<span class="hljs-type">Float </span>= Date.now().getTime();
+        <span class="hljs-keyword">var</span> dataXML:<span class="hljs-type">Xml </span>= Xml.parse(<span class="hljs-string">&apos;&lt;clock&gt;
+                &lt;time&gt;<span class="hljs-subst">$secondsUTC&lt;/time&gt;
+            &lt;/clock&gt;&apos;);
+
+        var request:URLRequest = new URLRequest(&quot;http://www.example.com/time/&quot;);
+        request.contentType = &quot;text/xml&quot;;
+        request.data = Std.string(dataXML);
+        request.method = URLRequestMethod.POST;
+
+        var loader:URLLoader = new URLLoader();
+        loader.load(request);
+    }</span>
+}
+</span></code></pre>
+<p>The previous snippet creates an XML document named <code>dataXML</code> that contains the
+XML packet to be sent to the server. The example sets the URLRequest
+<code>contentType</code> property to <code>&quot;text/xml&quot;</code> and assigns the XML document to the
+URLRequest <code>data</code> property. Finally, the example creates a URLLoader object and
+sends the request to the remote script by using the <code>load()</code> method.</p>
+<h2 id="using-the-urlstream-class">Using the URLStream class</h2>
+<p>The URLStream class provides access to the downloading data as the data arrives.
+The URLStream class also lets you close a stream before it finishes downloading.
+The downloaded data is available as raw binary data.</p>
+<p>When reading data from a URLStream object, use the <code>bytesAvailable</code> property to
+determine whether sufficient data is available before reading it. An EOFError
+exception is thrown if you attempt to read more data than is available.</p>
+<h4 id="the-httpresponsestatus-event">The httpResponseStatus event</h4>
+<p>On some targets, the URLStream class dispatches an <code>httpResponseStatus</code> event in
+addition to the <code>httpStatus</code> event. The <code>httpResponseStatus</code> event is delivered
+before any response data. The <code>httpResponseStatus</code> event (represented by the
+HTTPStatusEvent class) includes a <code>responseURL</code> property, which is the URL that
+the response was returned from, and a <code>responseHeaders</code> property, which is an
+array of URLRequestHeader objects representing the response headers that the
+response returned.</p>
+<h2 id="loading-data-from-external-documents">Loading data from external documents</h2>
+<p>When you build dynamic applications, it can be useful to load data from external
+files or from server-side scripts. This lets you build dynamic applications
+without having to edit or recompile your application. For example, if you build
+a &quot;tip of the day&quot; application, you can write a server-side script that
+retrieves a random tip from a database and saves it to a text file once a day.
+Then your application can load the contents of a static text file instead of
+querying the database each time.</p>
+<p>The following snippet creates a URLRequest and URLLoader object, which loads the
+contents of an external text file, <em>params.txt</em>:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> request:<span class="hljs-type">URLRequest </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">URLRequest</span>(<span class="hljs-string">&quot;params.txt&quot;</span>);
+<span class="hljs-keyword">var</span> loader:<span class="hljs-type">URLLoader </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">URLLoader</span>();
+loader.load(request);
+</code></pre>
+<p>By default, if you do not define a request method, OpenFL loads the content
+using the HTTP <code>GET</code> method. To send the request using the <code>POST</code> method, set
+the <code>request.method</code> property to <code>POST</code> using the static constant
+<code>URLRequestMethod.POST</code>, as the following code shows:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> request:<span class="hljs-type">URLRequest </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">URLRequest</span>(<span class="hljs-string">&quot;https://www.example.com/sendfeedback/&quot;</span>);
+request.method = URLRequestMethod.POST;
+</code></pre>
+<p>The external document, <em>params.txt</em>, that is loaded at run time contains the
+following data:</p>
+<pre><code>monthNames=January,February,March,April,May,June,July,August,September,October,November,December&amp;dayNames=Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday
+</code></pre><p>The file contains two parameters, <code>monthNames</code> and <code>dayNames</code>. Each parameter
+contains a comma-separated list that is parsed as strings. You can split this
+list into an array using the <code>String.split()</code> method.</p>
+<blockquote>
+<p>Avoid using reserved words or language constructs as variable names in
+external data files, because doing so makes reading and debugging your code
+more difficult.</p>
+</blockquote>
+<p>Once the data has loaded, the <code>complete</code> event is dispatched, and the contents
+of the external document are available to use in the URLLoader&apos;s <code>data</code>
+property, as the following code shows:</p>
+<pre><code class="lang-haxe"><span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">completeHandler</span></span>(event:<span class="hljs-type">Event</span>):<span class="hljs-type">Void</span>
+{
+    <span class="hljs-keyword">var</span> loader2:<span class="hljs-type">URLLoader </span>= <span class="hljs-keyword">cast</span>(event.target, URLLoader);
+    <span class="hljs-built_in">trace</span>(loader2.data);
+}
+</code></pre>
+<p>If the remote document contains name-value pairs, you can parse the data using
+the URLVariables class by passing in the contents of the loaded file, as
+follows:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">completeHandler</span></span>(event:<span class="hljs-type">Event</span>):<span class="hljs-type">void</span>
+{
+    <span class="hljs-keyword">var</span> loader2:<span class="hljs-type">URLLoader </span>= <span class="hljs-keyword">cast</span>(event.target, URLLoader);
+    <span class="hljs-keyword">var</span> variables:<span class="hljs-type">URLVariables </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">URLVariables</span>(loader2.data);
+    <span class="hljs-built_in">trace</span>(variables.dayNames);
+}
+</code></pre>
+<p>Each name-value pair from the external file is created as a property in the
+URLVariables object. Each property within the variables object in the previous
+code sample is treated as a string. If the value of the name-value pair is a
+list of items, you can convert the string into an array by calling the
+<code>String.split()</code> method, as follows:</p>
+<pre><code>var dayNameArray:Array = variables.dayNames.split(&quot;,&quot;);
+</code></pre><blockquote>
+<p>If you are loading numeric data from external text files, convert the values
+into numeric values by using a top-level function, such as <code>Std.parseInt()</code> or
+<code>Std.parseFloat()</code>.</p>
+</blockquote>
+<p>Instead of loading the contents of the remote file as a string and creating a
+new URLVariables object, you could instead set the <code>URLLoader.dataFormat</code>
+property to one of the static properties found in the URLLoaderDataFormat class.
+The three possible values for the <code>URLLoader.dataFormat</code> property are as
+follows:</p>
+<ul>
+<li><p><code>URLLoaderDataFormat.BINARY</code> — The <code>URLLoader.data</code> property will contain
+binary data stored in a ByteArray object.</p>
+</li>
+<li><p><code>URLLoaderDataFormat.TEXT</code> — The <code>URLLoader.data</code> property will contain text
+in a String object.</p>
+</li>
+<li><p><code>URLLoaderDataFormat.VARIABLES</code> — The <code>URLLoader.data</code> property will contain
+URL-encoded variables stored in a URLVariables object.</p>
+</li>
+</ul>
+<p>The following code demonstrates how setting the <code>URLLoader.dataFormat</code> property
+to <code>URLLoaderDataFormat.VARIABLES</code> allows you to automatically parse loaded data
+into a URLVariables object:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">import</span> openfl.display.Sprite;
+<span class="hljs-keyword">import</span> openfl.events.*;
+<span class="hljs-keyword">import</span> openfl.net.URLLoader;
+<span class="hljs-keyword">import</span> openfl.net.URLLoaderDataFormat;
+<span class="hljs-keyword">import</span> openfl.net.URLRequest;
+
+<span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">URLLoaderDataFormatExample</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span> <span class="hljs-type">Sprite</span></span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span></span>()
+    {
+        <span class="hljs-keyword">super</span>();
+
+        <span class="hljs-keyword">var</span> request:<span class="hljs-type">URLRequest </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">URLRequest</span>(<span class="hljs-string">&quot;http://www.example.com/params.txt&quot;</span>);
+        <span class="hljs-keyword">var</span> variables:<span class="hljs-type">URLLoader </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">URLLoader</span>();
+        variables.dataFormat = URLLoaderDataFormat.VARIABLES;
+        variables.addEventListener(Event.COMPLETE, completeHandler);
+        <span class="hljs-keyword">try</span>
+        {
+            variables.load(request);
+        }
+        <span class="hljs-keyword">catch</span> (error:<span class="hljs-type">Error</span>)
+        {
+            <span class="hljs-built_in">trace</span>(<span class="hljs-string">&quot;Unable to load URL: &quot;</span> + error);
+        }
+    }
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">completeHandler</span></span>(event:<span class="hljs-type">Event</span>):<span class="hljs-type">Void</span>
+    {
+        <span class="hljs-keyword">var</span> loader:<span class="hljs-type">URLLoader </span>= URLLoader(event.target);
+        <span class="hljs-built_in">trace</span>(loader.data.dayNames);
+    }
+}
+</code></pre>
+<p>Note: The default value for <code>URLLoader.dataFormat</code> is
+<code>URLLoaderDataFormat.TEXT</code>.</p>
+<p>As the following example shows, loading XML from an external file is the same as
+loading URLVariables. You can create a URLRequest instance and a URLLoader
+instance and use them to download a remote XML document. When the file has
+completely downloaded, the <code>Event.COMPLETE</code> event is dispatched and the contents
+of the external file are converted to an XML instance, which you can parse using
+XML methods and properties.</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">import</span> openfl.display.Sprite;
+<span class="hljs-keyword">import</span> openfl.errors.*;
+<span class="hljs-keyword">import</span> openfl.events.*;
+<span class="hljs-keyword">import</span> openfl.net.URLLoader;
+<span class="hljs-keyword">import</span> openfl.net.URLRequest;
+
+<span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">ExternalDocs</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span> <span class="hljs-type">Sprite</span></span>
+</span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span></span>()
+    {
+        <span class="hljs-keyword">super</span>();
+
+        <span class="hljs-keyword">var</span> request:<span class="hljs-type">URLRequest </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">URLRequest</span>(<span class="hljs-string">&quot;http://www.example.com/data.xml&quot;</span>);
+        <span class="hljs-keyword">var</span> loader:<span class="hljs-type">URLLoader </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">URLLoader</span>();
+        loader.addEventListener(Event.COMPLETE, completeHandler);
+        <span class="hljs-keyword">try</span>
+        {
+            loader.load(request);
+        }
+        <span class="hljs-keyword">catch</span> (error:<span class="hljs-type">ArgumentError</span>)
+        {
+            <span class="hljs-built_in">trace</span>(<span class="hljs-string">&quot;An ArgumentError has occurred.&quot;</span>);
+        }
+        <span class="hljs-keyword">catch</span> (error:<span class="hljs-type">SecurityError</span>)
+        {
+            <span class="hljs-built_in">trace</span>(<span class="hljs-string">&quot;A SecurityError has occurred.&quot;</span>);
+        }
+        <span class="hljs-keyword">catch</span> (error:<span class="hljs-type">Dynamic</span>)
+        {
+            <span class="hljs-built_in">trace</span>(<span class="hljs-string">&quot;An unknown has occurred.&quot;</span>);
+        }
+    }
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">completeHandler</span></span>(event:<span class="hljs-type">Event</span>):<span class="hljs-type">Void</span>
+    {
+        <span class="hljs-keyword">var</span> dataXML:<span class="hljs-type">Xml </span>= Xml.parse(event.target.data);
+        <span class="hljs-built_in">trace</span>(Std.string(dataXML));
+    }
+}
+</code></pre>
+<h2 id="communicating-with-external-scripts">Communicating with external scripts</h2>
+<p>In addition to loading external data files, you can also use the URLVariables
+class to send variables to a server-side script and process the server&apos;s
+response. This is useful, for example, if you are programming a game and want to
+send the user&apos;s score to a server to calculate whether it should be added to the
+high scores list, or even send a user&apos;s login information to a server for
+validation. A server-side script can process the user name and password,
+validate it against a database, and return confirmation of whether the
+user-supplied credentials are valid.</p>
+<p>The following snippet creates a URLVariables object named <code>variables,</code> which
+creates a new variable called <code>name</code>. Next, a URLRequest object is created that
+specifies the URL of the server-side script to send the variables to. Then you
+set the <code>method</code> property of the URLRequest object to send the variables as an
+HTTP <code>POST</code> request. To add the URLVariables object to the URL request, you set
+the <code>data</code> property of the URLRequest object to the URLVariables object created
+earlier. Finally, the URLLoader instance is created and the <code>URLLoader.load()</code>
+method is invoked, which initiates the request.</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">import</span> openfl.display.Sprite;
+<span class="hljs-keyword">import</span> openfl.events.Event;
+<span class="hljs-keyword">import</span> openfl.net.URLLoader;
+<span class="hljs-keyword">import</span> openfl.net.URLLoaderDataFormat;
+<span class="hljs-keyword">import</span> openfl.net.URLRequest;
+<span class="hljs-keyword">import</span> openfl.net.URLRequestMethod;
+<span class="hljs-keyword">import</span> openfl.net.URLVariables;
+
+<span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">GreetingExample</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span> <span class="hljs-type">Sprite</span></span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span></span>() {
+        <span class="hljs-keyword">super</span>();
+
+        <span class="hljs-keyword">var</span> variables:<span class="hljs-type">URLVariables </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">URLVariables</span>(<span class="hljs-string">&quot;name=Franklin&quot;</span>);
+        <span class="hljs-keyword">var</span> request:<span class="hljs-type">URLRequest </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">URLRequest</span>();
+        request.url = <span class="hljs-string">&quot;http://www.example.com/greeting.php&quot;</span>;
+        request.method = URLRequestMethod.POST;
+        request.data = variables;
+        <span class="hljs-keyword">var</span> loader:<span class="hljs-type">URLLoader </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">URLLoader</span>();
+        loader.dataFormat = URLLoaderDataFormat.VARIABLES;
+        loader.addEventListener(Event.COMPLETE, completeHandler);
+        <span class="hljs-keyword">try</span>
+        {
+            loader.load(request);
+        }
+        <span class="hljs-keyword">catch</span> (error:<span class="hljs-type">Dynamic</span>)
+        {
+            <span class="hljs-built_in">trace</span>(<span class="hljs-string">&quot;Unable to load URL&quot;</span>);
+        }
+    }
+
+    <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">completeHandler</span></span>(event:<span class="hljs-type">Event</span>):<span class="hljs-type">Void</span>
+    {
+        <span class="hljs-built_in">trace</span>(event.target.data.welcomeMessage);
+    }
+}
+</code></pre>
+<p>The following code contains the contents of the PHP <em>greeting.php</em> document used
+in the previous example:</p>
+<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+    <span class="hljs-variable">$name</span> = <span class="hljs-string">&quot;Stranger&quot;</span>;
+    <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">empty</span>(<span class="hljs-variable">$_REQUEST</span>[<span class="hljs-string">&quot;name&quot;</span>])) {
+        <span class="hljs-variable">$name</span> = <span class="hljs-variable">$_REQUEST</span>[<span class="hljs-string">&quot;name&quot;</span>];
+    }
+    <span class="hljs-variable">$message</span> = <span class="hljs-string">&quot;Welcome, <span class="hljs-subst">$name</span>&quot;</span>;
+<span class="hljs-meta">?&gt;</span>
+welcomeMessage=<span class="hljs-meta">&lt;?=</span><span class="hljs-title function_ invoke__">urlencode</span>(<span class="hljs-variable">$message</span>)<span class="hljs-meta">?&gt;</span>
+</code></pre>
 
                                 
                                 </section>
@@ -1451,14 +1921,10 @@
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Chapter 3: Working with geometry">
+                <a href="./" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Chapter 44: HTTP communications">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="using-point-objects.html" class="navigation navigation-next " aria-label="Next page: Using Point objects">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -1467,7 +1933,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Basics of geometry","level":"1.4.1","depth":2,"next":{"title":"Using Point objects","level":"1.4.2","depth":2,"path":"working-with-geometry/using-point-objects.md","ref":"working-with-geometry/using-point-objects.md","articles":[]},"previous":{"title":"Chapter 3: Working with geometry","level":"1.4","depth":1,"path":"working-with-geometry/README.md","ref":"working-with-geometry/README.md","articles":[{"title":"Basics of geometry","level":"1.4.1","depth":2,"path":"working-with-geometry/basics-of-geometry.md","ref":"working-with-geometry/basics-of-geometry.md","articles":[]},{"title":"Using Point objects","level":"1.4.2","depth":2,"path":"working-with-geometry/using-point-objects.md","ref":"working-with-geometry/using-point-objects.md","articles":[]},{"title":"Using Rectangle objects","level":"1.4.3","depth":2,"path":"working-with-geometry/using-rectangle-objects.md","ref":"working-with-geometry/using-rectangle-objects.md","articles":[]},{"title":"Using Matrix objects","level":"1.4.4","depth":2,"path":"working-with-geometry/using-matrix-objects.md","ref":"working-with-geometry/using-matrix-objects.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"OpenFL Developer's Guide","gitbook":"*"},"file":{"path":"working-with-geometry/basics-of-geometry.md","mtime":"2024-01-17T08:58:06.171Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-01-17T08:58:23.927Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Loading external data","level":"1.14.1","depth":2,"previous":{"title":"Chapter 44: HTTP communications","level":"1.14","depth":1,"path":"http-communications/README.md","ref":"http-communications/README.md","articles":[{"title":"Loading external data","level":"1.14.1","depth":2,"path":"http-communications/loading-external-data.md","ref":"http-communications/loading-external-data.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"OpenFL Developer's Guide","gitbook":"*"},"file":{"path":"http-communications/loading-external-data.md","mtime":"2024-01-17T08:58:06.167Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-01-17T08:58:23.927Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
