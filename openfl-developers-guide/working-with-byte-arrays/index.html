@@ -3,7 +3,7 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <title>Formatting text · OpenFL Developer's Guide</title>
+        <title>Chapter 41: Working with byte arrays · OpenFL Developer's Guide</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 5.1.4">
@@ -56,10 +56,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="advanced-text-rendering.html" />
+    <link rel="next" href="reading-and-writing-a-byte-array.html" />
     
     
-    <link rel="prev" href="restricting-text-input.html" />
+    <link rel="prev" href="../touch-multitouch-and-gesture-input/troubleshooting.html" />
     
 
     </head>
@@ -954,9 +954,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8" data-path="./">
+        <li class="chapter " data-level="1.8" data-path="../using-the-textfield-class/">
             
-                <a href="./">
+                <a href="../using-the-textfield-class/">
             
                     
                     Chapter 21: Using the TextField class
@@ -968,9 +968,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.8.1" data-path="displaying-text.html">
+        <li class="chapter " data-level="1.8.1" data-path="../using-the-textfield-class/displaying-text.html">
             
-                <a href="displaying-text.html">
+                <a href="../using-the-textfield-class/displaying-text.html">
             
                     
                     Displaying text
@@ -981,9 +981,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.2" data-path="selecting-and-manipulating-text.html">
+        <li class="chapter " data-level="1.8.2" data-path="../using-the-textfield-class/selecting-and-manipulating-text.html">
             
-                <a href="selecting-and-manipulating-text.html">
+                <a href="../using-the-textfield-class/selecting-and-manipulating-text.html">
             
                     
                     Selecting and manipulating text
@@ -994,9 +994,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.3" data-path="capturing-text-input.html">
+        <li class="chapter " data-level="1.8.3" data-path="../using-the-textfield-class/capturing-text-input.html">
             
-                <a href="capturing-text-input.html">
+                <a href="../using-the-textfield-class/capturing-text-input.html">
             
                     
                     Capturing text input
@@ -1007,9 +1007,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.4" data-path="restricting-text-input.html">
+        <li class="chapter " data-level="1.8.4" data-path="../using-the-textfield-class/restricting-text-input.html">
             
-                <a href="restricting-text-input.html">
+                <a href="../using-the-textfield-class/restricting-text-input.html">
             
                     
                     Restricting text input
@@ -1020,9 +1020,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.8.5" data-path="formatting-text.html">
+        <li class="chapter " data-level="1.8.5" data-path="../using-the-textfield-class/formatting-text.html">
             
-                <a href="formatting-text.html">
+                <a href="../using-the-textfield-class/formatting-text.html">
             
                     
                     Formatting text
@@ -1033,9 +1033,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.6" data-path="advanced-text-rendering.html">
+        <li class="chapter " data-level="1.8.6" data-path="../using-the-textfield-class/advanced-text-rendering.html">
             
-                <a href="advanced-text-rendering.html">
+                <a href="../using-the-textfield-class/advanced-text-rendering.html">
             
                     
                     Advanced text rendering
@@ -1046,9 +1046,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.7" data-path="working-with-static-text.html">
+        <li class="chapter " data-level="1.8.7" data-path="../using-the-textfield-class/working-with-static-text.html">
             
-                <a href="working-with-static-text.html">
+                <a href="../using-the-textfield-class/working-with-static-text.html">
             
                     
                     Working with static text
@@ -1296,9 +1296,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.13" data-path="../working-with-byte-arrays/">
+        <li class="chapter active" data-level="1.13" data-path="./">
             
-                <a href="../working-with-byte-arrays/">
+                <a href="./">
             
                     
                     Chapter 41: Working with byte arrays
@@ -1310,9 +1310,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.13.1" data-path="../working-with-byte-arrays/reading-and-writing-a-byte-array.html">
+        <li class="chapter " data-level="1.13.1" data-path="reading-and-writing-a-byte-array.html">
             
-                <a href="../working-with-byte-arrays/reading-and-writing-a-byte-array.html">
+                <a href="reading-and-writing-a-byte-array.html">
             
                     
                     Reading a writing a byte array
@@ -1358,7 +1358,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Formatting text</a>
+        <a href=".." >Chapter 41: Working with byte arrays</a>
     </h1>
 </div>
 
@@ -1373,214 +1373,36 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="formatting-text">Formatting text </h1>
-<p>You have several options for programmatically formatting the display of text.
-You can set properties directly on the TextField instance—for example, the
-<code>TextField.thickness</code>, <code>TextField.textColor</code>, and <code>TextField.textHeight</code>
-properties.Or you can designate the content of the text field using the
-<code>htmlText</code> property and use the supported HTML tags, such as <code>b</code>, <code>i</code>, and <code>u</code>.
-But you can also apply TextFormat objects to text fields containing plain text,
-or StyleSheet objects to text fields containing the <code>htmlText</code> property. Using
-TextFormat and StyleSheet objects provides the most control and consistency over
-the appearance of text throughout your application. You can define a TextFormat
-or StyleSheet object and apply it to many or all text fields in your
-application.</p>
-<h2 id="assigning-text-formats">Assigning text formats</h2>
-<p>You can use the TextFormat class to set a number of different text display
-properties and to apply them to the entire contents of a TextField object, or to
-a range of text.</p>
-<p>The following example applies one TextFormat object to an entire TextField
-object and applies a second TextFormat object to a range of text within that
-TextField object:</p>
-<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> tf:<span class="hljs-type">TextField </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">TextField</span>();
-tf.text = <span class="hljs-string">&quot;Hello Hello&quot;</span>;
-
-<span class="hljs-keyword">var</span> format1:<span class="hljs-type">TextFormat </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">TextFormat</span>();
-format1.color = <span class="hljs-number">0xFF0000</span>;
-
-<span class="hljs-keyword">var</span> format2:<span class="hljs-type">TextFormat </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">TextFormat</span>();
-format2.font = <span class="hljs-string">&quot;Courier&quot;</span>;
-
-tf.setTextFormat(format1);
-<span class="hljs-keyword">var</span> startRange:<span class="hljs-type">uint </span>= <span class="hljs-number">6</span>;
-tf.setTextFormat(format2, startRange);
-
-addChild(tf);
-</code></pre>
-<p>The <code>TextField.setTextFormat()</code> method only affects text that is already
-displayed in the text field. If the content in the TextField changes, your
-application might need to call the <code>TextField.setTextFormat()</code> method again to
-reapply the formatting. You can also set the TextField <code>defaultTextFormat</code>
-property to specify the format to be used for user-entered text.</p>
-<h2 id="applying-cascading-style-sheets">Applying cascading style sheets</h2>
-<p>Text fields can contain either plain text or HTML-formatted text. Plain text is
-stored in the <code>text</code> property of the instance, and HTML text is stored in the
-<code>htmlText</code> property.</p>
-<p>You can use CSS style declarations to define text styles that you can apply to
-many different text fields. CSS style declarations can be created in your
-application code or loaded in at run time from an external CSS file.</p>
-<p>The openfl.text.StyleSheet class handles CSS styles. The StyleSheet class
-recognizes a limited set of CSS properties. For a detailed list of the style
-properties that the StyleSheet class supports, see the
-<a href="https://api.openfl.org/openfl/text/StyleSheet.html" target="_blank">openfl.text.Stylesheet class</a>
-in the OpenFL API Reference.</p>
-<p>As the following example shows, you can create CSS in your code and apply those
-styles to HTML text by using a StyleSheet object:</p>
-<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> style:<span class="hljs-type">StyleSheet </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">StyleSheet</span>();
-
-<span class="hljs-keyword">var</span> styleObj:<span class="hljs-type">Object </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">Object</span>();
-styleObj.fontSize = <span class="hljs-string">&quot;bold&quot;</span>;
-styleObj.color = <span class="hljs-string">&quot;#FF0000&quot;</span>;
-style.setStyle(<span class="hljs-string">&quot;.darkRed&quot;</span>, styleObj);
-
-<span class="hljs-keyword">var</span> tf:<span class="hljs-type">TextField </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">TextField</span>();
-tf.styleSheet = style;
-tf.htmlText = <span class="hljs-string">&quot;&lt;span class=&apos;darkRed&apos;&gt;Red&lt;/span&gt; apple&quot;</span>;
-
-addChild(tf);
-</code></pre>
-<p>After creating a StyleSheet object, the example code creates a simple object to
-hold a set of style declaration properties. Then it calls the
-<code>StyleSheet.setStyle()</code> method, which adds the new style to the style sheet with
-the name &quot;.darkred&quot;. Next, it applies the style sheet formatting by assigning
-the StyleSheet object to the TextField <code>styleSheet</code> property.</p>
-<p>For CSS styles to take effect, the style sheet should be applied to the
-TextField object before the <code>htmlText</code> property is set.</p>
-<p>By design, a text field with a style sheet is not editable. If you have an input
-text field and assign a style sheet to it, the text field shows the properties
-of the style sheet, but the text field does not allow users to enter new text
-into it. Also, you cannot use the following OpenFL APIs on a text field with an
-assigned style sheet:</p>
+                                <h1 id="chapter-41-working-with-byte-arrays">Chapter 41: Working with byte arrays </h1>
+<p>The <a href="https://api.openfl.org/openfl/utils/ByteArray.html" target="_blank">ByteArray class</a> allows
+you to read from and write to a binary stream of data, which is essentially an
+array of bytes. This class provides a way to access data at the most elemental
+level. Because computer data consists of bytes, or groups of 8 bits, the ability
+to read data in bytes means that you can access data for which classes and
+access methods do not exist. The ByteArray class allows you to parse any stream
+of data, from a bitmap to a stream of data traveling over the network, at the
+byte level.</p>
+<p>The <code>writeObject()</code> method allows you to write an object in serialized format to
+a ByteArray, while the <code>readObject()</code> method allows you to read a serialized
+object from a ByteArray to a variable of the original data type. You can
+serialize any object except for display objects, which are those objects that
+can be placed on the display list. You can also assign serialized objects back
+to custom class instances if the custom class is available to the runtime. After
+serializing an object to bytes, you can efficiently transfer it over a network
+connection or save it to a file.</p>
+<p>Objects in Adobe Flash were always serialized using <em>Action Message Format</em>
+(abbreviated as AMF). OpenFL supports a number of serialization formats,
+including:</p>
 <ul>
-<li><p>The <code>TextField.replaceText()</code> method</p>
-</li>
-<li><p>The <code>TextField.replaceSelectedText()</code> method</p>
-</li>
-<li><p>The <code>TextField.defaultTextFormat</code> property</p>
-</li>
-<li><p>The <code>TextField.setTextFormat()</code> method</p>
-</li>
+<li><a href="https://haxe.org/manual/std-serialization.html" target="_blank">Haxe Serialization Format</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JSON" target="_blank">JSON</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Action_Message_Format" target="_blank">Action Message Format (AMF)</a></li>
 </ul>
-<p>If a text field has a style sheet assigned to it, but later the
-<code>TextField.styleSheet</code> property is set to <code>null</code>, the contents of both
-<code>TextField.text</code> and <code>TextField.htmlText</code> properties add tags and attributes to
-their content to incorporate the formatting from the previously assigned style
-sheet. To preserve the original <code>htmlText</code> property, save it in a variable
-before setting the style sheet to <code>null</code>.</p>
-<h2 id="loading-an-external-css-file">Loading an external CSS file</h2>
-<p>The CSS approach to formatting is more powerful when you can load CSS
-information from an external file at run time. When the CSS data is external to
-the application itself, you can change the visual style of text in your
-application without having to change your Haxe source code. After your
-application has been deployed, you can change an external CSS file to change the
-look of the application, without having to redeploy the application SWF file.</p>
-<p>The <code>StyleSheet.parseCSS()</code> method converts a string that contains CSS data into
-style declarations in the StyleSheet object. The following example shows how to
-read an external CSS file and apply its style declarations to a TextField
-object.</p>
-<p>First, here is the content of the CSS file to be loaded, which is named
-<em>example.css</em>:</p>
-<pre><code class="lang-css"><span class="hljs-selector-tag">p</span> {
-  <span class="hljs-attribute">font-family</span>: Times New Roman, Times, _serif;
-  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">14</span>;
-}
-
-<span class="hljs-selector-tag">h1</span> {
-  <span class="hljs-attribute">font-family</span>: Arial, Helvetica, _sans;
-  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">20</span>;
-  <span class="hljs-attribute">font-weight</span>: bold;
-}
-
-<span class="hljs-selector-class">.bluetext</span> {
-  <span class="hljs-attribute">color</span>: <span class="hljs-number">#0000cc</span>;
-}
-</code></pre>
-<p>Next is the Haxe code for a class that loads the <em>example.css</em> file and applies
-the styles to TextField content:</p>
-<pre><code class="lang-haxe"><span class="hljs-keyword">import</span> openfl.display.Sprite;
-<span class="hljs-keyword">import</span> openfl.events.Event;
-<span class="hljs-keyword">import</span> openfl.net.URLLoader;
-<span class="hljs-keyword">import</span> openfl.net.URLRequest;
-<span class="hljs-keyword">import</span> openfl.text.StyleSheet;
-<span class="hljs-keyword">import</span> openfl.text.TextField;
-<span class="hljs-keyword">import</span> openfl.text.TextFieldAutoSize;
-
-<span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">CSSFormattingExample</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span> <span class="hljs-type">Sprite</span></span>
-</span>{
-    <span class="hljs-keyword">var</span> loader:<span class="hljs-type">URLLoader</span>;
-    <span class="hljs-keyword">var</span> field:<span class="hljs-type">TextField</span>;
-    <span class="hljs-keyword">var</span> exampleText:<span class="hljs-type">String </span>= <span class="hljs-string">&quot;&lt;h1&gt;This is a headline&lt;/h1&gt;&quot;</span> +
-        <span class="hljs-string">&quot;&lt;p&gt;This is a line of text. &lt;span class=&apos;bluetext&apos;&gt;&quot;</span> +
-        <span class="hljs-string">&quot;This line of text is colored blue.&lt;/span&gt;&lt;/p&gt;&quot;</span>;
-
-    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span></span>()
-    {
-        <span class="hljs-keyword">super</span>();
-
-        field = <span class="hljs-keyword">new</span> <span class="hljs-type">TextField</span>();
-        field.width = <span class="hljs-number">300</span>;
-        field.autoSize = TextFieldAutoSize.LEFT;
-        field.wordWrap = <span class="hljs-literal">true</span>;
-        addChild(field);
-
-        <span class="hljs-keyword">var</span> req:<span class="hljs-type">URLRequest </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">URLRequest</span>(<span class="hljs-string">&quot;example.css&quot;</span>);
-
-        loader = <span class="hljs-keyword">new</span> <span class="hljs-type">URLLoader</span>();
-        loader.addEventListener(Event.COMPLETE, onCSSFileLoaded);
-        loader.load(req);
-    }
-
-    <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">onCSSFileLoaded</span></span>(event:<span class="hljs-type">Event</span>):<span class="hljs-type">Void</span>
-    {
-        <span class="hljs-keyword">var</span> sheet:<span class="hljs-type">StyleSheet </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">StyleSheet</span>();
-        sheet.parseCSS(loader.data);
-        field.styleSheet = sheet;
-        field.htmlText = exampleText;
-    }
-}
-</code></pre>
-<p>When the CSS data is loaded, the <code>onCSSFileLoaded()</code> method executes and calls
-the <code>StyleSheet.parseCSS()</code> method to transfer the style declarations to the
-StyleSheet object.</p>
-<h2 id="formatting-ranges-of-text-within-a-text-field">Formatting ranges of text within a text field</h2>
-<p>A useful method of the openfl.text.TextField class is the <code>setTextFormat()</code>
-method. Using <code>setTextFormat()</code>, you can assign specific properties to the
-contents of a part of a text field to respond to user input, such as forms that
-need to remind users that certain entries are required or to change the emphasis
-of a subsection of a passage of text within a text field as a user selects parts
-of the text.</p>
-<p>The following example uses <code>TextField.setTextFormat()</code> on a range of characters
-to change the appearance of part of the content of <code>myTextField</code> when the user
-clicks the text field:</p>
-<pre><code class="lang-haxe"><span class="hljs-keyword">import</span> openfl.display.Sprite;
-<span class="hljs-keyword">import</span> openfl.events.MouseEvent;
-<span class="hljs-keyword">import</span> openfl.text.*;
-
-<span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">FormattingRangesExample</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span> <span class="hljs-type">Sprite</span></span> </span>{
-    <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> myTextField:<span class="hljs-type">TextField</span>;
-    <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> myformat:<span class="hljs-type">TextFormat</span>;
-
-    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span></span>() {
-        <span class="hljs-keyword">super</span>();
-
-        myTextField = <span class="hljs-keyword">new</span> <span class="hljs-type">TextField</span>();
-        myTextField.text = <span class="hljs-string">&quot;No matter where you click on this text field the TEXT IN ALL CAPS changes format.&quot;</span>;
-        myTextField.autoSize = TextFieldAutoSize.LEFT;
-        addChild(myTextField);
-        addEventListener(MouseEvent.CLICK, changeText);
-
-        myformat = <span class="hljs-keyword">new</span> <span class="hljs-type">TextFormat</span>();
-        myformat.color = <span class="hljs-number">0xFF0000</span>;
-        myformat.size = <span class="hljs-number">18</span>;
-        myformat.underline = <span class="hljs-literal">true</span>;
-    }
-
-    <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">changeText</span></span>(event:<span class="hljs-type">MouseEvent</span>):<span class="hljs-type">Void</span>
-    {
-        myTextField.setTextFormat(myformat, <span class="hljs-number">49</span>, <span class="hljs-number">65</span>);
-    }
-}
-</code></pre>
+<h2 id="more-help-topics">More Help topics</h2>
+<ul>
+<li><a href="https://api.openfl.org/openfl/utils/ByteArray.html" target="_blank">openfl.utils.ByteArray</a></li>
+<li><a href="https://api.openfl.org/openfl/utils/IExternalizable.html" target="_blank">openfl.utils.IExternalizable</a></li>
+</ul>
 
                                 
                                 </section>
@@ -1608,12 +1430,12 @@ clicks the text field:</p>
 
             
                 
-                <a href="restricting-text-input.html" class="navigation navigation-prev " aria-label="Previous page: Restricting text input">
+                <a href="../touch-multitouch-and-gesture-input/troubleshooting.html" class="navigation navigation-prev " aria-label="Previous page: Troubleshooting">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="advanced-text-rendering.html" class="navigation navigation-next " aria-label="Next page: Advanced text rendering">
+                <a href="reading-and-writing-a-byte-array.html" class="navigation navigation-next " aria-label="Next page: Reading a writing a byte array">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1624,7 +1446,7 @@ clicks the text field:</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Formatting text","level":"1.8.5","depth":2,"next":{"title":"Advanced text rendering","level":"1.8.6","depth":2,"path":"using-the-textfield-class/advanced-text-rendering.md","ref":"using-the-textfield-class/advanced-text-rendering.md","articles":[]},"previous":{"title":"Restricting text input","level":"1.8.4","depth":2,"path":"using-the-textfield-class/restricting-text-input.md","ref":"using-the-textfield-class/restricting-text-input.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"OpenFL Developer's Guide","gitbook":"*"},"file":{"path":"using-the-textfield-class/formatting-text.md","mtime":"2024-01-17T06:07:16.056Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-01-17T06:07:43.974Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Chapter 41: Working with byte arrays","level":"1.13","depth":1,"next":{"title":"Reading a writing a byte array","level":"1.13.1","depth":2,"path":"working-with-byte-arrays/reading-and-writing-a-byte-array.md","ref":"working-with-byte-arrays/reading-and-writing-a-byte-array.md","articles":[]},"previous":{"title":"Troubleshooting","level":"1.12.3","depth":2,"path":"touch-multitouch-and-gesture-input/troubleshooting.md","ref":"touch-multitouch-and-gesture-input/troubleshooting.md","articles":[]},"articles":[{"title":"Reading a writing a byte array","level":"1.13.1","depth":2,"path":"working-with-byte-arrays/reading-and-writing-a-byte-array.md","ref":"working-with-byte-arrays/reading-and-writing-a-byte-array.md","articles":[]}],"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"OpenFL Developer's Guide","gitbook":"*"},"file":{"path":"working-with-byte-arrays/README.md","mtime":"2024-01-17T06:07:16.056Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-01-17T06:07:43.974Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

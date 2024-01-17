@@ -3,7 +3,7 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <title>Formatting text · OpenFL Developer's Guide</title>
+        <title>Reading a writing a byte array · OpenFL Developer's Guide</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 5.1.4">
@@ -56,10 +56,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="advanced-text-rendering.html" />
     
-    
-    <link rel="prev" href="restricting-text-input.html" />
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -954,9 +952,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8" data-path="./">
+        <li class="chapter " data-level="1.8" data-path="../using-the-textfield-class/">
             
-                <a href="./">
+                <a href="../using-the-textfield-class/">
             
                     
                     Chapter 21: Using the TextField class
@@ -968,9 +966,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.8.1" data-path="displaying-text.html">
+        <li class="chapter " data-level="1.8.1" data-path="../using-the-textfield-class/displaying-text.html">
             
-                <a href="displaying-text.html">
+                <a href="../using-the-textfield-class/displaying-text.html">
             
                     
                     Displaying text
@@ -981,9 +979,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.2" data-path="selecting-and-manipulating-text.html">
+        <li class="chapter " data-level="1.8.2" data-path="../using-the-textfield-class/selecting-and-manipulating-text.html">
             
-                <a href="selecting-and-manipulating-text.html">
+                <a href="../using-the-textfield-class/selecting-and-manipulating-text.html">
             
                     
                     Selecting and manipulating text
@@ -994,9 +992,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.3" data-path="capturing-text-input.html">
+        <li class="chapter " data-level="1.8.3" data-path="../using-the-textfield-class/capturing-text-input.html">
             
-                <a href="capturing-text-input.html">
+                <a href="../using-the-textfield-class/capturing-text-input.html">
             
                     
                     Capturing text input
@@ -1007,9 +1005,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.4" data-path="restricting-text-input.html">
+        <li class="chapter " data-level="1.8.4" data-path="../using-the-textfield-class/restricting-text-input.html">
             
-                <a href="restricting-text-input.html">
+                <a href="../using-the-textfield-class/restricting-text-input.html">
             
                     
                     Restricting text input
@@ -1020,9 +1018,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.8.5" data-path="formatting-text.html">
+        <li class="chapter " data-level="1.8.5" data-path="../using-the-textfield-class/formatting-text.html">
             
-                <a href="formatting-text.html">
+                <a href="../using-the-textfield-class/formatting-text.html">
             
                     
                     Formatting text
@@ -1033,9 +1031,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.6" data-path="advanced-text-rendering.html">
+        <li class="chapter " data-level="1.8.6" data-path="../using-the-textfield-class/advanced-text-rendering.html">
             
-                <a href="advanced-text-rendering.html">
+                <a href="../using-the-textfield-class/advanced-text-rendering.html">
             
                     
                     Advanced text rendering
@@ -1046,9 +1044,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.7" data-path="working-with-static-text.html">
+        <li class="chapter " data-level="1.8.7" data-path="../using-the-textfield-class/working-with-static-text.html">
             
-                <a href="working-with-static-text.html">
+                <a href="../using-the-textfield-class/working-with-static-text.html">
             
                     
                     Working with static text
@@ -1296,9 +1294,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.13" data-path="../working-with-byte-arrays/">
+        <li class="chapter " data-level="1.13" data-path="./">
             
-                <a href="../working-with-byte-arrays/">
+                <a href="./">
             
                     
                     Chapter 41: Working with byte arrays
@@ -1310,9 +1308,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.13.1" data-path="../working-with-byte-arrays/reading-and-writing-a-byte-array.html">
+        <li class="chapter active" data-level="1.13.1" data-path="reading-and-writing-a-byte-array.html">
             
-                <a href="../working-with-byte-arrays/reading-and-writing-a-byte-array.html">
+                <a href="reading-and-writing-a-byte-array.html">
             
                     
                     Reading a writing a byte array
@@ -1358,7 +1356,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Formatting text</a>
+        <a href=".." >Reading a writing a byte array</a>
     </h1>
 </div>
 
@@ -1373,211 +1371,327 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="formatting-text">Formatting text </h1>
-<p>You have several options for programmatically formatting the display of text.
-You can set properties directly on the TextField instance—for example, the
-<code>TextField.thickness</code>, <code>TextField.textColor</code>, and <code>TextField.textHeight</code>
-properties.Or you can designate the content of the text field using the
-<code>htmlText</code> property and use the supported HTML tags, such as <code>b</code>, <code>i</code>, and <code>u</code>.
-But you can also apply TextFormat objects to text fields containing plain text,
-or StyleSheet objects to text fields containing the <code>htmlText</code> property. Using
-TextFormat and StyleSheet objects provides the most control and consistency over
-the appearance of text throughout your application. You can define a TextFormat
-or StyleSheet object and apply it to many or all text fields in your
-application.</p>
-<h2 id="assigning-text-formats">Assigning text formats</h2>
-<p>You can use the TextFormat class to set a number of different text display
-properties and to apply them to the entire contents of a TextField object, or to
-a range of text.</p>
-<p>The following example applies one TextFormat object to an entire TextField
-object and applies a second TextFormat object to a range of text within that
-TextField object:</p>
-<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> tf:<span class="hljs-type">TextField </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">TextField</span>();
-tf.text = <span class="hljs-string">&quot;Hello Hello&quot;</span>;
-
-<span class="hljs-keyword">var</span> format1:<span class="hljs-type">TextFormat </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">TextFormat</span>();
-format1.color = <span class="hljs-number">0xFF0000</span>;
-
-<span class="hljs-keyword">var</span> format2:<span class="hljs-type">TextFormat </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">TextFormat</span>();
-format2.font = <span class="hljs-string">&quot;Courier&quot;</span>;
-
-tf.setTextFormat(format1);
-<span class="hljs-keyword">var</span> startRange:<span class="hljs-type">uint </span>= <span class="hljs-number">6</span>;
-tf.setTextFormat(format2, startRange);
-
-addChild(tf);
-</code></pre>
-<p>The <code>TextField.setTextFormat()</code> method only affects text that is already
-displayed in the text field. If the content in the TextField changes, your
-application might need to call the <code>TextField.setTextFormat()</code> method again to
-reapply the formatting. You can also set the TextField <code>defaultTextFormat</code>
-property to specify the format to be used for user-entered text.</p>
-<h2 id="applying-cascading-style-sheets">Applying cascading style sheets</h2>
-<p>Text fields can contain either plain text or HTML-formatted text. Plain text is
-stored in the <code>text</code> property of the instance, and HTML text is stored in the
-<code>htmlText</code> property.</p>
-<p>You can use CSS style declarations to define text styles that you can apply to
-many different text fields. CSS style declarations can be created in your
-application code or loaded in at run time from an external CSS file.</p>
-<p>The openfl.text.StyleSheet class handles CSS styles. The StyleSheet class
-recognizes a limited set of CSS properties. For a detailed list of the style
-properties that the StyleSheet class supports, see the
-<a href="https://api.openfl.org/openfl/text/StyleSheet.html" target="_blank">openfl.text.Stylesheet class</a>
-in the OpenFL API Reference.</p>
-<p>As the following example shows, you can create CSS in your code and apply those
-styles to HTML text by using a StyleSheet object:</p>
-<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> style:<span class="hljs-type">StyleSheet </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">StyleSheet</span>();
-
-<span class="hljs-keyword">var</span> styleObj:<span class="hljs-type">Object </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">Object</span>();
-styleObj.fontSize = <span class="hljs-string">&quot;bold&quot;</span>;
-styleObj.color = <span class="hljs-string">&quot;#FF0000&quot;</span>;
-style.setStyle(<span class="hljs-string">&quot;.darkRed&quot;</span>, styleObj);
-
-<span class="hljs-keyword">var</span> tf:<span class="hljs-type">TextField </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">TextField</span>();
-tf.styleSheet = style;
-tf.htmlText = <span class="hljs-string">&quot;&lt;span class=&apos;darkRed&apos;&gt;Red&lt;/span&gt; apple&quot;</span>;
-
-addChild(tf);
-</code></pre>
-<p>After creating a StyleSheet object, the example code creates a simple object to
-hold a set of style declaration properties. Then it calls the
-<code>StyleSheet.setStyle()</code> method, which adds the new style to the style sheet with
-the name &quot;.darkred&quot;. Next, it applies the style sheet formatting by assigning
-the StyleSheet object to the TextField <code>styleSheet</code> property.</p>
-<p>For CSS styles to take effect, the style sheet should be applied to the
-TextField object before the <code>htmlText</code> property is set.</p>
-<p>By design, a text field with a style sheet is not editable. If you have an input
-text field and assign a style sheet to it, the text field shows the properties
-of the style sheet, but the text field does not allow users to enter new text
-into it. Also, you cannot use the following OpenFL APIs on a text field with an
-assigned style sheet:</p>
-<ul>
-<li><p>The <code>TextField.replaceText()</code> method</p>
-</li>
-<li><p>The <code>TextField.replaceSelectedText()</code> method</p>
-</li>
-<li><p>The <code>TextField.defaultTextFormat</code> property</p>
-</li>
-<li><p>The <code>TextField.setTextFormat()</code> method</p>
-</li>
-</ul>
-<p>If a text field has a style sheet assigned to it, but later the
-<code>TextField.styleSheet</code> property is set to <code>null</code>, the contents of both
-<code>TextField.text</code> and <code>TextField.htmlText</code> properties add tags and attributes to
-their content to incorporate the formatting from the previously assigned style
-sheet. To preserve the original <code>htmlText</code> property, save it in a variable
-before setting the style sheet to <code>null</code>.</p>
-<h2 id="loading-an-external-css-file">Loading an external CSS file</h2>
-<p>The CSS approach to formatting is more powerful when you can load CSS
-information from an external file at run time. When the CSS data is external to
-the application itself, you can change the visual style of text in your
-application without having to change your Haxe source code. After your
-application has been deployed, you can change an external CSS file to change the
-look of the application, without having to redeploy the application SWF file.</p>
-<p>The <code>StyleSheet.parseCSS()</code> method converts a string that contains CSS data into
-style declarations in the StyleSheet object. The following example shows how to
-read an external CSS file and apply its style declarations to a TextField
-object.</p>
-<p>First, here is the content of the CSS file to be loaded, which is named
-<em>example.css</em>:</p>
-<pre><code class="lang-css"><span class="hljs-selector-tag">p</span> {
-  <span class="hljs-attribute">font-family</span>: Times New Roman, Times, _serif;
-  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">14</span>;
-}
-
-<span class="hljs-selector-tag">h1</span> {
-  <span class="hljs-attribute">font-family</span>: Arial, Helvetica, _sans;
-  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">20</span>;
-  <span class="hljs-attribute">font-weight</span>: bold;
-}
-
-<span class="hljs-selector-class">.bluetext</span> {
-  <span class="hljs-attribute">color</span>: <span class="hljs-number">#0000cc</span>;
-}
-</code></pre>
-<p>Next is the Haxe code for a class that loads the <em>example.css</em> file and applies
-the styles to TextField content:</p>
+                                <h1 id="reading-and-writing-a-byte-array">Reading and writing a ByteArray </h1>
+<p>The <a href="https://api.openfl.org/openfl/utils/ByteArray.html" target="_blank">ByteArray class</a> is
+part of the
+<a href="https://api.openfl.org/openfl/utils/index.html" target="_blank">openfl.utils package</a>. To
+create a ByteArray object in Haxe, import the ByteArray class and invoke the
+constructor, as shown in the following example:</p>
 <pre><code class="lang-haxe"><span class="hljs-keyword">import</span> openfl.display.Sprite;
-<span class="hljs-keyword">import</span> openfl.events.Event;
-<span class="hljs-keyword">import</span> openfl.net.URLLoader;
-<span class="hljs-keyword">import</span> openfl.net.URLRequest;
-<span class="hljs-keyword">import</span> openfl.text.StyleSheet;
-<span class="hljs-keyword">import</span> openfl.text.TextField;
-<span class="hljs-keyword">import</span> openfl.text.TextFieldAutoSize;
+<span class="hljs-keyword">import</span> openfl.utils.ByteArray;
 
-<span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">CSSFormattingExample</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span> <span class="hljs-type">Sprite</span></span>
-</span>{
-    <span class="hljs-keyword">var</span> loader:<span class="hljs-type">URLLoader</span>;
-    <span class="hljs-keyword">var</span> field:<span class="hljs-type">TextField</span>;
-    <span class="hljs-keyword">var</span> exampleText:<span class="hljs-type">String </span>= <span class="hljs-string">&quot;&lt;h1&gt;This is a headline&lt;/h1&gt;&quot;</span> +
-        <span class="hljs-string">&quot;&lt;p&gt;This is a line of text. &lt;span class=&apos;bluetext&apos;&gt;&quot;</span> +
-        <span class="hljs-string">&quot;This line of text is colored blue.&lt;/span&gt;&lt;/p&gt;&quot;</span>;
-
-    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span></span>()
-    {
-        <span class="hljs-keyword">super</span>();
-
-        field = <span class="hljs-keyword">new</span> <span class="hljs-type">TextField</span>();
-        field.width = <span class="hljs-number">300</span>;
-        field.autoSize = TextFieldAutoSize.LEFT;
-        field.wordWrap = <span class="hljs-literal">true</span>;
-        addChild(field);
-
-        <span class="hljs-keyword">var</span> req:<span class="hljs-type">URLRequest </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">URLRequest</span>(<span class="hljs-string">&quot;example.css&quot;</span>);
-
-        loader = <span class="hljs-keyword">new</span> <span class="hljs-type">URLLoader</span>();
-        loader.addEventListener(Event.COMPLETE, onCSSFileLoaded);
-        loader.load(req);
-    }
-
-    <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">onCSSFileLoaded</span></span>(event:<span class="hljs-type">Event</span>):<span class="hljs-type">Void</span>
-    {
-        <span class="hljs-keyword">var</span> sheet:<span class="hljs-type">StyleSheet </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">StyleSheet</span>();
-        sheet.parseCSS(loader.data);
-        field.styleSheet = sheet;
-        field.htmlText = exampleText;
-    }
-}
-</code></pre>
-<p>When the CSS data is loaded, the <code>onCSSFileLoaded()</code> method executes and calls
-the <code>StyleSheet.parseCSS()</code> method to transfer the style declarations to the
-StyleSheet object.</p>
-<h2 id="formatting-ranges-of-text-within-a-text-field">Formatting ranges of text within a text field</h2>
-<p>A useful method of the openfl.text.TextField class is the <code>setTextFormat()</code>
-method. Using <code>setTextFormat()</code>, you can assign specific properties to the
-contents of a part of a text field to respond to user input, such as forms that
-need to remind users that certain entries are required or to change the emphasis
-of a subsection of a passage of text within a text field as a user selects parts
-of the text.</p>
-<p>The following example uses <code>TextField.setTextFormat()</code> on a range of characters
-to change the appearance of part of the content of <code>myTextField</code> when the user
-clicks the text field:</p>
-<pre><code class="lang-haxe"><span class="hljs-keyword">import</span> openfl.display.Sprite;
-<span class="hljs-keyword">import</span> openfl.events.MouseEvent;
-<span class="hljs-keyword">import</span> openfl.text.*;
-
-<span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">FormattingRangesExample</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span> <span class="hljs-type">Sprite</span></span> </span>{
-    <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> myTextField:<span class="hljs-type">TextField</span>;
-    <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> myformat:<span class="hljs-type">TextFormat</span>;
-
+<span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">CreateByteArrayExample</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span> <span class="hljs-type">Sprite</span></span> </span>{
     <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span></span>() {
         <span class="hljs-keyword">super</span>();
 
-        myTextField = <span class="hljs-keyword">new</span> <span class="hljs-type">TextField</span>();
-        myTextField.text = <span class="hljs-string">&quot;No matter where you click on this text field the TEXT IN ALL CAPS changes format.&quot;</span>;
-        myTextField.autoSize = TextFieldAutoSize.LEFT;
-        addChild(myTextField);
-        addEventListener(MouseEvent.CLICK, changeText);
+        <span class="hljs-keyword">var</span> stream:<span class="hljs-type">ByteArray </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">ByteArray</span>();
+    }
+}
+</code></pre>
+<h2 id="bytearray-methods">ByteArray methods</h2>
+<p>Any meaningful data stream is organized into a format that you can analyze to
+find the information that you want. A record in a simple employee file, for
+example, would probably include an ID number, a name, an address, a phone
+number, and so on. An MP3 audio file contains an ID3 tag that identifies the
+title, author, album, publishing date, and genre of the file that&apos;s being
+downloaded. The format allows you to know the order in which to expect the data
+on the data stream. It allows you to read the byte stream intelligently.</p>
+<p>The ByteArray class includes several methods that make it easier to read from
+and write to a data stream. Some of these methods include <code>readBytes()</code> and
+<code>writeBytes()</code>, <code>readInt()</code> and <code>writeInt()</code>, <code>readFloat()</code> and <code>writeFloat()</code>,
+<code>readObject()</code> and <code>writeObject()</code>, and <code>readUTFBytes()</code> and <code>writeUTFBytes()</code>.
+These methods enable you to read data from the data stream into variables of
+specific data types and write from specific data types directly to the binary
+data stream.</p>
+<p>For example, the following code reads a simple array of strings and
+floating-point numbers and writes each element to a ByteArray. The organization
+of the array allows the code to call the appropriate ByteArray methods
+(<code>writeUTFBytes()</code> and <code>writeFloat()</code>) to write the data. The repeating data
+pattern makes it possible to read the array with a loop.</p>
+<pre><code class="lang-haxe"><span class="hljs-comment">// The following example reads a simple Array (groceries), made up of strings</span>
+<span class="hljs-comment">// and floating-point numbers, and writes it to a ByteArray.</span>
+<span class="hljs-keyword">import</span> openfl.display.Sprite;
+<span class="hljs-keyword">import</span> openfl.utils.ByteArray;
 
-        myformat = <span class="hljs-keyword">new</span> <span class="hljs-type">TextFormat</span>();
-        myformat.color = <span class="hljs-number">0xFF0000</span>;
-        myformat.size = <span class="hljs-number">18</span>;
-        myformat.underline = <span class="hljs-literal">true</span>;
+<span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">WriteByteArrayExample</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span> <span class="hljs-type">Sprite</span></span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span></span>() {
+        <span class="hljs-keyword">super</span>();
+
+        <span class="hljs-comment">// define the grocery list Array</span>
+        <span class="hljs-keyword">var</span> groceries:<span class="hljs-type">Array</span>&lt;<span class="hljs-keyword">Dynamic</span>&gt; = [<span class="hljs-string">&quot;milk&quot;</span>, <span class="hljs-number">4.50</span>, <span class="hljs-string">&quot;soup&quot;</span>, <span class="hljs-number">1.79</span>, <span class="hljs-string">&quot;eggs&quot;</span>, <span class="hljs-number">3.19</span>, <span class="hljs-string">&quot;bread&quot;</span>, <span class="hljs-number">2.35</span>];
+        <span class="hljs-comment">// define the ByteArray</span>
+        <span class="hljs-keyword">var</span> bytes:<span class="hljs-type">ByteArray </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">ByteArray</span>();
+        <span class="hljs-comment">// for each item in the array</span>
+        <span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">while</span> (i &lt; groceries.length) {
+            bytes.writeUTFBytes(groceries[i++]); <span class="hljs-comment">// write the string and position to the next item</span>
+            bytes.writeFloat(groceries[i++]); <span class="hljs-comment">// write the float</span>
+            <span class="hljs-built_in">trace</span>(<span class="hljs-string">&quot;bytes.position is: &quot;</span> + bytes.position); <span class="hljs-comment">// display the position in ByteArray</span>
+        }
+        <span class="hljs-built_in">trace</span>(<span class="hljs-string">&quot;bytes length is: &quot;</span> + bytes.length); <span class="hljs-comment">// display the length</span>
+    }
+}
+</code></pre>
+<h2 id="the-position-property">The position property</h2>
+<p>The position property stores the current position of the pointer that indexes
+the ByteArray during reading or writing. The initial value of the position
+property is 0 (zero) as shown in the following code:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> bytes:<span class="hljs-type">ByteArray </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">ByteArray</span>();
+<span class="hljs-built_in">trace</span>(<span class="hljs-string">&quot;bytes.position is initially: &quot;</span> + bytes.position);     <span class="hljs-comment">// 0</span>
+</code></pre>
+<p>When you read from or write to a ByteArray, the method that you use updates the
+position property to point to the location immediately following the last byte
+that was read or written. For example, the following code writes a string to a
+ByteArray and afterward the position property points to the byte immediately
+following the string in the ByteArray:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> bytes:<span class="hljs-type">ByteArray </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">ByteArray</span>();
+<span class="hljs-built_in">trace</span>(<span class="hljs-string">&quot;bytes.position is initially: &quot;</span> + bytes.position);     <span class="hljs-comment">// 0</span>
+bytes.writeUTFBytes(<span class="hljs-string">&quot;Hello World!&quot;</span>);
+<span class="hljs-built_in">trace</span>(<span class="hljs-string">&quot;bytes.position is now: &quot;</span> + bytes.position);    <span class="hljs-comment">// 12</span>
+</code></pre>
+<p>Likewise, a read operation increments the position property by the number of
+bytes read.</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> bytes:<span class="hljs-type">ByteArray </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">ByteArray</span>();
+
+<span class="hljs-built_in">trace</span>(<span class="hljs-string">&quot;bytes.position is initially: &quot;</span> + bytes.position);     <span class="hljs-comment">// 0</span>
+bytes.writeUTFBytes(<span class="hljs-string">&quot;Hello World!&quot;</span>);
+<span class="hljs-built_in">trace</span>(<span class="hljs-string">&quot;bytes.position is now: &quot;</span> + bytes.position);    <span class="hljs-comment">// 12</span>
+bytes.position = <span class="hljs-number">0</span>;
+<span class="hljs-built_in">trace</span>(<span class="hljs-string">&quot;The first 6 bytes are: &quot;</span> + (bytes.readUTFBytes(<span class="hljs-number">6</span>)));    <span class="hljs-comment">//Hello</span>
+<span class="hljs-built_in">trace</span>(<span class="hljs-string">&quot;And the next 6 bytes are: &quot;</span> + (bytes.readUTFBytes(<span class="hljs-number">6</span>)));    <span class="hljs-comment">// World!</span>
+</code></pre>
+<p>Notice that you can set the position property to a specific location in the
+ByteArray to read or write at that offset.</p>
+<h2 id="the-bytesavailable-and-length-properties">The bytesAvailable and length properties</h2>
+<p>The <code>length</code> and <code>bytesAvailable</code> properties tell you how long a ByteArray is
+and how many bytes remain in it from the current position to the end. The
+following example illustrates how you can use these properties. The example
+writes a String of text to the ByteArray and then reads the ByteArray one byte
+at a time until it encounters either the character &quot;a&quot; or the end
+(<code>bytesAvailable &lt;= 0</code>).</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">import</span> openfl.display.Sprite;
+<span class="hljs-keyword">import</span> openfl.utils.ByteArray;
+
+<span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">BytesAvailableAndLengthExample</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span> <span class="hljs-type">Sprite</span></span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span></span>() {
+        <span class="hljs-keyword">super</span>();
+
+        <span class="hljs-keyword">var</span> bytes:<span class="hljs-type">ByteArray </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">ByteArray</span>();
+        <span class="hljs-keyword">var</span> text:<span class="hljs-type">String </span>= <span class="hljs-string">&quot;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vivamus etc.&quot;</span>;
+
+        bytes.writeUTFBytes(text); <span class="hljs-comment">// write the text to the ByteArray</span>
+        <span class="hljs-built_in">trace</span>(<span class="hljs-string">&quot;The length of the ByteArray is: &quot;</span> + bytes.length); <span class="hljs-comment">// 70</span>
+        bytes.position = <span class="hljs-number">0</span>; <span class="hljs-comment">// reset position</span>
+        <span class="hljs-keyword">while</span> (bytes.bytesAvailable &gt; <span class="hljs-number">0</span> &amp;&amp; (bytes.readUTFBytes(<span class="hljs-number">1</span>) != <span class="hljs-string">&apos;a&apos;</span>)) {
+            <span class="hljs-comment">// read to letter a or end of bytes</span>
+        }
+        <span class="hljs-keyword">if</span> (bytes.position &lt; bytes.bytesAvailable) {
+            <span class="hljs-built_in">trace</span>(<span class="hljs-string">&quot;Found the letter a; position is: &quot;</span> + bytes.position); <span class="hljs-comment">// 23</span>
+            <span class="hljs-built_in">trace</span>(<span class="hljs-string">&quot;and the number of bytes available is: &quot;</span> + bytes.bytesAvailable); <span class="hljs-comment">// 47</span>
+        }
+    }
+}
+</code></pre>
+<h2 id="the-endian-property">The endian property</h2>
+<p>Computers can differ in how they store multibyte numbers, that is, numbers that
+require more than 1 byte of memory to store them. An integer, for example, can
+take 4 bytes, or 32 bits, of memory. Some computers store the most significant
+byte of the number first, in the lowest memory address, and others store the
+least significant byte first. This attribute of a computer, or of byte ordering,
+is referred to as being either <em>big endian</em> (most significant byte first) or
+<em>little endian</em> (least significant byte first). For example, the number
+0x31323334 would be stored as follows for big endian and little endian byte
+ordering, where a0 represents the lowest memory address of the 4 bytes and a3
+represents the highest:</p>
+<table>
+<thead>
+<tr>
+<th>Big Endian</th>
+<th>Big Endian</th>
+<th>Big Endian</th>
+<th>Big Endian</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a0</td>
+<td>a1</td>
+<td>a2</td>
+<td>a3</td>
+</tr>
+<tr>
+<td>31</td>
+<td>32</td>
+<td>33</td>
+<td>34</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Little Endian</th>
+<th>Little Endian</th>
+<th>Little Endian</th>
+<th>Little Endian</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a0</td>
+<td>a1</td>
+<td>a2</td>
+<td>a3</td>
+</tr>
+<tr>
+<td>34</td>
+<td>33</td>
+<td>32</td>
+<td>31</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>endian</code> property of the ByteArray class allows you to denote this byte
+order for multibyte numbers that you are processing. The acceptable values for
+this property are either <code>&quot;bigEndian&quot;</code> or <code>&quot;littleEndian&quot;</code> and the Endian class
+defines the constants <code>BIG_ENDIAN</code> and <code>LITTLE_ENDIAN</code> for setting the <code>endian</code>
+property with these strings.</p>
+<h2 id="the-compress-and-uncompress-methods">The compress() and uncompress() methods</h2>
+<p>The <code>compress()</code> method allows you to compress a ByteArray in accordance with a
+compression algorithm that you specify as a parameter. The <code>uncompress()</code> method
+allows you to uncompress a compressed ByteArray in accordance with a compression
+algorithm. After calling <code>compress()</code> and <code>uncompress()</code>, the length of the byte
+array is set to the new length and the position property is set to the end.</p>
+<p>The CompressionAlgorithm class defines constants that you can use to specify the
+compression algorithm. The ByteArray class supports the deflate (AIR-only),
+zlib, and lzma algorithms. The zlib compressed data format is described at
+<a href="http://www.ietf.org/rfc/rfc1950.txt" target="_blank">http://www.ietf.org/rfc/rfc1950.txt</a>. The lzma algorithm is described at
+<a href="http://www.7-zip.org/7z.html" target="_blank">http://www.7-zip.org/7z.html</a>.</p>
+<p>The deflate compression algorithm is used in several compression formats, such
+as zlib, gzip, and some zip implementations. The deflate compression algorithm
+is described at <a href="http://www.ietf.org/rfc/rfc1951.txt" target="_blank">http://www.ietf.org/rfc/rfc1951.txt</a>.</p>
+<p>The following example compresses a ByteArray called <code>bytes</code> using the lzma
+algorithm:</p>
+<pre><code class="lang-haxe">bytes.compress(CompressionAlgorithm.LZMA);
+</code></pre>
+<p>The following example uncompresses a compressed ByteArray using the deflate
+algorithm:</p>
+<pre><code class="lang-haxe">bytes.uncompress(CompressionAlgorithm.LZMA);
+</code></pre>
+<h2 id="reading-and-writing-objects">Reading and writing objects</h2>
+<p>The <code>readObject()</code> and <code>writeObject()</code> methods read an object from and write an
+object to a ByteArray, encoded in a serialized format, such as
+<a href="https://haxe.org/manual/std-serialization.html" target="_blank">Haxe Serialization Format</a>,
+JSON, or Action Message Format (AMF). These object serialization formats are
+used by various OpenFL classes, including NetConnection, NetStream,
+LocalConnection, and Shared Objects.</p>
+<p>The <code>ByteArray.objectEncoding</code> property specifies the serialization format that
+is used to encode the object data. The openfl.net.ObjectEncoding class defines
+constants for specifying the serialization format:</p>
+<ul>
+<li><code>ObjectEncoding.HXSF</code></li>
+<li><code>ObjectEncoding.JSON</code></li>
+<li><code>ObjectEncoding.AMF0</code></li>
+<li><code>ObjectEncoding.AMF3</code></li>
+</ul>
+<p>The following example calls <code>writeObject()</code> to write an XML object to a
+ByteArray, which it then compresses using the Deflate algorithm and writes to
+the <code>order</code> file on the desktop. The example uses a label to display the message
+&quot;Wrote order file to desktop!&quot; in the OpenFL window when it is finished.</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">import</span> openfl.filesystem.*;
+<span class="hljs-keyword">import</span> openfl.display.Sprite;
+<span class="hljs-keyword">import</span> openfl.text.TextField;
+<span class="hljs-keyword">import</span> openfl.utils.ByteArray;
+<span class="hljs-keyword">import</span> openfl.utils.CompressionAlgorithm;
+
+<span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">WriteObjectExample</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span> <span class="hljs-type">Sprite</span></span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span></span>() {
+        <span class="hljs-keyword">super</span>();
+
+        <span class="hljs-keyword">var</span> bytes:<span class="hljs-type">ByteArray </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">ByteArray</span>();
+        <span class="hljs-keyword">var</span> myLabel:<span class="hljs-type">TextField </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">TextField</span>();
+        myLabel.x = <span class="hljs-number">150</span>;
+        myLabel.y = <span class="hljs-number">150</span>;
+        myLabel.width = <span class="hljs-number">200</span>;
+        addChild(myLabel);
+
+        <span class="hljs-keyword">var</span> order:<span class="hljs-type">Dynamic </span>= {
+            items: <span class="hljs-type"></span>[
+                {id: <span class="hljs-type"></span>&apos;<span class="hljs-number">1</span><span class="hljs-string">&apos;, menuName: &apos;</span>burger<span class="hljs-string">&apos;, price: 3.95},
+                {id: &apos;</span><span class="hljs-number">2</span><span class="hljs-string">&apos;, menuName: &apos;</span>fries<span class="hljs-string">&apos;, price: 1.45},
+            ]
+        };
+
+        // Write order object to ByteArray
+        bytes.writeObject(order);
+        bytes.position = 0; // reset position to beginning
+        bytes.compress(CompressionAlgorithm.DEFLATE); // compress ByteArray
+        writeBytesToFile(&quot;order.dat&quot;, bytes);
+        myLabel.text = &quot;Wrote order file to desktop!&quot;;
     }
 
-    <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">changeText</span></span>(event:<span class="hljs-type">MouseEvent</span>):<span class="hljs-type">Void</span>
-    {
-        myTextField.setTextFormat(myformat, <span class="hljs-number">49</span>, <span class="hljs-number">65</span>);
+    function writeBytesToFile(fileName:String, data:ByteArray):Void {
+        var outFile:File = File.desktopDirectory; // dest folder is desktop
+        outFile = outFile.resolvePath(fileName); // name of file to write
+        var outStream:FileStream = new FileStream();
+        // open output file stream in WRITE mode
+        outStream.open(outFile, FileMode.WRITE);
+        // write out the file
+        outStream.writeBytes(data, 0, data.length);
+        // close it
+        outStream.close();
+    }
+}
+</span></code></pre>
+<p>The <code>readObject()</code> method reads an object in serialized format from a ByteArray
+and stores it in an object of the specified type. The following example reads
+the <code>order</code> file from the desktop into a ByteArray (<code>inBytes</code>), uncompresses it,
+and calls <code>readObject()</code> to store it in the XML object <code>orderXML</code>. The example
+uses a loop to add each node to a text area for display. The example also
+displays the value of the <code>objectEncoding</code> property along with a header for the
+contents of the <code>order</code> file.</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">import</span> openfl.filesystem.*;
+<span class="hljs-keyword">import</span> openfl.display.Sprite;
+<span class="hljs-keyword">import</span> openfl.text.TextField;
+<span class="hljs-keyword">import</span> openfl.utils.ByteArray;
+<span class="hljs-keyword">import</span> openfl.utils.CompressionAlgorithm;
+
+<span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">ReadObjectExample</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span> <span class="hljs-type">Sprite</span></span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span></span>() {
+        <span class="hljs-keyword">super</span>();
+
+        <span class="hljs-keyword">var</span> inBytes:<span class="hljs-type">ByteArray </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">ByteArray</span>();
+        <span class="hljs-comment">// define text area for displaying XML content</span>
+        <span class="hljs-keyword">var</span> myTxt:<span class="hljs-type">TextField </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">TextField</span>();
+        myTxt.width = <span class="hljs-number">550</span>;
+        myTxt.height = <span class="hljs-number">400</span>;
+        addChild(myTxt);
+        <span class="hljs-comment">// display objectEncoding and file heading</span>
+        myTxt.text = <span class="hljs-string">&quot;Object encoding is: &quot;</span> + inBytes.objectEncoding + <span class="hljs-string">&quot;\n\n&quot;</span> + <span class="hljs-string">&quot;order file: \n\n&quot;</span>;
+        readFileIntoByteArray(<span class="hljs-string">&quot;order.dat&quot;</span>, inBytes);
+
+        inBytes.position = <span class="hljs-number">0</span>; <span class="hljs-comment">// reset position to beginning</span>
+        inBytes.uncompress(CompressionAlgorithm.DEFLATE);
+        inBytes.position = <span class="hljs-number">0</span>; <span class="hljs-comment">// reset position to beginning</span>
+        <span class="hljs-comment">// read order object</span>
+        <span class="hljs-keyword">var</span> order:<span class="hljs-type">Dynamic </span>= inBytes.readObject();
+
+        <span class="hljs-comment">// for each node in orderXML</span>
+        <span class="hljs-keyword">var</span> items:<span class="hljs-type">Array</span>&lt;<span class="hljs-keyword">Dynamic</span>&gt; = order.items;
+        <span class="hljs-keyword">for</span> (item <span class="hljs-keyword">in</span> items) {
+            <span class="hljs-comment">// append item node to text area</span>
+            myTxt.text += item.id + <span class="hljs-string">&quot; &quot;</span> + item.menuName + <span class="hljs-string">&quot; &quot;</span> + item.price + <span class="hljs-string">&quot;\n&quot;</span>;
+        }
+    }
+
+    <span class="hljs-comment">// read specified file into byte array</span>
+    <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">readFileIntoByteArray</span></span>(fileName:<span class="hljs-type">String</span>, data:<span class="hljs-type">ByteArray</span>):<span class="hljs-type">Void </span>{
+        <span class="hljs-keyword">var</span> inFile:<span class="hljs-type">File </span>= File.desktopDirectory; <span class="hljs-comment">// source folder is desktop</span>
+        inFile = inFile.resolvePath(fileName); <span class="hljs-comment">// name of file to read</span>
+        <span class="hljs-keyword">var</span> inStream:<span class="hljs-type">FileStream </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">FileStream</span>();
+        inStream.open(inFile, FileMode.READ);
+        inStream.readBytes(data);
+        inStream.close();
     }
 }
 </code></pre>
@@ -1608,14 +1722,10 @@ clicks the text field:</p>
 
             
                 
-                <a href="restricting-text-input.html" class="navigation navigation-prev " aria-label="Previous page: Restricting text input">
+                <a href="./" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Chapter 41: Working with byte arrays">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="advanced-text-rendering.html" class="navigation navigation-next " aria-label="Next page: Advanced text rendering">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -1624,7 +1734,7 @@ clicks the text field:</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Formatting text","level":"1.8.5","depth":2,"next":{"title":"Advanced text rendering","level":"1.8.6","depth":2,"path":"using-the-textfield-class/advanced-text-rendering.md","ref":"using-the-textfield-class/advanced-text-rendering.md","articles":[]},"previous":{"title":"Restricting text input","level":"1.8.4","depth":2,"path":"using-the-textfield-class/restricting-text-input.md","ref":"using-the-textfield-class/restricting-text-input.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"OpenFL Developer's Guide","gitbook":"*"},"file":{"path":"using-the-textfield-class/formatting-text.md","mtime":"2024-01-17T06:07:16.056Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-01-17T06:07:43.974Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Reading a writing a byte array","level":"1.13.1","depth":2,"previous":{"title":"Chapter 41: Working with byte arrays","level":"1.13","depth":1,"path":"working-with-byte-arrays/README.md","ref":"working-with-byte-arrays/README.md","articles":[{"title":"Reading a writing a byte array","level":"1.13.1","depth":2,"path":"working-with-byte-arrays/reading-and-writing-a-byte-array.md","ref":"working-with-byte-arrays/reading-and-writing-a-byte-array.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"OpenFL Developer's Guide","gitbook":"*"},"file":{"path":"working-with-byte-arrays/reading-and-writing-a-byte-array.md","mtime":"2024-01-17T06:07:16.056Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-01-17T06:07:43.974Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
