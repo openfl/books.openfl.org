@@ -3,7 +3,7 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <title>Adjusting DisplayObject colors · OpenFL Developer's Guide</title>
+        <title>Setting an opaque background color · OpenFL Developer's Guide</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 5.1.4">
@@ -56,10 +56,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="rotating-objects.html" />
+    <link rel="next" href="applying-blending-modes.html" />
     
     
-    <link rel="prev" href="applying-blending-modes.html" />
+    <link rel="prev" href="caching-display-objects.html" />
     
 
     </head>
@@ -401,7 +401,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.5.5" data-path="setting-an-opaque-background.html">
+        <li class="chapter active" data-level="1.3.5.5" data-path="setting-an-opaque-background.html">
             
                 <a href="setting-an-opaque-background.html">
             
@@ -427,7 +427,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.5.7" data-path="adjusting-displayobject-colors.html">
+        <li class="chapter " data-level="1.3.5.7" data-path="adjusting-displayobject-colors.html">
             
                 <a href="adjusting-displayobject-colors.html">
             
@@ -1429,7 +1429,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Adjusting DisplayObject colors</a>
+        <a href="../.." >Setting an opaque background color</a>
     </h1>
 </div>
 
@@ -1444,87 +1444,14 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="adjusting-displayobject-colors">Adjusting DisplayObject colors </h1>
-<p>You can use the methods of the ColorTransform class (openfl.geom.ColorTransform) to adjust the color of a display object. Each display object has a <code>transform</code> property, which is an instance of the Transform class, and contains information about various transformations that are applied to the display object (such as rotation, changes in scale or position, and so forth). In addition to its information about geometric transformations, the Transform class also includes a <code>colorTransform</code> property, which is an instance of the ColorTransform class, and provides access to make color adjustments to the display object. To access the color transformation information of a display object, you can use code such as this:</p>
-<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> colorInfo = myDisplayObject.transform.colorTransform;
-</code></pre>
-<p>Once you’ve created a ColorTransform instance, you can read its property values to find out what color transformations have already been applied, or you can set those values to make color changes to the display object. To update the display object after any changes, you must reassign the ColorTransform instance back to the <code>transform.colorTransform</code> property.</p>
-<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> colorInfo = myDisplayObject.transform.colorTransform;
-
-<span class="hljs-comment">// Make some color transformations here.</span>
-<span class="hljs-comment">// Commit the change.</span>
-myDisplayObject.transform.colorTransform = colorInfo;
-</code></pre>
-<h2 id="setting-color-values-with-code">Setting color values with code</h2>
-<p>The <code>color</code> property of the ColorTransform class can be used to assign a specific red, green, blue (RGB) color value to the display object. The following example uses the <code>color</code> property to change the <code>color</code> of the display object named <code>square</code> to blue, when the user clicks a button named <code>blueBtn</code>:</p>
-<pre><code class="lang-haxe"><span class="hljs-comment">// square is a display object on the Stage.</span>
-<span class="hljs-comment">// blueBtn, redBtn, greenBtn, and blackBtn are buttons on the Stage.</span>
-
-<span class="hljs-keyword">import</span> openfl.events.MouseEvent;
-<span class="hljs-keyword">import</span> openfl.geom.ColorTransform;
-
-<span class="hljs-comment">// Get access to the ColorTransform instance associated with square.</span>
-<span class="hljs-keyword">var</span> colorInfo = square.transform.colorTransform;
-
-<span class="hljs-comment">// This function is called when blueBtn is clicked.</span>
-<span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">makeBlue</span> </span>(event:<span class="hljs-type">MouseEvent</span>):<span class="hljs-type">Void </span>{
-
-    <span class="hljs-comment">// Set the color of the ColorTransform object.</span>
-    colorInfo.color = <span class="hljs-number">0x003399</span>;
-
-    <span class="hljs-comment">// apply the change to the display object square.</span>
-    transform.colorTransform = colorInfo;
-
-}
-
-...
-
-blueBtn.addEventListener (MouseEvent.CLICK, makeBlue);
-</code></pre>
-<p>Note that when you change a display object’s color using the <code>color</code> property, it completely changes the color of the entire object, regardless of whether the object previously had multiple colors. For example, if there is a display object containing a green circle with black text on top, setting the <code>color</code> property of that object’s associated ColorTransform instance to a shade of red will make the entire object, circle and text, turn red (so the text will no longer be distinguishable from the rest of the object).</p>
-<h2 id="altering-color-and-brightness-effects-with-code">Altering color and brightness effects with code</h2>
-<p>Suppose you have a display object with multiple colors (for example, a digital photo) and you don’t want to completely recolor the object; you just want to adjust the color of a display object based on the existing colors. In this scenario, the ColorTransform class includes a series of multiplier and offset properties that you can use to make this type of adjustment. The multiplier properties, named <code>redMultiplier</code>, <code>greenMultiplier</code>, <code>blueMultiplier</code>, and <code>alphaMultiplier</code>, work like colored photographic filters (or colored sunglasses), amplifying or diminishing certain colors in the display object. The offset properties (<code>redOffset</code>, <code>greenOffset</code>, <code>blueOffset</code>, and <code>alphaOffset</code>) can be used to add extra amounts of a certain color to the object, or to specify the minimum value that a particular color can have.</p>
-<p>These multiplier and offset properties are identical to the advanced color settings that are available for movie clip symbols in the Flash authoring tool when you choose Advanced from the Color pop-up menu on the Property inspector.</p>
-<p>The following code loads a JPEG image and applies a color transformation to it, which adjusts the red and green channels as the mouse pointer moves along the x axis and y axis. In this case, because no offset values are specified, the color value of each color channel displayed on screen will be a percentage of the original color value in the image—meaning that the most red or green displayed in any given pixel will be the original amount of red or green in that pixel.</p>
-<pre><code class="lang-haxe"><span class="hljs-keyword">import</span> openfl.display.Loader;
-<span class="hljs-keyword">import</span> openfl.events.MouseEvent;
-<span class="hljs-keyword">import</span> openfl.geom.Transform;
-<span class="hljs-keyword">import</span> openfl.geom.ColorTransform;
-<span class="hljs-keyword">import</span> openfl.net.URLRequest;
-
-...
-
-<span class="hljs-comment">// Load an image onto the Stage.</span>
-<span class="hljs-keyword">var</span> loader = <span class="hljs-keyword">new</span> <span class="hljs-type">Loader</span> ();
-<span class="hljs-keyword">var</span> url = <span class="hljs-keyword">new</span> <span class="hljs-type">URLRequest</span> (<span class="hljs-string">&quot;http://www.helpexamples.com/flash/images/image1.jpg&quot;</span>);
-loader.load (url);
-<span class="hljs-built_in">this</span>.addChild (loader);
-
-...
-
-<span class="hljs-comment">// This function is called when the mouse moves over the loaded image.</span>
-<span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">adjustColor</span> </span>(event:<span class="hljs-type">MouseEvent</span>):<span class="hljs-type">Void </span>{
-
-    <span class="hljs-comment">// Access the ColorTransform object for the Loader (containing the image)</span>
-    <span class="hljs-keyword">var</span> colorTransformer = loader.transform.colorTransform;
-
-    <span class="hljs-comment">// Set the red and green multipliers according to the mouse position.</span>
-    <span class="hljs-comment">// The red value ranges from 0% (no red) when the cursor is at the left</span>
-    <span class="hljs-comment">// to 100% red (normal image appearance) when the cursor is at the right.</span>
-    <span class="hljs-comment">// The same applies to the green channel, except it&apos;s controlled by the</span>
-    <span class="hljs-comment">// position of the mouse in the y axis.</span>
-    colorTransformer.redMultiplier = (loader.mouseX / loader.width) * <span class="hljs-number">1</span>;
-    colorTransformer.greenMultiplier = (loader.mouseY / loader.height) * <span class="hljs-number">1</span>;
-
-    <span class="hljs-comment">// Apply the changes to the display object.</span>
-    loader.transform.colorTransform = colorTransformer;
-
-}
-
-...
-
-loader.addEventListener (MouseEvent.MOUSE_MOVE, adjustColor);
-</code></pre>
+                                <h1 id="setting-an-opaque-background-color">Setting an opaque background color </h1>
+<p>You can set an opaque background for a display object. For example, when your SWF has a background that contains complex vector art, you can set the opaqueBackground property to a specified color (typically the same color as the Stage). The color is specified as a number (commonly a hexadecimal color value). The background is then treated as a bitmap, which helps optimize performance.</p>
+<p>When you set cacheAsBitmap to true, and also set the opaqueBackground property to a specified color, the opaqueBackground property allows the internal bitmap to be opaque and rendered faster. If you do not set cacheAsBitmap to true, the opaqueBackground property adds an opaque vector-square shape to the background of the display object. It does not create a bitmap automatically.</p>
+<p>The following example shows how to set the background of a display object to optimize performance:</p>
+<p>myShape.cacheAsBitmap = true; myShape.opaqueBackground = 0xFF0000;</p>
+<p>In this case, the background color of the Shape named myShape is set to red (0xFF0000). Assuming the Shape instance contains a drawing of a green triangle, on a Stage with a white background, this would show up as a green triangle with red in the empty space in the Shape instance’s bounding box (the rectangle that completely encloses the Shape).</p>
+<p><img src="../../assets/effect-of-setting-opaquebackground.png" alt="&lt;Effect of setting opaqueBackground color&gt;"></p>
+<p>Of course, this code would make more sense if it were used with a Stage with a solid red background. On another colored background, that color would be specified instead. For example, in a SWF with a white background, the opaqueBackground property would most likely be set to 0xFFFFFF, or pure white.</p>
 
                                 
                                 </section>
@@ -1552,12 +1479,12 @@ loader.addEventListener (MouseEvent.MOUSE_MOVE, adjustColor);
 
             
                 
-                <a href="applying-blending-modes.html" class="navigation navigation-prev " aria-label="Previous page: Applying blending modes">
+                <a href="caching-display-objects.html" class="navigation navigation-prev " aria-label="Previous page: Caching display objects">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="rotating-objects.html" class="navigation navigation-next " aria-label="Next page: Rotating objects">
+                <a href="applying-blending-modes.html" class="navigation navigation-next " aria-label="Next page: Applying blending modes">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1568,7 +1495,7 @@ loader.addEventListener (MouseEvent.MOUSE_MOVE, adjustColor);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Adjusting DisplayObject colors","level":"1.3.5.7","depth":3,"next":{"title":"Rotating objects","level":"1.3.5.8","depth":3,"path":"display-programming/manipulating-display-objects/rotating-objects.md","ref":"display-programming/manipulating-display-objects/rotating-objects.md","articles":[]},"previous":{"title":"Applying blending modes","level":"1.3.5.6","depth":3,"path":"display-programming/manipulating-display-objects/applying-blending-modes.md","ref":"display-programming/manipulating-display-objects/applying-blending-modes.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"OpenFL Developer's Guide","gitbook":"*"},"file":{"path":"display-programming/manipulating-display-objects/adjusting-displayobject-colors.md","mtime":"2024-01-18T02:26:11.635Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-01-18T02:26:29.925Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Setting an opaque background color","level":"1.3.5.5","depth":3,"next":{"title":"Applying blending modes","level":"1.3.5.6","depth":3,"path":"display-programming/manipulating-display-objects/applying-blending-modes.md","ref":"display-programming/manipulating-display-objects/applying-blending-modes.md","articles":[]},"previous":{"title":"Caching display objects","level":"1.3.5.4","depth":3,"path":"display-programming/manipulating-display-objects/caching-display-objects.md","ref":"display-programming/manipulating-display-objects/caching-display-objects.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"OpenFL Developer's Guide","gitbook":"*"},"file":{"path":"display-programming/manipulating-display-objects/setting-an-opaque-background.md","mtime":"2024-01-18T02:26:11.639Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-01-18T02:26:29.925Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
