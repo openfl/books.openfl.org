@@ -1,0 +1,2426 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Using the FileReference class · OpenFL Developer's Guide</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 5.1.4">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../working-with-byte-arrays/" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../handling-events/">
+            
+                <a href="../handling-events/">
+            
+                    
+                    Chapter 1: Handling events
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../handling-events/basics-of-handling-events.html">
+            
+                <a href="../handling-events/basics-of-handling-events.html">
+            
+                    
+                    Basics of handling events
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../handling-events/the-event-flow.html">
+            
+                <a href="../handling-events/the-event-flow.html">
+            
+                    
+                    The event flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../handling-events/event-objects.html">
+            
+                <a href="../handling-events/event-objects.html">
+            
+                    
+                    Event objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../handling-events/event-listeners.html">
+            
+                <a href="../handling-events/event-listeners.html">
+            
+                    
+                    Event listeners
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../display-programming/">
+            
+                <a href="../display-programming/">
+            
+                    
+                    Chapter 2: Display programming
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../display-programming/basics-of-display-programming.html">
+            
+                <a href="../display-programming/basics-of-display-programming.html">
+            
+                    
+                    Basics of display programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../display-programming/core-display-classes.html">
+            
+                <a href="../display-programming/core-display-classes.html">
+            
+                    
+                    Core display classes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../display-programming/advantages-of-the-display-list-approach.html">
+            
+                <a href="../display-programming/advantages-of-the-display-list-approach.html">
+            
+                    
+                    Advantages of the display list approach
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../display-programming/working-with-display-objects/">
+            
+                <a href="../display-programming/working-with-display-objects/">
+            
+                    
+                    Working with display objects
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../display-programming/working-with-display-objects/properties-and-methods-of-the-displayobject-class.html">
+            
+                <a href="../display-programming/working-with-display-objects/properties-and-methods-of-the-displayobject-class.html">
+            
+                    
+                    Properties and methods of the DisplayObject class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="../display-programming/working-with-display-objects/adding-display-objects-to-the-display-list.html">
+            
+                <a href="../display-programming/working-with-display-objects/adding-display-objects-to-the-display-list.html">
+            
+                    
+                    Adding display objects to the display list
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.3" data-path="../display-programming/working-with-display-objects/working-with-display-object-containers.html">
+            
+                <a href="../display-programming/working-with-display-objects/working-with-display-object-containers.html">
+            
+                    
+                    Working with display object containers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.4" data-path="../display-programming/working-with-display-objects/traversing-the-display-list.html">
+            
+                <a href="../display-programming/working-with-display-objects/traversing-the-display-list.html">
+            
+                    
+                    Traversing the display list
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.5" data-path="../display-programming/working-with-display-objects/setting-stage-properties.html">
+            
+                <a href="../display-programming/working-with-display-objects/setting-stage-properties.html">
+            
+                    
+                    Setting Stage properties
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.6" data-path="../display-programming/working-with-display-objects/handling-events-for-display-objects.html">
+            
+                <a href="../display-programming/working-with-display-objects/handling-events-for-display-objects.html">
+            
+                    
+                    Handling events for display objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.7" data-path="../display-programming/working-with-display-objects/choosing-a-displayobject-subclass.html">
+            
+                <a href="../display-programming/working-with-display-objects/choosing-a-displayobject-subclass.html">
+            
+                    
+                    Choosing a DisplayObject subclass
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../display-programming/manipulating-display-objects/">
+            
+                <a href="../display-programming/manipulating-display-objects/">
+            
+                    
+                    Manipulating display objects
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1" data-path="../display-programming/manipulating-display-objects/changing-position.html">
+            
+                <a href="../display-programming/manipulating-display-objects/changing-position.html">
+            
+                    
+                    Changing position
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.2" data-path="../display-programming/manipulating-display-objects/panning-and-scrolling-display-objects.html">
+            
+                <a href="../display-programming/manipulating-display-objects/panning-and-scrolling-display-objects.html">
+            
+                    
+                    Panning and scrolling display objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.3" data-path="../display-programming/manipulating-display-objects/manipulating-size-and-scaling-objects.html">
+            
+                <a href="../display-programming/manipulating-display-objects/manipulating-size-and-scaling-objects.html">
+            
+                    
+                    Manipulating size and scaling objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.4" data-path="../display-programming/manipulating-display-objects/caching-display-objects.html">
+            
+                <a href="../display-programming/manipulating-display-objects/caching-display-objects.html">
+            
+                    
+                    Caching display objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.5" data-path="../display-programming/manipulating-display-objects/setting-an-opaque-background.html">
+            
+                <a href="../display-programming/manipulating-display-objects/setting-an-opaque-background.html">
+            
+                    
+                    Setting an opaque background color
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.6" data-path="../display-programming/manipulating-display-objects/applying-blending-modes.html">
+            
+                <a href="../display-programming/manipulating-display-objects/applying-blending-modes.html">
+            
+                    
+                    Applying blending modes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.7" data-path="../display-programming/manipulating-display-objects/adjusting-displayobject-colors.html">
+            
+                <a href="../display-programming/manipulating-display-objects/adjusting-displayobject-colors.html">
+            
+                    
+                    Adjusting DisplayObject colors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.8" data-path="../display-programming/manipulating-display-objects/rotating-objects.html">
+            
+                <a href="../display-programming/manipulating-display-objects/rotating-objects.html">
+            
+                    
+                    Rotating objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.9" data-path="../display-programming/manipulating-display-objects/fading-objects.html">
+            
+                <a href="../display-programming/manipulating-display-objects/fading-objects.html">
+            
+                    
+                    Fading objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.10" data-path="../display-programming/manipulating-display-objects/masking-display-objects.html">
+            
+                <a href="../display-programming/manipulating-display-objects/masking-display-objects.html">
+            
+                    
+                    Masking display objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../display-programming/animating-objects.html">
+            
+                <a href="../display-programming/animating-objects.html">
+            
+                    
+                    Animating objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../display-programming/loading-display-content-dynamically/">
+            
+                <a href="../display-programming/loading-display-content-dynamically/">
+            
+                    
+                    Loading display content dynamically
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.7.1" data-path="../display-programming/loading-display-content-dynamically/loading-display-objects.html">
+            
+                <a href="../display-programming/loading-display-content-dynamically/loading-display-objects.html">
+            
+                    
+                    Loading display objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.2" data-path="../display-programming/loading-display-content-dynamically/monitoring-loading-progress.html">
+            
+                <a href="../display-programming/loading-display-content-dynamically/monitoring-loading-progress.html">
+            
+                    
+                    Monitoring loading progress
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.3" data-path="../display-programming/loading-display-content-dynamically/specifying-loading-context.html">
+            
+                <a href="../display-programming/loading-display-content-dynamically/specifying-loading-context.html">
+            
+                    
+                    Specifying loading context
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../working-with-geometry/">
+            
+                <a href="../working-with-geometry/">
+            
+                    
+                    Chapter 3: Working with geometry
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../working-with-geometry/basics-of-geometry.html">
+            
+                <a href="../working-with-geometry/basics-of-geometry.html">
+            
+                    
+                    Basics of geometry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../working-with-geometry/using-point-objects.html">
+            
+                <a href="../working-with-geometry/using-point-objects.html">
+            
+                    
+                    Using Point objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../working-with-geometry/using-rectangle-objects.html">
+            
+                <a href="../working-with-geometry/using-rectangle-objects.html">
+            
+                    
+                    Using Rectangle objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../working-with-geometry/using-matrix-objects.html">
+            
+                <a href="../working-with-geometry/using-matrix-objects.html">
+            
+                    
+                    Using Matrix objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../using-the-drawing-api/">
+            
+                <a href="../using-the-drawing-api/">
+            
+                    
+                    Chapter 4: Using the drawing API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../using-the-drawing-api/basics-of-the-drawing-api.html">
+            
+                <a href="../using-the-drawing-api/basics-of-the-drawing-api.html">
+            
+                    
+                    Basics of the drawing API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../using-the-drawing-api/understanding-the-graphics-class.html">
+            
+                <a href="../using-the-drawing-api/understanding-the-graphics-class.html">
+            
+                    
+                    Understanding the Graphics class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../using-the-drawing-api/drawing-lines-and-curves.html">
+            
+                <a href="../using-the-drawing-api/drawing-lines-and-curves.html">
+            
+                    
+                    Drawing lines and curves
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../using-the-drawing-api/drawing-shapes-using-built-in-methods.html">
+            
+                <a href="../using-the-drawing-api/drawing-shapes-using-built-in-methods.html">
+            
+                    
+                    Drawing shapes using built-in methods
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../using-the-drawing-api/creating-gradient-lines-and-fills.html">
+            
+                <a href="../using-the-drawing-api/creating-gradient-lines-and-fills.html">
+            
+                    
+                    Creating gradient lines and fills
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../using-the-drawing-api/using-the-math-class-with-drawing-methods.html">
+            
+                <a href="../using-the-drawing-api/using-the-math-class-with-drawing-methods.html">
+            
+                    
+                    Using the Math class with drawing methods
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../using-the-drawing-api/animating-with-the-drawing-api.html">
+            
+                <a href="../using-the-drawing-api/animating-with-the-drawing-api.html">
+            
+                    
+                    Animating with the drawing API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../using-the-drawing-api/advanced-use-of-the-drawing-api/">
+            
+                <a href="../using-the-drawing-api/advanced-use-of-the-drawing-api/">
+            
+                    
+                    Advanced use of the drawing API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.8.1" data-path="../using-the-drawing-api/advanced-use-of-the-drawing-api/drawing-paths.html">
+            
+                <a href="../using-the-drawing-api/advanced-use-of-the-drawing-api/drawing-paths.html">
+            
+                    
+                    Drawing paths
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8.2" data-path="../using-the-drawing-api/advanced-use-of-the-drawing-api/defining-winding-rules.html">
+            
+                <a href="../using-the-drawing-api/advanced-use-of-the-drawing-api/defining-winding-rules.html">
+            
+                    
+                    Defining winding rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8.3" data-path="../using-the-drawing-api/advanced-use-of-the-drawing-api/using-graphics-data-classes.html">
+            
+                <a href="../using-the-drawing-api/advanced-use-of-the-drawing-api/using-graphics-data-classes.html">
+            
+                    
+                    Using graphics data classes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8.4" data-path="../using-the-drawing-api/advanced-use-of-the-drawing-api/about-using-drawtriangles.html">
+            
+                <a href="../using-the-drawing-api/advanced-use-of-the-drawing-api/about-using-drawtriangles.html">
+            
+                    
+                    About using drawTriangles()
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../working-with-bitmaps/">
+            
+                <a href="../working-with-bitmaps/">
+            
+                    
+                    Chapter 5: Working with bitmaps
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../working-with-bitmaps/basics-of-working-with-bitmaps.html">
+            
+                <a href="../working-with-bitmaps/basics-of-working-with-bitmaps.html">
+            
+                    
+                    Basics of working with bitmaps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../working-with-bitmaps/the-bitmap-and-bitmapdata-classes.html">
+            
+                <a href="../working-with-bitmaps/the-bitmap-and-bitmapdata-classes.html">
+            
+                    
+                    The Bitmap and BitmapData classes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../working-with-bitmaps/manipulating-pixels.html">
+            
+                <a href="../working-with-bitmaps/manipulating-pixels.html">
+            
+                    
+                    Manipulating pixels
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../working-with-bitmaps/copying-bitmap-data.html">
+            
+                <a href="../working-with-bitmaps/copying-bitmap-data.html">
+            
+                    
+                    Copying bitmap data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../working-with-bitmaps/compressing-bitmap-data.html">
+            
+                <a href="../working-with-bitmaps/compressing-bitmap-data.html">
+            
+                    
+                    Compressing bitmap data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../working-with-bitmaps/making-textures-with-noise-functions.html">
+            
+                <a href="../working-with-bitmaps/making-textures-with-noise-functions.html">
+            
+                    
+                    Making textures with noise functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../working-with-bitmaps/scrolling-bitmaps.html">
+            
+                <a href="../working-with-bitmaps/scrolling-bitmaps.html">
+            
+                    
+                    Scrolling bitmaps
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../working-with-movie-clips/">
+            
+                <a href="../working-with-movie-clips/">
+            
+                    
+                    Chapter 6: Working with movie clips
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../working-with-movie-clips/basics-of-movie-clips.html">
+            
+                <a href="../working-with-movie-clips/basics-of-movie-clips.html">
+            
+                    
+                    Basics of movie clips
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../working-with-movie-clips/working-with-movieclip-objects.html">
+            
+                <a href="../working-with-movie-clips/working-with-movieclip-objects.html">
+            
+                    
+                    Working with MovieClip objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../working-with-movie-clips/controlling-movie-clip-playback.html">
+            
+                <a href="../working-with-movie-clips/controlling-movie-clip-playback.html">
+            
+                    
+                    Controlling movie clip playback
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../working-with-movie-clips/creating-movieclip-objects-with-haxe.html">
+            
+                <a href="../working-with-movie-clips/creating-movieclip-objects-with-haxe.html">
+            
+                    
+                    Creating MovieClip objects with Haxe
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../using-the-textfield-class/">
+            
+                <a href="../using-the-textfield-class/">
+            
+                    
+                    Chapter 21: Using the TextField class
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../using-the-textfield-class/displaying-text.html">
+            
+                <a href="../using-the-textfield-class/displaying-text.html">
+            
+                    
+                    Displaying text
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../using-the-textfield-class/selecting-and-manipulating-text.html">
+            
+                <a href="../using-the-textfield-class/selecting-and-manipulating-text.html">
+            
+                    
+                    Selecting and manipulating text
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../using-the-textfield-class/capturing-text-input.html">
+            
+                <a href="../using-the-textfield-class/capturing-text-input.html">
+            
+                    
+                    Capturing text input
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../using-the-textfield-class/restricting-text-input.html">
+            
+                <a href="../using-the-textfield-class/restricting-text-input.html">
+            
+                    
+                    Restricting text input
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../using-the-textfield-class/formatting-text.html">
+            
+                <a href="../using-the-textfield-class/formatting-text.html">
+            
+                    
+                    Formatting text
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../using-the-textfield-class/advanced-text-rendering.html">
+            
+                <a href="../using-the-textfield-class/advanced-text-rendering.html">
+            
+                    
+                    Advanced text rendering
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../using-the-textfield-class/working-with-static-text.html">
+            
+                <a href="../using-the-textfield-class/working-with-static-text.html">
+            
+                    
+                    Working with static text
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../working-with-sound/">
+            
+                <a href="../working-with-sound/">
+            
+                    
+                    Chapter 24: Working with sound
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../working-with-sound/basics-of-working-with-sound.html">
+            
+                <a href="../working-with-sound/basics-of-working-with-sound.html">
+            
+                    
+                    Basics of working with sound
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../working-with-sound/understanding-the-sound-architecture.html">
+            
+                <a href="../working-with-sound/understanding-the-sound-architecture.html">
+            
+                    
+                    Understanding the sound architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../working-with-sound/loading-external-sound-files.html">
+            
+                <a href="../working-with-sound/loading-external-sound-files.html">
+            
+                    
+                    Loading external sound files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../working-with-sound/working-with-sound-assets.html">
+            
+                <a href="../working-with-sound/working-with-sound-assets.html">
+            
+                    
+                    Working with sound assets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../working-with-sound/working-with-dynamically-generated-audio.html">
+            
+                <a href="../working-with-sound/working-with-dynamically-generated-audio.html">
+            
+                    
+                    Working with dynamically generated audio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../working-with-sound/playing-sounds.html">
+            
+                <a href="../working-with-sound/playing-sounds.html">
+            
+                    
+                    Playing sounds
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../working-with-sound/controlling-sound-volume-and-panning.html">
+            
+                <a href="../working-with-sound/controlling-sound-volume-and-panning.html">
+            
+                    
+                    Controlling sound volume and panning
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../keyboard-input/">
+            
+                <a href="../keyboard-input/">
+            
+                    
+                    Chapter 30: Keyboard input
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../keyboard-input/capturing-keyboard-input.html">
+            
+                <a href="../keyboard-input/capturing-keyboard-input.html">
+            
+                    
+                    Capturing keyboard input
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../mouse-input/">
+            
+                <a href="../mouse-input/">
+            
+                    
+                    Chapter 31: Mouse input
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../mouse-input/capturing-mouse-input.html">
+            
+                <a href="../mouse-input/capturing-mouse-input.html">
+            
+                    
+                    Capturing mouse input
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../touch-multitouch-and-gesture-input/">
+            
+                <a href="../touch-multitouch-and-gesture-input/">
+            
+                    
+                    Chapter 32: Touch, multitouch and gesture input
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../touch-multitouch-and-gesture-input/touch-support-discovery.html">
+            
+                <a href="../touch-multitouch-and-gesture-input/touch-support-discovery.html">
+            
+                    
+                    Touch support discovery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../touch-multitouch-and-gesture-input/touch-event-handling.html">
+            
+                <a href="../touch-multitouch-and-gesture-input/touch-event-handling.html">
+            
+                    
+                    Touch event handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../touch-multitouch-and-gesture-input/troubleshooting.html">
+            
+                <a href="../touch-multitouch-and-gesture-input/troubleshooting.html">
+            
+                    
+                    Troubleshooting
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Chapter 38: Working with the file system
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.13.1" data-path="using-the-filereference-class.html">
+            
+                <a href="using-the-filereference-class.html">
+            
+                    
+                    Using the FileReference class
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../working-with-byte-arrays/">
+            
+                <a href="../working-with-byte-arrays/">
+            
+                    
+                    Chapter 41: Working with byte arrays
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../working-with-byte-arrays/reading-and-writing-a-byte-array.html">
+            
+                <a href="../working-with-byte-arrays/reading-and-writing-a-byte-array.html">
+            
+                    
+                    Reading a writing a byte array
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../http-communications/">
+            
+                <a href="../http-communications/">
+            
+                    
+                    Chapter 44: HTTP communications
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../http-communications/loading-external-data.html">
+            
+                <a href="../http-communications/loading-external-data.html">
+            
+                    
+                    Loading external data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Using the FileReference class</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="using-the-filereference-class">Using the FileReference class</h1>
+<p>A <a href="https://api.openfl.org/openfl/net/FileReference.html" target="_blank">FileReference object</a>
+represents a data file on a client or server machine. The methods of the
+FileReference class let your application load and save data files locally, and
+transfer file data to and from remote servers.</p>
+<p>The FileReference class offers two different approaches to loading,
+transferring, and saving data files. Since its introduction, the FileReference
+class has included the <code>browse()</code> method, the <code>upload()</code> method, and the
+<code>download()</code> method.</p>
+<ul>
+<li>Use the <code>browse()</code> method to let the user select a file.</li>
+<li>Use the <code>upload()</code> method to transfer the file data to a remote server.</li>
+<li>Use the <code>download()</code> method to retrieve that data from the server and save it
+in a local file.</li>
+</ul>
+<p>Additionally, the FileReference class includes the <code>load()</code> and <code>save()</code>
+methods. The <code>load()</code> and <code>save()</code> methods allow you to access and save local
+files directly as well. The use of those methods is similar to the
+equivalent-named methods in the URLLoader and Loader classes.</p>
+<p>Note: The <a href="https://api.openfl.org/openfl/filesystem/File.html" target="_blank">File class</a>,
+which extends the FileReference class, and the
+<a href="https://api.openfl.org/openfl/filesystem/FileStream.html" target="_blank">FileStream class</a>
+provide additional functions for working with files and the local file system.
+The File and FileStream classes are only supported on native platforms and not
+in web browsers.</p>
+<h2 id="filereference-class">FileReference class</h2>
+<p>Each FileReference object represents a single data file on the local machine.
+The properties of the FileReference class contain information about the file&apos;s
+size, type, name, filename extension, creation date, and modification date.</p>
+<p>Note: The <code>extension</code> property is only supported on nativ platforms.</p>
+<p>You can create an instance of the FileReference class one of two ways:</p>
+<ul>
+<li><p>Use the <code>new</code> operator, as shown in the following code:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">import</span> openfl.display.Sprite;
+<span class="hljs-keyword">import</span> openfl.net.FileReference;
+
+<span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">FileReferenceConstructorExample</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span> <span class="hljs-type">Sprite</span></span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span></span>() {
+        <span class="hljs-keyword">super</span>();
+
+        <span class="hljs-keyword">var</span> fileRef:<span class="hljs-type">FileReference </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">FileReference</span>();
+    }
+}
+</code></pre>
+</li>
+<li><p>Call the <code>FileReferenceList.browse()</code> method, which opens a dialog box and
+prompts the user to select one or more files to upload. It then creates an
+array of FileReference objects if the user successfully selects one or more
+files.</p>
+</li>
+</ul>
+<p>Once you have created a FileReference object, you can do the following:</p>
+<ul>
+<li><p>Call the <code>FileReference.browse()</code> method, which opens a dialog box and prompts
+the user to select a single file from the local file system. This is usually
+done before a subsequent call to the <code>FileReference.upload()</code> method or
+<code>FileReference.load()</code> method. Call the <code>FileReference.upload()</code> method to
+upload the file to a remote server. Call to the <code>FileReference.load()</code> method
+to open a local file.</p>
+</li>
+<li><p>Call the <code>FileReference.download()</code> method. The <code>download()</code> method opens a
+dialog box to let the user select a location for saving a new file. Then it
+downloads data from the server and stores it in the new file.</p>
+</li>
+<li><p>Call the <code>FileReference.load()</code> method. This method begins loading data from a
+file selected previously using the <code>browse()</code> method. The <code>load()</code> method
+can&apos;t be called until the <code>browse()</code> operation completes (the user selects a
+file).</p>
+</li>
+<li><p>Call the <code>FileReference.save()</code> method. This method opens a dialog box and
+prompts the user to choose a single file location on the local file system. It
+then saves data to the specified location.</p>
+</li>
+</ul>
+<p>Note: You can only perform one <code>browse()</code>, <code>download()</code>, or <code>save()</code> action at a
+time, because only one dialog box can be open at any point.</p>
+<p>The FileReference object properties such as <code>name</code>, <code>size</code>, or
+<code>modificationDate</code> are not defined until one of the following happens:</p>
+<ul>
+<li><p>The <code>FileReference.browse()</code> method or <code>FileReferenceList.browse()</code> method has
+been called, and the user has selected a file using the dialog box.</p>
+</li>
+<li><p>The <code>FileReference.download()</code> method has been called, and the user has
+specified a new file location using the dialog box.</p>
+</li>
+</ul>
+<p>Note: When performing a download, only the <code>FileReference.name</code> property is
+populated before the download is complete. After the file has been downloaded,
+all properties are available.</p>
+<p>While calls to the <code>FileReference.browse()</code>, <code>FileReferenceList.browse()</code>,
+<code>FileReference.download()</code>, <code>FileReference.load()</code>, or <code>FileReference.save()</code>
+methods are executing, most OpenFL targets continue playback including
+dispatching events and executing code.</p>
+<p>For uploading and downloading operations, OpenFL in a web browser can access
+files only within its own domain, including any domains allowed by Cross-origin
+resource sharing (CORS). You need to enable CORS on the server containing the
+file if that server is not in the same domain as the OpenFL project initiating
+the upload or download.</p>
+<p>See <a href="https://api.openfl.org/openfl/net/FileReference.html" target="_blank">FileReference</a>.</p>
+<h2 id="loading-data-from-files">Loading data from files</h2>
+<p>The <code>FileReference.load()</code> method lets you load data from a local file into
+memory.</p>
+<p>Note: Your code must first call the <code>FileReference.browse()</code> method to let the
+user select a file to load. This restriction does not apply to OpenFL content on
+native platforms.</p>
+<p>The <code>FileReference.load()</code> method returns immediately after being called, but
+the data being loaded isn&apos;t available immediately. The FileReference object
+dispatches events to invoke listener methods at each step of the loading
+process.</p>
+<p>The FileReference object dispatches the following events during the loading
+process.</p>
+<ul>
+<li><p><code>open</code> event (<code>Event.OPEN</code>): Dispatched when the load operation starts.</p>
+</li>
+<li><p><code>progress</code> event (<code>ProgressEvent.PROGRESS</code>): Dispatched periodically as bytes
+of data are read from the file.</p>
+</li>
+<li><p><code>complete</code> event (<code>Event.COMPLETE</code>): Dispatched when the load operation
+completes successfully.</p>
+</li>
+<li><p><code>ioError</code> event (<code>IOErrorEvent.IO_ERROR</code>): Dispatched if the load process
+fails because an input/output error occurs while opening or reading data from
+the file.</p>
+</li>
+</ul>
+<p>Once the FileReference object dispatches the complete event, the loaded data can
+be accessed as a ByteArray in the FileReference object&apos;s <code>data</code> property.</p>
+<p>The following example shows how to prompt the user to select a file and then
+load the data from that file into memory:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">import</span> openfl.display.Sprite;
+<span class="hljs-keyword">import</span> openfl.events.*;
+<span class="hljs-keyword">import</span> openfl.net.FileFilter;
+<span class="hljs-keyword">import</span> openfl.net.FileReference;
+
+<span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">FileReferenceExample1</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span> <span class="hljs-type">Sprite</span></span>
+</span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> fileRef:<span class="hljs-type">FileReference</span>;
+
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span></span>()
+    {
+        <span class="hljs-keyword">super</span>();
+
+        fileRef = <span class="hljs-keyword">new</span> <span class="hljs-type">FileReference</span>();
+        fileRef.addEventListener(Event.SELECT, onFileSelected);
+        fileRef.addEventListener(Event.CANCEL, onCancel);
+        fileRef.addEventListener(IOErrorEvent.IO_ERROR, onIOError);
+        fileRef.addEventListener(SecurityErrorEvent.SECURITY_ERROR,
+                    onSecurityError);
+        <span class="hljs-keyword">var</span> textTypeFilter:<span class="hljs-type">FileFilter </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">FileFilter</span>(<span class="hljs-string">&quot;Text Files (*.txt, *.rtf)&quot;</span>,
+                    <span class="hljs-string">&quot;*.txt;*.rtf&quot;</span>);
+        fileRef.browse([textTypeFilter]);
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">onFileSelected</span></span>(evt:<span class="hljs-type">Event</span>):<span class="hljs-type">Void</span>
+    {
+        fileRef.addEventListener(ProgressEvent.PROGRESS, onProgress);
+        fileRef.addEventListener(Event.COMPLETE, onComplete);
+        fileRef.load();
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">onProgress</span></span>(evt:<span class="hljs-type">ProgressEvent</span>):<span class="hljs-type">Void</span>
+    {
+        <span class="hljs-built_in">trace</span>(<span class="hljs-string">&quot;Loaded &quot;</span> + evt.bytesLoaded + <span class="hljs-string">&quot; of &quot;</span> + evt.bytesTotal + <span class="hljs-string">&quot; bytes.&quot;</span>);
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">onComplete</span></span>(evt:<span class="hljs-type">Event</span>):<span class="hljs-type">Void</span>
+    {
+        <span class="hljs-built_in">trace</span>(<span class="hljs-string">&quot;File was successfully loaded.&quot;</span>);
+        <span class="hljs-built_in">trace</span>(fileRef.data);
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">onCancel</span></span>(evt:<span class="hljs-type">Event</span>):<span class="hljs-type">Void</span>
+    {
+        <span class="hljs-built_in">trace</span>(<span class="hljs-string">&quot;The browse request was canceled by the user.&quot;</span>);
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">onIOError</span></span>(evt:<span class="hljs-type">IOErrorEvent</span>):<span class="hljs-type">Void</span>
+    {
+        <span class="hljs-built_in">trace</span>(<span class="hljs-string">&quot;There was an IO Error.&quot;</span>);
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">onSecurityError</span></span>(evt:<span class="hljs-type">Event</span>):<span class="hljs-type">Void</span>
+    {
+        <span class="hljs-built_in">trace</span>(<span class="hljs-string">&quot;There was a security error.&quot;</span>);
+    }
+}
+</code></pre>
+<p>The example code first creates the FileReference object named <code>fileRef</code> and then
+calls its <code>browse()</code> method. The <code>browse()</code> method opens a dialog box that
+prompts the user to select a file. When a file is selected, the code invokes the
+<code>onFileSelected()</code> method. This method adds listeners for the <code>progress</code> and
+<code>complete</code> events and then calls the FileReference object&apos;s <code>load()</code> method. The
+other handler methods in the example simply output messages to report on the
+progress of the load operation. When the loading completes, the application
+displays the contents of the loaded file using the <code>trace()</code> method.</p>
+<!-- TODO: uncomment when converted to OpenFL
+On native platforms, the FileStream class provides additional functionality for
+reading data from a local file. See
+[Reading and writing files](./reading-and-writing-files.md).-->
+<h2 id="saving-data-to-local-files">Saving data to local files</h2>
+<p>The <code>FileReference.save()</code> method lets you save data to a local file. It starts
+by opening a dialog box to let the user enter a new filename and location to
+which to save a file. After the user selects the filename and location, the data
+is written to the new file. When the file is saved successfully, the properties
+of the FileReference object are populated with the properties of the local file.</p>
+<p>Note: Your code can only call the <code>FileReference.save()</code> method in response to a
+user-initiated event such as a mouse click or a keypress event. Otherwise an
+error is thrown. This restriction does not apply to OpenFL content running on
+native platforms.</p>
+<p>The <code>FileReference.save()</code> method returns immediately after being called. The
+FileReference object then dispatches events to call listener methods at each
+step of the file saving process.</p>
+<p>The FileReference object dispatches the following events during the file saving
+process:</p>
+<ul>
+<li><p><code>select</code> event (<code>Event.SELECT</code>): Dispatched when the user specifies the
+location and file name for the new file to be saved.</p>
+</li>
+<li><p><code>cancel</code> event (<code>Event.CANCEL</code>): Dispatched when the user click the Cancel
+button in the dialog box.</p>
+</li>
+<li><p><code>open</code> event (<code>Event.OPEN</code>): Dispatched when the save operation starts.</p>
+</li>
+<li><p><code>progress</code> event (<code>ProgressEvent.PROGRESS</code>): Dispatched periodically as bytes
+of data are saved to the file.</p>
+</li>
+<li><p><code>complete</code> event (<code>Event.COMPLETE</code>): Dispatched when the save operation
+completes successfully.</p>
+</li>
+<li><p><code>ioError</code> event (<code>IOErrorEvent.IO_ERROR</code>): Dispatched if the saving process
+fails because an input/output error occurs while attempting to save data to
+the file.</p>
+</li>
+</ul>
+<p>The type of object passed in the <code>data</code> parameter of the <code>FileReference.save()</code>
+method determines how the data is written to the file:</p>
+<ul>
+<li><p>If it is a String value, then it is saved as a text file using UTF-8 encoding.</p>
+</li>
+<li><p>If it is a ByteArray object, then its contents are written directly to the
+file with no conversion.</p>
+</li>
+<li><p>If it is some other object, then the <code>FileReference.save()</code> method calls the
+object&apos;s <code>toString()</code> method and then saves the resulting String value to a
+UTF-8 text file. If the object&apos;s <code>toString()</code> method can&apos;t be called, then an
+error is thrown.</p>
+</li>
+</ul>
+<p>If the value of the <code>data</code> parameter is <code>null</code>, then an error is thrown.</p>
+<p>The following code extends the previous example for the <code>FileReference.load()</code>
+method. After reading the data from the file, this example prompts the user for
+a filename and then saves the data in a new file:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">import</span> openfl.display.Sprite;
+<span class="hljs-keyword">import</span> openfl.events.*;
+<span class="hljs-keyword">import</span> openfl.net.FileFilter;
+<span class="hljs-keyword">import</span> openfl.net.FileReference;
+
+<span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">FileReferenceExample2</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span> <span class="hljs-type">Sprite</span></span>
+</span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> fileRef:<span class="hljs-type">FileReference</span>;
+
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span></span>()
+    {
+        <span class="hljs-keyword">super</span>();
+
+        fileRef = <span class="hljs-keyword">new</span> <span class="hljs-type">FileReference</span>();
+        fileRef.addEventListener(Event.SELECT, onFileSelected);
+        fileRef.addEventListener(Event.CANCEL, onCancel);
+        fileRef.addEventListener(IOErrorEvent.IO_ERROR, onIOError);
+        fileRef.addEventListener(SecurityErrorEvent.SECURITY_ERROR,
+                    onSecurityError);
+        <span class="hljs-keyword">var</span> textTypeFilter:<span class="hljs-type">FileFilter </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">FileFilter</span>(<span class="hljs-string">&quot;Text Files (*.txt, *.rtf)&quot;</span>,
+                    <span class="hljs-string">&quot;*.txt;*.rtf&quot;</span>);
+        fileRef.browse([textTypeFilter]);
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">onFileSelected</span></span>(evt:<span class="hljs-type">Event</span>):<span class="hljs-type">Void</span>
+    {
+        fileRef.addEventListener(ProgressEvent.PROGRESS, onProgress);
+        fileRef.addEventListener(Event.COMPLETE, onComplete);
+        fileRef.load();
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">onProgress</span></span>(evt:<span class="hljs-type">ProgressEvent</span>):<span class="hljs-type">Void</span>
+    {
+        <span class="hljs-built_in">trace</span>(<span class="hljs-string">&quot;Loaded &quot;</span> + evt.bytesLoaded + <span class="hljs-string">&quot; of &quot;</span> + evt.bytesTotal + <span class="hljs-string">&quot; bytes.&quot;</span>);
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">onCancel</span></span>(evt:<span class="hljs-type">Event</span>):<span class="hljs-type">Void</span>
+    {
+        <span class="hljs-built_in">trace</span>(<span class="hljs-string">&quot;The browse request was canceled by the user.&quot;</span>);
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">onComplete</span></span>(evt:<span class="hljs-type">Event</span>):<span class="hljs-type">Void</span>
+    {
+        <span class="hljs-built_in">trace</span>(<span class="hljs-string">&quot;File was successfully loaded.&quot;</span>);
+        fileRef.removeEventListener(Event.SELECT, onFileSelected);
+        fileRef.removeEventListener(ProgressEvent.PROGRESS, onProgress);
+        fileRef.removeEventListener(Event.COMPLETE, onComplete);
+        fileRef.removeEventListener(Event.CANCEL, onCancel);
+        saveFile();
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">saveFile</span></span>():<span class="hljs-type">Void</span>
+    {
+        fileRef.addEventListener(Event.SELECT, onSaveFileSelected);
+        fileRef.save(fileRef.data,<span class="hljs-string">&quot;NewFileName.txt&quot;</span>);
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">onSaveFileSelected</span></span>(evt:<span class="hljs-type">Event</span>):<span class="hljs-type">Void</span>
+    {
+        fileRef.addEventListener(ProgressEvent.PROGRESS, onSaveProgress);
+        fileRef.addEventListener(Event.COMPLETE, onSaveComplete);
+        fileRef.addEventListener(Event.CANCEL, onSaveCancel);
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">onSaveProgress</span></span>(evt:<span class="hljs-type">ProgressEvent</span>):<span class="hljs-type">Void</span>
+    {
+        <span class="hljs-built_in">trace</span>(<span class="hljs-string">&quot;Saved &quot;</span> + evt.bytesLoaded + <span class="hljs-string">&quot; of &quot;</span> + evt.bytesTotal + <span class="hljs-string">&quot; bytes.&quot;</span>);
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">onSaveComplete</span></span>(evt:<span class="hljs-type">Event</span>):<span class="hljs-type">Void</span>
+    {
+        <span class="hljs-built_in">trace</span>(<span class="hljs-string">&quot;File saved.&quot;</span>);
+        fileRef.removeEventListener(Event.SELECT, onSaveFileSelected);
+        fileRef.removeEventListener(ProgressEvent.PROGRESS, onSaveProgress);
+        fileRef.removeEventListener(Event.COMPLETE, onSaveComplete);
+        fileRef.removeEventListener(Event.CANCEL, onSaveCancel);
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">onSaveCancel</span></span>(evt:<span class="hljs-type">Event</span>):<span class="hljs-type">Void</span>
+    {
+        <span class="hljs-built_in">trace</span>(<span class="hljs-string">&quot;The save request was canceled by the user.&quot;</span>);
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">onIOError</span></span>(evt:<span class="hljs-type">IOErrorEvent</span>):<span class="hljs-type">Void</span>
+    {
+        <span class="hljs-built_in">trace</span>(<span class="hljs-string">&quot;There was an IO Error.&quot;</span>);
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">onSecurityError</span></span>(evt:<span class="hljs-type">Event</span>):<span class="hljs-type">Void</span>
+    {
+        <span class="hljs-built_in">trace</span>(<span class="hljs-string">&quot;There was a security error.&quot;</span>);
+    }
+}
+</code></pre>
+<p>When all of the data loads from the file, the code calls the <code>onComplete()</code>
+method. The <code>onComplete()</code> method removes the listeners for the loading events
+and then calls the <code>saveFile()</code> method. The <code>saveFile()</code> method calls the
+<code>FileReference.save()</code> method. The <code>FileReference.save()</code> method opens a new
+dialog box to let the user enter a new filename and location to save the file.
+The remaining event listener methods trace the progress of the file saving
+process until it is complete.</p>
+<!-- TODO: uncomment when converted to OpenFL
+In OpenFL on native platforms, the FileStream class provides additional
+functionality for writing data to a local file. See
+[Reading and writing files](./reading-and-writing-files.md).-->
+<h2 id="uploading-files-to-a-server">Uploading files to a server</h2>
+<p>To upload files to a server, first call the <code>browse()</code> method to allow a user to
+select one or more files. Next, when the <code>FileReference.upload()</code> method is
+called, the selected file is transferred to the server. If the user selects
+multiple files using the <code>FileReferenceList.browse()</code> method, OpenFL creates an
+array of selected files called <code>FileReferenceList.fileList</code>. You can then use
+the <code>FileReference.upload()</code> method to upload each file individually.</p>
+<p>Note: Using the <code>FileReference.browse()</code> method allows you to upload single
+files only. To allow a user to upload multiple files, use the
+<code>FileReferenceList.browse()</code> method.</p>
+<p>By default, the system file picker dialog box allows users to pick any file type
+from the local computer. Developers can specify one or more custom file type
+filters by using the FileFilter class and passing an array of file filter
+instances to the <code>browse()</code> method:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> imageTypes:<span class="hljs-type">FileFilter </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">FileFilter</span>(<span class="hljs-string">&quot;Images (*.jpg, *.jpeg, *.gif, *.png)&quot;</span>, <span class="hljs-string">&quot;*.jpg; *.jpeg; *.gif; *.png&quot;</span>);
+<span class="hljs-keyword">var</span> textTypes:<span class="hljs-type">FileFilter </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">FileFilter</span>(<span class="hljs-string">&quot;Text Files (*.txt, *.rtf)&quot;</span>, <span class="hljs-string">&quot;*.txt; *.rtf&quot;</span>);
+<span class="hljs-keyword">var</span> allTypes:<span class="hljs-type">Array </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">Array</span>(imageTypes, textTypes);
+<span class="hljs-keyword">var</span> fileRef:<span class="hljs-type">FileReference </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">FileReference</span>();
+fileRef.browse(allTypes);
+</code></pre>
+<p>When the user has selected the files and clicked the Open button in the system
+file picker, the <code>Event.SELECT</code> event is dispatched. If the
+<code>FileReference.browse()</code> method is used to select a file to upload, the
+following code sends the file to a web server:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">import</span> openfl.display.Sprite;
+<span class="hljs-keyword">import</span> openfl.events.Event;
+<span class="hljs-keyword">import</span> openfl.net.FileReference;
+<span class="hljs-keyword">import</span> openfl.net.URLRequest;
+
+<span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">FileReferenceExample3</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span> <span class="hljs-type">Sprite</span></span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> fileRef:<span class="hljs-type">FileReference</span>;
+
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span></span>() {
+        <span class="hljs-keyword">super</span>();
+
+        fileRef  = <span class="hljs-keyword">new</span> <span class="hljs-type">FileReference</span>();
+        fileRef.addEventListener(Event.SELECT, selectHandler);
+        fileRef.addEventListener(Event.COMPLETE, completeHandler);
+        <span class="hljs-keyword">try</span>
+        {
+            <span class="hljs-keyword">var</span> success:<span class="hljs-type">Bool </span>= fileRef.browse();
+        }
+        <span class="hljs-keyword">catch</span> (error:<span class="hljs-type">Dynamic</span>)
+        {
+            <span class="hljs-built_in">trace</span>(<span class="hljs-string">&quot;Unable to browse for files.&quot;</span>);
+        }
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">selectHandler</span></span>(event:<span class="hljs-type">Event</span>):<span class="hljs-type">Void</span>
+    {
+        <span class="hljs-keyword">var</span> request:<span class="hljs-type">URLRequest </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">URLRequest</span>(<span class="hljs-string">&quot;http://www.example.com/fileUploadScript.php&quot;</span>);
+        <span class="hljs-keyword">try</span>
+        {
+            fileRef.upload(request);
+        }
+        <span class="hljs-keyword">catch</span> (error:<span class="hljs-type">Dynamic</span>)
+        {
+            <span class="hljs-built_in">trace</span>(<span class="hljs-string">&quot;Unable to upload file.&quot;</span>);
+        }
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">completeHandler</span></span>(event:<span class="hljs-type">Event</span>):<span class="hljs-type">Void</span>
+    {
+        <span class="hljs-built_in">trace</span>(<span class="hljs-string">&quot;uploaded&quot;</span>);
+    }
+}
+</code></pre>
+<p><strong>Tip:</strong> You can send data to the server with the <code>FileReference.upload()</code>
+method by using the <code>URLRequest.method</code> and <code>URLRequest.data</code> properties to send
+variables using the <code>POST</code> or <code>GET</code> <em>methods.</em></p>
+<p>When you attempt to upload a file using the <code>FileReference.upload()</code> method, the
+following events are dispatched:</p>
+<ul>
+<li><p><code>open</code> event (<code>Event.OPEN</code>): Dispatched when the upload operation starts.</p>
+</li>
+<li><p><code>progress</code> event (<code>ProgressEvent.PROGRESS</code>): Dispatched periodically as bytes
+of data from the file are uploaded.</p>
+</li>
+<li><p><code>complete</code> event (<code>Event.COMPLETE</code>): Dispatched when the upload operation
+completes successfully.</p>
+</li>
+<li><p><code>httpStatus</code> event (<code>HTTPStatusEvent.HTTP_STATUS</code>): Dispatched when the upload
+process fails because of an HTTP error.</p>
+</li>
+<li><p><code>httpResponseStatus</code> event (<code>HTTPStatusEvent.HTTP_RESPONSE_STATUS</code>):
+Dispatched if a call to the <code>upload()</code> or <code>uploadUnencoded()</code> method attempts
+to access data over HTTP and OpenFL is able to detect and return the status
+code for the request.</p>
+</li>
+<li><p><code>securityError</code> event (<code>SecurityErrorEvent.SECURITY_ERROR</code>): Dispatched when
+an upload operation fails because of a security violation.</p>
+</li>
+<li><p><code>uploadCompleteData</code> event (<code>DataEvent.UPLOAD_COMPLETE_DATA</code>): Dispatched
+after data is received from the server after a successful upload.</p>
+</li>
+<li><p><code>ioError</code> event (<code>IOErrorEvent.IO_ERROR</code>): Dispatched if the upload process
+fails for any of the following reasons:</p>
+<ul>
+<li><p>An input/output error occurred while OpenFL is reading, writing, or
+transmitting the file.</p>
+</li>
+<li><p>OpenFL tried to upload a file to a server that requires authentication (such
+as a user name and password). During upload, OpenFL does not provide a means
+for users to enter passwords.</p>
+</li>
+<li><p>The <code>url</code> parameter contains an invalid protocol. The
+<code>FileReference.upload()</code> method must use either HTTP or HTTPS.</p>
+</li>
+</ul>
+</li>
+</ul>
+<!-- TODO: this was true for Flash, but is it true for OpenFL?
+**Tip:** OpenFL does not offer complete support for servers that require
+authentication. Only OpenFL content that is running in a web browser can provide
+a dialog box to prompt the user to enter a user name and password for
+authentication, and then only for downloads. For uploads, the file transfer
+fails.
+-->
+<p>The following code demonstrates file uploads using PHP, and it includes data
+validation. The script limits the number of uploaded files in the upload
+directory to 10, ensures that the file is less than 200 KB, and permits only
+JPEG, GIF, or PNG files to be uploaded and saved to the file system.</p>
+<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+    <span class="hljs-comment">// fileUploadScript.php</span>
+    <span class="hljs-keyword">if</span> (!<span class="hljs-title function_ invoke__">is_dir</span>(<span class="hljs-string">&quot;temporary&quot;</span>))
+    {
+        <span class="hljs-title function_ invoke__">mkdir</span>(<span class="hljs-string">&quot;temporary&quot;</span>, <span class="hljs-number">0777</span>, <span class="hljs-literal">true</span>);
+    }
+    <span class="hljs-keyword">if</span> (!<span class="hljs-title function_ invoke__">is_dir</span>(<span class="hljs-string">&quot;images&quot;</span>))
+    {
+        <span class="hljs-title function_ invoke__">mkdir</span>(<span class="hljs-string">&quot;images&quot;</span>, <span class="hljs-number">0777</span>, <span class="hljs-literal">true</span>);
+    }
+    <span class="hljs-variable">$MAXIMUM_FILESIZE</span> = <span class="hljs-number">1024</span> * <span class="hljs-number">200</span>; <span class="hljs-comment">// 200KB</span>
+    <span class="hljs-variable">$MAXIMUM_FILE_COUNT</span> = <span class="hljs-number">10</span>; <span class="hljs-comment">// keep maximum 10 files on server</span>
+    <span class="hljs-keyword">echo</span> <span class="hljs-title function_ invoke__">exif_imagetype</span>(<span class="hljs-variable">$_FILES</span>[<span class="hljs-string">&apos;Filedata&apos;</span>][<span class="hljs-string">&apos;tmp_name&apos;</span>]);
+    <span class="hljs-keyword">if</span> (<span class="hljs-variable">$_FILES</span>[<span class="hljs-string">&apos;Filedata&apos;</span>][<span class="hljs-string">&apos;size&apos;</span>] &lt;= <span class="hljs-variable">$MAXIMUM_FILESIZE</span>)
+    {
+        <span class="hljs-title function_ invoke__">move_uploaded_file</span>(<span class="hljs-variable">$_FILES</span>[<span class="hljs-string">&apos;Filedata&apos;</span>][<span class="hljs-string">&apos;tmp_name&apos;</span>], <span class="hljs-string">&quot;./temporary/&quot;</span>.<span class="hljs-variable">$_FILES</span>[<span class="hljs-string">&apos;Filedata&apos;</span>][<span class="hljs-string">&apos;name&apos;</span>]);
+        <span class="hljs-variable">$type</span> = <span class="hljs-title function_ invoke__">exif_imagetype</span>(<span class="hljs-string">&quot;./temporary/&quot;</span>.<span class="hljs-variable">$_FILES</span>[<span class="hljs-string">&apos;Filedata&apos;</span>][<span class="hljs-string">&apos;name&apos;</span>]);
+        <span class="hljs-keyword">if</span> (<span class="hljs-variable">$type</span> == <span class="hljs-number">1</span> || <span class="hljs-variable">$type</span> == <span class="hljs-number">2</span> || <span class="hljs-variable">$type</span> == <span class="hljs-number">3</span>)
+        {
+            <span class="hljs-title function_ invoke__">rename</span>(<span class="hljs-string">&quot;./temporary/&quot;</span>.<span class="hljs-variable">$_FILES</span>[<span class="hljs-string">&apos;Filedata&apos;</span>][<span class="hljs-string">&apos;name&apos;</span>], <span class="hljs-string">&quot;./images/&quot;</span>.<span class="hljs-variable">$_FILES</span>[<span class="hljs-string">&apos;Filedata&apos;</span>][<span class="hljs-string">&apos;name&apos;</span>]);
+        }
+        <span class="hljs-keyword">else</span>
+        {
+            <span class="hljs-title function_ invoke__">unlink</span>(<span class="hljs-string">&quot;./temporary/&quot;</span>.<span class="hljs-variable">$_FILES</span>[<span class="hljs-string">&apos;Filedata&apos;</span>][<span class="hljs-string">&apos;name&apos;</span>]);
+        }
+    }
+    <span class="hljs-variable">$directory</span> = <span class="hljs-title function_ invoke__">opendir</span>(<span class="hljs-string">&apos;./images/&apos;</span>);
+    <span class="hljs-variable">$files</span> = <span class="hljs-keyword">array</span>();
+    <span class="hljs-keyword">while</span> (<span class="hljs-variable">$file</span> = <span class="hljs-title function_ invoke__">readdir</span>(<span class="hljs-variable">$directory</span>))
+    {
+        <span class="hljs-title function_ invoke__">array_push</span>(<span class="hljs-variable">$files</span>, <span class="hljs-keyword">array</span>(<span class="hljs-string">&apos;./images/&apos;</span>.<span class="hljs-variable">$file</span>, <span class="hljs-title function_ invoke__">filectime</span>(<span class="hljs-string">&apos;./images/&apos;</span>.<span class="hljs-variable">$file</span>)));
+    }
+    <span class="hljs-title function_ invoke__">usort</span>(<span class="hljs-variable">$files</span>, function(<span class="hljs-variable">$a</span>, <span class="hljs-variable">$b</span>)
+    {
+        <span class="hljs-keyword">if</span> (<span class="hljs-variable">$a</span>[<span class="hljs-number">1</span>] == <span class="hljs-variable">$b</span>[<span class="hljs-number">1</span>])
+        {
+            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+        }
+        <span class="hljs-keyword">else</span>
+        {
+            <span class="hljs-keyword">return</span> (<span class="hljs-variable">$a</span>[<span class="hljs-number">1</span>] &lt; <span class="hljs-variable">$b</span>[<span class="hljs-number">1</span>]) ? -<span class="hljs-number">1</span> : <span class="hljs-number">1</span>;
+        }
+    });
+    <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">count</span>(<span class="hljs-variable">$files</span>) &gt; <span class="hljs-variable">$MAXIMUM_FILE_COUNT</span>)
+    {
+        <span class="hljs-variable">$files_to_delete</span> = <span class="hljs-title function_ invoke__">array_splice</span>(<span class="hljs-variable">$files</span>, <span class="hljs-number">0</span>, <span class="hljs-title function_ invoke__">count</span>(<span class="hljs-variable">$files</span>) - <span class="hljs-variable">$MAXIMUM_FILE_COUNT</span>);
+        <span class="hljs-keyword">for</span> (<span class="hljs-variable">$i</span> = <span class="hljs-number">0</span>; <span class="hljs-variable">$i</span> &lt; <span class="hljs-title function_ invoke__">count</span>(<span class="hljs-variable">$files_to_delete</span>); <span class="hljs-variable">$i</span>++)
+        {
+            <span class="hljs-title function_ invoke__">unlink</span>(<span class="hljs-variable">$files_to_delete</span>[<span class="hljs-variable">$i</span>][<span class="hljs-number">0</span>]);
+        }
+    }
+    <span class="hljs-title function_ invoke__">print_r</span>(<span class="hljs-variable">$files</span>);
+    <span class="hljs-title function_ invoke__">closedir</span>(<span class="hljs-variable">$directory</span>);
+<span class="hljs-meta">?&gt;</span>
+</code></pre>
+<p>You can pass additional variables to the upload script using either the <code>POST</code>
+or <code>GET</code> request method. To send additional <code>POST</code> variables to your upload
+script, you can use the following code:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">import</span> openfl.display.Sprite;
+<span class="hljs-keyword">import</span> openfl.events.Event;
+<span class="hljs-keyword">import</span> openfl.net.FileReference;
+<span class="hljs-keyword">import</span> openfl.net.URLRequest;
+<span class="hljs-keyword">import</span> openfl.net.URLRequestMethod;
+<span class="hljs-keyword">import</span> openfl.net.URLVariables;
+
+<span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">FileReferenceExample4</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span> <span class="hljs-type">Sprite</span></span>
+</span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> fileRef:<span class="hljs-type">FileReference </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">FileReference</span>();
+
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span></span>() {
+        <span class="hljs-keyword">super</span>();
+
+        fileRef = <span class="hljs-keyword">new</span> <span class="hljs-type">FileReference</span>();
+        fileRef.addEventListener(Event.SELECT, selectHandler);
+        fileRef.addEventListener(Event.COMPLETE, completeHandler);
+        fileRef.browse();
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">selectHandler</span></span>(event:<span class="hljs-type">Event</span>):<span class="hljs-type">Void</span>
+    {
+        <span class="hljs-keyword">var</span> params:<span class="hljs-type">URLVariables </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">URLVariables</span>();
+        params.date = Date.now();
+        params.ssid = <span class="hljs-string">&quot;94103-1394-2345&quot;</span>;
+        <span class="hljs-keyword">var</span> request:<span class="hljs-type">URLRequest </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">URLRequest</span>(<span class="hljs-string">&quot;http://www.example.com/ssidfileupload.php&quot;</span>);
+        request.method = URLRequestMethod.POST;
+        request.data = params;
+        fileRef.upload(request, <span class="hljs-string">&quot;Custom1&quot;</span>);
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">completeHandler</span></span>(event:<span class="hljs-type">Event</span>):<span class="hljs-type">Void</span>
+    {
+        <span class="hljs-built_in">trace</span>(<span class="hljs-string">&quot;uploaded&quot;</span>);
+    }
+}
+</code></pre>
+<p>The previous example creates a URLVariables object that you pass to the remote
+server- side script. In older versions of Adobe Flash, you could pass variables
+to the server upload script by passing values in the query string. OpenFL allows
+you to pass variables to the remote script using a URLRequest object, which
+allows you to pass data using either the <code>POST</code> or <code>GET</code> method; this, in turn,
+makes passing larger sets of data easier and cleaner. In order to specify
+whether the variables are passed using the <code>GET</code> or <code>POST</code> request method, you
+can set the <code>URLRequest.method</code> property to either <code>URLRequestMethod.GET</code> or
+<code>URLRequestMethod.POST</code>, respectively.</p>
+<p>OpenFL also lets you override the default <code>Filedata</code> upload file field name by
+providing a second parameter to the <code>upload()</code> method, as demonstrated in the
+previous example (which replaced the default value <code>Filedata</code> with <code>Custom1</code>).</p>
+<!-- TODO: uncomment if this is implemented
+By default, OpenFL does not attempt to send a test upload, although you can
+override this default by passing a value of `true` as the third parameter to
+the `upload()` method. The purpose of the test upload is to check whether the
+actual file upload will be successful and that server authentication, if
+required, will succeed.
+
+Note: A test upload occurs only on Windows-based Flash Players at this time.-->
+<p>The server script that handles the file upload should expect an HTTP <code>POST</code>
+request with the following elements:</p>
+<ul>
+<li><p><code>Content-Type</code> with a value of <code>multipart/form-data.</code></p>
+</li>
+<li><p><code>Content-Disposition</code> with a <code>name</code> attribute set to <code>&quot;Filedata&quot;</code> and a
+<code>filename</code> attribute set to the name of the original file. You can specify a
+custom <code>name</code> attribute by passing a value for the <code>uploadDataFieldName</code>
+parameter in the <code>FileReference.upload()</code> method.</p>
+</li>
+<li><p>The binary contents of the file.</p>
+</li>
+</ul>
+<p>Here is a sample HTTP <code>POST</code> request:</p>
+<pre><code>POST /handler.php HTTP/1.1
+Accept: text/*
+Content-Type: multipart/form-data;
+boundary=----------Ij5ae0ae0KM7GI3KM7ei4cH2ei4gL6
+User-Agent: curl/7.83.1
+Host: www.example.com
+Content-Length: 421
+Connection: Keep-Alive
+Cache-Control: no-cache
+
+------------Ij5ae0ae0KM7GI3KM7ei4cH2ei4gL6
+Content-Disposition: form-data; name=&quot;Filename&quot;
+
+sushi.jpg
+------------Ij5ae0ae0KM7GI3KM7ei4cH2ei4gL6
+Content-Disposition: form-data; name=&quot;Filedata&quot;; filename=&quot;sushi.jpg&quot;
+Content-Type: application/octet-stream
+
+Test File
+------------Ij5ae0ae0KM7GI3KM7ei4cH2ei4gL6
+Content-Disposition: form-data; name=&quot;Upload&quot;
+
+Submit Query
+------------Ij5ae0ae0KM7GI3KM7ei4cH2ei4gL6
+(actual file data,,,)
+</code></pre><p>The following sample HTTP <code>POST</code> request sends three <code>POST</code> variables:
+<code>api_sig</code>, <code>api_key</code>, and <code>auth_token</code>, and uses a custom upload data field name
+value of <code>&quot;photo&quot;</code>:</p>
+<pre><code>POST /handler.php HTTP/1.1
+Accept: text/*
+Content-Type: multipart/form-data;
+boundary=----------Ij5ae0ae0KM7GI3KM7ei4cH2ei4gL6
+User-Agent: curl/7.83.1
+Host: www.example.com
+Content-Length: 421
+Connection: Keep-Alive
+Cache-Control: no-cache
+
+------------Ij5GI3GI3ei4GI3ei4KM7GI3KM7KM7
+Content-Disposition: form-data; name=&quot;Filename&quot;
+
+sushi.jpg
+------------Ij5GI3GI3ei4GI3ei4KM7GI3KM7KM7
+Content-Disposition: form-data; name=&quot;api_sig&quot;
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+------------Ij5GI3GI3ei4GI3ei4KM7GI3KM7KM7
+Content-Disposition: form-data; name=&quot;api_key&quot;
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+------------Ij5GI3GI3ei4GI3ei4KM7GI3KM7KM7
+Content-Disposition: form-data; name=&quot;auth_token&quot;
+
+XXXXXXXXXXXXXXXXXXXXXXX
+------------Ij5GI3GI3ei4GI3ei4KM7GI3KM7KM7
+Content-Disposition: form-data; name=&quot;photo&quot;; filename=&quot;sushi.jpg&quot;
+Content-Type: application/octet-stream
+
+(actual file data,,,)
+------------Ij5GI3GI3ei4GI3ei4KM7GI3KM7KM7
+Content-Disposition: form-data; name=&quot;Upload&quot;
+
+Submit Query
+------------Ij5GI3GI3ei4GI3ei4KM7GI3KM7KM7--
+</code></pre><h2 id="downloading-files-from-a-server">Downloading files from a server</h2>
+<p>You can let users download files from a server using the
+<code>FileReference.download()</code> method, which takes two parameters: <code>request</code> and
+<code>defaultFileName</code>. The first parameter is the URLRequest object that contains
+the URL of the file to download. The second parameter is optional—it lets you
+specify a default filename that appears in the download file dialog box. If you
+omit the second parameter, <code>defaultFileName</code>, the filename from the specified
+URL is used.</p>
+<p>The following code downloads a file named index.xml from the same directory as
+the OpenFL content:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> request:<span class="hljs-type">URLRequest </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">URLRequest</span>(<span class="hljs-string">&quot;index.xml&quot;</span>);
+<span class="hljs-keyword">var</span> fileRef:<span class="hljs-type">FileReference </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">FileReference</span>();
+fileRef.download(request);
+</code></pre>
+<p>To set the default name to currentnews.xml instead of index.xml, specify the
+<code>defaultFileName</code> parameter, as the following snippet shows:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> request:<span class="hljs-type">URLRequest </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">URLRequest</span>(<span class="hljs-string">&quot;index.xml&quot;</span>);
+<span class="hljs-keyword">var</span> fileToDownload:<span class="hljs-type">FileReference </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">FileReference</span>();
+fileToDownload.download(request, <span class="hljs-string">&quot;currentnews.xml&quot;</span>);
+</code></pre>
+<p>Renaming a file can be useful if the server filename was not intuitive or was
+server-generated. It&apos;s also good to explicitly specify the <code>defaultFileName</code>
+parameter when you download a file using a server-side script, instead of
+downloading the file directly. For example, you need to specify the
+<code>defaultFileName</code> parameter if you have a server-side script that downloads
+specific files based on URL variables passed to it. Otherwise, the default name
+of the downloaded file is the name of your server-side script.</p>
+<p>Data can be sent to the server using the <code>download()</code> method by appending
+parameters to the URL for the server script to parse. The following Haxe code
+snippet downloads a document based on which parameters are passed to a
+server-side script:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">import</span> openfl.display.Sprite;
+<span class="hljs-keyword">import</span> openfl.net.FileReference;
+<span class="hljs-keyword">import</span> openfl.net.URLRequest;
+<span class="hljs-keyword">import</span> openfl.net.URLRequestMethod;
+<span class="hljs-keyword">import</span> openfl.net.URLVariables;
+
+<span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">DownloadFileExample</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span> <span class="hljs-type">Sprite</span></span>
+</span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> fileToDownload:<span class="hljs-type">FileReference</span>;
+
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span></span>()
+    {
+        <span class="hljs-keyword">super</span>();
+
+        <span class="hljs-keyword">var</span> request:<span class="hljs-type">URLRequest </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">URLRequest</span>();
+        request.url = <span class="hljs-string">&quot;http://www.example.com/downloadfile.php&quot;</span>;
+        request.method = URLRequestMethod.GET;
+        request.data = <span class="hljs-keyword">new</span> <span class="hljs-type">URLVariables</span>(<span class="hljs-string">&quot;id=2&quot;</span>);
+        fileToDownload = <span class="hljs-keyword">new</span> <span class="hljs-type">FileReference</span>();
+        <span class="hljs-keyword">try</span>
+        {
+            fileToDownload.download(request, <span class="hljs-string">&quot;file2.txt&quot;</span>);
+        }
+        <span class="hljs-keyword">catch</span> (error:<span class="hljs-type">Dynamic</span>)
+        {
+            <span class="hljs-built_in">trace</span>(<span class="hljs-string">&quot;Unable to download file.&quot;</span>);
+        }
+    }
+}
+</code></pre>
+<p>The following code demonstrates the PHP script, downloadfile.php, that downloads
+one of two files from the server, depending on the value of a URL variable:</p>
+<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+    <span class="hljs-keyword">switch</span> (<span class="hljs-variable">$_GET</span>[<span class="hljs-string">&quot;id&quot;</span>])
+    {
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;2&quot;</span>:
+            <span class="hljs-variable">$file</span> = <span class="hljs-string">&quot;two.txt&quot;</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">default</span>:
+            <span class="hljs-variable">$file</span> = <span class="hljs-string">&quot;one.txt&quot;</span>;
+    }
+    <span class="hljs-keyword">if</span> (!<span class="hljs-title function_ invoke__">file_exists</span>(<span class="hljs-variable">$file</span>))
+    {
+        <span class="hljs-comment">// file does not exist</span>
+        <span class="hljs-keyword">die</span>(<span class="hljs-string">&apos;file not found&apos;</span>);
+    }
+    <span class="hljs-keyword">else</span>
+    {
+        <span class="hljs-title function_ invoke__">readfile</span>(<span class="hljs-variable">$file</span>);
+    }
+<span class="hljs-meta">?&gt;</span>
+</code></pre>
+<h2 id="filereferencelist-class">FileReferenceList class</h2>
+<p>The FileReferenceList class lets the user select one or more files to upload to
+a server-side script. The file upload is handled by the <code>FileReference.upload()</code>
+method, which must be called on each file that the user selects.</p>
+<p>The following code creates two FileFilter objects (<code>imageFilter</code> and
+<code>textFilter</code>) and passes them in an array to the <code>FileReferenceList.browse()</code>
+method. This causes the operating system file dialog box to display two possible
+filters for file types.</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> imageFilter:<span class="hljs-type">FileFilter </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">FileFilter</span>(<span class="hljs-string">&quot;Image Files (*.jpg, *.jpeg, *.gif, *.png)&quot;</span>, <span class="hljs-string">&quot;*.jpg; *.jpeg; *.gif; *.png&quot;</span>);
+<span class="hljs-keyword">var</span> textFilter:<span class="hljs-type">FileFilter </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">FileFilter</span>(<span class="hljs-string">&quot;Text Files (*.txt, *.rtf)&quot;</span>, <span class="hljs-string">&quot;*.txt; *.rtf&quot;</span>);
+<span class="hljs-keyword">var</span> fileRefList:<span class="hljs-type">FileReferenceList </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">FileReferenceList</span>();
+<span class="hljs-keyword">try</span>
+{
+    <span class="hljs-keyword">var</span> success:<span class="hljs-type">Bool </span>= fileRefList.browse(<span class="hljs-keyword">new</span> <span class="hljs-type">Array</span>(imageFilter, textFilter));
+}
+<span class="hljs-keyword">catch</span> (error:<span class="hljs-type">Error</span>)
+{
+    <span class="hljs-built_in">trace</span>(<span class="hljs-string">&quot;Unable to browse for files.&quot;</span>);
+}
+</code></pre>
+<p>Allowing the user to select and upload one or more files by using the
+FileReferenceList class is the same as using <code>FileReference.browse()</code> to select
+files, although the FileReferenceList allows you to select more than one file.
+Uploading multiple files requires you to upload each of the selected files by
+using <code>FileReference.upload()</code>, as the following code shows:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">import</span> openfl.display.Sprite;
+<span class="hljs-keyword">import</span> openfl.events.Event;
+<span class="hljs-keyword">import</span> openfl.net.FileReference;
+<span class="hljs-keyword">import</span> openfl.net.FileReferenceList;
+<span class="hljs-keyword">import</span> openfl.net.URLRequest;
+
+<span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">FileReferenceListExample</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span> <span class="hljs-type">Sprite</span></span>
+</span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> fileRefList:<span class="hljs-type">FileReferenceList</span>;
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span></span>()
+    {
+        <span class="hljs-keyword">super</span>();
+
+        <span class="hljs-keyword">var</span> fileRefList:<span class="hljs-type">FileReferenceList </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">FileReferenceList</span>();
+        fileRefList.addEventListener(Event.SELECT, selectHandler);
+        fileRefList.browse();
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">selectHandler</span></span>(event:<span class="hljs-type">Event</span>):<span class="hljs-type">Void</span>
+    {
+        <span class="hljs-keyword">var</span> request:<span class="hljs-type">URLRequest </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">URLRequest</span>(<span class="hljs-string">&quot;http://www.example.com/fileUploadScript.php&quot;</span>);
+        <span class="hljs-keyword">var</span> file:<span class="hljs-type">FileReference</span>;
+        <span class="hljs-keyword">var</span> files:<span class="hljs-type">FileReferenceList </span>= <span class="hljs-keyword">cast</span>(event.target, FileReferenceList);
+        <span class="hljs-keyword">var</span> selectedFileArray:<span class="hljs-type">Array</span>&lt;FileReference&gt; = files.fileList;
+        <span class="hljs-keyword">for</span> (i <span class="hljs-keyword">in</span> <span class="hljs-number">0.</span>..selectedFileArray.length)
+        {
+            file = selectedFileArray[i];
+            file.addEventListener(Event.COMPLETE, completeHandler);
+            <span class="hljs-keyword">try</span>
+            {
+                file.upload(request);
+            }
+            <span class="hljs-keyword">catch</span> (error:<span class="hljs-type">Dynamic</span>)
+            {
+                <span class="hljs-built_in">trace</span>(<span class="hljs-string">&quot;Unable to upload files.&quot;</span>);
+            }
+        }
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">completeHandler</span></span>(event:<span class="hljs-type">Event</span>):<span class="hljs-type">Void</span>
+    {
+        <span class="hljs-built_in">trace</span>(<span class="hljs-string">&quot;uploaded&quot;</span>);
+    }
+}
+</code></pre>
+<p>Because the <code>Event.COMPLETE</code> event is added to each individual FileReference
+object in the array, OpenFL calls the <code>completeHandler()</code> method when each
+individual file finishes uploading.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Chapter 38: Working with the file system">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../working-with-byte-arrays/" class="navigation navigation-next " aria-label="Next page: Chapter 41: Working with byte arrays">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Using the FileReference class","level":"1.13.1","depth":2,"next":{"title":"Chapter 41: Working with byte arrays","level":"1.14","depth":1,"path":"working-with-byte-arrays/README.md","ref":"working-with-byte-arrays/README.md","articles":[{"title":"Reading a writing a byte array","level":"1.14.1","depth":2,"path":"working-with-byte-arrays/reading-and-writing-a-byte-array.md","ref":"working-with-byte-arrays/reading-and-writing-a-byte-array.md","articles":[]}]},"previous":{"title":"Chapter 38: Working with the file system","level":"1.13","depth":1,"path":"working-with-the-file-system/README.md","ref":"working-with-the-file-system/README.md","articles":[{"title":"Using the FileReference class","level":"1.13.1","depth":2,"path":"working-with-the-file-system/using-the-filereference-class.md","ref":"working-with-the-file-system/using-the-filereference-class.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"OpenFL Developer's Guide","gitbook":"*"},"file":{"path":"working-with-the-file-system/using-the-filereference-class.md","mtime":"2024-01-29T23:19:05.245Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-01-29T23:19:20.828Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
