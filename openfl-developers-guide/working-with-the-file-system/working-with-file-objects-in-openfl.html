@@ -1,0 +1,2678 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Working with File objects in OpenFL · OpenFL Developer's Guide</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 5.1.4">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="getting-file-system-information.html" />
+    
+    
+    <link rel="prev" href="native-file-system-basics.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../handling-events/">
+            
+                <a href="../handling-events/">
+            
+                    
+                    Chapter 1: Handling events
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../handling-events/basics-of-handling-events.html">
+            
+                <a href="../handling-events/basics-of-handling-events.html">
+            
+                    
+                    Basics of handling events
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../handling-events/the-event-flow.html">
+            
+                <a href="../handling-events/the-event-flow.html">
+            
+                    
+                    The event flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../handling-events/event-objects.html">
+            
+                <a href="../handling-events/event-objects.html">
+            
+                    
+                    Event objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../handling-events/event-listeners.html">
+            
+                <a href="../handling-events/event-listeners.html">
+            
+                    
+                    Event listeners
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../display-programming/">
+            
+                <a href="../display-programming/">
+            
+                    
+                    Chapter 2: Display programming
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../display-programming/basics-of-display-programming.html">
+            
+                <a href="../display-programming/basics-of-display-programming.html">
+            
+                    
+                    Basics of display programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../display-programming/core-display-classes.html">
+            
+                <a href="../display-programming/core-display-classes.html">
+            
+                    
+                    Core display classes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../display-programming/advantages-of-the-display-list-approach.html">
+            
+                <a href="../display-programming/advantages-of-the-display-list-approach.html">
+            
+                    
+                    Advantages of the display list approach
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../display-programming/working-with-display-objects/">
+            
+                <a href="../display-programming/working-with-display-objects/">
+            
+                    
+                    Working with display objects
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../display-programming/working-with-display-objects/properties-and-methods-of-the-displayobject-class.html">
+            
+                <a href="../display-programming/working-with-display-objects/properties-and-methods-of-the-displayobject-class.html">
+            
+                    
+                    Properties and methods of the DisplayObject class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="../display-programming/working-with-display-objects/adding-display-objects-to-the-display-list.html">
+            
+                <a href="../display-programming/working-with-display-objects/adding-display-objects-to-the-display-list.html">
+            
+                    
+                    Adding display objects to the display list
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.3" data-path="../display-programming/working-with-display-objects/working-with-display-object-containers.html">
+            
+                <a href="../display-programming/working-with-display-objects/working-with-display-object-containers.html">
+            
+                    
+                    Working with display object containers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.4" data-path="../display-programming/working-with-display-objects/traversing-the-display-list.html">
+            
+                <a href="../display-programming/working-with-display-objects/traversing-the-display-list.html">
+            
+                    
+                    Traversing the display list
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.5" data-path="../display-programming/working-with-display-objects/setting-stage-properties.html">
+            
+                <a href="../display-programming/working-with-display-objects/setting-stage-properties.html">
+            
+                    
+                    Setting Stage properties
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.6" data-path="../display-programming/working-with-display-objects/handling-events-for-display-objects.html">
+            
+                <a href="../display-programming/working-with-display-objects/handling-events-for-display-objects.html">
+            
+                    
+                    Handling events for display objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.7" data-path="../display-programming/working-with-display-objects/choosing-a-displayobject-subclass.html">
+            
+                <a href="../display-programming/working-with-display-objects/choosing-a-displayobject-subclass.html">
+            
+                    
+                    Choosing a DisplayObject subclass
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../display-programming/manipulating-display-objects/">
+            
+                <a href="../display-programming/manipulating-display-objects/">
+            
+                    
+                    Manipulating display objects
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1" data-path="../display-programming/manipulating-display-objects/changing-position.html">
+            
+                <a href="../display-programming/manipulating-display-objects/changing-position.html">
+            
+                    
+                    Changing position
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.2" data-path="../display-programming/manipulating-display-objects/panning-and-scrolling-display-objects.html">
+            
+                <a href="../display-programming/manipulating-display-objects/panning-and-scrolling-display-objects.html">
+            
+                    
+                    Panning and scrolling display objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.3" data-path="../display-programming/manipulating-display-objects/manipulating-size-and-scaling-objects.html">
+            
+                <a href="../display-programming/manipulating-display-objects/manipulating-size-and-scaling-objects.html">
+            
+                    
+                    Manipulating size and scaling objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.4" data-path="../display-programming/manipulating-display-objects/caching-display-objects.html">
+            
+                <a href="../display-programming/manipulating-display-objects/caching-display-objects.html">
+            
+                    
+                    Caching display objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.5" data-path="../display-programming/manipulating-display-objects/setting-an-opaque-background.html">
+            
+                <a href="../display-programming/manipulating-display-objects/setting-an-opaque-background.html">
+            
+                    
+                    Setting an opaque background color
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.6" data-path="../display-programming/manipulating-display-objects/applying-blending-modes.html">
+            
+                <a href="../display-programming/manipulating-display-objects/applying-blending-modes.html">
+            
+                    
+                    Applying blending modes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.7" data-path="../display-programming/manipulating-display-objects/adjusting-displayobject-colors.html">
+            
+                <a href="../display-programming/manipulating-display-objects/adjusting-displayobject-colors.html">
+            
+                    
+                    Adjusting DisplayObject colors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.8" data-path="../display-programming/manipulating-display-objects/rotating-objects.html">
+            
+                <a href="../display-programming/manipulating-display-objects/rotating-objects.html">
+            
+                    
+                    Rotating objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.9" data-path="../display-programming/manipulating-display-objects/fading-objects.html">
+            
+                <a href="../display-programming/manipulating-display-objects/fading-objects.html">
+            
+                    
+                    Fading objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.10" data-path="../display-programming/manipulating-display-objects/masking-display-objects.html">
+            
+                <a href="../display-programming/manipulating-display-objects/masking-display-objects.html">
+            
+                    
+                    Masking display objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../display-programming/animating-objects.html">
+            
+                <a href="../display-programming/animating-objects.html">
+            
+                    
+                    Animating objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../display-programming/loading-display-content-dynamically/">
+            
+                <a href="../display-programming/loading-display-content-dynamically/">
+            
+                    
+                    Loading display content dynamically
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.7.1" data-path="../display-programming/loading-display-content-dynamically/loading-display-objects.html">
+            
+                <a href="../display-programming/loading-display-content-dynamically/loading-display-objects.html">
+            
+                    
+                    Loading display objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.2" data-path="../display-programming/loading-display-content-dynamically/monitoring-loading-progress.html">
+            
+                <a href="../display-programming/loading-display-content-dynamically/monitoring-loading-progress.html">
+            
+                    
+                    Monitoring loading progress
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.3" data-path="../display-programming/loading-display-content-dynamically/specifying-loading-context.html">
+            
+                <a href="../display-programming/loading-display-content-dynamically/specifying-loading-context.html">
+            
+                    
+                    Specifying loading context
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../working-with-geometry/">
+            
+                <a href="../working-with-geometry/">
+            
+                    
+                    Chapter 3: Working with geometry
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../working-with-geometry/basics-of-geometry.html">
+            
+                <a href="../working-with-geometry/basics-of-geometry.html">
+            
+                    
+                    Basics of geometry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../working-with-geometry/using-point-objects.html">
+            
+                <a href="../working-with-geometry/using-point-objects.html">
+            
+                    
+                    Using Point objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../working-with-geometry/using-rectangle-objects.html">
+            
+                <a href="../working-with-geometry/using-rectangle-objects.html">
+            
+                    
+                    Using Rectangle objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../working-with-geometry/using-matrix-objects.html">
+            
+                <a href="../working-with-geometry/using-matrix-objects.html">
+            
+                    
+                    Using Matrix objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../using-the-drawing-api/">
+            
+                <a href="../using-the-drawing-api/">
+            
+                    
+                    Chapter 4: Using the drawing API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../using-the-drawing-api/basics-of-the-drawing-api.html">
+            
+                <a href="../using-the-drawing-api/basics-of-the-drawing-api.html">
+            
+                    
+                    Basics of the drawing API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../using-the-drawing-api/understanding-the-graphics-class.html">
+            
+                <a href="../using-the-drawing-api/understanding-the-graphics-class.html">
+            
+                    
+                    Understanding the Graphics class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../using-the-drawing-api/drawing-lines-and-curves.html">
+            
+                <a href="../using-the-drawing-api/drawing-lines-and-curves.html">
+            
+                    
+                    Drawing lines and curves
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../using-the-drawing-api/drawing-shapes-using-built-in-methods.html">
+            
+                <a href="../using-the-drawing-api/drawing-shapes-using-built-in-methods.html">
+            
+                    
+                    Drawing shapes using built-in methods
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../using-the-drawing-api/creating-gradient-lines-and-fills.html">
+            
+                <a href="../using-the-drawing-api/creating-gradient-lines-and-fills.html">
+            
+                    
+                    Creating gradient lines and fills
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../using-the-drawing-api/using-the-math-class-with-drawing-methods.html">
+            
+                <a href="../using-the-drawing-api/using-the-math-class-with-drawing-methods.html">
+            
+                    
+                    Using the Math class with drawing methods
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../using-the-drawing-api/animating-with-the-drawing-api.html">
+            
+                <a href="../using-the-drawing-api/animating-with-the-drawing-api.html">
+            
+                    
+                    Animating with the drawing API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../using-the-drawing-api/advanced-use-of-the-drawing-api/">
+            
+                <a href="../using-the-drawing-api/advanced-use-of-the-drawing-api/">
+            
+                    
+                    Advanced use of the drawing API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.8.1" data-path="../using-the-drawing-api/advanced-use-of-the-drawing-api/drawing-paths.html">
+            
+                <a href="../using-the-drawing-api/advanced-use-of-the-drawing-api/drawing-paths.html">
+            
+                    
+                    Drawing paths
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8.2" data-path="../using-the-drawing-api/advanced-use-of-the-drawing-api/defining-winding-rules.html">
+            
+                <a href="../using-the-drawing-api/advanced-use-of-the-drawing-api/defining-winding-rules.html">
+            
+                    
+                    Defining winding rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8.3" data-path="../using-the-drawing-api/advanced-use-of-the-drawing-api/using-graphics-data-classes.html">
+            
+                <a href="../using-the-drawing-api/advanced-use-of-the-drawing-api/using-graphics-data-classes.html">
+            
+                    
+                    Using graphics data classes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8.4" data-path="../using-the-drawing-api/advanced-use-of-the-drawing-api/about-using-drawtriangles.html">
+            
+                <a href="../using-the-drawing-api/advanced-use-of-the-drawing-api/about-using-drawtriangles.html">
+            
+                    
+                    About using drawTriangles()
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../working-with-bitmaps/">
+            
+                <a href="../working-with-bitmaps/">
+            
+                    
+                    Chapter 5: Working with bitmaps
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../working-with-bitmaps/basics-of-working-with-bitmaps.html">
+            
+                <a href="../working-with-bitmaps/basics-of-working-with-bitmaps.html">
+            
+                    
+                    Basics of working with bitmaps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../working-with-bitmaps/the-bitmap-and-bitmapdata-classes.html">
+            
+                <a href="../working-with-bitmaps/the-bitmap-and-bitmapdata-classes.html">
+            
+                    
+                    The Bitmap and BitmapData classes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../working-with-bitmaps/manipulating-pixels.html">
+            
+                <a href="../working-with-bitmaps/manipulating-pixels.html">
+            
+                    
+                    Manipulating pixels
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../working-with-bitmaps/copying-bitmap-data.html">
+            
+                <a href="../working-with-bitmaps/copying-bitmap-data.html">
+            
+                    
+                    Copying bitmap data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../working-with-bitmaps/compressing-bitmap-data.html">
+            
+                <a href="../working-with-bitmaps/compressing-bitmap-data.html">
+            
+                    
+                    Compressing bitmap data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../working-with-bitmaps/making-textures-with-noise-functions.html">
+            
+                <a href="../working-with-bitmaps/making-textures-with-noise-functions.html">
+            
+                    
+                    Making textures with noise functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../working-with-bitmaps/scrolling-bitmaps.html">
+            
+                <a href="../working-with-bitmaps/scrolling-bitmaps.html">
+            
+                    
+                    Scrolling bitmaps
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../working-with-movie-clips/">
+            
+                <a href="../working-with-movie-clips/">
+            
+                    
+                    Chapter 6: Working with movie clips
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../working-with-movie-clips/basics-of-movie-clips.html">
+            
+                <a href="../working-with-movie-clips/basics-of-movie-clips.html">
+            
+                    
+                    Basics of movie clips
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../working-with-movie-clips/working-with-movieclip-objects.html">
+            
+                <a href="../working-with-movie-clips/working-with-movieclip-objects.html">
+            
+                    
+                    Working with MovieClip objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../working-with-movie-clips/controlling-movie-clip-playback.html">
+            
+                <a href="../working-with-movie-clips/controlling-movie-clip-playback.html">
+            
+                    
+                    Controlling movie clip playback
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../working-with-movie-clips/creating-movieclip-objects-with-haxe.html">
+            
+                <a href="../working-with-movie-clips/creating-movieclip-objects-with-haxe.html">
+            
+                    
+                    Creating MovieClip objects with Haxe
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../using-the-textfield-class/">
+            
+                <a href="../using-the-textfield-class/">
+            
+                    
+                    Chapter 21: Using the TextField class
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../using-the-textfield-class/displaying-text.html">
+            
+                <a href="../using-the-textfield-class/displaying-text.html">
+            
+                    
+                    Displaying text
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../using-the-textfield-class/selecting-and-manipulating-text.html">
+            
+                <a href="../using-the-textfield-class/selecting-and-manipulating-text.html">
+            
+                    
+                    Selecting and manipulating text
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../using-the-textfield-class/capturing-text-input.html">
+            
+                <a href="../using-the-textfield-class/capturing-text-input.html">
+            
+                    
+                    Capturing text input
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../using-the-textfield-class/restricting-text-input.html">
+            
+                <a href="../using-the-textfield-class/restricting-text-input.html">
+            
+                    
+                    Restricting text input
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../using-the-textfield-class/formatting-text.html">
+            
+                <a href="../using-the-textfield-class/formatting-text.html">
+            
+                    
+                    Formatting text
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../using-the-textfield-class/advanced-text-rendering.html">
+            
+                <a href="../using-the-textfield-class/advanced-text-rendering.html">
+            
+                    
+                    Advanced text rendering
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../using-the-textfield-class/working-with-static-text.html">
+            
+                <a href="../using-the-textfield-class/working-with-static-text.html">
+            
+                    
+                    Working with static text
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../working-with-sound/">
+            
+                <a href="../working-with-sound/">
+            
+                    
+                    Chapter 24: Working with sound
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../working-with-sound/basics-of-working-with-sound.html">
+            
+                <a href="../working-with-sound/basics-of-working-with-sound.html">
+            
+                    
+                    Basics of working with sound
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../working-with-sound/understanding-the-sound-architecture.html">
+            
+                <a href="../working-with-sound/understanding-the-sound-architecture.html">
+            
+                    
+                    Understanding the sound architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../working-with-sound/loading-external-sound-files.html">
+            
+                <a href="../working-with-sound/loading-external-sound-files.html">
+            
+                    
+                    Loading external sound files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../working-with-sound/working-with-sound-assets.html">
+            
+                <a href="../working-with-sound/working-with-sound-assets.html">
+            
+                    
+                    Working with sound assets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../working-with-sound/working-with-dynamically-generated-audio.html">
+            
+                <a href="../working-with-sound/working-with-dynamically-generated-audio.html">
+            
+                    
+                    Working with dynamically generated audio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../working-with-sound/playing-sounds.html">
+            
+                <a href="../working-with-sound/playing-sounds.html">
+            
+                    
+                    Playing sounds
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../working-with-sound/controlling-sound-volume-and-panning.html">
+            
+                <a href="../working-with-sound/controlling-sound-volume-and-panning.html">
+            
+                    
+                    Controlling sound volume and panning
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../keyboard-input/">
+            
+                <a href="../keyboard-input/">
+            
+                    
+                    Chapter 30: Keyboard input
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../keyboard-input/capturing-keyboard-input.html">
+            
+                <a href="../keyboard-input/capturing-keyboard-input.html">
+            
+                    
+                    Capturing keyboard input
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../mouse-input/">
+            
+                <a href="../mouse-input/">
+            
+                    
+                    Chapter 31: Mouse input
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../mouse-input/capturing-mouse-input.html">
+            
+                <a href="../mouse-input/capturing-mouse-input.html">
+            
+                    
+                    Capturing mouse input
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../touch-multitouch-and-gesture-input/">
+            
+                <a href="../touch-multitouch-and-gesture-input/">
+            
+                    
+                    Chapter 32: Touch, multitouch and gesture input
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../touch-multitouch-and-gesture-input/touch-support-discovery.html">
+            
+                <a href="../touch-multitouch-and-gesture-input/touch-support-discovery.html">
+            
+                    
+                    Touch support discovery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../touch-multitouch-and-gesture-input/touch-event-handling.html">
+            
+                <a href="../touch-multitouch-and-gesture-input/touch-event-handling.html">
+            
+                    
+                    Touch event handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../touch-multitouch-and-gesture-input/troubleshooting.html">
+            
+                <a href="../touch-multitouch-and-gesture-input/troubleshooting.html">
+            
+                    
+                    Troubleshooting
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Chapter 38: Working with the file system
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="using-the-filereference-class.html">
+            
+                <a href="using-the-filereference-class.html">
+            
+                    
+                    Using the FileReference class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="using-the-native-file-system-api.html">
+            
+                <a href="using-the-native-file-system-api.html">
+            
+                    
+                    Using the native file system API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.2.1" data-path="native-file-system-basics.html">
+            
+                <a href="native-file-system-basics.html">
+            
+                    
+                    Native file system basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.13.2.2" data-path="working-with-file-objects-in-openfl.html">
+            
+                <a href="working-with-file-objects-in-openfl.html">
+            
+                    
+                    Working with File objects in OpenFL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2.3" data-path="getting-file-system-information.html">
+            
+                <a href="getting-file-system-information.html">
+            
+                    
+                    Getting file system information
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2.4" data-path="working-with-directories.html">
+            
+                <a href="working-with-directories.html">
+            
+                    
+                    Working with directories
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2.5" data-path="working-with-files.html">
+            
+                <a href="working-with-files.html">
+            
+                    
+                    Working with files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2.6" data-path="workflow-for-reading-and-writing-files.html">
+            
+                <a href="workflow-for-reading-and-writing-files.html">
+            
+                    
+                    Workflow for reading and writing files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2.7" data-path="filestream-open-modes.html">
+            
+                <a href="filestream-open-modes.html">
+            
+                    
+                    FileStream open modes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2.8" data-path="initializing-a-filestream-object-and-opening-and-closing-files.html">
+            
+                <a href="initializing-a-filestream-object-and-opening-and-closing-files.html">
+            
+                    
+                    Initializing a FileStream object, and opening and closing files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2.9" data-path="the-position-property-of-a-filestream-object.html">
+            
+                <a href="the-position-property-of-a-filestream-object.html">
+            
+                    
+                    The position property of a FileStream object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2.10" data-path="the-read-buffer-and-the-bytesavailable-property-of-a-filestream-object.html">
+            
+                <a href="the-read-buffer-and-the-bytesavailable-property-of-a-filestream-object.html">
+            
+                    
+                    The read buffer and the bytesAvailable property of a FileStream object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2.11" data-path="asynchronous-programming-and-the-events-generated-by-a-filestream-object-opened-asynchronously.html">
+            
+                <a href="asynchronous-programming-and-the-events-generated-by-a-filestream-object-opened-asynchronously.html">
+            
+                    
+                    Asynchronous programming and the events generated by a FileStream object opened asynchronously
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2.12" data-path="data-formats-and-choosing-the-read-and-write-methods-to-use.html">
+            
+                <a href="data-formats-and-choosing-the-read-and-write-methods-to-use.html">
+            
+                    
+                    Data formats, and choosing the read and write methods to use
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2.13" data-path="using-the-load-and-save-methods.html">
+            
+                <a href="using-the-load-and-save-methods.html">
+            
+                    
+                    Using the load() and save() methods
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../working-with-byte-arrays/">
+            
+                <a href="../working-with-byte-arrays/">
+            
+                    
+                    Chapter 41: Working with byte arrays
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../working-with-byte-arrays/reading-and-writing-a-byte-array.html">
+            
+                <a href="../working-with-byte-arrays/reading-and-writing-a-byte-array.html">
+            
+                    
+                    Reading a writing a byte array
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../http-communications/">
+            
+                <a href="../http-communications/">
+            
+                    
+                    Chapter 44: HTTP communications
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../http-communications/loading-external-data.html">
+            
+                <a href="../http-communications/loading-external-data.html">
+            
+                    
+                    Loading external data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Working with File objects in OpenFL</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="working-with-file-objects-in-openfl">Working with File objects in OpenFL</h1>
+<p>A <a href="https://api.openfl.org/openfl/filesystem/File.html" target="_blank">File object</a> is a pointer
+to a file or directory in the file system.</p>
+<p>The File class extends the FileReference class. The FileReference class, which
+is available in web browsers as well as in native applications, represents a
+pointer to a file. The File class adds properties and methods that are not
+exposed in web browsers, due to security considerations.</p>
+<h2 id="about-the-file-class">About the File class</h2>
+<p>You can use the File class for the following:</p>
+<ul>
+<li><p>Getting the path to special directories, including the user directory, the
+user&apos;s documents directory, the directory from which the application was
+launched, and the application directory</p>
+</li>
+<li><p>Coping files and directories</p>
+</li>
+<li><p>Moving files and directories</p>
+</li>
+<li><p>Deleting files and directories (or moving them to the trash)</p>
+</li>
+<li><p>Listing files and directories contained in a directory</p>
+</li>
+<li><p>Creating temporary files and folders</p>
+</li>
+</ul>
+<p>Once a File object points to a file path, you can use it to read and write file
+data, using the FileStream class.</p>
+<p>A File object can point to the path of a file or directory that does not yet
+exist. You can use such a File object in creating a file or directory.</p>
+<h2 id="paths-of-file-objects">Paths of File objects</h2>
+<p>Each File object has two properties that each define its path:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>nativePath</code></td>
+<td>Specifies the platform-specific path to a file. For example, on Windows a path might be &quot;c:\Sample directory\test.txt&quot; whereas on macOS it could be &quot;/Sample directory/test.txt&quot;. A <code>nativePath</code> property uses the backslash (\ character as the directory separator character on Windows, and it uses the forward slash (/) character on macOS and Linux.</td>
+</tr>
+<tr>
+<td><code>url</code></td>
+<td>This may use the file URL scheme to point to a file. For example, on Windows a path might be &quot;file:///c:/Sample%20directory/test.txt&quot; whereas on macOS it could be &quot;file:///Sample%20directory/test.txt&quot;. The runtime includes other special URL schemes besides <code>file</code> and are described in <a href="#supported-openfl-url-schemes">Supported OpenFL URL schemes</a></td>
+</tr>
+</tbody>
+</table>
+<p>The File class includes static properties for pointing to standard directories
+on macOS, Windows, and Linux. These properties include:</p>
+<ul>
+<li><p><code>File.applicationStorageDirectory</code> — a storage directory unique to each
+installed OpenFL application. This directory is an appropriate place to store
+dynamic application assets and user preferences. Consider storing large
+amounts of data elsewhere.</p>
+<p>On Android and iOS, the application storage directory is removed when the
+application is uninstalled or the user chooses to clear application data, but
+this is not the case on other platforms.</p>
+</li>
+<li><p><code>File.applicationDirectory</code> — the directory where the application is installed
+(along with any installed assets). On some operating systems, the application
+is stored in a single package file rather than a physical directory. In this
+case, the contents may not be accessible using the native path. The
+application directory is read-only.</p>
+</li>
+<li><p><code>File.desktopDirectory</code> — the user&apos;s desktop directory. If a platform does not
+define a desktop directory, another location on the file system is used.</p>
+</li>
+<li><p><code>File.documentsDirectory</code> — the user&apos;s documents directory. If a platform does
+not define a documents directory, another location on the file system is used.</p>
+</li>
+<li><p><code>File.userDirectory</code> — the user directory. If a platform does not define a
+user directory, another location on the file system is used.</p>
+</li>
+</ul>
+<p>Note: When a platform does not define standard locations for desktop, documents,
+or user directories, <code>File.documentsDirectory</code>, <code>File.desktopDirectory</code>, and
+<code>File.userDirectory</code> may reference the same directory.</p>
+<p>These properties have different values on different operating systems. For
+example, macOS and Windows each have a different native path to the user&apos;s
+desktop directory. However, the <code>File.desktopDirectory</code> property points to an
+appropriate directory path on every platform. To write applications that work
+well across platforms, use these properties as the basis for referencing other
+directories and files used by the application. Then use the <code>resolvePath()</code>
+method to refine the path. For example, this code points to the preferences.xml
+file in the application storage directory:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> prefsFile:<span class="hljs-type">File </span>= File.applicationStorageDirectory;
+prefsFile = prefsFile.resolvePath(<span class="hljs-string">&quot;preferences.xml&quot;</span>);
+</code></pre>
+<p>Although the File class lets you point to a specific file path, doing so can
+lead to applications that do not work across platforms. For example, the path
+<em>C:\Users\joe\</em> only works on Windows. For these reasons, it is best to use the
+static properties of the File class, such as <code>File.documentsDirectory</code>.</p>
+<h3 id="common-directory-locations">Common directory locations</h3>
+<table>
+<thead>
+    <tr>
+        <th><p>Platform</p></th>
+        <th><p>Directory type</p></th>
+        <th><p>Typical file system location</p></th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td rowspan="6"><p>Linux</p></td>
+        <td><p>Application</p></td>
+        <td><p><samp>/opt/</samp><em><samp>&lt;Program Name&gt;</samp></em><samp>/share</samp></p></td>
+    </tr>
+    <tr>
+        <td><p>Application-storage</p></td>
+        <td><p><samp>/home/</samp><em><samp>&lt;userName&gt;</samp></em><samp>/.local/share/</samp><samp><em>&lt;Program Name&gt;</em></samp></p></td>
+    </tr>
+    <tr>
+        <td><p>Desktop</p></td>
+        <td><p><samp>/home/</samp><em><samp>&lt;userName&gt;</samp></em><samp>/Desktop</samp></p></td>
+    </tr>
+    <tr>
+        <td><p>Documents</p></td>
+        <td><p><samp>/home/</samp><em><samp>&lt;userName&gt;</samp></em><samp>/Documents</samp></p></td>
+    </tr>
+    <tr>
+        <td><p>Temporary</p></td>
+        <td><p><samp>/tmp/ofl-</samp><em><samp>&lt;randomString&gt;</samp></em><samp>.tmp</samp></p></td>
+    </tr>
+    <tr>
+        <td><p>User</p></td>
+        <td><p><samp>/home/</samp><em><samp>&lt;userName&gt;</samp></em></p></td>
+    </tr>
+    <tr>
+        <td rowspan="6"><p>macOS</p></td>
+        <td><p>Application</p></td>
+        <td><p><samp>/Applications/</samp><em><samp>&lt;Program Name&gt;</samp></em><samp>.app/Contents/Resources</samp></p></td>
+    </tr>
+    <tr>
+        <td><p>Application-storage</p></td>
+        <td><p><samp>/Users/</samp><em><samp>&lt;userName&gt;</samp></em><samp>/Library/Application Support/</samp><em><samp>&lt;Program Name&gt;</samp></em></p></td>
+    </tr>
+    <tr>
+        <td><p>Desktop</p></td>
+        <td><p><samp>/Users/</samp><em><samp>&lt;userName&gt;</samp></em><samp>/Desktop</samp></p></td>
+    </tr>
+    <tr>
+        <td><p>Documents</p></td>
+        <td><p><samp>/Users/</samp><em><samp>&lt;userName&gt;</samp></em><samp>/Documents</samp></p></td>
+    </tr>
+    <tr>
+        <td><p>Temporary</p></td>
+        <td><p><samp>/var/folders/ofl-</samp><em><samp>&lt;randomString&gt;</samp></em><samp>.tmp</samp></p></td>
+    </tr>
+    <tr>
+        <td><p>User</p></td>
+        <td><p><samp>/Users/</samp><em><samp>&lt;userName&gt;</samp></em></p></td>
+    </tr>
+    <tr>
+        <td rowspan="6"><p>Windows</p></td>
+        <td><p>Application</p></td>
+        <td><p><samp>C:\Program Files\</samp><em><samp>&lt;Program Name&gt;</samp></em></p></td>
+    </tr>
+    <tr>
+        <td><p>Application-storage</p></td>
+        <td><p><samp>C:\Users\</samp><em><samp>&lt;userName&gt;</samp></em><samp>\AppData\Roaming\</samp><em><samp>&lt;Company Name&gt;</samp></em><samp>\</samp><em><samp>&lt;Program Name&gt;</samp></em></p></td>
+    </tr>
+    <tr>
+        <td><p>Desktop</p></td>
+        <td><p><samp>C:\Users\</samp><em><samp>&lt;userName&gt;</samp></em><samp>\Desktop</samp></p></td>
+    </tr>
+    <tr>
+        <td><p>Documents</p></td>
+        <td><p><samp>C:\Users\</samp><em><samp>&lt;userName&gt;</samp></em><samp>\Documents</samp></p></td>
+    </tr>
+    <tr>
+        <td><p>Temporary</p></td>
+        <td><p><samp>C:\Users\</samp><em><samp>&lt;userName&gt;</samp></em><samp>\AppData\Local\Temp\ofl-</samp><em><samp>&lt;randomString&gt;</samp></em><samp>.tmp</samp></p></td>
+    </tr>
+    <tr>
+        <td><p>User</p></td>
+        <td><p><samp>C:\Users\</samp><em><samp>&lt;userName&gt;</samp></em></p></td>
+    </tr>
+</tbody>
+</table>
+
+<p>The actual native paths for these directories vary based on the operating system
+and computer configuration. The paths shown in this table are typical examples.
+You should always use the appropriate static File class properties to refer to
+these directories so that your application works correctly on any platform. In
+an actual OpenFL application, the values in angle brackets, like
+<code>&lt;Program Name&gt;</code> and <code>&lt;userName&gt;</code>, are taken either from the operating system or
+the OpenFL <em>project.xml</em> file.</p>
+<h2 id="pointing-a-file-object-to-a-directory">Pointing a File object to a directory</h2>
+<p>There are different ways to set a File object to point to a directory.</p>
+<h3 id="pointing-to-the-users-home-directory">Pointing to the user&apos;s home directory</h3>
+<p>You can point a File object to the user&apos;s home directory. The following code
+sets a File object to point to an <em>OpenFL Test</em> subdirectory of the home
+directory:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> file:<span class="hljs-type">File </span>= File.userDirectory.resolvePath(<span class="hljs-string">&quot;OpenFL Test&quot;</span>);
+</code></pre>
+<h3 id="pointing-to-the-users-documents-directory">Pointing to the user&apos;s documents directory</h3>
+<p>You can point a File object to the user&apos;s documents directory. The following
+code sets a File object to point to an <em>OpenFL Test</em> subdirectory of the
+documents directory:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> file:<span class="hljs-type">File </span>= File.documentsDirectory.resolvePath(<span class="hljs-string">&quot;OpenFL Test&quot;</span>);
+</code></pre>
+<h3 id="pointing-to-the-desktop-directory">Pointing to the desktop directory</h3>
+<p>You can point a File object to the desktop. The following code sets a File
+object to point to an <em>OpenFL Test</em> subdirectory of the desktop:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> file:<span class="hljs-type">File </span>= File.desktopDirectory.resolvePath(<span class="hljs-string">&quot;OpenFL Test&quot;</span>);
+</code></pre>
+<h3 id="pointing-to-the-application-storage-directory">Pointing to the application storage directory</h3>
+<p>You can point a File object to the application storage directory. For every
+OpenFL application, there is a unique associated path that defines the
+application storage directory. This directory is unique to each application and
+user. You can use this directory to store user-specific, application-specific
+data (such as user data or preferences files). For example, the following code
+points a File object to a preferences file, prefs.xml, contained in the
+application storage directory:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> file:<span class="hljs-type">File </span>= File.applicationStorageDirectory;
+file = file.resolvePath(<span class="hljs-string">&quot;prefs.xml&quot;</span>);
+</code></pre>
+<p>The application storage directory location is typically based on the user name
+and the application ID. The following file system locations are given here to
+help you debug your application. You should always use the
+<code>File.applicationStorage</code> property or <code>app-storage:</code> URI scheme to resolve files
+in this directory:</p>
+<ul>
+<li><p>On macOS — In the user home directory:</p>
+<p><samp>/Users/</samp><em><samp>&lt;userName&gt;</samp></em><samp>/Library/Application
+Support/</samp><em><samp>&lt;Program Name&gt;</samp></em></p>
+<p>For example:</p>
+<pre><code>/Users/babbage/Library/Application Support/My Test App
+</code></pre></li>
+<li><p>On Windows — In the user home directory, in:</p>
+<p><samp>C:\Users\</samp><em><samp>&lt;userName&gt;</samp></em><samp>\AppData\Roaming\</samp><em><samp>&lt;Company
+Name&gt;</samp></em><samp>\</samp><em><samp>&lt;Program
+Name&gt;</samp></em>&lt;/p&gt;</p>
+<p>For example:</p>
+<pre><code>C:\Users\babbage\Application Data\My Company\My Test App
+</code></pre></li>
+<li><p>On Linux — In the user home directory:</p>
+<p><samp>/home/</samp><em><samp>&lt;userName&gt;</samp></em><samp>/.local/share/</samp><samp><em>&lt;Program
+Name&gt;</em></samp></p>
+<p>For example:</p>
+<pre><code>/home/babbage/.local/share/My Test App
+</code></pre></li>
+</ul>
+<p>Note: If an application has a publisher ID, then the publisher ID is also used
+as part of the path to the application storage directory.</p>
+<!-- TODO: uncomment when File.url is implemented
+The URL (and `url` property) for a File object created with
+`File.applicationStorageDirectory` uses the `app-storage` URL scheme (see
+[Supported OpenFL URL schemes](#supported-openfl-url-schemes)), as in the
+following:
+
+```haxe
+var dir:File = File.applicationStorageDirectory;
+dir = dir.resolvePath("preferences");
+trace(dir.url); // app-storage:/preferences
+```
+-->
+<h3 id="pointing-to-the-application-directory">Pointing to the application directory</h3>
+<p>You can point a File object to the directory in which the application was
+installed, known as the application directory. You can reference this directory
+using the <code>File.applicationDirectory</code> property. You can use this directory to
+examine the application descriptor file or other resources installed with the
+application. For example, the following code points a File object to a directory
+named <em>images</em> in the application directory:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> dir:<span class="hljs-type">File </span>= File.applicationDirectory;
+dir = dir.resolvePath(<span class="hljs-string">&quot;images&quot;</span>);
+</code></pre>
+<!--TODO: uncomment when File.url is implemented
+The URL (and `url` property) for a File object created with
+`File.applicationDirectory` uses the `app` URL scheme (see
+[Supported OpenFL URL schemes](#supported-openfl-url-schemes)), as in the
+following:
+
+```haxe
+var dir:File = File.applicationDirectory;
+dir = dir.resolvePath("images");
+trace(dir.url); // app:/images
+```
+
+Note: On Android, the files in the application package are not accessible via
+the `nativePath`. The `nativePath` property is an empty string. Always use the
+URL to access files in the application directory rather than a native path.
+-->
+<!-- TODO: uncomment if cacheDirectory is implemented
+### Pointing to the cache directory
+
+You can point a File object to the operating system's temporary or cache
+directory using the `File.cacheDirectory` property. This directory contains
+temporary files that are not required for the application to run and will not
+cause problems or data loss for the user if they are deleted.
+
+In most operating systems the cache directory is a temporary directory. On iOS,
+the cache directory corresponds to the application library's Caches directory.
+Files in this directory are not backed up to online storage, and can potentially
+be deleted by the operating system if the device's available storage space is
+too low. For more information, see
+[Controlling file backup and caching](#controlling-file-backup-and-caching).-->
+<h3 id="pointing-to-the-file-system-root">Pointing to the file system root</h3>
+<p>The <code>File.getRootDirectories()</code> method lists all root volumes, such as C: and
+mounted volumes, on a Windows computer. On macOS and Linux, this method always
+returns the unique root directory for the machine (the &quot;/&quot; directory).</p>
+<!-- TODO: uncommnt if StorageVolumeInfo is implemented
+The `StorageVolumeInfo.getStorageVolumes()` method provides more detailed
+information on mounted storage volumes (see
+[Working with storage volumes](./working-with-storage-volumes.md)).-->
+<p>Note: The root of the file system is not readable on Android. A File object
+referencing the directory with the native path, &quot;/&quot;, is returned, but the
+properties of that object do not have accurate values. For example,
+<code>spaceAvailable</code> is always 0.</p>
+<h3 id="pointing-to-an-explicit-directory">Pointing to an explicit directory</h3>
+<p>You can point the File object to an explicit directory by setting the
+<code>nativePath</code> property of the File object, as in the following example (on
+Windows):</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> file:<span class="hljs-type">File </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">File</span>();
+file.nativePath = <span class="hljs-string">&quot;C:\\OpenFL Test&quot;</span>;
+</code></pre>
+<p><strong>Important:</strong> Pointing to an explicit path this way can lead to code that does
+not work across platforms. For example, the previous example only works on
+Windows. You can use the static properties of the File object, such as
+<code>File.applicationStorageDirectory</code>, to locate a directory that works
+cross-platform. Then use the <code>resolvePath()</code> method (see the next section) to
+navigate to a relative path.</p>
+<h3 id="navigating-to-relative-paths">Navigating to relative paths</h3>
+<p>You can use the <code>resolvePath()</code> method to obtain a path relative to another
+given path. For example, the following code sets a File object to point to an
+<em>OpenFL Test</em> subdirectory of the user&apos;s home directory:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> file:<span class="hljs-type">File </span>= File.userDirectory;
+file = file.resolvePath(<span class="hljs-string">&quot;OpenFL Test&quot;</span>);
+</code></pre>
+<!-- TODO: uncomment when File.url is implemented
+You can also use the `url` property of a File object to point it to a directory
+based on a URL string, as in the following:
+
+```haxe
+var urlStr:String = "file:///C:/OpenFL Test/";
+var file:File = new File()
+file.url = urlStr;
+```
+-->
+<p>For more information, see <a href="#modifying-file-paths">Modifying File paths</a>.</p>
+<h3 id="letting-the-user-browse-to-select-a-directory">Letting the user browse to select a directory</h3>
+<p>The File class includes the <code>browseForDirectory()</code> method, which presents a
+system dialog box in which the user can select a directory to assign to the
+object. The <code>browseForDirectory()</code> method is asynchronous. The File object
+dispatches a <code>select</code> event if the user selects a directory and clicks the Open
+button, or it dispatches a <code>cancel</code> event if the user clicks the Cancel button.</p>
+<p>For example, the following code lets the user select a directory and outputs the
+directory path upon selection:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">import</span> openfl.display.Sprite;
+<span class="hljs-keyword">import</span> openfl.events.Event;
+<span class="hljs-keyword">import</span> openfl.filesystem.File;
+
+<span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">FileBrowseForDirectoryExample</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span> <span class="hljs-type">Sprite</span></span>
+</span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> file:<span class="hljs-type">File</span>;
+
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span></span>()
+    {
+        <span class="hljs-keyword">super</span>();
+
+        file = <span class="hljs-keyword">new</span> <span class="hljs-type">File</span>();
+        file.addEventListener(Event.SELECT, dirSelected);
+        file.browseForDirectory(<span class="hljs-string">&quot;Select a directory&quot;</span>);
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">dirSelected</span></span>(e:<span class="hljs-type">Event</span>):<span class="hljs-type">Void</span>
+    {
+        <span class="hljs-built_in">trace</span>(file.nativePath);
+    }
+}
+</code></pre>
+<p>Note: On Android, the <code>browseForDirectory()</code> method is not supported. Calling
+this method has no effect; a cancel event is dispatched immediately. To allow
+users to select a directory, use a custom, application-defined dialog, instead.</p>
+<h3 id="pointing-to-the-directory-from-which-the-application-was-invoked">Pointing to the directory from which the application was invoked</h3>
+<p>You can get the directory location from which an application is invoked, by
+checking the <code>currentDirectory</code> property of the InvokeEvent object dispatched
+when the application is invoked.</p>
+<!-- uncomment when this content is converted to OpenFL
+For details, see [Capturing command line arguments](../../client-system-interaction/air-application-invokation-and-termination.md#capturing-command-line-arguments).-->
+<h2 id="pointing-a-file-object-to-a-file">Pointing a File object to a file</h2>
+<p>There are different ways to set the file to which a File object points.</p>
+<h3 id="pointing-to-an-explicit-file-path">Pointing to an explicit file path</h3>
+<p><strong>Important:</strong> Pointing to an explicit path can lead to code that does not work
+across platforms. For example, the path C:/foo.txt only works on Windows. You
+can use the static properties of the File object, such as
+<code>File.applicationStorageDirectory</code>, to locate a directory that works
+cross-platform. Then use the <code>resolvePath()</code> method (see
+<a href="#modifying-file-paths">Modifying File paths</a>) to navigate to a relative path.</p>
+<!-- TODO: uncomment when File.url is implemented
+You can use the `url` property of a File object to point it to a file or
+directory based on a URL string, as in the following:
+
+```haxe
+var urlStr:String = "file:///C:/OpenFL Test/test.txt";
+var file:File = new File()
+file.url = urlStr;
+```
+
+You can also pass the URL to the `File()` constructor function, as in the
+following:
+
+```haxe
+var urlStr:String = "file:///C:/OpenFL Test/test.txt";
+var file:File = new File(urlStr);
+```
+
+The `url` property always returns the URI-encoded version of the URL (for
+example, blank spaces are replaced with `"%20`):
+
+```haxe
+file.url = "file:///c:/OpenFL Test";
+trace(file.url); // file:///c:/OpenFL%20Test
+```
+-->
+<p>You can also use the <code>nativePath</code> property of a File object to set an explicit
+path. For example, the following code, when run on a Windows computer, sets a
+File object to the test.txt file in the <em>OpenFL Test</em> subdirectory of the C:
+drive:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> file:<span class="hljs-type">File </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">File</span>();
+file.nativePath = <span class="hljs-string">&quot;C:/OpenFL Test/test.txt&quot;</span>;
+</code></pre>
+<p>You can also pass this path to the <code>File()</code> constructor function, as in the
+following:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> file:<span class="hljs-type">File </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">File</span>(<span class="hljs-string">&quot;C:/OpenFL Test/test.txt&quot;</span>);
+</code></pre>
+<p>Use the forward slash (/) character as the path delimiter for the <code>nativePath</code>
+property. On Windows, you can also use the backslash (\ character, but doing so
+leads to applications that do not work across platforms.</p>
+<p>For more information, see <a href="#modifying-file-paths">Modifying File paths</a>.</p>
+<h3 id="enumerating-files-in-a-directory">Enumerating files in a directory</h3>
+<p>You can use the <code>getDirectoryListing()</code> method of a File object to get an array
+of File objects pointing to files and subdirectories at the root level of a
+directory. For more information, see
+<a href="working-with-directories.html#enumerating-directories">Enumerating directories</a>.</p>
+<h3 id="letting-the-user-browse-to-select-a-file">Letting the user browse to select a file</h3>
+<p>The File class includes the following methods that present a system dialog box
+in which the user can select a file to assign to the object:</p>
+<ul>
+<li><p><code>browseForOpen()</code></p>
+</li>
+<li><p><code>browseForSave()</code></p>
+</li>
+<li><p><code>browseForOpenMultiple()</code></p>
+</li>
+</ul>
+<p>These methods are each asynchronous. The <code>browseForOpen()</code> and <code>browseForSave()</code>
+methods dispatch the select event when the user selects a file (or a target
+path, in the case of browseForSave()). With the <code>browseForOpen()</code> and
+<code>browseForSave()</code> methods, upon selection the target File object points to the
+selected files. The <code>browseForOpenMultiple</code> () method dispatches a
+<code>selectMultiple</code> event when the user selects files. The <code>selectMultiple</code> event
+is of type FileListEvent, which has a <code>files</code> property that is an array of File
+objects (pointing to the selected files).</p>
+<p>For example, the following code presents the user with an &quot;Open&quot; dialog box in
+which the user can select a file:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">import</span> openfl.display.Sprite;
+<span class="hljs-keyword">import</span> openfl.events.Event;
+<span class="hljs-keyword">import</span> openfl.filesystem.File;
+<span class="hljs-keyword">import</span> openfl.net.FileFilter;
+
+<span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">FileBrowseForOpenExample</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span> <span class="hljs-type">Sprite</span></span>
+</span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> fileToOpen:<span class="hljs-type">File</span>;
+
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span></span>()
+    {
+        <span class="hljs-keyword">super</span>();
+
+        fileToOpen = File.documentsDirectory;
+        selectTextFile(fileToOpen);
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">selectTextFile</span></span>(root:<span class="hljs-type">File</span>):<span class="hljs-type">Void</span>
+    {
+        <span class="hljs-keyword">var</span> txtFilter:<span class="hljs-type">FileFilter </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">FileFilter</span>(<span class="hljs-string">&quot;Text&quot;</span>, <span class="hljs-string">&quot;*.hx;*.css;*.html;*.txt;*.xml&quot;</span>);
+        root.browseForOpen(<span class="hljs-string">&quot;Open&quot;</span>, [txtFilter]);
+        root.addEventListener(Event.SELECT, fileSelected);
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">fileSelected</span></span>(event:<span class="hljs-type">Event</span>):<span class="hljs-type">Void</span>
+    {
+        <span class="hljs-built_in">trace</span>(fileToOpen.nativePath);
+    }
+}
+</code></pre>
+<p>If the application has another browser dialog box open when you call a browse
+method, the runtime throws an Error exception.</p>
+<p>Note: On Android, only image, video, and audio files can be selected with the
+<code>browseForOpen()</code> and <code>browseForOpenMultiple()</code> methods. The browseForSave()
+dialog also displays only media files even though the user can enter an
+arbitrary filename. For opening and saving non-media files, you should consider
+using custom dialogs instead of these methods.</p>
+<h2 id="modifying-file-paths">Modifying File paths</h2>
+<p>You can also modify the path of an existing File object by calling the
+<code>resolvePath()</code> method or by modifying the <code>nativePath</code> or <code>url</code> property of the
+object, as in the following examples (on Windows):</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">import</span> openfl.display.Sprite;
+<span class="hljs-keyword">import</span> openfl.filesystem.File;
+
+<span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">ModifyFilePathExample</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span> <span class="hljs-type">Sprite</span></span>
+</span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span></span>()
+    {
+        <span class="hljs-keyword">super</span>();
+
+        <span class="hljs-keyword">var</span> file1:<span class="hljs-type">File </span>= File.documentsDirectory;
+        file1 = file1.resolvePath(<span class="hljs-string">&quot;OpenFL Test&quot;</span>);
+        <span class="hljs-built_in">trace</span>(file1.nativePath); <span class="hljs-comment">// C:\Users\userName\My Documents\OpenFL Test</span>
+        <span class="hljs-keyword">var</span> file2:<span class="hljs-type">File </span>= File.documentsDirectory;
+        file2 = file2.resolvePath(<span class="hljs-string">&quot;..&quot;</span>);
+        <span class="hljs-built_in">trace</span>(file2.nativePath); <span class="hljs-comment">// C:\Users\userName</span>
+        <span class="hljs-keyword">var</span> file3:<span class="hljs-type">File </span>= File.documentsDirectory;
+        file3.nativePath += <span class="hljs-string">&quot;/subdirectory&quot;</span>;
+        <span class="hljs-built_in">trace</span>(file3.nativePath); <span class="hljs-comment">// C:\Users\userName\My Documents\subdirectory</span>
+    }
+}
+</code></pre>
+<!-- TODO: add to example above when File.url is implemented
+        var file4:File = new File();
+        file4.url = "file:///c:/OpenFL Test/test.txt";
+        trace(file4.nativePath); // C:\OpenFL Test\test.txt
+-->
+<p>When using the <code>nativePath</code> property, use the forward slash (/) character as the
+directory separator character. On Windows, you can use the backslash (\
+character as well, but you should not do so, as it leads to code that does not
+work cross-platform.</p>
+<h2 id="supported-openfl-url-schemes">Supported OpenFL URL schemes</h2>
+<p>In OpenFL, you can use any of the following URL schemes in defining the <code>url</code>
+property of a File object:</p>
+<table>
+<thead>
+    <tr>
+        <th><p>URL scheme</p></th>
+        <th><p>Description</p></th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td><p>file</p></td>
+        <td><p>Use to specify a path relative to the root of the file system.
+        For example:</p><pre><code>file:///c:/OpenFL Test/test.txt</code></pre><p>The URL standard specifies that a file URL takes the form
+        <samp>file://&lt;host&gt;/&lt;path&gt;</samp>. As a special case,
+        <samp>&lt;host&gt;</samp> can be the empty string, which is interpreted
+        as &quot;the machine from which the URL is being interpreted.&quot; For this
+        reason, file URLs often have three slashes (///).</p></td>
+    </tr>
+    <tr>
+        <td><p>app</p></td>
+        <td><p><em>(Since OpenFL 9.4)</em> Use to specify a path relative to the root directory of the
+        installed application (the directory that contains the application.xml
+        file for the installed application). For example, the following path
+        points to an images subdirectory of the directory of the installed
+        application:</p><pre><code>app:/images</code></pre>
+        </td>
+    </tr>
+    <tr>
+        <td><p>app-storage</p></td>
+        <td><p><em>(Since OpenFL 9.4)</em> Use to specify a path relative to the application store
+        directory. For each installed application, OpenFL defines a unique
+        application store directory, which is a useful place to store data
+        specific to that application. For example, the following path points to
+        a prefs.xml file in a settings subdirectory of the application store
+        directory:</p><pre><code>app-storage:/settings/prefs.xml</code></pre>
+        </td>
+    </tr>
+</tbody>
+</table>
+
+<!-- TODO: uncomment if implemented in OpenFL
+## Controlling file backup and caching
+
+Certain operating systems, most notably iOS and macOS provide users the ability
+to automatically back up application files to a remote storage. In addition, on
+iOS there are restrictions on whether files can be backed up and also where
+files of different purposes can be stored.
+
+The following summarize how to comply with Apple's guidelines for file backup
+and storage. For further information see the next sections.
+
+- To specify that a file does not need to be backed up and (iOS only) can be
+  deleted by the operating system if device storage space runs low, save the
+  file in the cache directory (`File.cacheDirectory`). This is the preferred
+  storage location on iOS and should be used for most files that can be
+  regenerated or re-downloaded.
+
+- To specify that a file does not need to be backed up, but should not be
+  deleted by the operating system, save the file in one of the application
+  library directories such as the application storage directory (
+  `File.applicationStorageDirectory`) or the documents directory (
+  `File.documentsDirectory`). Set the File object's `preventBackup` property to
+  `true`. This is required by Apple for content that can be regenerated or
+  downloaded again, but which is required for proper functioning of your
+  application during offline use.
+
+#### Specifying files for backup
+
+In order to save backup space and reduce network bandwidth use, Apple's
+guidelines for iOS and Mac applications specify that only files that contain
+user-entered data or data that otherwise can't be regenerated or re-downloaded
+should be designated for backup.
+
+By default all files in the application library folders are backed up. On macOS
+this is the application storage directory. On iOS, this includes the
+application storage directory, the application directory, the desktop directory,
+documents directory, and user directory (because those directories are mapped to
+application library folders on iOS). Consequently, any files in those
+directories are backed up to server storage by default.
+
+If you are saving a file in one of those locations that can be re-created by
+your application, you should flag the file so the operating system knows not to
+back it up. To indicate that a file should not be backed up, set the File
+object's `preventBackup` property to `true`.
+
+Note that on iOS, for a file in any of the application library folders, even if
+the file's `preventBackup` property is set to `true` the file is flagged as a
+persistent file that the operating system shouldn't delete.
+
+#### Controlling file caching and deletion
+
+Apple's guidelines for iOS applications specify that as much as possible,
+content that can be regenerated should be made available to the operating system
+to delete in case the device runs low on storage space.
+
+On iOS, files in the application library folders (such as the application
+storage directory or the documents directory) are flagged as permanent and are
+not deleted by the operating system.
+
+Save files that can be regenerated by the application and are safe to delete in
+case of low storage space in the application cache directory. You access the
+cache directory using the `File.cacheDirectory` static property.
+
+On iOS the cache directory corresponds to the application's cache directory
+(\<Application Home\>/Library/Caches). On other operating systems, this
+directory is mapped to a comparable directory. For example, on macOS it also
+maps to the Caches directory in the application library. On Android the cache
+directory maps to the application's cache directory. On Windows, the cache
+directory maps to the operating system temp directory. On both Android and
+Windows, this is the same directory that is accessed by a call to the File
+class's `createTempDirectory()` and `createTempFile()` methods.-->
+<h2 id="finding-the-relative-path-between-two-files">Finding the relative path between two files</h2>
+<p>You can use the <code>getRelativePath()</code> method to find the relative path between two
+files:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">import</span> openfl.display.Sprite;
+<span class="hljs-keyword">import</span> openfl.filesystem.File;
+
+<span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">FileGetRelativePathExample1</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span> <span class="hljs-type">Sprite</span></span>
+</span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span></span>()
+    {
+        <span class="hljs-keyword">super</span>();
+
+        <span class="hljs-keyword">var</span> file1:<span class="hljs-type">File </span>= File.documentsDirectory.resolvePath(<span class="hljs-string">&quot;OpenFL Test&quot;</span>);
+        <span class="hljs-keyword">var</span> file2:<span class="hljs-type">File </span>= File.documentsDirectory;
+        file2 = file2.resolvePath(<span class="hljs-string">&quot;OpenFL Test/bob/test.txt&quot;</span>);
+
+        <span class="hljs-built_in">trace</span>(file1.getRelativePath(file2)); <span class="hljs-comment">// bob/test.txt</span>
+    }
+}
+</code></pre>
+<p>The second parameter of the <code>getRelativePath()</code> method, the <code>useDotDot</code>
+parameter, allows for <code>..</code> syntax to be returned in results, to indicate parent
+directories:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">import</span> openfl.display.Sprite;
+<span class="hljs-keyword">import</span> openfl.filesystem.File;
+
+<span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">FileGetRelativePathExample2</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span> <span class="hljs-type">Sprite</span></span>
+</span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span></span>()
+    {
+        <span class="hljs-keyword">super</span>();
+
+        <span class="hljs-keyword">var</span> file1:<span class="hljs-type">File </span>= File.documentsDirectory;
+        file1 = file1.resolvePath(<span class="hljs-string">&quot;OpenFL Test&quot;</span>);
+        <span class="hljs-keyword">var</span> file2:<span class="hljs-type">File </span>= File.documentsDirectory;
+        file2 = file2.resolvePath(<span class="hljs-string">&quot;OpenFL Test/bob/test.txt&quot;</span>);
+        <span class="hljs-keyword">var</span> file3:<span class="hljs-type">File </span>= File.documentsDirectory;
+        file3 = file3.resolvePath(<span class="hljs-string">&quot;OpenFL Test/susan/test.txt&quot;</span>);
+
+        <span class="hljs-built_in">trace</span>(file2.getRelativePath(file1, <span class="hljs-literal">true</span>)); <span class="hljs-comment">// ../..</span>
+        <span class="hljs-built_in">trace</span>(file3.getRelativePath(file2, <span class="hljs-literal">true</span>)); <span class="hljs-comment">// ../../bob/test.txt</span>
+    }
+}
+</code></pre>
+<h2 id="obtaining-canonical-versions-of-file-names">Obtaining canonical versions of file names</h2>
+<p>File and path names are not case sensitive on Windows and macOS. In the
+following, two File objects point to the same file:</p>
+<pre><code class="lang-haxe">File.documentsDirectory.resolvePath(<span class="hljs-string">&quot;test.txt&quot;</span>);
+File.documentsDirectory.resolvePath(<span class="hljs-string">&quot;TeSt.TxT&quot;</span>);
+</code></pre>
+<p>However, documents and directory names do include capitalization. For example,
+the following assumes that there is a folder named <em>OpenFL Test</em> in the
+documents directory, as in the following examples:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">import</span> openfl.display.Sprite;
+<span class="hljs-keyword">import</span> openfl.filesystem.File;
+
+<span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">FileCanonicalizeExample1</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span> <span class="hljs-type">Sprite</span></span>
+</span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span></span>()
+    {
+        <span class="hljs-keyword">super</span>();
+
+        <span class="hljs-keyword">var</span> file:<span class="hljs-type">File </span>= File.documentsDirectory.resolvePath(<span class="hljs-string">&quot;OpenFL test&quot;</span>);
+        <span class="hljs-built_in">trace</span>(file.nativePath); <span class="hljs-comment">// ... OpenFL test</span>
+        file.canonicalize();
+        <span class="hljs-built_in">trace</span>(file.nativePath); <span class="hljs-comment">// ... OpenFL Test</span>
+    }
+}
+</code></pre>
+<p>The <code>canonicalize()</code> method converts the <code>nativePath</code> object to use the correct
+capitalization for the file or directory name. On case sensitive file systems
+(such as Linux), when multiple files exists with names differing only in case,
+the <code>canonicalize()</code> method adjusts the path to match the first file found (in
+an order determined by the file system).</p>
+<p>You can also use the <code>canonicalize()</code> method to convert short file names (&quot;8.3&quot;
+names) to long file names on Windows, as in the following examples:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">import</span> openfl.display.Sprite;
+<span class="hljs-keyword">import</span> openfl.filesystem.File;
+
+<span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">FileCanonicalizeExample2</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span> <span class="hljs-type">Sprite</span></span>
+</span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span></span>()
+    {
+        <span class="hljs-keyword">super</span>();
+
+        <span class="hljs-keyword">var</span> path:<span class="hljs-type">File </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">File</span>();
+        path.nativePath = <span class="hljs-string">&quot;C:\\OpenFL~1&quot;</span>;
+        path.canonicalize();
+        <span class="hljs-built_in">trace</span>(path.nativePath); <span class="hljs-comment">// C:\OpenFL Test</span>
+    }
+}
+</code></pre>
+<!-- TODO: uncomment if this is implemented in OpenFL
+## Working with packages and symbolic links
+
+Various operating systems support package files and symbolic link files:
+
+**Packages** — On macOS, directories can be designated as packages and show up
+in the macOS Finder as a single file rather than as a directory.
+
+**Symbolic links** — macOS, Linux, and Windows Vista support symbolic links.
+Symbolic links allow a file to point to another file or directory on disk.
+Although similar, symbolic links are not the same as aliases. An alias is always
+reported as a file (rather than a directory), and reading or writing to an alias
+or shortcut never affects the original file or directory that it points to. On
+the other hand, a symbolic link behaves exactly like the file or directory it
+points to. It can be reported as a file or a directory, and reading or writing
+to a symbolic link affects the file or directory that it points to, not the
+symbolic link itself. Additionally, on Windows the `isSymbolicLink` property for
+a File object referencing a junction point (used in the NTFS file system) is set
+to `true`.
+
+The File class includes the `isPackage` and `isSymbolicLink` properties for
+checking if a File object references a package or symbolic link.
+
+The following code iterates through the user's desktop directory, listing
+subdirectories that are _not_ packages:
+
+```haxe
+var desktopNodes:Array<File> = File.desktopDirectory.getDirectoryListing();
+for (i in 0...desktopNodes.length)
+{
+    if (desktopNodes[i].isDirectory && !desktopNodes[i].isPackage)
+    {
+        trace(desktopNodes[i].name);
+    }
+}
+```
+
+The following code iterates through the user's desktop directory, listing files
+and directories that are _not_ symbolic links:
+
+```haxe
+var desktopNodes:Array<File> = File.desktopDirectory.getDirectoryListing();
+for (i in 0...desktopNodes.length)
+{
+    if (!desktopNodes[i].isSymbolicLink)
+    {
+        trace(desktopNodes[i].name);
+    }
+}
+```
+
+The `canonicalize()` method changes the path of a symbolic link to point to the
+file or directory to which the link refers. The following code iterates through
+the user's desktop directory, and reports the paths referenced by files that are
+symbolic links:
+
+```haxe
+var desktopNodes:Array<File> = File.desktopDirectory.getDirectoryListing();
+for (i in 0...desktopNodes.length)
+{
+    if (desktopNodes[i].isSymbolicLink)
+    {
+        var linkNode:File = desktopNodes[i] as File;
+        linkNode.canonicalize();
+        trace(linkNode.nativePath);
+    }
+}
+```
+-->
+<!-- TODO: uncomment if implemented in OpenFL
+## Determining space available on a volume
+
+The `spaceAvailable` property of a File object is the space available for use at
+the File location, in bytes. For example, the following code checks the space
+available in the application storage directory:
+
+```haxe
+trace(File.applicationStorageDirectory.spaceAvailable);
+``````
+
+If the File object references a directory, the `spaceAvailable` property
+indicates the space in the directory that files can use. If the File object
+references a file, the `spaceAvailable` property indicates the space into which
+the file could grow. If the file location does not exist, the `spaceAvailable`
+property is set to 0. If the File object references a symbolic link, the
+`spaceAvailable` property is set to space available at the location the symbolic
+link points to.
+
+Typically the space available for a directory or file is the same as the space
+available on the volume containing the directory or file. However, space
+available can take into account quotas and per-directory limits.
+
+Adding a file or directory to a volume generally requires more space than the
+actual size of the file or the size of the contents of the directory. For
+example, the operating system may require more space to store index information.
+Or the disk sectors required may use additional space. Also, available space
+changes dynamically. So, you cannot expect to allocate all of the reported space
+for file storage. For information on writing to the file system, see
+[Workflow for reading and writing files](./workflow-for-reading-and-writing-files.md).
+
+The `StorageVolumeInfo.getStorageVolumes()` method provides more detailed
+information on mounted storage volumes (see
+[Working with storage volumes](./working-with-storage-volumes.md)).-->
+<h2 id="opening-files-with-the-default-system-application">Opening files with the default system application</h2>
+<p>You can open a file using the application registered by the operating system to
+open it. For example, an OpenFL application can open a DOC file with the
+application registered to open it. Use the <code>openWithDefaultApplication()</code> method
+of a File object to open the file. For example, the following code opens a file
+named test.doc on the user&apos;s desktop and opens it with the default application
+for DOC files:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">import</span> openfl.display.Sprite;
+<span class="hljs-keyword">import</span> openfl.filesystem.File;
+
+<span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">FileOpenWithDefaultApplicationExample1</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span> <span class="hljs-type">Sprite</span></span>
+</span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span></span>()
+    {
+        <span class="hljs-keyword">super</span>();
+
+        <span class="hljs-keyword">var</span> file:<span class="hljs-type">File </span>= File.desktopDirectory;
+        file = file.resolvePath(<span class="hljs-string">&quot;test.doc&quot;</span>);
+        file.openWithDefaultApplication();
+    }
+}
+</code></pre>
+<p>Note: On Linux, the file&apos;s MIME type, not the filename extension, determines the
+default application for a file.</p>
+<p>The following code lets the user navigate to an mp3 file and open it in the
+default application for playing mp3 files:</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">import</span> openfl.display.Sprite;
+<span class="hljs-keyword">import</span> openfl.events.Event;
+<span class="hljs-keyword">import</span> openfl.filesystem.File;
+<span class="hljs-keyword">import</span> openfl.net.FileFilter;
+
+<span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">FileOpenWithDefaultApplicationExample2</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span> <span class="hljs-type">Sprite</span></span>
+</span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> file:<span class="hljs-type">File</span>;
+
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span></span>()
+    {
+        <span class="hljs-keyword">super</span>();
+
+        file = File.documentsDirectory;
+        <span class="hljs-keyword">var</span> mp3Filter:<span class="hljs-type">FileFilter </span>= <span class="hljs-keyword">new</span> <span class="hljs-type">FileFilter</span>(<span class="hljs-string">&quot;MP3 Files&quot;</span>, <span class="hljs-string">&quot;*.mp3&quot;</span>);
+        file.addEventListener(Event.SELECT, fileSelected);
+        file.browseForOpen(<span class="hljs-string">&quot;Open&quot;</span>, [mp3Filter]);
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">fileSelected</span></span>(e:<span class="hljs-type">Event</span>):<span class="hljs-type">Void</span>
+    {
+        file.openWithDefaultApplication();
+    }
+}
+</code></pre>
+<p>You cannot use the <code>openWithDefaultApplication()</code> method with files located in
+the application directory.</p>
+<p>Note: This limitation does not exist for an OpenFL application installed using a
+native installer (an extended desktop application).</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="native-file-system-basics.html" class="navigation navigation-prev " aria-label="Previous page: Native file system basics">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="getting-file-system-information.html" class="navigation navigation-next " aria-label="Next page: Getting file system information">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Working with File objects in OpenFL","level":"1.13.2.2","depth":3,"next":{"title":"Getting file system information","level":"1.13.2.3","depth":3,"path":"working-with-the-file-system/getting-file-system-information.md","ref":"working-with-the-file-system/getting-file-system-information.md","articles":[]},"previous":{"title":"Native file system basics","level":"1.13.2.1","depth":3,"path":"working-with-the-file-system/native-file-system-basics.md","ref":"working-with-the-file-system/native-file-system-basics.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"OpenFL Developer's Guide","gitbook":"*"},"file":{"path":"working-with-the-file-system/working-with-file-objects-in-openfl.md","mtime":"2024-01-30T23:54:58.581Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-01-30T23:55:09.358Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
