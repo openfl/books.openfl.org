@@ -401,9 +401,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.5.5" data-path="manipulating-display-objects/setting-an-opaque-background.html">
+        <li class="chapter " data-level="1.3.5.5" data-path="manipulating-display-objects/setting-an-opaque-background-color.html">
             
-                <a href="manipulating-display-objects/setting-an-opaque-background.html">
+                <a href="manipulating-display-objects/setting-an-opaque-background-color.html">
             
                     
                     Setting an opaque background color
@@ -1671,9 +1671,9 @@
 <p>All classes that extend the DisplayObject class inherit its methods and properties. For more information, see <a href="working-with-display-objects.md#properties-and-methods-of-the-displayobject-class">Properties and methods of the DisplayObject class</a>.</p>
 <p>You can instantiate objects of the following classes contained in the openfl.display package:</p>
 <ul>
-<li><p>Bitmap—You use the Bitmap class to define bitmap objects, either loaded from external files or rendered through Haxe. You can load bitmaps from external files through the Loader class. You can load GIF, JPG, or PNG files. You can also create a BitmapData object with custom data and then create a Bitmap object that uses that data. You can use the methods of the BitmapData class to alter bitmaps, whether they are loaded or created in Haxe. For more information, see <a href="loading-display-content-dynamically.md#loading-display-objects">Loading display objects</a> and <a href="../working-with-bitmaps/">Working with bitmaps</a>.</p>
+<li><p>Bitmap—You use the Bitmap class to define bitmap objects, either loaded from external files or rendered through Haxe. You can load bitmaps from external files through the Loader class. You can load GIF, JPG, or PNG files. You can also create a BitmapData object with custom data and then create a Bitmap object that uses that data. You can use the methods of the BitmapData class to alter bitmaps, whether they are loaded or created in Haxe. For more information, see <a href="loading-display-content-dynamically/loading-display-objects.html">Loading display objects</a> and <a href="../working-with-bitmaps/">Working with bitmaps</a>.</p>
 </li>
-<li><p>Loader—You use the Loader class to load external assets (either projects or graphics). For more information, see <a href="loading-display-content-dynamically.md">Loading display content dynamically</a>.</p>
+<li><p>Loader—You use the Loader class to load external assets (either projects or graphics). For more information, see <a href="loading-display-content-dynamically/">Loading display content dynamically</a>.</p>
 </li>
 <li><p>Shape—You use the Shape class to create vector graphics, such as rectangles, lines, circles, and so on. For more information, see <a href="../using-the-drawing-api/">Using the drawing API</a>.</p>
 </li>
@@ -1686,7 +1686,7 @@
 </ul>
 <p>The following classes, which are not in the openfl.display package, are subclasses of the DisplayObject class:</p>
 <ul>
-<li>The TextField class, included in the openfl.text package, is a display object for text display and input. For more information, see <a href="../basics-of-working-with-text/README.md">Basics of Working with text</a>.</li>
+<li>The TextField class, included in the openfl.text package, is a display object for text display and input. For more information, see <a href="../using-the-textfield-class/">Using the TextField class</a>.</li>
 </ul>
 <!-- 
 *   The TextLine class, included in the openfl.text.engine package, is the display object used to display lines of text composed by the Flash Text Engine and the Text Layout Framework. For more information, see
@@ -1702,7 +1702,9 @@
     .
 -->
 <ul>
-<li>The Video class, included in the openfl.media package, is the display object used for displaying video files. For more information, see <a href="../working-with-video/README.md">Working with video</a>.</li>
+<li>The Video class, included in the openfl.media package, is the display object used for displaying video files.<!-- TODO: uncomment if this content is adapted for OpenFL
+For more information, see [Working with video](../working-with-video/README.md).-->
+</li>
 </ul>
 <p>The following classes in the openfl.display package extend the DisplayObject class, but you cannot create instances of them. Instead, they serve as parent classes for other display objects, combining common functionality into a single class.</p>
 <!-- 
@@ -1714,7 +1716,9 @@
     .
 -->
 <ul>
-<li><p>InteractiveObject—InteractiveObject is the base class for all objects used to interact with the mouse and keyboard. SimpleButton, TextField, Loader, Sprite, Stage, and MovieClip objects are all subclasses of the InteractiveObject class. For more information on creating mouse and keyboard interaction, see <a href="../basics-of-user-interaction/README.md">Basics of user interaction</a>.</p>
+<li><p>InteractiveObject—InteractiveObject is the base class for all objects used to interact with the mouse and keyboard. SimpleButton, TextField, Loader, Sprite, Stage, and MovieClip objects are all subclasses of the InteractiveObject class.</p>
+<!-- TODO: uncomment if this content is adapted for OpenFL
+For more information on creating mouse and keyboard interaction, see [Basics of user interaction](../basics-of-user-interaction/README.md).-->
 </li>
 <li><p>MorphShape—These objects are created when you create a shape tween in the Flash authoring tool. You cannot instantiate them using Haxe, but they can be accessed from the display list.</p>
 </li>
@@ -1791,7 +1795,7 @@ The following fl.display classes provide functionality that parallels the openfl
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Core display classes","level":"1.3.2","depth":2,"next":{"title":"Advantages of the display list approach","level":"1.3.3","depth":2,"path":"display-programming/advantages-of-the-display-list-approach.md","ref":"display-programming/advantages-of-the-display-list-approach.md","articles":[]},"previous":{"title":"Basics of display programming","level":"1.3.1","depth":2,"path":"display-programming/basics-of-display-programming.md","ref":"display-programming/basics-of-display-programming.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"OpenFL Developer's Guide","gitbook":"*"},"file":{"path":"display-programming/core-display-classes.md","mtime":"2024-01-30T23:54:58.573Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-01-30T23:55:09.358Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Core display classes","level":"1.3.2","depth":2,"next":{"title":"Advantages of the display list approach","level":"1.3.3","depth":2,"path":"display-programming/advantages-of-the-display-list-approach.md","ref":"display-programming/advantages-of-the-display-list-approach.md","articles":[]},"previous":{"title":"Basics of display programming","level":"1.3.1","depth":2,"path":"display-programming/basics-of-display-programming.md","ref":"display-programming/basics-of-display-programming.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"OpenFL Developer's Guide","gitbook":"*"},"file":{"path":"display-programming/core-display-classes.md","mtime":"2024-01-31T17:17:47.487Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-01-31T17:18:00.966Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
