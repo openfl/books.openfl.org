@@ -6,7 +6,7 @@
         <title>Error Messages · OpenFL ActionScript 3.0 Conversion Guide</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 5.1.4">
+        <meta name="generator" content="HonKit 6.0.1">
         
         
         
@@ -24,7 +24,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
                 
             
         
@@ -386,7 +386,7 @@
 <h2 id="unexpected-foo-or-other-variable-name">Unexpected foo (or other variable name)</h2>
 <p>This may be caused by a declaration which is not compatible with Haxe, like <code>typeof foo</code>, or you may need to convert a Flash getter or setter.</p>
 <p>If a getter or setter is being used to limit access to a variable, like setting it to read-only, you can do this when defining a variable in Haxe, like <code>var foo (default, null):String</code></p>
-<p>Otherwise, you can use the same syntax to use a getter or a setter, like <code>var foo (get, set):String</code>, then define your getter and setter methods later in the class (using the prefix &quot;get_&quot; or &quot;set&quot;, respectively).</p>
+<p>Otherwise, you can use the same syntax to use a getter or a setter, like <code>var foo (get, set):String</code>, then define your getter and setter methods later in the class (using the prefix "get_" or "set", respectively).</p>
 <h2 id="unexpected-foo-or-other-variable-name">Unexpected $foo (or other variable name)</h2>
 <p>Haxe does not allow the dollar sign in variable or method names.</p>
 <h2 id="unexpected-">Unexpected =</h2>
@@ -406,9 +406,9 @@
 <h2 id="unexpected-internal">Unexpected internal</h2>
 <p>Haxe does not have an <code>internal</code> namespace. You should change it to <code>private</code>, then use the <code>@:access</code>, <code>@:allow</code> or (for a single-line call) <code>@:privateAccess</code> meta-data to access or allow private members.</p>
 <h2 id="unexpected-">Unexpected ...</h2>
-<p>Haxe does not support &quot;rest&quot; parameters like ActionScript 3.</p>
+<p>Haxe does not support "rest" parameters like ActionScript 3.</p>
 <p>There are ways to recreate the same functionality using <code>Reflect.makeVarArgs</code>, but it probably is best to refactor so that the number of parameters is known.</p>
-<h2 id="unexpected-">Unexpected <end of file></end></h2>
+<h2 id="unexpected-">Unexpected <end of="" file=""></end></h2>
 <p>This might occur if you are missing a closing curly bracket in your code.</p>
 <h2 id="unexpected-dynamic">Unexpected dynamic</h2>
 <p>In ActionScript, the <code>dynamic</code> keyword means that a class can have new variables or methods assigned to it as a dynamic object. This is possible in Haxe by implementing <code>Dynamic</code> as an interface.</p>
@@ -472,7 +472,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Error Messages","level":"1.5.1","depth":2,"next":{"title":"Cheat Sheet","level":"1.5.2","depth":2,"path":"glossary/cheat-sheet.md","ref":"glossary/cheat-sheet.md","articles":[]},"previous":{"title":"Glossary","level":"1.5","depth":1,"path":"glossary/README.md","ref":"glossary/README.md","articles":[{"title":"Error Messages","level":"1.5.1","depth":2,"path":"glossary/error-messages.md","ref":"glossary/error-messages.md","articles":[]},{"title":"Cheat Sheet","level":"1.5.2","depth":2,"path":"glossary/cheat-sheet.md","ref":"glossary/cheat-sheet.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"OpenFL ActionScript 3.0 Conversion Guide","gitbook":"*"},"file":{"path":"glossary/error-messages.md","mtime":"2024-01-31T17:17:48.235Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-01-31T17:18:18.905Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Error Messages","level":"1.5.1","depth":2,"next":{"title":"Cheat Sheet","level":"1.5.2","depth":2,"path":"glossary/cheat-sheet.md","ref":"glossary/cheat-sheet.md","articles":[]},"previous":{"title":"Glossary","level":"1.5","depth":1,"path":"glossary/README.md","ref":"glossary/README.md","articles":[{"title":"Error Messages","level":"1.5.1","depth":2,"path":"glossary/error-messages.md","ref":"glossary/error-messages.md","articles":[]},{"title":"Cheat Sheet","level":"1.5.2","depth":2,"path":"glossary/cheat-sheet.md","ref":"glossary/cheat-sheet.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"OpenFL ActionScript 3.0 Conversion Guide","gitbook":"*"},"file":{"path":"glossary/error-messages.md","mtime":"2024-10-11T20:23:02.205Z","type":"markdown"},"gitbook":{"version":"6.0.1","time":"2024-10-11T20:23:47.505Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -542,7 +542,7 @@
         
     
         
-        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        <script src="../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
         
     
 

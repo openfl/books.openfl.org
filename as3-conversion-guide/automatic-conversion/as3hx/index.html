@@ -6,7 +6,7 @@
         <title>AS3HX · OpenFL ActionScript 3.0 Conversion Guide</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 5.1.4">
+        <meta name="generator" content="HonKit 6.0.1">
         
         
         
@@ -24,7 +24,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
                 
             
         
@@ -353,7 +353,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="as3hx">AS3HX</h1>
-<p>The Haxe Foundation supports a tool called &quot;AS3HX&quot; which handles a lot of the conversion from ActionScript to Haxe.</p>
+<p>The Haxe Foundation supports a tool called "AS3HX" which handles a lot of the conversion from ActionScript to Haxe.</p>
 <h2 id="setup">Setup</h2>
 <p>First, make sure that you have followed the directions for downloading and installing Haxe on your system.</p>
 <p>Open a command-prompt or terminal, and install AS3HX:</p>
@@ -364,20 +364,20 @@
 <pre><code class="lang-bash">haxelib run as3hx path/to/as3 path/to/output
 </code></pre>
 <h2 id="configuration">Configuration</h2>
-<p>The first time you run AS3HX, the tool will generate a file called &quot;.as3hx_config.xml&quot; in your home directory, such as &quot;/home/joshua/.as3hx_config.xml&quot; or &quot;C:\Users\Joshua.as3hx_config.xml&quot;</p>
+<p>The first time you run AS3HX, the tool will generate a file called ".as3hx_config.xml" in your home directory, such as "/home/joshua/.as3hx_config.xml" or "C:\Users\Joshua.as3hx_config.xml"</p>
 <p>Open this file in a text editor and you can change a number of different options for how AS3HX will process ActionScript 3.0 source and generate corresponding Haxe source.</p>
 <p>After changing the configuration file, try running the <code>as3hx</code> command again to compare the results.</p>
 <p>These are some of the options available</p>
-<h3 id="indentchars-value-----"><code>&lt;indentChars value=&quot;    &quot; /&gt;</code></h3>
-<p>Edit which characters are used for indentation. Common values include &quot;\t&quot; or &quot;    &quot; for tab or space indentation.</p>
-<h3 id="bracesonnewline-valuetrue-"><code>&lt;bracesOnNewline value=&quot;true&quot; /&gt;</code></h3>
-<p>Edit whether braces will be placed on a new line, or whether they will be &quot;cuddled&quot; on the same line. You can enter &quot;true&quot; or &quot;false&quot;</p>
-<h3 id="spacesontypecolon-valuetrue-"><code>&lt;spacesOnTypeColon value=&quot;true&quot; /&gt;</code></h3>
-<p>Edit whether spaces are inserted around type declarations, such as <code>var hello : String</code> compared to <code>var hello:String</code>. You can select &quot;true&quot; or &quot;false&quot;</p>
-<h3 id="vectortoarray-valuetrue-"><code>&lt;vectorToArray value=&quot;true&quot; /&gt;</code></h3>
-<p>Edit whether Vector.&lt;&gt; references will be replaced with Haxe typed Array&lt;&gt; references. OpenFL includes an openfl.Vector class that behaves similar to the Flash Vector.&lt;&gt; type, so this conversion is not necessary. You can choose &quot;true&quot; or &quot;false&quot;</p>
-<h3 id="usefastxml-valuetrue-"><code>&lt;useFastXML value=&quot;true&quot; /&gt;</code></h3>
-<p>Edit whether XML parsing will be replaced with AS3HX &quot;FastXML&quot; parsing, which requires the addition of an extra class in order to compile the source. You can select &quot;true&quot; or &quot;false&quot;</p>
+<h3 id="indentchars-value-----"><code>&lt;indentChars value="    " /&gt;</code></h3>
+<p>Edit which characters are used for indentation. Common values include "\t" or "    " for tab or space indentation.</p>
+<h3 id="bracesonnewline-valuetrue-"><code>&lt;bracesOnNewline value="true" /&gt;</code></h3>
+<p>Edit whether braces will be placed on a new line, or whether they will be "cuddled" on the same line. You can enter "true" or "false"</p>
+<h3 id="spacesontypecolon-valuetrue-"><code>&lt;spacesOnTypeColon value="true" /&gt;</code></h3>
+<p>Edit whether spaces are inserted around type declarations, such as <code>var hello : String</code> compared to <code>var hello:String</code>. You can select "true" or "false"</p>
+<h3 id="vectortoarray-valuetrue-"><code>&lt;vectorToArray value="true" /&gt;</code></h3>
+<p>Edit whether Vector.&lt;&gt; references will be replaced with Haxe typed Array&lt;&gt; references. OpenFL includes an openfl.Vector class that behaves similar to the Flash Vector.&lt;&gt; type, so this conversion is not necessary. You can choose "true" or "false"</p>
+<h3 id="usefastxml-valuetrue-"><code>&lt;useFastXML value="true" /&gt;</code></h3>
+<p>Edit whether XML parsing will be replaced with AS3HX "FastXML" parsing, which requires the addition of an extra class in order to compile the source. You can select "true" or "false"</p>
 <h2 id="quirks">Quirks</h2>
 <p>No converter is perfect, and AS3HX has a few quirks. Particularly, AS3HX is not always able to determine types when casting, and is not able to handle E4X XML well.</p>
 <p>Some types of conversion may be a bit overzealous as well. Converting ActionScript Dictionaries to the Haxe Map type, for example, may be appropriate, but you can also use the openfl.utils.Dictionary type for better compatibility.</p>
@@ -426,7 +426,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"AS3HX","level":"1.4.1","depth":2,"next":{"title":"Glossary","level":"1.5","depth":1,"path":"glossary/README.md","ref":"glossary/README.md","articles":[{"title":"Error Messages","level":"1.5.1","depth":2,"path":"glossary/error-messages.md","ref":"glossary/error-messages.md","articles":[]},{"title":"Cheat Sheet","level":"1.5.2","depth":2,"path":"glossary/cheat-sheet.md","ref":"glossary/cheat-sheet.md","articles":[]}]},"previous":{"title":"Automatic Conversion","level":"1.4","depth":1,"path":"automatic-conversion/README.md","ref":"automatic-conversion/README.md","articles":[{"title":"AS3HX","level":"1.4.1","depth":2,"path":"automatic-conversion/as3hx/README.md","ref":"automatic-conversion/as3hx/README.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"OpenFL ActionScript 3.0 Conversion Guide","gitbook":"*"},"file":{"path":"automatic-conversion/as3hx/README.md","mtime":"2024-01-31T17:17:48.235Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-01-31T17:18:18.905Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"AS3HX","level":"1.4.1","depth":2,"next":{"title":"Glossary","level":"1.5","depth":1,"path":"glossary/README.md","ref":"glossary/README.md","articles":[{"title":"Error Messages","level":"1.5.1","depth":2,"path":"glossary/error-messages.md","ref":"glossary/error-messages.md","articles":[]},{"title":"Cheat Sheet","level":"1.5.2","depth":2,"path":"glossary/cheat-sheet.md","ref":"glossary/cheat-sheet.md","articles":[]}]},"previous":{"title":"Automatic Conversion","level":"1.4","depth":1,"path":"automatic-conversion/README.md","ref":"automatic-conversion/README.md","articles":[{"title":"AS3HX","level":"1.4.1","depth":2,"path":"automatic-conversion/as3hx/README.md","ref":"automatic-conversion/as3hx/README.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"OpenFL ActionScript 3.0 Conversion Guide","gitbook":"*"},"file":{"path":"automatic-conversion/as3hx/README.md","mtime":"2024-10-11T20:23:02.205Z","type":"markdown"},"gitbook":{"version":"6.0.1","time":"2024-10-11T20:23:47.505Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -496,7 +496,7 @@
         
     
         
-        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        <script src="../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
         
     
 

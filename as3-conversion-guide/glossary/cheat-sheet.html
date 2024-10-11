@@ -6,7 +6,7 @@
         <title>Cheat Sheet · OpenFL ActionScript 3.0 Conversion Guide</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 5.1.4">
+        <meta name="generator" content="HonKit 6.0.1">
         
         
         
@@ -24,7 +24,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
                 
             
         
@@ -435,11 +435,11 @@ Vector.&lt;String&gt;
 <pre><code class="lang-ActionScript"><span class="hljs-keyword">switch</span> (value) {
 
    <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:
-      trace (<span class="hljs-string">&quot;Equal to 1&quot;</span>);
+      trace (<span class="hljs-string">"Equal to 1"</span>);
       <span class="hljs-keyword">break</span>;
 
    <span class="hljs-keyword">default</span>:
-      trace (<span class="hljs-string">&quot;Not equal to 1&quot;</span>);
+      trace (<span class="hljs-string">"Not equal to 1"</span>);
       <span class="hljs-keyword">break</span>;
 
 }
@@ -448,22 +448,22 @@ Vector.&lt;String&gt;
 <pre><code class="lang-haxe"><span class="hljs-keyword">switch</span> (value) {
 
    <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:<span class="hljs-type"></span>
-      <span class="hljs-built_in">trace</span> (<span class="hljs-string">&quot;Equal to 1&quot;</span>);
+      <span class="hljs-built_in">trace</span> (<span class="hljs-string">"Equal to 1"</span>);
 
    <span class="hljs-keyword">default</span>:<span class="hljs-type"></span>
-      <span class="hljs-built_in">trace</span> (<span class="hljs-string">&quot;Not equal to 1&quot;</span>);
+      <span class="hljs-built_in">trace</span> (<span class="hljs-string">"Not equal to 1"</span>);
 
 }
 </code></pre>
 <h2 id="type-inference">Type Inference</h2>
 <h3 id="actionscript-3">ActionScript 3</h3>
-<pre><code class="lang-ActionScript"><span class="hljs-keyword">var</span> hi = <span class="hljs-string">&quot;Hello World&quot;</span>;
+<pre><code class="lang-ActionScript"><span class="hljs-keyword">var</span> hi = <span class="hljs-string">"Hello World"</span>;
 
 <span class="hljs-comment">// type is Object</span>
 <span class="hljs-comment">// fails to compile in strict mode</span>
 </code></pre>
 <h3 id="haxe">Haxe</h3>
-<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> hi = <span class="hljs-string">&quot;Hello World&quot;</span>;
+<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> hi = <span class="hljs-string">"Hello World"</span>;
 
 <span class="hljs-comment">// type is String</span>
 <span class="hljs-comment">// even works for code completion</span>
@@ -473,7 +473,7 @@ Vector.&lt;String&gt;
 <pre><code class="lang-ActionScript"><span class="hljs-keyword">var</span> car:Car = vehicle <span class="hljs-keyword">as</span> Car;
 
 <span class="hljs-keyword">var</span> toString:String = String (<span class="hljs-number">10</span>);
-<span class="hljs-keyword">var</span> toNumber:Number = Number (<span class="hljs-string">&quot;10&quot;</span>);
+<span class="hljs-keyword">var</span> toNumber:Number = Number (<span class="hljs-string">"10"</span>);
 <span class="hljs-keyword">var</span> toInteger:int = int (<span class="hljs-number">10.1</span>);
 </code></pre>
 <h3 id="haxe">Haxe</h3>
@@ -484,7 +484,7 @@ Vector.&lt;String&gt;
 <span class="hljs-keyword">var</span> car = <span class="hljs-keyword">cast</span> (vehicle, Car);
 
 <span class="hljs-keyword">var</span> toString = Std.string (<span class="hljs-number">10</span>);
-<span class="hljs-keyword">var</span> toNumber = Std.parseFloat (<span class="hljs-string">&quot;10&quot;</span>);
+<span class="hljs-keyword">var</span> toNumber = Std.parseFloat (<span class="hljs-string">"10"</span>);
 <span class="hljs-keyword">var</span> toInteger = Std.int (<span class="hljs-number">10.1</span>);
 </code></pre>
 <h2 id="type-details">Type Details</h2>
@@ -525,31 +525,31 @@ name = Type.getClassName (type);
 <h2 id="hash-tables">Hash Tables</h2>
 <h3 id="actionscript-3">ActionScript 3</h3>
 <pre><code class="lang-ActionScript"><span class="hljs-keyword">var</span> table:Object = <span class="hljs-keyword">new</span> Object ();
-table[<span class="hljs-string">&quot;key&quot;</span>] = <span class="hljs-number">100</span>;
+table[<span class="hljs-string">"key"</span>] = <span class="hljs-number">100</span>;
 
-trace (table.hasOwnProperty (<span class="hljs-string">&quot;key&quot;</span>));
+trace (table.hasOwnProperty (<span class="hljs-string">"key"</span>));
 
 <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> key:Object <span class="hljs-keyword">in</span> table) {
 
-   trace (key + <span class="hljs-string">&quot; = &quot;</span> + table[key]);
+   trace (key + <span class="hljs-string">" = "</span> + table[key]);
 
 }
 
-<span class="hljs-keyword">delete</span> table[<span class="hljs-string">&quot;key&quot;</span>];
+<span class="hljs-keyword">delete</span> table[<span class="hljs-string">"key"</span>];
 </code></pre>
 <h3 id="haxe">Haxe</h3>
-<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> table = <span class="hljs-keyword">new</span> <span class="hljs-type">Map</span>&lt;<span class="hljs-keyword">String</span>,<span class="hljs-keyword">Int</span>&gt; ();
-table.<span class="hljs-keyword">set</span> (<span class="hljs-string">&quot;key&quot;</span>, <span class="hljs-number">100</span>);
+<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> table = <span class="hljs-keyword">new</span><span class="hljs-type"></span> Map&lt;<span class="hljs-keyword">String</span>,<span class="hljs-keyword">Int</span>&gt; ();
+table.<span class="hljs-keyword">set</span> (<span class="hljs-string">"key"</span>, <span class="hljs-number">100</span>);
 
-<span class="hljs-built_in">trace</span> (table.exists (<span class="hljs-string">&quot;key&quot;</span>));
+<span class="hljs-built_in">trace</span> (table.exists (<span class="hljs-string">"key"</span>));
 
 <span class="hljs-keyword">for</span> (key <span class="hljs-keyword">in</span> table.keys ()) {
 
-   <span class="hljs-built_in">trace</span> (key + <span class="hljs-string">&quot; = &quot;</span> + table.<span class="hljs-keyword">get</span> (key));
+   <span class="hljs-built_in">trace</span> (key + <span class="hljs-string">" = "</span> + table.<span class="hljs-keyword">get</span> (key));
 
 }
 
-table.remove (<span class="hljs-string">&quot;key&quot;</span>);
+table.remove (<span class="hljs-string">"key"</span>);
 </code></pre>
 <h2 id="rest-parameters">Rest Parameters</h2>
 <h3 id="actionscript-3">ActionScript 3</h3>
@@ -568,14 +568,14 @@ Reflect.makeVarArgs (test) (<span class="hljs-number">1</span>, <span class="hlj
 </code></pre>
 <h2 id="reflection">Reflection</h2>
 <h3 id="actionscript-3">ActionScript 3</h3>
-<pre><code class="lang-ActionScript"><span class="hljs-keyword">var</span> foo = object[<span class="hljs-string">&quot;foo&quot;</span>];
+<pre><code class="lang-ActionScript"><span class="hljs-keyword">var</span> foo = object[<span class="hljs-string">"foo"</span>];
 
-bar.apply (<span class="hljs-keyword">this</span>, [ <span class="hljs-string">&quot;hi&quot;</span> ]);
+bar.apply (<span class="hljs-keyword">this</span>, [ <span class="hljs-string">"hi"</span> ]);
 </code></pre>
 <h3 id="haxe">Haxe</h3>
-<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> foo = Reflect.field (object, <span class="hljs-string">&quot;foo&quot;</span>);
+<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> foo = Reflect.field (object, <span class="hljs-string">"foo"</span>);
 
-Reflect.callMethod (<span class="hljs-built_in">this</span>, bar, [ <span class="hljs-string">&quot;hi&quot;</span> ]);
+Reflect.callMethod (<span class="hljs-built_in">this</span>, bar, [ <span class="hljs-string">"hi"</span> ]);
 </code></pre>
 <h2 id="constants">Constants</h2>
 <h3 id="actionscript-3">ActionScript 3</h3>
@@ -691,7 +691,7 @@ Reflect.callMethod (<span class="hljs-built_in">this</span>, bar, [ <span class=
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Cheat Sheet","level":"1.5.2","depth":2,"next":{"title":"UI Components","level":"1.6","depth":1,"path":"ui-components-fl-packages.md","ref":"ui-components-fl-packages.md","articles":[]},"previous":{"title":"Error Messages","level":"1.5.1","depth":2,"path":"glossary/error-messages.md","ref":"glossary/error-messages.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"OpenFL ActionScript 3.0 Conversion Guide","gitbook":"*"},"file":{"path":"glossary/cheat-sheet.md","mtime":"2024-01-31T17:17:48.235Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-01-31T17:18:18.905Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Cheat Sheet","level":"1.5.2","depth":2,"next":{"title":"UI Components","level":"1.6","depth":1,"path":"ui-components-fl-packages.md","ref":"ui-components-fl-packages.md","articles":[]},"previous":{"title":"Error Messages","level":"1.5.1","depth":2,"path":"glossary/error-messages.md","ref":"glossary/error-messages.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"OpenFL ActionScript 3.0 Conversion Guide","gitbook":"*"},"file":{"path":"glossary/cheat-sheet.md","mtime":"2024-10-11T20:23:02.205Z","type":"markdown"},"gitbook":{"version":"6.0.1","time":"2024-10-11T20:23:47.505Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -761,7 +761,7 @@ Reflect.callMethod (<span class="hljs-built_in">this</span>, bar, [ <span class=
         
     
         
-        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        <script src="../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
         
     
 

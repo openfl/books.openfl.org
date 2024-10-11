@@ -6,7 +6,7 @@
         <title>Syntax · OpenFL ActionScript 3.0 Conversion Guide</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 5.1.4">
+        <meta name="generator" content="HonKit 6.0.1">
         
         
         
@@ -24,7 +24,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
                 
             
         
@@ -371,7 +371,7 @@
 <span class="hljs-built_in">trace</span> ((<span class="hljs-number">1</span> + <span class="hljs-number">2</span>) * <span class="hljs-number">3</span>); <span class="hljs-comment">// 9</span>
 </code></pre>
 <p>You can also use parentheses to pass one or more parameters to functions or methods:</p>
-<pre><code class="lang-haxe"><span class="hljs-built_in">trace</span> (<span class="hljs-string">&quot;hello&quot;</span>);
+<pre><code class="lang-haxe"><span class="hljs-built_in">trace</span> (<span class="hljs-string">"hello"</span>);
 </code></pre>
 <p>ActionScript also supports the use of commas to separate multiple expressions and return the result of the final expression. For example:</p>
 <pre><code class="lang-ActionScript"><span class="hljs-keyword">var</span> a:int = <span class="hljs-number">1</span>;
@@ -394,7 +394,7 @@ b++;
 <p>Code encased by curly braces (<code>{}</code>) are called a code block. The body of many portions of ActionScript and Haxe are grouped together using code blocks.</p>
 <pre><code class="lang-haxe"><span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">hello</span> </span>():<span class="hljs-type">String </span>{
 
-    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;World&quot;</span>;
+    <span class="hljs-keyword">return</span> <span class="hljs-string">"World"</span>;
 
 }
 </code></pre>
@@ -428,25 +428,25 @@ b++;
 <p>A literal is a fixed value in your code, Haxe and ActionScript are similar in the types of literals you can use:</p>
 <pre><code class="lang-haxe"><span class="hljs-number">100</span>
 <span class="hljs-number">-2.1</span>
-<span class="hljs-string">&quot;hello&quot;</span>
+<span class="hljs-string">"hello"</span>
 <span class="hljs-literal">null</span>
 <span class="hljs-literal">true</span>
 <span class="hljs-literal">false</span>
 </code></pre>
 <p>ActionScript has an <code>undefined</code> literal which is not used in Haxe. The following returns <code>undefined</code> in <code>ActionScript</code>, but is a compile error in Haxe:</p>
-<pre><code class="lang-haxe">object = { a: <span class="hljs-type"></span>&quot;b<span class="hljs-string">&quot;, c: &quot;</span>d<span class="hljs-string">&quot; };
+<pre><code class="lang-haxe">object = { a: <span class="hljs-type"></span>"b<span class="hljs-string">", c: "</span>d<span class="hljs-string">" };
 trace (object.e);
 </span></code></pre>
 <p>Instead, use the Haxe <code>Reflect</code> class to check if a field exists, or use static types.</p>
-<pre><code class="lang-haxe"><span class="hljs-keyword">if</span> (Reflect.hasField (object, <span class="hljs-string">&quot;e&quot;</span>)) {
+<pre><code class="lang-haxe"><span class="hljs-keyword">if</span> (Reflect.hasField (object, <span class="hljs-string">"e"</span>)) {
 
-    <span class="hljs-built_in">trace</span> (Reflect.field (object, <span class="hljs-string">&quot;e&quot;</span>));
+    <span class="hljs-built_in">trace</span> (Reflect.field (object, <span class="hljs-string">"e"</span>));
 
 }
 </code></pre>
 <h2 id="square-brackets">Square Brackets</h2>
 <p>In ActionScript and Haxe, square brackets (<code>[]</code>) can be used to define an array literal:</p>
-<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> colors = [ <span class="hljs-string">&quot;red&quot;</span>, <span class="hljs-string">&quot;blue&quot;</span>, <span class="hljs-string">&quot;green&quot;</span> ];
+<pre><code class="lang-haxe"><span class="hljs-keyword">var</span> colors = [ <span class="hljs-string">"red"</span>, <span class="hljs-string">"blue"</span>, <span class="hljs-string">"green"</span> ];
 </code></pre>
 <p>Square brackets can also be used to access array values:</p>
 <pre><code class="lang-haxe"><span class="hljs-keyword">var</span> firstColor = colors[<span class="hljs-number">0</span>];
@@ -455,20 +455,20 @@ trace (object.e);
 <p>ActionScript also allows the use of square brackets to access fields using a string-based name, but this is not supported in Haxe. Use the <code>Reflect</code> class in Haxe in order to reference a field dynamically.</p>
 <p><em>ActionScript 3.0</em></p>
 <pre><code class="lang-ActionScript">clip.x = <span class="hljs-number">100</span>;
-clip[<span class="hljs-string">&quot;y&quot;</span>] = <span class="hljs-number">100</span>;
+clip[<span class="hljs-string">"y"</span>] = <span class="hljs-number">100</span>;
 </code></pre>
 <p><em>Haxe</em></p>
 <pre><code class="lang-haxe">clip.x = <span class="hljs-number">100</span>;
-Reflect.setField (clip, <span class="hljs-string">&quot;y&quot;</span>, <span class="hljs-number">100</span>);
+Reflect.setField (clip, <span class="hljs-string">"y"</span>, <span class="hljs-number">100</span>);
 </code></pre>
 <h2 id="angle-brackets">Angle Brackets</h2>
 <p>ActionScript 3.0 uses angle brackets (<code>&lt;&gt;</code>) for the <code>Vector.&lt;&gt;</code>. Haxe provides support for <em>type parameters</em> in the <code>Array&lt;&gt;</code>, <code>Map&lt;&gt;</code> and multiple other types in the language, and allows use of type parameters in user classes as well.</p>
 <p>When describing the type of an <code>Array</code>, ActionScript will always treat the array as if it is dynamic. In Haxe, arrays are typed based on their contents, which improves performance and can eliminate confusing errors:</p>
 <pre><code class="lang-haxe"><span class="hljs-keyword">var</span> values:<span class="hljs-type">Array</span>&lt;<span class="hljs-keyword">Int</span>&gt; = [ <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span> ];
-<span class="hljs-keyword">var</span> names:<span class="hljs-type">Array</span>&lt;<span class="hljs-keyword">String</span>&gt; = [ <span class="hljs-string">&quot;Doug&quot;</span>, <span class="hljs-string">&quot;Richard&quot;</span>, <span class="hljs-string">&quot;Harrison&quot;</span> ];
+<span class="hljs-keyword">var</span> names:<span class="hljs-type">Array</span>&lt;<span class="hljs-keyword">String</span>&gt; = [ <span class="hljs-string">"Doug"</span>, <span class="hljs-string">"Richard"</span>, <span class="hljs-string">"Harrison"</span> ];
 </code></pre>
 <h2 id="arrow-tokens">Arrow Tokens</h2>
-<p>Haxe supports a special arrow token (<code>-&gt;</code>) syntax, which is used when describing a function. The ActionScript does not allow for different types based on the signature of a function. Instead, every function in ActionScript is described as type <code>Function</code>. Haxe allows for <code>Dynamic</code> to describe any function, but uses &quot;arrow tokens&quot; when a function signature is described specifically. For example, a function that accepts a <code>Bool</code> and returns an <code>Int</code> would be described as <code>Bool-&gt;Int</code>, and a function that accepts two boolean arguments instead would be <code>Bool-&gt;Bool-&gt;Int</code></p>
+<p>Haxe supports a special arrow token (<code>-&gt;</code>) syntax, which is used when describing a function. The ActionScript does not allow for different types based on the signature of a function. Instead, every function in ActionScript is described as type <code>Function</code>. Haxe allows for <code>Dynamic</code> to describe any function, but uses "arrow tokens" when a function signature is described specifically. For example, a function that accepts a <code>Bool</code> and returns an <code>Int</code> would be described as <code>Bool-&gt;Int</code>, and a function that accepts two boolean arguments instead would be <code>Bool-&gt;Bool-&gt;Int</code></p>
 <pre><code class="lang-haxe"><span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">onMouseDown</span> </span>(x:<span class="hljs-type">Float</span>, y:<span class="hljs-type">Float</span>):<span class="hljs-type">Void </span>{
 
 }
@@ -550,7 +550,7 @@ handler (<span class="hljs-number">100</span>, <span class="hljs-number">100</sp
 <p>The Haxe programming language is designed to limit the number of keywords, so there are a number of keywords which are in ActionScript 3.0 that are not keywords in Haxe:</p>
 <ul>
 <li><p><code>as</code></p>
-<p> In ActionScript 3.0, <code>as</code> is used for casting. Adobe references <code>cast</code> as a &quot;future&quot; keyword that has not been implemented in the language.</p>
+<p> In ActionScript 3.0, <code>as</code> is used for casting. Adobe references <code>cast</code> as a "future" keyword that has not been implemented in the language.</p>
 <pre><code class="lang-ActionScript"> <span class="hljs-keyword">var</span> clip:MovieClip = event.currentTarget <span class="hljs-keyword">as</span> MovieClip;
 </code></pre>
 <p> Haxe uses <code>cast</code> when casting between types, in order to perform a safe cast (which is slower, but throws an error if it is not possible), use parentheses:</p>
@@ -566,8 +566,8 @@ handler (<span class="hljs-number">100</span>, <span class="hljs-number">100</sp
 </code></pre>
 </li>
 <li><p><code>each</code></p>
-<p> ActionScript has separate &quot;for in&quot; or &quot;for each in&quot; loops, but in Haxe these are simplified to a single &quot;for in&quot; loop.</p>
-<pre><code class="lang-haxe"> <span class="hljs-keyword">var</span> fruits = [ <span class="hljs-string">&quot;apple&quot;</span>, <span class="hljs-string">&quot;pear&quot;</span>, <span class="hljs-string">&quot;orange&quot;</span> ];
+<p> ActionScript has separate "for in" or "for each in" loops, but in Haxe these are simplified to a single "for in" loop.</p>
+<pre><code class="lang-haxe"> <span class="hljs-keyword">var</span> fruits = [ <span class="hljs-string">"apple"</span>, <span class="hljs-string">"pear"</span>, <span class="hljs-string">"orange"</span> ];
 
  <span class="hljs-keyword">for</span> (fruit <span class="hljs-keyword">in</span> fruits) {
 
@@ -577,9 +577,9 @@ handler (<span class="hljs-number">100</span>, <span class="hljs-number">100</sp
 </code></pre>
 <p> If you need to iterate over the names of the fields in an object, use <code>Reflect.fields</code>:</p>
 <p> ```haxe
- var object = { a: &quot;b&quot;, c: &quot;d&quot; };</p>
+ var object = { a: "b", c: "d" };</p>
 <p> for (field in Reflect.fields (object)) {</p>
-<pre><code> trace (field); // returns &quot;a&quot; then &quot;c&quot;
+<pre><code> trace (field); // returns "a" then "c"
 </code></pre><p> }
  ```haxe</p>
 </li>
@@ -599,13 +599,13 @@ handler (<span class="hljs-number">100</span>, <span class="hljs-number">100</sp
 <li><p><code>instanceof</code></p>
 <p> The ActionScript 3.0 keyword, <code>instanceof</code>, can be replaced with <code>Std.is</code></p>
 <pre><code class="lang-haxe"> <span class="hljs-built_in">trace</span> (Std.<span class="hljs-keyword">is</span> (sprite, DisplayObject));
- <span class="hljs-built_in">trace</span> (Std.<span class="hljs-keyword">is</span> (<span class="hljs-string">&quot;hello&quot;</span>, <span class="hljs-keyword">String</span>));
+ <span class="hljs-built_in">trace</span> (Std.<span class="hljs-keyword">is</span> (<span class="hljs-string">"hello"</span>, <span class="hljs-keyword">String</span>));
  <span class="hljs-built_in">trace</span> (Std.<span class="hljs-keyword">is</span> (<span class="hljs-number">5</span>, <span class="hljs-keyword">Int</span>));
 </code></pre>
 </li>
 <li><p><code>internal</code></p>
 <p> Haxe has support for both <code>public</code> and <code>private</code> keywords, which are simpler to understand, and cover the majority of use cases.</p>
-<p> Haxe supports three meta-data tags (<code>@:allow</code>, <code>@:access</code> and <code>@:privateAccess</code>) which each provide different methods of accessing a <code>private</code> member. This can provide the same function as <code>internal</code>, or like &quot;friend classes&quot; in other languages.</p>
+<p> Haxe supports three meta-data tags (<code>@:allow</code>, <code>@:access</code> and <code>@:privateAccess</code>) which each provide different methods of accessing a <code>private</code> member. This can provide the same function as <code>internal</code>, or like "friend classes" in other languages.</p>
 <pre><code class="lang-haxe"> <span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">Secret</span> </span>{
 
      <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> password:<span class="hljs-type">String</span>;
@@ -628,12 +628,12 @@ handler (<span class="hljs-number">100</span>, <span class="hljs-number">100</sp
 <p> Haxe does not support custom namespaces like ActionScript 3.0.</p>
 </li>
 <li><p><code>native</code></p>
-<p> ActionScript has a <code>native</code> keyword when a method is a wrapper around a native method. Haxe has <code>extern</code> classes for working with native APIs, and depending on the platform, &quot;CFFI&quot; or &quot;JNI&quot; for accessing methods or properties between different runtime environments.</p>
+<p> ActionScript has a <code>native</code> keyword when a method is a wrapper around a native method. Haxe has <code>extern</code> classes for working with native APIs, and depending on the platform, "CFFI" or "JNI" for accessing methods or properties between different runtime environments.</p>
 <p> On HTML5, it is possible to also implement <code>untyped</code> JavaScript code directly.</p>
-<pre><code class="lang-haxe"> <span class="hljs-keyword">untyped</span> __js__ (<span class="hljs-string">&quot;window.alert (&apos;Hello!&apos;)&quot;</span>);
+<pre><code class="lang-haxe"> <span class="hljs-keyword">untyped</span> __js__ (<span class="hljs-string">"window.alert ('Hello!')"</span>);
 </code></pre>
 <p> ...extern classes tend to help provide a nicer API, however:</p>
-<pre><code class="lang-haxe"> Browser.alert (<span class="hljs-string">&quot;Hello!&quot;</span>);
+<pre><code class="lang-haxe"> Browser.alert (<span class="hljs-string">"Hello!"</span>);
 </code></pre>
 </li>
 <li><p><code>protected</code></p>
@@ -642,15 +642,15 @@ handler (<span class="hljs-number">100</span>, <span class="hljs-number">100</sp
 <li><p><code>typeof</code></p>
 <p> ActionScript 3.0 uses the <code>typeof</code> keyword to return a generic String value for the current object:</p>
 <pre><code class="lang-ActionScript"> <span class="hljs-keyword">switch</span> (<span class="hljs-keyword">typeof</span> obj) {
-     <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;boolean&quot;</span>: trace (<span class="hljs-string">&quot;obj is a boolean&quot;</span>); <span class="hljs-keyword">break</span>;
-     <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;number&quot;</span>: trace (<span class="hljs-string">&quot;obj is a number&quot;</span>); <span class="hljs-keyword">break</span>;
+     <span class="hljs-keyword">case</span> <span class="hljs-string">"boolean"</span>: trace (<span class="hljs-string">"obj is a boolean"</span>); <span class="hljs-keyword">break</span>;
+     <span class="hljs-keyword">case</span> <span class="hljs-string">"number"</span>: trace (<span class="hljs-string">"obj is a number"</span>); <span class="hljs-keyword">break</span>;
      <span class="hljs-keyword">default</span>:
  }
 </code></pre>
 <p> Haxe allows a similar check using <code>Type.typeof</code>, though it returns a static type (not a String).</p>
 <pre><code class="lang-haxe"> <span class="hljs-keyword">switch</span> (Type.typeof (obj)) {
-     <span class="hljs-keyword">case</span> TBool: <span class="hljs-type">trace </span>(<span class="hljs-string">&quot;obj is a boolean&quot;</span>);
-     <span class="hljs-keyword">case</span> TInt, TFloat: <span class="hljs-type">trace </span>(<span class="hljs-string">&quot;obj is a number&quot;</span>);
+     <span class="hljs-keyword">case</span> TBool: <span class="hljs-type">trace </span>(<span class="hljs-string">"obj is a boolean"</span>);
+     <span class="hljs-keyword">case</span> TInt, TFloat: <span class="hljs-type">trace </span>(<span class="hljs-string">"obj is a number"</span>);
      <span class="hljs-keyword">default</span>:<span class="hljs-type"></span>
  }
 </code></pre>
@@ -670,7 +670,7 @@ handler (<span class="hljs-number">100</span>, <span class="hljs-number">100</sp
  }
 </code></pre>
 <p> Haxe does not support the <code>with</code> keyword, it may make code more verbose, but it can make code simpler to understand and more reliable.</p>
-<pre><code class="lang-haxe"> <span class="hljs-keyword">var</span> clip = <span class="hljs-keyword">new</span> <span class="hljs-type">MovieClip</span> ();
+<pre><code class="lang-haxe"> <span class="hljs-keyword">var</span> clip = <span class="hljs-keyword">new</span><span class="hljs-type"></span> MovieClip ();
  clip.x = <span class="hljs-number">100</span>;
  clip.y = <span class="hljs-number">100</span>;
 </code></pre>
@@ -745,7 +745,7 @@ handler (<span class="hljs-number">100</span>, <span class="hljs-number">100</sp
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Syntax","level":"1.3.2.1","depth":3,"next":{"title":"Variables","level":"1.3.2.2","depth":3,"path":"comparing-haxe-and-actionscript/deep-dive/variables.md","ref":"comparing-haxe-and-actionscript/deep-dive/variables.md","articles":[]},"previous":{"title":"Deep Dive","level":"1.3.2","depth":2,"path":"comparing-haxe-and-actionscript/deep-dive/README.md","ref":"comparing-haxe-and-actionscript/deep-dive/README.md","articles":[{"title":"Syntax","level":"1.3.2.1","depth":3,"path":"comparing-haxe-and-actionscript/deep-dive/syntax.md","ref":"comparing-haxe-and-actionscript/deep-dive/syntax.md","articles":[]},{"title":"Variables","level":"1.3.2.2","depth":3,"path":"comparing-haxe-and-actionscript/deep-dive/variables.md","ref":"comparing-haxe-and-actionscript/deep-dive/variables.md","articles":[]},{"title":"Data Types","level":"1.3.2.3","depth":3,"path":"comparing-haxe-and-actionscript/deep-dive/data-types.md","ref":"comparing-haxe-and-actionscript/deep-dive/data-types.md","articles":[]},{"title":"Operators","level":"1.3.2.4","depth":3,"path":"comparing-haxe-and-actionscript/deep-dive/operators.md","ref":"comparing-haxe-and-actionscript/deep-dive/operators.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"OpenFL ActionScript 3.0 Conversion Guide","gitbook":"*"},"file":{"path":"comparing-haxe-and-actionscript/deep-dive/syntax.md","mtime":"2024-01-31T17:17:48.235Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-01-31T17:18:18.905Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Syntax","level":"1.3.2.1","depth":3,"next":{"title":"Variables","level":"1.3.2.2","depth":3,"path":"comparing-haxe-and-actionscript/deep-dive/variables.md","ref":"comparing-haxe-and-actionscript/deep-dive/variables.md","articles":[]},"previous":{"title":"Deep Dive","level":"1.3.2","depth":2,"path":"comparing-haxe-and-actionscript/deep-dive/README.md","ref":"comparing-haxe-and-actionscript/deep-dive/README.md","articles":[{"title":"Syntax","level":"1.3.2.1","depth":3,"path":"comparing-haxe-and-actionscript/deep-dive/syntax.md","ref":"comparing-haxe-and-actionscript/deep-dive/syntax.md","articles":[]},{"title":"Variables","level":"1.3.2.2","depth":3,"path":"comparing-haxe-and-actionscript/deep-dive/variables.md","ref":"comparing-haxe-and-actionscript/deep-dive/variables.md","articles":[]},{"title":"Data Types","level":"1.3.2.3","depth":3,"path":"comparing-haxe-and-actionscript/deep-dive/data-types.md","ref":"comparing-haxe-and-actionscript/deep-dive/data-types.md","articles":[]},{"title":"Operators","level":"1.3.2.4","depth":3,"path":"comparing-haxe-and-actionscript/deep-dive/operators.md","ref":"comparing-haxe-and-actionscript/deep-dive/operators.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"OpenFL ActionScript 3.0 Conversion Guide","gitbook":"*"},"file":{"path":"comparing-haxe-and-actionscript/deep-dive/syntax.md","mtime":"2024-10-11T20:23:02.205Z","type":"markdown"},"gitbook":{"version":"6.0.1","time":"2024-10-11T20:23:47.505Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -815,7 +815,7 @@ handler (<span class="hljs-number">100</span>, <span class="hljs-number">100</sp
         
     
         
-        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        <script src="../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
         
     
 
