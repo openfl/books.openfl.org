@@ -56,6 +56,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="web-service-requests.html" />
+    
     
     <link rel="prev" href="./" />
     
@@ -915,6 +917,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.6.8" data-path="../working-with-bitmaps/working-with-bitmap-assets.html">
+            
+                <a href="../working-with-bitmaps/working-with-bitmap-assets.html">
+            
+                    
+                    Working with bitmap assets
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1089,6 +1104,19 @@
             
                     
                     Working with static text
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../working-with-bitmaps/working-with-font-assets.md">
+            
+                <span>
+            
+                    
+                    Working with font assets
             
                 </a>
             
@@ -1644,6 +1672,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.16.2" data-path="../working-with-bitmaps/working-with-byte-array-assets.md">
+            
+                <span>
+            
+                    
+                    Working with byte array assets
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1673,6 +1714,64 @@
                 </a>
             
 
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2" data-path="web-service-requests.html">
+            
+                <a href="web-service-requests.html">
+            
+                    
+                    Web service requests
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.2.1" data-path="rest-style-web-service-requests.html">
+            
+                <a href="rest-style-web-service-requests.html">
+            
+                    
+                    REST-style web service requests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2.2" data-path="xml-rpc-web-service-requests.html">
+            
+                <a href="xml-rpc-web-service-requests.html">
+            
+                    
+                    XML-RPC web service requests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2.3" data-path="soap-web-service-requests.html">
+            
+                <a href="soap-web-service-requests.html">
+            
+                    
+                    SOAP web service requests
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -1791,19 +1890,15 @@ class.</p>
 <td>Specifies whether authentication requests should be handled (<code>true</code>) for this request. The default is to authenticate requests—which may cause an authentication dialog box to be displayed if the server requires credentials. You can also set the user name and password using the URLRequestDefaults class—see <a href="#setting-urlrequest-defaults">Setting URLRequest defaults</a>.</td>
 </tr>
 <tr>
-<td>cacheResponse</td>
-<td>Specifies whether response data should be cached for this request. The default is to cache the response (<code>true</code>).</td>
-</tr>
-<tr>
-<td>useCache</td>
-<td>Specifies whether the local cache should be consulted before this URLRequest fetches data. The default (<code>true</code>) is to use the local cached version, if available.</td>
-</tr>
-<tr>
 <td>userAgent</td>
 <td>Specifies the user-agent string to be used in the HTTP request.</td>
 </tr>
 </tbody>
 </table>
+<!--
+| cacheResponse   | Specifies whether response data should be cached for this request. The default is to cache the response (`true`).                                                                                                                                                                                                                                                               |
+| useCache        | Specifies whether the local cache should be consulted before this URLRequest fetches data. The default (`true`) is to use the local cached version, if available.                                                                                                                                                                                                               |
+-->
 <h3 id="setting-urlrequest-defaults">Setting URLRequest defaults</h3>
 <p>The URLRequestDefaults class lets you define application-specific default
 settings for URLRequest objects. For example, the following code sets the
@@ -2244,10 +2339,14 @@ welcomeMessage=<span class="hljs-meta">&lt;?=</span><span class="hljs-title func
 
             
                 
-                <a href="./" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Chapter 44: HTTP communications">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Chapter 44: HTTP communications">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="web-service-requests.html" class="navigation navigation-next " aria-label="Next page: Web service requests">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -2256,7 +2355,7 @@ welcomeMessage=<span class="hljs-meta">&lt;?=</span><span class="hljs-title func
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Loading external data","level":"1.17.1","depth":2,"previous":{"title":"Chapter 44: HTTP communications","level":"1.17","depth":1,"path":"http-communications/README.md","ref":"http-communications/README.md","articles":[{"title":"Loading external data","level":"1.17.1","depth":2,"path":"http-communications/loading-external-data.md","ref":"http-communications/loading-external-data.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"OpenFL Developer's Guide","gitbook":"*"},"file":{"path":"http-communications/loading-external-data.md","mtime":"2024-10-11T20:23:01.021Z","type":"markdown"},"gitbook":{"version":"6.0.1","time":"2024-10-11T20:23:29.023Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Loading external data","level":"1.17.1","depth":2,"next":{"title":"Web service requests","level":"1.17.2","depth":2,"path":"http-communications/web-service-requests.md","ref":"http-communications/web-service-requests.md","articles":[{"title":"REST-style web service requests","level":"1.17.2.1","depth":3,"path":"http-communications/rest-style-web-service-requests.md","ref":"http-communications/rest-style-web-service-requests.md","articles":[]},{"title":"XML-RPC web service requests","level":"1.17.2.2","depth":3,"path":"http-communications/xml-rpc-web-service-requests.md","ref":"http-communications/xml-rpc-web-service-requests.md","articles":[]},{"title":"SOAP web service requests","level":"1.17.2.3","depth":3,"path":"http-communications/soap-web-service-requests.md","ref":"http-communications/soap-web-service-requests.md","articles":[]}]},"previous":{"title":"Chapter 44: HTTP communications","level":"1.17","depth":1,"path":"http-communications/README.md","ref":"http-communications/README.md","articles":[{"title":"Loading external data","level":"1.17.1","depth":2,"path":"http-communications/loading-external-data.md","ref":"http-communications/loading-external-data.md","articles":[]},{"title":"Web service requests","level":"1.17.2","depth":2,"path":"http-communications/web-service-requests.md","ref":"http-communications/web-service-requests.md","articles":[{"title":"REST-style web service requests","level":"1.17.2.1","depth":3,"path":"http-communications/rest-style-web-service-requests.md","ref":"http-communications/rest-style-web-service-requests.md","articles":[]},{"title":"XML-RPC web service requests","level":"1.17.2.2","depth":3,"path":"http-communications/xml-rpc-web-service-requests.md","ref":"http-communications/xml-rpc-web-service-requests.md","articles":[]},{"title":"SOAP web service requests","level":"1.17.2.3","depth":3,"path":"http-communications/soap-web-service-requests.md","ref":"http-communications/soap-web-service-requests.md","articles":[]}]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"OpenFL Developer's Guide","gitbook":"*"},"file":{"path":"http-communications/loading-external-data.md","mtime":"2024-10-11T22:03:52.904Z","type":"markdown"},"gitbook":{"version":"6.0.1","time":"2024-10-11T22:04:02.419Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
