@@ -8,24 +8,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - uses: actions/checkout@v2
-        with:
-          submodules: true
+      - uses: actions/checkout@v4
       
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           repository: openfl/OpenFLDevelopersGuide
           path: OpenFLDevelopersGuide
       
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           repository: openfl/AS3ConversionGuide
           path: AS3ConversionGuide
 
       - name: Build
         run: |
-          npx honkit build OpenFLDevelopersGuide
-          npx honkit build AS3ConversionGuide
+          npx honkit@6 build OpenFLDevelopersGuide
+          npx honkit@6 build AS3ConversionGuide
       
       - name: Prepare deploy
         run: |
