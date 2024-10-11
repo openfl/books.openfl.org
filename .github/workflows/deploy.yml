@@ -1,5 +1,6 @@
-name: Deploy
-on: [push]
+name: Build & Deploy
+
+on: [push, pull_request]
 
 jobs:
   deploy:
@@ -38,6 +39,7 @@ jobs:
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.repository == 'openfl/books.openfl.org' && github.ref == 'refs/heads/master' && github.event_name != 'pull_request' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./deploy
