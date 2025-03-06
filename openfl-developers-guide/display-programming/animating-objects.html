@@ -1830,40 +1830,47 @@
 <p>The fundamental idea behind scripted animation is that a change needs to take place, and that change needs to be divided into increments over time. It’s easy to make something repeat in Haxe, using a common looping statement. However, a loop will run through all its iterations before updating the display. To create scripted animation, you need to write Haxe that performs some action repeatedly over time and also updates the screen each time it runs.</p>
 <p>For example, imagine you want to create a simple animation, such as making a ball travel across the screen. Haxe includes a simple mechanism that allows you to track the passage of time and update the screen accordingly—meaning you could write code that moves the ball a small amount each time, until it reaches its destination. After each move the screen would update, making the cross-Stage motion visible to the viewer.</p>
 <p>From a practical standpoint, it makes sense to synchronize scripted animation with the project’s frame rate (in other words, make one animation change each time a new frame displays or would display), since that defines how frequently OpenFL updates the screen. Each display object has an enterFrame event that is dispatched according to the frame rate of the project—one event per frame. Most developers who create scripted animation use the enterFrame event as a way to create actions that repeat over time. You could write code that listens to the enterFrame event, moving the animated ball a certain amount each frame, and as the screen is updated (each frame), the ball would be redrawn in its new location, creating motion.</p>
-<p><strong><em>Note:</em></strong> <em>Another way to perform an action repeatedly over time is to use the Timer class. A Timer instance triggers an event notification each time a specified amount of time has past. You could write code that performs animation by handling the Timer class’s timer event, setting the time interval to a small one (some fraction of a second). For more information about using the Timer class, see</em></p>
-<p><em>"Controlling time intervals" on page 4</em></p>
-<p><em>.</em></p>
+<p><strong><em>Note:</em></strong> _Another way to perform an action repeatedly over time is to use the Timer class. A Timer instance triggers an event notification each time a specified amount of time has past. You could write code that performs animation by handling the Timer class’s timer event, setting the time interval to a small one (some fraction of a second).</p>
 <p>In the following example, a circle Sprite instance, named circle, is created on the Stage. When the user clicks the circle, a scripted animation sequence begins, causing circle to fade (its alpha property is decreased) until it is completely transparent:</p>
-<p>import openfl.display.Sprite;
-import openfl.events.Event;
-import openfl.events.MouseEvent;</p>
-<p>// draw a circle and add it to the display list
-var circle:Sprite = new Sprite();
-circle.graphics.beginFill(0x990000);
-circle.graphics.drawCircle(50, 50, 50);
-circle.graphics.endFill();</p>
-<p>addChild(circle);</p>
-<p>// When this animation starts, this function is called every frame.</p>
-<p>// The change made by this function (updated to the screen every</p>
-<p>// frame) is what causes the animation to occur.</p>
-<p>function fadeCircle(event:Event):void</p>
-<p>{</p>
-<p>circle.alpha -= .05;</p>
-<p>if (circle.alpha &lt;= 0)</p>
-<p>{</p>
-<p>circle.removeEventListener(Event.ENTER_FRAME, fadeCircle);</p>
-<p>}</p>
-<p>}</p>
-<p>function startAnimation(event:MouseEvent):void</p>
-<p>{</p>
-<p>circle.addEventListener(Event.ENTER_FRAME, fadeCircle);</p>
-<p>}</p>
-<p>circle.addEventListener(MouseEvent.CLICK, startAnimation);</p>
+<pre><code class="lang-haxe"><span class="hljs-keyword">import</span> openfl.display.Sprite;
+<span class="hljs-keyword">import</span> openfl.events.Event;
+<span class="hljs-keyword">import</span> openfl.events.MouseEvent;
+
+<span class="hljs-comment">// draw a circle and add it to the display list</span>
+<span class="hljs-keyword">var</span> circle:<span class="hljs-type">Sprite </span>= <span class="hljs-keyword">new</span><span class="hljs-type"></span> Sprite();
+circle.graphics.beginFill(<span class="hljs-number">0x990000</span>);
+circle.graphics.drawCircle(<span class="hljs-number">50</span>, <span class="hljs-number">50</span>, <span class="hljs-number">50</span>);
+circle.graphics.endFill();
+
+addChild(circle);
+
+<span class="hljs-comment">// When this animation starts, this function is called every frame.</span>
+<span class="hljs-comment">// The change made by this function (updated to the screen every</span>
+<span class="hljs-comment">// frame) is what causes the animation to occur.</span>
+
+<span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">fadeCircle</span></span>(event:<span class="hljs-type">Event</span>):<span class="hljs-type">Void</span>
+{
+    circle.alpha -= <span class="hljs-number">.05</span>;
+    <span class="hljs-keyword">if</span> (circle.alpha &lt;= <span class="hljs-number">0</span>)
+    {
+        circle.removeEventListener(Event.ENTER_FRAME, fadeCircle);
+    }
+}
+
+<span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">startAnimation</span></span>(event:<span class="hljs-type">MouseEvent</span>):<span class="hljs-type">Void</span>
+{
+    circle.addEventListener(Event.ENTER_FRAME, fadeCircle);
+}
+
+circle.addEventListener(MouseEvent.CLICK, startAnimation);
+</code></pre>
 <p>When the user clicks the circle, the function fadeCircle() is subscribed as a listener of the enterFrame event, meaning it begins to be called once per frame. That function fades circle by changing its alpha property, so once per frame the circle’s alpha decreases by .05 (5 percent) and the screen is updated. Eventually, when the alpha value is 0 (circle is completely transparent), the fadeCircle() function is removed as an event listener, ending the animation.</p>
 <p>The same code could be used, for example, to create animated motion instead of fading. By substituting a different property for alpha in the function that is an enterFrame event listener, that property will be animated instead. For example, changing this line</p>
-<p>circle.alpha -= .05;</p>
+<pre><code class="lang-haxe">circle.alpha -= <span class="hljs-number">.05</span>;
+</code></pre>
 <p>to this code</p>
-<p>circle.x += 5;</p>
+<pre><code class="lang-haxe">circle.x += <span class="hljs-number">5</span>;
+</code></pre>
 <p>will animate the x property, causing the circle to move to the right across the Stage. The condition that ends the animation could be changed to end the animation (that is, unsubscribe the enterFrame listener) when the desired x coordinate is reached.</p>
 
                                 
@@ -1908,7 +1915,7 @@ circle.graphics.endFill();</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Animating objects","level":"1.3.6","depth":2,"next":{"title":"Loading display content dynamically","level":"1.3.7","depth":2,"path":"display-programming/loading-display-content-dynamically/README.md","ref":"display-programming/loading-display-content-dynamically/README.md","articles":[{"title":"Loading display objects","level":"1.3.7.1","depth":3,"path":"display-programming/loading-display-content-dynamically/loading-display-objects.md","ref":"display-programming/loading-display-content-dynamically/loading-display-objects.md","articles":[]},{"title":"Monitoring loading progress","level":"1.3.7.2","depth":3,"path":"display-programming/loading-display-content-dynamically/monitoring-loading-progress.md","ref":"display-programming/loading-display-content-dynamically/monitoring-loading-progress.md","articles":[]},{"title":"Specifying loading context","level":"1.3.7.3","depth":3,"path":"display-programming/loading-display-content-dynamically/specifying-loading-context.md","ref":"display-programming/loading-display-content-dynamically/specifying-loading-context.md","articles":[]}]},"previous":{"title":"Masking display objects","level":"1.3.5.10","depth":3,"path":"display-programming/manipulating-display-objects/masking-display-objects.md","ref":"display-programming/manipulating-display-objects/masking-display-objects.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"OpenFL Developer's Guide","gitbook":"*"},"file":{"path":"display-programming/animating-objects.md","mtime":"2025-01-02T17:27:05.239Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2025-01-02T17:27:17.104Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Animating objects","level":"1.3.6","depth":2,"next":{"title":"Loading display content dynamically","level":"1.3.7","depth":2,"path":"display-programming/loading-display-content-dynamically/README.md","ref":"display-programming/loading-display-content-dynamically/README.md","articles":[{"title":"Loading display objects","level":"1.3.7.1","depth":3,"path":"display-programming/loading-display-content-dynamically/loading-display-objects.md","ref":"display-programming/loading-display-content-dynamically/loading-display-objects.md","articles":[]},{"title":"Monitoring loading progress","level":"1.3.7.2","depth":3,"path":"display-programming/loading-display-content-dynamically/monitoring-loading-progress.md","ref":"display-programming/loading-display-content-dynamically/monitoring-loading-progress.md","articles":[]},{"title":"Specifying loading context","level":"1.3.7.3","depth":3,"path":"display-programming/loading-display-content-dynamically/specifying-loading-context.md","ref":"display-programming/loading-display-content-dynamically/specifying-loading-context.md","articles":[]}]},"previous":{"title":"Masking display objects","level":"1.3.5.10","depth":3,"path":"display-programming/manipulating-display-objects/masking-display-objects.md","ref":"display-programming/manipulating-display-objects/masking-display-objects.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"OpenFL Developer's Guide","gitbook":"*"},"file":{"path":"display-programming/animating-objects.md","mtime":"2025-03-06T16:21:14.629Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2025-03-06T16:21:26.419Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
