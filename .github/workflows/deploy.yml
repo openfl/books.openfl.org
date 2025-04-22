@@ -19,19 +19,27 @@ jobs:
         with:
           repository: openfl/AS3ConversionGuide
           path: AS3ConversionGuide
+      
+      - uses: actions/checkout@v4
+        with:
+          repository: openfl/starling-manual
+          path: StarlingManual
 
       - name: Build
         run: |
           npx honkit@6 build OpenFLDevelopersGuide
           npx honkit@6 build AS3ConversionGuide
+          npx honkit@6 build StarlingManual
       
       - name: Prepare deploy
         run: |
           mkdir deploy
           mkdir deploy/openfl-developers-guide
           mkdir deploy/as3-conversion-guide
+          mkdir deploy/starling-manual
           cp -r OpenFLDevelopersGuide/_book/* deploy/openfl-developers-guide
           cp -r AS3ConversionGuide/_book/* deploy/as3-conversion-guide
+          cp -r StarlingManual/_book/* deploy/starling-manual
           cp index.html deploy/index.html
           cp CNAME deploy/CNAME
 
