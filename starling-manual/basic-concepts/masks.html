@@ -1,0 +1,927 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Masks · The Starling Manual for OpenFL</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="sprite3d.html" />
+    
+    
+    <link rel="prev" href="meshes.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../getting-started/">
+            
+                <a href="../getting-started/">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../getting-started/introduction.html">
+            
+                <a href="../getting-started/introduction.html">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../getting-started/what-is-openfl.html">
+            
+                <a href="../getting-started/what-is-openfl.html">
+            
+                    
+                    What is OpenFL?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../getting-started/what-is-starling.html">
+            
+                <a href="../getting-started/what-is-starling.html">
+            
+                    
+                    What is Starling?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../getting-started/choosing-an-ide.html">
+            
+                <a href="../getting-started/choosing-an-ide.html">
+            
+                    
+                    Choosing an IDE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../getting-started/resources.html">
+            
+                <a href="../getting-started/resources.html">
+            
+                    
+                    Resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../getting-started/hello-world.html">
+            
+                <a href="../getting-started/hello-world.html">
+            
+                    
+                    Hello World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../getting-started/summary.html">
+            
+                <a href="../getting-started/summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="configuring-starling.html">
+            
+                <a href="configuring-starling.html">
+            
+                    
+                    Configuring Starling
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="configuring-starling.html">
+            
+                <a href="configuring-starling.html">
+            
+                    
+                    Configuring Starling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="display-programming.html">
+            
+                <a href="display-programming.html">
+            
+                    
+                    Display Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="textures-and-images.html">
+            
+                <a href="textures-and-images.html">
+            
+                    
+                    Textures & Images
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="dynamic-text.html">
+            
+                <a href="dynamic-text.html">
+            
+                    
+                    Dynamic Text
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="event-handling.html">
+            
+                <a href="event-handling.html">
+            
+                    
+                    Event Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="animations.html">
+            
+                <a href="animations.html">
+            
+                    
+                    Animations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="asset-management.html">
+            
+                <a href="asset-management.html">
+            
+                    
+                    Asset Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="fragment-filters.html">
+            
+                <a href="fragment-filters.html">
+            
+                    
+                    Fragment Filters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="meshes.html">
+            
+                <a href="meshes.html">
+            
+                    
+                    Meshes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.10" data-path="masks.html">
+            
+                <a href="masks.html">
+            
+                    
+                    Masks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="sprite3d.html">
+            
+                <a href="sprite3d.html">
+            
+                    
+                    Sprite3D
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="utilities.html">
+            
+                <a href="utilities.html">
+            
+                    
+                    Utilities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="summary.html">
+            
+                <a href="summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../advanced-topics/">
+            
+                <a href="../advanced-topics/">
+            
+                    
+                    Advanced Topics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../advanced-topics/atf-textures.html">
+            
+                <a href="../advanced-topics/atf-textures.html">
+            
+                    
+                    ATF Textures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../advanced-topics/context-loss.html">
+            
+                <a href="../advanced-topics/context-loss.html">
+            
+                    
+                    Context Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../advanced-topics/memory-management.html">
+            
+                <a href="../advanced-topics/memory-management.html">
+            
+                    
+                    Memory Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../advanced-topics/performance-optimization.html">
+            
+                <a href="../advanced-topics/performance-optimization.html">
+            
+                    
+                    Performance Optimization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../advanced-topics/custom-filters.html">
+            
+                <a href="../advanced-topics/custom-filters.html">
+            
+                    
+                    Custom Filters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../advanced-topics/custom-styles.html">
+            
+                <a href="../advanced-topics/custom-styles.html">
+            
+                    
+                    Custom Styles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../advanced-topics/distance-field-rendering.html">
+            
+                <a href="../advanced-topics/distance-field-rendering.html">
+            
+                    
+                    Distance Field Rendering
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../advanced-topics/summary.html">
+            
+                <a href="../advanced-topics/summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../mobile-development/">
+            
+                <a href="../mobile-development/">
+            
+                    
+                    Mobile Development
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../mobile-development/multi-resolution-development.html">
+            
+                <a href="../mobile-development/multi-resolution-development.html">
+            
+                    
+                    Multi-Resolution Development
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../mobile-development/device-rotation.html">
+            
+                <a href="../mobile-development/device-rotation.html">
+            
+                    
+                    Device Rotation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../mobile-development/summary.html">
+            
+                <a href="../mobile-development/summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../final-words.html">
+            
+                <a href="../final-words.html">
+            
+                    
+                    Final Words
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Masks</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div class="sect1">
+<h2 id="_masks">Masks</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Masks can be used to cut away parts of a display object.
+Think of a mask as a "hole" through which you can look at the contents of another display object.
+That hole can have an arbitrary shape.</p>
+</div>
+<div class="paragraph">
+<p>If you’ve used the "mask" property of the classic display list, you’ll feel right at home with this feature.
+Just assign a display object to the new mask property, as shown below.
+Any display object can act as a mask, and it may or may not be part of the display list.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-keyword">var</span> sprite:<span class="hljs-type">Sprite </span>= createSprite();
+<span class="hljs-keyword">var</span> mask:<span class="hljs-type">Quad </span>= <span class="hljs-keyword">new</span><span class="hljs-type"></span> Quad(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>);
+mask.x = mask.y = <span class="hljs-number">50</span>;
+sprite.mask = mask; <span class="hljs-comment">// ← use the quad as a mask</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This will yield the following result:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/mask-rectangular.png" alt="Rectangular Mask"></img>
+</div>
+<div class="title">Figure 1. Using a rectangular mask.</div>
+</div>
+<div class="paragraph">
+<p>The logic behind masks is simple: a pixel of a masked object will only be drawn if it is within the mask’s polygons.
+This is crucial: the shape of the mask is defined by its polygons — not its texture!
+Thus, such a mask is purely binary: a pixel is either visible, or it is not.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="title">Masks and Stage3D</div>
+<div class="paragraph">
+<p>For masks to work in Stage3D, you will need to activate the stencil buffer in the Lime <em>project.xml</em> configuration file.
+Add the following setting to the <code>window</code> element:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml"><span class="hljs-tag">&lt;<span class="hljs-name">window</span> <span class="hljs-attr">stencil-buffer</span>=<span class="hljs-string">"true"</span>/&gt;</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>But don’t worry, Starling will print a warning to the console if you forget to do so.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_canvas_and_polygon">Canvas and Polygon</h3>
+<div class="paragraph">
+<p>"This mask feature looks really nice", you might say, "but how the heck am I going to create those arbitrary shapes you were talking about?!"
+Well, I’m glad you ask!</p>
+</div>
+<div class="paragraph">
+<p>Indeed: since masks rely purely on geometry, not on any textures, you need a way to draw your mask-shapes.
+In a funny coincidence, there are actually two classes that can help you with exactly this task: <em>Canvas</em> and <em>Polygon</em>.
+They go hand-in-hand with stencil masks.</p>
+</div>
+<div class="paragraph">
+<p>The API of the Canvas class is similar to OpenFL’s <em>Graphics</em> object.
+This will e.g. draw a red circle:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-keyword">var</span> canvas:<span class="hljs-type">Canvas </span>= <span class="hljs-keyword">new</span><span class="hljs-type"></span> Canvas();
+canvas.beginFill(<span class="hljs-number">0xff0000</span>);
+canvas.drawCircle(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">120</span>);
+canvas.endFill();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>There are also methods to draw an ellipse, a rectangle or an arbitrary polygon.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Other than those basic methods, the <em>Canvas</em> class is rather limited; don’t expect a full-blown alternative to the <em>Graphics</em> class just yet.
+This might change in a future release, though!
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>That brings us to the <em>Polygon</em> class.
+A <em>Polygon</em> (package <code>starling.geom</code>) describes a closed shape defined by a number of straight line segments.
+It’s a spiritual successor of OpenFL’s <em>Rectangle</em> class, but supporting (mostly) arbitrary shapes.</p>
+</div>
+<div class="paragraph">
+<p>Since <em>Canvas</em> contains direct support for polygon objects, it’s the ideal companion of <em>Polygon</em>.
+This pair of classes will solve all your mask-related needs.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-keyword">var</span> polygon:<span class="hljs-type">Polygon </span>= <span class="hljs-keyword">new</span><span class="hljs-type"></span> Polygon(); (<span class="hljs-number">1</span>)
+polygon.addVertices(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,  <span class="hljs-number">100</span>,<span class="hljs-number">0</span>,  <span class="hljs-number">0</span>,<span class="hljs-number">100</span>);
+
+<span class="hljs-keyword">var</span> canvas:<span class="hljs-type">Canvas </span>= <span class="hljs-keyword">new</span><span class="hljs-type"></span> Canvas();
+canvas.beginFill(<span class="hljs-number">0xff0000</span>);
+canvas.drawPolygon(polygon); (<span class="hljs-number">2</span>)
+canvas.endFill();</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>This polygon describes a triangle.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Draw the triangle to a canvas.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>There are a few more things about masks I want to note:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Visibility</dt>
+<dd>
+<p>The mask itself is never visible.
+You always only see it indirectly via its effect on the masked display object.</p>
+</dd>
+<dt class="hdlist1">Positioning</dt>
+<dd>
+<p>If the mask is not part of the display list (i.e. it has no parent), it will be drawn in the local coordinate system of the masked object: if you move the object, the mask will follow.
+If the mask <em>is</em> part of the display list, its location will be calculated just as usual.
+Depending on the situation, you might prefer one or the other behavior.</p>
+</dd>
+<dt class="hdlist1">Stencil Buffer</dt>
+<dd>
+<p>Behind the scenes, masks use the <em>stencil buffer</em> of the GPU, making them very lightweight and fast.
+One mask requires two draw calls: one to draw the mask into the stencil buffer and one to remove it when all the masked content has been rendered.</p>
+</dd>
+<dt class="hdlist1">Scissor Rectangle</dt>
+<dd>
+<p>If the mask is an untextured <em>Quad</em> parallel to the stage axes, Starling can optimize its rendering.
+Instead of the <em>stencil buffer</em>, it will then use the <em>scissor rectangle</em> — sparing you one draw call.</p>
+</dd>
+<dt class="hdlist1">Texture Masks</dt>
+<dd>
+<p>If a simple vector shape just doesn’t cut it, there is an extension that allows you to use the alpha channel of a texture as a stencil mask.
+It’s called <em>Texture Mask</em> and is found in the <a href="https://github.com/CrazyFlasher/starling-extensions-hx/blob/master/src/starling/extensions/TextureMaskStyle.hx" target="_blank">Starling Wiki</a>.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="meshes.html" class="navigation navigation-prev " aria-label="Previous page: Meshes">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="sprite3d.html" class="navigation navigation-next " aria-label="Next page: Sprite3D">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Masks","level":"1.3.10","depth":2,"next":{"title":"Sprite3D","level":"1.3.11","depth":2,"path":"basic-concepts/sprite3d.adoc","ref":"basic-concepts/sprite3d.adoc","articles":[]},"previous":{"title":"Meshes","level":"1.3.9","depth":2,"path":"basic-concepts/meshes.adoc","ref":"basic-concepts/meshes.adoc","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"The Starling Manual for OpenFL","gitbook":"*"},"file":{"path":"basic-concepts/masks.adoc","mtime":"2025-04-22T18:15:20.806Z","type":"asciidoc"},"gitbook":{"version":"6.0.2","time":"2025-04-22T18:15:54.007Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

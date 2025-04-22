@@ -1,0 +1,1077 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Context Loss · The Starling Manual for OpenFL</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="memory-management.html" />
+    
+    
+    <link rel="prev" href="atf-textures.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../getting-started/">
+            
+                <a href="../getting-started/">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../getting-started/introduction.html">
+            
+                <a href="../getting-started/introduction.html">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../getting-started/what-is-openfl.html">
+            
+                <a href="../getting-started/what-is-openfl.html">
+            
+                    
+                    What is OpenFL?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../getting-started/what-is-starling.html">
+            
+                <a href="../getting-started/what-is-starling.html">
+            
+                    
+                    What is Starling?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../getting-started/choosing-an-ide.html">
+            
+                <a href="../getting-started/choosing-an-ide.html">
+            
+                    
+                    Choosing an IDE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../getting-started/resources.html">
+            
+                <a href="../getting-started/resources.html">
+            
+                    
+                    Resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../getting-started/hello-world.html">
+            
+                <a href="../getting-started/hello-world.html">
+            
+                    
+                    Hello World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../getting-started/summary.html">
+            
+                <a href="../getting-started/summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../basic-concepts/configuring-starling.html">
+            
+                <a href="../basic-concepts/configuring-starling.html">
+            
+                    
+                    Configuring Starling
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../basic-concepts/configuring-starling.html">
+            
+                <a href="../basic-concepts/configuring-starling.html">
+            
+                    
+                    Configuring Starling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../basic-concepts/display-programming.html">
+            
+                <a href="../basic-concepts/display-programming.html">
+            
+                    
+                    Display Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../basic-concepts/textures-and-images.html">
+            
+                <a href="../basic-concepts/textures-and-images.html">
+            
+                    
+                    Textures & Images
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../basic-concepts/dynamic-text.html">
+            
+                <a href="../basic-concepts/dynamic-text.html">
+            
+                    
+                    Dynamic Text
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../basic-concepts/event-handling.html">
+            
+                <a href="../basic-concepts/event-handling.html">
+            
+                    
+                    Event Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../basic-concepts/animations.html">
+            
+                <a href="../basic-concepts/animations.html">
+            
+                    
+                    Animations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../basic-concepts/asset-management.html">
+            
+                <a href="../basic-concepts/asset-management.html">
+            
+                    
+                    Asset Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../basic-concepts/fragment-filters.html">
+            
+                <a href="../basic-concepts/fragment-filters.html">
+            
+                    
+                    Fragment Filters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../basic-concepts/meshes.html">
+            
+                <a href="../basic-concepts/meshes.html">
+            
+                    
+                    Meshes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../basic-concepts/masks.html">
+            
+                <a href="../basic-concepts/masks.html">
+            
+                    
+                    Masks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../basic-concepts/sprite3d.html">
+            
+                <a href="../basic-concepts/sprite3d.html">
+            
+                    
+                    Sprite3D
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../basic-concepts/utilities.html">
+            
+                <a href="../basic-concepts/utilities.html">
+            
+                    
+                    Utilities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../basic-concepts/summary.html">
+            
+                <a href="../basic-concepts/summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Advanced Topics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="atf-textures.html">
+            
+                <a href="atf-textures.html">
+            
+                    
+                    ATF Textures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2" data-path="context-loss.html">
+            
+                <a href="context-loss.html">
+            
+                    
+                    Context Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="memory-management.html">
+            
+                <a href="memory-management.html">
+            
+                    
+                    Memory Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="performance-optimization.html">
+            
+                <a href="performance-optimization.html">
+            
+                    
+                    Performance Optimization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="custom-filters.html">
+            
+                <a href="custom-filters.html">
+            
+                    
+                    Custom Filters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="custom-styles.html">
+            
+                <a href="custom-styles.html">
+            
+                    
+                    Custom Styles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="distance-field-rendering.html">
+            
+                <a href="distance-field-rendering.html">
+            
+                    
+                    Distance Field Rendering
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="summary.html">
+            
+                <a href="summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../mobile-development/">
+            
+                <a href="../mobile-development/">
+            
+                    
+                    Mobile Development
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../mobile-development/multi-resolution-development.html">
+            
+                <a href="../mobile-development/multi-resolution-development.html">
+            
+                    
+                    Multi-Resolution Development
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../mobile-development/device-rotation.html">
+            
+                <a href="../mobile-development/device-rotation.html">
+            
+                    
+                    Device Rotation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../mobile-development/summary.html">
+            
+                <a href="../mobile-development/summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../final-words.html">
+            
+                <a href="../final-words.html">
+            
+                    
+                    Final Words
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Context Loss</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div class="sect1">
+<h2 id="_context_loss">Context Loss</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>All Stage3D rendering happens through a so called "render context" (an instance of the <em>Context3D</em> class).
+It stores all current settings of the GPU, like the list of active textures, pointers to the vertex data, etc.
+The render context is your connection to the GPU — without it, you can’t do any Stage3D rendering.</p>
+</div>
+<div class="paragraph">
+<p>And here comes the problem: that context can sometimes get lost.
+This means that you lose references to all data that was stored in graphics memory; most notably: textures.</p>
+</div>
+<div class="paragraph">
+<p>Such a context loss doesn’t happen equally frequently on all systems; it’s rare on <em>iOS</em> and <em>macOS</em>, happens from time to time on <em>Windows</em> and very often on <em>Android</em> (rotating the screen? Bam!).
+So there’s no way around it: we need to expect the worst and prepare for a context loss.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title">How to trigger a context loss</div>
+<div class="paragraph">
+<p>There is an easy way to check if your application can handle a context loss: simply dispose the current context via <code>Starling.context.dispose()</code>.
+It will immediately be recreated, which is just what happens after the real thing.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_default_behavior">Default Behavior</h3>
+<div class="paragraph">
+<p>When Starling recognizes that the current render context has been lost, it initiates the following procedures:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Starling will automatically create a new context and initialize it with the same settings as before.</p>
+</li>
+<li>
+<p>All vertex- and index buffers will be restored.</p>
+</li>
+<li>
+<p>All vertex- and fragment programs (shaders) will be recompiled.</p>
+</li>
+<li>
+<p>Textures will be restored by whatever means possible (from memory/disk/etc.)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Restoring buffers and programs is not problematic; Starling has all data that’s required and it doesn’t take much time.
+Textures, however, are a headache.
+To illustrate that, let’s look at the worst case example: a texture created from an embedded bitmap.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe">[Embed(source=<span class="hljs-string">"hero.png"</span>)]
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Hero:<span class="hljs-type">Class</span>;
+
+<span class="hljs-keyword">var</span> bitmap:<span class="hljs-type">Bitmap </span>= <span class="hljs-keyword">new</span><span class="hljs-type"></span> Hero();
+<span class="hljs-keyword">var</span> texture:<span class="hljs-type">Texture </span>= Texture.fromBitmap(bitmap);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The moment you call <code>Texture.fromBitmap</code>, the bitmap is uploaded to GPU memory, which means it’s now part of the context.
+If we could rely on the context staying alive forever, we’d be done now.</p>
+</div>
+<div class="paragraph">
+<p>However, we <em>cannot</em> rely on that: the texture data could be lost anytime.
+That’s why Starling will keep a copy of the original bitmap.
+When the worst happens, it will use it to recreate the texture.
+All of that happens behind the scenes.</p>
+</div>
+<div class="paragraph">
+<p>Lo and behold!
+That means that the texture is in memory three times.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The "Hero" class (conventional memory)</p>
+</li>
+<li>
+<p>The backup bitmap (conventional memory)</p>
+</li>
+<li>
+<p>The texture (graphics memory)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Given the tight memory constraints we’re facing on mobile, this is a catastrophe.
+You don’t want this to happen!</p>
+</div>
+<div class="paragraph">
+<p>It becomes a little better if you change your code slightly:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-comment">// use the 'fromEmbeddedAsset' method instead</span>
+<span class="hljs-keyword">var</span> texture:<span class="hljs-type">Texture </span>= Texture.fromEmbeddedAsset(Hero);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>That way, Starling can recreate the texture directly from the embedded class (calling <code>new Hero()</code>), which means that the texture is in memory only two times.
+For embedded assets, that’s your best bet.</p>
+</div>
+<div class="paragraph">
+<p>Ideally, though, we want to have the texture in memory only once.
+For this to happen, you must not embed the asset; instead, you need to load it from an URL that points to a local or remote file.
+That way, only the URL needs to be stored; the actual data can then be reloaded from the original location.</p>
+</div>
+<div class="paragraph">
+<p>There are two ways to make this happen:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Use the <em>AssetManager</em> to load your textures.</p>
+</li>
+<li>
+<p>Restore the texture manually.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>My recommendation is to use the <em>AssetManager</em> whenever possible.
+It will handle a context loss without wasting any memory; you don’t have to add any special restoration logic whatsoever.</p>
+</div>
+<div class="paragraph">
+<p>Nevertheless, it’s good to know what’s happening behind the scenes.
+Who knows — you might run into a situation where a manual restoration is your only choice.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_manual_restoration">Manual Restoration</h3>
+<div class="paragraph">
+<p>You might wonder how <code>Texture.fromEmbeddedAsset()</code> works internally.
+Let’s look at a possible implementation of that method:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">fromEmbeddedAsset</span></span>(assetClass:<span class="hljs-type">Class</span>):<span class="hljs-type">Texture</span>
+{
+    <span class="hljs-keyword">var</span> texture:<span class="hljs-type">Texture </span>= Texture.fromBitmap(<span class="hljs-keyword">new</span><span class="hljs-type"></span> assetClass());
+    texture.root.onRestore = <span class="hljs-title function_"><span class="hljs-keyword">function</span></span>():<span class="hljs-type">Void</span>
+    {
+        texture.root.uploadFromBitmap(<span class="hljs-keyword">new</span><span class="hljs-type"></span> assetClass());
+    };
+    <span class="hljs-keyword">return</span> texture;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can see that the magic is happening in the <code>root.onRestore</code> callback.
+Wait a minute: what’s <code>root</code>?</p>
+</div>
+<div class="paragraph">
+<p>You might not know it, but when you’ve got a <em>Texture</em> instance, that’s actually often not a concrete texture at all.
+In reality, it might be just a pointer to a part of another texture (a <em>SubTexture</em>).
+Even the <code>fromBitmap</code> call could return such a texture!
+(Explaining the reasoning behind that would be beyond the scope of this chapter, though.)</p>
+</div>
+<div class="paragraph">
+<p>In any case, <code>texture.root</code> will always return the <em>ConcreteTexture</em> object, and that’s where the <code>onRestore</code> callback is found.
+This callback will be executed directly after a context loss, and it gives you the chance of recreating your texture.</p>
+</div>
+<div class="paragraph">
+<p>In our case, that callback simply instantiates the bitmap once again and uploads it to the root texture.
+Voilà, the texture is restored!</p>
+</div>
+<div class="paragraph">
+<p>The devil lies in the details, though.
+You have to construct your <code>onRestore</code>-callback very carefully to be sure not to store another bitmap copy without knowing it.
+Here’s one innocent looking example that’s actually totally useless:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">fromEmbeddedAsset</span></span>(assetClass:<span class="hljs-type">Class</span>):<span class="hljs-type">Texture</span>
+{
+    <span class="hljs-comment">// DO NOT use this code! BAD example.</span>
+
+    <span class="hljs-keyword">var</span> bitmap:<span class="hljs-type">Bitmap </span>= <span class="hljs-keyword">new</span><span class="hljs-type"></span> assetClass();
+    <span class="hljs-keyword">var</span> texture:<span class="hljs-type">Texture </span>= Texture.fromBitmap(bitmap);
+    texture.root.onRestore = <span class="hljs-title function_"><span class="hljs-keyword">function</span></span>():<span class="hljs-type">Void</span>
+    {
+        texture.root.uploadFromBitmap(bitmap);
+    };
+    <span class="hljs-keyword">return</span> texture;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Can you spot the error?</p>
+</div>
+<div class="paragraph">
+<p>The problem is that the method creates a <em>Bitmap</em> object and uses it in the callback.
+That callback is actually a so-called <em>closure</em>; that’s an inline function that will be stored together with some of the variables that accompany it.
+In other words, you’ve got a function object that stays in memory, ready to be called when the context is lost.
+And the bitmap instance is stored inside it, even though you never explicitly said so.
+(Well, in fact you did, by using <code>bitmap</code> inside the callback.)</p>
+</div>
+<div class="paragraph">
+<p>In the original code, the bitmap is not referenced, but <em>created</em> inside the callback.
+Thus, there is no <code>bitmap</code> instance to be stored with the closure.
+Only the <code>assetClass</code> object is referenced in the callback — and that is in memory, anyway.</p>
+</div>
+<div class="paragraph">
+<p>That technique works in all kinds of scenarios:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If your texture originates from an URL, you pass only that URL to the callback and reload it from there.</p>
+</li>
+<li>
+<p>For ATF textures, the process is just the same, except that you need to upload the data with <code>root.uploadATFData</code> instead.</p>
+</li>
+<li>
+<p>For a bitmap containing a rendering of a conventional display object, just reference that display object and draw it into a new bitmap in the callback.
+(That’s just what Starling’s <em>TextField</em> class does.)</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Let me emphasize: the <em>AssetManager</em> does all this for you, so that’s the way to go. I just wanted to show you how that is achieved.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_render_textures">Render Textures</h3>
+<div class="paragraph">
+<p>Another area where a context loss is especially nasty: render textures.
+Just like other textures, they will lose all their contents — but there’s no easy way to restore them.
+After all, their content is the result of any number of dynamic draw operations.</p>
+</div>
+<div class="paragraph">
+<p>If the <em>RenderTexture</em> is just used for eye candy (say, footprints in the snow), you might be able to just live with it getting cleared.
+If its content is crucial, on the other hand, you need a solution for this problem.</p>
+</div>
+<div class="paragraph">
+<p>There’s no way around it: you will need to manually redraw the texture’s complete contents.
+Again, the <code>onRestore</code> callback could come to the rescue:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe">renderTexture.root.onRestore = <span class="hljs-title function_"><span class="hljs-keyword">function</span></span>():<span class="hljs-type">Void</span>
+{
+    <span class="hljs-keyword">var</span> contents:<span class="hljs-type">Sprite </span>= getContents();
+    renderTexture.clear(); <span class="hljs-comment">// required on texture restoration</span>
+    renderTexture.draw(contents);
+});</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>I hear you: it’s probably more than just one object, but a bunch of draw calls executed over a longer period.
+For example, a drawing app with a <em>RenderTexture</em>-canvas, containing dozens of brush strokes.</p>
+</div>
+<div class="paragraph">
+<p>In such a case, you need to store sufficient information about all draw commands to be able to reproduce them.</p>
+</div>
+<div class="paragraph">
+<p>If we stick with the drawing app scenario, you might want to add support for an <em>undo/redo</em> system, anyway.
+Such a system is typically implemented by storing a list of objects that encapsulate individual commands.
+You can re-use that system in case of a context loss to restore all draw operations.</p>
+</div>
+<div class="paragraph">
+<p>Now, before you start implementing this system, there is one more gotcha you need to be aware of.
+When the <code>root.onRestore</code> callback is executed, it’s very likely that not all of your textures are already available.
+After all, they need to be restored, too, and that might take a while!</p>
+</div>
+<div class="paragraph">
+<p>If you loaded your textures with the <em>AssetManager</em>, however, it has got you covered.
+In that case, you can listen to its <code>TEXTURES_RESTORED</code> event instead.
+Also, make sure to use <code>drawBundled</code> for optimal performance.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe">assetManager.addEventListener(Event.TEXTURES_RESTORED, <span class="hljs-title function_"><span class="hljs-keyword">function</span></span>():<span class="hljs-type">Void</span>
+{
+    renderTexture.drawBundled(<span class="hljs-title function_"><span class="hljs-keyword">function</span></span>():<span class="hljs-type">Void</span>
+    {
+        <span class="hljs-keyword">for</span> (command <span class="hljs-keyword">in</span> listOfCommands)
+            command.redraw(); <span class="hljs-comment">// executes `renderTexture.draw()`</span>
+    });
+});</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This time, there is no need to call clear, because that’s the default behavior of <code>onRestore</code>, anyway — and we did not modify that.
+Remember, we are in a different callback here (<code>Event.TEXTURES_RESTORED</code>), and <code>onRestore</code> has not been modified from its default implementation.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="atf-textures.html" class="navigation navigation-prev " aria-label="Previous page: ATF Textures">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="memory-management.html" class="navigation navigation-next " aria-label="Next page: Memory Management">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Context Loss","level":"1.4.2","depth":2,"next":{"title":"Memory Management","level":"1.4.3","depth":2,"path":"advanced-topics/memory-management.adoc","ref":"advanced-topics/memory-management.adoc","articles":[]},"previous":{"title":"ATF Textures","level":"1.4.1","depth":2,"path":"advanced-topics/atf-textures.adoc","ref":"advanced-topics/atf-textures.adoc","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"The Starling Manual for OpenFL","gitbook":"*"},"file":{"path":"advanced-topics/context-loss.adoc","mtime":"2025-04-22T18:15:20.805Z","type":"asciidoc"},"gitbook":{"version":"6.0.2","time":"2025-04-22T18:15:54.007Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

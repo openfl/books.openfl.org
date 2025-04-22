@@ -1,0 +1,935 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Sprite3D · The Starling Manual for OpenFL</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="utilities.html" />
+    
+    
+    <link rel="prev" href="masks.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../getting-started/">
+            
+                <a href="../getting-started/">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../getting-started/introduction.html">
+            
+                <a href="../getting-started/introduction.html">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../getting-started/what-is-openfl.html">
+            
+                <a href="../getting-started/what-is-openfl.html">
+            
+                    
+                    What is OpenFL?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../getting-started/what-is-starling.html">
+            
+                <a href="../getting-started/what-is-starling.html">
+            
+                    
+                    What is Starling?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../getting-started/choosing-an-ide.html">
+            
+                <a href="../getting-started/choosing-an-ide.html">
+            
+                    
+                    Choosing an IDE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../getting-started/resources.html">
+            
+                <a href="../getting-started/resources.html">
+            
+                    
+                    Resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../getting-started/hello-world.html">
+            
+                <a href="../getting-started/hello-world.html">
+            
+                    
+                    Hello World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../getting-started/summary.html">
+            
+                <a href="../getting-started/summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="configuring-starling.html">
+            
+                <a href="configuring-starling.html">
+            
+                    
+                    Configuring Starling
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="configuring-starling.html">
+            
+                <a href="configuring-starling.html">
+            
+                    
+                    Configuring Starling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="display-programming.html">
+            
+                <a href="display-programming.html">
+            
+                    
+                    Display Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="textures-and-images.html">
+            
+                <a href="textures-and-images.html">
+            
+                    
+                    Textures & Images
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="dynamic-text.html">
+            
+                <a href="dynamic-text.html">
+            
+                    
+                    Dynamic Text
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="event-handling.html">
+            
+                <a href="event-handling.html">
+            
+                    
+                    Event Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="animations.html">
+            
+                <a href="animations.html">
+            
+                    
+                    Animations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="asset-management.html">
+            
+                <a href="asset-management.html">
+            
+                    
+                    Asset Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="fragment-filters.html">
+            
+                <a href="fragment-filters.html">
+            
+                    
+                    Fragment Filters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="meshes.html">
+            
+                <a href="meshes.html">
+            
+                    
+                    Meshes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="masks.html">
+            
+                <a href="masks.html">
+            
+                    
+                    Masks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.11" data-path="sprite3d.html">
+            
+                <a href="sprite3d.html">
+            
+                    
+                    Sprite3D
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="utilities.html">
+            
+                <a href="utilities.html">
+            
+                    
+                    Utilities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="summary.html">
+            
+                <a href="summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../advanced-topics/">
+            
+                <a href="../advanced-topics/">
+            
+                    
+                    Advanced Topics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../advanced-topics/atf-textures.html">
+            
+                <a href="../advanced-topics/atf-textures.html">
+            
+                    
+                    ATF Textures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../advanced-topics/context-loss.html">
+            
+                <a href="../advanced-topics/context-loss.html">
+            
+                    
+                    Context Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../advanced-topics/memory-management.html">
+            
+                <a href="../advanced-topics/memory-management.html">
+            
+                    
+                    Memory Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../advanced-topics/performance-optimization.html">
+            
+                <a href="../advanced-topics/performance-optimization.html">
+            
+                    
+                    Performance Optimization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../advanced-topics/custom-filters.html">
+            
+                <a href="../advanced-topics/custom-filters.html">
+            
+                    
+                    Custom Filters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../advanced-topics/custom-styles.html">
+            
+                <a href="../advanced-topics/custom-styles.html">
+            
+                    
+                    Custom Styles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../advanced-topics/distance-field-rendering.html">
+            
+                <a href="../advanced-topics/distance-field-rendering.html">
+            
+                    
+                    Distance Field Rendering
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../advanced-topics/summary.html">
+            
+                <a href="../advanced-topics/summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../mobile-development/">
+            
+                <a href="../mobile-development/">
+            
+                    
+                    Mobile Development
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../mobile-development/multi-resolution-development.html">
+            
+                <a href="../mobile-development/multi-resolution-development.html">
+            
+                    
+                    Multi-Resolution Development
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../mobile-development/device-rotation.html">
+            
+                <a href="../mobile-development/device-rotation.html">
+            
+                    
+                    Device Rotation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../mobile-development/summary.html">
+            
+                <a href="../mobile-development/summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../final-words.html">
+            
+                <a href="../final-words.html">
+            
+                    
+                    Final Words
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Sprite3D</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div class="sect1">
+<h2 id="_sprite3d">Sprite3D</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>All display objects that we looked at in the previous sections represent pure two-dimensional objects.
+That’s to be expected — Starling is a 2D engine, after all.
+However, even in a 2D game, it’s sometimes nice to add a simple 3D effect, e.g. for transitioning between two screens or to show the backside of a playing card.</p>
+</div>
+<div class="paragraph">
+<p>For this reason, Starling contains a class that makes it easy to add basic 3D capabilities: <em>Sprite3D</em>.
+It allows you to move your 2D objects around in a three dimensional space.</p>
+</div>
+<div class="sect2">
+<h3 id="_basics">Basics</h3>
+<div class="paragraph">
+<p>Just like a conventional <em>Sprite</em>, you can add and remove children to this container, which allows you to group several display objects together.
+In addition to that, however, <em>Sprite3D</em> offers several interesting properties:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>z</strong> — Moves the sprite along the z-axis (which points away from the camera).</p>
+</li>
+<li>
+<p><strong>rotationX</strong> — Rotates the sprite around the x-axis.</p>
+</li>
+<li>
+<p><strong>rotationY</strong> — Rotates the sprite around the y-axis.</p>
+</li>
+<li>
+<p><strong>scaleZ</strong> — Scales the sprite along the z-axis.</p>
+</li>
+<li>
+<p><strong>pivotZ</strong> — Moves the pivot point along the z-axis.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>With the help of these properties, you can place the sprite and all its children in the 3D world.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-keyword">var</span> sprite:<span class="hljs-type">Sprite3D </span>= <span class="hljs-keyword">new</span><span class="hljs-type"></span> Sprite3D(); (<span class="hljs-number">1</span>)
+
+sprite.addChild(image1); (<span class="hljs-number">2</span>)
+sprite.addChild(image2);
+
+sprite.x = <span class="hljs-number">50</span>; (<span class="hljs-number">3</span>)
+sprite.y = <span class="hljs-number">20</span>;
+sprite.z = <span class="hljs-number">100</span>;
+sprite.rotationX = Math.PI / <span class="hljs-number">4.0</span>;
+
+addChild(sprite); (<span class="hljs-number">4</span>)</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Create an instance of <em>Sprite3D</em>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Add a few conventional 2D objects to the sprite.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Set up position and orientation of the object in 3D space.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>As usual, add it to the display list.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>As you can see, it’s not difficult to use a Sprite3D: you simply have a few new properties to explore.
+Hit-testing, animations, custom rendering — everything works just like you’re used to from other display objects.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_camera_setup">Camera Setup</h3>
+<div class="paragraph">
+<p>Of course, if you’re displaying 3D objects, you also want to be able to configure the perspective with which you’re looking at those objects.
+That’s possible by setting up the camera; and in Starling, the camera settings are found on the stage.</p>
+</div>
+<div class="paragraph">
+<p>The following stage properties set up the camera:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>fieldOfView</strong> — Specifies an angle (radian, between zero and PI) for the field of view (FOV).</p>
+</li>
+<li>
+<p><strong>focalLength</strong> — The distance between the stage and the camera.</p>
+</li>
+<li>
+<p><strong>projectionOffset</strong> — A vector that moves the camera away from its default position, which is right in front of the center of the stage.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/camera-diagram.png" alt="Camera Diagram" width="450"></img>
+</div>
+<div class="title">Figure 1. Those are the properties that set up the camera.</div>
+</div>
+<div class="paragraph">
+<p>Starling will always make sure that the stage will fill the entire viewport.
+If you change the field of view, the focal length will be modified to adhere to this constraint, and the other way round.
+In other words: <em>fieldOfView</em> and <em>focalLength</em> are just different representations of the same property.</p>
+</div>
+<div class="paragraph">
+<p>Here’s an example of how different <em>fieldOfView</em> values influence the look of the cube from the Starling demo:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/fov.png" alt="Field-of-View" width="550"></img>
+</div>
+<div class="title">Figure 2. Different values for <em>fieldOfView</em> (in degrees).</div>
+</div>
+<div class="paragraph">
+<p>Per default, the camera will always be aligned so that it points towards the center of the stage. The <em>projectionOffset</em> allows you to change the perspective away from this point; use it if you want to look at your objects from another direction, e.g. from the top or bottom.
+Here’s the cube again, this time using different settings for <code>projectionOffset.y</code>:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/proj-offset.png" alt="Projection Offset" width="550"></img>
+</div>
+<div class="title">Figure 3. Different values for <em>projectionOffset.y</em>.</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_limitations">Limitations</h3>
+<div class="paragraph">
+<p>Starling is still a 2D engine at its heart, and this means that there are a few limitations you should be aware of:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Starling does not make any depth tests. Visibility is determined solely by the order of children.</p>
+</li>
+<li>
+<p>You need to be careful about the performance. Each <em>Sprite3D</em> instance interrupts batching.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>However, there’s a trick that mitigates the latter problem in many cases: when the object is not actually 3D transformed, i.e. you’re doing nothing that a 2D sprite couldn’t do just as well, then Starling treats it just like a 2D object — with the same performance and batching behavior.</p>
+</div>
+<div class="paragraph">
+<p>This means that you don’t have to avoid having a huge number of Sprite3D instances; you just have to avoid that too many of them are 3D-transformed at the same time.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sample_project">Sample Project</h3>
+<div class="paragraph">
+<p>I created a video tutorial that demonstrates how this feature can be used in a real-life project.
+It shows you how to move a 2D game of concentration into the third dimension.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Watch the video on <a href="https://vimeo.com/109564325" target="_blank">Vimeo</a>.</p>
+</li>
+<li>
+<p>Get the complete source code from <a href="https://github.com/PrimaryFeather/Memory3D" target="_blank">GitHub</a>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="masks.html" class="navigation navigation-prev " aria-label="Previous page: Masks">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="utilities.html" class="navigation navigation-next " aria-label="Next page: Utilities">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Sprite3D","level":"1.3.11","depth":2,"next":{"title":"Utilities","level":"1.3.12","depth":2,"path":"basic-concepts/utilities.adoc","ref":"basic-concepts/utilities.adoc","articles":[]},"previous":{"title":"Masks","level":"1.3.10","depth":2,"path":"basic-concepts/masks.adoc","ref":"basic-concepts/masks.adoc","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"The Starling Manual for OpenFL","gitbook":"*"},"file":{"path":"basic-concepts/sprite3d.adoc","mtime":"2025-04-22T18:15:20.806Z","type":"asciidoc"},"gitbook":{"version":"6.0.2","time":"2025-04-22T18:15:54.007Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

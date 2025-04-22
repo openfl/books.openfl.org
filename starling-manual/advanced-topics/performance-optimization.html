@@ -1,0 +1,1249 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Performance Optimization · The Starling Manual for OpenFL</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="custom-filters.html" />
+    
+    
+    <link rel="prev" href="memory-management.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../getting-started/">
+            
+                <a href="../getting-started/">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../getting-started/introduction.html">
+            
+                <a href="../getting-started/introduction.html">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../getting-started/what-is-openfl.html">
+            
+                <a href="../getting-started/what-is-openfl.html">
+            
+                    
+                    What is OpenFL?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../getting-started/what-is-starling.html">
+            
+                <a href="../getting-started/what-is-starling.html">
+            
+                    
+                    What is Starling?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../getting-started/choosing-an-ide.html">
+            
+                <a href="../getting-started/choosing-an-ide.html">
+            
+                    
+                    Choosing an IDE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../getting-started/resources.html">
+            
+                <a href="../getting-started/resources.html">
+            
+                    
+                    Resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../getting-started/hello-world.html">
+            
+                <a href="../getting-started/hello-world.html">
+            
+                    
+                    Hello World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../getting-started/summary.html">
+            
+                <a href="../getting-started/summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../basic-concepts/configuring-starling.html">
+            
+                <a href="../basic-concepts/configuring-starling.html">
+            
+                    
+                    Configuring Starling
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../basic-concepts/configuring-starling.html">
+            
+                <a href="../basic-concepts/configuring-starling.html">
+            
+                    
+                    Configuring Starling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../basic-concepts/display-programming.html">
+            
+                <a href="../basic-concepts/display-programming.html">
+            
+                    
+                    Display Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../basic-concepts/textures-and-images.html">
+            
+                <a href="../basic-concepts/textures-and-images.html">
+            
+                    
+                    Textures & Images
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../basic-concepts/dynamic-text.html">
+            
+                <a href="../basic-concepts/dynamic-text.html">
+            
+                    
+                    Dynamic Text
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../basic-concepts/event-handling.html">
+            
+                <a href="../basic-concepts/event-handling.html">
+            
+                    
+                    Event Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../basic-concepts/animations.html">
+            
+                <a href="../basic-concepts/animations.html">
+            
+                    
+                    Animations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../basic-concepts/asset-management.html">
+            
+                <a href="../basic-concepts/asset-management.html">
+            
+                    
+                    Asset Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../basic-concepts/fragment-filters.html">
+            
+                <a href="../basic-concepts/fragment-filters.html">
+            
+                    
+                    Fragment Filters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../basic-concepts/meshes.html">
+            
+                <a href="../basic-concepts/meshes.html">
+            
+                    
+                    Meshes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../basic-concepts/masks.html">
+            
+                <a href="../basic-concepts/masks.html">
+            
+                    
+                    Masks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../basic-concepts/sprite3d.html">
+            
+                <a href="../basic-concepts/sprite3d.html">
+            
+                    
+                    Sprite3D
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../basic-concepts/utilities.html">
+            
+                <a href="../basic-concepts/utilities.html">
+            
+                    
+                    Utilities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../basic-concepts/summary.html">
+            
+                <a href="../basic-concepts/summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Advanced Topics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="atf-textures.html">
+            
+                <a href="atf-textures.html">
+            
+                    
+                    ATF Textures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="context-loss.html">
+            
+                <a href="context-loss.html">
+            
+                    
+                    Context Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="memory-management.html">
+            
+                <a href="memory-management.html">
+            
+                    
+                    Memory Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.4" data-path="performance-optimization.html">
+            
+                <a href="performance-optimization.html">
+            
+                    
+                    Performance Optimization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="custom-filters.html">
+            
+                <a href="custom-filters.html">
+            
+                    
+                    Custom Filters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="custom-styles.html">
+            
+                <a href="custom-styles.html">
+            
+                    
+                    Custom Styles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="distance-field-rendering.html">
+            
+                <a href="distance-field-rendering.html">
+            
+                    
+                    Distance Field Rendering
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="summary.html">
+            
+                <a href="summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../mobile-development/">
+            
+                <a href="../mobile-development/">
+            
+                    
+                    Mobile Development
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../mobile-development/multi-resolution-development.html">
+            
+                <a href="../mobile-development/multi-resolution-development.html">
+            
+                    
+                    Multi-Resolution Development
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../mobile-development/device-rotation.html">
+            
+                <a href="../mobile-development/device-rotation.html">
+            
+                    
+                    Device Rotation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../mobile-development/summary.html">
+            
+                <a href="../mobile-development/summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../final-words.html">
+            
+                <a href="../final-words.html">
+            
+                    
+                    Final Words
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Performance Optimization</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div class="sect1">
+<h2 id="_performance_optimization">Performance Optimization</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>While Starling mimics the classic display list of OpenFL, what it does behind the scenes is quite different.
+To achieve the best possible performance, you have to understand some key concepts of its architecture.
+Here is a list of best practices you can follow to have your game run as fast as possible.</p>
+</div>
+<div class="sect2">
+<h3 id="_general_haxe_tips">General Haxe Tips</h3>
+<div class="sect3">
+<h4 id="_always_make_a_release_build">Always make a Release Build</h4>
+<div class="paragraph">
+<p>The most important rule right at the beginning: always create a <em>release build</em> when you test performance.
+A release build can make a huge difference when you use a Stage3D framework like Starling.
+The speed difference is immense; depending on the platform you’re working on, you can easily get a multiple of the framerate of a debug build.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>In Visual Studio Code, select a target without <em>Debug</em> in the name. For example, to create an Android release build, choose the <strong>Android</strong> or <strong>iOS</strong> targets instead of <strong>Android / Debug</strong> or <strong>iOS / Debug</strong>.</p>
+</li>
+<li>
+<p>For command line builds, add the <code>-release</code> flag to create a release build.</p>
+<div class="literalblock">
+<div class="content">
+<pre>lime build android -release</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_check_your_hardware">Check your Hardware</h4>
+<div class="paragraph">
+<p>Be sure that Starling is indeed using the GPU for rendering.
+That’s easy to check: if <code>Starling.current.context.driverInfo</code> contains the string <code>Software</code>, then Stage3D is in software fallback mode, otherwise it’s using the GPU.</p>
+</div>
+<div class="paragraph">
+<p>Furthermore, some mobile devices can be run in a <em>Battery Saving Mode</em>.
+Be sure to turn that off when making performance tests.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_set_the_framerate">Set the Framerate</h4>
+<div class="paragraph">
+<p>Your framerate is somehow stuck at 24 frames per second, no matter how much you optimize?
+Then you probably never set your desired framerate, and you’ll see the OpenFL’s default setting.</p>
+</div>
+<div class="paragraph">
+<p>To change that, either use the appropriate setting in your Lime <em>project.xml</em> configuration file, or manually set the framerate on the OpenFL stage.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml"><span class="hljs-tag">&lt;<span class="hljs-name">window</span> <span class="hljs-attr">fps</span>=<span class="hljs-string">"60"</span>/&gt;</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe">Starling.current.nativeStage.frameRate = <span class="hljs-number">60</span>;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_avoid_allocations">Avoid Allocations</h4>
+<div class="paragraph">
+<p>Avoid creating a lot of temporary objects.
+They take up memory and need to be cleaned up by the garbage collector, which might cause small hiccups when it’s running.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-comment">// bad:</span>
+<span class="hljs-keyword">for</span> (i <span class="hljs-keyword">in</span> <span class="hljs-number">0.</span>.<span class="hljs-number">.10</span>)
+{
+    <span class="hljs-keyword">var</span> point:<span class="hljs-type">Point </span>= <span class="hljs-keyword">new</span><span class="hljs-type"></span> Point(i, <span class="hljs-number">2</span>*i);
+    doSomethingWith(point);
+}
+
+<span class="hljs-comment">// better:</span>
+<span class="hljs-keyword">var</span> point:<span class="hljs-type">Point </span>= <span class="hljs-keyword">new</span><span class="hljs-type"></span> Point();
+<span class="hljs-keyword">for</span> (i <span class="hljs-keyword">in</span> <span class="hljs-number">0.</span>.<span class="hljs-number">.10</span>)
+{
+    point.setTo(i, <span class="hljs-number">2</span>*i);
+    doSomethingWith(point);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Actually, Starling contains a class that helps with that: <em>Pool</em>.
+It provides a pool of objects that are often required, like <em>Point</em>, <em>Rectangle</em> and <em>Matrix</em>.
+You can "borrow" objects from that pool and return them when you’re done.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-comment">// best:</span>
+<span class="hljs-keyword">var</span> point:<span class="hljs-type">Point </span>= Pool.getPoint();
+<span class="hljs-keyword">for</span> (i <span class="hljs-keyword">in</span> <span class="hljs-number">0.</span>.<span class="hljs-number">.10</span>)
+{
+    point.setTo(i, <span class="hljs-number">2</span>*i);
+    doSomethingWith(point);
+}
+Pool.putPoint(point); <span class="hljs-comment">// don't forget this!</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_starling_specific_tips">Starling Specific Tips</h3>
+<div class="sect3">
+<h4 id="_minimize_state_changes">Minimize State Changes</h4>
+<div class="paragraph">
+<p>As you know, Starling uses Stage3D to render the display list.
+This means that all drawing is done by the GPU.</p>
+</div>
+<div class="paragraph">
+<p>Now, Starling could send one quad after the other to the GPU, drawing one by one.
+In fact, this is how the very first Starling release worked!
+For optimal performance, though, GPUs prefer to get a huge pile of data and draw all of it at once.</p>
+</div>
+<div class="paragraph">
+<p>That’s why newer Starling versions batch as many quads together as possible before sending them to the GPU.
+However, it can only batch quads that have similar properties.
+Whenever a quad with a different "state" is encountered, a "state change" occurs, and the previously batched quads are drawn.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>I use <em>Quad</em> and <em>Image</em> synonymously in this section.
+Remember, <em>Image</em> is just a subclass of <em>Quad</em> that adds a few methods.
+Besides, <em>Quad</em> extends <em>Mesh</em>, and what you read below is true for meshes, as well.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>These are the crucial properties that make up a state:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <em>texture</em> (different subtextures from the same atlas are fine, though)</p>
+</li>
+<li>
+<p>The <em>blendMode</em> of display objects</p>
+</li>
+<li>
+<p>The <em>textureSmoothing</em> value of meshes/quads/images</p>
+</li>
+<li>
+<p>The <em>textureRepeat</em> mode of meshes/quads/images</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If you set up your scene in a way that creates as little state changes as possible, your rendering performance will profit immensely.</p>
+</div>
+<div class="paragraph">
+<p>Again, Starling’s statistics display provides useful data.
+It shows exactly how many draw calls are executed per frame.
+The more state changes you have, the higher this number will be.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/stats-display.png" alt="Statistics Display"></img>
+</div>
+<div class="title">Figure 1. The statistics display includes the current number of draw calls.</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The statistics display causes draw calls, as well.
+However, Starling explicitly decrements the draw count displayed to take that into account.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Your target should always be to keep it as low as possible.
+The following tips will show you how.</p>
+</div>
+<div class="sect4">
+<h5 id="_the_painters_algorithm">The Painter’s Algorithm</h5>
+<div class="paragraph">
+<p>To know how to minimize state changes, you need to know the order in which Starling processes your objects.</p>
+</div>
+<div class="paragraph">
+<p>Like OpenFL, Starling uses the <em>Painter’s algorithm</em> to process the display list.
+This means that it draws your scene like a painter would do it: starting at the object at the bottom layer (e.g. the background image) and moving upwards, drawing new objects on top of previous ones.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/painters-algorithm.png" alt="Painter’s algorithm"></img>
+</div>
+<div class="title">Figure 2. Drawing a scene with the Painter’s algorithm.</div>
+</div>
+<div class="paragraph">
+<p>If you’d set up such a scene in Starling, you could create three sprites: one containing the mountain range in the distance, one with the ground, and one with the vegetation.
+The mountain range would be at the bottom (index 0), the vegetation at the top (index 2).
+Each sprite would contain images that contain the actual objects.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/landscape.png" alt="Landscape Scene Graph"></img>
+</div>
+<div class="title">Figure 3. The scene graph of the landscape from above.</div>
+</div>
+<div class="paragraph">
+<p>On rendering, Starling would start at the left with "Mountain 1" and continue towards the right, until it reaches "Tree 2".
+If all those objects have a different state, this would mean six draw calls.
+That’s exactly what will happen if you load each object’s texture from a separate Bitmap.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_the_texture_atlas">The Texture Atlas</h5>
+<div class="paragraph">
+<p>That’s one of the reasons why texture atlases are so important.
+If you load all those textures from one single atlas, Starling will be able to draw all objects at once!
+(At least if the other properties listed above do not change.)</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/landscape-2.png" alt="Landscape Scene Graph 2"></img>
+</div>
+<div class="title">Figure 4. The same scene graph, now using a single atlas texture.</div>
+</div>
+<div class="paragraph">
+<p>The consequence of this is that you should <em>always</em> use an atlas for your textures.
+Here, each image uses the same atlas (depicted by all nodes having the same color).</p>
+</div>
+<div class="paragraph">
+<p>Sometimes, though, not all of your textures will fit into a single atlas.
+The size of textures is limited, so you’ll run out of space sooner or later.
+But this is no problem, as long as you arrange your textures in a smart way.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/landscape-3.png" alt="Landscape Scene Graph 3"></img>
+</div>
+<div class="title">Figure 5. The order of objects makes a difference.</div>
+</div>
+<div class="paragraph">
+<p>Both those examples use two atlases (again, one color per atlas).
+But while the display list on the left will force a state change for each object, the version on the right will be able to draw all objects in just two batches.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_use_the_meshbatch_class">Use the MeshBatch class</h4>
+<div class="paragraph">
+<p>The fastest way to draw a huge number of quads or other meshes at once is to use the <em>MeshBatch</em> class.
+That’s the same class that is used internally by Starling for all rendering, so it’s heavily optimized.
+It works like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-keyword">var</span> meshBatch:<span class="hljs-type">MeshBatch </span>= <span class="hljs-keyword">new</span><span class="hljs-type"></span> MeshBatch();
+<span class="hljs-keyword">var</span> image:<span class="hljs-type">Image </span>= <span class="hljs-keyword">new</span><span class="hljs-type"></span> Image(texture);
+
+<span class="hljs-keyword">for</span> (i <span class="hljs-keyword">in</span> <span class="hljs-number">0.</span>.<span class="hljs-number">.100</span>)
+{
+    meshBatch.addMesh(image);
+    image.x += <span class="hljs-number">10</span>;
+}
+
+addChild(meshBatch);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Did you notice? You can add the same image as often as you want!
+Furthermore, adding it is a very fast operation; e.g. no event will be dispatched (which is the case when you add an object to a container).</p>
+</div>
+<div class="paragraph">
+<p>As expected, this has some downsides, though:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>All the objects you add must have the same state (i.e. use textures from the same atlas).
+The first image you add to the MeshBatch will decide on its state.
+You can’t change the state later, except by resetting it completely.</p>
+</li>
+<li>
+<p>You can only add instances of the <em>Mesh</em> class or its subclasses (that includes <em>Quad</em>, <em>Image</em>, and even <em>MeshBatch</em>).</p>
+</li>
+<li>
+<p>Object removal is quite tricky: you can only remove meshes by trimming the number of vertices and indices of the batch.
+However, you can overwrite meshes at a certain index.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For these reasons, it’s only suitable for very specific use-cases (the <em>BitmapFont</em> class, for example, uses a mesh batch internally).
+In those cases, it’s definitely the fastest option, though. You won’t find a more efficient way to render a huge number of objects in Starling.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If you’re still using Starling 1.x, look for the <em>QuadBatch</em> class instead.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_batch_your_textfields">Batch your TextFields</h4>
+<div class="paragraph">
+<p>Per default, a TextField will require one draw call, even if your glyph texture is part of your main texture atlas.
+That’s because long texts require a lot of CPU time to batch; it’s faster to simply draw them right away (without copying them to a <em>MeshBatch</em>).</p>
+</div>
+<div class="paragraph">
+<p>However, if your text field contains only a few letters (rule of thumb: below 16), you can enable the <code>batchable</code> property on the TextField.
+With that enabled, your texts will be batched just like other display objects.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_use_blendmode_none">Use BlendMode.NONE</h4>
+<div class="paragraph">
+<p>If you’ve got totally opaque, rectangular textures, help the GPU by disabling blending for those textures.
+This is especially useful for large background images.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe">backgroundImage.blendMode = BlendMode.NONE;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Naturally, this will also mean an additional state change, so don’t overuse this technique.
+For small images, it’s probably not worth the effort (except if they’d cause a state change, anyway, for some other reason).</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_use_stage_color">Use stage.color</h4>
+<div class="paragraph">
+<p>Oftentimes, the actual stage color is actually never seen in your game, because there are always images or meshes on top of the stage.</p>
+</div>
+<div class="paragraph">
+<p>In that case, always set it to clear black (<code>0x0</code>) or white (<code>0xffffff</code>).
+There seems to be a fast hardware optimization path for a <code>context.clear</code> on some mobile hardware when it is called with either all 1’s or all 0’s.
+Some developers reported a full millisecond of spared rendering time per frame, which is a very nice gain for such a simple change!</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml"><span class="hljs-tag">&lt;<span class="hljs-name">window</span> <span class="hljs-attr">background</span>=<span class="hljs-string">"#000000"</span>/&gt;</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe">stage.color = <span class="hljs-number">0x000000</span>;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>On the other hand, if the background of your game is a flat color, you can make use of that, too: just set the stage color to that value instead of displaying an image or a colored quad.
+Starling has to clear the stage once per frame, anyway — thus, if you change the stage color, that operation won’t cost anything.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml"><span class="hljs-tag">&lt;<span class="hljs-name">window</span> <span class="hljs-attr">background</span>=<span class="hljs-string">"#ff2255"</span>/&gt;</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe">stage.color = <span class="hljs-number">0xff2255</span>;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_avoid_querying_width_and_height">Avoid querying width and height</h4>
+<div class="paragraph">
+<p>The <code>width</code> and <code>height</code> properties are more expensive than one would guess intuitively, especially on sprites.
+A matrix has to be calculated, and each vertex of each child will be multiplied with that matrix.</p>
+</div>
+<div class="paragraph">
+<p>For that reason, avoid accessing them repeatedly, e.g. in a loop.
+In some cases, it might even make sense to use a constant value instead.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-comment">// bad:</span>
+<span class="hljs-keyword">for</span> (i <span class="hljs-keyword">in</span> <span class="hljs-number">0.</span>..numChildren)
+{
+    <span class="hljs-keyword">var</span> child:<span class="hljs-type">DisplayObject </span>= getChildAt(i);
+    <span class="hljs-keyword">if</span> (child.x &gt; wall.width)
+        child.removeFromParent();
+}
+
+<span class="hljs-comment">// better:</span>
+<span class="hljs-keyword">var</span> wallWidth:<span class="hljs-type">Float </span>= wall.width;
+<span class="hljs-keyword">for</span> (i <span class="hljs-keyword">in</span> <span class="hljs-number">0.</span>..numChildren)
+{
+    <span class="hljs-keyword">var</span> child:<span class="hljs-type">DisplayObject </span>= getChildAt(i);
+    <span class="hljs-keyword">if</span> (child.x &gt; wallWidth)
+        child.removeFromParent();
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_make_containers_non_touchable">Make containers non-touchable</h4>
+<div class="paragraph">
+<p>When you move the mouse/finger over the screen, Starling has to find out which object is hit.
+This can be an expensive operation, because it requires a hit-test on each and every display object (in the worst case).</p>
+</div>
+<div class="paragraph">
+<p>Thus, it helps to make objects <em>untouchable</em> if you don’t care about them being touched, anyway.
+It’s best to disable touches on complete containers: that way, Starling won’t even have to iterate over their children.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-comment">// good:</span>
+<span class="hljs-keyword">for</span> (i <span class="hljs-keyword">in</span> <span class="hljs-number">0.</span>..container.numChildren)
+    container.getChildAt(i).touchable = <span class="hljs-literal">false</span>;
+
+<span class="hljs-comment">// even better:</span>
+container.touchable = <span class="hljs-literal">false</span>;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_hide_objects_that_are_outside_the_stage_bounds">Hide objects that are outside the Stage bounds</h4>
+<div class="paragraph">
+<p>Starling will send any object that is part of the display list to the GPU.
+This is true even for objects that are outside the stage bounds!</p>
+</div>
+<div class="paragraph">
+<p>You might wonder: why doesn’t Starling simply ignore those invisible objects?
+The reason is that checking the visibility in a universal way is quite expensive.
+So expensive, in fact, that it’s faster to send objects up to the GPU and let it do to the clipping.
+The GPU is actually very efficient with that and will abort the whole rendering pipeline very early if the object is outside the screen bounds.</p>
+</div>
+<div class="paragraph">
+<p>However, it still takes time to upload that data, and you can avoid that.
+Within the high level game logic, it’s often easier to make visibility checks (you can e.g. just check the x/y coordinates against a constant).
+If you’ve got lots of objects that are outside those bounds, it’s worth the effort.
+Remove those elements from the stage or set their <code>visible</code> property to <code>false</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_make_use_of_event_pooling">Make use of Event Pooling</h4>
+<div class="paragraph">
+<p>Compared to classic OpenFL, Starling adds an additional method for event dispatching:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-comment">// classic way:</span>
+object.dispatchEvent(<span class="hljs-keyword">new</span><span class="hljs-type"></span> Event(<span class="hljs-string">"type"</span>, bubbles));
+
+<span class="hljs-comment">// new way:</span>
+object.dispatchEventWith(<span class="hljs-string">"type"</span>, bubbles);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The new approach will dispatch an event object just like the first one, but behind the scenes, it will pool event objects for you.
+That means that you will save the garbage collector some work.</p>
+</div>
+<div class="paragraph">
+<p>In other words, it’s less code to write <em>and</em> is faster — thus, it’s the preferred way to dispatch events.
+(Except if you need to dispatch a custom subclass of <code>Event</code>; they cannot be dispatched with that method.)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="memory-management.html" class="navigation navigation-prev " aria-label="Previous page: Memory Management">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="custom-filters.html" class="navigation navigation-next " aria-label="Next page: Custom Filters">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Performance Optimization","level":"1.4.4","depth":2,"next":{"title":"Custom Filters","level":"1.4.5","depth":2,"path":"advanced-topics/custom-filters.adoc","ref":"advanced-topics/custom-filters.adoc","articles":[]},"previous":{"title":"Memory Management","level":"1.4.3","depth":2,"path":"advanced-topics/memory-management.adoc","ref":"advanced-topics/memory-management.adoc","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"The Starling Manual for OpenFL","gitbook":"*"},"file":{"path":"advanced-topics/performance-optimization.adoc","mtime":"2025-04-22T18:15:20.805Z","type":"asciidoc"},"gitbook":{"version":"6.0.2","time":"2025-04-22T18:15:54.007Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

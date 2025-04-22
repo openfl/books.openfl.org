@@ -1,0 +1,1258 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Memory Management · The Starling Manual for OpenFL</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="performance-optimization.html" />
+    
+    
+    <link rel="prev" href="context-loss.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../getting-started/">
+            
+                <a href="../getting-started/">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../getting-started/introduction.html">
+            
+                <a href="../getting-started/introduction.html">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../getting-started/what-is-openfl.html">
+            
+                <a href="../getting-started/what-is-openfl.html">
+            
+                    
+                    What is OpenFL?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../getting-started/what-is-starling.html">
+            
+                <a href="../getting-started/what-is-starling.html">
+            
+                    
+                    What is Starling?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../getting-started/choosing-an-ide.html">
+            
+                <a href="../getting-started/choosing-an-ide.html">
+            
+                    
+                    Choosing an IDE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../getting-started/resources.html">
+            
+                <a href="../getting-started/resources.html">
+            
+                    
+                    Resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../getting-started/hello-world.html">
+            
+                <a href="../getting-started/hello-world.html">
+            
+                    
+                    Hello World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../getting-started/summary.html">
+            
+                <a href="../getting-started/summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../basic-concepts/configuring-starling.html">
+            
+                <a href="../basic-concepts/configuring-starling.html">
+            
+                    
+                    Configuring Starling
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../basic-concepts/configuring-starling.html">
+            
+                <a href="../basic-concepts/configuring-starling.html">
+            
+                    
+                    Configuring Starling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../basic-concepts/display-programming.html">
+            
+                <a href="../basic-concepts/display-programming.html">
+            
+                    
+                    Display Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../basic-concepts/textures-and-images.html">
+            
+                <a href="../basic-concepts/textures-and-images.html">
+            
+                    
+                    Textures & Images
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../basic-concepts/dynamic-text.html">
+            
+                <a href="../basic-concepts/dynamic-text.html">
+            
+                    
+                    Dynamic Text
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../basic-concepts/event-handling.html">
+            
+                <a href="../basic-concepts/event-handling.html">
+            
+                    
+                    Event Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../basic-concepts/animations.html">
+            
+                <a href="../basic-concepts/animations.html">
+            
+                    
+                    Animations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../basic-concepts/asset-management.html">
+            
+                <a href="../basic-concepts/asset-management.html">
+            
+                    
+                    Asset Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../basic-concepts/fragment-filters.html">
+            
+                <a href="../basic-concepts/fragment-filters.html">
+            
+                    
+                    Fragment Filters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../basic-concepts/meshes.html">
+            
+                <a href="../basic-concepts/meshes.html">
+            
+                    
+                    Meshes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../basic-concepts/masks.html">
+            
+                <a href="../basic-concepts/masks.html">
+            
+                    
+                    Masks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../basic-concepts/sprite3d.html">
+            
+                <a href="../basic-concepts/sprite3d.html">
+            
+                    
+                    Sprite3D
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../basic-concepts/utilities.html">
+            
+                <a href="../basic-concepts/utilities.html">
+            
+                    
+                    Utilities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../basic-concepts/summary.html">
+            
+                <a href="../basic-concepts/summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Advanced Topics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="atf-textures.html">
+            
+                <a href="atf-textures.html">
+            
+                    
+                    ATF Textures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="context-loss.html">
+            
+                <a href="context-loss.html">
+            
+                    
+                    Context Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.3" data-path="memory-management.html">
+            
+                <a href="memory-management.html">
+            
+                    
+                    Memory Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="performance-optimization.html">
+            
+                <a href="performance-optimization.html">
+            
+                    
+                    Performance Optimization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="custom-filters.html">
+            
+                <a href="custom-filters.html">
+            
+                    
+                    Custom Filters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="custom-styles.html">
+            
+                <a href="custom-styles.html">
+            
+                    
+                    Custom Styles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="distance-field-rendering.html">
+            
+                <a href="distance-field-rendering.html">
+            
+                    
+                    Distance Field Rendering
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="summary.html">
+            
+                <a href="summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../mobile-development/">
+            
+                <a href="../mobile-development/">
+            
+                    
+                    Mobile Development
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../mobile-development/multi-resolution-development.html">
+            
+                <a href="../mobile-development/multi-resolution-development.html">
+            
+                    
+                    Multi-Resolution Development
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../mobile-development/device-rotation.html">
+            
+                <a href="../mobile-development/device-rotation.html">
+            
+                    
+                    Device Rotation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../mobile-development/summary.html">
+            
+                <a href="../mobile-development/summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../final-words.html">
+            
+                <a href="../final-words.html">
+            
+                    
+                    Final Words
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Memory Management</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div class="sect1">
+<h2 id="_memory_management">Memory Management</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Many Starling developers use the framework to create apps and games for mobile devices.
+And almost all of those developers will sooner or later find out (the hard way) that mobile devices are notoriously low on memory.
+Why is that?</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Most mobile devices have screens with extremely high resolutions.</p>
+</li>
+<li>
+<p>2D games for such devices require equally high resolution textures.</p>
+</li>
+<li>
+<p>The available RAM is too small to hold all that texture data.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In other words, a really vicious combination.</p>
+</div>
+<div class="paragraph">
+<p>What happens if you <em>do</em> run out of memory?
+Most of the time, you will get the famous error 3691 ("Resource limit for this resource type exceeded") and your app will crash.
+The following hints will show you ways to avoid this nasty error!</p>
+</div>
+<div class="sect2">
+<h3 id="_dispose_your_waste">Dispose your Waste</h3>
+<div class="paragraph">
+<p>When you don’t need an object any longer, don’t forget to call <code>dispose</code> on it.
+Different to conventional OpenFL and Haxe objects, the garbage collector will not clean up any Stage3D resources!
+You are responsible for that memory yourself.</p>
+</div>
+<div class="sect3">
+<h4 id="_textures">Textures</h4>
+<div class="paragraph">
+<p>Those are the most important objects you need to take care of.
+Textures will always take up the biggest share of your memory.</p>
+</div>
+<div class="paragraph">
+<p>Starling tries to help you with this, of course.
+For example, when you load your textures from an atlas, you only need to dispose the atlas, not the actual SubTextures.
+Only the atlas requires GPU memory, the "offspring" textures will just reference the atlas texture.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-keyword">var</span> atlas:<span class="hljs-type">TextureAtlas </span>= ...;
+<span class="hljs-keyword">var</span> hero:<span class="hljs-type">Texture </span>= atlas.getTexture(<span class="hljs-string">"hero"</span>);
+
+atlas.dispose(); <span class="hljs-comment">// will invalidate "hero" as well.</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_display_objects">Display Objects</h4>
+<div class="paragraph">
+<p>While display objects themselves do not require a lot of graphics memory (some do not require any at all), it’s a good practice to dispose them, too.
+Be especially careful with "heavy" objects like TextFields.</p>
+</div>
+<div class="paragraph">
+<p>Display object containers will take care of all their children, as is to be expected.
+When you dispose a container, all children will be disposed automatically.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-keyword">var</span> parent:<span class="hljs-type">Sprite </span>= <span class="hljs-keyword">new</span><span class="hljs-type"></span> Sprite();
+<span class="hljs-keyword">var</span> child1:<span class="hljs-type">Quad </span>= <span class="hljs-keyword">new</span><span class="hljs-type"></span> Quad(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>, Color.RED);
+<span class="hljs-keyword">var</span> child2:<span class="hljs-type">Quad </span>= <span class="hljs-keyword">new</span><span class="hljs-type"></span> Quad(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>, Color.GREEN);
+
+parent.addChild(child1);
+parent.addChild(child2);
+
+parent.dispose(); <span class="hljs-comment">// will dispose the children, too</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>All in all, though, recent Starling versions have become more forgiving when it comes to disposing display objects.
+Most display objects do not store Stage3D resources any longer, so it’s not a catastrophe if you forget to dispose one.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_images">Images</h4>
+<div class="paragraph">
+<p>Here’s the first pitfall: disposing an image will <em>not</em> dispose its texture.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-keyword">var</span> texture:<span class="hljs-type">Texture </span>= Texture.fromBitmap(<span class="hljs-comment">/* ... */</span>);
+<span class="hljs-keyword">var</span> image:<span class="hljs-type">Image </span>= <span class="hljs-keyword">new</span><span class="hljs-type"></span> Image(texture);
+
+image.dispose(); <span class="hljs-comment">// will NOT dispose texture!</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>That’s because Starling can’t know if you’re using this texture anywhere else!
+After all, you could have other images that use the same texture.</p>
+</div>
+<div class="paragraph">
+<p>On the other hand, if you know that the texture is not used anywhere else, get rid of it.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe">image.texture.dispose();
+image.dispose();</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_filters">Filters</h4>
+<div class="paragraph">
+<p>Fragment filters are a little delicate, too.
+When you dispose an object, the filter will be disposed, as well:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-keyword">var</span> object:<span class="hljs-type">Sprite </span>= createCoolSprite();
+object.filter = <span class="hljs-keyword">new</span><span class="hljs-type"></span> BlurFilter();
+object.dispose(); <span class="hljs-comment">// will dispose filter</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>But watch out: the following similar code will not dispose the filter:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-keyword">var</span> object:<span class="hljs-type">Sprite </span>= createCoolSprite();
+object.filter = <span class="hljs-keyword">new</span><span class="hljs-type"></span> BlurFilter();
+object.filter = <span class="hljs-literal">null</span>; <span class="hljs-comment">// filter will *not* be disposed</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Again, the reason is that Starling can’t know if you want to use the filter elsewhere.</p>
+</div>
+<div class="paragraph">
+<p>However, in practice, this is not a problem.
+The filter is not disposed, but Starling will still clean up all its resources.
+So you won’t create a memory leak.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+In previous Starling versions (&lt; 2.0), this <em>did</em> create a memory leak.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_do_not_embed_textures">Do not Embed Textures</h3>
+<div class="paragraph">
+<p>ActionScript developers have always been used to embedding their bitmaps directly into the SWF file, using <code>Embed</code> metadata.
+This is great for the web, because it allows you to combine all your game’s data into one file.</p>
+</div>
+<div class="paragraph">
+<p>We already saw in the <a href="context-loss.html">Context Loss</a> section that this approach has some serious downsides in Starling (or Stage3D in general).
+It comes down to this: the texture will be in memory at least two times: once in conventional memory, once in graphics memory.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe">[Embed(source=<span class="hljs-string">"assets/textures/hero.png"</span>)]
+<span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">var</span> Hero:<span class="hljs-type">Class</span>; (<span class="hljs-number">1</span>)
+
+<span class="hljs-keyword">var</span> texture:<span class="hljs-type">Texture </span>= Texture.fromEmbeddedAsset(Hero); (<span class="hljs-number">2</span>)</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The class is stored in conventional memory.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The texture is stored in graphics memory.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Note that this sample uses <code>Texture.fromEmbeddedAsset</code> to load the texture.
+For reasons discussed in <a href="context-loss.html">Context Loss</a>, the alternative (<code>Texture.fromBitmap</code>) uses even more memory.</p>
+</div>
+<div class="paragraph">
+<p>The only way to guarantee that the texture is really only stored in graphics memory is by loading it from an URL.
+If you use the <em>AssetManager</em> for this task, that’s not even a lot of work.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-keyword">var</span> appDir:<span class="hljs-type">File </span>= File.applicationDirectory;
+<span class="hljs-keyword">var</span> assets:<span class="hljs-type">AssetManager </span>= <span class="hljs-keyword">new</span><span class="hljs-type"></span> AssetManager();
+
+assets.enqueue(appDir.resolvePath(<span class="hljs-string">"assets/textures"</span>));
+assets.loadQueue(...);
+
+<span class="hljs-keyword">var</span> texture:<span class="hljs-type">Texture </span>= assets.getTexture(<span class="hljs-string">"hero"</span>);</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_use_rectangletextures">Use RectangleTextures</h3>
+<div class="paragraph">
+<p>Starling’s <em>Texture</em> class is actually just a wrapper for two Stage3D classes:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>openfl.display3D.textures.Texture</code></dt>
+<dd>
+<p>Available in all profiles. Supports mipmaps and wrapping, but requires side-lengths that are powers of two.</p>
+</dd>
+<dt class="hdlist1"><code>openfl.display3D.textures.RectangleTexture</code></dt>
+<dd>
+<p>Available beginning with <code>BASELINE</code> profile. No mipmaps, no wrapping, but supports arbitrary side-lengths.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>The former (<code>Texture</code>) has a strange and little-known side effect: it will always allocate memory for mipmaps, whether you need them or not.
+That means that you will waste about one third of texture memory!</p>
+</div>
+<div class="paragraph">
+<p>Thus, it’s preferred to use the alternative (<code>RectangleTexture</code>).
+Starling will use this texture type whenever possible.</p>
+</div>
+<div class="paragraph">
+<p>However, it can only do that if you run at least in <code>BASELINE</code> profile, and if you disable mipmaps.
+The first requirement can be fulfilled by picking the best available Context3D profile.
+That happens automatically if you use Starling’s default constructor.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-comment">// init Starling like this:</span>
+... = <span class="hljs-keyword">new</span><span class="hljs-type"></span> Starling(Game, stage);
+
+<span class="hljs-comment">// that's equivalent to this:</span>
+... = <span class="hljs-keyword">new</span><span class="hljs-type"></span> Starling(Game, stage, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, <span class="hljs-string">"auto"</span>, <span class="hljs-string">"auto"</span>);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The last parameter (<code>auto</code>) will tell Starling to use the best available profile.
+This means that if the device supports RectangleTextures, Starling will use them.</p>
+</div>
+<div class="paragraph">
+<p>As for mipmaps: they will only be created if you explicitly ask for them.
+Some of the <code>Texture.from…​</code> factory methods contain such a parameter, and the <em>AssetManager</em> features a <code>useMipMaps</code> property.
+Per default, they are always disabled.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_use_atf_textures">Use ATF Textures</h3>
+<div class="paragraph">
+<p>We already talked about <a href="atf-textures.html">ATF Textures</a> previously, but it makes sense to mention them again in this section.
+Remember, the GPU cannot make use of JPG or PNG compression; those files will always be decompressed and uploaded to graphics memory in their uncompressed form.</p>
+</div>
+<div class="paragraph">
+<p>Not so with ATF textures: they can be rendered directly from their compressed form, which saves a lot of memory.
+So if you skipped the ATF section, I recommend you take another look!</p>
+</div>
+<div class="paragraph">
+<p>The downside of ATF textures is the reduced image quality, of course.
+But while it’s not feasible for all types of games, you can try out the following trick:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Create your textures a little bigger than what’s actually needed.</p>
+</li>
+<li>
+<p>Now compress them with the ATF tools.</p>
+</li>
+<li>
+<p>At runtime, scale them down to their original size.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>You’ll still save a quite a bit of memory, and the compression artifacts will become less apparent.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_use_16_bit_textures">Use 16 bit Textures</h3>
+<div class="paragraph">
+<p>If ATF textures don’t work for you, chances are that your application uses a comic-style with a limited color palette.
+I’ve got good news for you: for these kinds of textures, there’s a different solution!</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The default texture format (<code>Context3DTextureFormat.BGRA</code>) uses 32 bits per pixel (8 bits for each channel).</p>
+</li>
+<li>
+<p>There is an alternative format (<code>Context3DTextureFormat.BGRA_PACKED</code>) that uses only half of that: 16 bits per pixel (4 bits for each channel).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can use this format in Starling via the <code>format</code> argument of the <code>Texture.from…​</code> methods, or via the AssetManager’s <code>textureFormat</code> property.
+This will save you 50% of memory!</p>
+</div>
+<div class="paragraph">
+<p>Naturally, this comes at the price of a reduced image quality.
+Especially if you’re making use of gradients, 16 bit textures might become rather ugly.
+However, there’s a solution for this: dithering!</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/dithering.png" alt="Dithering"></img>
+</div>
+<div class="title">Figure 1. Dithering can conceal a reduced color depth.</div>
+</div>
+<div class="paragraph">
+<p>To make it more apparent, the gradient in this sample was reduced to just 16 colors (4 bits).
+Even with this low number of colors, dithering manages to deliver an acceptable image quality.</p>
+</div>
+<div class="paragraph">
+<p>Most image processing programs will use dithering automatically when you reduce the color depth.
+<em>TexturePacker</em> has you covered, as well.</p>
+</div>
+<div class="paragraph">
+<p>The <em>AssetManager</em> can be configured to select a suitable color depth on a per-file basis.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-keyword">var</span> assets:<span class="hljs-type">AssetManager </span>= <span class="hljs-keyword">new</span><span class="hljs-type"></span> AssetManager();
+
+<span class="hljs-comment">// enqueue 16 bit textures</span>
+assets.textureOptions.format = Context3DTextureFormat.BGRA_PACKED;
+assets.enqueue(<span class="hljs-comment">/* ... */</span>);
+
+<span class="hljs-comment">// enqueue 32 bit textures</span>
+assets.textureOptions.format = Context3DTextureFormat.BGRA;
+assets.enqueue(<span class="hljs-comment">/* ... */</span>);
+
+<span class="hljs-comment">// now start the loading process</span>
+assets.loadQueue(<span class="hljs-comment">/* ... */</span>);</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_avoid_mipmaps">Avoid Mipmaps</h3>
+<div class="paragraph">
+<p>Mipmaps are downsampled versions of your textures, intended to increase rendering speed and reduce aliasing effects.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/mipmap.jpg" alt="Mipmap"></img>
+</div>
+<div class="title">Figure 2. Sample of a texture with mipmaps.</div>
+</div>
+<div class="paragraph">
+<p>Since version 2.0, Starling doesn’t create any mipmaps by default.
+That turned out to be the preferable default, because without mipmaps:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Textures load faster.</p>
+</li>
+<li>
+<p>Textures require less texture memory (just the original pixels, no mipmaps).</p>
+</li>
+<li>
+<p>Blurry images are avoided (mipmaps sometimes become fuzzy).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>On the other hand, activating them will yield a slightly faster rendering speed when the object is scaled down significantly, and you avoid aliasing effects (i.e. the effect contrary to blurring).
+To enable mipmaps, use the corresponding parameter in the <code>Texture.from…​</code> methods.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_use_bitmap_fonts">Use Bitmap Fonts</h3>
+<div class="paragraph">
+<p>As already discussed, TextFields support two different kinds of fonts: TrueType fonts and Bitmap Fonts.</p>
+</div>
+<div class="paragraph">
+<p>While TrueType fonts are very easy to use, they have a few downsides.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Whenever you change the text, a new texture has to be created and uploaded to graphics memory. This is slow.</p>
+</li>
+<li>
+<p>If you’ve got many TextFields or big ones, this will require a lot of texture memory.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Bitmap Fonts, on the other hand, are</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>updated very quickly and</p>
+</li>
+<li>
+<p>require only a <em>constant</em> amount of memory (just the glyph texture).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>That makes them the preferred way of displaying text in Starling.
+My recommendation is to use them whenever possible!</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Bitmap Font textures are a great candidate for 16 bit textures, because they are often just pure white that’s tinted to the actual TextField color at runtime.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_optimize_your_texture_atlas">Optimize your Texture Atlas</h3>
+<div class="paragraph">
+<p>It should be your top priority to pack your texture atlases as tightly as possible. Tools like <a href="https://www.codeandweb.com/texturepacker/starling" target="_blank">TexturePacker</a> have several options that will help with that:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Trim transparent borders away.</p>
+</li>
+<li>
+<p>Rotate textures by 90 degrees if it leads to more effective packing.</p>
+</li>
+<li>
+<p>Reduce the color depth (see above).</p>
+</li>
+<li>
+<p>Remove duplicate textures.</p>
+</li>
+<li>
+<p>etc.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Make use of this!
+Packing more textures into one atlas not only reduces your overall memory consumption, but also the number of draw calls (more on that in the next chapter).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_keep_an_eye_on_the_statistics_display">Keep an Eye on the Statistics Display</h3>
+<div class="paragraph">
+<p>The statistics display (available via <code>starling.showStats</code>) includes information about both conventional memory and graphics memory.
+It pays off to keep an eye on these values during development.</p>
+</div>
+<div class="paragraph">
+<p>Granted, the conventional memory value is often misleading — you never know when the garbage collector will run.
+The graphics memory value, on the other hand, is extremely accurate.
+When you create a texture, the value will rise; when you dispose a texture, it will decrease — immediately.</p>
+</div>
+<div class="paragraph">
+<p>Actually, just about five minutes after I added this feature to Starling, I had already found the first memory leak — in the demo app.
+I used the following approach:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>In the main menu, I noted down the used GPU memory.</p>
+</li>
+<li>
+<p>Then I entered the demos scenes, one after another.</p>
+</li>
+<li>
+<p>Each time I returned to the main menu, I checked if the GPU memory had returned to the original value.</p>
+</li>
+<li>
+<p>After returning from one of the scenes, that value was not restored, and indeed: a code review showed that I had forgotten to dispose one of the textures.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/stats-display.png" alt="The statistics display"></img>
+</div>
+<div class="title">Figure 3. The statistics display shows the current memory usage.</div>
+</div>
+<div class="paragraph">
+<p>The simple fact that the statistics display is always available makes it possible to find things that would otherwise be easily overlooked.</p>
+</div>
+</div>
+</div>
+</div>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="context-loss.html" class="navigation navigation-prev " aria-label="Previous page: Context Loss">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="performance-optimization.html" class="navigation navigation-next " aria-label="Next page: Performance Optimization">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Memory Management","level":"1.4.3","depth":2,"next":{"title":"Performance Optimization","level":"1.4.4","depth":2,"path":"advanced-topics/performance-optimization.adoc","ref":"advanced-topics/performance-optimization.adoc","articles":[]},"previous":{"title":"Context Loss","level":"1.4.2","depth":2,"path":"advanced-topics/context-loss.adoc","ref":"advanced-topics/context-loss.adoc","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"The Starling Manual for OpenFL","gitbook":"*"},"file":{"path":"advanced-topics/memory-management.adoc","mtime":"2025-04-22T18:15:20.805Z","type":"asciidoc"},"gitbook":{"version":"6.0.2","time":"2025-04-22T18:15:54.007Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1471 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Animations · The Starling Manual for OpenFL</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="asset-management.html" />
+    
+    
+    <link rel="prev" href="event-handling.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../getting-started/">
+            
+                <a href="../getting-started/">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../getting-started/introduction.html">
+            
+                <a href="../getting-started/introduction.html">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../getting-started/what-is-openfl.html">
+            
+                <a href="../getting-started/what-is-openfl.html">
+            
+                    
+                    What is OpenFL?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../getting-started/what-is-starling.html">
+            
+                <a href="../getting-started/what-is-starling.html">
+            
+                    
+                    What is Starling?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../getting-started/choosing-an-ide.html">
+            
+                <a href="../getting-started/choosing-an-ide.html">
+            
+                    
+                    Choosing an IDE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../getting-started/resources.html">
+            
+                <a href="../getting-started/resources.html">
+            
+                    
+                    Resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../getting-started/hello-world.html">
+            
+                <a href="../getting-started/hello-world.html">
+            
+                    
+                    Hello World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../getting-started/summary.html">
+            
+                <a href="../getting-started/summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="configuring-starling.html">
+            
+                <a href="configuring-starling.html">
+            
+                    
+                    Configuring Starling
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="configuring-starling.html">
+            
+                <a href="configuring-starling.html">
+            
+                    
+                    Configuring Starling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="display-programming.html">
+            
+                <a href="display-programming.html">
+            
+                    
+                    Display Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="textures-and-images.html">
+            
+                <a href="textures-and-images.html">
+            
+                    
+                    Textures & Images
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="dynamic-text.html">
+            
+                <a href="dynamic-text.html">
+            
+                    
+                    Dynamic Text
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="event-handling.html">
+            
+                <a href="event-handling.html">
+            
+                    
+                    Event Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.6" data-path="animations.html">
+            
+                <a href="animations.html">
+            
+                    
+                    Animations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="asset-management.html">
+            
+                <a href="asset-management.html">
+            
+                    
+                    Asset Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="fragment-filters.html">
+            
+                <a href="fragment-filters.html">
+            
+                    
+                    Fragment Filters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="meshes.html">
+            
+                <a href="meshes.html">
+            
+                    
+                    Meshes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="masks.html">
+            
+                <a href="masks.html">
+            
+                    
+                    Masks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="sprite3d.html">
+            
+                <a href="sprite3d.html">
+            
+                    
+                    Sprite3D
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="utilities.html">
+            
+                <a href="utilities.html">
+            
+                    
+                    Utilities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="summary.html">
+            
+                <a href="summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../advanced-topics/">
+            
+                <a href="../advanced-topics/">
+            
+                    
+                    Advanced Topics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../advanced-topics/atf-textures.html">
+            
+                <a href="../advanced-topics/atf-textures.html">
+            
+                    
+                    ATF Textures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../advanced-topics/context-loss.html">
+            
+                <a href="../advanced-topics/context-loss.html">
+            
+                    
+                    Context Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../advanced-topics/memory-management.html">
+            
+                <a href="../advanced-topics/memory-management.html">
+            
+                    
+                    Memory Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../advanced-topics/performance-optimization.html">
+            
+                <a href="../advanced-topics/performance-optimization.html">
+            
+                    
+                    Performance Optimization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../advanced-topics/custom-filters.html">
+            
+                <a href="../advanced-topics/custom-filters.html">
+            
+                    
+                    Custom Filters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../advanced-topics/custom-styles.html">
+            
+                <a href="../advanced-topics/custom-styles.html">
+            
+                    
+                    Custom Styles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../advanced-topics/distance-field-rendering.html">
+            
+                <a href="../advanced-topics/distance-field-rendering.html">
+            
+                    
+                    Distance Field Rendering
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../advanced-topics/summary.html">
+            
+                <a href="../advanced-topics/summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../mobile-development/">
+            
+                <a href="../mobile-development/">
+            
+                    
+                    Mobile Development
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../mobile-development/multi-resolution-development.html">
+            
+                <a href="../mobile-development/multi-resolution-development.html">
+            
+                    
+                    Multi-Resolution Development
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../mobile-development/device-rotation.html">
+            
+                <a href="../mobile-development/device-rotation.html">
+            
+                    
+                    Device Rotation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../mobile-development/summary.html">
+            
+                <a href="../mobile-development/summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../final-words.html">
+            
+                <a href="../final-words.html">
+            
+                    
+                    Final Words
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Animations</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div class="sect1">
+<h2 id="_animations">Animations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Animations are not only a fundamental part of any game; even modern business apps are expected to provide smooth and dynamic transitions.
+Some well placed animations go a long way towards providing a responsive and intuitive interface.
+To help with that, Starling offers a very flexible animation engine.</p>
+</div>
+<div class="paragraph">
+<p>If you think about it, there are two types of animations.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>On the one hand, you’ve got animations that are so dynamic that you don’t know beforehand what exactly will happen.
+Think of an enemy that’s moving towards the player: its direction and speed need to be updated each frame, depending on the environment.
+Or physics: each additional force or collision changes everything.</p>
+</li>
+<li>
+<p>Then there are animations that follow a meticulous plan; you know from the beginning exactly what will happen.
+Think of fading in a message box or transitioning from one screen to another.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>We will look at both of these types in the following sections.</p>
+</div>
+<div class="sect2">
+<h3 id="_enterframeevent">EnterFrameEvent</h3>
+<div class="paragraph">
+<p>In some game engines, you have what is called a <em>run-loop</em>.
+That’s an endless loop which constantly updates all elements of the scene.</p>
+</div>
+<div class="paragraph">
+<p>In Starling, due to the display list architecture, such a run loop would not make much sense.
+You separated your game into numerous different custom display objects, and each should know for itself what to do when some time has passed.</p>
+</div>
+<div class="paragraph">
+<p>That’s exactly the point of the <em>EnterFrameEvent</em>: allowing a display object to update itself over time.
+Every frame, that event is dispatched to all display objects that are part of the display list.
+Here is how you use it:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span></span>()
+{
+    <span class="hljs-keyword">super</span>();
+    addEventListener(EnterFrameEvent.ENTER_FRAME, onEnterFrame); (<span class="hljs-number">1</span>)
+}
+
+<span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">onEnterFrame</span></span>(event:<span class="hljs-type">EnterFrameEvent</span>):<span class="hljs-type">Void </span>(<span class="hljs-number">2</span>)
+{
+    <span class="hljs-built_in">trace</span>(<span class="hljs-string">"Time passed since last frame: "</span> + event.passedTime);
+    bird.advanceTime(passedTime);
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>You can add a listener to this event anywhere, but the constructor is a good candidate.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>That’s what the corresponding event listener looks like.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The method <code>onEnterFrame</code> is called once per frame, and it’s passed along the exact time that has elapsed since the previous frame.
+With that information, you can move your enemies, update the height of the sun, or do whatever else is needed.</p>
+</div>
+<div class="paragraph">
+<p>The power behind this event is that you can do completely different things each time it occurs.
+You can dynamically react to the current state of the game.</p>
+</div>
+<div class="paragraph">
+<p>For example, you could let an enemy take one step towards the player; a simple form of enemy AI, if you will!</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Simplified Version</div>
+<div class="paragraph">
+<p>Actually, I tend to use the following, slightly condensed code instead:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span></span>()
+{
+    <span class="hljs-keyword">super</span>();
+    addEventListener(Event.ENTER_FRAME, onEnterFrame); (<span class="hljs-number">1</span>)
+}
+
+<span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">onEnterFrame</span></span>(event:<span class="hljs-type">Event</span>, passedTime:<span class="hljs-type">Float</span>):<span class="hljs-type">Void </span>(<span class="hljs-number">2</span>)
+{
+    <span class="hljs-built_in">trace</span>(<span class="hljs-string">"Time passed since last frame: "</span> + event.passedTime);
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Since the <code>ENTER_FRAME</code> event is used so often, Starling defines the type constant on the <em>Event</em> class, too.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>You can tell Starling to send <code>passedTime</code> as the second parameter of the event handler.
+Since you don’t need any other properties of the <em>EnterFrameEvent</em>, there is no need to fully qualify the class.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>This is exactly equivalent to the original code — the sole advantage being that you save a couple of key strokes.
+For lazy developers like me, that’s all the reason I need to prefer this variant!</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tweens">Tweens</h3>
+<div class="paragraph">
+<p>Now to predefined animations.
+They are very common and have names such as <em>movement</em>, <em>scale</em>, <em>fade</em>, etc.
+Starling’s approach on these kinds of animations is simple — but at the same time very flexible.
+Basically, you can animate any property of any object, as long as it is numeric (<code>Float</code>, <code>Int</code>, <code>UInt</code>).
+Those animations are described in an object called <em>Tween</em>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The term "Tween" comes from hand drawn animations, where a lead illustrator would draw important key frames, while the rest of the team drew the frames in-be<strong>tween</strong> those frames.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/soccer-tween.png" alt="Soccer Tween"></img>
+</div>
+<div class="title">Figure 1. The different frames of a tween.</div>
+</div>
+<div class="paragraph">
+<p>Enough theory, let’s go for an example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-keyword">var</span> tween:<span class="hljs-type">Tween </span>= <span class="hljs-keyword">new</span><span class="hljs-type"></span> Tween(ball, <span class="hljs-number">0.5</span>);
+
+tween.animate(<span class="hljs-string">"x"</span>, <span class="hljs-number">20</span>);
+tween.animate(<span class="hljs-string">"scale"</span>, <span class="hljs-number">2.0</span>);
+tween.animate(<span class="hljs-string">"alpha"</span>, <span class="hljs-number">0.0</span>);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This tween describes an animation that moves the <code>ball</code> object to <code>x = 20</code>, scales it to twice its size and reduces its opacity until it is invisible.
+All those changes will be carried out simultaneously over the course of half a second.
+The start values are simply the current values of the specified properties.</p>
+</div>
+<div class="paragraph">
+<p>This sample showed us that</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>you can animate arbitrary properties of an object, and that</p>
+</li>
+<li>
+<p>you can combine multiple animations in one tween object.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Apropos: since scaling, fading and movement are done so frequently, the <em>Tween</em> class provides specific methods for that, too.
+So you can write the following instead:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe">tween.moveTo(<span class="hljs-number">20</span>, <span class="hljs-number">0</span>); <span class="hljs-comment">// animate "x" and "y"</span>
+tween.scaleTo(<span class="hljs-number">2</span>);    <span class="hljs-comment">// animate "scale"</span>
+tween.fadeTo(<span class="hljs-number">0</span>);     <span class="hljs-comment">// animate "alpha"</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>An interesting aspect of tweens is that you can change the way the animation is executed, e.g. letting it start slow and get faster over time.
+That’s done by specifying a transition type.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/transitions.png" alt="Transitions" width="576"></img>
+</div>
+<div class="title">Figure 2. The available transition types. The default, <code>linear</code>, was omitted.</div>
+</div>
+<div class="paragraph">
+<p>The following example shows how to specify such a transition and introduces a few more tricks the class is capable of.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-keyword">var</span> tween:<span class="hljs-type">Tween </span>= <span class="hljs-keyword">new</span><span class="hljs-type"></span> Tween(ball, <span class="hljs-number">0.5</span>, Transitions.EASE_IN); (<span class="hljs-number">1</span>)
+tween.onStart    = <span class="hljs-title function_"><span class="hljs-keyword">function</span></span>():<span class="hljs-type">Void </span>{ <span class="hljs-comment">/* ... */</span> };
+tween.onUpdate   = <span class="hljs-title function_"><span class="hljs-keyword">function</span></span>():<span class="hljs-type">Void </span>{ <span class="hljs-comment">/* ... */</span> }; (<span class="hljs-number">2</span>)
+tween.onComplete = <span class="hljs-title function_"><span class="hljs-keyword">function</span></span>():<span class="hljs-type">Void </span>{ <span class="hljs-comment">/* ... */</span> };
+tween.delay = <span class="hljs-number">2</span>; (<span class="hljs-number">3</span>)
+tween.repeatCount = <span class="hljs-number">3</span>; (<span class="hljs-number">4</span>)
+tween.reverse = <span class="hljs-literal">true</span>;
+tween.nextTween = explode; (<span class="hljs-number">5</span>)</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Specify the transition via the third constructor argument.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>These callbacks are executed when the tween has started, each frame, or when it has finished, respectively.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Wait two seconds before starting the animation.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Repeat the tween three times, optionally in yoyo-style (<code>reverse</code>). If you set <code>repeatCount</code> to zero, the tween will be repeated indefinitely.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>Specify another tween to start right after this one is complete.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>We just created and configured a tween — but nothing is happening yet.
+A tween object <em>describes</em> the animation, but it does not <em>execute</em> it.</p>
+</div>
+<div class="paragraph">
+<p>You could do that manually via the tweens <code>advanceTime</code> method:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe">ball.x = <span class="hljs-number">0</span>;
+tween = <span class="hljs-keyword">new</span><span class="hljs-type"></span> Tween(ball, <span class="hljs-number">1.0</span>);
+tween.animate(<span class="hljs-string">"x"</span>, <span class="hljs-number">100</span>);
+
+tween.advanceTime(<span class="hljs-number">0.25</span>); <span class="hljs-comment">// -&gt; ball.x =  25</span>
+tween.advanceTime(<span class="hljs-number">0.25</span>); <span class="hljs-comment">// -&gt; ball.x =  50</span>
+tween.advanceTime(<span class="hljs-number">0.25</span>); <span class="hljs-comment">// -&gt; ball.x =  75</span>
+tween.advanceTime(<span class="hljs-number">0.25</span>); <span class="hljs-comment">// -&gt; ball.x = 100</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Hm, that works, but it’s a little cumbersome, isn’t it?
+Granted, one could call <code>advanceTime</code> in an <code>ENTER_FRAME</code> event handler, but still: as soon as you’ve got more than one animation, it’s bound to become tedious.</p>
+</div>
+<div class="paragraph">
+<p>Don’t worry: I know just the guy for you.
+He’s really good at handling such things.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_juggler">Juggler</h3>
+<div class="paragraph">
+<p>The juggler accepts and executes any number of animatable objects.
+Like any true artist, it will tenaciously pursue its true passion, which is: continuously calling <code>advanceTime</code> on everything you throw at it.</p>
+</div>
+<div class="paragraph">
+<p>There is always a default juggler available on the active Starling instance.
+The easiest way to execute an animation is through the line below — just add the animation (tween) to the default juggler and you are done.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe">Starling.juggler.add(tween);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When the tween has finished, it will be thrown away automatically.
+In many cases, that simple approach will be all you need!</p>
+</div>
+<div class="paragraph">
+<p>In other cases, though, you need a little more control.
+Let’s say your stage contains a game area where the main action takes place.
+When the user clicks on the pause button, you want to pause the game and show an animated message box, maybe providing an option to return to the menu.</p>
+</div>
+<div class="paragraph">
+<p>When that happens, the game should freeze completely: none of its animations should be advanced any longer.
+The problem: the message box itself uses some animations too, so we can’t just stop the default juggler.</p>
+</div>
+<div class="paragraph">
+<p>In such a case, it makes sense to give the game area its own juggler.
+As soon as the exit button is pressed, this juggler should just stop animating anything.
+The game will freeze in its current state, while the message box (which uses the default juggler, or maybe another one) animates just fine.</p>
+</div>
+<div class="paragraph">
+<p>When you create a custom juggler, all you have to do is call its <code>advanceTime</code> method in every frame.
+I recommend using jugglers the following way:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">Game</span> (1)
+</span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> _gameArea:<span class="hljs-type">GameArea</span>;
+
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">onEnterFrame</span></span>(event:<span class="hljs-type">Event</span>, passedTime:<span class="hljs-type">Float</span>):<span class="hljs-type">Void</span>
+    {
+        <span class="hljs-keyword">if</span> (activeMsgBox != <span class="hljs-literal">null</span>)
+            <span class="hljs-built_in">trace</span>(<span class="hljs-string">"waiting for user input"</span>);
+        <span class="hljs-keyword">else</span>
+            _gameArea.advanceTime(passedTime); (<span class="hljs-number">2</span>)
+    }
+}
+
+<span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">GameArea</span>
+</span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> _juggler:<span class="hljs-type">Juggler</span>; (<span class="hljs-number">3</span>)
+
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">advanceTime</span></span>(passedTime:<span class="hljs-type">Float</span>):<span class="hljs-type">Void</span>
+    {
+        _juggler.advanceTime(passedTime); (<span class="hljs-number">4</span>)
+    }
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>In your Game’s root class, listen to <code>Event.ENTER_FRAME</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Advance the <code>gameArea</code> only when there is no active message box.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>The <em>GameArea</em> contains its own juggler. It will manage all in-game animations.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>The juggler is advanced in its <code>advanceTime</code> method (called by <em>Game</em>).</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>That way, you have neatly separated the animations of the game and the message box.</p>
+</div>
+<div class="paragraph">
+<p>By the way: the juggler is not restricted to Tweens.
+As soon as a class implements the <em>IAnimatable</em> interface, you can add it to the juggler.
+That interface has only one method:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">advanceTime</span></span>(time:<span class="hljs-type">Float</span>):<span class="hljs-type">Void</span>;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>By implementing this method, you could e.g. create a simple MovieClip-class yourself.
+In its <code>advanceTime</code> method, it would constantly change the texture that is displayed.
+To start the movie clip, you’d simply add it to a juggler.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This also opens up another strategy for handling custom jugglers.
+Since the <em>Juggler</em> class implements <em>IAnimatable</em> as well, jugglers can be added to other jugglers!</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe">Starling.juggler.add(_juggler);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>That way, you don’t have to set up any <code>ENTER_FRAME</code> event listeners; just add your custom juggler to the default juggler.
+When you want to pause this group of animations, simply remove the juggler again.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>This leaves one question, though: when and how is an object removed from the juggler?</p>
+</div>
+<div class="sect3">
+<h4 id="_stopping_animations">Stopping Animations</h4>
+<div class="paragraph">
+<p>When a tween finishes, it is removed from the juggler automatically.
+If you want to abort the animation before it is finished, you simply remove it from the juggler.</p>
+</div>
+<div class="paragraph">
+<p>Let’s say you just created a tween that animates a ball and added it to the default juggler:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe">tween:<span class="hljs-type">Tween </span>= <span class="hljs-keyword">new</span><span class="hljs-type"></span> Tween(ball, <span class="hljs-number">1.5</span>);
+tween.moveTo(x, y);
+Starling.juggler.add(tween);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>There are several ways you can abort that animation.
+Depending on the circumstances, simply pick the one that suits your game logic best.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-keyword">var</span> animID:<span class="hljs-type">UInt </span>= Starling.juggler.add(tween);
+
+Starling.juggler.remove(tween); (<span class="hljs-number">1</span>)
+Starling.juggler.removeTweens(ball); (<span class="hljs-number">2</span>)
+Starling.juggler.removeByID(animID); (<span class="hljs-number">3</span>)
+Starling.juggler.purge(); (<span class="hljs-number">4</span>)</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Remove the tween directly. This works with any <code>IAnimatable</code> object.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Remove all tweens that affect the ball. Only works for tweens!</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Remove the tween by its ID. Useful when you don’t have access to the <em>Tween</em> instance.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>If you want to abort everything, purge the juggler.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Be a little careful with the <code>purge</code> method, though: if you call it on the default juggler, another part of your code might suddenly be faced with an aborted animation, bringing the game to a halt.
+I recommend you use <code>purge</code> only on your custom jugglers.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_automatic_removal">Automatic Removal</h4>
+<div class="paragraph">
+<p>You might have asked yourself how the <em>Tween</em> class manages to have tweens removed from the juggler automatically once they are completed.
+That’s done with the <code>REMOVE_FROM_JUGGLER</code> event.</p>
+</div>
+<div class="paragraph">
+<p>Any object that implements <code>IAnimatable</code> can dispatch such an event; the juggler listens to those events and will remove the object accordingly.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">MyAnimation</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span> <span class="hljs-type">EventDispatcher</span></span> <span class="hljs-keyword"><span class="hljs-keyword">implements</span> <span class="hljs-type">IAnimatable</span></span>
+</span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">stop</span></span>():<span class="hljs-type">Void</span>
+    {
+        dispatchEventWith(Event.REMOVE_FROM_JUGGLER);
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_single_command_tweens">Single-Command Tweens</h4>
+<div class="paragraph">
+<p>While the separation between tween and juggler is very powerful, it sometimes just stands in the way, forcing you to write a lot of code for simple tasks.
+That’s why there is a convenience method on the juggler that allows you to create and execute a tween with a single command.
+Here’s a sample:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe">juggler.tween(msgBox, <span class="hljs-number">0.5</span>, {
+   transition: <span class="hljs-type">Transitions</span>.EASE_IN,
+   onComplete: <span class="hljs-type">function</span>():<span class="hljs-type">Void </span>{ button.enabled = <span class="hljs-literal">true</span>; },
+   x: <span class="hljs-type">300</span>,
+   rotation: <span class="hljs-type">MathUtil</span>.deg2rad(<span class="hljs-number">90</span>)
+});</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This will create a tween for the <code>msgBox</code> object with a duration of 0.5 seconds, animating both the <code>x</code> and <code>rotation</code> properties.
+As you can see, the <code>{}</code> parameter is used to list all the properties you want to animate, as well as the properties of the Tween itself.
+A huge time-saver!</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_delayed_calls">Delayed Calls</h3>
+<div class="paragraph">
+<p>Technically, we have now covered all the animation types Starling supports.
+However, there’s actually another concept that’s deeply connected to this topic.</p>
+</div>
+<div class="paragraph">
+<p>Remember <em>Einstein</em>, our dog-hero who introduced us to the event system?
+The last time we saw him, he had just lost all his health points and was about to call <code>gameOver</code>.
+But wait: don’t call that method immediately — that would end the game too abruptly.
+Instead, call it with a delay of, say, two seconds (time enough for the player to realize the drama that is unfolding).</p>
+</div>
+<div class="paragraph">
+<p>To implement that delay, you could use a native <em>Timer</em> or the <code>setTimeout</code> method.
+However, you can also use the juggler, and that has a huge advantage: you remain in full control.</p>
+</div>
+<div class="paragraph">
+<p>It becomes obvious when you imagine that the player hits the "Pause" button right now, before those two seconds have passed.
+In that case, you not only want to stop the game area from animating; you want this delayed <code>gameOver</code> call to be delayed even more.</p>
+</div>
+<div class="paragraph">
+<p>To do that, make a call like the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe">juggler.delayCall(gameOver, <span class="hljs-number">2</span>);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>gameOver</code> function will be called two seconds from now (or longer if the juggler is disrupted).
+It’s also possible to pass some arguments to that method.
+Want to dispatch an event instead?</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe">juggler.delayCall(dispatchEventWith, <span class="hljs-number">2</span>, <span class="hljs-string">"gameOver"</span>);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Another handy way to use delayed calls is to perform periodic actions.
+Imagine you want to spawn a new enemy once every three seconds.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe">juggler.repeatCall(spawnEnemy, <span class="hljs-number">3</span>);</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Behind the scenes, both <code>delayCall</code> and <code>repeatCall</code> create an object of type <em>DelayedCall</em>.
+Just like the <code>juggler.tween</code> method is a shortcut for using tweens, those methods are shortcuts for creating delayed calls.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>To abort a delayed call, use one of the following methods:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-keyword">var</span> animID:<span class="hljs-type">UInt </span>= juggler.delayCall(gameOver, <span class="hljs-number">2</span>);
+
+juggler.removeByID(animID);
+juggler.removeDelayedCalls(gameOver);</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_movie_clips">Movie Clips</h3>
+<div class="paragraph">
+<p>You might have noticed the <em>MovieClip</em> class already when we looked at the class diagram surrounding <em>Mesh</em>.
+That’s right: a <em>MovieClip</em> is actually just a subclass of <em>Image</em> that changes its texture over time.
+Think of it as Starling’s equivalent of an animated GIF!</p>
+</div>
+<div class="sect3">
+<h4 id="_acquiring_textures">Acquiring Textures</h4>
+<div class="paragraph">
+<p>It is recommended that all frames of your movie clip are from one texture atlas, and that all of them have the same size (if they have not, they will be stretched to the size of the first frame).
+You can use tools like <em>Adobe Animate</em> to create such an animation; it can export directly to Starling’s texture atlas format.</p>
+</div>
+<div class="paragraph">
+<p>This is a sample of a texture atlas that contains the frames of a movie clip.
+First, look at the XML with the frame coordinates.
+Note that each frame starts with the prefix <code>flight_</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml"><span class="hljs-tag">&lt;<span class="hljs-name">TextureAtlas</span> <span class="hljs-attr">imagePath</span>=<span class="hljs-string">"atlas.png"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">SubTexture</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"flight_00"</span> <span class="hljs-attr">x</span>=<span class="hljs-string">"0"</span>   <span class="hljs-attr">y</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"50"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"50"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">SubTexture</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"flight_01"</span> <span class="hljs-attr">x</span>=<span class="hljs-string">"50"</span>  <span class="hljs-attr">y</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"50"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"50"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">SubTexture</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"flight_02"</span> <span class="hljs-attr">x</span>=<span class="hljs-string">"100"</span> <span class="hljs-attr">y</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"50"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"50"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">SubTexture</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"flight_03"</span> <span class="hljs-attr">x</span>=<span class="hljs-string">"150"</span> <span class="hljs-attr">y</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"50"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"50"</span> /&gt;</span>
+    <span class="hljs-comment">&lt;!-- ... --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">TextureAtlas</span>&gt;</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here is the corresponding texture:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/flight-animation.png" alt="Flight Animation"></img>
+</div>
+<div class="title">Figure 3. The frames of our MovieClip.</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_creating_the_movieclip">Creating the MovieClip</h4>
+<div class="paragraph">
+<p>Now let’s create the MovieClip.
+Supposing that the <code>atlas</code> variable points to a <em>TextureAtlas</em> containing all our frames, that’s really easy.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-keyword">var</span> frames:<span class="hljs-type">Vector</span>&lt;Texture&gt; = atlas.getTextures(<span class="hljs-string">"flight_"</span>); (<span class="hljs-number">1</span>)
+<span class="hljs-keyword">var</span> movie:<span class="hljs-type">MovieClip </span>= <span class="hljs-keyword">new</span><span class="hljs-type"></span> MovieClip(frames, <span class="hljs-number">10</span>); (<span class="hljs-number">2</span>)
+addChild(movie);
+
+movie.play();
+movie.pause(); (<span class="hljs-number">3</span>)
+movie.stop();
+
+Starling.juggler.add(movie); (<span class="hljs-number">4</span>)</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The <code>getTextures</code> method returns all textures starting with a given prefix, sorted alphabetically.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>That’s ideal for our <em>MovieClip</em>, because we can pass those textures right to its constructor. The second parameter depicts how many frames will be played back per second.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Those are the methods controlling playback of the clip. It will be in "play" mode per default.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Important: just like any other animation in Starling, the movie clip needs to be added to the juggler!</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Did you notice how we referenced the textures from the atlas by their prefix <code>flight_</code>?
+That allows you to create a mixed atlas that contains other movie clips and textures, as well.
+To group the frames of one clip together, you simply use the same prefix for all of them.</p>
+</div>
+<div class="paragraph">
+<p>The class also supports executing a sound or an arbitrary callback whenever a certain frame is reached.
+Be sure to check out its API reference to see what’s possible!</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_more_complex_movies">More Complex Movies</h4>
+<div class="paragraph">
+<p>A downside of this animation technique has to be mentioned, though: you will quickly run out of texture memory if your animations are either very long or if the individual frames are very big.
+If your animations take up several big texture atlases, they might not fit into memory.</p>
+</div>
+<div class="paragraph">
+<p>For these kinds of animations, you need to switch to a more elaborate solution: skeletal animation.
+This means that a character is split up into different parts (bones); those parts are then animated separately (according to the character’s skeleton).
+This is extremely flexible.</p>
+</div>
+<div class="paragraph">
+<p>Support for such animations isn’t part of Starling itself, but there are several other tools and libraries coming to the rescue.
+All of the following work really well with Starling:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.esotericsoftware.com/spine-haxe" target="_blank">Spine</a></p>
+</li>
+<li>
+<p><a href="https://github.com/CrazyFlasher/flump-hx" target="_blank">Flump</a></p>
+</li>
+<li>
+<p><a href="https://github.com/openfl/dragonbones" target="_blank">Dragon Bones</a></p>
+</li>
+<li>
+<p><a href="https://github.com/andrew-git/StarlingGAFPlayerOpenFL" target="_blank">Generic Animation Format</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>While <em>Spine</em> is a standalone application (built specifically with game development in mind), the others are all based on <em>Adobe Animate</em> (either via plug-in or by parsing SWF data).</p>
+</div>
+<div class="paragraph">
+<p>Apropos <em>Adobe Animate</em>: a recent update actually added a brand-new export option.
+To use it, right-click on a symbol in the <em>Library</em> panel and choose "Generate Texture Atlas".
+Don’t be fooled by the misleading name: this format has nothing to do with Starling’s standard texture atlases.
+It’s a completely different format that efficiently describes animations.</p>
+</div>
+<div class="paragraph">
+<p>Best of all, loading these animations in Starling is really easy if you add <a href="https://github.com/barisyild/Starling-OpenFL-Extension-Adobe-Animate" target="_blank">this extension</a> to your project.
+Once the data is loaded (which is taken care of by a custom <em>AssetManager</em>), you can instantiate <em>Animation</em> objects that work just like the <em>MovieClip</em> class we just encountered.
+<em>Creative Cloud</em> users should definitely give this a try!</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/ninja-girl-frames.png" alt="Ninja Girl"></img>
+</div>
+<div class="title">Figure 4. The <em>Adobe Animate</em> extension is demoed with this cute sample animation by Chris Georgenes.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="event-handling.html" class="navigation navigation-prev " aria-label="Previous page: Event Handling">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="asset-management.html" class="navigation navigation-next " aria-label="Next page: Asset Management">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Animations","level":"1.3.6","depth":2,"next":{"title":"Asset Management","level":"1.3.7","depth":2,"path":"basic-concepts/asset-management.adoc","ref":"basic-concepts/asset-management.adoc","articles":[]},"previous":{"title":"Event Handling","level":"1.3.5","depth":2,"path":"basic-concepts/event-handling.adoc","ref":"basic-concepts/event-handling.adoc","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"The Starling Manual for OpenFL","gitbook":"*"},"file":{"path":"basic-concepts/animations.adoc","mtime":"2025-04-22T18:15:20.805Z","type":"asciidoc"},"gitbook":{"version":"6.0.2","time":"2025-04-22T18:15:54.007Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

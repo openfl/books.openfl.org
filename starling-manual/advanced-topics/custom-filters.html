@@ -1,0 +1,1383 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Custom Filters · The Starling Manual for OpenFL</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="custom-styles.html" />
+    
+    
+    <link rel="prev" href="performance-optimization.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../getting-started/">
+            
+                <a href="../getting-started/">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../getting-started/introduction.html">
+            
+                <a href="../getting-started/introduction.html">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../getting-started/what-is-openfl.html">
+            
+                <a href="../getting-started/what-is-openfl.html">
+            
+                    
+                    What is OpenFL?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../getting-started/what-is-starling.html">
+            
+                <a href="../getting-started/what-is-starling.html">
+            
+                    
+                    What is Starling?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../getting-started/choosing-an-ide.html">
+            
+                <a href="../getting-started/choosing-an-ide.html">
+            
+                    
+                    Choosing an IDE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../getting-started/resources.html">
+            
+                <a href="../getting-started/resources.html">
+            
+                    
+                    Resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../getting-started/hello-world.html">
+            
+                <a href="../getting-started/hello-world.html">
+            
+                    
+                    Hello World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../getting-started/summary.html">
+            
+                <a href="../getting-started/summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../basic-concepts/configuring-starling.html">
+            
+                <a href="../basic-concepts/configuring-starling.html">
+            
+                    
+                    Configuring Starling
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../basic-concepts/configuring-starling.html">
+            
+                <a href="../basic-concepts/configuring-starling.html">
+            
+                    
+                    Configuring Starling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../basic-concepts/display-programming.html">
+            
+                <a href="../basic-concepts/display-programming.html">
+            
+                    
+                    Display Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../basic-concepts/textures-and-images.html">
+            
+                <a href="../basic-concepts/textures-and-images.html">
+            
+                    
+                    Textures & Images
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../basic-concepts/dynamic-text.html">
+            
+                <a href="../basic-concepts/dynamic-text.html">
+            
+                    
+                    Dynamic Text
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../basic-concepts/event-handling.html">
+            
+                <a href="../basic-concepts/event-handling.html">
+            
+                    
+                    Event Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../basic-concepts/animations.html">
+            
+                <a href="../basic-concepts/animations.html">
+            
+                    
+                    Animations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../basic-concepts/asset-management.html">
+            
+                <a href="../basic-concepts/asset-management.html">
+            
+                    
+                    Asset Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../basic-concepts/fragment-filters.html">
+            
+                <a href="../basic-concepts/fragment-filters.html">
+            
+                    
+                    Fragment Filters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../basic-concepts/meshes.html">
+            
+                <a href="../basic-concepts/meshes.html">
+            
+                    
+                    Meshes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../basic-concepts/masks.html">
+            
+                <a href="../basic-concepts/masks.html">
+            
+                    
+                    Masks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../basic-concepts/sprite3d.html">
+            
+                <a href="../basic-concepts/sprite3d.html">
+            
+                    
+                    Sprite3D
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../basic-concepts/utilities.html">
+            
+                <a href="../basic-concepts/utilities.html">
+            
+                    
+                    Utilities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../basic-concepts/summary.html">
+            
+                <a href="../basic-concepts/summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Advanced Topics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="atf-textures.html">
+            
+                <a href="atf-textures.html">
+            
+                    
+                    ATF Textures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="context-loss.html">
+            
+                <a href="context-loss.html">
+            
+                    
+                    Context Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="memory-management.html">
+            
+                <a href="memory-management.html">
+            
+                    
+                    Memory Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="performance-optimization.html">
+            
+                <a href="performance-optimization.html">
+            
+                    
+                    Performance Optimization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.5" data-path="custom-filters.html">
+            
+                <a href="custom-filters.html">
+            
+                    
+                    Custom Filters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="custom-styles.html">
+            
+                <a href="custom-styles.html">
+            
+                    
+                    Custom Styles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="distance-field-rendering.html">
+            
+                <a href="distance-field-rendering.html">
+            
+                    
+                    Distance Field Rendering
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="summary.html">
+            
+                <a href="summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../mobile-development/">
+            
+                <a href="../mobile-development/">
+            
+                    
+                    Mobile Development
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../mobile-development/multi-resolution-development.html">
+            
+                <a href="../mobile-development/multi-resolution-development.html">
+            
+                    
+                    Multi-Resolution Development
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../mobile-development/device-rotation.html">
+            
+                <a href="../mobile-development/device-rotation.html">
+            
+                    
+                    Device Rotation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../mobile-development/summary.html">
+            
+                <a href="../mobile-development/summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../final-words.html">
+            
+                <a href="../final-words.html">
+            
+                    
+                    Final Words
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Custom Filters</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div class="sect1">
+<h2 id="_custom_filters">Custom Filters</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Are you ready to get your hands dirty?
+We are now entering the realm of custom rendering code, starting with a simple fragment filter.</p>
+</div>
+<div class="paragraph">
+<p>Yes, this will involve some low level code; heck, you’ll even write a few lines of assembler!
+But fear not, it’s not rocket science.
+As my old math teacher used to say: a drilled monkey could do that!</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Remember: filters work on the pixel level of display objects.
+The filtered object is rendered into a texture, which is then processed by a custom fragment shader (hence the name <em>fragment filter</em>).
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_the_goal">The Goal</h3>
+<div class="paragraph">
+<p>Even though we’re picking a simple goal, it should be a useful one, right?
+So let’s create a <em>ColorOffsetFilter</em>.</p>
+</div>
+<div class="paragraph">
+<p>You probably know that you can tint any vertex of a mesh by assigning it a color.
+On rendering, the color will be multiplied with the texture color, which provides a very simple (and fast) way to modify the color of a texture.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-keyword">var</span> image:<span class="hljs-type">Image </span>= <span class="hljs-keyword">new</span><span class="hljs-type"></span> Image(texture);
+image.color = <span class="hljs-number">0x808080</span>; <span class="hljs-comment">// R = G = B = 0.5</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The math behind that is extremely simple: on the GPU, each color channel (red, green, blue) is represented by a value between zero and one.
+Pure red, for example, would be:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>R = 1, G = 0, B = 0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>On rendering, this color is then multiplied with the color of each pixel of the texture (also called "texel").
+The default value for an image color is pure white, which is a <code>1</code> on all channels.
+Thus, the texel color appears unchanged (a multiplication with <code>1</code> is a no-op).
+When you assign a different color instead, the multiplication will yield a new color, e.g.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>R = 1,   G = 0.8, B = 0.6  ×
+R = 0.5, G = 0.5, B = 0.5
+-------------------------
+R = 0.5, G = 0.4, B = 0.3</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And here’s the problem: this will only ever make an object darker, never brighter.
+That’s because we can only multiply with values between 0 and 1; zero meaning the result will be black, and one meaning it remains unchanged.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/customfilter-tinting.png" alt="Tinting"></img>
+</div>
+<div class="title">Figure 1. Tinting an image with a gray color.</div>
+</div>
+<div class="paragraph">
+<p>That’s what we want to fix with this filter!
+We’re going to include an <em>offset</em> to the formula.
+(In classic OpenFL, you would do that with a <a href="https://api.openfl.org/openfl/geom/ColorTransform.html" target="_blank">ColorTransform</a>.)</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>New red value = (old red value × redMultiplier) + redOffset</p>
+</li>
+<li>
+<p>New green value = (old green value × greenMultiplier) + greenOffset</p>
+</li>
+<li>
+<p>New blue value = (old blue value × blueMultiplier) + blueOffset</p>
+</li>
+<li>
+<p>New alpha value = (old alpha value × alphaMultiplier) + alphaOffset</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>We already have the multiplier, since that’s handled in the base <em>Mesh</em> class; our filter just needs to add the offset.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/customfilter-offset.png" alt="Offset"></img>
+</div>
+<div class="title">Figure 2. Adding an offset to all channels.</div>
+</div>
+<div class="paragraph">
+<p>So let’s finally start, shall we?!</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_extending_fragmentfilter">Extending FragmentFilter</h3>
+<div class="paragraph">
+<p>All filters extend the class <code>starling.filters.FragmentFilter</code>, and this one is no exception.
+Now hold tight: I’m going to give you the complete <em>ColorOffsetFilter</em> class now; this is not a stub, but the final code.
+We won’t modify it any more.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">ColorOffsetFilter</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span> <span class="hljs-type">FragmentFilter</span></span>
+</span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span></span>(
+        redOffset:<span class="hljs-type">Float</span>=<span class="hljs-number">0.0</span>, greenOffset:<span class="hljs-type">Float</span>=<span class="hljs-number">0.0</span>,
+        blueOffset:<span class="hljs-type">Float</span>=<span class="hljs-number">0.0</span>, alphaOffset:<span class="hljs-type">Float</span>=<span class="hljs-number">0.0</span>)
+    {
+        <span class="hljs-keyword">super</span>();
+        colorOffsetEffect.redOffset = redOffset;
+        colorOffsetEffect.greenOffset = greenOffset;
+        colorOffsetEffect.blueOffset = blueOffset;
+        colorOffsetEffect.alphaOffset = alphaOffset;
+    }
+
+    <span class="hljs-keyword">override</span> <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">createEffect</span></span>():<span class="hljs-type">FilterEffect</span>
+    {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span><span class="hljs-type"></span> ColorOffsetEffect();
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> colorOffsetEffect(<span class="hljs-keyword">get</span>, <span class="hljs-keyword">never</span>):<span class="hljs-type">Float</span>;
+
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">get_colorOffsetEffect</span></span>():<span class="hljs-type">ColorOffsetEffect</span>
+    {
+        <span class="hljs-keyword">return</span> Std.downcast(effect, ColorOffsetEffect);
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">var</span> redOffset(<span class="hljs-keyword">get</span>, <span class="hljs-keyword">set</span>):<span class="hljs-type">Float</span>;
+
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">get_redOffset</span></span>():<span class="hljs-type">Float</span>
+    {
+        <span class="hljs-keyword">return</span> colorOffsetEffect.redOffset;
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">set_redOffset</span></span>(value:<span class="hljs-type">Float</span>):<span class="hljs-type">Float</span>
+    {
+        colorOffsetEffect.redOffset = value;
+        setRequiresRedraw();
+        <span class="hljs-keyword">return</span> value;
+    }
+
+    <span class="hljs-comment">// the other offset properties need to be implemented accordingly.</span>
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">var</span> greenOffset(<span class="hljs-keyword">get</span>, <span class="hljs-keyword">set</span>):<span class="hljs-type">Float</span>;
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">var</span> blueOffset(<span class="hljs-keyword">get</span>, <span class="hljs-keyword">set</span>):<span class="hljs-type">Float</span>;
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">var</span> alphaOffset(<span class="hljs-keyword">get</span>, <span class="hljs-keyword">set</span>):<span class="hljs-type">Float</span>;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>That’s surprisingly compact, right?
+Well, I have to admit it: this is just half of the story, because we’re going to have to write another class, too, which does the actual color processing.
+Still, it’s worthwhile to analyze what we see above.</p>
+</div>
+<div class="paragraph">
+<p>The class extends <em>FragmentFilter</em>, of course, and it overrides one method: <code>createEffect</code>.
+You probably haven’t run into the <code>starling.rendering.Effect</code> class before, because it’s really only needed for low-level rendering.
+From the API documentation:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>An effect encapsulates all steps of a Stage3D draw operation.
+It configures the render context and sets up shader programs as well as index- and vertex-buffers, thus providing the basic mechanisms of all low-level rendering.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>The <em>FragmentFilter</em> class makes use of this class, or actually its subclass called <em>FilterEffect</em>.
+For this simple filter, we just have to provide a custom effect, which we’re doing by overriding <code>createEffect()</code>.
+The properties do nothing else than configuring our effect.
+On rendering, the base class will automatically use the effect to render the filter.
+That’s it!</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If you’re wondering what the <code>colorOffsetEffect</code> property does: that’s just a shortcut to be able to access the effect without constantly casting it to <em>ColorOffsetEffect</em>.
+The base class provides an <code>effect</code> property, too, but that will return an object of type <code>FilterEffect</code> — and we need the full type, <em>ColorOffsetEffect</em>, to access our <code>offset</code> properties.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>More complicated filters might need to override the <code>process</code> method as well; that’s e.g. necessary to create multi-pass filters.
+For our sample filter, though, that’s not necessary.</p>
+</div>
+<div class="paragraph">
+<p>Finally, note the calls to <code>setRequiresRedraw</code>: they make sure the effect is re-rendered whenever the settings change.
+Otherwise, Starling wouldn’t know that it has to redraw the object.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_extending_filtereffect">Extending FilterEffect</h3>
+<div class="paragraph">
+<p>Time to do some actual work, right?
+Well, our <em>FilterEffect</em> subclass is the actual workhorse of this filter.
+Which doesn’t mean that it’s very complicated, so just bear with me.</p>
+</div>
+<div class="paragraph">
+<p>Let’s start with a stub:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">ColorOffsetEffect</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span> <span class="hljs-type">FilterEffect</span></span>
+</span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> _offsets:<span class="hljs-type">Array</span>&lt;<span class="hljs-keyword">Float</span>&gt;;
+
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span></span>()
+    {
+        <span class="hljs-keyword">super</span>();
+        _offsets = [];
+        _offset.resize(<span class="hljs-number">4</span>);
+    }
+
+    <span class="hljs-keyword">override</span> <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">createProgram</span></span>():<span class="hljs-type">Program</span>
+    {
+        <span class="hljs-comment">// TODO</span>
+    }
+
+    <span class="hljs-keyword">override</span> <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">beforeDraw</span></span>(context:<span class="hljs-type">Context3D</span>):<span class="hljs-type">Void</span>
+    {
+        <span class="hljs-comment">// TODO</span>
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">var</span> redOffset(<span class="hljs-keyword">get</span>, <span class="hljs-keyword">set</span>):<span class="hljs-type">Float</span>;
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">get_redOffset</span></span>():<span class="hljs-type">Float </span>{ <span class="hljs-keyword">return</span> _offsets[<span class="hljs-number">0</span>]; }
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">set_redOffset</span></span>(value:<span class="hljs-type">Float</span>):<span class="hljs-type">Float </span>{ <span class="hljs-keyword">return</span> _offsets[<span class="hljs-number">0</span>] = value; }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">var</span> greenOffset(<span class="hljs-keyword">get</span>, <span class="hljs-keyword">set</span>):<span class="hljs-type">Float</span>;
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">get_greenOffset</span></span>():<span class="hljs-type">Float </span>{ <span class="hljs-keyword">return</span> _offsets[<span class="hljs-number">1</span>]; }
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">set_greenOffset</span></span>(value:<span class="hljs-type">Float</span>):<span class="hljs-type">Float </span>{ <span class="hljs-keyword">return</span> _offsets[<span class="hljs-number">1</span>] = value; }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">var</span> blueOffset(<span class="hljs-keyword">get</span>, <span class="hljs-keyword">set</span>):<span class="hljs-type">Float</span>;
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">get_blueOffset</span></span>():<span class="hljs-type">Float </span>{ <span class="hljs-keyword">return</span> _offsets[<span class="hljs-number">2</span>]; }
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">set_blueOffset</span></span>(value:<span class="hljs-type">Float</span>):<span class="hljs-type">Float </span>{ <span class="hljs-keyword">return</span> _offsets[<span class="hljs-number">2</span>] = value; }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">var</span> alphaOffset(<span class="hljs-keyword">get</span>, <span class="hljs-keyword">set</span>):<span class="hljs-type">Float</span>;
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">get_alphaOffset</span></span>():<span class="hljs-type">Float </span>{ <span class="hljs-keyword">return</span> _offsets[<span class="hljs-number">3</span>]; }
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">set_alphaOffset</span></span>(value:<span class="hljs-type">Float</span>):<span class="hljs-type">Float </span>{ <span class="hljs-keyword">return</span> _offsets[<span class="hljs-number">3</span>] = value; }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that we’re storing the offsets in a <em>Vector</em>, because that will make it easy to upload them to the GPU.
+The <code>offset</code> properties read from and write to that vector.
+Simple enough.</p>
+</div>
+<div class="paragraph">
+<p>It gets more interesting when we look at the two overridden methods.</p>
+</div>
+<div class="sect3">
+<h4 id="_createprogram">createProgram</h4>
+<div class="paragraph">
+<p>This method is supposed to create the actual Stage3D shader code.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>I’ll show you the basics, but explaining <em>Stage3D</em> thoroughly is beyond the scope of this manual.
+To get deeper into the topic, you can always have a look at one of the following tutorials:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://jacksondunstan.com/articles/1661" target="_blank">Introduction to AGAL</a></p>
+</li>
+<li>
+<p><a href="https://help.adobe.com/en_US/as3/dev/WSd6a006f2eb1dc31e-310b95831324724ec56-8000.html" target="_blank">List of AGAL operations</a></p>
+</li>
+<li>
+<p><a href="https://web.archive.org/web/20190702055247/http://www.adobe.com/devnet/flashplayer/articles/how-stage3d-works.html" target="_blank">How Stage3D works</a></p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>All Stage3D rendering is done through vertex- and fragment-shaders.
+Those are little programs that are executed directly by the GPU, and they come in two flavors:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Vertex Shaders</strong> are executed <em>once for each vertex</em>.
+Their input is made up from the vertex attributes we typically set up via the <code>VertexData</code> class; their output is the position of the vertex in screen coordinates.</p>
+</li>
+<li>
+<p><strong>Fragment Shaders</strong> are executed <em>once for each pixel</em> (fragment).
+Their input is made up of the <em>interpolated</em> attributes of the three vertices of their triangle; the output is simply the color of the pixel.</p>
+</li>
+<li>
+<p>Together, a fragment and a vertex shader make up a <strong>Program</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The language filters are written in is called AGAL, an assembly language.
+(Yes, you read right! This is as low-level as it gets.)
+Thankfully, however, typical AGAL programs are very short, so it’s not as bad as it sounds.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>A quick tip: be sure to always enable <code>starling.enableErrorChecking</code> while writing AGAL code.
+That way, the AGAL compiler will immediately fail when there’s a problem with the code (and print useful debug information), instead of silently ignoring any problems.
+Trust me: this will save you from hours of frustration and head-scratching.</p>
+</div>
+<div class="paragraph">
+<p>Just be sure to disable the property again for release builds, as it has a negative impact on performance.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Good news: we only need to write a fragment shader.
+The vertex shader is the same for most fragment filters, so Starling provides a standard implementation for that.
+Let’s look at the code:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-keyword">override</span> <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">createProgram</span></span>():<span class="hljs-type">Program</span>
+{
+    <span class="hljs-keyword">var</span> vertexShader:<span class="hljs-type">String </span>= STD_VERTEX_SHADER;
+    <span class="hljs-keyword">var</span> fragmentShader:<span class="hljs-type">String </span>=
+        <span class="hljs-string">"tex ft0, v0, fs0 &lt;2d, linear&gt; \n"</span> +
+        <span class="hljs-string">"add oc, ft0, fc0"</span>;
+
+    <span class="hljs-keyword">return</span> Program.fromSource(vertexShader, fragmentShader);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As promised, the vertex shader is taken from a constant; the fragment shader is just two lines of code.
+Both are combined into one <em>Program</em> instance, which is the return value of the method.</p>
+</div>
+<div class="paragraph">
+<p>The fragment shader requires some further elaboration, of course.</p>
+</div>
+<div class="sect4">
+<h5 id="_agal_in_a_nutshell">AGAL in a Nutshell</h5>
+<div class="paragraph">
+<p>In AGAL, each line contains a simple method call.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>[opcode] [destination], [argument 1], ([argument 2])</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The first three letters are the name of the operation (<code>tex</code>, <code>add</code>).</p>
+</li>
+<li>
+<p>The next argument defines where the result of the operation is saved.</p>
+</li>
+<li>
+<p>The other arguments are the actual arguments of the method.</p>
+</li>
+<li>
+<p>All data is stored in predefined <em>registers</em>; think of them as <em>Vector3D</em> instances (with properties for x, y, z and w).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>There are several types of registers, e.g. for constants, temporary data or for the output of a shader.
+In our shader, some of them already contain data; they were set up by other methods of the filter (we’ll come to that later).</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>v0</code> contains the current texture coordinates (<em>varying register 0</em>)</p>
+</li>
+<li>
+<p><code>fs0</code> points to the input texture (<em>fragment sampler 0</em>)</p>
+</li>
+<li>
+<p><code>fc0</code> contains the color offset this is all about (<em>fragment constant 0</em>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The result of a fragment shader must always be a color; that color is to be stored in the <code>oc</code> register.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_code_review">Code Review</h5>
+<div class="paragraph">
+<p>Let’s get back to the actual code of our fragment shader.
+The <strong>first line</strong> reads the color from the texture:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>tex ft0, v0, fs0 &lt;2d, linear&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We’re reading the texture <code>fs0</code> with the texture coordinates read from register <code>v0</code>, and some options (<code>2d, linear</code>).
+The reason that the texture coordinates are in <code>v0</code> is just because the standard vertex shader (<code>STD_VERTEX_SHADER</code>) stores them there; just trust me on this one.
+The result is stored in the temporary register <code>ft0</code> (remember: in AGAL, the result is always stored in the first argument of an operation).</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Now wait a minute. We never created any texture, right? What is this?</p>
+</div>
+<div class="paragraph">
+<p>As I wrote above, a fragment filter works at the pixel level; its input is the original object, rendered into a texture.
+Our base class (<em>FilterEffect</em>) sets that up for us; when the program runs, you can be sure that the texture sampler <code>fs0</code> will point to the pixels of the object being filtered.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>You know what, actually I’d like to change this line a little.
+You probably noticed the options at the end, indicating how the texture data should be interpreted.
+Well, it turns out that these options depend on the texture type we’re accessing.
+To be sure the code works for every texture, let’s use a helper method to write that AGAL operation.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe">tex(<span class="hljs-string">"ft0"</span>, <span class="hljs-string">"v0"</span>, <span class="hljs-number">0</span>, <span class="hljs-built_in">this</span>.texture)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>That does just the same (the method returns an AGAL string), but we don’t need to care about the options any longer.
+Always use this method when accessing a texture; it will let you sleep much better at night.</p>
+</div>
+<div class="paragraph">
+<p>The <strong>second line</strong> is doing what we actually came here for: it adds the color offsets to the texel color.
+The offset is stored in <code>fc0</code>, which we’ll look at shortly; that’s added to the <code>ft0</code> register (the texel color we just read) and stored in the output register (<code>oc</code>).</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>add oc, ft0, fc0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>That’s it with AGAL for now.
+Let’s have a look at the other overridden method.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_beforedraw">beforeDraw</h4>
+<div class="paragraph">
+<p>The <code>beforeDraw</code> method is executed directly before the shaders are executed. We can use them to set up all the data required by our shader.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-keyword">override</span> <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">beforeDraw</span></span>(context:<span class="hljs-type">Context3D</span>):<span class="hljs-type">Void</span>
+{
+    context.setProgramConstantsFromVector(Context3DProgramType.FRAGMENT, <span class="hljs-number">0</span>, _offsets);
+    <span class="hljs-keyword">super</span>.beforeDraw(context);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This is where we pass the offset values to the fragment shader.
+The second parameter, <code>0</code>, defines the register that data is going to end up in.
+If you look back at the actual shader code, you’ll see that we read the offset from <code>fc0</code>, and that’s exactly what we’re filling up here: <code>fragment constant 0</code>.</p>
+</div>
+<div class="paragraph">
+<p>The super call sets up all the rest, e.g. it assigns the texture (<code>fs0</code>) and the texture coordinates.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Before you ask: yes, there is also an <code>afterDraw()</code> method, usually used to clean up one’s resources.
+But for constants, this is not necessary, so we can ignore it in this filter.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_trying_it_out">Trying it out</h3>
+<div class="paragraph">
+<p>Our filter is ready, actually (download the complete code <a href="https://git.io/v9OtP" target="_blank">here</a>)!
+Time to give it a test ride.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-keyword">var</span> image:<span class="hljs-type">Image </span>= <span class="hljs-keyword">new</span><span class="hljs-type"></span> Image(texture);
+<span class="hljs-keyword">var</span> filter:<span class="hljs-type">ColorOffsetFilter </span>= <span class="hljs-keyword">new</span><span class="hljs-type"></span> ColorOffsetFilter();
+filter.redOffset = <span class="hljs-number">0.5</span>;
+image.filter = filter;
+addChild(image);</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/customfilter-pma.png" alt="Custom Filter PMA Issue"></img>
+</div>
+<div class="title">Figure 3. Our filter seems to have an ugly side effect.</div>
+</div>
+<div class="paragraph">
+<p>Blimey!
+Yes, the red value is definitely higher, but why is it now extending beyond the area of the bird!?
+We didn’t change the alpha value, after all!</p>
+</div>
+<div class="paragraph">
+<p>Don’t panic.
+You just created your first filter, and it didn’t blow up on you, right?
+That must be worth something.
+It’s to be expected that there’s some fine-tuning to do.</p>
+</div>
+<div class="paragraph">
+<p>It turns out that we forgot to consider "premultiplied alpha" (PMA).
+All conventional textures are stored with their RGB channels premultiplied with the alpha value.
+So, a red with 50% alpha, like this:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>R = 1, G = 0, B = 0, A = 0.5</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>would actually be stored like this:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>R = 0.5, G = 0, B = 0, A = 0.5</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And we didn’t take that into account.
+What he have to do is multiply the offset values with the alpha value of the current pixel before adding it to the output.
+Here’s one way to do that:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe">tex(<span class="hljs-string">"ft0"</span>, <span class="hljs-string">"v0"</span>, <span class="hljs-number">0</span>, texture)   <span class="hljs-comment">// get color from texture</span>
+mov ft1, fc0                   <span class="hljs-comment">// copy complete offset to ft1</span>
+mul ft1.xyz, fc0.xyz, ft0.www  <span class="hljs-comment">// multiply offset.rgb with alpha (pma!)</span>
+add  oc, ft0, ft1              <span class="hljs-comment">// add offset, copy to output</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As you can see, we can access the <code>xyzw</code> properties of the registers to access individual color channels (they correspond with our <code>rgba</code> channels).</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+What if the texture is not stored with PMA?
+The <code>tex</code> method makes sure that we always receive the value with PMA, so no need to worry about that.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_second_try">Second Try</h4>
+<div class="paragraph">
+<p>When you give the filter another try now (complete code: <a href="https://git.io/v9Oti" target="_blank">ColorOffsetFilter.as</a>), you’ll see correct alpha values:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/customfilter-pma-solved.png" alt="Custom Filter with solved PMA issue"></img>
+</div>
+<div class="title">Figure 4. That’s more like it!</div>
+</div>
+<div class="paragraph">
+<p>Congratulations!
+You just created your first filter, and it works flawlessly.
+(Yes, you could have just used Starling’s <code>ColorMatrixFilter</code> instead — but hey, this one is a tiny little bit faster, so it was well worth the effort.)</p>
+</div>
+<div class="paragraph">
+<p>If you’re feeling brave, you could now try to achieve the same with a mesh style instead.
+It’s not <em>that</em> different, promised!</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="performance-optimization.html" class="navigation navigation-prev " aria-label="Previous page: Performance Optimization">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="custom-styles.html" class="navigation navigation-next " aria-label="Next page: Custom Styles">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Custom Filters","level":"1.4.5","depth":2,"next":{"title":"Custom Styles","level":"1.4.6","depth":2,"path":"advanced-topics/custom-styles.adoc","ref":"advanced-topics/custom-styles.adoc","articles":[]},"previous":{"title":"Performance Optimization","level":"1.4.4","depth":2,"path":"advanced-topics/performance-optimization.adoc","ref":"advanced-topics/performance-optimization.adoc","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"The Starling Manual for OpenFL","gitbook":"*"},"file":{"path":"advanced-topics/custom-filters.adoc","mtime":"2025-04-22T18:15:20.805Z","type":"asciidoc"},"gitbook":{"version":"6.0.2","time":"2025-04-22T18:15:54.007Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

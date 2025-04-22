@@ -1,0 +1,1053 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Distance Field Rendering · The Starling Manual for OpenFL</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="summary.html" />
+    
+    
+    <link rel="prev" href="custom-styles.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../getting-started/">
+            
+                <a href="../getting-started/">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../getting-started/introduction.html">
+            
+                <a href="../getting-started/introduction.html">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../getting-started/what-is-openfl.html">
+            
+                <a href="../getting-started/what-is-openfl.html">
+            
+                    
+                    What is OpenFL?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../getting-started/what-is-starling.html">
+            
+                <a href="../getting-started/what-is-starling.html">
+            
+                    
+                    What is Starling?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../getting-started/choosing-an-ide.html">
+            
+                <a href="../getting-started/choosing-an-ide.html">
+            
+                    
+                    Choosing an IDE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../getting-started/resources.html">
+            
+                <a href="../getting-started/resources.html">
+            
+                    
+                    Resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../getting-started/hello-world.html">
+            
+                <a href="../getting-started/hello-world.html">
+            
+                    
+                    Hello World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../getting-started/summary.html">
+            
+                <a href="../getting-started/summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../basic-concepts/configuring-starling.html">
+            
+                <a href="../basic-concepts/configuring-starling.html">
+            
+                    
+                    Configuring Starling
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../basic-concepts/configuring-starling.html">
+            
+                <a href="../basic-concepts/configuring-starling.html">
+            
+                    
+                    Configuring Starling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../basic-concepts/display-programming.html">
+            
+                <a href="../basic-concepts/display-programming.html">
+            
+                    
+                    Display Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../basic-concepts/textures-and-images.html">
+            
+                <a href="../basic-concepts/textures-and-images.html">
+            
+                    
+                    Textures & Images
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../basic-concepts/dynamic-text.html">
+            
+                <a href="../basic-concepts/dynamic-text.html">
+            
+                    
+                    Dynamic Text
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../basic-concepts/event-handling.html">
+            
+                <a href="../basic-concepts/event-handling.html">
+            
+                    
+                    Event Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../basic-concepts/animations.html">
+            
+                <a href="../basic-concepts/animations.html">
+            
+                    
+                    Animations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../basic-concepts/asset-management.html">
+            
+                <a href="../basic-concepts/asset-management.html">
+            
+                    
+                    Asset Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../basic-concepts/fragment-filters.html">
+            
+                <a href="../basic-concepts/fragment-filters.html">
+            
+                    
+                    Fragment Filters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../basic-concepts/meshes.html">
+            
+                <a href="../basic-concepts/meshes.html">
+            
+                    
+                    Meshes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../basic-concepts/masks.html">
+            
+                <a href="../basic-concepts/masks.html">
+            
+                    
+                    Masks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../basic-concepts/sprite3d.html">
+            
+                <a href="../basic-concepts/sprite3d.html">
+            
+                    
+                    Sprite3D
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../basic-concepts/utilities.html">
+            
+                <a href="../basic-concepts/utilities.html">
+            
+                    
+                    Utilities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../basic-concepts/summary.html">
+            
+                <a href="../basic-concepts/summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Advanced Topics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="atf-textures.html">
+            
+                <a href="atf-textures.html">
+            
+                    
+                    ATF Textures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="context-loss.html">
+            
+                <a href="context-loss.html">
+            
+                    
+                    Context Loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="memory-management.html">
+            
+                <a href="memory-management.html">
+            
+                    
+                    Memory Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="performance-optimization.html">
+            
+                <a href="performance-optimization.html">
+            
+                    
+                    Performance Optimization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="custom-filters.html">
+            
+                <a href="custom-filters.html">
+            
+                    
+                    Custom Filters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="custom-styles.html">
+            
+                <a href="custom-styles.html">
+            
+                    
+                    Custom Styles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.7" data-path="distance-field-rendering.html">
+            
+                <a href="distance-field-rendering.html">
+            
+                    
+                    Distance Field Rendering
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="summary.html">
+            
+                <a href="summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../mobile-development/">
+            
+                <a href="../mobile-development/">
+            
+                    
+                    Mobile Development
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../mobile-development/multi-resolution-development.html">
+            
+                <a href="../mobile-development/multi-resolution-development.html">
+            
+                    
+                    Multi-Resolution Development
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../mobile-development/device-rotation.html">
+            
+                <a href="../mobile-development/device-rotation.html">
+            
+                    
+                    Device Rotation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../mobile-development/summary.html">
+            
+                <a href="../mobile-development/summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../final-words.html">
+            
+                <a href="../final-words.html">
+            
+                    
+                    Final Words
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Distance Field Rendering</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div class="sect1">
+<h2 id="_distance_field_rendering">Distance Field Rendering</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>As mentioned multiple times, bitmap fonts are the fastest way to render text in Starling.
+However, if you need to display text in multiple sizes, you will soon discover that bitmap fonts do not scale well.
+Scaling up makes them blurry, scaling down introduces aliasing problems.
+Thus, for best results, one has to embed the font in all the sizes used within the application.</p>
+</div>
+<div class="paragraph">
+<p><em>Distance Field Rendering</em> solves this issue: it allows bitmap fonts and other single-color shapes to be drawn without jagged edges, even at high magnifications.
+The technique was first introduced in a <a href="https://steamcdn-a.akamaihd.net/apps/valve/2007/SIGGRAPH2007_AlphaTestedMagnification.pdf" target="_blank">SIGGRAPH paper</a> by Valve Software.
+To support this feature, Starling contains a special <em>MeshStyle</em> implementation.</p>
+</div>
+<div class="paragraph">
+<p>To understand how it works, I will start by showing you how to use it on a single image.
+This could e.g. be an icon you want to use throughout your application.</p>
+</div>
+<div class="sect2">
+<h3 id="_rendering_a_single_image">Rendering a single Image</h3>
+<div class="paragraph">
+<p>We had plenty of birds in this manual already, so let’s go for a predator this time!
+My cat qualifies for the job.
+I’ve got her portrait as a black vector outline, which is perfect for this use-case.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/cat.png" alt="Cat" width="200"></img>
+</div>
+<div class="title">Figure 1. Say hello to "Seven of Nine", my cat!</div>
+</div>
+<div class="paragraph">
+<p>Unfortunately, Starling can’t display vector images; we need Seven as a bitmap texture (PNG format).
+That works great as long as we want to display the cat in roughly the original size (<code>scale == 1</code>).
+However, when we enlarge the image, it quickly becomes blurry.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/cat-scale.png" alt="Scaled Cat" width="400"></img>
+</div>
+<div class="title">Figure 2. Conventional textures become blurry when scaled up.</div>
+</div>
+<div class="paragraph">
+<p>This is exactly what we can avoid by converting this image into a distance field texture.
+Starling actually contains a handy little tool that takes care of this conversion process.
+It’s called the "Field Agent" and can be found in the <code>util</code> directory of the Starling repository.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+You need both <em>Ruby</em> and <em>ImageMagick</em> installed to use the field agent.
+Look at the accompanying <code>README</code> file to find out how to install those dependencies.
+The tool works both on Windows and macOS.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>I started with a high-resolution PNG version of the cat and passed that to the field agent.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>ruby field_agent.rb cat.png cat-df.png --scale 0.25 --auto-size</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This will create a distance field texture with 25% of the original size.
+The field agent works best if you pass it a high resolution texture and let it scale that down.
+The distance field encodes the details of the shape, so it can be much smaller than the input texture.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/cat-distance-field.png" alt="Cat Distance Field Texture"></img>
+</div>
+<div class="title">Figure 3. The resulting distance field texture.</div>
+</div>
+<div class="paragraph">
+<p>The original, sharp outline of the cat has been replaced with a blurry gradient.
+That’s what a distance field is about: in each pixel, it encodes the distance to the closest edge in the original shape.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This texture is actually just pure white on a transparent background; I colored the background black just so you can see the result better.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The amount of blurriness is called <em>spread</em>.
+The field agent uses a default of eight pixels, but you can customize that.
+A higher spread allows better scaling and makes it easier to add special effects (more on those later), but its possible range depends on the input image.
+If the input contains very thin lines, there’s simply not enough room for a high spread.</p>
+</div>
+<div class="paragraph">
+<p>To display this texture in Starling, we simply load the texture and assign it to an image.
+Assigning the <em>DistanceFieldStyle</em> will make Starling switch to <em>distance field</em> rendering.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-keyword">var</span> texture:<span class="hljs-type">Texture </span>= assets.getTexture(<span class="hljs-string">"cat-df"</span>);
+<span class="hljs-keyword">var</span> image:<span class="hljs-type">Image </span>= <span class="hljs-keyword">new</span><span class="hljs-type"></span> Image(texture);
+image.style = <span class="hljs-keyword">new</span><span class="hljs-type"></span> DistanceFieldStyle();
+image.color = <span class="hljs-number">0x0</span>; <span class="hljs-comment">// we want a black cat</span>
+addChild(image);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>With this style applied, the texture stays perfectly crisp even with high scale values.
+You only see small artifacts around very fine-grained areas (like Seven’s haircut).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/cat-scale-df.png" alt="Scaled cat using a distance field texture" width="400"></img>
+</div>
+<div class="title">Figure 4. Scaling up a distance field texture.</div>
+</div>
+<div class="paragraph">
+<p>Depending on the "spread" you used when creating the texture, you might need to update the <code>softness</code> parameter to get the sharpness / smoothness you’d like to have.
+That’s the first parameter of the style’s constructor.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Rule of thumb: <code>softness = 1.0 / spread</code>.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_render_modes">Render Modes</h4>
+<div class="paragraph">
+<p>That’s actually just the most basic use of distance field textures.
+The distance field style supports a couple of different render modes; namely an outline, a drop shadow, and a glow.
+Those effects are all rendered in a specific fragment shader, which means that they do not require any additional draw calls.
+In other words, these effects are basically coming for free, performance wise!</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-keyword">var</span> style:<span class="hljs-type">DistanceFieldStyle </span>= <span class="hljs-keyword">new</span><span class="hljs-type"></span> DistanceFieldStyle();
+style.setupDropShadow(); <span class="hljs-comment">// or</span>
+style.setupOutline(); <span class="hljs-comment">// or</span>
+style.setupGlow();</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/cat-modes.png" alt="Cat rendered with different modes" width="500"></img>
+</div>
+<div class="title">Figure 5. Different modes of the distance field style.</div>
+</div>
+<div class="paragraph">
+<p>Pretty cool, huh?</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The only limitation: you cannot combine two modes, e.g. to have both outline and drop shadow.
+You can still resort back to fragment filters for that, though.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_rendering_text">Rendering Text</h3>
+<div class="paragraph">
+<p>The characteristics of distance field rendering make it perfect for text.
+Good news: Starling’s standard bitmap font class works really well with the distance field style.
+By now, there are even great tools for creating suitable font textures.</p>
+</div>
+<div class="paragraph">
+<p>Remember, a bitmap font consists of an atlas-texture that contains all the glyphs and an XML file describing the attributes of each glyph.
+You can’t simply use <em>field agent</em> to convert the texture in a post-processing step (at least not easily), since each glyph requires some padding around it to make up for the <em>spread</em>.
+Therefore, it’s best to use a bitmap font tool that supports distance field textures natively.</p>
+</div>
+<div class="paragraph">
+<p>Some of the GUI-tools I described in the <a href="../basic-concepts/dynamic-text.html#_bitmap_fonts">Bitmap Fonts</a> chapter can be configured to create distance field output.
+However, to be blunt, none of them does that job particularly well.
+If you are not afraid of some command line magic, I recommend another one instead.</p>
+</div>
+<div class="sect3">
+<h4 id="_msdf_bmfont_xml">msdf-bmfont-xml</h4>
+<div class="paragraph">
+<p><em>Msdf-bmfont-xml</em> runs on both <em>Windows</em> and <em>macOS</em> (refer to its <a href="https://github.com/soimy/msdf-bmfont-xml" target="_blank">GitHub page</a> for installation instructions).
+The quality of the output is phenomenal, and it even supports an advanced type of distance field texture — we’ll look at that shortly.</p>
+</div>
+<div class="paragraph">
+<p>For now, let’s start with the basics: let’s create a distance field font for, say, <code>Arial.ttf</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">msdf-bmfont -o arial.png -t sdf --smart-size Arial.ttf</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>-o arial.png</code> determines the filename for the font texture.</p>
+</li>
+<li>
+<p><code>-t sdf</code> indicates that we want to create a <em>single-channel</em> distance field font. All distance field textures we discussed so far were single channel textures.</p>
+</li>
+<li>
+<p><code>--smart-size</code> will make sure the texture uses the smallest possible size.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This command will create the familiar pair of <code>png</code> and <code>fnt</code> files that you can load in your app.
+What’s more, it adds an additional data element to the <code>fnt</code> file that contains all relevant distance field settings.
+As a result, Starling is able to set everything up for you automatically.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe">[Embed(source=<span class="hljs-string">"arial.fnt"</span>, mimeType=<span class="hljs-string">"application/octet-stream"</span>)]
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> FontXml:<span class="hljs-type">Class</span>;
+
+[Embed(source=<span class="hljs-string">"arial.png"</span>)]
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> FontTexture:<span class="hljs-type">Class</span>;
+
+<span class="hljs-keyword">var</span> texture:<span class="hljs-type">Texture </span>= Texture.fromEmbeddedAsset(FontTexture);
+<span class="hljs-keyword">var</span> xml:<span class="hljs-type">XML </span>= XML(<span class="hljs-keyword">new</span><span class="hljs-type"></span> FontXml());
+<span class="hljs-keyword">var</span> font:<span class="hljs-type">BitmapFont </span>= <span class="hljs-keyword">new</span><span class="hljs-type"></span> BitmapFont(texture, xml)
+TextField.registerCompositor(font, font.name);
+
+<span class="hljs-keyword">var</span> textField:<span class="hljs-type">TextField </span>= <span class="hljs-keyword">new</span><span class="hljs-type"></span> TextField(<span class="hljs-number">400</span>, <span class="hljs-number">100</span>, <span class="hljs-string">"May the font be with you!"</span>);
+textField.format.setTo(font.name, <span class="hljs-number">32</span>);
+addChild(textField);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>That’s right, there is no special set-up code to write — you create font and TextField just like you always do!
+Behind the scenes, Starling will automatically set up a <em>DistanceFieldStyle</em> instance with the correct settings.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_multi_channel_distance_field_textures">Multi-Channel Distance Field Textures</h4>
+<div class="paragraph">
+<p>A <em>multi-channel</em> distance field texture uses all channels of an RGB-texture to encode the distance information.
+This leads to an even higher rendering quality.</p>
+</div>
+<div class="paragraph">
+<p>As mentioned above, <em>msdf-bmfont-xml</em> supports this distance field type — in fact, it even defaults to it.
+Please run the command-line tool again, but omit the <code>-t sdf</code> parameter.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">msdf-bmfont -o arial.png --smart-size Arial.ttf</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This time, you will end up with a <em>multi-channel</em> distance field texture.
+Here’s what it looks like:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/multi-channel-distance-field-font.png" alt="Multi-channel distance field font"></img>
+</div>
+<div class="title">Figure 6. A multi-channel distance field font.</div>
+</div>
+<div class="paragraph">
+<p>Again, Starling will recognize the texture and will render in "multi-channel" style automatically.
+The reward for all this hard work: such a font can now be used at almost any scale, and with all the flexible render modes I showed above.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/distance-field-scale.png" alt="Scaled TextField with a Bitmap Font"></img>
+</div>
+<div class="title">Figure 7. A bitmap font using distance field fonts looks great at any scale.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="custom-styles.html" class="navigation navigation-prev " aria-label="Previous page: Custom Styles">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="summary.html" class="navigation navigation-next " aria-label="Next page: Summary">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Distance Field Rendering","level":"1.4.7","depth":2,"next":{"title":"Summary","level":"1.4.8","depth":2,"path":"advanced-topics/summary.adoc","ref":"advanced-topics/summary.adoc","articles":[]},"previous":{"title":"Custom Styles","level":"1.4.6","depth":2,"path":"advanced-topics/custom-styles.adoc","ref":"advanced-topics/custom-styles.adoc","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"The Starling Manual for OpenFL","gitbook":"*"},"file":{"path":"advanced-topics/distance-field-rendering.adoc","mtime":"2025-04-22T18:15:20.805Z","type":"asciidoc"},"gitbook":{"version":"6.0.2","time":"2025-04-22T18:15:54.007Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
