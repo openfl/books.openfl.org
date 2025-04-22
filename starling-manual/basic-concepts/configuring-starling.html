@@ -58,10 +58,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="configuring-starling.html" />
+    <link rel="next" href="display-programming.html" />
     
     
-    <link rel="prev" href="../getting-started/summary.html" />
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -213,12 +213,12 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3" data-path="configuring-starling.html">
+        <li class="chapter " data-level="1.3" data-path="./">
             
-                <a href="configuring-starling.html">
+                <a href="./">
             
                     
-                    Configuring Starling
+                    Basic Concepts
             
                 </a>
             
@@ -650,7 +650,7 @@ Here is the complete declaration of Starling’s constructor:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-keyword">public</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span></span>(
-    rootClass:<span class="hljs-type">Class</span>,
+    rootClass:<span class="hljs-type">Class</span>&lt;<span class="hljs-keyword">Dynamic</span>&gt;,
     stage:<span class="hljs-type">Stage</span>,
     viewPort:<span class="hljs-type">Rectangle </span>= <span class="hljs-literal">null</span>,
     stage3D:<span class="hljs-type">Stage3D </span>= <span class="hljs-literal">null</span>,
@@ -666,7 +666,7 @@ Here is the complete declaration of Starling’s constructor:</p>
 </dd>
 <dt class="hdlist1">stage</dt>
 <dd>
-<p>The traditional OpenFL stage that will host Starling’s content. That’s how the Starling and OpenFL display list are connected to each other.</p>
+<p>The traditional OpenFL stage that will host Starling’s content. That’s how the Starling and OpenFL display list are connected to each other. Must be of type <code>openfl.display.Stage</code>.</p>
 </dd>
 <dt class="hdlist1">viewPort</dt>
 <dd>
@@ -678,7 +678,7 @@ Here is the complete declaration of Starling’s constructor:</p>
 </dd>
 <dt class="hdlist1">renderMode</dt>
 <dd>
-<p>The whole idea behind <em>Stage3D</em> is to provide hardware-accelerated rendering. However, there is also a software fallback mode; it may be forced by passing <code>Context3DRenderMode.SOFTWARE</code>. The default (<code>auto</code>) is recommended, though — it means that software rendering is used only when there’s no alternative.</p>
+<p>The whole idea behind <em>Stage3D</em> is to provide hardware-accelerated rendering. However, there is also a software fallback mode on some targets; if available, it may be forced by passing <code>Context3DRenderMode.SOFTWARE</code>. The default (<code>auto</code>) is recommended, though — it means that software rendering is used only when there’s no alternative.</p>
 </dd>
 <dt class="hdlist1">profile</dt>
 <dd>
@@ -723,7 +723,7 @@ However, as soon as Starling has finished starting up, the logic is moved over t
 <td class="content">
 <div class="title">Configuring the Frame Rate</div>
 <div class="paragraph">
-<p>Some settings are configured right in the "SWF" <em>MetaData</em> tag in front of the class.
+<p>Some settings are configured in the Lime <em>project.xml</em> configuration file.
 The frame rate is one of them.
 Starling itself does not have an equivalent setting: it always simply uses the <em>frameRate</em> from the native stage.
 To change it at runtime, access the <code>nativeStage</code> property:</p>
@@ -763,7 +763,7 @@ However, you can listen to the <code>ROOT_CREATED</code> event to get notified w
 <h3 id="_the_viewport">The ViewPort</h3>
 <div class="paragraph">
 <p><em>Stage3D</em> provides Starling with a rectangular area to draw into.
-That area can be anywhere within the native stage, which means: anywhere within the area where <em>OpenFL</em> renders its contents (the application window on native targets, or the <code>&lt;canvas&gt;</code> element on HTML5).</p>
+That area can be anywhere within the native stage, which means: anywhere within the area where <em>OpenFL</em> renders its contents (the application window on native targets, or the <code>&lt;canvas&gt;</code> element when targeting HTML5).</p>
 </div>
 <div class="paragraph">
 <p>In Starling, that area is called the <em>viewPort</em>.
@@ -1079,12 +1079,12 @@ You can customize the location of the statistics display on the screen via the m
 
             
                 
-                <a href="../getting-started/summary.html" class="navigation navigation-prev " aria-label="Previous page: Summary">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Basic Concepts">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="configuring-starling.html" class="navigation navigation-next " aria-label="Next page: Configuring Starling">
+                <a href="display-programming.html" class="navigation navigation-next " aria-label="Next page: Display Programming">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1095,7 +1095,7 @@ You can customize the location of the statistics display on the screen via the m
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Configuring Starling","level":"1.3","depth":1,"next":{"title":"Configuring Starling","level":"1.3.1","depth":2,"path":"basic-concepts/configuring-starling.adoc","ref":"basic-concepts/configuring-starling.adoc","articles":[]},"previous":{"title":"Summary","level":"1.2.7","depth":2,"path":"getting-started/summary.adoc","ref":"getting-started/summary.adoc","articles":[]},"articles":[{"title":"Configuring Starling","level":"1.3.1","depth":2,"path":"basic-concepts/configuring-starling.adoc","ref":"basic-concepts/configuring-starling.adoc","articles":[]},{"title":"Display Programming","level":"1.3.2","depth":2,"path":"basic-concepts/display-programming.adoc","ref":"basic-concepts/display-programming.adoc","articles":[]},{"title":"Textures & Images","level":"1.3.3","depth":2,"path":"basic-concepts/textures-and-images.adoc","ref":"basic-concepts/textures-and-images.adoc","articles":[]},{"title":"Dynamic Text","level":"1.3.4","depth":2,"path":"basic-concepts/dynamic-text.adoc","ref":"basic-concepts/dynamic-text.adoc","articles":[]},{"title":"Event Handling","level":"1.3.5","depth":2,"path":"basic-concepts/event-handling.adoc","ref":"basic-concepts/event-handling.adoc","articles":[]},{"title":"Animations","level":"1.3.6","depth":2,"path":"basic-concepts/animations.adoc","ref":"basic-concepts/animations.adoc","articles":[]},{"title":"Asset Management","level":"1.3.7","depth":2,"path":"basic-concepts/asset-management.adoc","ref":"basic-concepts/asset-management.adoc","articles":[]},{"title":"Fragment Filters","level":"1.3.8","depth":2,"path":"basic-concepts/fragment-filters.adoc","ref":"basic-concepts/fragment-filters.adoc","articles":[]},{"title":"Meshes","level":"1.3.9","depth":2,"path":"basic-concepts/meshes.adoc","ref":"basic-concepts/meshes.adoc","articles":[]},{"title":"Masks","level":"1.3.10","depth":2,"path":"basic-concepts/masks.adoc","ref":"basic-concepts/masks.adoc","articles":[]},{"title":"Sprite3D","level":"1.3.11","depth":2,"path":"basic-concepts/sprite3d.adoc","ref":"basic-concepts/sprite3d.adoc","articles":[]},{"title":"Utilities","level":"1.3.12","depth":2,"path":"basic-concepts/utilities.adoc","ref":"basic-concepts/utilities.adoc","articles":[]},{"title":"Summary","level":"1.3.13","depth":2,"path":"basic-concepts/summary.adoc","ref":"basic-concepts/summary.adoc","articles":[]}],"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"The Starling Manual for OpenFL","gitbook":"*"},"file":{"path":"basic-concepts/configuring-starling.adoc","mtime":"2025-04-22T18:15:20.806Z","type":"asciidoc"},"gitbook":{"version":"6.0.2","time":"2025-04-22T18:15:54.007Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Configuring Starling","level":"1.3.1","depth":2,"next":{"title":"Display Programming","level":"1.3.2","depth":2,"path":"basic-concepts/display-programming.adoc","ref":"basic-concepts/display-programming.adoc","articles":[]},"previous":{"title":"Basic Concepts","level":"1.3","depth":1,"path":"basic-concepts/index.adoc","ref":"basic-concepts/index.adoc","articles":[{"title":"Configuring Starling","level":"1.3.1","depth":2,"path":"basic-concepts/configuring-starling.adoc","ref":"basic-concepts/configuring-starling.adoc","articles":[]},{"title":"Display Programming","level":"1.3.2","depth":2,"path":"basic-concepts/display-programming.adoc","ref":"basic-concepts/display-programming.adoc","articles":[]},{"title":"Textures & Images","level":"1.3.3","depth":2,"path":"basic-concepts/textures-and-images.adoc","ref":"basic-concepts/textures-and-images.adoc","articles":[]},{"title":"Dynamic Text","level":"1.3.4","depth":2,"path":"basic-concepts/dynamic-text.adoc","ref":"basic-concepts/dynamic-text.adoc","articles":[]},{"title":"Event Handling","level":"1.3.5","depth":2,"path":"basic-concepts/event-handling.adoc","ref":"basic-concepts/event-handling.adoc","articles":[]},{"title":"Animations","level":"1.3.6","depth":2,"path":"basic-concepts/animations.adoc","ref":"basic-concepts/animations.adoc","articles":[]},{"title":"Asset Management","level":"1.3.7","depth":2,"path":"basic-concepts/asset-management.adoc","ref":"basic-concepts/asset-management.adoc","articles":[]},{"title":"Fragment Filters","level":"1.3.8","depth":2,"path":"basic-concepts/fragment-filters.adoc","ref":"basic-concepts/fragment-filters.adoc","articles":[]},{"title":"Meshes","level":"1.3.9","depth":2,"path":"basic-concepts/meshes.adoc","ref":"basic-concepts/meshes.adoc","articles":[]},{"title":"Masks","level":"1.3.10","depth":2,"path":"basic-concepts/masks.adoc","ref":"basic-concepts/masks.adoc","articles":[]},{"title":"Sprite3D","level":"1.3.11","depth":2,"path":"basic-concepts/sprite3d.adoc","ref":"basic-concepts/sprite3d.adoc","articles":[]},{"title":"Utilities","level":"1.3.12","depth":2,"path":"basic-concepts/utilities.adoc","ref":"basic-concepts/utilities.adoc","articles":[]},{"title":"Summary","level":"1.3.13","depth":2,"path":"basic-concepts/summary.adoc","ref":"basic-concepts/summary.adoc","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"The Starling Manual for OpenFL","gitbook":"*"},"file":{"path":"basic-concepts/configuring-starling.adoc","mtime":"2025-04-22T22:52:41.589Z","type":"asciidoc"},"gitbook":{"version":"6.0.2","time":"2025-04-22T22:53:14.727Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

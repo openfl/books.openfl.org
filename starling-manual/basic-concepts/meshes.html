@@ -213,12 +213,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="configuring-starling.html">
+        <li class="chapter " data-level="1.3" data-path="./">
             
-                <a href="configuring-starling.html">
+                <a href="./">
             
                     
-                    Configuring Starling
+                    Basic Concepts
             
                 </a>
             
@@ -653,13 +653,9 @@ Since it is so important, I want to look at this class in a little more detail.<
 It was mentioned a few times already, since it’s the base class of <em>Quad</em> and <em>Image</em>.
 As a reminder, here is the class hierarchy we are talking about:</p>
 </div>
-<div class="literalblock">
+<div class="imageblock">
 <div class="content">
-<pre>Unresolved directive in &lt;stdin&gt; - include::../defaults.plantuml[]
-
-DisplayObject &lt;|-- Mesh
-Mesh &lt;|-- Quad
-Quad &lt;|-- Image</pre>
+<img src="../img/mesh-classes-from-display-object.png" alt="DisplayObject <|-- Mesh, Mesh <|-- Quad, Quad <|-- Image" width="137"></img>
 </div>
 </div>
 <div class="paragraph">
@@ -1031,8 +1027,8 @@ The properties and methods of the <em>Mesh</em> class provide a solid foundation
 <p>Coming to the rescue: Starling’s <em>mesh styles</em>.</p>
 </div>
 <div class="paragraph">
-<p>Styles are a brand new addition to Starling (introduced in version 2.0) and are the recommended way to create custom, high performance rendering code.
-In fact, all rendering in Starling is now done via mesh styles.</p>
+<p>Styles are the recommended way to create custom, high performance rendering code.
+In fact, all rendering in Starling is done via mesh styles.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1061,8 +1057,7 @@ For example, you could implement fast color transformations or multi-texturing.<
 <td class="content">
 <div class="paragraph">
 <p>One of the most impressive samples of a style is the <a href="https://github.com/CrazyFlasher/starling-extensions-hx/tree/master/src/starling/extensions/lighting" target="_blank">Dynamic Lighting extension</a>.
-With the help of a normal map (a texture encoding surface normals), it can provide realistic real-time lighting effects.
-Be sure to check out this extension in the Starling Wiki to see it in action!</p>
+With the help of a normal map (a texture encoding surface normals), it can provide realistic real-time lighting effects.</p>
 </div>
 </td>
 </tr>
@@ -1162,7 +1157,7 @@ But a style should never modify the original shape of the object; it won’t add
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Meshes","level":"1.3.9","depth":2,"next":{"title":"Masks","level":"1.3.10","depth":2,"path":"basic-concepts/masks.adoc","ref":"basic-concepts/masks.adoc","articles":[]},"previous":{"title":"Fragment Filters","level":"1.3.8","depth":2,"path":"basic-concepts/fragment-filters.adoc","ref":"basic-concepts/fragment-filters.adoc","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"The Starling Manual for OpenFL","gitbook":"*"},"file":{"path":"basic-concepts/meshes.adoc","mtime":"2025-04-22T18:15:20.806Z","type":"asciidoc"},"gitbook":{"version":"6.0.2","time":"2025-04-22T18:15:54.007Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Meshes","level":"1.3.9","depth":2,"next":{"title":"Masks","level":"1.3.10","depth":2,"path":"basic-concepts/masks.adoc","ref":"basic-concepts/masks.adoc","articles":[]},"previous":{"title":"Fragment Filters","level":"1.3.8","depth":2,"path":"basic-concepts/fragment-filters.adoc","ref":"basic-concepts/fragment-filters.adoc","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"The Starling Manual for OpenFL","gitbook":"*"},"file":{"path":"basic-concepts/meshes.adoc","mtime":"2025-04-22T22:52:41.589Z","type":"asciidoc"},"gitbook":{"version":"6.0.2","time":"2025-04-22T22:53:14.727Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

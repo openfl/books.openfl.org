@@ -213,12 +213,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="configuring-starling.html">
+        <li class="chapter " data-level="1.3" data-path="./">
             
-                <a href="configuring-starling.html">
+                <a href="./">
             
                     
-                    Configuring Starling
+                    Basic Concepts
             
                 </a>
             
@@ -684,12 +684,12 @@ Thus, such a mask is purely binary: a pixel is either visible, or it is not.</p>
 <td class="content">
 <div class="title">Masks and Stage3D</div>
 <div class="paragraph">
-<p>For masks to work in Stage3D, you will need to activate the stencil buffer in the Lime <em>project.xml</em> configuration file.
+<p>For masks to work in Stage3D, you will need to activate the depth and stencil buffers in the Lime <em>project.xml</em> configuration file.
 Add the following setting to the <code>window</code> element:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-xml" data-lang="xml"><span class="hljs-tag">&lt;<span class="hljs-name">window</span> <span class="hljs-attr">stencil-buffer</span>=<span class="hljs-string">"true"</span>/&gt;</span></code></pre>
+<pre class="highlight"><code class="language-xml" data-lang="xml"><span class="hljs-tag">&lt;<span class="hljs-name">window</span> <span class="hljs-attr">stencil-buffer</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">depth-buffer</span>=<span class="hljs-string">"true"</span> /&gt;</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -799,7 +799,7 @@ Instead of the <em>stencil buffer</em>, it will then use the <em>scissor rectang
 <dt class="hdlist1">Texture Masks</dt>
 <dd>
 <p>If a simple vector shape just doesn’t cut it, there is an extension that allows you to use the alpha channel of a texture as a stencil mask.
-It’s called <em>Texture Mask</em> and is found in the <a href="https://github.com/CrazyFlasher/starling-extensions-hx/blob/master/src/starling/extensions/TextureMaskStyle.hx" target="_blank">Starling Wiki</a>.</p>
+It’s called <a href="https://github.com/CrazyFlasher/starling-extensions-hx/blob/master/src/starling/extensions/TextureMaskStyle.hx" target="_blank"><em>Texture Mask</em></a>.</p>
 </dd>
 </dl>
 </div>
@@ -848,7 +848,7 @@ It’s called <em>Texture Mask</em> and is found in the <a href="https://github.
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Masks","level":"1.3.10","depth":2,"next":{"title":"Sprite3D","level":"1.3.11","depth":2,"path":"basic-concepts/sprite3d.adoc","ref":"basic-concepts/sprite3d.adoc","articles":[]},"previous":{"title":"Meshes","level":"1.3.9","depth":2,"path":"basic-concepts/meshes.adoc","ref":"basic-concepts/meshes.adoc","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"The Starling Manual for OpenFL","gitbook":"*"},"file":{"path":"basic-concepts/masks.adoc","mtime":"2025-04-22T18:15:20.806Z","type":"asciidoc"},"gitbook":{"version":"6.0.2","time":"2025-04-22T18:15:54.007Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Masks","level":"1.3.10","depth":2,"next":{"title":"Sprite3D","level":"1.3.11","depth":2,"path":"basic-concepts/sprite3d.adoc","ref":"basic-concepts/sprite3d.adoc","articles":[]},"previous":{"title":"Meshes","level":"1.3.9","depth":2,"path":"basic-concepts/meshes.adoc","ref":"basic-concepts/meshes.adoc","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"The Starling Manual for OpenFL","gitbook":"*"},"file":{"path":"basic-concepts/masks.adoc","mtime":"2025-04-22T22:52:41.589Z","type":"asciidoc"},"gitbook":{"version":"6.0.2","time":"2025-04-22T22:53:14.727Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

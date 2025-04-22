@@ -213,12 +213,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="configuring-starling.html">
+        <li class="chapter " data-level="1.3" data-path="./">
             
-                <a href="configuring-starling.html">
+                <a href="./">
             
                     
-                    Configuring Starling
+                    Basic Concepts
             
                 </a>
             
@@ -1044,7 +1044,7 @@ If you want to abort the animation before it is finished, you simply remove it f
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-haxe" data-lang="haxe">tween:<span class="hljs-type">Tween </span>= <span class="hljs-keyword">new</span><span class="hljs-type"></span> Tween(ball, <span class="hljs-number">1.5</span>);
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-keyword">var</span> tween:<span class="hljs-type">Tween </span>= <span class="hljs-keyword">new</span><span class="hljs-type"></span> Tween(ball, <span class="hljs-number">1.5</span>);
 tween.moveTo(x, y);
 Starling.juggler.add(tween);</code></pre>
 </div>
@@ -1330,8 +1330,7 @@ All of the following work really well with Starling:</p>
 <p>While <em>Spine</em> is a standalone application (built specifically with game development in mind), the others are all based on <em>Adobe Animate</em> (either via plug-in or by parsing SWF data).</p>
 </div>
 <div class="paragraph">
-<p>Apropos <em>Adobe Animate</em>: a recent update actually added a brand-new export option.
-To use it, right-click on a symbol in the <em>Library</em> panel and choose "Generate Texture Atlas".
+<p>Apropos <em>Adobe Animate</em>: Right-click on a symbol in the <em>Library</em> panel and choose "Generate Texture Atlas".
 Don’t be fooled by the misleading name: this format has nothing to do with Starling’s standard texture atlases.
 It’s a completely different format that efficiently describes animations.</p>
 </div>
@@ -1392,7 +1391,7 @@ Once the data is loaded (which is taken care of by a custom <em>AssetManager</em
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Animations","level":"1.3.6","depth":2,"next":{"title":"Asset Management","level":"1.3.7","depth":2,"path":"basic-concepts/asset-management.adoc","ref":"basic-concepts/asset-management.adoc","articles":[]},"previous":{"title":"Event Handling","level":"1.3.5","depth":2,"path":"basic-concepts/event-handling.adoc","ref":"basic-concepts/event-handling.adoc","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"The Starling Manual for OpenFL","gitbook":"*"},"file":{"path":"basic-concepts/animations.adoc","mtime":"2025-04-22T18:15:20.805Z","type":"asciidoc"},"gitbook":{"version":"6.0.2","time":"2025-04-22T18:15:54.007Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Animations","level":"1.3.6","depth":2,"next":{"title":"Asset Management","level":"1.3.7","depth":2,"path":"basic-concepts/asset-management.adoc","ref":"basic-concepts/asset-management.adoc","articles":[]},"previous":{"title":"Event Handling","level":"1.3.5","depth":2,"path":"basic-concepts/event-handling.adoc","ref":"basic-concepts/event-handling.adoc","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"The Starling Manual for OpenFL","gitbook":"*"},"file":{"path":"basic-concepts/animations.adoc","mtime":"2025-04-22T22:52:41.589Z","type":"asciidoc"},"gitbook":{"version":"6.0.2","time":"2025-04-22T22:53:14.727Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

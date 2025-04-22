@@ -213,12 +213,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="configuring-starling.html">
+        <li class="chapter " data-level="1.3" data-path="./">
             
-                <a href="configuring-starling.html">
+                <a href="./">
             
                     
-                    Configuring Starling
+                    Basic Concepts
             
                 </a>
             
@@ -654,7 +654,7 @@ But that’s not all: you will probably need to deal with sounds and configurati
 <div class="ulist">
 <ul>
 <li>
-<p>Embed them right inside the application (via the <code>[Embed]</code> meta data).</p>
+<p>Add them to the Lime <em>project.xml</em> file (via the <code>&lt;assets&gt;</code> tag).</p>
 </li>
 <li>
 <p>Load them from disk (only possible for native applications).</p>
@@ -785,68 +785,6 @@ In this case, you need to make sure that the <code>file</code> attribute in the 
 <pre class="highlight"><code class="language-haxe" data-lang="haxe">assets.enqueue(appDir.resolvePath(<span class="hljs-string">"fonts/desyrel.fnt"</span>));
 assets.enqueue(appDir.resolvePath(<span class="hljs-string">"fonts/desyrel.png"</span>));</code></pre>
 </div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_assets_that_are_embedded">Assets that are embedded</h4>
-<div class="paragraph">
-<p>For embedded assets, I recommend you put all the embed statements into one dedicated class.
-Declare them as <code>public static const</code> and follow these naming conventions:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Classes for embedded images should have the exact same name as the file, without extension.
-This is required so that references from XMLs (atlas, bitmap font) won’t break.</p>
-</li>
-<li>
-<p>Atlas and font XML files can have an arbitrary name, since they are never referenced by file name.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Here’s a sample of such a class:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-title class_"><span class="hljs-keyword">class</span> <span class="hljs-title">EmbeddedAssets</span>
-</span>{
-    <span class="hljs-comment">/* PNG texture */</span>
-    [Embed(source = <span class="hljs-string">"/textures/bird.png"</span>)]
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> bird:<span class="hljs-type">Class</span>;
-
-    <span class="hljs-comment">/* ATF texture */</span>
-    [Embed(source   = <span class="hljs-string">"textures/1x/atlas.atf"</span>,
-           mimeType = <span class="hljs-string">"application/octet-stream"</span>)]
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> atlas:<span class="hljs-type">Class</span>;
-
-    <span class="hljs-comment">/* XML file */</span>
-    [Embed(source   = <span class="hljs-string">"textures/1x/atlas.xml"</span>,
-           mimeType = <span class="hljs-string">"application/octet-stream"</span>)]
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> atlas_xml:<span class="hljs-type">Class</span>;
-
-    <span class="hljs-comment">/* MP3 sound */</span>
-    [Embed(source = <span class="hljs-string">"/audio/explosion.mp3"</span>)]
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> explosion:<span class="hljs-type">Class</span>;
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>When you enqueue that class, the asset manager will later instantiate all the assets that are embedded within.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-keyword">var</span> assets:<span class="hljs-type">AssetManager </span>= <span class="hljs-keyword">new</span><span class="hljs-type"></span> AssetManager();
-assets.enqueue(EmbeddedAssets); (<span class="hljs-number">1</span>)</code></pre>
-</div>
-</div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>Enqueues <code>bird</code> texture, <code>explosion</code> sound, and a texture atlas.</td>
-</tr>
-</table>
 </div>
 </div>
 <div class="sect3">
@@ -1042,7 +980,7 @@ That makes it super easy to access my assets from anywhere in the game, simply b
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Asset Management","level":"1.3.7","depth":2,"next":{"title":"Fragment Filters","level":"1.3.8","depth":2,"path":"basic-concepts/fragment-filters.adoc","ref":"basic-concepts/fragment-filters.adoc","articles":[]},"previous":{"title":"Animations","level":"1.3.6","depth":2,"path":"basic-concepts/animations.adoc","ref":"basic-concepts/animations.adoc","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"The Starling Manual for OpenFL","gitbook":"*"},"file":{"path":"basic-concepts/asset-management.adoc","mtime":"2025-04-22T18:15:20.805Z","type":"asciidoc"},"gitbook":{"version":"6.0.2","time":"2025-04-22T18:15:54.007Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Asset Management","level":"1.3.7","depth":2,"next":{"title":"Fragment Filters","level":"1.3.8","depth":2,"path":"basic-concepts/fragment-filters.adoc","ref":"basic-concepts/fragment-filters.adoc","articles":[]},"previous":{"title":"Animations","level":"1.3.6","depth":2,"path":"basic-concepts/animations.adoc","ref":"basic-concepts/animations.adoc","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"The Starling Manual for OpenFL","gitbook":"*"},"file":{"path":"basic-concepts/asset-management.adoc","mtime":"2025-04-22T22:52:41.589Z","type":"asciidoc"},"gitbook":{"version":"6.0.2","time":"2025-04-22T22:53:14.727Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -213,12 +213,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="../basic-concepts/configuring-starling.html">
+        <li class="chapter " data-level="1.3" data-path="../basic-concepts/">
             
-                <a href="../basic-concepts/configuring-starling.html">
+                <a href="../basic-concepts/">
             
                     
-                    Configuring Starling
+                    Basic Concepts
             
                 </a>
             
@@ -862,7 +862,7 @@ When set up correctly, the texture will work just like we want it to.</p>
 
 assetManager.textureOptions.scale = scale; (<span class="hljs-number">3</span>)
 assetManager.enqueue(appDir.resolvePath(texturePath));
-assetManager.loadQueue(...);
+assetManager.loadQueue(<span class="hljs-comment">/* ... */</span>);
 
 <span class="hljs-keyword">var</span> texture:<span class="hljs-type">Texture </span>= assetManager.getTexture(<span class="hljs-string">"penguin"</span>); (<span class="hljs-number">4</span>)
 <span class="hljs-built_in">trace</span>(texture.scale); <span class="hljs-comment">// → Either '1' or '2' (5)</span></code></pre>
@@ -1539,7 +1539,7 @@ _starling.stage.stageHeight = screen.stageHeight;</code></pre>
 
 assetManager.textureOptions.scale = scale;
 assetManager.enqueue(appDir.resolvePath(texturePath));
-assetManager.loadQueue(...);</code></pre>
+assetManager.loadQueue(<span class="hljs-comment">/* ... */</span>);</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1659,7 +1659,7 @@ Don’t underestimate the development effort this will cause.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Multi-Resolution Development","level":"1.5.1","depth":2,"next":{"title":"Device Rotation","level":"1.5.2","depth":2,"path":"mobile-development/device-rotation.adoc","ref":"mobile-development/device-rotation.adoc","articles":[]},"previous":{"title":"Mobile Development","level":"1.5","depth":1,"path":"mobile-development/index.adoc","ref":"mobile-development/index.adoc","articles":[{"title":"Multi-Resolution Development","level":"1.5.1","depth":2,"path":"mobile-development/multi-resolution-development.adoc","ref":"mobile-development/multi-resolution-development.adoc","articles":[]},{"title":"Device Rotation","level":"1.5.2","depth":2,"path":"mobile-development/device-rotation.adoc","ref":"mobile-development/device-rotation.adoc","articles":[]},{"title":"Summary","level":"1.5.3","depth":2,"path":"mobile-development/summary.adoc","ref":"mobile-development/summary.adoc","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"The Starling Manual for OpenFL","gitbook":"*"},"file":{"path":"mobile-development/multi-resolution-development.adoc","mtime":"2025-04-22T18:15:20.837Z","type":"asciidoc"},"gitbook":{"version":"6.0.2","time":"2025-04-22T18:15:54.007Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Multi-Resolution Development","level":"1.5.1","depth":2,"next":{"title":"Device Rotation","level":"1.5.2","depth":2,"path":"mobile-development/device-rotation.adoc","ref":"mobile-development/device-rotation.adoc","articles":[]},"previous":{"title":"Mobile Development","level":"1.5","depth":1,"path":"mobile-development/index.adoc","ref":"mobile-development/index.adoc","articles":[{"title":"Multi-Resolution Development","level":"1.5.1","depth":2,"path":"mobile-development/multi-resolution-development.adoc","ref":"mobile-development/multi-resolution-development.adoc","articles":[]},{"title":"Device Rotation","level":"1.5.2","depth":2,"path":"mobile-development/device-rotation.adoc","ref":"mobile-development/device-rotation.adoc","articles":[]},{"title":"Summary","level":"1.5.3","depth":2,"path":"mobile-development/summary.adoc","ref":"mobile-development/summary.adoc","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"The Starling Manual for OpenFL","gitbook":"*"},"file":{"path":"mobile-development/multi-resolution-development.adoc","mtime":"2025-04-22T22:52:41.620Z","type":"asciidoc"},"gitbook":{"version":"6.0.2","time":"2025-04-22T22:53:14.727Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

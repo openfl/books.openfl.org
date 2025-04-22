@@ -213,12 +213,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="configuring-starling.html">
+        <li class="chapter " data-level="1.3" data-path="./">
             
-                <a href="configuring-starling.html">
+                <a href="./">
             
                     
-                    Configuring Starling
+                    Basic Concepts
             
                 </a>
             
@@ -713,42 +713,25 @@ For example, if you set up your TextField to use "Arial", it will use the one in
 <p>However, the rendering quality of that approach is not optimal; for example, the font might be rendered without anti-aliasing.</p>
 </div>
 <div class="paragraph">
-<p>For a better output, you should embed your <em>TrueType</em> fonts directly into the SWF file.
+<p>For a better output, you should embed your <em>TrueType</em> fonts as assets in your <em>project.xml</em> configuration file.
 Use the following code to do that:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-haxe" data-lang="haxe">[Embed(source=<span class="hljs-string">"Arial.ttf"</span>, embedAsCFF=<span class="hljs-string">"false"</span>, fontFamily=<span class="hljs-string">"Arial"</span>)]
-<span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Arial:<span class="hljs-type">Class</span>; (<span class="hljs-number">1</span>)
-
-[Embed(source=<span class="hljs-string">"Arial Bold.ttf"</span>, embedAsCFF=<span class="hljs-string">"false"</span>, fontFamily=<span class="hljs-string">"Arial"</span>, fontWeight=<span class="hljs-string">"bold"</span>)]
-<span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> ArialBold:<span class="hljs-type">Class</span>; (<span class="hljs-number">2</span>)
-
-[Embed(source=<span class="hljs-string">"Arial Italic.ttf"</span>, embedAsCFF=<span class="hljs-string">"false"</span>, fontFamily=<span class="hljs-string">"Arial"</span>, fontStyle=<span class="hljs-string">"italic"</span>)]
-<span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> ArialItalic:<span class="hljs-type">Class</span>; (<span class="hljs-number">3</span>)
-
-[Embed(source=<span class="hljs-string">"Arial.ttf"</span>, embedAsCFF=<span class="hljs-string">"false"</span>, fontFamily=<span class="hljs-string">"Arial"</span>, unicodeRange = <span class="hljs-string">"U+0020-U+007e"</span>)]
-<span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> ArialJustLatin:<span class="hljs-type">Class</span>; (<span class="hljs-number">4</span>)</code></pre>
+<pre class="highlight"><code class="language-xml" data-lang="xml"><span class="hljs-tag">&lt;<span class="hljs-name">assets</span> <span class="hljs-attr">path</span>=<span class="hljs-string">"fonts/Arial.ttf"</span>/&gt;</span> (1)
+<span class="hljs-tag">&lt;<span class="hljs-name">assets</span> <span class="hljs-attr">path</span>=<span class="hljs-string">"fonts/Arial Bold.ttf"</span>/&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">assets</span> <span class="hljs-attr">path</span>=<span class="hljs-string">"fonts/Arial Italic.ttf"</span>/&gt;</span> (2)</code></pre>
 </div>
 </div>
 <div class="colist arabic">
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>Embedding the standard <em>Arial</em> font. Note the <em>embedAsCFF</em> part: don’t skip it! Otherwise, the font simply won’t show up.</td>
+<td>Embedding the standard <em>Arial</em> font.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>Bold and italic styles must be embedded separately. Note the <em>fontWeight</em> attribute here,</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="3"></i><b>3</b></td>
-<td>and the <em>fontStyle</em> attribute here.</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="4"></i><b>4</b></td>
-<td>You can also define which glyphs to include, which is useful for big fonts when you don’t need all <em>Unicode</em> letters.
-The range shown here is for basic Latin (upper- and lowercase chars, numerals and common symbols/punctuations).</td>
+<td>Bold and italic styles must be embedded separately.</td>
 </tr>
 </table>
 </div>
@@ -764,7 +747,6 @@ There’s nothing else to set up or configure.</p>
 </td>
 <td class="content">
 Beware of the big footprint when embedding all glyphs of a font.
-The "unicodeRange" shown above mitigates this problem.
 </td>
 </tr>
 </table>
@@ -777,7 +759,7 @@ The "unicodeRange" shown above mitigates this problem.
 </td>
 <td class="content">
 If your text is clipped or does not appear at the correct position, have a look at your current <code>stage.quality</code> setting.
-A low quality value may causes OpenFL to report incorrect values regarding the text bounds, and Starling depends on those values when it draws the text.
+A low quality value may cause OpenFL to report incorrect values regarding the text bounds, and Starling depends on those values when it draws the text.
 (I’m talking about the OpenFL stage here; and this applies only to TrueType fonts.)
 </td>
 </tr>
@@ -842,14 +824,14 @@ On export, there are a few things to consider:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-haxe" data-lang="haxe">[Embed(source=<span class="hljs-string">"font.png"</span>)]
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> FontTexture:<span class="hljs-type">Class</span>;
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-comment">// these bitmap assets should be defined in project.xml</span>
+<span class="hljs-comment">// &lt;assets path="assets/myfont.fnt"/&gt;</span>
+<span class="hljs-comment">// &lt;assets path="assets/myfont.png"/&gt;</span>
+<span class="hljs-keyword">var</span> fontString:<span class="hljs-type">String </span>= Assets.getText(<span class="hljs-string">"assets/myfont.fnt"</span>);
+<span class="hljs-keyword">var</span> fontBmd:<span class="hljs-type">BitmapData </span>= Assets.getBitmapData(<span class="hljs-string">"assets/myfont.png"</span>);
 
-[Embed(source=<span class="hljs-string">"font.fnt"</span>, mimeType=<span class="hljs-string">"application/octet-stream"</span>)]
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> FontXml:<span class="hljs-type">Class</span>;
-
-<span class="hljs-keyword">var</span> texture:<span class="hljs-type">Texture </span>= Texture.fromEmbeddedAsset(FontTexture);
-<span class="hljs-keyword">var</span> xml:<span class="hljs-type">XML </span>= XML(<span class="hljs-keyword">new</span><span class="hljs-type"></span> FontXml());
+<span class="hljs-keyword">var</span> texture:<span class="hljs-type">Texture </span>= Texture.fromBitmapData(fontBmd);
+<span class="hljs-keyword">var</span> xml:<span class="hljs-type">Xml </span>= Xml.parse(fontString);
 <span class="hljs-keyword">var</span> font:<span class="hljs-type">BitmapFont </span>= <span class="hljs-keyword">new</span><span class="hljs-type"></span> BitmapFont(texture, xml); (<span class="hljs-number">1</span>)
 
 TextField.registerCompositor(font, font.name); (<span class="hljs-number">2</span>)</code></pre>
@@ -1007,7 +989,7 @@ textField.format.size = BitmapFont.NATIVE_SIZE * <span class="hljs-number">2</sp
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Dynamic Text","level":"1.3.4","depth":2,"next":{"title":"Event Handling","level":"1.3.5","depth":2,"path":"basic-concepts/event-handling.adoc","ref":"basic-concepts/event-handling.adoc","articles":[]},"previous":{"title":"Textures & Images","level":"1.3.3","depth":2,"path":"basic-concepts/textures-and-images.adoc","ref":"basic-concepts/textures-and-images.adoc","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"The Starling Manual for OpenFL","gitbook":"*"},"file":{"path":"basic-concepts/dynamic-text.adoc","mtime":"2025-04-22T18:15:20.806Z","type":"asciidoc"},"gitbook":{"version":"6.0.2","time":"2025-04-22T18:15:54.007Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Dynamic Text","level":"1.3.4","depth":2,"next":{"title":"Event Handling","level":"1.3.5","depth":2,"path":"basic-concepts/event-handling.adoc","ref":"basic-concepts/event-handling.adoc","articles":[]},"previous":{"title":"Textures & Images","level":"1.3.3","depth":2,"path":"basic-concepts/textures-and-images.adoc","ref":"basic-concepts/textures-and-images.adoc","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"The Starling Manual for OpenFL","gitbook":"*"},"file":{"path":"basic-concepts/dynamic-text.adoc","mtime":"2025-04-22T22:52:41.589Z","type":"asciidoc"},"gitbook":{"version":"6.0.2","time":"2025-04-22T22:53:14.727Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -213,12 +213,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="configuring-starling.html">
+        <li class="chapter " data-level="1.3" data-path="./">
             
-                <a href="configuring-starling.html">
+                <a href="./">
             
                     
-                    Configuring Starling
+                    Basic Concepts
             
                 </a>
             
@@ -735,16 +735,9 @@ In other words: the button needs to be able to send messages to its owner, whoev
 <div class="paragraph">
 <p>I have something to confess: when I showed you the class hierarchy of Starling’s display objects, I omitted the actual base class: <em>EventDispatcher</em>.</p>
 </div>
-<div class="literalblock">
+<div class="imageblock">
 <div class="content">
-<pre>Unresolved directive in &lt;stdin&gt; - include::../defaults.plantuml[]
-
-abstract class DisplayObject
-abstract class DisplayObjectContainer
-
-EventDispatcher &lt;|-- DisplayObject
-DisplayObject &lt;|-- Mesh
-DisplayObject &lt;|-- DisplayObjectContainer</pre>
+<img src="../img/class-hierarchy-with-eventdispatcher.png" alt="EventDispatcher <|-- DisplayObject, DisplayObject <|-- Mesh, DisplayObject <|-- DisplayObjectContainer" width="298"></img>
 </div>
 </div>
 <div class="paragraph">
@@ -1197,8 +1190,8 @@ starling.simulateMultitouch = <span class="hljs-literal">true</span>;</code></pr
 <div class="paragraph">
 <p>Note the property <code>simulateMultitouch</code>.
 If you enable it, you can simulate multitouch input with your mouse on your development computer.
-Press and hold the kbd:[Ctrl] or kbd:[Cmd] keys (Windows or Mac) when you move the mouse cursor around to try it out.
-Add kbd:[Shift] to change the way the alternative cursor is moving.</p>
+Press and hold the <kbd>Ctrl</kbd> or <kbd>Cmd</kbd> keys (Windows or Mac) when you move the mouse cursor around to try it out.
+Add <kbd>Shift</kbd> to change the way the alternative cursor is moving.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1370,7 +1363,7 @@ We can base our logic on the length and contents of that vector.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-The demo application that’s part of the Starling download contains the <a href="https://github.com/Gamua/Starling-Framework/blob/master/samples/demo/src/utils/TouchSheet.as" target="_blank">TouchSheet</a> class, which is used in the <em>Multitouch</em> scene.
+The demo application that’s part of the Starling download contains the <a href="https://github.com/openfl/starling/blob/master/samples/demo/src/utils/TouchSheet.hx" target="_blank">TouchSheet</a> class, which is used in the <em>Multitouch</em> scene.
 It shows a sample implementation of a touch handler that allows dragging, rotation and scaling a sprite.
 </td>
 </tr>
@@ -1441,7 +1434,7 @@ Use that knowledge to catch what could be called a <em>mouse out</em> event.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Event Handling","level":"1.3.5","depth":2,"next":{"title":"Animations","level":"1.3.6","depth":2,"path":"basic-concepts/animations.adoc","ref":"basic-concepts/animations.adoc","articles":[]},"previous":{"title":"Dynamic Text","level":"1.3.4","depth":2,"path":"basic-concepts/dynamic-text.adoc","ref":"basic-concepts/dynamic-text.adoc","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"The Starling Manual for OpenFL","gitbook":"*"},"file":{"path":"basic-concepts/event-handling.adoc","mtime":"2025-04-22T18:15:20.806Z","type":"asciidoc"},"gitbook":{"version":"6.0.2","time":"2025-04-22T18:15:54.007Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Event Handling","level":"1.3.5","depth":2,"next":{"title":"Animations","level":"1.3.6","depth":2,"path":"basic-concepts/animations.adoc","ref":"basic-concepts/animations.adoc","articles":[]},"previous":{"title":"Dynamic Text","level":"1.3.4","depth":2,"path":"basic-concepts/dynamic-text.adoc","ref":"basic-concepts/dynamic-text.adoc","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"The Starling Manual for OpenFL","gitbook":"*"},"file":{"path":"basic-concepts/event-handling.adoc","mtime":"2025-04-22T22:52:41.589Z","type":"asciidoc"},"gitbook":{"version":"6.0.2","time":"2025-04-22T22:53:14.727Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
