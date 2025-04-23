@@ -696,19 +696,18 @@ It will immediately be recreated, which is just what happens after the real thin
 <div class="paragraph">
 <p>Restoring buffers and programs is not problematic; Starling has all data that’s required and it doesn’t take much time.
 Textures, however, are a headache.
-To illustrate that, let’s look at the worst case example: a texture created from an embedded bitmap.</p>
+To illustrate that, let’s look at the worst case example: a texture created from a bitmap asset.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-haxe" data-lang="haxe">[Embed(source=<span class="hljs-string">"hero.png"</span>)]
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Hero:<span class="hljs-type">Class</span>;
-
-<span class="hljs-keyword">var</span> bitmap:<span class="hljs-type">Bitmap </span>= <span class="hljs-keyword">new</span><span class="hljs-type"></span> Hero();
-<span class="hljs-keyword">var</span> texture:<span class="hljs-type">Texture </span>= Texture.fromBitmap(bitmap);</code></pre>
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-comment">// this bitmap asset should be defined in project.xml</span>
+<span class="hljs-comment">// &lt;assets path="assets/hero.png"/&gt;</span>
+<span class="hljs-keyword">var</span> bitmapData:<span class="hljs-type">BitmapData </span>= Assets.getBitmapData(<span class="hljs-string">"assets/hero.png"</span>);
+<span class="hljs-keyword">var</span> texture:<span class="hljs-type">Texture </span>= Texture.fromBitmapData(bitmap);</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The moment you call <code>Texture.fromBitmap</code>, the bitmap is uploaded to GPU memory, which means it’s now part of the context.
+<p>The moment you call <code>Texture.fromBitmapData</code>, the bitmap is uploaded to GPU memory, which means it’s now part of the context.
 If we could rely on the context staying alive forever, we’d be done now.</p>
 </div>
 <div class="paragraph">
@@ -719,15 +718,12 @@ All of that happens behind the scenes.</p>
 </div>
 <div class="paragraph">
 <p>Lo and behold!
-That means that the texture is in memory three times.</p>
+That means that the texture is in memory twice.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>The "Hero" class (conventional memory)</p>
-</li>
-<li>
-<p>The backup bitmap (conventional memory)</p>
+<p>The bitmap data (conventional memory)</p>
 </li>
 <li>
 <p>The texture (graphics memory)</p>
@@ -739,21 +735,8 @@ That means that the texture is in memory three times.</p>
 You don’t want this to happen!</p>
 </div>
 <div class="paragraph">
-<p>It becomes a little better if you change your code slightly:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-comment">// use the 'fromEmbeddedAsset' method instead</span>
-<span class="hljs-keyword">var</span> texture:<span class="hljs-type">Texture </span>= Texture.fromEmbeddedAsset(Hero);</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>That way, Starling can recreate the texture directly from the embedded class (calling <code>new Hero()</code>), which means that the texture is in memory only two times.
-For embedded assets, that’s your best bet.</p>
-</div>
-<div class="paragraph">
 <p>Ideally, though, we want to have the texture in memory only once.
-For this to happen, you must not embed the asset; instead, you need to load it from an URL that points to a local or remote file.
+For this to happen, you must not preload the bitmap asset; instead, you need to load it from an URL that points to a local or remote file.
 That way, only the URL needs to be stored; the actual data can then be reloaded from the original location.</p>
 </div>
 <div class="paragraph">
@@ -781,18 +764,22 @@ Who knows — you might run into a situation where a manual restoration is y
 <div class="sect2">
 <h3 id="_manual_restoration">Manual Restoration</h3>
 <div class="paragraph">
-<p>You might wonder how <code>Texture.fromEmbeddedAsset()</code> works internally.
-Let’s look at a possible implementation of that method:</p>
+<p>Let’s look at a possible implementation of a method that creates a texture from a BitmapData asset:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">fromEmbeddedAsset</span></span>(assetClass:<span class="hljs-type">Class</span>):<span class="hljs-type">Texture</span>
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">textureFromAsset</span></span>(assetID:<span class="hljs-type">String</span>):<span class="hljs-type">Texture</span>
 {
-    <span class="hljs-keyword">var</span> texture:<span class="hljs-type">Texture </span>= Texture.fromBitmap(<span class="hljs-keyword">new</span><span class="hljs-type"></span> assetClass());
+    <span class="hljs-keyword">var</span> bitmapData:<span class="hljs-type">BitmapData </span>= Assets.getBitmapData(assetID);
+    <span class="hljs-keyword">var</span> texture:<span class="hljs-type">Texture </span>= Texture.empty(bitmapData.width, bitmapData.height);
+    texture.root.uploadBitmapData(bitmapData);
+
     texture.root.onRestore = <span class="hljs-title function_"><span class="hljs-keyword">function</span></span>():<span class="hljs-type">Void</span>
     {
-        texture.root.uploadFromBitmap(<span class="hljs-keyword">new</span><span class="hljs-type"></span> assetClass());
+        <span class="hljs-keyword">var</span> bitmapData:<span class="hljs-type">BitmapData </span>= Assets.getBitmapData(assetID);
+        texture.root.uploadFromBitmap(bitmapData);
     };
+
     <span class="hljs-keyword">return</span> texture;
 }</code></pre>
 </div>
@@ -804,7 +791,7 @@ Wait a minute: what’s <code>root</code>?</p>
 <div class="paragraph">
 <p>You might not know it, but when you’ve got a <em>Texture</em> instance, that’s actually often not a concrete texture at all.
 In reality, it might be just a pointer to a part of another texture (a <em>SubTexture</em>).
-Even the <code>fromBitmap</code> call could return such a texture!
+Even a <code>fromBitmap</code> call could return such a texture!
 (Explaining the reasoning behind that would be beyond the scope of this chapter, though.)</p>
 </div>
 <div class="paragraph">
@@ -812,26 +799,29 @@ Even the <code>fromBitmap</code> call could return such a texture!
 This callback will be executed directly after a context loss, and it gives you the chance of recreating your texture.</p>
 </div>
 <div class="paragraph">
-<p>In our case, that callback simply instantiates the bitmap once again and uploads it to the root texture.
+<p>In our case, that callback simply uploads the bitmap again to the root texture.
 Voilà, the texture is restored!</p>
 </div>
 <div class="paragraph">
 <p>The devil lies in the details, though.
-You have to construct your <code>onRestore</code>-callback very carefully to be sure not to store another bitmap copy without knowing it.
+You should construct a custom <code>onRestore</code>-callback very carefully to be sure not to store another bitmap copy without knowing it.
 Here’s one innocent looking example that’s actually totally useless:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">fromEmbeddedAsset</span></span>(assetClass:<span class="hljs-type">Class</span>):<span class="hljs-type">Texture</span>
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">textureFromAsset</span></span>(assetID:<span class="hljs-type">String</span>):<span class="hljs-type">Texture</span>
 {
     <span class="hljs-comment">// DO NOT use this code! BAD example.</span>
 
-    <span class="hljs-keyword">var</span> bitmap:<span class="hljs-type">Bitmap </span>= <span class="hljs-keyword">new</span><span class="hljs-type"></span> assetClass();
-    <span class="hljs-keyword">var</span> texture:<span class="hljs-type">Texture </span>= Texture.fromBitmap(bitmap);
+    <span class="hljs-keyword">var</span> bitmapData:<span class="hljs-type">BitmapData </span>= Assets.getBitmapData(assetID);
+    <span class="hljs-keyword">var</span> texture:<span class="hljs-type">Texture </span>= Texture.empty(bitmapData.width, bitmapData.height);
+    texture.root.uploadBitmapData(bitmapData);
+
     texture.root.onRestore = <span class="hljs-title function_"><span class="hljs-keyword">function</span></span>():<span class="hljs-type">Void</span>
     {
-        texture.root.uploadFromBitmap(bitmap);
+        texture.root.uploadFromBitmap(bitmapData);
     };
+
     <span class="hljs-keyword">return</span> texture;
 }</code></pre>
 </div>
@@ -840,16 +830,16 @@ Here’s one innocent looking example that’s actually totally useless:</p>
 <p>Can you spot the error?</p>
 </div>
 <div class="paragraph">
-<p>The problem is that the method creates a <em>Bitmap</em> object and uses it in the callback.
+<p>The problem is that the method creates a <em>BitmapData</em> object and uses it in the callback.
 That callback is actually a so-called <em>closure</em>; that’s an inline function that will be stored together with some of the variables that accompany it.
 In other words, you’ve got a function object that stays in memory, ready to be called when the context is lost.
 And the bitmap instance is stored inside it, even though you never explicitly said so.
-(Well, in fact you did, by using <code>bitmap</code> inside the callback.)</p>
+(Well, in fact you did, by using <code>bitmapData</code> inside the callback.)</p>
 </div>
 <div class="paragraph">
 <p>In the original code, the bitmap is not referenced, but <em>created</em> inside the callback.
-Thus, there is no <code>bitmap</code> instance to be stored with the closure.
-Only the <code>assetClass</code> object is referenced in the callback — and that is in memory, anyway.</p>
+Thus, there is no <code>bitmapData</code> instance to be stored with the closure.
+Only the <code>assetID</code> string is referenced in the callback — and that is in memory, anyway.</p>
 </div>
 <div class="paragraph">
 <p>That technique works in all kinds of scenarios:</p>
@@ -998,7 +988,7 @@ Remember, we are in a different callback here (<code>Event.TEXTURES_RESTORED</co
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Context Loss","level":"1.4.2","depth":2,"next":{"title":"Memory Management","level":"1.4.3","depth":2,"path":"advanced-topics/memory-management.adoc","ref":"advanced-topics/memory-management.adoc","articles":[]},"previous":{"title":"ATF Textures","level":"1.4.1","depth":2,"path":"advanced-topics/atf-textures.adoc","ref":"advanced-topics/atf-textures.adoc","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"The Starling Manual for OpenFL","gitbook":"*"},"file":{"path":"advanced-topics/context-loss.adoc","mtime":"2025-04-22T22:52:41.588Z","type":"asciidoc"},"gitbook":{"version":"6.0.2","time":"2025-04-22T22:53:14.727Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Context Loss","level":"1.4.2","depth":2,"next":{"title":"Memory Management","level":"1.4.3","depth":2,"path":"advanced-topics/memory-management.adoc","ref":"advanced-topics/memory-management.adoc","articles":[]},"previous":{"title":"ATF Textures","level":"1.4.1","depth":2,"path":"advanced-topics/atf-textures.adoc","ref":"advanced-topics/atf-textures.adoc","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"The Starling Manual for OpenFL","gitbook":"*"},"file":{"path":"advanced-topics/context-loss.adoc","mtime":"2025-04-23T17:01:38.768Z","type":"asciidoc"},"gitbook":{"version":"6.0.2","time":"2025-04-23T17:02:10.606Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

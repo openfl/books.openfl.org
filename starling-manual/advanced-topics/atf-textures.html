@@ -646,7 +646,7 @@
 <div class="paragraph">
 <p>In conventional OpenFL, most developers use the <em>PNG</em> format for their images, or <em>JPG</em> if they don’t need transparency.
 Those are very popular in Starling, too.
-However, <em>Stage3D</em> offers an alternative that has several unique advantages: the <em>Adobe Texture Format</em>, which can store <em>compressed</em> textures.</p>
+However, <em>Stage3D</em> offers an alternative that has several unique advantages: the <em>Adobe Texture Format</em> (or <em>ATF</em>), which can store <em>compressed</em> textures.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -723,7 +723,7 @@ How should you know beforehand which file to include?</p>
 </div>
 <div class="paragraph">
 <p>This is where ATF comes to the rescue.
-It is a format that Adobe created especially for <em>Stage3D</em>; actually, it is a container file that can include up to four different versions of a texture.</p>
+It is a format that was created especially for <em>Stage3D</em>; actually, it is a container file that can include up to four different versions of a texture.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -781,8 +781,8 @@ Don’t worry about this, though: the ATF tools will choose the right format aut
 <div class="sect2">
 <h3 id="_creating_an_atf_texture">Creating an ATF texture</h3>
 <div class="paragraph">
-<p>Adobe provides a set of command line tools to convert to and from ATF and to preview the generated files.
-They are part of the <a href="https://airsdk.harman.com" target="_blank">AIR SDK</a> (look for the <code>atftools</code> folder).</p>
+<p>There is a set of command line tools to convert to and from ATF and to preview the generated files.
+They are part of the <a href="https://airsdk.harman.com" target="_blank">Adobe AIR SDK</a> (look for the <code>atftools</code> folder).</p>
 </div>
 <div class="paragraph">
 <p>Probably the most important tool is <code>png2atf</code>.
@@ -937,18 +937,21 @@ The fourth one, if passed a callback, will trigger asynchronous loading: Starlin
 As soon as the callback has been executed (but not any sooner!), the texture will be usable.</p>
 </div>
 <div class="paragraph">
-<p>Of course, you can also embed the ATF file directly in the AS3 source.</p>
+<p>Of course, you can also include the ATF file as an asset in your Lime <em>project.xml</em> configuration file.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-haxe" data-lang="haxe">[Embed(source=<span class="hljs-string">"texture.atf"</span>, mimeType=<span class="hljs-string">"application/octet-stream"</span>)]
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> CompressedData:<span class="hljs-type">Class</span>;
-
-<span class="hljs-keyword">var</span> texture:<span class="hljs-type">Texture </span>= Texture.fromEmbeddedAsset(CompressedData);</code></pre>
+<pre class="highlight"><code class="language-xml" data-lang="xml"><span class="hljs-tag">&lt;<span class="hljs-name">assets</span> <span class="hljs-attr">path</span>=<span class="hljs-string">"assets/texture.atf"</span>/&gt;</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Note, however, that asynchronous upload is not available in this case.</p>
+<p>Use the <em>Assets.getBytes()</em> method to get the bytes.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-keyword">var</span> atfData:<span class="hljs-type">ByteArray </span>= Assets.getBytes(<span class="hljs-string">"assets/texture.atf"</span>);
+<span class="hljs-keyword">var</span> texture:<span class="hljs-type">Texture </span>= Texture.fromATFData(atfData);</code></pre>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -959,10 +962,10 @@ As soon as the callback has been executed (but not any sooner!), the texture wil
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://www.adobe.com/devnet/archive/flashruntimes/articles/introducing-compressed-textures.html" target="_blank">Introducing Compressed Textures</a></p>
+<p><a href="https://web.archive.org/web/20200522055322/https://www.adobe.com/devnet/archive/flashruntimes/articles/introducing-compressed-textures.html" target="_blank">Adobe Devnet: Introducing Compressed Textures</a></p>
 </li>
 <li>
-<p><a href="https://www.adobe.com/devnet/archive/flashruntimes/articles/atf-users-guide.html" target="_blank">ATF Tools User’s Guide</a></p>
+<p><a href="https://web.archive.org/web/20200522055340/https://www.adobe.com/devnet/archive/flashruntimes/articles/atf-users-guide.html" target="_blank">Adobe Devnet: ATF Tools User’s Guide</a></p>
 </li>
 </ul>
 </div>
@@ -1011,7 +1014,7 @@ As soon as the callback has been executed (but not any sooner!), the texture wil
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"ATF Textures","level":"1.4.1","depth":2,"next":{"title":"Context Loss","level":"1.4.2","depth":2,"path":"advanced-topics/context-loss.adoc","ref":"advanced-topics/context-loss.adoc","articles":[]},"previous":{"title":"Advanced Topics","level":"1.4","depth":1,"path":"advanced-topics/index.adoc","ref":"advanced-topics/index.adoc","articles":[{"title":"ATF Textures","level":"1.4.1","depth":2,"path":"advanced-topics/atf-textures.adoc","ref":"advanced-topics/atf-textures.adoc","articles":[]},{"title":"Context Loss","level":"1.4.2","depth":2,"path":"advanced-topics/context-loss.adoc","ref":"advanced-topics/context-loss.adoc","articles":[]},{"title":"Memory Management","level":"1.4.3","depth":2,"path":"advanced-topics/memory-management.adoc","ref":"advanced-topics/memory-management.adoc","articles":[]},{"title":"Performance Optimization","level":"1.4.4","depth":2,"path":"advanced-topics/performance-optimization.adoc","ref":"advanced-topics/performance-optimization.adoc","articles":[]},{"title":"Custom Filters","level":"1.4.5","depth":2,"path":"advanced-topics/custom-filters.adoc","ref":"advanced-topics/custom-filters.adoc","articles":[]},{"title":"Custom Styles","level":"1.4.6","depth":2,"path":"advanced-topics/custom-styles.adoc","ref":"advanced-topics/custom-styles.adoc","articles":[]},{"title":"Distance Field Rendering","level":"1.4.7","depth":2,"path":"advanced-topics/distance-field-rendering.adoc","ref":"advanced-topics/distance-field-rendering.adoc","articles":[]},{"title":"Summary","level":"1.4.8","depth":2,"path":"advanced-topics/summary.adoc","ref":"advanced-topics/summary.adoc","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"The Starling Manual for OpenFL","gitbook":"*"},"file":{"path":"advanced-topics/atf-textures.adoc","mtime":"2025-04-22T22:52:41.588Z","type":"asciidoc"},"gitbook":{"version":"6.0.2","time":"2025-04-22T22:53:14.727Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"ATF Textures","level":"1.4.1","depth":2,"next":{"title":"Context Loss","level":"1.4.2","depth":2,"path":"advanced-topics/context-loss.adoc","ref":"advanced-topics/context-loss.adoc","articles":[]},"previous":{"title":"Advanced Topics","level":"1.4","depth":1,"path":"advanced-topics/index.adoc","ref":"advanced-topics/index.adoc","articles":[{"title":"ATF Textures","level":"1.4.1","depth":2,"path":"advanced-topics/atf-textures.adoc","ref":"advanced-topics/atf-textures.adoc","articles":[]},{"title":"Context Loss","level":"1.4.2","depth":2,"path":"advanced-topics/context-loss.adoc","ref":"advanced-topics/context-loss.adoc","articles":[]},{"title":"Memory Management","level":"1.4.3","depth":2,"path":"advanced-topics/memory-management.adoc","ref":"advanced-topics/memory-management.adoc","articles":[]},{"title":"Performance Optimization","level":"1.4.4","depth":2,"path":"advanced-topics/performance-optimization.adoc","ref":"advanced-topics/performance-optimization.adoc","articles":[]},{"title":"Custom Filters","level":"1.4.5","depth":2,"path":"advanced-topics/custom-filters.adoc","ref":"advanced-topics/custom-filters.adoc","articles":[]},{"title":"Custom Styles","level":"1.4.6","depth":2,"path":"advanced-topics/custom-styles.adoc","ref":"advanced-topics/custom-styles.adoc","articles":[]},{"title":"Distance Field Rendering","level":"1.4.7","depth":2,"path":"advanced-topics/distance-field-rendering.adoc","ref":"advanced-topics/distance-field-rendering.adoc","articles":[]},{"title":"Summary","level":"1.4.8","depth":2,"path":"advanced-topics/summary.adoc","ref":"advanced-topics/summary.adoc","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"The Starling Manual for OpenFL","gitbook":"*"},"file":{"path":"advanced-topics/atf-textures.adoc","mtime":"2025-04-23T17:01:38.768Z","type":"asciidoc"},"gitbook":{"version":"6.0.2","time":"2025-04-23T17:02:10.606Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

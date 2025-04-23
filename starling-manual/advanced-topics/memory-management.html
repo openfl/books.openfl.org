@@ -796,21 +796,17 @@ In previous Starling versions (&lt; 2.0), this <em>did</em> create a memory leak
 </div>
 </div>
 <div class="sect2">
-<h3 id="_do_not_embed_textures">Do not Embed Textures</h3>
+<h3 id="_load_textures_on_demand">Load Textures On Demand</h3>
 <div class="paragraph">
-<p>ActionScript developers have always been used to embedding their bitmaps directly into the SWF file, using <code>Embed</code> metadata.
-This is great for the web, because it allows you to combine all your game’s data into one file.</p>
-</div>
-<div class="paragraph">
-<p>We already saw in the <a href="context-loss.html">Context Loss</a> section that this approach has some serious downsides in Starling (or Stage3D in general).
-It comes down to this: the texture will be in memory at least two times: once in conventional memory, once in graphics memory.</p>
+<p>We already saw in the <a href="context-loss.html">Context Loss</a> section that storing many bitmaps in memory for textures has some serious downsides in Starling (or Stage3D in general).
+It comes down to this: each texture will be in memory at least two times: once in conventional memory, once in GPU memory.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-haxe" data-lang="haxe">[Embed(source=<span class="hljs-string">"assets/textures/hero.png"</span>)]
-<span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">var</span> Hero:<span class="hljs-type">Class</span>; (<span class="hljs-number">1</span>)
-
-<span class="hljs-keyword">var</span> texture:<span class="hljs-type">Texture </span>= Texture.fromEmbeddedAsset(Hero); (<span class="hljs-number">2</span>)</code></pre>
+<pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-comment">// this bitmap asset should be defined in project.xml</span>
+<span class="hljs-comment">// &lt;assets path="assets/hero.png"/&gt;</span>
+<span class="hljs-keyword">var</span> bitmapData:<span class="hljs-type">BitmapData </span>= Assets.getBitmapData(<span class="hljs-string">"assets/hero.png"</span>); (<span class="hljs-number">1</span>)
+<span class="hljs-keyword">var</span> texture:<span class="hljs-type">Texture </span>= Texture.fromBitmapData(Hero); (<span class="hljs-number">2</span>)</code></pre>
 </div>
 </div>
 <div class="colist arabic">
@@ -824,10 +820,6 @@ It comes down to this: the texture will be in memory at least two times: once in
 <td>The texture is stored in graphics memory.</td>
 </tr>
 </table>
-</div>
-<div class="paragraph">
-<p>Note that this sample uses <code>Texture.fromEmbeddedAsset</code> to load the texture.
-For reasons discussed in <a href="context-loss.html">Context Loss</a>, the alternative (<code>Texture.fromBitmap</code>) uses even more memory.</p>
 </div>
 <div class="paragraph">
 <p>The only way to guarantee that the texture is really only stored in graphics memory is by loading it from an URL.
@@ -1179,7 +1171,7 @@ I used the following approach:</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Memory Management","level":"1.4.3","depth":2,"next":{"title":"Performance Optimization","level":"1.4.4","depth":2,"path":"advanced-topics/performance-optimization.adoc","ref":"advanced-topics/performance-optimization.adoc","articles":[]},"previous":{"title":"Context Loss","level":"1.4.2","depth":2,"path":"advanced-topics/context-loss.adoc","ref":"advanced-topics/context-loss.adoc","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"The Starling Manual for OpenFL","gitbook":"*"},"file":{"path":"advanced-topics/memory-management.adoc","mtime":"2025-04-22T22:52:41.588Z","type":"asciidoc"},"gitbook":{"version":"6.0.2","time":"2025-04-22T22:53:14.727Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Memory Management","level":"1.4.3","depth":2,"next":{"title":"Performance Optimization","level":"1.4.4","depth":2,"path":"advanced-topics/performance-optimization.adoc","ref":"advanced-topics/performance-optimization.adoc","articles":[]},"previous":{"title":"Context Loss","level":"1.4.2","depth":2,"path":"advanced-topics/context-loss.adoc","ref":"advanced-topics/context-loss.adoc","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"The Starling Manual for OpenFL","gitbook":"*"},"file":{"path":"advanced-topics/memory-management.adoc","mtime":"2025-04-23T17:01:38.769Z","type":"asciidoc"},"gitbook":{"version":"6.0.2","time":"2025-04-23T17:02:10.606Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

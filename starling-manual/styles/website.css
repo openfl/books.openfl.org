@@ -72,3 +72,24 @@ kbd {
 	background-color: hsl(229, 19%, 22%);
 	border-color: hsl(230, 17%, 28%);
 }
+
+.exampleblock {
+	background: #fffef7;
+	border: solid 1px #e0e0dc;
+	padding: 1em;
+	border-radius: 4px;
+}
+
+.color-theme-1 .exampleblock {
+	background-color: #fdf6e3;
+	border-color: #f5d06c;
+}
+
+.color-theme-2 .exampleblock {
+	background-color: hsl(229, 19%, 22%);
+	border-color: hsl(230, 17%, 28%);
+}
+
+.imageblock .title {
+	font-style: italic;
+}
