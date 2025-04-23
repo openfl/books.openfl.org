@@ -779,7 +779,7 @@ We won’t modify it any more.</p>
 
     <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">get_colorOffsetEffect</span></span>():<span class="hljs-type">ColorOffsetEffect</span>
     {
-        <span class="hljs-keyword">return</span> Std.downcast(effect, ColorOffsetEffect);
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">cast</span>(effect, ColorOffsetEffect);
     }
 
     <span class="hljs-keyword">public</span> <span class="hljs-keyword">var</span> redOffset(<span class="hljs-keyword">get</span>, <span class="hljs-keyword">set</span>):<span class="hljs-type">Float</span>;
@@ -995,7 +995,7 @@ Let’s look at the code:</p>
 <div class="content">
 <pre class="highlight"><code class="language-haxe" data-lang="haxe"><span class="hljs-keyword">override</span> <span class="hljs-keyword">private</span> <span class="hljs-title function_"><span class="hljs-keyword">function</span> <span class="hljs-title">createProgram</span></span>():<span class="hljs-type">Program</span>
 {
-    <span class="hljs-keyword">var</span> vertexShader:<span class="hljs-type">String </span>= STD_VERTEX_SHADER;
+    <span class="hljs-keyword">var</span> vertexShader:<span class="hljs-type">String </span>= FilterEffect.STD_VERTEX_SHADER;
     <span class="hljs-keyword">var</span> fragmentShader:<span class="hljs-type">String </span>=
         <span class="hljs-string">"tex ft0, v0, fs0 &lt;2d, linear&gt; \n"</span> +
         <span class="hljs-string">"add oc, ft0, fc0"</span>;
@@ -1100,7 +1100,7 @@ To be sure the code works for every texture, let’s use a helper method to writ
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-haxe" data-lang="haxe">tex(<span class="hljs-string">"ft0"</span>, <span class="hljs-string">"v0"</span>, <span class="hljs-number">0</span>, <span class="hljs-built_in">this</span>.texture)</code></pre>
+<pre class="highlight"><code class="language-haxe" data-lang="haxe">FilterEffect.tex(<span class="hljs-string">"ft0"</span>, <span class="hljs-string">"v0"</span>, <span class="hljs-number">0</span>, <span class="hljs-built_in">this</span>.texture)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1216,7 +1216,7 @@ Here’s one way to do that:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-haxe" data-lang="haxe">tex(<span class="hljs-string">"ft0"</span>, <span class="hljs-string">"v0"</span>, <span class="hljs-number">0</span>, texture)   <span class="hljs-comment">// get color from texture</span>
+<pre class="highlight"><code class="language-haxe" data-lang="haxe">FilterEffect.tex(<span class="hljs-string">"ft0"</span>, <span class="hljs-string">"v0"</span>, <span class="hljs-number">0</span>, texture)   <span class="hljs-comment">// get color from texture</span>
 mov ft1, fc0                   <span class="hljs-comment">// copy complete offset to ft1</span>
 mul ft1.xyz, fc0.xyz, ft0.www  <span class="hljs-comment">// multiply offset.rgb with alpha (pma!)</span>
 add  oc, ft0, ft1              <span class="hljs-comment">// add offset, copy to output</span></code></pre>
@@ -1304,7 +1304,7 @@ It’s not <em>that</em> different, promised!</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Custom Filters","level":"1.4.5","depth":2,"next":{"title":"Custom Styles","level":"1.4.6","depth":2,"path":"advanced-topics/custom-styles.adoc","ref":"advanced-topics/custom-styles.adoc","articles":[]},"previous":{"title":"Performance Optimization","level":"1.4.4","depth":2,"path":"advanced-topics/performance-optimization.adoc","ref":"advanced-topics/performance-optimization.adoc","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"The Starling Manual for OpenFL","gitbook":"*"},"file":{"path":"advanced-topics/custom-filters.adoc","mtime":"2025-04-23T17:01:38.769Z","type":"asciidoc"},"gitbook":{"version":"6.0.2","time":"2025-04-23T17:02:10.606Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Custom Filters","level":"1.4.5","depth":2,"next":{"title":"Custom Styles","level":"1.4.6","depth":2,"path":"advanced-topics/custom-styles.adoc","ref":"advanced-topics/custom-styles.adoc","articles":[]},"previous":{"title":"Performance Optimization","level":"1.4.4","depth":2,"path":"advanced-topics/performance-optimization.adoc","ref":"advanced-topics/performance-optimization.adoc","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"The Starling Manual for OpenFL","gitbook":"*"},"file":{"path":"advanced-topics/custom-filters.adoc","mtime":"2025-04-23T17:14:31.105Z","type":"asciidoc"},"gitbook":{"version":"6.0.2","time":"2025-04-23T17:15:04.078Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
